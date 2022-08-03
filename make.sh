@@ -13,7 +13,7 @@ mkindex(){
 
 case $1 in
 	list)
-		tree -I '*.md' content/posts
+		tree -d content/posts
 		;;
 	server)
 		hugo server -D
