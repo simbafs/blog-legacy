@@ -33,7 +33,9 @@ import fs from 'fs/promises'
 export default async function dirs(){
 	return await fs.readdir(`${process.cwd()}/content`)
 }
+```
 
+```javascript
 // pages/index.js
 import fsTest from '../util/fsTest'
 
@@ -50,7 +52,7 @@ export async function getStaticProps() {
 // util/tree.js
 import fs from 'fs/promises'
 
-function tree(root, opt){
+async function tree(root, opt){
 	// some verified code
 }
 
@@ -59,7 +61,9 @@ function tree2list(tree, opt){
 }
 
 export { tree, tree2list }
+```
 
+```javascript
 // pages/index.js
 import { tree, tree2list } from '../util/tree'
 
