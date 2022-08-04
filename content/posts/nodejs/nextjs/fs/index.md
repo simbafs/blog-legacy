@@ -5,7 +5,7 @@ date = 2022-08-04T22:16:42+08:00
 +++
 
 # getStaticProps
-不知道為什麼，`getStaticProps` 裡面的 `fs` 時有時無
+不知道為什麼，`getStaticProps` 裡面的 `fs` 時有時無。[這裡](https://github.com/vercel/next.js/discussions/12124) 似乎有關於這個問題的回答，但無效
 
 ## 正常一
 這個版本，就可以正常運作，證明 `getStaticProps` 裡可以用 `fs`
@@ -75,4 +75,3 @@ export async function getStaticProps() {
 	};
 }
 ```
-
