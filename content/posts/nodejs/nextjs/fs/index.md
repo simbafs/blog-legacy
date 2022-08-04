@@ -28,10 +28,10 @@ export async function getStaticProps() {
 在這個版本，將 `fs` 相關程式碼移到 `util/fsTest.js`，也就是測試如果是引用另一個模組中 `fs` 相關的函數。經過證明，也是可以的
 ```javascript
 // util/fsTest.js
-import fs from 'fs'
+import fs from 'fs/promises'
 
 export default async function dirs(){
-	return fs.readdirSync(`${process.cwd()}/content`)
+	return await fs.readdir(`${process.cwd()}/content`)
 }
 
 // pages/index.js
@@ -48,7 +48,7 @@ export async function getStaticProps() {
 這個版本，`util/tree.js` 的程式碼是經過測試，是沒問題的。但是卻會回報錯誤，找不到 `fs`
 ```javascript
 // util/tree.js
-import fs from 'fs'
+import fs from 'fs/promises'
 
 function tree(root, opt){
 	// some verified code
