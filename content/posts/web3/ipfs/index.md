@@ -88,6 +88,13 @@ DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指�
 $ dig +short TXT _dnslink.ipfs.simbafs.cc
 ```
 
+### ipns in DNSLink
+如果你查看 ipfs.io 的 DNSLink 紀錄，你會發現他的內容是 `dnslink=/ipns/website.ipfs.io`，也就是說 `/ipns/ipfs.io` 和 `/ipns/website.ipfs.io` 是一樣的，從瀏覽器看起來也的確如此。再查 website 的 DNSLink 紀錄 `dnslink=/ipfs/QmQoprt2cVNJKrDUTg2QYHmaqw7T1E36sSg9bPiWgoLY48`，看來 ipfs.io 真正指向的 CID 其實是 `Qm....Y48`   
+這個案例告訴我們，DNSLink 不一定只能放 CID，放 ipns 的 key 也是可以的，例如指向 `/ipns/k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm` 的話，只要更新 `k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm` 的指向內容就可以更新網站，不需要動 DNS 紀錄
+
+> **Notice**  
+> 我測試有成功，至少更新 ipns 比更新 DNS 快，而且只需要在 CLI 操作
+
 # 瀏覽器
 施工中......
 
