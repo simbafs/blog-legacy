@@ -118,11 +118,11 @@ defaultContentLanguage = 'zh-tw'
 	minMatchCharLength = 0
 	keys = [ "title", "permalink", "summary", "content" ]
 	
-[[menu.main]]
-	identifier = "categories"
-	name = "Categories"
-	url = "/posts/"
-	weight = 10
+# [[menu.main]]
+#     identifier = "categories"
+#     name = "Categories"
+#     url = "/posts/"
+#     weight = 10
 
 # [[menu.main]]
 #     identifier = "tags"
