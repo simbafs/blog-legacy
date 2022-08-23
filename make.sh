@@ -15,6 +15,9 @@ case $1 in
 	list)
 		tree -d content/posts
 		;;
+	size)
+		wc $(find content -name '*.md' ) -c | sort -n -r
+		;;
 	server)
 		hugo server -D
 		;;
