@@ -1,5 +1,5 @@
 /**
- *	author: simba-fs
+ *	author: simbafs
  *	usage: node convert.js <src path> <target path>
  *	inspired by: https://github.com/nodejh/nodejh.github.io/issues/11
  *	This program will auto change category -> categories, tag -> tags,

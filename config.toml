@@ -21,8 +21,8 @@ defaultContentLanguage = 'zh-tw'
 	env = "production"
 	title = "Simba 的喵窩"
 	description = "雜七雜八的東西"
-	keywords = [ "simba-fs", "SimbaFs" ]
-	author = "simba-fs"
+	keywords = [ "SimbaFs" ]
+	author = "simbafs"
 	images = [ "<link or path of image for opengraph, twitter-cards>" ]
 	DateFormat = "2006-January-2"
 	defaultTheme = "auto"
@@ -60,7 +60,7 @@ defaultContentLanguage = 'zh-tw'
 	imageUrl = "/images/icon/icon.png"
 	imageWidth = 120
 	imageHeight = 120
-	imageTitle = "simba-fs"
+	imageTitle = "SimbaFs"
 
 [[params.profileMode.buttons]]
 	name = "Posts"
@@ -80,7 +80,7 @@ defaultContentLanguage = 'zh-tw'
 
 [[params.socialIcons]]
 	name = "github"
-	url = "https://github.com/simba-fs"
+	url = "https://github.com/simbafs"
 
 [[params.socialIcons]]
 	name = "telegram"
