@@ -65,7 +65,7 @@ goreleaser 的文件裡面有推薦一個上傳的套件，但是可能是我笨
 `draft` 設成 `true` 有個好處，就是 Action 跑玩後不會立刻建立新 Release，而是你在去手動確認，而且包括 Release name、Change log 都設定好了，你只需要看有沒有什麼說明要加，就可以直接按發布了，非常方便。當然你如果沒有什麼想說的，就可以直接設定 `draft: true`，如此一來就真的是「全自動了」
 
 # 完整 action 設定檔
-以上是細部解說，下面就是完整設定檔，如果有更新的話請到 [https://github.com/simba-fs/telegrary/blob/main/.github/workflows/release.yml](https://github.com/simba-fs/telegrary/blob/main/.github/workflows/release.yml) 看最新版。
+以上是細部解說，下面就是完整設定檔，如果有更新的話請到 [https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml](https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml) 看最新版。
 
 ```yaml
 name: Release

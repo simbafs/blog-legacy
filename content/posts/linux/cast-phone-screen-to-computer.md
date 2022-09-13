@@ -26,7 +26,7 @@ $ sudo apt install scrcpy
 然後就會有一個視窗跳出來，你現在就可以在電腦上滑手機了！
 
 ## Wireless
-無線的話比較麻煩，首先是必須要可以連線，看是在同一個區域網路或是 VPN、ssh tunnel 都可以。再來是因為連線設定頗麻煩，所以我把相關的步驟寫成一個 [script](https://gist.github.com/simba-fs/9132289f63368ad325d6a2ef62be7a20)，下載後給予執行權限就可以執行了（當然要安裝 scrcpy ）。有線的方式一樣很簡單，不用加任何選項就可以連接了。  
+無線的話比較麻煩，首先是必須要可以連線，看是在同一個區域網路或是 VPN、ssh tunnel 都可以。再來是因為連線設定頗麻煩，所以我把相關的步驟寫成一個 [script](https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20)，下載後給予執行權限就可以執行了（當然要安裝 scrcpy ）。有線的方式一樣很簡單，不用加任何選項就可以連接了。  
 如果要啟用無線，只需要加上 `-w` 選項（用預設的 ip `192.168.43.1`)  
 如果 ip 不是預設的話，可以加上 `-i IP` 來指定其他的 ip  
 加上 `-f` 可以開啟全螢幕
@@ -34,4 +34,4 @@ $ sudo apt install scrcpy
 # 參連連結
 [https://github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy)
 [https://developer.android.com/studio/debug/dev-options](https://developer.android.com/studio/debug/dev-options)
-[https://gist.github.com/simba-fs/9132289f63368ad325d6a2ef62be7a20](https://gist.github.com/simba-fs/9132289f63368ad325d6a2ef62be7a20)
+[https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20](https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20)

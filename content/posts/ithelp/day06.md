@@ -34,10 +34,10 @@ $ brew install tmux
 其他可以參考 [https://github.com/tmux/tmux/wiki/Installing](https://github.com/tmux/tmux/wiki/Installing) 的說明
 
 # config
-tmux 啟動時會去讀取 `~/.tmux.conf` 這個檔案，所以的設定檔都放在這，在這裡，我推薦一個我用很多年的設定檔，[點擊這裡下載](https://gist.github.com/simba-fs/e06a1763c1967ce3f4b5ef643db5e0b3)，或是執行以下命令  
+tmux 啟動時會去讀取 `~/.tmux.conf` 這個檔案，所以的設定檔都放在這，在這裡，我推薦一個我用很多年的設定檔，[點擊這裡下載](https://gist.github.com/simbafs/e06a1763c1967ce3f4b5ef643db5e0b3)，或是執行以下命令  
 
 ```zsh
-curl https://gist.githubusercontent.com/simba-fs/e06a1763c1967ce3f4b5ef643db5e0b3/raw/2f28c62d01f419a390bfc0e66a974985bacdefa5/.tmux.conf > ~/.tmux.conf
+curl https://gist.githubusercontent.com/simbafs/e06a1763c1967ce3f4b5ef643db5e0b3/raw/2f28c62d01f419a390bfc0e66a974985bacdefa5/.tmux.conf > ~/.tmux.conf
 ```
 
 這個檔案是我從**網路**上找到的，後來有加一些自己的東西，把檔案下載下來並存到 `~/.tmux.conf` 裡面，關於每一行的用途都有用註解標示，主要幾個改變有以下幾點：  

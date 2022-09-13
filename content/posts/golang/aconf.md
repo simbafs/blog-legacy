@@ -17,7 +17,7 @@ aconf 是個可以直接幫你解決所有「設定」問題的套件，設定�
 type Config struct {
 	Addr  string   `default:":3000"`
 	Title string   `default:"Aconf Testing"`
-	SysAdmin []string `default:"simba-fs,peter"`
+	SysAdmin []string `default:"simbafs,peter"`
 }
 ```
 

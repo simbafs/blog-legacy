@@ -3,7 +3,7 @@ ShowToc = false
 +++
 # 🖐️ 哈囉！問世界安好  [![Followers](https://img.shields.io/github/followers/simbafs?style=flat-square)](https://github.com/simbafs)  
 - 本名: 陳宏彰
-- 常用網名: simba-fs、SimbaFs
+- 常用網名: simbafs、SimbaFs
 - 原 JS 愛好者 目前 Go 愛好者
 - vim is the best editor
 - 前端好難

@@ -39,8 +39,8 @@ jobs:
           echo "$HEXO_DEPLOY_PRI" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.name "simba-fs"
-          git config --global user.email "simba-fsgmail.com"
+          git config --global user.name "simbafs"
+          git config --global user.email "simbafsgmail.com"
       - name: Install dependencies
         run: |
           npm i -g hexo-cli

@@ -74,5 +74,5 @@ mkdir src dist
 html template 放在 dist/ 下
 
 # 範例
-https://github.com/simba-fs/react-template
+https://github.com/simbafs/react-template
 

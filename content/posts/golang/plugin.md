@@ -29,7 +29,7 @@ import "plugin"
 載入完了之後，用 `func (p *Plugin) Lookup(symName string) (Symbol, error)` 可以取得外掛暴露出來的變數、函式，因為 `symName` 是字串，因此這裡也可以動態選擇要的變數。現在你有一個型態是 `Symbol` 的變數了，其實這個 `Symbol` 就是 `interface{}` 所以不管要做什麼事，你都要先用 `symbol.(type)` 取得他真實的值和型態。接下來就可以隨意的使用他了。
 
 # 範例
-> 以下摘自 https://github.com/simba-fs/go-plugin-test
+> 以下摘自 https://github.com/simbafs/go-plugin-test
 
 ## main.go
 ```go

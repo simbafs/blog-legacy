@@ -15,7 +15,7 @@ munu = ["main"]
 
 # Who Am I
 我今年升大一，在此生最長的假期中寫寫文章打發時間。平常喜歡寫寫程式，研究新技術。是個 CLI 忠實擁護者，電腦通常只開瀏覽器和 terminal，terminal 就是我的開發環境。  
-慣用網名是 **simba-fs**、**simbafs** 或 **SimbaFs**。  
+慣用網名是 **simbafs**、**simbafs** 或 **SimbaFs**。  
 略懂 nodejs 和一點網頁技術，這一個月開始研究 Golang
 
 # 關於這個系列
@@ -71,7 +71,7 @@ $ ls *.txt
 代表有一個檔案要修改，從 `+` 的那行改成 `-` 的那行，加減號都不用寫進去，檔名會另外說明
 
 # 同步更新
-除了 [IThelp](https://ithelp.ithome.com.tw/users/20130473/ironman/3975)，我也會將這個系列的文章更新在 **[我的 blog](https://blog.simba-fs.dev/categories/ithelp/pure-CLI-IDE)** 上
+除了 [IThelp](https://ithelp.ithome.com.tw/users/20130473/ironman/3975)，我也會將這個系列的文章更新在 **[我的 blog](https://blog.simbafs.dev/categories/ithelp/pure-CLI-IDE)** 上
 
 喔對了，這整個系列我都是在我的純 CLI 環境中寫作的喔！
 
