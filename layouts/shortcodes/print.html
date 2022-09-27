@@ -1,0 +1,7 @@
+{{ if .IsNamedParams }}
+	<h1><a href="https://{{ .Get "url" }}">redirect to {{ .Get "url" }}</a></h1>
+	<meta http-equiv="refresh" content="0; url=https://{{ .Get "url" }}" />
+{{ else }}
+	<h1><a href="https://{{ .Get 0 }}">redirect to {{ .Get 0 }}</a></h1>
+	<meta http-equiv="refresh" content="0; url=https://{{ .Get 0 }}" />
+{{ end }}
