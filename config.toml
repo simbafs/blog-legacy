@@ -83,6 +83,10 @@ defaultContentLanguage = 'zh-tw'
 	url = "https://github.com/simbafs"
 
 [[params.socialIcons]]
+	name = "mastodon"
+	url = "https://g0v.social/@simbafs"
+
+[[params.socialIcons]]
 	name = "telegram"
 	url = "https://t.me/simbafs"
 
