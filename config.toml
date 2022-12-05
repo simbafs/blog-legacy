@@ -12,6 +12,11 @@ defaultContentLanguage = 'zh-tw'
 [outputs]
 	home = [ "HTML", "RSS", "JSON" ]
 
+[sitemap]
+  changefreq = 'monthly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
 [minify]
 	disableXML = true
 	minifyOutput = true
