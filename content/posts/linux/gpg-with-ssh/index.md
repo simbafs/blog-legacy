@@ -42,3 +42,5 @@ sub   ed25519 2022-12-06 [A] <- 可用於驗證的子金鑰
 5. 根據第三個參考網址 [setup-the-gpg-agent-for-ssh-authentication](https://gist.github.com/mcattarinussi/834fc4b641ff4572018d0c665e5a94d3#setup-the-gpg-agent-for-ssh-authentication) 章節設定 gpg-agent   
 
 這時後重新開啟終端機就可以用 gpg 取代原本的 ssh key 了，確認移除 ssh key 真的還可以登入後就可以把舊的 ssh key 收起來了。
+
+
