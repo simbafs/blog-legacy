@@ -35,10 +35,3 @@ JFDKSA8FEWHE29HFVC92UHFPA93WOHFVDOPA39U2
 gpg --delete-secret-key <ID>
 gpg --delete-key <ID>
 ```
-
-# 指紋 Fingerprint
-根據 [GNOME help](https://help.gnome.org/users/seahorse/stable/misc-key-fingerprint.html.en) 的說明，不同金鑰的指紋必然不同，因此如果要驗證、查詢的話，與其用其他參數，不如用指紋，例如我的 GPG key 指紋是 `6236 A070 8FCD 894C 7AD1  A5FC DB13 A5C2 042E AEA4`，看到這串就代表是我。  
-
-# Grip
-根據 [gnupg 的這封郵件](https://lists.gnupg.org/pipermail/gcrypt-devel/2013-June/002205.html)，grip 似乎是金鑰參數的 SHA-1 hash，看不太懂哪些參數會被納入計算。
-
