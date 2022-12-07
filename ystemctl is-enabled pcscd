@@ -1,0 +1,13 @@
+○ pcscd.service - PC/SC Smart Card Daemon
+     Loaded: loaded (/lib/systemd/system/pcscd.service; indirect; vendor preset: enabled)
+     Active: inactive (dead) since Wed 2022-12-07 21:50:37 CST; 18min ago
+TriggeredBy: [0;1;32m●[0m pcscd.socket
+       Docs: man:pcscd(8)
+    Process: 38618 ExecStart=/usr/sbin/pcscd --foreground --auto-exit $PCSCD_ARGS (code=exited, status=0/SUCCESS)
+   Main PID: 38618 (code=exited, status=0/SUCCESS)
+        CPU: 47ms
+
+Dec 07 21:49:12 simba-nb systemd[1]: Started PC/SC Smart Card Daemon.
+Dec 07 21:49:24 simba-nb pcscd[38618]: 00000000 ccid_usb.c:1566:InterruptStop() libusb_cancel_transfer failed: LIBUSB_ERROR_NO_DEVICE
+Dec 07 21:49:27 simba-nb pcscd[38618]: 03154442 ccid_usb.c:1566:InterruptStop() libusb_cancel_transfer failed: LIBUSB_ERROR_NO_DEVICE
+Dec 07 21:50:37 simba-nb systemd[1]: pcscd.service: Deactivated successfully.
