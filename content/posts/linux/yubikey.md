@@ -4,7 +4,7 @@ slug = ""
 date = 2022-04-19T15:22:55+08:00
 +++
 
-感謝廖煥杰 [liaojason2](https://github.com/liaojason2) 賣我一個 1200，撿到寶啦！我買的是 [Yubikey 5C NFC](https://www.yubico.com/tw/product/yubikey-5c-nfc/)，看起來幾乎所有功能都有
+感謝煥杰賣我一個 1200，撿到寶啦！我買的是 [Yubikey 5C NFC](https://www.yubico.com/tw/product/yubikey-5c-nfc/)，看起來幾乎所有功能都有
 
 # login
 如果開啟這個，登入、解除鎖定等等動作都需要 Yubikey，聽起還很安全，但是因為我的筆電只有一個 type C，所以必須把 USB hub 拔掉，挺麻煩，我就把他關掉了。  
