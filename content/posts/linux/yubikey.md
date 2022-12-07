@@ -98,3 +98,5 @@ gpg: OpenPGP card not available: No SmartCard daemon
 然後就跟著 [官方 blog 的說明](https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP#Generating_Keys_externally_from_the_YubiKey_(Recommended%29ui6vup)  把主密鑰（？好像是簽章用子密鑰）移到 yubikey 上了
 
 接下來我亂七八糟試了一堆東西，發現 [一篇文章](https://developer.okta.com/blog/2021/07/07/developers-guide-to-gpg) 把上面的東西幾乎都包括進去了，非常推薦可以去看看。
+
+剛剛搞了一陣後，把簽章、加密、驗證和主金鑰（應該有）的密鑰通通丟上 yubikey 了。但是現在有個問題，所有需要 gpg key 的時候，像是簽 git commit 和 ssh 驗證都需要插上 yubikey，好像安全過頭了。我研究看看能不能把某些再拉回本地，如果不行的話就只能把一開始備份的密鑰再導入一次，暴力解決！
