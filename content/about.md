@@ -3,7 +3,7 @@ ShowToc = false
 +++
 # 🖐️ 哈囉！問世界安好  [![Followers](https://img.shields.io/github/followers/simbafs?style=flat-square)](https://github.com/simbafs)  
 - 本名: 陳宏彰
-- 常用網名: simbafs、SimbaFs
+- 常用網名: simba-fs、SimbaFs
 - 原 JS 愛好者 目前 Go 愛好者
 - vim is the best editor
 - 前端好難
@@ -12,8 +12,11 @@ ShowToc = false
 - 成大物理系大二
 - [成功高中電子計算機研習社](https://ckcsc.net) 擔任 `退休網管兼教學`
 
-| [![](https://github-readme-stats.vercel.app/api?username=simbafs&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true)](https://github.com/simbafs) | [![](https://github-readme-stats.vercel.app/api/top-langs/?username=simbafs&layout=compact&theme=buefy&hide_border=true)](https://github.com/simbafs) |
-| --- | --- |
+<div align="center">
+<img src="https://raw.githubusercontent.com/simbafs/simbafs/master/profile-summary-card-output/solarized/0-profile-details.svg" alt="">
+<img src="https://raw.githubusercontent.com/simbafs/simbafs/master/profile-summary-card-output/solarized/3-stats.svg" alt="">
+<img src="https://raw.githubusercontent.com/simbafs/simbafs/master/profile-summary-card-output/solarized/2-most-commit-language.svg" alt="">
+</div>
 
 # 🛠 作品
 - [NCKU Extended](https://github.com/simbafs/ncku-extended)  
@@ -27,6 +30,7 @@ Telegrary 是一個 Telegram 機器人，讓你可以在 Telegram 上管理日�
 
 # 📬 聯絡方式
 - mail: [me@simbafs.cc](mailto:me@simbafs.cc)
+- Mastodon: <a rel="me" href="https://g0v.social/@simbafs">@simbafs@g0v.social</a>
 - Discord id: SimbaFs#2030
 - telegram: [@simbafs](https://t.me/simbafs)
 - twitter: [@simbafs](https://twitter.com/simbafs)

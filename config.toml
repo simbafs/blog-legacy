@@ -140,6 +140,12 @@ defaultContentLanguage = 'zh-tw'
 #     weight = 20
 
 [[menu.main]]
+	identifier = "articles"
+	name = "Articles"
+	url = "/articles/"
+	weight = 20
+
+[[menu.main]]
 	identifier = "archives"
 	name = "Archives"
 	url = "/archive/"
