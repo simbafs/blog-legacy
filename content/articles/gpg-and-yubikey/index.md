@@ -16,11 +16,11 @@ GPG 中每個人都有一個鑰匙圈（keyring），就像你包包裡的鑰匙
 
 一組 GPG keyring 中會有一個主金鑰和若干個子金鑰，主金鑰的功能是身份證明和金鑰管理，而子密鑰就是一般的操作。之所以需要有這個設計，是為了盡可能保護主密鑰不洩漏。在日常的 GPG 使用中，我們不可避免需要密鑰（解密、簽章等等），如果全部都使用主密鑰操作，也不是說不行，但是萬一主密鑰洩漏，就要重新產生了。但如果將日常功能移到和主密鑰相關連的子密鑰，主密鑰僅保留重要的「身份證明」功能，如此一來就可以將 [主密鑰分離](https://blog.theerrorlog.com/using-gpg-zh.html)（這算是高階操作），把不常用到但是非常重要的主金鑰藏好（像是離線儲存，或是最極端的在離線的機器產生、匯出然後刪除）。如果主密鑰洩漏或是遺失，那就要重新產生，等於是一個全新的身份，所有信任關係必須從頭建立。
 
-因為主金鑰和子金鑰是不同金鑰對，所以如果你用 Alice 子公鑰加密，是不能用 Bob 子密鑰甚至是主密鑰解密的，簽章和證明也是如此。
+因為主金鑰和子金鑰是不同金鑰對，所以如果你用 Alice 子公鑰加密，是不能用 Bella 子密鑰甚至是主密鑰解密的，簽章和證明也是如此。
 
 ### 如何連結子密鑰和主密鑰
 
-子金鑰和主金鑰是不同的金鑰，甚至可以用不同的演算法產生，那是什麼東西決定他們的地位差異呢？根據我對 [這篇問答](https://superuser.com/questions/1113308/what-is-the-relationship-between-an-openpgp-key-and-its-subkey) 的理解（很可能是錯的，網路上這方面的資料有夠少），在用主金鑰產生子金鑰的時候，會用主密鑰幫子金鑰「簽章」，這個稱之為「Bobinding Siganture」。GPG 就是用這個 binding signature 去證明子密鑰屬於哪個 keyring。
+子金鑰和主金鑰是不同的金鑰，甚至可以用不同的演算法產生，那是什麼東西決定他們的地位差異呢？根據我對 [這篇問答](https://superuser.com/questions/1113308/what-is-the-relationship-between-an-openpgp-key-and-its-subkey) 的理解（很可能是錯的，網路上這方面的資料有夠少），在用主金鑰產生子金鑰的時候，會用主密鑰幫子金鑰「簽章」，這個稱之為「Bellainding Siganture」。GPG 就是用這個 binding signature 去證明子密鑰屬於哪個 keyring。
 
 ### 什麼操作屬於身份證明(Certify)
 
@@ -61,9 +61,9 @@ fingerprint 和 keygrip 都是要對於金鑰對識別，他們都是把要識�
 > **Information**
 > 接下來的「公鑰」通常是指 "public key packet"，也就是指令 `gpg --export` 預設會吐出來的東西，裡面包含主公鑰、子公鑰們、uid 資訊以及別人對這個公鑰的簽章等等  
 
-現在想像一個情境，Alice 要加密一段訊息傳給 Bob，所以他需要去找到 Bob 的公鑰，Alice 上網找到一個公鑰的 uid 是 `Bob <b@exmaple.com>`，於是他就用這份公鑰加密訊息後傳給 Bob，但是這份公鑰其實是 C 偽裝的，那這樣祕密訊息就會被 C 知道。
+現在想像一個情境，Alice 要加密一段訊息傳給 Bella，所以他需要去找到 Bella 的公鑰，Alice 上網找到一個公鑰的 uid 是 `Bella <b@exmaple.com>`，於是他就用這份公鑰加密訊息後傳給 Bella，但是這份公鑰其實是 C 偽裝的，那這樣祕密訊息就會被 C 知道。
 
-為了解決這個問題，Alice 拿到公鑰後要開始傳訊息之前，需要先用一個可信的通道和 Bob 確認公鑰是否正確（當面比對 fingerprint 之類的），接者 Alice 用他的主密鑰幫 Bob 的公鑰簽章（Alice sign Bob's key），做出宣告「Alice 認為這把公鑰有效（來源和上面記載的是一致的，都是 Bob」（this key is validated）。這時候 Bob 也跟 Charlie 確認過公鑰並簽章（Bob sign Charlie's key），如果 Alice 「完整」信任 Bob 會認真確認公鑰真實性才簽章，那他就可以拿 Bob 的公鑰去驗證 Bob 真的簽章過 Charlie 的公鑰，那麼 Alice 可以根據這個結果相信 Charlie 的公鑰是真的，不用親自去找 Charlie 確認。  
+為了解決這個問題，Alice 拿到公鑰後要開始傳訊息之前，需要先用一個可信的通道和 Bella 確認公鑰是否正確（當面比對 fingerprint 之類的），接者 Alice 用他的主密鑰幫 Bella 的公鑰簽章（Alice sign Bella's key），做出宣告「Alice 認為這把公鑰有效（來源和上面記載的是一致的，都是 Bella」（this key is validated）。這時候 Bella 也跟 Charlie 確認過公鑰並簽章（Bella sign Charlie's key），如果 Alice 「完整」信任 Bella 會認真確認公鑰真實性才簽章，那他就可以拿 Bella 的公鑰去驗證 Bella 真的簽章過 Charlie 的公鑰，那麼 Alice 可以根據這個結果相信 Charlie 的公鑰是真的，不用親自去找 Charlie 確認。  
 
 > 「相信公鑰有效（真實性）」和「信任簽章公鑰的人」在 GPG 裡面都是 "trust" ，有點容易搞混，但中文還是可以稍微區分開來的  
 
@@ -75,7 +75,7 @@ fingerprint 和 keygrip 都是要對於金鑰對識別，他們都是把要識�
 4. 完整信任
 5. 終極信任
 
-其中終極信任因為比較特別就先不談，在上面 Alice、Bob 和 Charlie 的例子裡，如果 Alice 沒有「完整信任」Bob，只有「半信半疑」，那麼 Charlie 的公鑰就不會被認為是有效的
+其中終極信任因為比較特別就先不談，在上面 Alice、Bella 和 Charlie 的例子裡，如果 Alice 沒有「完整信任」Bella，只有「半信半疑」，那麼 Charlie 的公鑰就不會被認為是有效的
 
 目前為止的機制，我們要確認公鑰有效需要整條信任鍊之間都是「完整信任」且都被前一個確認是有效，但是這樣缺乏彈性。GPG 採用一個巧妙的方法來擴展目前的機制，一把公鑰如果滿足以下條件，就會被認定是有效的：
 
@@ -93,9 +93,9 @@ fingerprint 和 keygrip 都是要對於金鑰對識別，他們都是把要識�
 > 以下內容待驗證
 
 ```
-       +----->Bob--------+
-       |                 v
-Alice--+            +-->Daniel----->Elsa------>Galen
+       +----->Bella--------+
+       |                   v
+Alice--+            +-->Daniel----->Edson------>Galen
        |            |     |
        |            |     |
        +->Charlie---+     |
@@ -103,18 +103,23 @@ Alice--+            +-->Daniel----->Elsa------>Galen
                     +-->Frank
 ```
 
+> 把公鑰簽署關係畫成圖  
+> `$ gpg --no-options --with-colons --fixed-list-mode --list-sigs | sig2dot -a -u "[User ID not found]" > myLUG.dot ; neato -Tpng myLUG.dot > myLUG.png ; open myLUG.png`  
+> https://github.com/bmarwell/sig2dot2
+
+
 舉例來說，上圖以 Alice 為中心到 Galen 等六個人的信任關係，箭頭 `A--->B` 代表 A 為 B 的公鑰簽章，在以下的例子，我們調整為只需要兩個半信半疑的有效公鑰信任就可以信任為有效公鑰，但路徑不能超過三。
 
 下表是基於這個信任網 Alice 對其他人的信任層級和推導出來的公鑰有效性結果。  
-舉例來說，第一個情況是雖然 Alice 確認了 Bob 和 Charlie 的公鑰有效性，但是他只相信 Charlie ，根據這個可以推導出來 Daniel, Elsa, Frank 三人的公鑰都是有效的，因為 Alice 對 Charlie 是完整信任，因此 Charlie 確認過的公鑰對於 Alice 都是有效的。
+舉例來說，第一個情況是雖然 Alice 確認了 Bella 和 Charlie 的公鑰有效性，但是他只相信 Charlie ，根據這個可以推導出來 Daniel, Edson, Frank 三人的公鑰都是有效的，因為 Alice 對 Charlie 是完整信任，因此 Charlie 確認過的公鑰對於 Alice 都是有效的。
 
-| 情境  | 半信半疑             | 完整信任          | 一半有效      | 完整有效                    |
-| :---: | :---                 | :---              | :---          | :---                        |
-| 1     |                      | Charlie           |               | Bob, Charlie, Daniel, Frank |
-| 2     | Bob, Chalir          |                   | Feank         | Bob, Charlie, Daniel        |
-| 3     | Charlie, Daniel      |                   | Daniel, Frank | Bob, Charlie                |
-| 4     | Charlie, Daniel, Bob |                   | Elsa          | Bob, Charlie, Frank         |
-| 5     |                      | Bob, Daniel, Elsa |               | Bob, Daniel, Elsa, Frank    |
+| 情境  | 半信半疑               | 完整信任             | 一半有效      | 完整有效                      |
+| :---: | :---                   | :---                 | :---          | :---                          |
+| 1     |                        | Charlie              |               | Bella, Charlie, Daniel, Frank |
+| 2     | Bella, Chalir          |                      | Feank         | Bella, Charlie, Daniel        |
+| 3     | Charlie, Daniel        |                      | Daniel, Frank | Bella, Charlie                |
+| 4     | Charlie, Daniel, Bella |                      | Edson         | Bella, Charlie, Frank         |
+| 5     |                        | Bella, Daniel, Edson |               | Bella, Daniel, Edson, Frank   |
 > 需要實驗驗證
 
 根據我的理解，首先是自己簽的公鑰一定是有效的，再來是完整相信的人簽的也是有效，再來是夠多的半信半疑的人都簽章的公鑰也有效，最後你會發現，能夠延伸到最遠的有效公鑰是信任的人的外圍一圈不超過長度限制的地方。
