@@ -1,6 +1,13 @@
-+++
-ShowToc = false
-+++
+---
+title: About
+menu:
+    main: 
+        weight: 4
+        params:
+            icon: user
+
+comments: false
+---
 # 🖐️ 哈囉！問世界安好  [![Followers](https://img.shields.io/github/followers/simbafs?style=flat-square)](https://github.com/simbafs)  
 - 本名: 陳宏彰
 - 常用網名: simba-fs、SimbaFs

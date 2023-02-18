@@ -1,8 +1,12 @@
-+++
-title = "Resource"
-summary = "resource"
-ShowToc = false
-+++
+---
+title: Resource
+menu:
+    main: 
+        weight: 6
+        params:
+            icon: link
+comments: false
+---
 
 # 友站
 * [蛋餅的競程隨筆 https://omeletwithoutegg.github.io](https://omeletwithoutegg.github.io)  
