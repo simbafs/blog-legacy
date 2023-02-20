@@ -939,8 +939,7 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>Blessed Landmine</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed-landmine/</link><pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed-landmine/</guid><description>&lt;h1 id="blessed-landmine">Blessed Landmine&lt;/h1>
-&lt;p>這是一篇我在用 blessed 時踩的一些雷
-會持續的更新&lt;/p>
+&lt;p>這是一篇我在用 blessed 時踩的一些雷&lt;/p>
 &lt;h2 id="1-記得-render">1. 記得 render&lt;/h2>
 &lt;p>今天在寫 API 時踩到兩次
 更新了資料卻沒有 render

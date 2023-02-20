@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>blessed on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/blessed/</link><description>Recent content in blessed on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 26 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/blessed/index.xml" rel="self" type="application/rss+xml"/><item><title>Blessed Landmine</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed-landmine/</link><pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed-landmine/</guid><description>&lt;h1 id="blessed-landmine">Blessed Landmine&lt;/h1>
-&lt;p>這是一篇我在用 blessed 時踩的一些雷
-會持續的更新&lt;/p>
+&lt;p>這是一篇我在用 blessed 時踩的一些雷&lt;/p>
 &lt;h2 id="1-記得-render">1. 記得 render&lt;/h2>
 &lt;p>今天在寫 API 時踩到兩次
 更新了資料卻沒有 render
