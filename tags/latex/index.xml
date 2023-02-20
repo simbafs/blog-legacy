@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>latex on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/latex/</link><description>Recent content in latex on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 22 Dec 2021 23:18:41 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/latex/index.xml" rel="self" type="application/rss+xml"/><item><title>LaTeX Starter</title><link>https://blog.simbafs.cc/p/other/latex-starter/</link><pubDate>Wed, 22 Dec 2021 23:18:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/other/latex-starter/</guid><description>&lt;h1 id="latex-stater">LaTeX Stater&lt;/h1>
+&lt;p>LaTeX 是一老牌的排版系統，基本的概念是內容與呈現分離，在撰寫內容時不用管排版（所以你就不會擔心移動圖片一咪咪整份文件就跑版了）。除了排版，LaTeX 還很擅長輸出各種莫名其妙的東西，像是超複雜的數學式、象棋棋譜、化學結構&amp;hellip;&amp;hellip;&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/latex-starter/latex-example.png"
+loading="lazy"
+alt="莫名其妙排版範例"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">credit:&lt;a class="link" href="https://zh.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener"
+>https://zh.wikipedia.org/wiki/LaTeX&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>在使用 LaTeX 一段時間之後，對它的印象就是加強版的 Markdown（或是說 Markdown 是簡化版的 LaTeX），而且他還有巨集，可以擴展原版沒有提供的功能（就是上面那些奇奇怪怪的東西）。&lt;/p>
+&lt;h2 id="幾個重點">幾個重點&lt;/h2>
+&lt;h2 id="中文">中文&lt;/h2>
+&lt;p>使用 LaTeX 對大部分人最重要的就是「怎麼打中文」，總不可能打全英文報告吧！要用中文，渲染引擎要用 XLaTeX，然後加上以下設定&lt;br>
+（&lt;code>.ttf&lt;/code> 可以指向你自己喜歡的中文字型檔）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="na">[CJKmath=true,AutoFakeBold=3,AutoFakeSlant=.2]&lt;/span>&lt;span class="nb">{&lt;/span>xeCJK&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\newCJKfontfamily\Kai&lt;/span>&lt;span class="nb">{&lt;/span>[jf-openhuninn-1.1.ttf]&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\newCJKfontfamily\Hei&lt;/span>&lt;span class="nb">{&lt;/span>[jf-openhuninn-1.1.ttf]&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\newCJKfontfamily\NewMing&lt;/span>&lt;span class="nb">{&lt;/span>[jf-openhuninn-1.1.ttf]&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>fontspec&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setmainfont&lt;/span>&lt;span class="nb">{&lt;/span>[jf-openhuninn-1.1.ttf]&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setmonofont&lt;/span>&lt;span class="nb">{&lt;/span>[jf-openhuninn-1.1.ttf]&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\XeTeXlinebreaklocale&lt;/span> &amp;#34;zh&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="換行">換行&lt;/h2>
+&lt;p>LaTeX 在換行這個設計和 Markdown 一樣，因為內容與呈現分離，所以你的換行不是真的換行。Markdown 用 &lt;code> &lt;/code>（兩個空白），在 LaTeX 是 &lt;code>\\&lt;/code>（兩個反斜線）&lt;/p>
+&lt;h2 id="巨集與-package">巨集與 Package&lt;/h2>
+&lt;p>LaTeX 一個核心概念是巨集，就是函數啦，巨集的開頭是 &lt;code>\&lt;/code>（反斜線），巨集可以自己定義，也可以用 &lt;code>\usepackage{}&lt;/code> 載入別人寫好的&lt;/p>
+&lt;h2 id="overleaf">overleaf&lt;/h2>
+&lt;p>overleaf 是一個線上編輯 LaTeX 的網站，預裝了幾乎所有寫報告用得到的 packages，而且可以上傳自己的字型、圖片，而且右邊可以顯示產生的 PDF（非即時，按 CTRL-Enter 編譯）。這個網站整體使用體驗還算不錯，該有的功能都有了。&lt;/p>
+&lt;h2 id="表格">表格&lt;/h2>
+&lt;h3 id="切版">切版&lt;/h3>
+&lt;p>畫 LaTeX 表格最簡單的方式是用 Google Sheet + &lt;a class="link" href="https://workspace.google.com/marketplace/app/latexkit/716178627426?hl=zh_tw" target="_blank" rel="noopener"
+>latexkit&lt;/a>，這個外掛可以幫你把跨行、跨欄表格通通弄好，你只需要再調整格線和格式就行了（latexkit 只負責切版）&lt;/p>
+&lt;h3 id="格線">格線&lt;/h3>
+&lt;h4 id="直線">直線&lt;/h4>
+&lt;p>如果直線你需要兩條，在 &lt;code>\begin{tabular}{|L|L|}&lt;/code> 這裡多加幾條 &lt;code>|&lt;/code> 就可以了。直線如果遇到跨列的格子會自動跳過，所以你不需要處理&lt;/p>
+&lt;h4 id="橫線">橫線&lt;/h4>
+&lt;p>只需要用 &lt;code>\hline&lt;/code> 就可以畫一條橫線。&lt;br>
+但是因為橫線遇到跨行的格子不會自動跳過，所以需要特殊處理。可以用 &lt;code>hhline&lt;/code> 這個 package，用法很簡單，&lt;code>\hhline{|~|-|=|}&lt;/code>。&lt;br>
+&lt;code>~&lt;/code> 是不劃線，&lt;code>-&lt;/code> 是畫一條線，&lt;code>=&lt;/code>是畫兩條線，而這裡的 &lt;code>|&lt;/code> 是在畫兩條線時要畫線中間的直線（你畫兩條線時試試看就知道了）&lt;/p>
+&lt;h2 id="數學表格">數學表格&lt;/h2>
+&lt;p>做報告的時候一定會遇到表格裡有數學符號，如果你懶得前後都加 &lt;code>$&lt;/code> 的話，可以用以下的方式&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\newcolumntype&lt;/span>&lt;span class="nb">{&lt;/span>L&lt;span class="nb">}{&lt;/span>&amp;gt;&lt;span class="nb">{&lt;/span>&lt;span class="s">$&lt;/span>&lt;span class="nb">}l&amp;lt;{&lt;/span>&lt;span class="s">$&lt;/span>&lt;span class="nb">}}&lt;/span> &lt;span class="c">% math-mode version of &amp;#34;l&amp;#34; column type
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\begin&lt;/span>&lt;span class="nb">{&lt;/span>tabular&lt;span class="nb">}{&lt;/span>|L|L|&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\pi&lt;/span> &lt;span class="nb">&amp;amp;&lt;/span> &lt;span class="k">\tau&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>tabular&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="其他">其他&lt;/h2>
+&lt;p>其他零碎的使用方法建議參考 &lt;a class="link" href="https://www.overleaf.com/read/hpscgpsbxnjf" target="_blank" rel="noopener"
+>Saintan的LaTeX小教室&lt;/a>，裡面寫的非常詳細&lt;/p>
+&lt;h2 id="符號表">符號表&lt;/h2>
+&lt;p>在 LaTeX 打數學式的時候，一定會遇到一些莫名其妙的符號，可以參考下面兩個網站，可以依序找，第二個因為東西太多了所以會比較難找一點&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols" target="_blank" rel="noopener"
+>https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols&lt;/a>&lt;br>
+&lt;a class="link" href="https://www.caam.rice.edu/~heinken/latex/symbols.pdf" target="_blank" rel="noopener"
+>https://www.caam.rice.edu/~heinken/latex/symbols.pdf&lt;/a>&lt;/p>
+&lt;h2 id="我的-latex-範本">我的 LaTeX 範本&lt;/h2>
+&lt;p>這是我寫物理實驗結報的範本&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\documentclass&lt;/span>&lt;span class="na">[12pt,a4paper]&lt;/span>&lt;span class="nb">{&lt;/span>article&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\title&lt;/span>&lt;span class="nb">{&lt;/span>物理實驗結報範本&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\author&lt;/span>&lt;span class="nb">{&lt;/span>學號：X12345678 &lt;span class="k">\\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">姓名：XXX &lt;span class="k">\\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">第 17 組&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\date&lt;/span>&lt;span class="nb">{&lt;/span>2021-10-08&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>amsmath&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>mathtools&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>graphicx&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>array&lt;span class="nb">}&lt;/span> &lt;span class="c">% for \newcolumntype macro
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="k">\newcolumntype&lt;/span>&lt;span class="nb">{&lt;/span>L&lt;span class="nb">}{&lt;/span>&amp;gt;&lt;span class="nb">{&lt;/span>&lt;span class="s">$&lt;/span>&lt;span class="nb">}l&amp;lt;{&lt;/span>&lt;span class="s">$&lt;/span>&lt;span class="nb">}}&lt;/span> &lt;span class="c">% math-mode version of &amp;#34;l&amp;#34; column type
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="k">\usepackage&lt;/span>&lt;span class="na">[utf8]&lt;/span>&lt;span class="nb">{&lt;/span>inputenc&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="na">[T1]&lt;/span>&lt;span class="nb">{&lt;/span>fontenc&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>textcomp&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>gensymb&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>multirow&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>hhline&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>indentfirst&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="na">[CJKmath=true,AutoFakeBold=3,AutoFakeSlant=.2]&lt;/span>&lt;span class="nb">{&lt;/span>xeCJK&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\newCJKfontfamily\Kai&lt;/span>&lt;span class="nb">{&lt;/span>[jf-openhuninn-1.1.ttf]&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\newCJKfontfamily\Hei&lt;/span>&lt;span class="nb">{&lt;/span>[jf-openhuninn-1.1.ttf]&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\newCJKfontfamily\NewMing&lt;/span>&lt;span class="nb">{&lt;/span>[jf-openhuninn-1.1.ttf]&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>fontspec&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setmainfont&lt;/span>&lt;span class="nb">{&lt;/span>[jf-openhuninn-1.1.ttf]&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\setmonofont&lt;/span>&lt;span class="nb">{&lt;/span>[jf-openhuninn-1.1.ttf]&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\XeTeXlinebreaklocale&lt;/span> &amp;#34;zh&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\begin&lt;/span>&lt;span class="nb">{&lt;/span>document&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\maketitle&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\section&lt;/span>&lt;span class="nb">{&lt;/span>簡介&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\section&lt;/span>&lt;span class="nb">{&lt;/span>原始數據&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\section&lt;/span>&lt;span class="nb">{&lt;/span>數據分析&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\section&lt;/span>&lt;span class="nb">{&lt;/span>誤差分析&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\subsection&lt;/span>&lt;span class="nb">{&lt;/span>百分誤差&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\subsection&lt;/span>&lt;span class="nb">{&lt;/span>誤差原因&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\section&lt;/span>&lt;span class="nb">{&lt;/span>結果與討論&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>document&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

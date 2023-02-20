@@ -1,5 +1,153 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>android on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/android/</link><description>Recent content in android on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 14 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/cast-phone-screen-to-computer/</guid><description>&lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
-&lt;h1 id="scrcpy">SCRCPY&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>android on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/android/</link><description>Recent content in android on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 18 Apr 2022 18:53:50 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>Anbox</title><link>https://blog.simbafs.cc/p/linux/anbox/</link><pubDate>Mon, 18 Apr 2022 18:53:50 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/anbox/</guid><description>&lt;h1 id="anbox">Anbox&lt;/h1>
+&lt;p>&lt;a class="link" href="https://anbox.io/" target="_blank" rel="noopener"
+>anbox&lt;/a> 是 Android in a box，是一種基於容器化技術的 Android 模擬器，所以執行速度會比較快、比較省資源，而且因為每個 App 都在各自的容器裡面，所以比較安全
+（應該沒理解錯吧？）。&lt;br>
+安裝 anbox 需要先安裝兩個 kernal modules，然後安裝 anbox 後，為了之後方便，所以要裝 Google Play，不裝也是可以，但之後安裝其他 App 比較麻煩&lt;/p>
+&lt;h2 id="系統">系統&lt;/h2>
+&lt;p>我用的系統是 Ubuntu 21.04，如果你的系統不一樣，可能會有某些步驟不太一樣。&lt;br>
+這次安裝因為涉及 Linux Kernel 所以隨時重開機有很大機會幫助改善遇到的問題&lt;/p>
+&lt;h2 id="安裝-linux-kernal-modules">安裝 Linux Kernal Modules&lt;/h2>
+&lt;p>如果你的 Linux kernale &amp;gt; 5.0，那理論上已經包在 Kernel 裡面了，所以不用安裝&lt;/p>
+&lt;blockquote>
+&lt;p>Starting with Ubuntu 19.04 binder and ashmem are now build with the standard Ubuntu kernel (&amp;gt;= 5.0) and you don’t have to install the modules from the PPA anymore.&lt;/p>
+&lt;/blockquote>
+&lt;p>但是我還是把命令跑了一次，反正有病治病沒病強身&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo add-apt-repository ppa:morphis/anbox-support
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update &lt;span class="c1"># 這個步驟應該會包括在上面那個命令，但執行一次也不會壞&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install linux-headers-generic anbox-modules-dkms &lt;span class="c1"># 這個後面那個套件應該會找不到，跳過他&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install software-properties-common
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo modprobe ashmem_linux
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo modprobe binder_linux
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然後如果你還是很擔心不放心有沒有裝好，可以執行下面的指令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git clone https://github.com/anbox/anbox-modules /tmp/anbox-modules
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /tmp/anbox-modules
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo ./INSTALL.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這時候如果你&lt;del>還是&lt;/del>很擔心，不確定有沒有裝好，可以用下面的命令檢查有沒有安裝好（這個時候可能需要重開機）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ls -1 /dev/{ashmem,binder} # 這個是官方用的，但是我怎麼試都失敗，但是 anbox 還是安裝成功了
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lsmod | grep -e ashmem -e binder # 我不確定這個找到是不是代表有成功啟動，但是他兩個都找的到
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://docs.anbox.io/userguide/install_kernel_modules.html" target="_blank" rel="noopener"
+>https://docs.anbox.io/userguide/install_kernel_modules.html&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="安裝-anbox">安裝 anbox&lt;/h2>
+&lt;p>如果你的電腦上有 snap，就用 snap 裝；如果沒有，就先去裝 snap。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo snap install --devmode --beta anbox
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>嘿對，裝好了，可以用這個指令看看有沒有裝好&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">snap info anbox
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://docs.anbox.io/userguide/install.html" target="_blank" rel="noopener"
+>https://docs.anbox.io/userguide/install.html&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="apt">apt&lt;/h2>
+&lt;p>如果你是 Ubuntu/Debian 長期使用者，你可能會想用 apt 裝 anbox，也不是不行，但是等等裝 Google Play 的時候會出一點點問題（OverlayFS 路徑有問題），最佳解決辦法就是用 snap，不要用 apt&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt remove anbox
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="安裝-google-play">安裝 Google Play&lt;/h2>
+&lt;p>因為 anbox 沒有內建 apk 安裝器，所以沒辦法很方便的安裝 APP，最方便的方法是安裝 Google Play。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install wget curl lzip tar unzip squashfs-tools
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget https://raw.githubusercontent.com/geeks-r-us/anbox-playstore-installer/master/install-playstore.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x install-playstore.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo ./install-playstore.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果遇到 Overlay not enable 的問題，請不要用 apt，至於位什麼自己研究 &lt;code>install-playstores.sh&lt;/code>
+跑完如果沒錯誤就可以打開 &lt;code>anbox.appmgr&lt;/code>，打開 play 安裝 APP 了。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox" target="_blank" rel="noopener"
+>https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="問遺">問遺&lt;/h2>
+&lt;p>目前裝好 APP 但是我打不開&lt;/p></description></item><item><title>kdeconnect</title><link>https://blog.simbafs.cc/p/linux/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 23:25:28 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/kdeconnect/</guid><description>&lt;h1 id="kdeconnect">kdeconnect&lt;/h1>
+&lt;p>kdeconnect 顧名思義是 kde 出的一款 connect 軟體，功能非常多而且方便。電腦和手機都安裝好軟體後，只要在同一個網域就可以配對連接&lt;/p>
+&lt;h2 id="功能介紹">功能介紹&lt;/h2>
+&lt;ol>
+&lt;li>基本訊息 - 在電腦和手機上可以互相看到電池、網路等基本訊息&lt;/li>
+&lt;li>通知 - 可以設定電腦顯示手機通知或手機顯示電腦通知，或是兩者都開啟，我通常只開前者&lt;/li>
+&lt;li>媒體控制 - 無論是 VLC、YouTube、Nefflix 或任何網頁，都可以控制進度、音量、暫停，而且雙方都可以控制。這個是我最愛的功能之一&lt;/li>
+&lt;li>命令控制 - kdeconnect 可以讓你在手機上執行電腦上預先設定好的指令，像是關機、鎖定等等，下面會推薦幾個我設定的命令&lt;/li>
+&lt;li>傳檔案和資料夾共用 - kdeconnect 可以讓你連接電腦和手機上特定的資料夾，或是傳送單一檔案&lt;/li>
+&lt;li>共用剪貼簿 - 如其名，這是一個非常實用的功能，但是有時候觸發條件怪怪的&lt;/li>
+&lt;li>輸入 - 不論是滑鼠、鍵盤，兩邊都可以互相當對方的輸入裝置，這個功能非常好用
+還有像是讓手機大叫（找手機用）、簡報控制、傳簡訊、手機有電話的時候自動暫停音樂等等奇奇怪怪的功能&lt;/li>
+&lt;/ol>
+&lt;h2 id="推薦命令">推薦命令&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">Description&lt;/th>
+&lt;th style="text-align:left">Command&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">鎖定螢幕並暫停 VLC 播放&lt;/td>
+&lt;td style="text-align:left">&lt;code>loginctl lock-session; dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">解除鎖定螢幕（免密碼）&lt;/td>
+&lt;td style="text-align:left">&lt;code>loginctl unlock-session&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</guid><description>&lt;h1 id="cast-phone-screen-to-computer">Cast Phone Screen to Computer&lt;/h1>
+&lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
+&lt;h2 id="scrcpy">SCRCPY&lt;/h2>
 &lt;p>這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。&lt;/p>
 &lt;h2 id="installation">Installation&lt;/h2>
 &lt;p>安裝流程意外的簡單，只需要用 &lt;code>apt&lt;/code> 就可以安裝了，或是你可以自己 build，稍微看了一下 &lt;a class="link" href="https://github.com/Genymobile/scrcpy/blob/master/BUILD.md" target="_blank" rel="noopener"
@@ -28,7 +176,7 @@
 如果要啟用無線，只需要加上 &lt;code>-w&lt;/code> 選項（用預設的 ip &lt;code>192.168.43.1&lt;/code>)&lt;br>
 如果 ip 不是預設的話，可以加上 &lt;code>-i IP&lt;/code> 來指定其他的 ip&lt;br>
 加上 &lt;code>-f&lt;/code> 可以開啟全螢幕&lt;/p>
-&lt;h1 id="參連連結">參連連結&lt;/h1>
+&lt;h2 id="參連連結">參連連結&lt;/h2>
 &lt;p>&lt;a class="link" href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener"
 >https://github.com/Genymobile/scrcpy&lt;/a>
 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options" target="_blank" rel="noopener"

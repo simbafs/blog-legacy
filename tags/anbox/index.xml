@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>anbox on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/anbox/</link><description>Recent content in anbox on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 18 Apr 2022 18:53:50 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/anbox/index.xml" rel="self" type="application/rss+xml"/><item><title>Anbox</title><link>https://blog.simbafs.cc/p/linux/anbox/</link><pubDate>Mon, 18 Apr 2022 18:53:50 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/anbox/</guid><description>&lt;h1 id="anbox">Anbox&lt;/h1>
+&lt;p>&lt;a class="link" href="https://anbox.io/" target="_blank" rel="noopener"
+>anbox&lt;/a> 是 Android in a box，是一種基於容器化技術的 Android 模擬器，所以執行速度會比較快、比較省資源，而且因為每個 App 都在各自的容器裡面，所以比較安全
+（應該沒理解錯吧？）。&lt;br>
+安裝 anbox 需要先安裝兩個 kernal modules，然後安裝 anbox 後，為了之後方便，所以要裝 Google Play，不裝也是可以，但之後安裝其他 App 比較麻煩&lt;/p>
+&lt;h2 id="系統">系統&lt;/h2>
+&lt;p>我用的系統是 Ubuntu 21.04，如果你的系統不一樣，可能會有某些步驟不太一樣。&lt;br>
+這次安裝因為涉及 Linux Kernel 所以隨時重開機有很大機會幫助改善遇到的問題&lt;/p>
+&lt;h2 id="安裝-linux-kernal-modules">安裝 Linux Kernal Modules&lt;/h2>
+&lt;p>如果你的 Linux kernale &amp;gt; 5.0，那理論上已經包在 Kernel 裡面了，所以不用安裝&lt;/p>
+&lt;blockquote>
+&lt;p>Starting with Ubuntu 19.04 binder and ashmem are now build with the standard Ubuntu kernel (&amp;gt;= 5.0) and you don’t have to install the modules from the PPA anymore.&lt;/p>
+&lt;/blockquote>
+&lt;p>但是我還是把命令跑了一次，反正有病治病沒病強身&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo add-apt-repository ppa:morphis/anbox-support
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update &lt;span class="c1"># 這個步驟應該會包括在上面那個命令，但執行一次也不會壞&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install linux-headers-generic anbox-modules-dkms &lt;span class="c1"># 這個後面那個套件應該會找不到，跳過他&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install software-properties-common
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo modprobe ashmem_linux
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo modprobe binder_linux
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然後如果你還是很擔心不放心有沒有裝好，可以執行下面的指令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git clone https://github.com/anbox/anbox-modules /tmp/anbox-modules
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /tmp/anbox-modules
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo ./INSTALL.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這時候如果你&lt;del>還是&lt;/del>很擔心，不確定有沒有裝好，可以用下面的命令檢查有沒有安裝好（這個時候可能需要重開機）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ls -1 /dev/{ashmem,binder} # 這個是官方用的，但是我怎麼試都失敗，但是 anbox 還是安裝成功了
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lsmod | grep -e ashmem -e binder # 我不確定這個找到是不是代表有成功啟動，但是他兩個都找的到
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://docs.anbox.io/userguide/install_kernel_modules.html" target="_blank" rel="noopener"
+>https://docs.anbox.io/userguide/install_kernel_modules.html&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="安裝-anbox">安裝 anbox&lt;/h2>
+&lt;p>如果你的電腦上有 snap，就用 snap 裝；如果沒有，就先去裝 snap。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo snap install --devmode --beta anbox
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>嘿對，裝好了，可以用這個指令看看有沒有裝好&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">snap info anbox
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://docs.anbox.io/userguide/install.html" target="_blank" rel="noopener"
+>https://docs.anbox.io/userguide/install.html&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="apt">apt&lt;/h2>
+&lt;p>如果你是 Ubuntu/Debian 長期使用者，你可能會想用 apt 裝 anbox，也不是不行，但是等等裝 Google Play 的時候會出一點點問題（OverlayFS 路徑有問題），最佳解決辦法就是用 snap，不要用 apt&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt remove anbox
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="安裝-google-play">安裝 Google Play&lt;/h2>
+&lt;p>因為 anbox 沒有內建 apk 安裝器，所以沒辦法很方便的安裝 APP，最方便的方法是安裝 Google Play。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install wget curl lzip tar unzip squashfs-tools
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget https://raw.githubusercontent.com/geeks-r-us/anbox-playstore-installer/master/install-playstore.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x install-playstore.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo ./install-playstore.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果遇到 Overlay not enable 的問題，請不要用 apt，至於位什麼自己研究 &lt;code>install-playstores.sh&lt;/code>
+跑完如果沒錯誤就可以打開 &lt;code>anbox.appmgr&lt;/code>，打開 play 安裝 APP 了。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox" target="_blank" rel="noopener"
+>https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="問遺">問遺&lt;/h2>
+&lt;p>目前裝好 APP 但是我打不開&lt;/p></description></item></channel></rss>

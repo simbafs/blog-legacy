@@ -1,4 +1,83 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RegEx on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/regex/</link><description>Recent content in RegEx on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 16 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/regex/index.xml" rel="self" type="application/rss+xml"/><item><title>server-tool</title><link>https://blog.simbafs.cc/p/server-tool/</link><pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/server-tool/</guid><description>&lt;h1 id="用-bash-寫-log-分析工具">用 bash 寫 log 分析工具&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RegEx on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/regex/</link><description>Recent content in RegEx on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 16 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/regex/index.xml" rel="self" type="application/rss+xml"/><item><title>Server Tool</title><link>https://blog.simbafs.cc/p/linux/server/server-tool/</link><pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/server-tool/</guid><description>&lt;h1 id="server-tool">Server Tool&lt;/h1>
+&lt;h2 id="用-bash-寫-log-分析工具">用 bash 寫 log 分析工具&lt;/h2>
 &lt;p>因為我們的 server 不知道是為什麼一直受到 DDoS 攻擊&lt;br>
 我想知道是什麼時段容易受到攻擊和每次多久、來自那個 ip&lt;br>
-於是我花了一點時間寫了幾個簡單的 script&lt;/p></description></item></channel></rss>
+於是我花了一點時間寫了幾個簡單的 script&lt;/p>
+&lt;hr>
+&lt;h3 id="先來講我遇到的坑好了">先來講我遇到的坑好了&lt;/h3>
+&lt;h4 id="sh">sh&lt;/h4>
+&lt;p>過程中遇到一個最大的坑是在 ubuntu 預設的 sh 不是 bash
+是 dash
+據說比較情輕薄&lt;br>
+我在試 bash 中數字的運算比較時踩到這個坑&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">b&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">6&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">((&lt;/span> a &amp;gt; b &lt;span class="o">))&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> yes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> no
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>因為我在試語法是否正確
+開了一個新的檔案
+我懶的 &lt;code>chmod&lt;/code> 直接 &lt;code>sh tt.sh&lt;/code>
+結果 &lt;code>sh&lt;/code> 是 dash
+dash 沒有支援這個語法
+然後抓了快 20 分鐘的 bug
+還是乖乖寫 &lt;code>#!/bin/bash&lt;/code> 吧&lt;/p>
+&lt;h4 id="floating-point-number">floating point number&lt;/h4>
+&lt;p>我的 script 中有用浮點數的除法
+但是 bash 只支援整數
+所以除出來都是 0
+這個坑沒有很大
+很容易解決
+只要使用 &lt;code>bc&lt;/code> 這個指令就可以了&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ bc -l &lt;span class="o">&amp;lt;&amp;lt;&amp;lt;&lt;/span> &lt;span class="s1">&amp;#39;100/3&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">33.33333333333333333333
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="associate-array">Associate array&lt;/h4>
+&lt;p>在有一個地方本來要用關聯式陣列來存一些資料
+在定義關聯是陣列要把 &lt;code>-a&lt;/code> 改成 &lt;code>-A&lt;/code>
+這邊遇到什麼問題有點忘記了
+想到再補起來
+反正最後沒有用關聯式陣列&lt;/p>
+&lt;hr>
+&lt;h3 id="其他">其他&lt;/h3>
+&lt;h4 id="程式碼">程式碼&lt;/h4>
+&lt;p>&lt;a class="link" href="https://github.com/simba-fs/server-tool" target="_blank" rel="noopener"
+>https://github.com/simba-fs/server-tool&lt;/a>
+介紹：&lt;/p>
+&lt;h4 id="barsh">bar.sh&lt;/h4>
+&lt;p>Draw a bar from data&lt;/p>
+&lt;h4 id="countsh">count.sh&lt;/h4>
+&lt;p>Count how many times does each line appear in file&lt;/p>
+&lt;h4 id="ipsh">ip.sh&lt;/h4>
+&lt;p>Count how many times does each ip send a request&lt;/p>
+&lt;h4 id="timesh">time.sh&lt;/h4>
+&lt;p>Count how many request in each secend/minute/hour/day&lt;/p>
+&lt;h4 id="好站連結">好站連結&lt;/h4>
+&lt;p>&lt;a class="link" href="https://www.regextester.com/" target="_blank" rel="noopener"
+>https://www.regextester.com/&lt;/a>
+這個網站可以測試 RegEx
+蠻不錯的&lt;/p></description></item></channel></rss>

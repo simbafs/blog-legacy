@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>file on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/file/</link><description>Recent content in file on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 07 Apr 2022 23:13:04 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/file/index.xml" rel="self" type="application/rss+xml"/><item><title>Modeline</title><link>https://blog.simbafs.cc/p/linux/vim/modeline/</link><pubDate>Thu, 07 Apr 2022 23:13:04 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/modeline/</guid><description>&lt;h1 id="modeline">Modeline&lt;/h1>
+&lt;p>&lt;code>modeline&lt;/code> 是一個可以將 vim 設定嵌入檔案的方式，這樣就可以讓某些檔案有自己的設定，像是折疊、不要行數、tab 等於多少空白等等。&lt;/p>
+&lt;h2 id="簡單的條件">簡單的條件&lt;/h2>
+&lt;p>簡單的 &lt;code>modeline&lt;/code> 需要滿足幾個條件：&lt;/p>
+&lt;ol>
+&lt;li>開頭（不必是行首）至少有一個空白/tab&lt;/li>
+&lt;li>用 &lt;code>vim&lt;/code>、&lt;code>vi&lt;/code> 等字開頭，這裡還可以設定哪個版本才要載入&lt;/li>
+&lt;/ol>
+&lt;h2 id="基本的範例">基本的範例&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> vim: wrap
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
+&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file" target="_blank" rel="noopener"
+>https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file&lt;/a>&lt;br>
+help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item></channel></rss>

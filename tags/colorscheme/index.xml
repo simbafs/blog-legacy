@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>colorscheme on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/colorscheme/</link><description>Recent content in colorscheme on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 17:09:18 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/colorscheme/index.xml" rel="self" type="application/rss+xml"/><item><title>Solarized</title><link>https://blog.simbafs.cc/p/linux/vim/solarized/</link><pubDate>Wed, 15 Jun 2022 17:09:18 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/solarized/</guid><description>&lt;h1 id="solarized">Solarized&lt;/h1>
+&lt;p>&lt;a class="link" href="https://ethanschoonover.com/solarized/" target="_blank" rel="noopener"
+>solarized&lt;/a> 是一個文字界面常見的配色方案，不僅是用在 vim，大多數 terminal 和 editor 也都支援&lt;/p>
+&lt;h2 id="install">install&lt;/h2>
+&lt;p>加入 ```vim
+Plug &amp;rsquo;ericbn/vim-solarized'&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">然後安裝
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">## transparent background
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">因為設定關係，所以如果你的終端機有設定透明背景，在 vim 中會全部變不透明，載入[這個設定](https://gist.github.com/fuadnafiz98/d91e468c9bc4689868eb0984a29fef66)就可以解決，你也可以放在另外檔案再引入
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">```vim
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34; https://gist.github.com/fuadnafiz98/d91e468c9bc4689868eb0984a29fef66
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34; for transparent background
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">function! AdaptColorscheme()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> highlight clear CursorLine
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> highlight Normal ctermbg=none
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> highlight LineNr ctermbg=none
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> highlight Folded ctermbg=none
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> highlight NonText ctermbg=none
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> highlight SpecialKey ctermbg=none
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> highlight VertSplit ctermbg=none
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> highlight SignColumn ctermbg=none
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">endfunction
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">autocmd ColorScheme * call AdaptColorscheme()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">highlight Normal guibg=NONE ctermbg=NONE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">highlight CursorLineNr cterm=NONE ctermbg=NONE ctermfg=NONE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">highlight clear LineNr
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">highlight clear SignColumn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">highlight clear StatusLine
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34; Change Color when entering Insert Mode
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">autocmd InsertEnter * set nocursorline
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34; Revert Color to default when leaving Insert Mode
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">autocmd InsertLeave * set nocursorline
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;&amp;#34; extra settings, uncomment them if necessary :)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;set cursorline
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;set noshowmode
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;set nocursorline
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34; trasparent end
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

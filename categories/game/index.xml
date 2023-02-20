@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>game on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/game/</link><description>Recent content in game on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 Feb 2023 23:40:31 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/game/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux 安裝跑跑卡丁車（nexon launcher）</title><link>https://blog.simbafs.cc/p/game/nexon/</link><pubDate>Thu, 16 Feb 2023 23:40:31 +0800</pubDate><guid>https://blog.simbafs.cc/p/game/nexon/</guid><description>&lt;h1 id="如何在-linux-安裝跑跑卡丁車">如何在 Linux 安裝跑跑卡丁車&lt;/h1>
+&lt;ol>
+&lt;li>去官網下載 Nexon 啟動器設定 exe&lt;/li>
+&lt;li>去 Steam 左下角新增遊戲 &amp;gt; 非 steam 遊戲，找到你的 exe，可能要注意一下 filetype&lt;/li>
+&lt;li>在 steam 遊戲頁面右上角齒輪 &amp;gt; 內容 &amp;gt; 相容性 &amp;gt; 打勾勾 &amp;gt; Proton&lt;/li>
+&lt;li>啟動遊戲！按照步驟裝完啟動器、關掉他&lt;/li>
+&lt;li>steam 遊戲頁面右上角齒輪 &amp;gt; 內容 &amp;gt; 捷徑 &amp;gt; 開始位置 &amp;gt; 瀏覽，改成 &lt;code>~/.local/share/Steam/steamapps/compatdata/${steam game id}/pfx/drive_c/Program Files (x86)/Nexon/Nexon Launcher/nexon_launcher.exe &lt;/code>
+好了&lt;/li>
+&lt;/ol></description></item><item><title>兩輸入生產單位的比較</title><link>https://blog.simbafs.cc/p/game/mindustry/two-input-compare/</link><pubDate>Sun, 22 May 2022 23:06:02 +0800</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/two-input-compare/</guid><description>&lt;h1 id="目的">目的&lt;/h1>
+&lt;ol>
+&lt;li>驗證不同設計的生產效率差異&lt;/li>
+&lt;li>用科學的方式檢驗下面這些毫無根據、隨意編造的偏見
+&lt;img src="https://blog.simbafs.cc/motivative-1.png"
+loading="lazy"
+alt="motivative 1"
+>
+&lt;img src="https://blog.simbafs.cc/motivative-2.png"
+loading="lazy"
+alt="motivative 2"
+>
+&lt;img src="https://blog.simbafs.cc/motivative-3.png"
+loading="lazy"
+alt="motivative 3"
+>
+&lt;img src="https://blog.simbafs.cc/motivative-4.png"
+loading="lazy"
+alt="motivative 4"
+>&lt;/li>
+&lt;/ol>
+&lt;h2 id="實驗方法">實驗方法&lt;/h2>
+&lt;p>相同的物品源、相同的生產建築數量、相同的輸出軌數和時間，以不同的輸入方法配置，計算每秒生產量。&lt;/p>
+&lt;ul>
+&lt;li>相同物品源：就一樣數量的物品源，本次實驗用兩組實驗，所以是四個沙、兩個煤&lt;/li>
+&lt;li>相同生產建築：八個煉矽廠&lt;/li>
+&lt;li>相同輸出軌數：各兩條&lt;/li>
+&lt;li>相同輸出時間：連接到同一個能量源，計時一段時間後拆除能量源，計算雙方生產數量&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>因為輸送帶用的是最低階，可能會補給不足或是消化不夠快，但是因為兩個都是相同的限制（輸出軌數），要卡一定是兩個一起卡，頂多被卡成平手。這個時候如果還輸，那就不知道是誰的問題了喔！&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="原始數據和計算結果">原始數據和計算結果&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">秒數&lt;/th>
+&lt;th style="text-align:left">A&lt;/th>
+&lt;th style="text-align:left">B&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">10&lt;/td>
+&lt;td style="text-align:left">10.8&lt;/td>
+&lt;td style="text-align:left">11.0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">20&lt;/td>
+&lt;td style="text-align:left">9.6&lt;/td>
+&lt;td style="text-align:left">10.9&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">30&lt;/td>
+&lt;td style="text-align:left">9.2&lt;/td>
+&lt;td style="text-align:left">9.7&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">40&lt;/td>
+&lt;td style="text-align:left">9.1&lt;/td>
+&lt;td style="text-align:left">9.6&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">50&lt;/td>
+&lt;td style="text-align:left">9.0&lt;/td>
+&lt;td style="text-align:left">9.5&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">60&lt;/td>
+&lt;td style="text-align:left">8.9&lt;/td>
+&lt;td style="text-align:left">9.2&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">平均&lt;/td>
+&lt;td style="text-align:left">9.4&lt;/td>
+&lt;td style="text-align:left">10.0&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="https://blog.simbafs.cc/sliicon.png"
+loading="lazy"
+alt="silicon"
+>
+&lt;img src="https://blog.simbafs.cc/result.png"
+loading="lazy"
+alt="result"
+>
+&lt;img src="https://blog.simbafs.cc/chart.png"
+loading="lazy"
+alt="chart"
+>&lt;/p>
+&lt;h2 id="結果與討論">結果與討論&lt;/h2>
+&lt;p>在時間拉長後，因為被卡住的東西被平均掉，因此兩個都生產效率都下降，這個很正常&lt;br>
+根據結果，即便都被限制，生產效率都還是 B 配置比較高，無論時間拉多長。&lt;br>
+根據我個人的猜測，B 因為輸入和輸出沒有混雜在一起，因此不會造成堵塞（仔細觀察 A，最後在反向分類器那邊常常會堵住，這就是輸入輸出混雜的後果），導致即使輸入比例不對，效率依舊比較高。&lt;br>
+A 的穩定性高了那麼一點點，不重要&lt;/p>
+&lt;h2 id="結果比較">結果比較&lt;/h2>
+&lt;p>根據可擴張性而言，B 的設計是可以橫向無限擴張，不像 A，縱向擴張受到輸送帶效率影響、橫向擴張受到輸入比須滿管影響（不滿管比例就不對，這個設計也就跟垃圾一樣毫無意義，因此必須滿管）。另外，一套 B 可以有比 A 更彈性的輸入和輸出輸送帶數量，因此可以適應更多的狀況。&lt;br>
+B 唯一的缺點是佔體積大了一點點，但我個人認為，沒有任何事物是完美的，因此用一點點小缺點換取最多的優點，這個是比追求無謂的小體積來的更重要。&lt;br>
+更重要的是，B 的設計更為簡單，建造成本低、可以無限擴張&lt;/p>
+&lt;h2 id="後續實驗">後續實驗&lt;/h2>
+&lt;p>根據 &lt;code>Magicaltank&lt;/code> 和 &lt;code>a0000778&lt;/code> 的建議，換成溢流器的確會增加效率，但即使沒換，但還是比 A 設計效率高。&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted --></description></item><item><title>迴圈的延遲</title><link>https://blog.simbafs.cc/p/game/mindustry/delayofloop/</link><pubDate>Wed, 18 May 2022 17:19:57 +0800</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/delayofloop/</guid><description>&lt;h1 id="迴圈的延遲">迴圈的延遲&lt;/h1>
+&lt;p>在&lt;a class="link" href="../turretautoaim" >上一篇&lt;/a>關於用 &lt;code>jump&lt;/code> 實現迴圈的部份，其實，Mindustry 的 &lt;code>jump&lt;/code> 的會有一個延遲&lt;/p>
+&lt;h2 id="單核">單核&lt;/h2>
+&lt;p>&lt;img src="https://blog.simbafs.cc/singleCore.gif"
+loading="lazy"
+alt="single core"
+>&lt;/p>
+&lt;h2 id="多核">多核&lt;/h2>
+&lt;p>&lt;img src="https://blog.simbafs.cc/fourCores.gif"
+loading="lazy"
+alt="four cores"
+>&lt;/p></description></item><item><title>砲台自動瞄準</title><link>https://blog.simbafs.cc/p/game/mindustry/turretautoaim/</link><pubDate>Wed, 18 May 2022 16:29:13 +0800</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/turretautoaim/</guid><description>&lt;h1 id="砲台自動瞄準">砲台自動瞄準&lt;/h1>
+&lt;p>用處理器可以控制砲台們打的方向和什麼時候打，這樣只要有一群受控的砲台，就可以在射程範圍內指哪打哪&lt;/p>
+&lt;h2 id="單一砲台">單一砲台&lt;/h2>
+&lt;p>&lt;img src="https://blog.simbafs.cc/oneTurretScreeshot.png"
+loading="lazy"
+alt="one turret screenshot"
+>&lt;/p>
+&lt;p>如圖所示，砲台跟著玩家瞄準的方向打&lt;br>
+以下是程式碼&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">radar player any any distance duo1 1 player
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sensor x player @shootX
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sensor y player @shootY
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sensor shoot player @shooting
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">control shoot duo1 x y shoot 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">command&lt;/th>
+&lt;th style="text-align:left">description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">radar&lt;/td>
+&lt;td style="text-align:left">取得玩家物件&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">sensor&lt;/td>
+&lt;td style="text-align:left">抽出玩家物件的 &lt;code>shootX&lt;/code>、&lt;code>shootY&lt;/code>（瞄準的點）和 &lt;code>shooting&lt;/code>（是否正在開火）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">control&lt;/td>
+&lt;td style="text-align:left">控制 &lt;code>duo1&lt;/code> 砲台&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">variable&lt;/th>
+&lt;th style="text-align:left">description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">player&lt;/td>
+&lt;td style="text-align:left">玩家物件&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">x&lt;/td>
+&lt;td style="text-align:left">瞄準的 X 座標&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">y&lt;/td>
+&lt;td style="text-align:left">瞄準的 Y 座標&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">shooting&lt;/td>
+&lt;td style="text-align:left">是否開火&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="https://blog.simbafs.cc/oneTurretCode.png"
+loading="lazy"
+alt="one turret code"
+>&lt;/p>
+&lt;h2 id="多個砲台">多個砲台&lt;/h2>
+&lt;p>上面的指令只能控制一個砲台，那麼要怎麼控制多個砲台呢？答案是 loop，但是 Mindustry 沒有提供 loop，我們只能用 &lt;code>jump&lt;/code>，那麼就來看看程式吧！&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">set n 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">getlink result n
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">radar player any any distance result 1 player
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sensor x player @shootX
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sensor y player @shootY
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sensor shoot player @shooting
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">control shoot result x y shoot 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">op add n n 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">op mod n n @links
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jump 1 always x false
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>以下重複的就不會再多講了&lt;/p>
+&lt;/blockquote>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">command&lt;/th>
+&lt;th style="text-align:left">description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">set&lt;/td>
+&lt;td style="text-align:left">初始化一個變數 &lt;code>n&lt;/code> 值為 &lt;code>0&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getlink&lt;/td>
+&lt;td style="text-align:left">取得連結的第 &lt;code>n&lt;/code> 個建築，存到 &lt;code>result&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">op&lt;/td>
+&lt;td style="text-align:left">執行數學運算，舉例 &lt;code>add n N 1&lt;/code> =&amp;gt; &lt;code>n = N + 1&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">jump&lt;/td>
+&lt;td style="text-align:left">根據規則跳躍到某條指令，這裡的 &lt;code>1&lt;/code> 是指跳到第一調指令（從 0 開始數，也就是跳到 &lt;code>radar&lt;/code>），因為我們調建設成 &lt;code>always&lt;/code>，因此後面兩個就不必要，你在編輯畫面應該也看不到&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">variable&lt;/th>
+&lt;th style="text-align:left">description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">n&lt;/td>
+&lt;td style="text-align:left">迭代的變數&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">@links&lt;/td>
+&lt;td style="text-align:left">總共有幾個連結的建築&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="https://blog.simbafs.cc/multipleTurretsScreenshot.png"
+loading="lazy"
+alt="multiple turrets screenshot"
+>&lt;br>
+&lt;img src="https://blog.simbafs.cc/multipleTurretCode.png"
+loading="lazy"
+alt="multipleTurretsCode"
+>&lt;/p>
+&lt;h2 id="參考資料">參考資料&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.youtube.com/watch?v=UFK5m6qKT6U" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=UFK5m6qKT6U&lt;/a>&lt;br>
+&lt;a class="link" href="https://www.youtube.com/watch?v=YMxU0jcS11I" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=YMxU0jcS11I&lt;/a>&lt;/p></description></item><item><title>控制敵方路徑</title><link>https://blog.simbafs.cc/p/game/mindustry/pathofenemy/</link><pubDate>Tue, 17 May 2022 16:16:27 +0800</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/pathofenemy/</guid><description>&lt;h1 id="控制敵方路徑">控制敵方路徑&lt;/h1>
+&lt;p>在遊戲中，如何有效的讓資源集中在前線是一門學問，最好的情況當然是所有可能路徑都佈置強大的火力，但真實情況往往不是如此。&lt;/p>
+&lt;p>當遇到有多個洞口的地圖時，你可能堵好一個洞，敵方就從令一個洞跑進來，然後核心就被攻破了，但是你又沒有足夠的資源和時間在第一時間把所有的洞都佈置火力。這時候你就必須了解的方式如何行動的。&lt;/p>
+&lt;blockquote>
+&lt;p>本文提到的敵方都是遊戲電腦 AI，所以比較笨、很好騙，如果是和你的朋友對打，可能就不適用了。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="自動找路">自動找路&lt;/h2>
+&lt;p>尋找路徑可說是電腦科學一個很常見又基本的問題，Mindustry 尋路演算法會考慮預估時間。這個預估時間包括距離、要打破的牆等等，計算出來了之後選擇一條最段時間的路。注意，這裡他不會考慮沿途可能遭受的火力，我們就是要利用他這點來設計。&lt;/p>
+&lt;h2 id="我的習慣作法">我的習慣作法&lt;/h2>
+&lt;p>首先，最靠近空降區的洞不一定適合佈置砲台（例如第三關廢墟海岸左上角那個超級小的洞）這些地方可能是腹地狹小或是資源不足，總之你不會想要在這裡放砲台。那就用三層銅牆（不一定要 2x2 的，1x1 也可以）把他堵起來，一層防守兩層緩衝。挑選到適合的地方佈置砲台後，不要堵死，要留一條寬至少 3 格、夠長的通道。這個通道你要確保通暢，可以毫無阻礙的通到你的核心，這樣電腦就會判定這條路毫無阻礙，優先選擇，敵人就不會亂走到你沒有佈防的地方。這樣做還有一個好處，當你可以生產機甲時，友方機甲就可以直接走出去，不會受到阻礙，你也不用幫他們開門。&lt;br>
+然後在左右佈滿砲台，記得一定要放修理方塊，這樣你才不用常常來修方塊。至於通道長度和牆壁厚度，取決於這關敵方火力強度和你選用的砲台射程，如果你能夠在對方開火之前就幹掉他們，當然牆壁可以一層意思意思就好。&lt;/p></description></item><item><title>Merge</title><link>https://blog.simbafs.cc/p/game/mindustry/merge/</link><pubDate>Tue, 17 May 2022 08:32:38 +0800</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/merge/</guid><description>&lt;h1 id="merge">Merge&lt;/h1>
+&lt;p>Mindustry 中，某條輸送帶（A）合併到另一條未滿的輸送帶（B）上時，如果 B 有一個足夠小的空隙，A 是有機會無法補滿的&lt;/p>
+&lt;p>&lt;img src="https://blog.simbafs.cc/gap.png"
+loading="lazy"
+alt="gap"
+>&lt;/p>
+&lt;p>這種情況通常出現在兩列礦機的合併&lt;/p>
+&lt;p>&lt;img src="https://blog.simbafs.cc/withoutRouter.png"
+loading="lazy"
+alt="withoutRouter"
+>&lt;/p>
+&lt;p>要解決這個狀況，最簡單的方法是加上一個分配器&lt;/p>
+&lt;p>&lt;img src="https://blog.simbafs.cc/withRouter.png"
+loading="lazy"
+alt="withRouter"
+>&lt;/p>
+&lt;p>當然這裡的輸出是不能被堵住的，不然就沒有意義了(X&lt;/p></description></item></channel></rss>

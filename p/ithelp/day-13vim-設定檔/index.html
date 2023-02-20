@@ -1,0 +1,204 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="vim 在啟動時，都會去執行你的設定檔，這個檔案根據你的 vim 軟體不同而改變，如果是一般的 vim，那他會去讀 ~/.vimrc，如果是 neovim(nv"><title>Day 13：vim 設定檔</title><link rel=canonical href=https://blog.simbafs.cc/p/ithelp/day-13vim-%E8%A8%AD%E5%AE%9A%E6%AA%94/><link rel=stylesheet href=/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css><meta property="og:title" content="Day 13：vim 設定檔"><meta property="og:description" content="vim 在啟動時，都會去執行你的設定檔，這個檔案根據你的 vim 軟體不同而改變，如果是一般的 vim，那他會去讀 ~/.vimrc，如果是 neovim(nv"><meta property="og:url" content="https://blog.simbafs.cc/p/ithelp/day-13vim-%E8%A8%AD%E5%AE%9A%E6%AA%94/"><meta property="og:site_name" content="Simba 的喵窩"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="cli"><meta property="article:tag" content="terminal"><meta property="article:tag" content="software development"><meta property="article:tag" content="vim"><meta property="article:tag" content="tmux"><meta property="article:tag" content="zsh"><meta property="article:published_time" content="2021-09-13T00:00:00+00:00"><meta property="article:modified_time" content="2021-09-13T00:00:00+00:00"><meta name=twitter:site content="@simbafs"><meta name=twitter:creator content="@simbafs"><meta name=twitter:title content="Day 13：vim 設定檔"><meta name=twitter:description content="vim 在啟動時，都會去執行你的設定檔，這個檔案根據你的 vim 軟體不同而改變，如果是一般的 vim，那他會去讀 ~/.vimrc，如果是 neovim(nv"></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切換選單>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hua1d55c26052b345e2b49223d0087ef3a_89734_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a>
+<span class=emoji>💤</span></figure><div class=site-meta><h1 class=site-name><a href=/>Simba 的喵窩</a></h1><h2 class=site-description>雜七雜八的東西</h2></div></header><ol class=social-menu><li><a href=https://github.com/simbafs target=_blank title=GitHub rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=/index.xml target=_blank title=RSS rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0116 16"/><path d="M4 11a9 9 0 019 9"/></svg></a></li><li><a href=https://twitter.com/simbafs target=_blank title=Twitter rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>Home</span></a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><li><a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=/links/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>Links</span></a></li><li><a href=/resource/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>Resource</span></a></li><div class=menu-bottom-section><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>夜晚模式</span></li></div></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目錄</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#command>command</a><ol><li><a href=#列出命令>列出命令</a></li><li><a href=#定義新的使用者自訂命令>定義新的使用者自訂命令</a></li></ol></li><li><a href=#autocmd>autocmd</a></li><li><a href=#map>map</a><ol><li><a href=#列出-map>列出 map</a></li><li><a href=#定義-map>定義 map</a><ol><li><a href=#快捷鍵>快捷鍵</a></li><li><a href=#命令>命令</a></li></ol></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/ithelp/>ithelp</a>
+<a href=/categories/pure-cli-ide/>pure-CLI-IDE</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/ithelp/day-13vim-%E8%A8%AD%E5%AE%9A%E6%AA%94/>Day 13：vim 設定檔</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>2021/09/13</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>閱讀時間: 5 分鐘</time></div></footer></div></header><section class=article-content><p>vim 在啟動時，都會去<strong>執行你的設定檔</strong>，這個檔案<strong>根據你的 vim 軟體不同而改變</strong>，如果是一般的 vim，那他會去讀 <code>~/.vimrc</code>，如果是 neovim(nvim)，他會去找 <code>~/.config/nvim/init.vim</code>。在接下來的文章中都以 <code>vimrc</code> 代指。<br><code>vimrc</code> 內容是 vimscript，也就是所有的冒號命令<strong>去掉冒號之後的內容</strong>，例如有個命令是 <code>:set nu</code>，這個命令可以開啟行號顯示，如果要寫在 <code>vimrc</code> 裡面，就要寫成 <code>set nu</code>。</p><h1 id=vimrc>vimrc</h1><p>通常我們會在 <code>vimrc</code> 中設定關於 vim 的<strong>外觀</strong>、<strong>行為</strong>、<strong>載入外掛</strong>等等，接下來是我用多年的 vimrc 的內容，我會一個一個用註解解說他們的用處(雙引號 <code>"</code> 開頭是 vimscript 的註解)</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span><span class=lnt>74
+</span><span class=lnt>75
+</span><span class=lnt>76
+</span><span class=lnt>77
+</span><span class=lnt>78
+</span><span class=lnt>79
+</span><span class=lnt>80
+</span><span class=lnt>81
+</span><span class=lnt>82
+</span><span class=lnt>83
+</span><span class=lnt>84
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-vim data-lang=vim><span class=line><span class=cl><span class=c>&#34; 打開語法突顯</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>syntax</span> <span class=nx>on</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>&#34; load plguin</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; install vim-plug:</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; sh -c &#39;curl -fLo &#34;${XDG_DATA_HOME:-$HOME/.local/share}&#34;/nvim/site/autoload/plug.vim --create-dirs \</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34;        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim&#39;</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 這個是明天的東西，先註解掉，才不會出錯</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; so ~/.config/nvim/plugin.vim</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>&#34; 256 色</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>t_Co</span><span class=p>=</span><span class=m>256</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 解決和 tmux 衝突，https://vi.stackexchange.com/questions/238/tmux-is-changing-part-of-the-background-in-vim</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>t_ut</span><span class=p>=</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 選一個你喜歡的 colorschema</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; available color schema</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; blue darkblue default delek desert elflord evening industry koehler</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; morning  murphy pablo peachpuff ron shine slate torte zellner</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>colorscheme</span> <span class=nx>koehler</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>&#34; 雜項設定，詳細解說請用 `:help &lt;opeion&gt;`，例如 `:help showcmd`</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>showcmd</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>nu</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>tabstop</span><span class=p>=</span><span class=m>4</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>shiftwidth</span><span class=p>=</span><span class=m>4</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>autoindent</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>nowrap</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>incsearch</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>autoindent</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>cindent</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>smartindent</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>cursorline</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; make lightline work in single screen</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; https://github.com/itchyny/lightline.vim/issues/71#issuecomment-47859569</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>laststatus</span><span class=p>=</span><span class=m>2</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 開啟滑鼠功能，對初學者來說非常好用</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>set</span> <span class=nx>mouse</span><span class=p>=</span><span class=nx>a</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>&#34; markdown</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 如果是檔案類型是 markdown 或 text，打開文字折疊（超出螢幕寬度會折到下一行）</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; au 的語法等等會講</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>au</span> <span class=nx>FileType</span> <span class=nx>markdown</span> <span class=nx>set</span> <span class=nx>wrap</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>au</span> <span class=nx>FileType</span> <span class=nx>text</span> <span class=nx>set</span> <span class=nx>wrap</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>&#34; ejs</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 不加這個的話 ejs 的語法突顯會很奇怪，順便附帶一個 ft, filetype 的坑</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; https://vi.stackexchange.com/questions/16341/what-is-the-difference-between-set-ft-and-setfiletype</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>au</span> <span class=nx>BufNew</span><span class=p>,</span><span class=nx>BufNewFile</span><span class=p>,</span><span class=nx>BufRead</span> *.<span class=nx>ejs</span> :<span class=nx>set</span> <span class=nx>filetype</span><span class=p>=</span><span class=nx>ejs</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>au</span> <span class=nx>FileType</span> <span class=nx>ejs</span> <span class=nx>set</span> <span class=nx>syntax</span><span class=p>=</span><span class=nx>html</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>&#34; ts </span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 這只是因為我比較喜歡 vim 對 javascript 的配色，typesript 的我覺得很醜，所以強制 vim 用 javascript 的配色</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; au 就是 autocmd 的縮寫啦！（vim 幾乎每個超過三個字的命令、選項都有縮寫，寫程式的人都很懶XD）</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>autocmd</span> <span class=nx>BufNewFile</span><span class=p>,</span><span class=nx>BufRead</span> *.<span class=nx>ts</span> <span class=nx>set</span> <span class=nx>syntax</span><span class=p>=</span><span class=nx>javascript</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>&#34; yaml</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; yaml 機車的空格限制，這樣在寫 yaml 檔時比較方便</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>autocmd</span> <span class=nx>FileType</span> <span class=nx>yaml</span> <span class=nx>setlocal</span> <span class=nx>ts</span><span class=p>=</span><span class=m>2</span> <span class=nx>sts</span><span class=p>=</span><span class=m>2</span> <span class=nx>sw</span><span class=p>=</span><span class=m>2</span> <span class=nx>expandtab</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>&#34; hotkey</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 這邊是自訂快捷鍵，語法等等會講，這邊只說明用法</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 在命令模式按 &lt;tab&gt; 會把整行字向右移一個 tab。&lt;S-tab&gt; 會移回來</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>map</span> <span class=p>&lt;</span><span class=nx>tab</span><span class=p>&gt;</span> :<span class=nx>s</span><span class=sr>/^/</span>\<span class=nx>t</span><span class=p>&lt;</span><span class=nx>CR</span><span class=p>&gt;</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>map</span> <span class=p>&lt;</span><span class=nx>S</span><span class=p>-</span><span class=nx>tab</span><span class=p>&gt;</span> :<span class=nx>s</span><span class=sr>/^\t/</span><span class=p>&lt;</span><span class=nx>CR</span><span class=p>&gt;</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34;  如果要從系統剪貼簿貼上多行程式碼，建議這樣用，才不會被 vim 的自動縮排雷到（你試試就知道是什麼問題，很討厭）</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>nmap</span> <span class=p>&lt;</span><span class=nx>F3</span><span class=p>&gt;</span> :<span class=nx>r</span><span class=p>!</span> <span class=nx>cat</span><span class=p>&lt;</span><span class=nx>CR</span><span class=p>&gt;</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 切換行號，在複製到系統鍵貼簿時很好用，這樣就不會複製到行號</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>nmap</span> <span class=p>&lt;</span><span class=nx>F7</span><span class=p>&gt;</span> :<span class=nx>set</span> <span class=nx>invnumber</span><span class=p>&lt;</span><span class=nx>CR</span><span class=p>&gt;</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 清除搜尋結果的語法突顯</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>nmap</span> <span class=nx>cs</span> :<span class=nx>noh</span><span class=p>&lt;</span><span class=nx>CR</span><span class=p>&gt;</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>&#34; alias</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 冒號命令的別名，語法等等會講</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 常用就知道為什麼要設這個（按冒號時要按 &lt;shift&gt;，然後下一個字就很常變大寫，簡稱手殘）</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>command</span> <span class=nx>W</span> <span class=nx>w</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>command</span> <span class=nx>Q</span> <span class=nx>q</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>command</span> <span class=nx>Wq</span> <span class=nx>wq</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>command</span> <span class=nx>WQ</span> <span class=nx>wq</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>&#34; fix bg color error in Pmenu</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; 這個只是顯示問題，有時候背景色和前景色一樣你就看不到字了，所以要自己把他換掉，語法等等會講</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c>&#34; https://vi.stackexchange.com/questions/23328/change-color-of-coc-suggestion-box</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>hi</span> <span class=nx>Pmenu</span> <span class=nx>ctermbg</span><span class=p>=</span><span class=nx>black</span> <span class=nx>ctermfg</span><span class=p>=</span><span class=nx>white</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>hi</span> <span class=nx>Ignore</span> <span class=nx>ctermbg</span><span class=p>=</span><span class=nx>black</span> <span class=nx>ctermfg</span><span class=p>=</span><span class=nx>lightblue</span><span class=err>
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=command>command</h2><p>我們從最簡單的命令別名講起，這個命令可以縮寫成 <code>com</code><br>這個命令可以定義 <strong>「使用者自訂命令」</strong><br>使用者自訂命令一定要是<strong>大寫</strong>開頭</p><h3 id=列出命令>列出命令</h3><p><code>:verbose com [cmd]</code>
+這個可以列出符合 <code>[cmd]</code> 的使用者自訂命令，還有<strong>最後定義的位置</strong></p><h3 id=定義新的使用者自訂命令>定義新的使用者自訂命令</h3><p><code>:commmand {cmd} {rep}</code>
+這個會設定 <code>{cmd}</code> 的別名 <code>{rep}</code></p><h2 id=autocmd>autocmd</h2><p>autocmd 是在某種類型的檔案載入時自動執行命令用的，可以縮寫成 <code>au</code><br>au 的使用場景通常是某個類型的語法突顯會出問題、想要根據檔案類型套用不同設定，簡單的語法如下<br><code>au [條件] [...命令]</code><br>條件通常長這樣， <code>FileType javascript</code><br>命令就是冒號命令除了冒號的部份</p><h2 id=map>map</h2><p>map 的功能是定義不是冒號開頭的命令（像是 <code>dd</code> 這種，在前幾篇文章中稱為快捷鍵），map 又根據作用的模式分為 <code>nmap</code>、<code>vmap</code>、<code>imap</code> 等等非常多種（<code>:help map</code> 會列出所有 map ）。其中最常用的是 <code>map</code>、<code>nmap</code>、<code>imap</code>，這三個分別代表在「除了編輯模式中作用」、「命令模式（ n ）作用」、「在編輯模式作用（ i ）」。<br>各種 map <strong>用法都一樣，差別只在作用模式不同</strong></p><h3 id=列出-map>列出 map</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-vim data-lang=vim><span class=line><span class=cl><span class=p>:</span><span class=nx>map</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=p>:</span><span class=nx>nmap</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=p>:</span><span class=nx>imap</span><span class=err>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=定義-map>定義 map</h3><p><code>map {快捷鍵} {命令}</code><br>{快捷鍵} 是 vim 的按鍵組合，其中 <code>imap</code> 用的大多都要加 或是 ，否則會沒用
+{命令} 是 vim 的命令，注意這裡講的是「廣義的命令」，也就是包括冒號和非冒號命令，所以如果是冒號命令你必須加上冒號和 enter 鍵才會執行<br>ps: map 給我的感覺有點像「當你按下 {快捷鍵} 時，vim 會自動幫你打 {命令}</p><h4 id=快捷鍵>快捷鍵</h4><p>快捷鍵可以是不只一個按鍵，可以像是以下幾個範例</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>&lt;leader&gt;f
+</span></span><span class=line><span class=cl>&lt;C-y&gt;k
+</span></span><span class=line><span class=cl>ggk
+</span></span></code></pre></td></tr></table></div></div><p>如果一個按鍵可以打出來，像是<code>a</code>、<code>b</code>、<code>c</code>、<code>0</code>、<code>1</code>、<code>2</code>、<code>+</code>、<code>=</code>，就不用角括號 <code>&lt;></code><br>如果是控制按鍵或是和控制按鍵一起按，就要加上括號，例如 <code>&lt;C-y></code>、<code>&lt;leader></code>，其中是指 是反斜線
+更多這種按鍵的說明可以參考 <code>:help key-notation</code></p><h4 id=命令>命令</h4><p>這邊的命令因為是廣義的命令，所以如果你想要幫某個快捷鍵加上別名也是可以的</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-vim data-lang=vim><span class=line><span class=cl><span class=nx>nmap</span> <span class=nx>copy</span> <span class=nx>yy</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nx>nmap</span> <span class=nx>paste</span> <span class=nx>p</span><span class=err>
+</span></span></span></code></pre></td></tr></table></div></div><p>嗯&mldr;&mldr;這可能只在快捷鍵很常出現但是複雜時比較好用<br>扯遠了，回到正題。如果你的命令是冒號命令的話，你必須要加上冒號和 enter，不然你在打完快捷鍵之後還要自己按 enter，所以記的在命令最後面加上 <code>&lt;CR></code> ，這個代表的是 enter 鍵， 也可以</p></section><footer class=article-footer><section class=article-tags><a href=/tags/cli/>cli</a>
+<a href=/tags/terminal/>terminal</a>
+<a href=/tags/software-development/>software development</a>
+<a href=/tags/vim/>vim</a>
+<a href=/tags/tmux/>tmux</a>
+<a href=/tags/zsh/>zsh</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css integrity="sha256-J+iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s=" crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js integrity="sha256-InsNdER1b2xUewP+pKCUJpkhiqwHgqiPXDlIk7GzBu4=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI=" crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script></article><aside class=related-content--wrapper><h2 class=section-title>相關文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/ithelp/day-21%E5%84%B2%E5%AD%98%E5%99%A8%E8%88%87%E5%89%AA%E8%B2%BC%E7%B0%BF/><div class=article-details><h2 class=article-title>Day 21：儲存器與剪貼簿</h2></div></a></article><article><a href=/p/ithelp/day-20%E5%88%87%E6%B0%B4%E6%9E%9C%E5%9B%89vim-%E5%88%87%E8%9E%A2%E5%B9%95%E8%88%87%E5%88%86%E9%A0%81/><div class=article-details><h2 class=article-title>Day 20：切水果囉！vim 切螢幕與分頁</h2></div></a></article><article><a href=/p/ithelp/day-19%E8%A9%B2%E6%98%AF%E6%99%82%E5%80%99%E5%8D%87%E7%B4%9A%E4%BD%A0%E7%9A%84%E5%99%B4%E5%B0%84%E5%BC%95%E6%93%8E%E5%9B%89vim-emmet-%E9%87%8D%E8%A4%87%E8%88%87%E8%BF%AD%E4%BB%A3/><div class=article-details><h2 class=article-title>Day 19：該是時候升級你的噴射引擎囉！vim-emmet 重複與迭代</h2></div></a></article><article><a href=/p/ithelp/day-18%E5%B9%AB%E4%BD%A0%E7%9A%84-html-%E9%96%8B%E7%99%BC%E8%A3%9D%E4%B8%8A%E5%99%B4%E5%B0%84%E5%BC%95%E6%93%8Evim-emmet/><div class=article-details><h2 class=article-title>Day 18：幫你的 HTML 開發裝上噴射引擎！vim-emmet</h2></div></a></article><article><a href=/p/ithelp/day-17coc.nvim-%E8%A8%AD%E5%AE%9A%E4%B8%8B%E9%9B%86/><div class=article-details><h2 class=article-title>Day 17：coc.nvim 設定下集</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+2020 -
+2023 Simba 的喵窩</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.16.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

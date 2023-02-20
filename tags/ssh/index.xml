@@ -1,4 +1,246 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ssh on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/ssh/</link><description>Recent content in ssh on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/ssh/index.xml" rel="self" type="application/rss+xml"/><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-on-gitea-with-docker/</guid><description>&lt;p>&lt;a class="link" href="https://gitea.io" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SSH on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/ssh/</link><description>Recent content in SSH on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 06 Dec 2022 22:59:17 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/ssh/index.xml" rel="self" type="application/rss+xml"/><item><title>GPG with SSH</title><link>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 22:59:17 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</guid><description>&lt;h1 id="gpg-with-ssh">GPG with SSH&lt;/h1>
+&lt;p>接續前一篇 &lt;a class="link" href="https://blog.simbafs.cc/posts/linux/gpg/" >gpg 的文章&lt;/a>&lt;/p>
+&lt;h2 id="指紋-fingerprint">指紋 Fingerprint&lt;/h2>
+&lt;p>根據 &lt;a class="link" href="https://help.gnome.org/users/seahorse/stable/misc-key-fingerprint.html.en" target="_blank" rel="noopener"
+>GNOME help&lt;/a> 的說明，不同金鑰的指紋必然不同，因此如果要驗證、查詢的話，與其用其他參數，不如用指紋，例如我的 GPG key 指紋是 &lt;code>6236 A070 8FCD 894C 7AD1 A5FC DB13 A5C2 042E AEA4&lt;/code>，看到這串就代表是我。&lt;/p>
+&lt;h2 id="grip">Grip&lt;/h2>
+&lt;p>根據 &lt;a class="link" href="https://lists.gnupg.org/pipermail/gcrypt-devel/2013-June/002205.html" target="_blank" rel="noopener"
+>gnupg 的這封郵件&lt;/a>，grip 似乎是金鑰參數的 SHA-1 hash，看不太懂哪些參數會被納入計算。&lt;/p>
+&lt;h2 id="ssh-authorize-with-gpg">ssh authorize with gpg&lt;/h2>
+&lt;p>以下步驟來自下面三個參考網址&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://blog.theerrorlog.com/using-gpg-zh.html" target="_blank" rel="noopener"
+>https://blog.theerrorlog.com/using-gpg-zh.html&lt;/a> (這裡有一些關於 gpg 的設定操做，不一定要像他說的那樣主密鑰分離，只是給一個操作說明)&lt;/li>
+&lt;li>&lt;a class="link" href="https://blog.theerrorlog.com/using-gpg-keys-for-ssh-authentication-zh.html" target="_blank" rel="noopener"
+>https://blog.theerrorlog.com/using-gpg-keys-for-ssh-authentication-zh.html&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gist.github.com/mcattarinussi/834fc4b641ff4572018d0c665e5a94d3" target="_blank" rel="noopener"
+>https://gist.github.com/mcattarinussi/834fc4b641ff4572018d0c665e5a94d3&lt;/a> (gpg-agent 設定看這篇，這前面有非常詳細的 gpg ket 設定教學)&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>根據第二個參考資料的說明產生可以用於 ssh 驗證的 gpg subkey（有&lt;code>[A]&lt;/code>）&lt;/li>
+&lt;li>取得 ssh 格式的公鑰 &lt;code>gpg2 --export-ssh-key you@example.com&lt;/code>&lt;/li>
+&lt;li>取得要用於驗證的 subkey 的 keygrip&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ gpg2 --list-keys --with-keygrip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/home/you/.gnupg/pubring.kbx
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">------------------------------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pub rsa4096 2022-12-06 [C]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Keygrip = BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">uid [ultimate] you &amp;lt;you@example.com&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sub rsa4096 2022-12-06 [S]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Keygrip = CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sub rsa4096 2022-12-06 [E]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Keygrip = DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sub ed25519 2022-12-06 [A] &amp;lt;- 可用於驗證的子金鑰
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Keygrip = EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE &amp;lt;- 我們要的 keygrip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="4">
+&lt;li>將 keygrip 寫入 &lt;code>.gnupg/sshcontrol&lt;/code> -&amp;gt; &lt;code>echo EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE &amp;gt;&amp;gt; .gnupg/sshcontrol&lt;/code>&lt;/li>
+&lt;li>根據第三個參考網址 &lt;a class="link" href="https://gist.github.com/mcattarinussi/834fc4b641ff4572018d0c665e5a94d3#setup-the-gpg-agent-for-ssh-authentication" target="_blank" rel="noopener"
+>setup-the-gpg-agent-for-ssh-authentication&lt;/a> 章節設定 gpg-agent&lt;/li>
+&lt;/ol>
+&lt;p>這時後重新開啟終端機就可以用 gpg 取代原本的 ssh key 了，確認移除 ssh key 真的還可以登入後就可以把舊的 ssh key 收起來了。&lt;/p></description></item><item><title>Yubikey</title><link>https://blog.simbafs.cc/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 15:22:55 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/yubikey/</guid><description>&lt;h1 id="yubikey">Yubikey&lt;/h1>
+&lt;p>感謝煥杰賣我一個 1200，撿到寶啦！我買的是 &lt;a class="link" href="https://www.yubico.com/tw/product/yubikey-5c-nfc/" target="_blank" rel="noopener"
+>Yubikey 5C NFC&lt;/a>，看起來幾乎所有功能都有&lt;/p>
+&lt;h2 id="login">login&lt;/h2>
+&lt;p>如果開啟這個，登入、解除鎖定等等動作都需要 Yubikey，聽起還很安全，但是因為我的筆電只有一個 type C，所以必須把 USB hub 拔掉，挺麻煩，我就把他關掉了。&lt;br>
+在密碼輸入框的地方，先插入 yubikey，輸入密碼、按 enter，然後轉圈圈的時候按 yubikey 上金色按鈕（這個似乎是指紋辨識），就可以登入了。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://oscfr.com/blog/tech/yubico-yubikey-5c-nfc-setup-on-ubuntu-2104/" target="_blank" rel="noopener"
+>Yubico Yubikey 5C NFC setup on Ubuntu 21.04&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="ssh-gpg">ssh gpg&lt;/h2>
+&lt;p>&lt;del>研究中&amp;hellip;&lt;/del>
+在這裡 &lt;a class="link" href="https://blog.simbafs.cc/posts/linux/gpg-with-ssh" >GPG with SSH&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://medium.com/@SSWilsonKao/%E5%A6%82%E4%BD%95%E5%9C%A8-mac-%E4%B8%8A-%E6%8A%8A-yubikey-%E8%88%87-gpg-ssh-%E6%90%AD%E9%85%8D%E5%9C%A8%E4%B8%80%E8%B5%B7-5f842d20ad6a" target="_blank" rel="noopener"
+>如何在 Mac 上，把 YubiKey 與 GPG、SSH 搭配在一起&lt;/a> &amp;gt; &lt;a class="link" href="https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29" target="_blank" rel="noopener"
+>OpenPGP SSH access with Yubikey and GnuPG&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="2fa">2FA&lt;/h2>
+&lt;p>按照各個網站的說明設定，下面是我找到可以設定 Yubikey 的網站/APP&lt;/p>
+&lt;ul>
+&lt;li>Google（我買這個 yubikey 最主要目的）&lt;/li>
+&lt;li>Github&lt;/li>
+&lt;li>twitter&lt;/li>
+&lt;li>facebook&lt;/li>
+&lt;li>heroku&lt;/li>
+&lt;/ul>
+&lt;p>twitter 在手機登入好像怪怪的，試了 5 分鐘才成功登入了&lt;/p>
+&lt;hr>
+&lt;h2 id="20221207-更">2022/12/07 更&lt;/h2>
+&lt;p>過了一陣子，系統也重裝過，然後 yubikey 就讀不到了，但是平常用網站都可以，只是 CLI 和 Yubikey personalization tool 都讀不到。
+插上後輸入以下指令都會失敗&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ ykpersonalize
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Yubikey core error: no yubikey present
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ykman list --serials
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">WARNING: PC/SC not available. Smart card (CCID) protocols will not function.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ERROR: Unable to list devices for connection
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">15421961
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>但是用 &lt;code>lsusb&lt;/code> 看起來卻很正常&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ lsusb
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Bus 001 Device 010: ID 1050:0406 Yubico.com Yubikey 4/5 U2F+CCID
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>目前根據 &lt;a class="link" href="https://github.com/Yubico/yubioath-flutter/issues/786#issuecomment-1063656957" target="_blank" rel="noopener"
+>這個 GitHub Issue 的回覆&lt;/a>，輸入 &lt;code>sudo systemctl start pcscd&lt;/code> 後，變成這樣&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ ykman list --serials
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">15421961
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我剛剛發現，輸入指令 &lt;code>ykman info&lt;/code> (yubikey manager) 竟然有回應，也找得到&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ ykman info
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Device type: YubiKey 5C NFC
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Serial number: 15421961
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Firmware version: 5.2.7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Form factor: Keychain (USB-C)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Enabled USB interfaces: FIDO, CCID
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NFC transport is enabled.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Applications USB NFC
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OTP Disabled Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">FIDO U2F Enabled Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">FIDO2 Enabled Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OATH Enabled Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PIV Enabled Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OpenPGP Enabled Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">YubiHSM Auth Not available Not available
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>但是 ykpersonalize 還是找不到我的 yubikey，後來我直接跳過這步，說不定現在 gpg 已經可以讀到了，所以我直接執行 &lt;code>gpg --edit-card&lt;/code>，結果他說&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">gpg: error getting version from &amp;#39;scdaemon&amp;#39;: No SmartCard daemon
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gpg: OpenPGP card not available: No SmartCard daemon
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>根據 &lt;a class="link" href="https://www.reddit.com/r/yubikey/comments/lbl4nn/having_some_trouble_with_gpg_and_yubikey/" target="_blank" rel="noopener"
+>這篇 reddit&lt;/a>，是少了套件 &lt;code>scdaemon&lt;/code>，用 apt 裝了之後 gpg 的回應看起來就正常多了&lt;/p>
+&lt;p>然後就跟著 [官方 blog 的說明](&lt;a class="link" href="https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP#Generating_Keys_externally_from_the_YubiKey_%28Recommended%29ui6vup%29" target="_blank" rel="noopener"
+>https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP#Generating_Keys_externally_from_the_YubiKey_(Recommended%29ui6vup)&lt;/a> 把主密鑰（？好像是簽章用子密鑰）移到 yubikey 上了&lt;/p>
+&lt;p>接下來我亂七八糟試了一堆東西，發現 &lt;a class="link" href="https://developer.okta.com/blog/2021/07/07/developers-guide-to-gpg" target="_blank" rel="noopener"
+>一篇文章&lt;/a> 把上面的東西幾乎都包括進去了，非常推薦可以去看看。&lt;/p>
+&lt;p>剛剛搞了一陣後，把簽章、加密、驗證和主金鑰（應該有）的密鑰通通丟上 yubikey 了。但是現在有個問題，所有需要 gpg key 的時候，像是簽 git commit 和 ssh 驗證都需要插上 yubikey，好像安全過頭了。我研究看看能不能把某些再拉回本地，如果不行的話就只能把一開始備份的密鑰再導入一次，暴力解決！&lt;/p>
+&lt;h2 id="密碼們">密碼們&lt;/h2>
+&lt;p>yubikey 的設定中有好幾份不同功能的密碼，用法和出現時機都不一樣，這邊是我研究好幾份文件的總整理。首先要先有個關念，yubikey 的設計是公司裡有個人專門管一大堆的 yubikey，所以會有一個密碼是只有管理人知道，使用者不知道。那為了驗證是使用者本人，也會有密碼是只有使用者知道但是其他人不知道。&lt;/p>
+&lt;h2 id="pin">PIN&lt;/h2>
+&lt;p>這個 &amp;ldquo;PIN&amp;rdquo; 是 &lt;strong>&amp;ldquo;Personal Identification Number&amp;rdquo;&lt;/strong> 的縮寫，顧名思義，這個就是只有使用者知道但是其他人不知道的 PIN，你會在動用 gpg、ssh 密鑰時用到他。預設是 123456&lt;/p>
+&lt;h3 id="使用情境">使用情境&lt;/h3>
+&lt;ul>
+&lt;li>驗證 PIN&lt;/li>
+&lt;li>改變 PIN&lt;/li>
+&lt;li>改變嘗試次數限制（還需要 management key）&lt;/li>
+&lt;li>簽章&lt;/li>
+&lt;li>解密&lt;/li>
+&lt;li>key agreement&lt;/li>
+&lt;li>取得資料&lt;/li>
+&lt;/ul>
+&lt;h2 id="puk">PUK&lt;/h2>
+&lt;p>&amp;ldquo;PUK&amp;rdquo; 是 &amp;ldquo;PIN Unblocking Key&amp;rdquo; 的縮寫，他的功能是當你輸入錯誤的 PIN 太多次時，用這個密碼解鎖。如果很不幸的你 PUK 也輸入錯誤太多次，整個 yubikey 會被鎖起來，所有的功能都不能用，根據 &lt;a class="link" href="https://support.yubico.com/hc/en-us/articles/360015654100-YubiKey-PIN-and-PUK-User-Management-on-Windows" target="_blank" rel="noopener"
+>官方文件&lt;/a>，你只能回復出廠設定&lt;/p>
+&lt;blockquote>
+&lt;p>By default, the user PIN is blocked when three consecutive incorrect PINs have been entered. The PIN Unblock Code (PUK) is used for unblocking the User PIN. If both the PIN and the PUK are blocked, the YubiKey must be reset, which deletes any loaded certificates and returns the YubiKey to a factory default state.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="使用情境-1">使用情境&lt;/h3>
+&lt;ul>
+&lt;li>修改 PUK&lt;/li>
+&lt;li>解鎖 PIN&lt;/li>
+&lt;/ul>
+&lt;h2 id="admin-pin">Admin PIN&lt;/h2>
+&lt;p>很明顯這是管理員專用的密碼，反正在需要比較高權限的操作的時候他會跳出來，密碼輸入框上面會寫 &amp;ldquo;Admin PIN&amp;rdquo;，所以應該是不太會看錯啦。預設是 12345678&lt;br>
+&lt;code>gpg --edit-card&lt;/code> 在 &lt;code>passwd&lt;/code> 裡修改 Admin PIN 後的訊息會是 &lt;code>PIN changed.&lt;/code>，應該是誤植吧&lt;/p>
+&lt;h2 id="management-key">management key&lt;/h2>
+&lt;p>這是一個比較特別的密碼，他預設是 3DES，你也可以改成 AES，目前來說 3DES 還是「安全的加密標準」，所以針對這個密碼 yubikey 沒有設定嘗試上限（PIN 和 PUK 有），因為就算攻擊者想要破解也很難（&lt;a class="link" href="https://zh.wikipedia.org/wiki/3DES#%E5%AE%89%E5%85%A8%E6%80%A7" target="_blank" rel="noopener"
+>3DES 的安全性&lt;/a>）&lt;/p>
+&lt;h3 id="使用情境-2">使用情境&lt;/h3>
+&lt;ul>
+&lt;li>修改 management key&lt;/li>
+&lt;li>修改資料&lt;/li>
+&lt;li>產生新金鑰對&lt;/li>
+&lt;li>匯入密鑰&lt;/li>
+&lt;li>產生憑證&lt;/li>
+&lt;li>修改嘗試次數限制&lt;/li>
+&lt;/ul>
+&lt;p>以上內容是根據 &lt;a class="link" href="https://docs.yubico.com/yesdk/users-manual/application-piv/pin-puk-mgmt-key.html" target="_blank" rel="noopener"
+>這篇文件&lt;/a> 整理出來的&lt;/p>
+&lt;blockquote>
+&lt;p>根據 &lt;a class="link" href="https://developers.yubico.com/yubikey-piv-manager/PIN_and_Management_Key.html" target="_blank" rel="noopener"
+>這篇文章&lt;/a>，似乎還有其他密碼們，上面介紹的都是屬於 PIV（Personal Identity Verification），還有 OpenPGP、FIDO2 的 PIN&lt;/p>
+&lt;/blockquote></description></item><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</guid><description>&lt;h1 id="gitea">Gitea&lt;/h1>
+&lt;p>&lt;a class="link" href="https://gitea.io" target="_blank" rel="noopener"
 >Gitea&lt;/a> 是一個開源的 git 伺服器，他的界面幾乎和 &lt;a class="link" href="https://github.com" target="_blank" rel="noopener"
 >GitHub&lt;/a> 一模一樣，但是完全開源而且非常輕，甚至一片樹梅派就可以開伺服器了。Gitea 因為是使用 &lt;a class="link" href="https://golang.org/" target="_blank" rel="noopener"
 >Golang&lt;/a> 編寫的，所以提供各種平台的執行檔。我選擇透過 docker 裝 Gitea 伺服器，但是這樣有一個問題，gitea 伺服器開在 container 內，沒辦法使用標準的 22 port，所以 git clone 就必須加上一個醜醜的數字，像是這樣&lt;/p>
@@ -12,7 +254,7 @@
 &lt;/div>
 &lt;/div>&lt;p>這個問題 Gitea 官方已經有提供&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
 >完整的教學&lt;/a>了，但是是英文版，我這篇文章是我讀完消化過後的中文版教學&lt;/p>
-&lt;h1 id="容器-ssh-穿透">容器 ssh 穿透&lt;/h1>
+&lt;h2 id="容器-ssh-穿透">容器 ssh 穿透&lt;/h2>
 &lt;p>因為 Gitea 的 ssh 是跑在容器裡，我沒辦法讓他和 host 共用 22 port，所以要透過 host 「轉發」連線。&lt;/p>
 &lt;h2 id="1-建立-git-使用者">1. 建立 git 使用者&lt;/h2>
 &lt;p>先在 host 建立一個名叫 git 的使用者，因為這個帳號會被對應到容器內的 git 使用者，所以要有一樣的 UID, GID&lt;/p>
@@ -113,19 +355,20 @@
 &lt;/div>
 &lt;/div>&lt;p>不要忘記給他執行權限 &lt;code>sudo chmod 755 /app/gitea/gitea&lt;/code>&lt;/p>
 &lt;h2 id="大功告成">大功告成！&lt;/h2>
-&lt;h1 id="心得">心得&lt;/h1>
+&lt;h2 id="心得">心得&lt;/h2>
 &lt;p>一開始我沒找到官方的教學，一方面是我想自己試試看，二方面是因為官方文件中英文完全不一樣，看英文版才完整，中文只給兩條指令。&lt;/p>
-&lt;h1 id="參考連結">參考連結&lt;/h1>
+&lt;h2 id="參考連結">參考連結&lt;/h2>
 &lt;p>&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
 >https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough&lt;/a> &lt;br>
 &lt;a class="link" href="https://asaba.sakuragawa.moe/2018/06/%E6%93%BA%E8%84%AB%E6%8E%A7%E5%88%B6%EF%BC%8C%E7%94%A8-docker-%E8%87%AA%E5%BB%BA-gitea-gogs-%E7%B7%9A%E4%B8%8A%E4%BB%A3%E7%A2%BC%E5%8D%94%E4%BD%9C%E5%B9%B3%E8%87%BA/" target="_blank" rel="noopener"
->https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>ssh-tunnel</title><link>https://blog.simbafs.cc/p/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-tunnel/</guid><description>&lt;p>昨天架好了 reverse ssh 讓我可以連回學校 server
+>https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://blog.simbafs.cc/p/linux/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ssh-tunnel/</guid><description>&lt;h1 id="ssh-tunnel">SSH Tunnel&lt;/h1>
+&lt;p>昨天架好了 reverse ssh 讓我可以連回學校 server
 今天來研究 ssh tunnel&lt;/p>
-&lt;h1 id="簡介">簡介&lt;/h1>
+&lt;h2 id="簡介">簡介&lt;/h2>
 &lt;p>ssh tunnel 分正反向
 其實他們的差別只有在方向不一樣
 連語法參數都一樣&lt;/p>
-&lt;h1 id="正向-tunnel">正向 tunnel&lt;/h1>
+&lt;h2 id="正向-tunnel">正向 tunnel&lt;/h2>
 &lt;p>正向的 tunnel 參數是 -L
 語法：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -142,7 +385,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -L local_socket:remote_socket
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="反向-tunnel">反向 tunnel&lt;/h1>
+&lt;/div>&lt;h2 id="反向-tunnel">反向 tunnel&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -159,7 +402,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -R [bind_address:]port
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="心得">心得&lt;/h1>
+&lt;/div>&lt;h2 id="心得">心得&lt;/h2>
 &lt;p>看起來好像很難
 但是其實用下面這個就夠了
 正向：&lt;/p>
@@ -183,11 +426,12 @@
 &lt;/div>&lt;p>總而言之就是前面的和選項一樣
 如果是 -L 那前面就是 local port
 如果是 -R 那前面就是 remote port&lt;/p>
-&lt;h1 id="參考連結">參考連結&lt;/h1>
+&lt;h2 id="參考連結">參考連結&lt;/h2>
 &lt;p>&lt;a class="link" href="https://johnliu55.tw/ssh-tunnel.html" target="_blank" rel="noopener"
->https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>reverse-ssh</title><link>https://blog.simbafs.cc/p/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/reverse-ssh/</guid><description>&lt;p>一直以來連線回社辦的電腦都要走 webtty 再開 tmate
+>https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://blog.simbafs.cc/p/linux/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/reverse-ssh/</guid><description>&lt;h1 id="reverse-ssh">Reverse SSH&lt;/h1>
+&lt;p>一直以來連線回社辦的電腦都要走 webtty 再開 tmate
 但是今天發現了一個新的方法可以透過反向的 ssh 連回社辦&lt;/p>
-&lt;h2 id="reverse-ssh">reverse ssh&lt;/h2>
+&lt;h2 id="reverse-ssh-1">reverse ssh&lt;/h2>
 &lt;p>在社辦電腦&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">

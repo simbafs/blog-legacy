@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/git/</link><description>Recent content in git on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 20 Feb 2023 16:59:29 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Snippet</title><link>https://blog.simbafs.cc/p/linux/git/git-snippet/</link><pubDate>Mon, 20 Feb 2023 16:59:29 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/git/git-snippet/</guid><description>&lt;h1 id="git-snippet">Git Snippet&lt;/h1>
+&lt;h2 id="move-branch-to-another-commit-not-recommand">move branch to another commit (not recommand)&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> git branch --force &amp;lt;branch name&amp;gt; &amp;lt;commit id&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="list-changed-filename">list changed filename&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> git diff --name-only HEAD
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/1552340/how-to-list-only-the-names-of-files-that-changed-between-two-commits" target="_blank" rel="noopener"
+>ref: stackoverflow&lt;/a>&lt;/p></description></item><item><title>Merge Two Repo</title><link>https://blog.simbafs.cc/p/linux/git/merge-two-repo/</link><pubDate>Tue, 18 Oct 2022 20:25:48 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/git/merge-two-repo/</guid><description>&lt;h1 id="merge-two-repo">Merge Two Repo&lt;/h1>
+&lt;p>這學期修了幾個資工系的課，都需要寫程式作業，原本我是一個作業開一個 repo，但是我發現這樣好像會開超級多 repo，於是我決定要想辦法合併他們。&lt;/p>
+&lt;h2 id="找資料">找資料&lt;/h2>
+&lt;p>首先去 Google 搜尋「git merge two repo」，第一條結果是是一個 13 年前的 stack overflow &lt;a class="link" href="https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories" target="_blank" rel="noopener"
+>https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories&lt;/a>，裡面第一個回答提到的方法是把待合併 repo A 指到目標 repo B 的 branch A，然後就把 branch A 當作一般分支合併，但是要加上 &lt;code>--allow-unrelated-histories&lt;/code> 選項&lt;/p>
+&lt;h2 id="filter-repo">filter-repo&lt;/h2>
+&lt;p>現在有個問題，原本的目錄結構是長這樣&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── HW1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── .git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── go.mod
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── main.go
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── HW2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── .git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── go.mod
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── main.go
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── HW3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── .git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── go.mod
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └── main.go
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果直接合併會變成這樣&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── .git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── go.mod
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── main.go
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>因為檔名一樣，就被合併了，但是我想要的是這樣&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── .git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── HW1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── go.mod
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── main.go
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── HW2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── go.mod
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── main.go
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── HW3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── go.mod
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └── main.go
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>當然可以把檔案移好再合併，但是這樣提交紀錄（commit history）上不好看，所以我們需要其他工具&lt;/p>
+&lt;h2 id="git-filter-repo">git filter-repo&lt;/h2>
+&lt;p>[git-filter-repo] 是個可以批次處理提交紀錄的工具，例如我們這次要的，將全部檔案移到子目錄裡面，從第一個 commit 開始。看網路教 git 似乎內建 &lt;code>filter-branch&lt;/code> 命令，但 filter-repo 的效能和功能都比較多。&lt;/p>
+&lt;h3 id="安裝">安裝&lt;/h3>
+&lt;p>&lt;code>apt install git-filter-repo&lt;/code>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/newren/git-filter-repo/blob/main/INSTALL.md" target="_blank" rel="noopener"
+>https://github.com/newren/git-filter-repo/blob/main/INSTALL.md&lt;/a>&lt;/p>
+&lt;h3 id="使用">使用&lt;/h3>
+&lt;p>&lt;code>git filter-repo&lt;/code>&lt;/p>
+&lt;h3 id="移動檔案到子目錄">移動檔案到子目錄&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ git filter-repo --to-subdirectory-filter hw1 --force
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Parsed 11 commits
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">New history written in 0.03 seconds; now repacking/cleaning...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Repacking your repo and cleaning out old unneeded objects
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">HEAD is now at 57fd6a0 update example
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Enumerating objects: 52, done.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Counting objects: 100% (52/52), done.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Delta compression using up to 8 threads
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Compressing objects: 100% (21/21), done.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Writing objects: 100% (52/52), done.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Total 52 (delta 17), reused 30 (delta 17), pack-reused 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Completely finished after 0.08 seconds.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="合併-repo">合併 Repo&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ cd A
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git remote add -f a ../a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git merge --allow-unrelated-histories a/main
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git remote remove a
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>合併完的提交紀錄長這樣（還沒移除 remote ）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">* 097b986 (HEAD -&amp;gt; main) Merge remote-tracking branch &amp;#39;hw4/multithread&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">|\
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 2d0bc2d (hw4/multithread) finish
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 462ec18 try to use goroutine
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 89915f1 Merge branch &amp;#39;main&amp;#39; into multithread
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| |\
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * | b4e5879 README.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * | 96b5d3a try to use goroutine to speed up, but failed
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">* | | ebb41bb Merge remote-tracking branch &amp;#39;hw4/main&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">|\ \ \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| | |/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| |/|
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * | faabcb5 (hw4/main) finish
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * | f715b3c index++
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * | 1c16b06 README.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| |/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * a0594d2 finish first version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 475fa62 finish dec/enc functions
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 69cfeb3 Initial commit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">* 9f10a17 Merge remote-tracking branch &amp;#39;hw2/main&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">|\
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * f6d6ffe (hw2/main) out.pdf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * a07ee96 README.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * c22c4aa finish version 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * acebb48 basic concept
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 9b3c351 init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * d949263 Initial commit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">* 1e6a89d Merge remote-tracking branch &amp;#39;hw1/main&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">|\
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 57fd6a0 (hw1/main) update example
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 016ed74 add tex
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 0c5cf72 finish out.pdf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 24a2474 fix a little bug
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 9b9bdce README.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 1aa184e remove unused code and add comments
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 47ca969 finish first version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 9f30ca4 README.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 683c59b WIP, not tested
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * 48bcefd README.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| * b7603e8 Initial commit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">* cdca739 (origin/main, origin/HEAD) Initial commit
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories" target="_blank" rel="noopener"
+>https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gist.github.com/x-yuri/6161d90d1af8ebac6e560bcef548c1c3" target="_blank" rel="noopener"
+>https://gist.github.com/x-yuri/6161d90d1af8ebac6e560bcef548c1c3&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/newren/git-filter-repo" target="_blank" rel="noopener"
+>https://github.com/newren/git-filter-repo&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

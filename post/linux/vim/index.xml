@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vim on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/linux/vim/</link><description>Recent content in vim on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 17:09:18 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/linux/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>Solarized</title><link>https://blog.simbafs.cc/p/solarized/</link><pubDate>Wed, 15 Jun 2022 17:09:18 +0800</pubDate><guid>https://blog.simbafs.cc/p/solarized/</guid><description>&lt;p>&lt;a class="link" href="https://ethanschoonover.com/solarized/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vim on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/linux/vim/</link><description>Recent content in vim on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 17:09:18 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/linux/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>Solarized</title><link>https://blog.simbafs.cc/p/linux/vim/solarized/</link><pubDate>Wed, 15 Jun 2022 17:09:18 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/solarized/</guid><description>&lt;h1 id="solarized">Solarized&lt;/h1>
+&lt;p>&lt;a class="link" href="https://ethanschoonover.com/solarized/" target="_blank" rel="noopener"
 >solarized&lt;/a> 是一個文字界面常見的配色方案，不僅是用在 vim，大多數 terminal 和 editor 也都支援&lt;/p>
-&lt;h1 id="install">install&lt;/h1>
+&lt;h2 id="install">install&lt;/h2>
 &lt;p>加入 ```vim
 Plug &amp;rsquo;ericbn/vim-solarized'&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -49,7 +50,7 @@ Plug &amp;rsquo;ericbn/vim-solarized'&lt;/p>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">然後安裝
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># transparent background
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">## transparent background
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">因為設定關係，所以如果你的終端機有設定透明背景，在 vim 中會全部變不透明，載入[這個設定](https://gist.github.com/fuadnafiz98/d91e468c9bc4689868eb0984a29fef66)就可以解決，你也可以放在另外檔案再引入
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">```vim
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34; https://gist.github.com/fuadnafiz98/d91e468c9bc4689868eb0984a29fef66
@@ -89,14 +90,15 @@ Plug &amp;rsquo;ericbn/vim-solarized'&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34; trasparent end
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Modeline</title><link>https://blog.simbafs.cc/p/modeline/</link><pubDate>Thu, 07 Apr 2022 23:13:04 +0800</pubDate><guid>https://blog.simbafs.cc/p/modeline/</guid><description>&lt;p>&lt;code>modeline&lt;/code> 是一個可以將 vim 設定嵌入檔案的方式，這樣就可以讓某些檔案有自己的設定，像是折疊、不要行數、tab 等於多少空白等等。&lt;/p>
-&lt;h1 id="簡單的條件">簡單的條件&lt;/h1>
+&lt;/div></description></item><item><title>Modeline</title><link>https://blog.simbafs.cc/p/linux/vim/modeline/</link><pubDate>Thu, 07 Apr 2022 23:13:04 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/modeline/</guid><description>&lt;h1 id="modeline">Modeline&lt;/h1>
+&lt;p>&lt;code>modeline&lt;/code> 是一個可以將 vim 設定嵌入檔案的方式，這樣就可以讓某些檔案有自己的設定，像是折疊、不要行數、tab 等於多少空白等等。&lt;/p>
+&lt;h2 id="簡單的條件">簡單的條件&lt;/h2>
 &lt;p>簡單的 &lt;code>modeline&lt;/code> 需要滿足幾個條件：&lt;/p>
 &lt;ol>
 &lt;li>開頭（不必是行首）至少有一個空白/tab&lt;/li>
 &lt;li>用 &lt;code>vim&lt;/code>、&lt;code>vi&lt;/code> 等字開頭，這裡還可以設定哪個版本才要載入&lt;/li>
 &lt;/ol>
-&lt;h1 id="基本的範例">基本的範例&lt;/h1>
+&lt;h2 id="基本的範例">基本的範例&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -105,10 +107,11 @@ Plug &amp;rsquo;ericbn/vim-solarized'&lt;/p>
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> vim: wrap
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="參考資料">參考資料&lt;/h1>
+&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
 &lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file&lt;/a>&lt;br>
-help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item><title>YouComopleteMe install</title><link>https://blog.simbafs.cc/p/youcomopleteme-install/</link><pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/youcomopleteme-install/</guid><description>&lt;h1 id="下載-source-code">下載 source code&lt;/h1>
+help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item><title>YouComopleteMe Install</title><link>https://blog.simbafs.cc/p/linux/vim/youcomopleteme-install/</link><pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/youcomopleteme-install/</guid><description>&lt;h1 id="ycm-installation">YCM Installation&lt;/h1>
+&lt;h2 id="下載-source-code">下載 source code&lt;/h2>
 &lt;ol>
 &lt;li>編輯 ~/.vimrc&lt;/li>
 &lt;/ol>
@@ -125,21 +128,23 @@ help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item>
 &lt;li>接著 &lt;!-- raw HTML omitted -->:PlugInstall&lt;!-- raw HTML omitted --> 下載 source code&lt;/li>
 &lt;li>存檔離開&lt;/li>
 &lt;/ol>
-&lt;h1 id="編譯">編譯&lt;/h1>
+&lt;h2 id="編譯">編譯&lt;/h2>
 &lt;ol>
 &lt;li>執行 &lt;code>sudo apt install python3-dev build-essential&lt;/code>&lt;/li>
 &lt;li>進入 &lt;code>~/.vim/plugged/YouCompleteMe&lt;/code>&lt;/li>
 &lt;li>執行 &lt;code>./install.py --help&lt;/code> 並挑選需要的選項&lt;/li>
 &lt;li>執行 &lt;code>./install.py &amp;lt;你要的選項&amp;gt;&lt;/code>&lt;/li>
-&lt;/ol></description></item><item><title>vim auto comment plugin</title><link>https://blog.simbafs.cc/p/vim-auto-comment-plugin/</link><pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/vim-auto-comment-plugin/</guid><description>&lt;h1 id="套件">套件&lt;/h1>
+&lt;/ol></description></item><item><title>Vim Auto Comment Plugin</title><link>https://blog.simbafs.cc/p/linux/vim/vim-auto-comment-plugin/</link><pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/vim-auto-comment-plugin/</guid><description>&lt;h1 id="vim-auto-comment-plugin">Vim Auto Comment Plugin&lt;/h1>
+&lt;h2 id="套件">套件&lt;/h2>
 &lt;p>&lt;a class="link" href="https://github.com/preservim/nerdcommenter" target="_blank" rel="noopener"
 >nerdcommenter&lt;/a>&lt;/p>
-&lt;h1 id="好用的指令">好用的指令&lt;/h1>
+&lt;h2 id="好用的指令">好用的指令&lt;/h2>
 &lt;p>在每次動作前都要按 &lt;code>&amp;lt;leader&amp;gt;&lt;/code>，預設是 反斜線 &lt;code>\&lt;/code>&lt;/p>
 &lt;h2 id="cspace">&lt;code>c&amp;lt;space&amp;gt;&lt;/code>&lt;/h2>
 &lt;p>簡單來說就是 toggle 你的註解&lt;/p>
 &lt;h2 id="ca">&lt;code>cA&lt;/code>&lt;/h2>
-&lt;p>跳到行尾並在行尾加上註解&lt;/p></description></item><item><title>讓 YCM 接受 jsx</title><link>https://blog.simbafs.cc/p/%E8%AE%93-ycm-%E6%8E%A5%E5%8F%97-jsx/</link><pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/%E8%AE%93-ycm-%E6%8E%A5%E5%8F%97-jsx/</guid><description>&lt;p>最近寫ˋreact 的時候只要遇到 jsx 語法 YCM 就會跳出這個錯誤&lt;/p>
+&lt;p>跳到行尾並在行尾加上註解&lt;/p></description></item><item><title>讓 YCM 接受 jsx</title><link>https://blog.simbafs.cc/p/linux/vim/ycm-jsx/</link><pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/ycm-jsx/</guid><description>&lt;h1 id="讓-ycm-接受-jsx">讓 YCM 接受 jsx&lt;/h1>
+&lt;p>最近寫ˋreact 的時候只要遇到 jsx 語法 YCM 就會跳出這個錯誤&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1

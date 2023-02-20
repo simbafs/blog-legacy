@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>server on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/linux/server/</link><description>Recent content in server on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/linux/server/index.xml" rel="self" type="application/rss+xml"/><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-on-gitea-with-docker/</guid><description>&lt;p>&lt;a class="link" href="https://gitea.io" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>server on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/linux/server/</link><description>Recent content in server on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/linux/server/index.xml" rel="self" type="application/rss+xml"/><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</guid><description>&lt;h1 id="gitea">Gitea&lt;/h1>
+&lt;p>&lt;a class="link" href="https://gitea.io" target="_blank" rel="noopener"
 >Gitea&lt;/a> 是一個開源的 git 伺服器，他的界面幾乎和 &lt;a class="link" href="https://github.com" target="_blank" rel="noopener"
 >GitHub&lt;/a> 一模一樣，但是完全開源而且非常輕，甚至一片樹梅派就可以開伺服器了。Gitea 因為是使用 &lt;a class="link" href="https://golang.org/" target="_blank" rel="noopener"
 >Golang&lt;/a> 編寫的，所以提供各種平台的執行檔。我選擇透過 docker 裝 Gitea 伺服器，但是這樣有一個問題，gitea 伺服器開在 container 內，沒辦法使用標準的 22 port，所以 git clone 就必須加上一個醜醜的數字，像是這樣&lt;/p>
@@ -12,7 +13,7 @@
 &lt;/div>
 &lt;/div>&lt;p>這個問題 Gitea 官方已經有提供&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
 >完整的教學&lt;/a>了，但是是英文版，我這篇文章是我讀完消化過後的中文版教學&lt;/p>
-&lt;h1 id="容器-ssh-穿透">容器 ssh 穿透&lt;/h1>
+&lt;h2 id="容器-ssh-穿透">容器 ssh 穿透&lt;/h2>
 &lt;p>因為 Gitea 的 ssh 是跑在容器裡，我沒辦法讓他和 host 共用 22 port，所以要透過 host 「轉發」連線。&lt;/p>
 &lt;h2 id="1-建立-git-使用者">1. 建立 git 使用者&lt;/h2>
 &lt;p>先在 host 建立一個名叫 git 的使用者，因為這個帳號會被對應到容器內的 git 使用者，所以要有一樣的 UID, GID&lt;/p>
@@ -113,15 +114,16 @@
 &lt;/div>
 &lt;/div>&lt;p>不要忘記給他執行權限 &lt;code>sudo chmod 755 /app/gitea/gitea&lt;/code>&lt;/p>
 &lt;h2 id="大功告成">大功告成！&lt;/h2>
-&lt;h1 id="心得">心得&lt;/h1>
+&lt;h2 id="心得">心得&lt;/h2>
 &lt;p>一開始我沒找到官方的教學，一方面是我想自己試試看，二方面是因為官方文件中英文完全不一樣，看英文版才完整，中文只給兩條指令。&lt;/p>
-&lt;h1 id="參考連結">參考連結&lt;/h1>
+&lt;h2 id="參考連結">參考連結&lt;/h2>
 &lt;p>&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
 >https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough&lt;/a> &lt;br>
 &lt;a class="link" href="https://asaba.sakuragawa.moe/2018/06/%E6%93%BA%E8%84%AB%E6%8E%A7%E5%88%B6%EF%BC%8C%E7%94%A8-docker-%E8%87%AA%E5%BB%BA-gitea-gogs-%E7%B7%9A%E4%B8%8A%E4%BB%A3%E7%A2%BC%E5%8D%94%E4%BD%9C%E5%B9%B3%E8%87%BA/" target="_blank" rel="noopener"
->https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>nginx-ui</title><link>https://blog.simbafs.cc/p/nginx-ui/</link><pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nginx-ui/</guid><description>&lt;p>前幾天發現一個專案 nginx ui
-他是一個可以讓你在網頁上更改 nginx config 的專案
-安裝：&lt;/p>
+>https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>Nginx UI</title><link>https://blog.simbafs.cc/p/linux/server/nginx-ui/</link><pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/nginx-ui/</guid><description>&lt;h1 id="nginx-ui">Nginx UI&lt;/h1>
+&lt;p>前幾天發現一個專案 nginx ui
+他是一個可以讓你在網頁上更改 nginx config 的專案&lt;/p>
+&lt;h2 id="安裝">安裝&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -130,7 +132,7 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">docker pull schenkd/nginx-ui
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>啟動；&lt;/p>
+&lt;/div>&lt;h2 id="啟動">啟動&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -141,14 +143,225 @@
 &lt;/div>
 &lt;/div>&lt;p>然後打開瀏覽器 http://localhost:8080 就可以看到管理頁面了
 很陽春，就是不用 ssh 進 server，沒什麼特點
-我應該是不會用這套&lt;/p></description></item><item><title>server-tool</title><link>https://blog.simbafs.cc/p/server-tool/</link><pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/server-tool/</guid><description>&lt;h1 id="用-bash-寫-log-分析工具">用 bash 寫 log 分析工具&lt;/h1>
+我應該是不會用這套&lt;/p></description></item><item><title>Server Tool</title><link>https://blog.simbafs.cc/p/linux/server/server-tool/</link><pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/server-tool/</guid><description>&lt;h1 id="server-tool">Server Tool&lt;/h1>
+&lt;h2 id="用-bash-寫-log-分析工具">用 bash 寫 log 分析工具&lt;/h2>
 &lt;p>因為我們的 server 不知道是為什麼一直受到 DDoS 攻擊&lt;br>
 我想知道是什麼時段容易受到攻擊和每次多久、來自那個 ip&lt;br>
-於是我花了一點時間寫了幾個簡單的 script&lt;/p></description></item><item><title>ddos</title><link>https://blog.simbafs.cc/p/ddos/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ddos/</guid><description>&lt;h1 id="伺服器被-ddos-惹">伺服器被 DDoS 惹&lt;/h1>
+於是我花了一點時間寫了幾個簡單的 script&lt;/p>
+&lt;hr>
+&lt;h3 id="先來講我遇到的坑好了">先來講我遇到的坑好了&lt;/h3>
+&lt;h4 id="sh">sh&lt;/h4>
+&lt;p>過程中遇到一個最大的坑是在 ubuntu 預設的 sh 不是 bash
+是 dash
+據說比較情輕薄&lt;br>
+我在試 bash 中數字的運算比較時踩到這個坑&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">b&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">6&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">((&lt;/span> a &amp;gt; b &lt;span class="o">))&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> yes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> no
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>因為我在試語法是否正確
+開了一個新的檔案
+我懶的 &lt;code>chmod&lt;/code> 直接 &lt;code>sh tt.sh&lt;/code>
+結果 &lt;code>sh&lt;/code> 是 dash
+dash 沒有支援這個語法
+然後抓了快 20 分鐘的 bug
+還是乖乖寫 &lt;code>#!/bin/bash&lt;/code> 吧&lt;/p>
+&lt;h4 id="floating-point-number">floating point number&lt;/h4>
+&lt;p>我的 script 中有用浮點數的除法
+但是 bash 只支援整數
+所以除出來都是 0
+這個坑沒有很大
+很容易解決
+只要使用 &lt;code>bc&lt;/code> 這個指令就可以了&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ bc -l &lt;span class="o">&amp;lt;&amp;lt;&amp;lt;&lt;/span> &lt;span class="s1">&amp;#39;100/3&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">33.33333333333333333333
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="associate-array">Associate array&lt;/h4>
+&lt;p>在有一個地方本來要用關聯式陣列來存一些資料
+在定義關聯是陣列要把 &lt;code>-a&lt;/code> 改成 &lt;code>-A&lt;/code>
+這邊遇到什麼問題有點忘記了
+想到再補起來
+反正最後沒有用關聯式陣列&lt;/p>
+&lt;hr>
+&lt;h3 id="其他">其他&lt;/h3>
+&lt;h4 id="程式碼">程式碼&lt;/h4>
+&lt;p>&lt;a class="link" href="https://github.com/simba-fs/server-tool" target="_blank" rel="noopener"
+>https://github.com/simba-fs/server-tool&lt;/a>
+介紹：&lt;/p>
+&lt;h4 id="barsh">bar.sh&lt;/h4>
+&lt;p>Draw a bar from data&lt;/p>
+&lt;h4 id="countsh">count.sh&lt;/h4>
+&lt;p>Count how many times does each line appear in file&lt;/p>
+&lt;h4 id="ipsh">ip.sh&lt;/h4>
+&lt;p>Count how many times does each ip send a request&lt;/p>
+&lt;h4 id="timesh">time.sh&lt;/h4>
+&lt;p>Count how many request in each secend/minute/hour/day&lt;/p>
+&lt;h4 id="好站連結">好站連結&lt;/h4>
+&lt;p>&lt;a class="link" href="https://www.regextester.com/" target="_blank" rel="noopener"
+>https://www.regextester.com/&lt;/a>
+這個網站可以測試 RegEx
+蠻不錯的&lt;/p></description></item><item><title>ddos</title><link>https://blog.simbafs.cc/p/linux/server/ddos/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/ddos/</guid><description>&lt;h1 id="ddos">DDOS&lt;/h1>
+&lt;h2 id="伺服器被-ddos-惹">伺服器被 DDoS 惹&lt;/h2>
 &lt;p>今天早上把社團的 reverse proxy server 換成 nginx&lt;br>
 下午心血來潮看看 log 檔
 因為沒有寫好的工具&lt;br>
-首先把 log 檔 cp 到我的電腦再來處理&lt;/p></description></item><item><title>nginx-reverse-proxy-setup</title><link>https://blog.simbafs.cc/p/nginx-reverse-proxy-setup/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nginx-reverse-proxy-setup/</guid><description>&lt;h1 id="nginx-反向代理伺服器-reverse-proxy">nginx 反向代理伺服器 (reverse proxy)&lt;/h1>
+首先把 log 檔 cp 到我的電腦再來處理&lt;/p>
+&lt;hr>
+&lt;p>先寫了一個 script 來計算重複的行數&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="c1"># count.sh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">declare&lt;/span> -A cnt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">while&lt;/span> &lt;span class="nb">read&lt;/span> id extre
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">let&lt;/span> cnt&lt;span class="o">[&lt;/span>&lt;span class="nv">$id&lt;/span>&lt;span class="o">]&lt;/span>++
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> id in &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="p">!cnt[@]&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="nv">$id&lt;/span> &lt;span class="si">${&lt;/span>&lt;span class="nv">cnt&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nv">$id&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="si">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>再來用 &lt;code>awk&lt;/code> 把 &lt;code>status code&lt;/code> 是 404 的 ip 挑出來
+然後丟給 &lt;code>count.sh&lt;/code> 計算每個 ip 有幾個 404
+最後再存到 &lt;code>404-ip.txt&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">awk &lt;span class="s1">&amp;#39;$9 == 404 {print $1}&amp;#39;&lt;/span> access.log &lt;span class="p">|&lt;/span> ./count.sh &amp;gt; 404-ip.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>再來用 &lt;code>sort&lt;/code> 來排序剛剛的 &lt;code>404-ip.txt&lt;/code>，存到 &lt;code>404-ip-sorted.txt&lt;/code>
+&lt;code>sort&lt;/code> 加上 &lt;code>-n&lt;/code> 選項讓他以數字順數排序，預設是以 ascii 順序排序
+&lt;code>-r&lt;/code> 讓他由大到小
+&lt;code>-k2&lt;/code> 指定以第二欄排序，預設以空白分開，可以用 &lt;code>-t&lt;/code> 改變分隔符號&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sort -n 404-ip.txt -k2 -r &amp;gt; 404-ip-sorted.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>這時候來看看 &lt;code>404-ip-sorted.txt&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ head 404-ip-sorted.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">91.199.118.175 1329180
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">91.199.118.212 259477
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">163.172.12.108 145050
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">195.154.161.234 142920
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">195.154.102.22 142450
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">195.154.102.191 137800
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">163.172.12.148 132650
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">62.210.220.48 129248
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">195.154.102.159 11353
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">62.210.85.48 11206
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>哇賽！第一名的 ip 送了一百三十多萬個請求&lt;br>
+這份 log 檔是在早上十點多才開始紀錄的&lt;br>
+平均每秒 41 個請求
+這麼多鐵定是 ddos
+我們來看看完整的檔案看看有多少人在 DDoS 我們的 server
+嗯，總共十九個破千的&lt;br>
+這些通通有問題（其實應該以平均請求數來看，但太複雜了所以以後再補
+接下來就接把這幾個 ip ban 掉&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ sudo su
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ &lt;span class="nb">cd&lt;/span> /etc/nginx/sites-enabled/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ vi banned-ip.conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>將 ip 貼到文件裡面
+在一般模式下執行&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[esc] :%s/^/deny /
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[esc] :%s/&amp;amp;/;/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ &lt;span class="nb">cd&lt;/span> ../sites-enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ln -s ../sites-available
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>$ nginx -t&lt;/code> 確認設定檔沒問題
+&lt;code>$ systemctl restart nginx&lt;/code> 來重啟伺服器
+然後就大公告成了～～
+明天再來看看有沒有問題&lt;/p></description></item><item><title>Nginx Reverse Proxy Setup</title><link>https://blog.simbafs.cc/p/linux/server/nginx-reverse-proxy-setup/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/nginx-reverse-proxy-setup/</guid><description>&lt;h1 id="nginx-反向代理伺服器-reverse-proxy">nginx 反向代理伺服器 (reverse proxy)&lt;/h1>
 &lt;p>之前社網 server 因為學校防火牆限制只能對外開 80 443 兩個 port&lt;br>
 而且我們只有一個 ip (203.64.138.177)&lt;br>
 所以要用 reverse proxy 來代理我們的多項服務&lt;br>

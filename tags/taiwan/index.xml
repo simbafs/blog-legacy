@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>taiwan on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/taiwan/</link><description>Recent content in taiwan on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/taiwan/index.xml" rel="self" type="application/rss+xml"/><item><title>taiwan-town-location</title><link>https://blog.simbafs.cc/p/taiwan-town-location/</link><pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/taiwan-town-location/</guid><description>&lt;p>這是一個給經緯度吐地址的 api，甚至路段都會出來，搭配 &lt;a class="link" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation_API" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>taiwan on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/taiwan/</link><description>Recent content in taiwan on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/taiwan/index.xml" rel="self" type="application/rss+xml"/><item><title>臺灣地址 API</title><link>https://blog.simbafs.cc/p/other/%E8%87%BA%E7%81%A3%E5%9C%B0%E5%9D%80-api/</link><pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/%E8%87%BA%E7%81%A3%E5%9C%B0%E5%9D%80-api/</guid><description>&lt;h1 id="臺灣地址-api">臺灣地址 API&lt;/h1>
+&lt;p>這是一個給經緯度吐地址的 api，甚至路段都會出來，搭配 &lt;a class="link" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation_API" target="_blank" rel="noopener"
 >web geolocation api&lt;/a> 蠻不錯的，精確度不錯。可以不知道有沒有 rate limited 的問題，目前看起來連 token 都不用。&lt;/p>
-&lt;h1 id="網址">網址&lt;/h1>
+&lt;h2 id="網址">網址&lt;/h2>
 &lt;p>&lt;a class="link" href="https://api.nlsc.gov.tw/other/TownVillagePointQuery/" target="_blank" rel="noopener"
 >https://api.nlsc.gov.tw/other/TownVillagePointQuery/&lt;/a>&lt;/p>
-&lt;h1 id="用法">用法&lt;/h1>
+&lt;h2 id="用法">用法&lt;/h2>
 &lt;p>&lt;a class="link" href="https://api.nlsc.gov.tw/other/TownVillagePointQuery/" target="_blank" rel="noopener"
 >https://api.nlsc.gov.tw/other/TownVillagePointQuery/&lt;/a>經度/緯度&lt;/p>
-&lt;h1 id="舉例">舉例：&lt;/h1>
+&lt;h2 id="舉例">舉例：&lt;/h2>
 &lt;h2 id="request">request&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -47,6 +48,6 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/townVillageItem&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="參考資料">參考資料&lt;/h1>
+&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
 &lt;p>&lt;a class="link" href="https://data.gov.tw/dataset/101898" target="_blank" rel="noopener"
 >https://data.gov.tw/dataset/101898&lt;/a>&lt;/p></description></item></channel></rss>

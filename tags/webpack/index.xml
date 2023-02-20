@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>webpack on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/webpack/</link><description>Recent content in webpack on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/webpack/index.xml" rel="self" type="application/rss+xml"/><item><title>webpack-react</title><link>https://blog.simbafs.cc/p/webpack-react/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/webpack-react/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>webpack on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/webpack/</link><description>Recent content in webpack on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/webpack/index.xml" rel="self" type="application/rss+xml"/><item><title>Webpack Reactjs</title><link>https://blog.simbafs.cc/p/nodejs/reactjs/webpack-reactjs/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/reactjs/webpack-reactjs/</guid><description>&lt;h1 id="webpack-reactjs">Webpack Reactjs&lt;/h1>
+&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>最近開始想學 react
 在這之前當然要先把開發環境搞好
 其中 react 最重要的就是 webpack 和 babel 了
 babel 負責編譯
 webpack 負責串街所有工作&lt;/p>
-&lt;h1 id="安裝套件">安裝套件&lt;/h1>
+&lt;h2 id="安裝套件">安裝套件&lt;/h2>
 &lt;h2 id="建立一個專案並初始化">建立一個專案並初始化&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -114,7 +115,7 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">接下來可以把所有的 js 原始碼放在 src/ 下
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">html template 放在 dist/ 下
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 範例
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">## 範例
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">https://github.com/simbafs/react-template
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>

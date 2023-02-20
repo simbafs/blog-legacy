@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>env on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/env/</link><description>Recent content in env on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 24 Sep 2021 08:46:37 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/env/index.xml" rel="self" type="application/rss+xml"/><item><title>Aconf</title><link>https://blog.simbafs.cc/p/golang/aconf/</link><pubDate>Fri, 24 Sep 2021 08:46:37 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/aconf/</guid><description>&lt;h1 id="aconf">aconf&lt;/h1>
+&lt;p>aconf 是個可以直接幫你解決所有「設定」問題的套件，設定可以有預設、從命令列參數、環境變數和設定檔，設定檔還有官方支援四種格式，dotEnv、HCL、toml、yaml 和 json。&lt;br>
+而且設定檔還可以有不只一個，他可以把多個設定檔合成，相當方便&lt;/p>
+&lt;h2 id="基本使用">基本使用&lt;/h2>
+&lt;h3 id="定義-struct">定義 struct&lt;/h3>
+&lt;p>首先我們需要一個 struct 來定義我們的設定&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">Config&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">Addr&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="s">`default:&amp;#34;:3000&amp;#34;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">Title&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="s">`default:&amp;#34;Aconf Testing&amp;#34;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">SysAdmin&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">string&lt;/span> &lt;span class="s">`default:&amp;#34;simbafs,peter&amp;#34;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="載入設定">載入設定&lt;/h3>
+&lt;p>再來，我們可以設定要從哪些來源載入設定值&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">loader&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">aconfig&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">LoaderFor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">config&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">aconfig&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Config&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 這四個預設都是關閉的，如果你想關閉任何一個隨時都可以關閉他
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// SkipDefaults: false,
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// SkipFiles: false,
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// SkipEnv: false,
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// SkipFlags: false,
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">EnvPrefix&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s">&amp;#34;APP&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">FlagPrefix&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s">&amp;#34;app&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">Files&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">string&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="s">&amp;#34;~/.config/app.toml&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;app.toml&amp;#34;&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">FileDecoders&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kd">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="kt">string&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="nx">aconfig&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">FileDecoder&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s">&amp;#34;.toml&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">aconfigtoml&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">New&lt;/span>&lt;span class="p">(),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">loader&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Load&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">panic&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這樣你就可以用檔案、環境變數和命令列參數設定了。&lt;/p>
+&lt;h4 id="設定名稱">設定名稱&lt;/h4>
+&lt;p>我們在 struct 中定義的設定名稱，在各個來源會有一些變化，下面是例子&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">struct&lt;/th>
+&lt;th style="text-align:left">設定檔&lt;/th>
+&lt;th style="text-align:left">環境變數&lt;/th>
+&lt;th style="text-align:left">命令列參數&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">Addr&lt;/td>
+&lt;td style="text-align:left">addr&lt;/td>
+&lt;td style="text-align:left">{EnvPrefix}_ADDR&lt;/td>
+&lt;td style="text-align:left">{FlagPrefix}{FlagDelimiter}attr&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">SysAdmin&lt;/td>
+&lt;td style="text-align:left">sys_admin&lt;/td>
+&lt;td style="text-align:left">{EnvPrefix}_SYS_ADMIN&lt;/td>
+&lt;td style="text-align:left">{FlagPrefix}{FlagDelimiter}sys_admin&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>這邊有另外幾個設定，以下是他們的預設值&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">config&lt;/th>
+&lt;th style="text-align:left">default&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">EnvPrefix&lt;/td>
+&lt;td style="text-align:left">&amp;ldquo;&amp;quot;（最好自己設，不然可能重複）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">FlagPrefix&lt;/td>
+&lt;td style="text-align:left">&amp;quot;&amp;rdquo; （如果沒有設，FlagDelimiter 也不會有作用）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">FlagDelimiter&lt;/td>
+&lt;td style="text-align:left">.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="從命令列載入設定檔">從命令列載入設定檔&lt;/h4>
+&lt;p>預設你是不行從命令列設定你自己的設定檔路徑，但是你可以開啟這個選項&lt;br>
+用 &lt;code>FileFlag&lt;/code> 可以設定「設定檔路徑」的選項&lt;/p>
+&lt;h2 id="參考連結">參考連結&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/cristalhq/aconfig" target="_blank" rel="noopener"
+>https://github.com/cristalhq/aconfig&lt;/a>&lt;br>
+&lt;a class="link" href="https://pkg.go.dev/github.com/cristalhq/aconfig" target="_blank" rel="noopener"
+>https://pkg.go.dev/github.com/cristalhq/aconfig&lt;/a>&lt;/p></description></item></channel></rss>
