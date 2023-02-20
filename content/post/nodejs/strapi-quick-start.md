@@ -7,7 +7,9 @@ tags = [
   "api",
   "strapi",
   "database",
-  "selfhost"
+  "selfhost",
+  'js',
+  'cms'
 ]
 categories = [ "nodejs" ]
 date = "2021-02-28"

@@ -1,7 +1,7 @@
 +++
 title = "hCaptcha"
 date = "2021-01-05"
-tags = [ "captcha", "hCaptcha", "node", "express" ]
+tags = [ "captcha", "hCaptcha", "node", "express", 'js' ]
 categories = [ "nodejs" ]
 +++
 

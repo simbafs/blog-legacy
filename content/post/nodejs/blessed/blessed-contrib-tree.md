@@ -1,7 +1,7 @@
 +++
 title = "Blessed Contrib Tree"
 date = "2020-02-18"
-tags = [ "blessed", "blessed-contrib" ]
+tags = [ "blessed", "blessed-contrib", 'js','cli' ]
 categories = [ 'nodejs', "blessed" ]
 +++
 

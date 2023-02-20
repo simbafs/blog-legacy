@@ -1,7 +1,7 @@
 +++
 title = "Blessed 切換畫面"
 date = "2020-02-20"
-tags = [ "blessed" ]
+tags = [ "blessed", 'js', 'cli' ]
 categories = [ 'nodejs', "blessed" ]
 +++
 

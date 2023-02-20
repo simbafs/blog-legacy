@@ -1,7 +1,7 @@
 +++
 title = "sqlite3"
 date = "2020-03-13"
-tags = [ "node", "sqlite", "async" ]
+tags = [ "node", "sqlite", "async", 'js', 'sql', 'database' ]
 categories = [ "nodejs" ]
 +++
 

@@ -4,10 +4,13 @@ push:
 	git commit -m "$(filediff)"
 	git push
 
+diff:
+	@echo ${filedeff}
+
 tree: 
 	tree content/post | less
 	# tree -d content/post
 
 build:
 	hugo --minify --gc
-.PHONY: push tree build
+.PHONY: push tree build diff

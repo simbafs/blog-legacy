@@ -1,7 +1,7 @@
 +++
 title = "Webpack Reactjs"
 date = "2020-06-28"
-tags = [ "webpack", "reactjs", "frontend" ]
+tags = [ "webpack", "reactjs", "frontend", 'js' ]
 categories = [ 'nodejs', "reactjs" ]
 +++
 

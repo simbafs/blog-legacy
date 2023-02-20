@@ -2,7 +2,7 @@
 title = "TypeScript"
 slug = ""
 date = 2023-02-10T23:28:41+08:00
-tags = ["typescript", 'snippet']
+tags = ["ts", 'snippet', 'js']
 categories = ['nodejs']
 +++
 

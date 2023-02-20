@@ -1,13 +1,12 @@
 +++
 title = "Blessed Landmine"
 date = "2020-02-26"
-tags = [ "blessed" ]
+tags = [ "blessed", 'js', 'cli' ]
 categories = [ 'nodejs', "blessed" ]
 +++
 
 # Blessed Landmine
 這是一篇我在用 blessed 時踩的一些雷
-會持續的更新
 
 ## 1. 記得 render
 今天在寫 API 時踩到兩次

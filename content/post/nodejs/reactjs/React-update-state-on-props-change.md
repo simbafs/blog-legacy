@@ -1,7 +1,7 @@
 +++
 title = "Reactjs Update State on Props Change"
 date = "2020-07-12"
-tags = [ "reactjs", 'state' ]
+tags = [ "reactjs", 'state', 'js', 'frontend' ]
 categories = [ 'nodejs', "reactjs" ]
 +++
 

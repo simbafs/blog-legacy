@@ -1,7 +1,7 @@
 +++
 title = "Mongoose Model"
 date = "2020-11-10"
-tags = [ "mongoose", "node" ]
+tags = [ "mongoose", "node", 'js', 'database', 'nosql' ]
 categories = [ "nodejs" ]
 +++
 

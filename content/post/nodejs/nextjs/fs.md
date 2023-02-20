@@ -2,7 +2,7 @@
 title = "File System"
 slug = "fs"
 date = 2022-08-04T22:16:42+08:00
-tags = ['fs', 'filesystem']
+tags = ['fs', 'filesystem', 'js', 'nextjs']
 categories = ['nodejs', 'nextjs']
 +++
 

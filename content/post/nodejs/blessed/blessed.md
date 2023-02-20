@@ -1,7 +1,7 @@
 +++
 title = "Blessed"
 date = "2020-02-17"
-tags = [ "blessed" ]
+tags = [ "blessed", 'js', 'cli' ]
 categories = [ 'nodejs', "blessed" ]
 +++
 

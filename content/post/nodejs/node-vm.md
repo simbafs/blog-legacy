@@ -1,7 +1,7 @@
 +++
 title = "Node VM"
 date = "2021-01-13"
-tags = [ "node", "nodejs", "vm" ]
+tags = [ "node", "nodejs", "vm" , 'js']
 categories = [ "nodejs" ]
 +++
 
