@@ -2,6 +2,8 @@
 title = "ExecCmd"
 slug = "exec-cmd"
 date = 2021-10-19T00:06:19+08:00
+tags = ['exec', 'process']
+categories = ['go']
 +++
 
 # Golang 執行外部命令

@@ -1,15 +1,17 @@
 +++
-title = "docker 基礎指令"
-tags = [ "docker", "linux" ]
-categories = [ "docker" ]
+title = "Docker 基礎指令"
+slug = 'docker command'
 date = "2020-09-10"
+tags = [ "docker", "linux" ]
+categories = [ 'linux', "docker" ]
 +++
 
-# Install
+# Docker 指令
+## Install
 ```bash
 apt install docker docker.io docker-compose
 ```
-# What is docker
+## What is docker
 Docker 是一個容器化的技術，基本上使用的時候可以把他當成虛擬機，雖然他們的使用的技術完全不一樣。對新手來說，在 Docker 裡面有四個重要的名詞：dockerfile, docker image, docker container, docker-compose。  
 1. dockerfile  
 	純文字檔，定義建立 docker image 的步驟，有點像是一個 bash shell。通常命名成 `Dockerfile` ，在 build 的時候會預設用這個，也可以用 `-f` 來指定其他的檔案。

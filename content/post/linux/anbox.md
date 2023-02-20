@@ -2,17 +2,20 @@
 title = "Anbox"
 slug = ""
 date = 2022-04-18T18:53:50+08:00
+tags = ['anbox', 'linux', 'android', 'emulator']
+categories = ['linux']
 +++
 
+# Anbox
 [anbox](https://anbox.io/) 是 Android in a box，是一種基於容器化技術的 Android 模擬器，所以執行速度會比較快、比較省資源，而且因為每個 App 都在各自的容器裡面，所以比較安全
 （應該沒理解錯吧？）。  
 安裝 anbox 需要先安裝兩個 kernal modules，然後安裝 anbox 後，為了之後方便，所以要裝 Google Play，不裝也是可以，但之後安裝其他 App 比較麻煩  
 
-# 系統
+## 系統
 我用的系統是 Ubuntu 21.04，如果你的系統不一樣，可能會有某些步驟不太一樣。  
 這次安裝因為涉及 Linux Kernel 所以隨時重開機有很大機會幫助改善遇到的問題  
 
-# 安裝 Linux Kernal Modules
+## 安裝 Linux Kernal Modules
 如果你的 Linux kernale > 5.0，那理論上已經包在 Kernel 裡面了，所以不用安裝  
 > Starting with Ubuntu 19.04 binder and ashmem are now build with the standard Ubuntu kernel (>= 5.0) and you don’t have to install the modules from the PPA anymore.
 
@@ -42,7 +45,7 @@ lsmod | grep -e ashmem -e binder # 我不確定這個找到是不是代表有成
 
 > [https://docs.anbox.io/userguide/install_kernel_modules.html](https://docs.anbox.io/userguide/install_kernel_modules.html)
 
-# 安裝 anbox
+## 安裝 anbox
 如果你的電腦上有 snap，就用 snap 裝；如果沒有，就先去裝 snap。  
 ```bash
 sudo snap install --devmode --beta anbox
@@ -60,7 +63,7 @@ snap info anbox
 ```bash
 sudo apt remove anbox
 ```
-# 安裝 Google Play
+## 安裝 Google Play
 因為 anbox 沒有內建 apk 安裝器，所以沒辦法很方便的安裝 APP，最方便的方法是安裝 Google Play。  
 ```bash
 sudo apt install wget curl lzip tar unzip squashfs-tools
@@ -74,5 +77,5 @@ sudo ./install-playstore.sh
 
 > [https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox](https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox)
 
-# 問遺
+## 問遺
 目前裝好 APP 但是我打不開

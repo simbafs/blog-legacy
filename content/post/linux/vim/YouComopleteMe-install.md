@@ -1,11 +1,12 @@
 +++
-title = "YouComopleteMe install"
-tags = [ "vim", "YCM", "complete", "completing", "dev" ]
-categories = [ "vim" ]
+title = "YouComopleteMe Install"
 date = "2021-05-17"
+tags = [ "vim", "YCM", "complete", "completing", "dev" ]
+categories = [ 'linux', "vim" ]
 +++
 
-# 下載 source code
+# YCM Installation
+## 下載 source code
 1. 編輯 ~/.vimrc
 ```vim
 Plug 'Valloric/YouCompleteMe'
@@ -15,7 +16,7 @@ Plug 'Valloric/YouCompleteMe'
 4. 存檔離開
 
 
-# 編譯
+## 編譯
 1. 執行 `sudo apt install python3-dev build-essential`
 2. 進入 `~/.vim/plugged/YouCompleteMe` 
 3. 執行 `./install.py --help` 並挑選需要的選項

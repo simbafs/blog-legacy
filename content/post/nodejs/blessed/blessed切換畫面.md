@@ -1,10 +1,11 @@
 +++
-title = "blessed切換畫面"
-tags = [ "blessed" ]
-categories = [ "blessed" ]
+title = "Blessed 切換畫面"
 date = "2020-02-20"
+tags = [ "blessed" ]
+categories = [ 'nodejs', "blessed" ]
 +++
 
+# Blessed 切換畫面
 今天完成了新版本的 `treetify` [看這](/2020/02/18/blessed-contrib-tree/)
 同時我設計好了右邊的 `edit`
 但是我的問題是他要根據情況不同切換不同的頁面

@@ -1,18 +1,19 @@
 +++
-title = "nginx-ui"
+title = "Nginx UI"
+date = "2020-06-23"
 tags = [ "nginx linux" ]
 categories = [ "server" ]
-date = "2020-06-23"
 +++
 
+# Nginx UI
 前幾天發現一個專案 nginx ui
 他是一個可以讓你在網頁上更改 nginx config 的專案
-安裝：
+## 安裝
 ```
 docker pull schenkd/nginx-ui
 ```
 
-啟動；
+## 啟動
 ```
 docker run -p 8080:8080 -v /etc/nginx:/etc/nginx schenkd/nginx-ui
 ```

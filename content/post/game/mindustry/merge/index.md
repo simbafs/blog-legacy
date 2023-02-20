@@ -2,8 +2,11 @@
 title = "Merge"
 slug = ""
 date = 2022-05-17T08:32:38+08:00
+tags = ['mindustry']
+categories = ['game']
 +++
 
+# Merge
 Mindustry 中，某條輸送帶（A）合併到另一條未滿的輸送帶（B）上時，如果 B 有一個足夠小的空隙，A 是有機會無法補滿的  
 
 ![gap](./gap.png)  

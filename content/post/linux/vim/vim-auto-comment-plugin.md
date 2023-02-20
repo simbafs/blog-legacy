@@ -1,14 +1,15 @@
 +++
-title = "vim auto comment plugin"
-tags = [ "vim" ]
-categories = [ "vim" ]
+title = "Vim Auto Comment Plugin"
 date = "2020-08-25"
+tags = [ "vim", 'auto', 'plugin']
+categories = [ "linux", 'vim' ]
 +++
 
-# 套件
+# Vim Auto Comment Plugin
+## 套件
 [nerdcommenter](https://github.com/preservim/nerdcommenter)
 
-# 好用的指令
+## 好用的指令
 在每次動作前都要按 `<leader>`，預設是 反斜線 `\`  
 
 ## `c<space>`

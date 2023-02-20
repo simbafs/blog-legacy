@@ -1,27 +1,29 @@
 +++
 title = "Yubikey"
-slug = ""
 date = 2022-04-19T15:22:55+08:00
 lastmod = 2022-12-07
+tags = ['yubikey', 'ssh', 'gpg', 'security']
+categories = ['linux']
 +++
 
+# Yubikey
 感謝煥杰賣我一個 1200，撿到寶啦！我買的是 [Yubikey 5C NFC](https://www.yubico.com/tw/product/yubikey-5c-nfc/)，看起來幾乎所有功能都有
 
-# login
+## login
 
 如果開啟這個，登入、解除鎖定等等動作都需要 Yubikey，聽起還很安全，但是因為我的筆電只有一個 type C，所以必須把 USB hub 拔掉，挺麻煩，我就把他關掉了。  
 在密碼輸入框的地方，先插入 yubikey，輸入密碼、按 enter，然後轉圈圈的時候按 yubikey 上金色按鈕（這個似乎是指紋辨識），就可以登入了。
 
 > [Yubico Yubikey 5C NFC setup on Ubuntu 21.04](https://oscfr.com/blog/tech/yubico-yubikey-5c-nfc-setup-on-ubuntu-2104/)
 
-# ssh gpg
+## ssh gpg
 
 ~~研究中...~~
 在這裡 [GPG with SSH](/posts/linux/gpg-with-ssh)
 
 > [如何在 Mac 上，把 YubiKey 與 GPG、SSH 搭配在一起](https://medium.com/@SSWilsonKao/%E5%A6%82%E4%BD%95%E5%9C%A8-mac-%E4%B8%8A-%E6%8A%8A-yubikey-%E8%88%87-gpg-ssh-%E6%90%AD%E9%85%8D%E5%9C%A8%E4%B8%80%E8%B5%B7-5f842d20ad6a) > [OpenPGP SSH access with Yubikey and GnuPG](https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29)
 
-# 2FA
+## 2FA
 
 按照各個網站的說明設定，下面是我找到可以設定 Yubikey 的網站/APP
 
@@ -36,7 +38,7 @@ twitter 在手機登入好像怪怪的，試了 5 分鐘才成功登入了
 ---
 
 
-# 2022/12/07 更
+## 2022/12/07 更
 
 過了一陣子，系統也重裝過，然後 yubikey 就讀不到了，但是平常用網站都可以，只是 CLI 和 Yubikey personalization tool 都讀不到。
 插上後輸入以下指令都會失敗
@@ -101,7 +103,7 @@ gpg: OpenPGP card not available: No SmartCard daemon
 
 剛剛搞了一陣後，把簽章、加密、驗證和主金鑰（應該有）的密鑰通通丟上 yubikey 了。但是現在有個問題，所有需要 gpg key 的時候，像是簽 git commit 和 ssh 驗證都需要插上 yubikey，好像安全過頭了。我研究看看能不能把某些再拉回本地，如果不行的話就只能把一開始備份的密鑰再導入一次，暴力解決！
 
-# 密碼們
+## 密碼們
 yubikey 的設定中有好幾份不同功能的密碼，用法和出現時機都不一樣，這邊是我研究好幾份文件的總整理。首先要先有個關念，yubikey 的設計是公司裡有個人專門管一大堆的 yubikey，所以會有一個密碼是只有管理人知道，使用者不知道。那為了驗證是使用者本人，也會有密碼是只有使用者知道但是其他人不知道。
 
 ## PIN

@@ -1,8 +1,9 @@
 +++
 title = "React 解決中文輸入法"
-slug = "react-composition"
+slug = "react-composition-event"
 date = 2022-02-05T16:59:44+08:00
-draft = false
+tags = ['react', 'js', 'frontend']
+categories = ['react']
 +++
 
 今天在開發[晶晶體產生器](https://github.com/simbafs/JingJing)的時候，發現中文輸入總是有問題，這時候我想起以前看過 Hackmd 官方的[一篇 blog](https://hackmd.io/@hackmd/CompositionEvent)，提到中文輸入法如果有問題，可能和組字事件有關。於是就開始研究。首先我將以下設定加入 `textarea` 裡觀察組字事件的行為  

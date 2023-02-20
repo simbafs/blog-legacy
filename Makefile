@@ -5,7 +5,7 @@ push:
 	git push
 
 tree: 
-	tree content/post
+	tree content/post | less
 	# tree -d content/post
 
 build:

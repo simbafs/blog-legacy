@@ -1,20 +1,22 @@
 +++
-title = "strapi-quick-start"
+title = "Strapi Quick Start"
 tags = [
   "node",
   "nodejs",
   "headless api",
   "api",
   "strapi",
-  "database"
+  "database",
+  "selfhost"
 ]
 categories = [ "nodejs" ]
 date = "2021-02-28"
 +++
 
+
 strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server
 
-# strapi
+## strapi
 ## 什麼是 headless CMS
 headless CMS 顧名思義是「無頭的 內容管理系統」，意思是沒有前端、只有後端，它就是一個 DB 的 web 界面 + api server。headless CMS 專注於處理 api 的部份，前端的部份一律不關心。這對於前後端分離有很大的幫助，基本上 headless CMS 已經解決了後端 80% 的工作，剩下的就是一些客製化的邏輯，像是登入、特殊的計算等等。
 

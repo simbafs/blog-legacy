@@ -2,7 +2,8 @@
 title = "Golang Plguin"
 slug = "plguin"
 date = 2022-02-21T18:54:55+08:00
-draft = false
+tags = ['plugin', 'share object']
+categories = ['go']
 +++
 
 # Go 動態載入程式

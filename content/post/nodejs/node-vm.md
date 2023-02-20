@@ -1,11 +1,12 @@
 +++
-title = "node-vm"
+title = "Node VM"
+date = "2021-01-13"
 tags = [ "node", "nodejs", "vm" ]
 categories = [ "nodejs" ]
-date = "2021-01-13"
 +++
 
-# node.js VM 模組
+# Node VM
+## node.js VM 模組
 VM 是 node.js 的核心模組，提供安全的環境 (沙箱) 來測試不信任的程式碼。
 
 ## 基本概念

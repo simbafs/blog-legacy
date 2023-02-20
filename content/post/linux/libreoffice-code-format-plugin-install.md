@@ -1,8 +1,8 @@
 +++
-title = "libreoffice-code-format-plugin-install"
-tags = [ "libreoffice", "code format" ]
-categories = [ "software" ]
+title = "Libreoffice Code Format Plugin Installation"
 date = "2021-03-13"
+tags = [ "libreoffice", "code format" ]
+categories = [ "linux" ]
 +++
 
 # 安裝

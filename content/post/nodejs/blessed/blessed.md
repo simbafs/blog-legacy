@@ -1,10 +1,11 @@
 +++
-title = "blessed"
-tags = [ "blessed" ]
-categories = [ "blessed" ]
+title = "Blessed"
 date = "2020-02-17"
+tags = [ "blessed" ]
+categories = [ 'nodejs', "blessed" ]
 +++
 
+# Blessed
 某天我有一個問題
 gtop 的圖畫界面是怎麼做的，我知道他是用 node 寫的，對他別有興趣
 我上 github 看他的 package.json

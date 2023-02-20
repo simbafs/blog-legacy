@@ -2,11 +2,14 @@
 title = "砲台自動瞄準"
 slug = "turretAutoAim"
 date = 2022-05-18T16:29:13+08:00
+tags = ['mindustry']
+categories = ['game']
 +++
 
+# 砲台自動瞄準
 用處理器可以控制砲台們打的方向和什麼時候打，這樣只要有一群受控的砲台，就可以在射程範圍內指哪打哪  
 
-# 單一砲台
+## 單一砲台
 ![one turret screenshot](./oneTurretScreeshot.png)
 
 如圖所示，砲台跟著玩家瞄準的方向打  
@@ -34,7 +37,7 @@ control shoot duo1 x y shoot 0
 
 ![one turret code](./oneTurretCode.png)
 
-# 多個砲台
+## 多個砲台
 
 上面的指令只能控制一個砲台，那麼要怎麼控制多個砲台呢？答案是 loop，但是 Mindustry 沒有提供 loop，我們只能用 `jump`，那麼就來看看程式吧！
 
@@ -68,6 +71,6 @@ jump 1 always x false
 ![multiple turrets screenshot](./multipleTurretsScreenshot.png)  
 ![multipleTurretsCode](./multipleTurretCode.png)
 
-# 參考資料
+## 參考資料
 https://www.youtube.com/watch?v=UFK5m6qKT6U  
 https://www.youtube.com/watch?v=YMxU0jcS11I  

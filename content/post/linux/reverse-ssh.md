@@ -1,10 +1,11 @@
 +++
-title = "reverse-ssh"
-tags = [ "ssh", "linux" ]
-categories = [ "linux" ]
+title = "Reverse SSH"
 date = "2020-02-23"
+tags = [ "ssh", "linux", 'tunnel' ]
+categories = [ "linux" ]
 +++
 
+# Reverse SSH
 一直以來連線回社辦的電腦都要走 webtty 再開 tmate
 但是今天發現了一個新的方法可以透過反向的 ssh 連回社辦
 

@@ -1,12 +1,11 @@
 +++
 title = "Mongoose Model"
+date = "2020-11-10"
 tags = [ "mongoose", "node" ]
 categories = [ "nodejs" ]
-date = "2020-11-10"
 +++
 
 # Mongoose Model
-
 ## 環境設定
 這是這次實驗用的 code
 ```js

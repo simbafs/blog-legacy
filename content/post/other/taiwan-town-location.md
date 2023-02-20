@@ -1,19 +1,20 @@
 +++
-title = "taiwan-town-location"
-tags = [ "taiwan", "geolocation" ]
-categories = [ "other" ]
+title = "臺灣地址 API"
 date = "2021-06-24"
+tags = [ "taiwan", "geolocation", 'opendata', 'api' ]
+categories = [ "other" ]
 +++
 
+# 臺灣地址 API
 這是一個給經緯度吐地址的 api，甚至路段都會出來，搭配 [web geolocation api](https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation_API) 蠻不錯的，精確度不錯。可以不知道有沒有 rate limited 的問題，目前看起來連 token 都不用。
 
-# 網址
+## 網址
 https://api.nlsc.gov.tw/other/TownVillagePointQuery/
 
-# 用法
+## 用法
 https://api.nlsc.gov.tw/other/TownVillagePointQuery/經度/緯度
 
-# 舉例：
+## 舉例：
 
 ## request
 ```
@@ -36,5 +37,5 @@ GET https://api.nlsc.gov.tw/other/TownVillagePointQuery/121.46278679999999/25.01
 </townVillageItem>
 ```
 
-# 參考資料
+## 參考資料
 https://data.gov.tw/dataset/101898

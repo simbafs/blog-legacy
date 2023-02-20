@@ -1,17 +1,18 @@
 +++
 title = "ssh on gitea with docker"
+date = "2021-07-13"
 tags = [ "gitea", "ssh", "self-host", "git" ]
 categories = [ "linux", "server" ]
-date = "2021-07-13"
 +++
 
+# Gitea
 [Gitea](https://gitea.io) 是一個開源的 git 伺服器，他的界面幾乎和 [GitHub](https://github.com) 一模一樣，但是完全開源而且非常輕，甚至一片樹梅派就可以開伺服器了。Gitea 因為是使用 [Golang](https://golang.org/) 編寫的，所以提供各種平台的執行檔。我選擇透過 docker 裝 Gitea 伺服器，但是這樣有一個問題，gitea 伺服器開在 container 內，沒辦法使用標準的 22 port，所以 git clone 就必須加上一個醜醜的數字，像是這樣
 ```
 git clone git@domain:10022:user/repo.git
 ```
 這個問題 Gitea 官方已經有提供[完整的教學](https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough)了，但是是英文版，我這篇文章是我讀完消化過後的中文版教學
 
-# 容器 ssh 穿透
+## 容器 ssh 穿透
 因為 Gitea 的 ssh 是跑在容器裡，我沒辦法讓他和 host 共用 22 port，所以要透過 host 「轉發」連線。
 
 ## 1. 建立 git 使用者  
@@ -71,9 +72,9 @@ ssh -p 2222 -o StrictHostKeyChecking=no git@127.0.0.1 "SSH_ORIGINAL_COMMAND=\"$S
 
 ## 大功告成！
 
-# 心得
+## 心得
 一開始我沒找到官方的教學，一方面是我想自己試試看，二方面是因為官方文件中英文完全不一樣，看英文版才完整，中文只給兩條指令。
 
-# 參考連結
+## 參考連結
 [https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough](https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough)    
 [https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/](https://asaba.sakuragawa.moe/2018/06/%E6%93%BA%E8%84%AB%E6%8E%A7%E5%88%B6%EF%BC%8C%E7%94%A8-docker-%E8%87%AA%E5%BB%BA-gitea-gogs-%E7%B7%9A%E4%B8%8A%E4%BB%A3%E7%A2%BC%E5%8D%94%E4%BD%9C%E5%B9%B3%E8%87%BA/)

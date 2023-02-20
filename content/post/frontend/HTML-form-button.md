@@ -1,10 +1,11 @@
 +++
 title = "HTML form button"
-tags = [ "HTML" ]
-categories = [ "frontend" ]
 date = "2020-06-01"
+tags = [ 'frontent', "HTML" ]
+categories = [ "frontend" ]
 +++
 
+# HTML Form Button
 HTML 的 form 裡的按鈕預設是 submit
 所以要加上 `type="button"` 它才不會太心急送出表單
 

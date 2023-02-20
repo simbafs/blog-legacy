@@ -1,13 +1,14 @@
 +++
 title = "Cast Phone Screen to Computer"
-categories = [ "linux", "software" ]
-tags = [ "android", "linux", "adb", "wireless", "usb debug" ]
 date = "2021-06-14"
+tags = [ "android", "linux", "adb", "wireless", "usb debug" ]
+categories = [ "linux" ]
 +++
 
+# Cast Phone Screen to Computer
 有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。
 
-# SCRCPY
+## SCRCPY
 這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。
 
 ## Installation
@@ -31,7 +32,7 @@ $ sudo apt install scrcpy
 如果 ip 不是預設的話，可以加上 `-i IP` 來指定其他的 ip  
 加上 `-f` 可以開啟全螢幕
 
-# 參連連結
+## 參連連結
 [https://github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy)
 [https://developer.android.com/studio/debug/dev-options](https://developer.android.com/studio/debug/dev-options)
 [https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20](https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20)

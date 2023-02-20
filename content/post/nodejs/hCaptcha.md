@@ -1,14 +1,15 @@
 +++
 title = "hCaptcha"
+date = "2021-01-05"
 tags = [ "captcha", "hCaptcha", "node", "express" ]
 categories = [ "nodejs" ]
-date = "2021-01-05"
 +++
 
-# 前情提要
+# hCaptcha
+## 前情提要
 我們社團的短網址服務裡面常常出現一些奇怪的網址，我猜可能是有機器人在刷，所以我想加入 captcha 減少這類問題。我選擇的是 [hCaptcha](https://hcaptcha.com/) 這套，能不依賴 Google 就盡量不要。
 
-# 安裝步驟
+## 安裝步驟
 ## 申請帳號
 先到 [hCaptcha](https://hcaptcha.com/) 註冊、新增一個網站，複製 sitekey (`Sites` > `site setting`) 和 secret key (`Settings`)，我們等等會用到
 
@@ -76,5 +77,5 @@ if(SECRET){
 
 module.exports = router;
 ```
-# 結論
+## 結論
 看原始碼很重要

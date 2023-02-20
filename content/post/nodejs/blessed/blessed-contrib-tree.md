@@ -1,11 +1,12 @@
 +++
-title = "blessed-contrib-tree"
-tags = [ "blessed", "blessed-contrib" ]
-categories = [ "blessed" ]
+title = "Blessed Contrib Tree"
 date = "2020-02-18"
+tags = [ "blessed", "blessed-contrib" ]
+categories = [ 'nodejs', "blessed" ]
 +++
 
-# Tree
+# blessed Contrib Tree
+## Tree
 想說先想一個專案來練練手
 熟悉一下 blessed
 突然看到 blessed-contrib 裡有個元件叫 `tree`

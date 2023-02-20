@@ -1,15 +1,16 @@
 +++
-title = "unix-socket"
+title = "Unix Socket"
 tags = [ "unix socket", "node", "nginx" ]
 categories = [ "nodejs" ]
 date = "2020-02-23"
 +++
 
+# Unix Socket
 今天心血來潮在看 unix socket
 突然想到 node 可不可以把 服務監聽在一個 socket file
 這樣在設定的時候就不用記哪個服務是幾 port
 
-# node 部份
+## node 部份
 ## 監聽在 unix socket
 查完資料後發現其實只要把原本填 port 的地方改成 socket file 的路徑就好了
 像這樣
@@ -48,7 +49,7 @@ process.on('SIGINT', () => {
 })
 ```
 
-# 測試
+## 測試
 弄完了伺服器
 要怎麼測試呢？
 這時候可以用 `curl` 來測試
@@ -57,7 +58,7 @@ $ curl --unix-socket /tmp/express.sock http://localhost
 Hello World
 ```
 
-# nginx reverse proxy 
+## nginx reverse proxy 
 現在我們把伺服器開好了
 但是 unix socket 只能在本機瀏覽啊！
 所以我們要透過 nginx 來幫忙做 reverse proxy
