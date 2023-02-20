@@ -1,5 +1,10 @@
+filediff := $(shell git diff --name-only HEAD | grep --color=never content/post | sed -e 's/content\/post\///')
 push: 
 	git add .
-	git commit -m '' --allow-empty-message
+	git commit -m "$(filediff)"
 	git push
-.PHONY: push
+
+tree: 
+	tree content/post
+	# tree -d content/post
+.PHONY: push tree
