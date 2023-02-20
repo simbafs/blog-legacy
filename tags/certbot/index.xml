@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>certbot on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/certbot/</link><description>Recent content in certbot on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 13 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/certbot/index.xml" rel="self" type="application/rss+xml"/><item><title>nginx-reverse-proxy-setup</title><link>https://blog.simbafs.cc/p/nginx-reverse-proxy-setup/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nginx-reverse-proxy-setup/</guid><description>&lt;h1 id="nginx-反向代理伺服器-reverse-proxy">nginx 反向代理伺服器 (reverse proxy)&lt;/h1>
+&lt;p>之前社網 server 因為學校防火牆限制只能對外開 80 443 兩個 port&lt;br>
+而且我們只有一個 ip (203.64.138.177)&lt;br>
+所以要用 reverse proxy 來代理我們的多項服務&lt;br>
+原本我只會用 apache2
+後來不知道是不是因為 apache 太肥導致有時候回應時間會很久&lt;br>
+所以我起了將 proxy server 換成 nginx 的想法&lt;/p></description></item></channel></rss>

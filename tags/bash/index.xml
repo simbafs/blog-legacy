@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>bash on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/bash/</link><description>Recent content in bash on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/bash/index.xml" rel="self" type="application/rss+xml"/><item><title>bash number loop</title><link>https://blog.simbafs.cc/p/bash-number-loop/</link><pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/bash-number-loop/</guid><description>&lt;p>今天在某的地方剛好看到一個 bash 的小技巧，當我們要從 1 數到 100 時，通常會用 &lt;code>seq&lt;/code> 指令來做，但是如果我們的需求剛剛好是每次遞增（遞減）1 的話，就可以使用 &lt;code>{start..end}&lt;/code> 縮寫，下面兩個範例的效果是一樣的：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># for 迴圈 + seq 的寫法&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> i in &lt;span class="k">$(&lt;/span>seq &lt;span class="m">1&lt;/span> &lt;span class="m">1&lt;/span> 100&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="nv">$i&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 用 {start..end}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="o">{&lt;/span>1..100&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這個技巧也可以用在建立檔案，像這樣：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">touch user&lt;span class="o">{&lt;/span>1..100&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>bash completion</title><link>https://blog.simbafs.cc/p/bash-completion/</link><pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/bash-completion/</guid><description>&lt;h1 id="需求">需求&lt;/h1>
+&lt;p>今天寫了一個 bash script 幫我管理 mongodb docker，在使用的時候一些子命令，像是 &lt;code>up&lt;/code>、&lt;code>down&lt;/code>、&lt;code>clean&lt;/code>。我希望可以讓 bash 當我自動補齊這些選項。&lt;/p>
+&lt;h1 id="bash_completion">&lt;code>bash_completion&lt;/code>&lt;/h1>
+&lt;p>&lt;code>bash_completion&lt;/code> 是一個可以幫我們做程式化補齊的工具，像是 git 就有使用到這個工具，在 commit、push 的時候按 tab 都會顯示出當下我們可以用的東西，像是 &lt;code>git push&amp;lt;tab&amp;gt;&amp;lt;tab&amp;gt;&lt;/code> 就會自動補齊 &lt;code>origin&lt;/code> 而不是給我們看檔案（bash 預設只會補齊檔案和命令）。我們這次只須要用基本的 &lt;code>complete&lt;/code> 就可以了&lt;/p>
+&lt;h1 id="complete">&lt;code>complete&lt;/code>&lt;/h1>
+&lt;p>&lt;code>complete&lt;/code> 可以幫命令加上簡單的自動完成，其實 &lt;code>bash_completion&lt;/code> 也是去呼叫這個命令來達成自動補齊。&lt;code>complete&lt;/code> 傻用非常簡單，像下面這樣就可以幫 &lt;code>mongodb&lt;/code> 這個命令加上自動補齊&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">complete&lt;/span> -W &lt;span class="s2">&amp;#34;up down clean&amp;#34;&lt;/span> mongodb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>-W&lt;/code> 選項代表後面是字詞列表，用 &lt;code>-F&lt;/code> 後面可以接一個函數，但是這個我沒研究，也許下一個專案就是研究 &lt;code>complete&lt;/code> 也說不定。&lt;/p></description></item><item><title>文章更新時間錯亂問題</title><link>https://blog.simbafs.cc/p/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;h1 id="問題">問題&lt;/h1>
+&lt;p>在設定完 GitHub Action 之後，我發現我的文章的更新時間都錯了，會全部變成當天日期。但是本地生成的就沒有這個問題，經過一番盤查和猜測後，我發現問題是因為 git 不會把 modified date 紀錄，因為每台電腦的時區都是不一樣的，紀錄起來沒有意義。但是我們需要這項 meta data，所以我們就要自己想法紀錄&lt;/p>
+&lt;h1 id="解法-v10">解法 v1.0&lt;/h1>
+&lt;p>首先，因為每一篇文章 hexo 都會紀錄建立時間，所以我們可以直接把他抓出來，然後把檔案的更新時間設成這個時間就可以啦！&lt;/p>
+&lt;h2 id="更改檔案的-modified-time">更改檔案的 modified time&lt;/h2>
+&lt;p>這個功能只要用我們最熟悉的 &lt;code>touch&lt;/code> 就可以做到了。一般我們使用 &lt;code>touch&lt;/code> 的時候會把 modified time 改成當下時間，那要改任意時間只要加上 &lt;code>-t&lt;/code> 選項就可以啦&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">-t STAMP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> use [[CC]YY]MMDDhhmm[.ss] instead of current time
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>假設我們有個檔案 &lt;code>tmp&lt;/code> ，我想把他的日期改成 &lt;code>1999/3/23 12:32:33&lt;/code> ，那我可以這樣下指令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ted timeouch -t&amp;#39;19993231232.33&amp;#39; tmp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="抓出檔名日期">抓出檔名、日期&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># git create time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">grep -rnw source/_posts -e &lt;span class="s1">&amp;#39;date&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>output:（這裡的 &lt;code>date:&lt;/code> 後面我多加了一個空白，原因後面會說）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">source/_posts/hexo-installation.md:3:date: 2020-02-10 17:26:45
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/blessed.md:3:date: 2020-02-17 23:24:10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/bash.md:3:date: 2020-02-16 22:15:10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/hexo-cli-extras.md:3:date: 2020-02-11 21:26:30
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/remind-daniel.md:3:date: 2020-03-15 21:35:25
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/jquery.md:3:date: 2020-03-15 11:38:47
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/nginx-reverse-proxy-setup.md:3:date: 2020-02-13 10:34:58
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/nginx-ui.md:3:date: 2020-06-23 22:50:29
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/reverse-ssh.md:3:date: 2020-02-23 21:24:34
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/webpack-react.md:3:date: 2020-06-28 22:39:57
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/mxlinux-change-workspace.md:3:date: 2020-05-08 17:59:22
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="分離時間檔名">分離時間，檔名&lt;/h2>
+&lt;p>觀察他的輸出&lt;br>
+檔名的部份是在以冒號分隔的第一欄&lt;br>
+日期/時間是在以空格分隔的第二、三欄
+那我們就可以根據這個把他們分離出來&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># get name, time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">grep -rnw source/_posts -e &lt;span class="s1">&amp;#39;date&amp;#39;&lt;/span> &amp;gt; t
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cut -d: -f1 t &amp;gt; name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cut -d&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span> -f2,3 t &amp;gt; &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>output:（節錄，這邊沒有對的很好）
+name:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">source/_posts/sqlite.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/ssh-tunnel.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/unix-socket.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/webpack-react.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/youtube-dl.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/加入-google-search-和-sitemap.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>time:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">2020-02-24 22:14:36
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-02-23 14:30:22
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-06-28 22:39:57
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-03-04 22:48:20
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-08-19 22:37:52
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-08-20 23:33:13
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="處理日期的格式">處理日期的格式&lt;/h2>
+&lt;p>在 &lt;code>更改檔案的 modified time&lt;/code> 提到的日期格式和我們抓出來的不太一樣，所以我們需要做一些處理&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cut -d&amp;#39; &amp;#39; -f2,3 t | sed &amp;#39;s/[- ]//g&amp;#39; | sed &amp;#39;s/://&amp;#39; | sed &amp;#39;s/:/./&amp;#39; &amp;gt; time
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這樣就可以成功轉換日期格式了&lt;/p>
+&lt;h2 id="時間檔">時間檔&lt;/h2>
+&lt;p>接下來把 &lt;code>name&lt;/code>、&lt;code>time&lt;/code> 合起來就變成時間擋了，這裡有一點要注意，因為我們恢復的時候是用 for 迴圈，換行和空白都會被當成切斷符號，所以檔名和時間中間的間隔符號我們選用冒號 &lt;code>:&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">paste -d: name time &amp;gt; source/_posts/time
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="清垃圾">清垃圾&lt;/h2>
+&lt;p>最後記得把剛才產生出來但是用不到的檔案清掉&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rm t name time
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="完整程式碼">完整程式碼&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># updateDate.sh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#!/bin/bash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[[&lt;/span> -z &lt;span class="nv">$1&lt;/span> &lt;span class="o">]]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">dir&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;source/_posts&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">dir&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">grep &lt;span class="s1">&amp;#39;date: [0-9]{4}&amp;#39;&lt;/span> &lt;span class="nv">$dir&lt;/span>/*.md &amp;gt; t
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cut -d: -f1 t &amp;gt; name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cut -d&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span> -f2,3 t &lt;span class="p">|&lt;/span> sed &lt;span class="s1">&amp;#39;s/[- ]//g&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> sed &lt;span class="s1">&amp;#39;s/://&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> sed &lt;span class="s1">&amp;#39;s/:/./&amp;#39;&lt;/span> &amp;gt; &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">paste -d: name &lt;span class="nb">time&lt;/span> &amp;gt; &lt;span class="nv">$dir&lt;/span>/time
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> i in &lt;span class="k">$(&lt;/span>cat &lt;span class="nv">$dir&lt;/span>/time&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">n&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$i&lt;/span> &lt;span class="p">|&lt;/span> cut -d: -f1&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">d&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$i&lt;/span> &lt;span class="p">|&lt;/span> cut -d: -f2&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> touch -t&lt;span class="nv">$d&lt;/span> &lt;span class="nv">$n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm t name &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="備註">備註&lt;/h2>
+&lt;p>剛剛有說到在這份教學中的 &lt;code>date: &lt;/code> 都多加一個空白，原因是因為 grep 在抓時候不會只抓第一個，為了避免抓到錯的所以我故意讓他不匹配，不然再生成時間檔的時候會出錯，所以你們的文章中如果出現會匹配 &lt;code>date: [0-9]{4}&lt;/code> 的字串，記得要做一下手腳&lt;/p>
+&lt;h1 id="解法-v20">解法 v2.0&lt;/h1>
+&lt;p>上一個作法雖然可行，但是有一個缺點，就是他的更新時間都會是建立時間，不會是 modified time，所以解法二誕生了&lt;br>
+其實很簡單，改上面的一小行就好了。首先用 &lt;code>stat&lt;/code> 取出檔案的 modified time&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">stat -c %y source/_posts/*.md &amp;gt; &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">2020-03-04 22:48:20.000000000 +0800
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-08-19 22:37:52.000000000 +0800
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-08-21 22:15:44.366513358 +0800
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-07-04 10:17:39.000000000 +0800
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然後在經過適當的轉換變成我們要的格式就完成啦！&lt;/p>
+&lt;h2 id="完整程式碼-1">完整程式碼&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># storePostTime.sh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#!/bin/bash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[[&lt;/span> -z &lt;span class="nv">$1&lt;/span> &lt;span class="o">]]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">dir&lt;/span>&lt;span class="o">=&lt;/span>source/_posts
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">dir&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ls &lt;span class="nv">$dir&lt;/span>/*.md &amp;gt; name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">stat -c %y &lt;span class="nv">$dir&lt;/span>/*.md &lt;span class="p">|&lt;/span>&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> cut -d&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span> -f1,2 &lt;span class="p">|&lt;/span>&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> sed &lt;span class="s1">&amp;#39;s/[- ]//g&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span>&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> sed &lt;span class="s1">&amp;#39;s/://&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span>&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> sed &lt;span class="s1">&amp;#39;s/:/./&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span>&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> cut -d. -f1,2 &amp;gt; &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">paste -d: name &lt;span class="nb">time&lt;/span> &amp;gt; t
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mv t &lt;span class="nv">$dir&lt;/span>/time
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm name &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># recorverDate.sh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#!/bin/bash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[[&lt;/span> -z &lt;span class="nv">$1&lt;/span> &lt;span class="o">]]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">file&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;source/_posts/time&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">file&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> i in &lt;span class="k">$(&lt;/span>cat &lt;span class="nv">$file&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">n&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$i&lt;/span> &lt;span class="p">|&lt;/span> cut -d: -f1&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">d&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$i&lt;/span> &lt;span class="p">|&lt;/span> cut -d: -f2&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> touch -t&lt;span class="nv">$d&lt;/span> &lt;span class="nv">$n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>youtube-dl</title><link>https://blog.simbafs.cc/p/youtube-dl/</link><pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/youtube-dl/</guid><description>&lt;p>最近在下載 youtube 音樂，每次下載都要把檔案重新改名，很麻煩。所以就想要寫一個 shell script 來幫我解決。
+首先改名字我相信 youtube-dl 一定有提供這個選項，於是開始查文件。
+看到 &lt;code>-o&lt;/code> ，接下來講遇到的坑&lt;/p>
+&lt;h2 id="-o-坑">&lt;code>-o&lt;/code> 坑&lt;/h2>
+&lt;p>&lt;code>-o&lt;/code> 後面接的是一個 template string ，不是檔名，而且就算指定副檔名是 .mp3 了還是要寫成 &lt;code>%(ext)s&lt;/code>&lt;/p></description></item><item><title>server-tool</title><link>https://blog.simbafs.cc/p/server-tool/</link><pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/server-tool/</guid><description>&lt;h1 id="用-bash-寫-log-分析工具">用 bash 寫 log 分析工具&lt;/h1>
+&lt;p>因為我們的 server 不知道是為什麼一直受到 DDoS 攻擊&lt;br>
+我想知道是什麼時段容易受到攻擊和每次多久、來自那個 ip&lt;br>
+於是我花了一點時間寫了幾個簡單的 script&lt;/p></description></item><item><title>ddos</title><link>https://blog.simbafs.cc/p/ddos/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ddos/</guid><description>&lt;h1 id="伺服器被-ddos-惹">伺服器被 DDoS 惹&lt;/h1>
+&lt;p>今天早上把社團的 reverse proxy server 換成 nginx&lt;br>
+下午心血來潮看看 log 檔
+因為沒有寫好的工具&lt;br>
+首先把 log 檔 cp 到我的電腦再來處理&lt;/p></description></item></channel></rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>database on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/database/</link><description>Recent content in database on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/database/index.xml" rel="self" type="application/rss+xml"/><item><title>strapi-quick-start</title><link>https://blog.simbafs.cc/p/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/strapi-quick-start/</guid><description>&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
+&lt;h1 id="strapi">strapi&lt;/h1>
+&lt;h2 id="什麼是-headless-cms">什麼是 headless CMS&lt;/h2>
+&lt;p>headless CMS 顧名思義是「無頭的 內容管理系統」，意思是沒有前端、只有後端，它就是一個 DB 的 web 界面 + api server。headless CMS 專注於處理 api 的部份，前端的部份一律不關心。這對於前後端分離有很大的幫助，基本上 headless CMS 已經解決了後端 80% 的工作，剩下的就是一些客製化的邏輯，像是登入、特殊的計算等等。&lt;/p>
+&lt;h2 id="strapi-的優點">strapi 的優點&lt;/h2>
+&lt;ol>
+&lt;li>他的界面完善&lt;/li>
+&lt;li>支援多種 DB&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>MySQL &amp;gt;= 5.6&lt;br>
+MariaDB &amp;gt;= 10.1&lt;br>
+PostgreSQL &amp;gt;= 10&lt;br>
+SQLite &amp;gt;= 3&lt;br>
+MongoDB &amp;gt;= 3.6&lt;/p>
+&lt;/blockquote>
+&lt;ol start="3">
+&lt;li>存取權限控制&lt;/li>
+&lt;li>外掛&lt;/li>
+&lt;/ol>
+&lt;h2 id="quickstart">quickstart&lt;/h2>
+&lt;p>以下步驟是補充 &lt;a class="link" href="https://strapi.io/documentation/developer-docs/latest/getting-started/quick-start.html" target="_blank" rel="noopener"
+>官網的 quick start&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>安裝&lt;br>
+&lt;code>$ npx create-strapi-app my-project --quickstart; cd my-project&lt;/code>&lt;br>
+這是候應該會爆出一個關於 &lt;code>knex&lt;/code> 的 dependency 的錯誤，先暫時跳過不理它&lt;/li>
+&lt;li>解決 dependency 的錯誤&lt;br>
+把 &lt;code>package.json&lt;/code> 裡面 &lt;code>dependencies&lt;/code> 裡面 &lt;code>knex&lt;/code> 的版本中 &lt;code>&amp;lt;&lt;/code> 拿掉，然後下 &lt;code>npm update&lt;/code> 再 &lt;code>npm start&lt;/code> 就可以了&lt;/li>
+&lt;li>build&lt;br>
+這時候如果你按照官網的教學 &lt;code>npm start&lt;/code> 一定會出錯，你要先 &lt;code>npm run build&lt;/code> 然後它才不會一直說找不到檔案&lt;/li>
+&lt;li>建立第一個 user&lt;br>
+接著它應該會自動幫你開啟一個頁面，如果沒有的話可以按&lt;a class="link" href="http://localhost:1337/admin" target="_blank" rel="noopener"
+>這個連結&lt;/a>。再來我們要建立使用者，他的密碼要求特別機掰，一定要英數大小寫混合才給過，太短也不行。&lt;/li>
+&lt;li>建立 &lt;code>collection type&lt;/code>&lt;br>
+如果你按照官網的說法，這裡又會讓你很困惑，&lt;code>+ Create new collection type&lt;/code> 按鈕到底它ㄇ的在哪？其實只要在開啟伺服器時用 develop mode 開就可以了，這個重要要的東西它又沒寫了，把你的 server 關掉，下 &lt;code>npm run develop&lt;/code> 然後再去剛剛的頁面，重新整理就可以看到那個調皮的按鈕了。&lt;/li>
+&lt;/ol>
+&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item></channel></rss>

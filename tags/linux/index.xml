@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/linux/</link><description>Recent content in linux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 14 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/cast-phone-screen-to-computer/</guid><description>&lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
+&lt;h1 id="scrcpy">SCRCPY&lt;/h1>
+&lt;p>這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>安裝流程意外的簡單，只需要用 &lt;code>apt&lt;/code> 就可以安裝了，或是你可以自己 build，稍微看了一下 &lt;a class="link" href="https://github.com/Genymobile/scrcpy/blob/master/BUILD.md" target="_blank" rel="noopener"
+>說明&lt;/a> ，看起來不困難，但是既然 &lt;code>apt&lt;/code> 就可以安裝了我們就省一點時間&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ sudo apt install scrcpy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="usb-debug">USB debug&lt;/h2>
+&lt;p>首先無論是有線無線都要先打開手機的 &lt;code>USB debug&lt;/code> 選項，在開發人員選項裡面，詳細步驟請看 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options#enable" target="_blank" rel="noopener"
+>官方文件&lt;/a>。&lt;/p>
+&lt;h2 id="usb">USB&lt;/h2>
+&lt;p>如果不介意有一條線插著~~（順便充電）~~的話，投影畫面非常簡單，只有兩個步驟：&lt;/p>
+&lt;ol>
+&lt;li>插上 USB 並且無論跳出什麼都按「同意」「OK」&lt;/li>
+&lt;li>打開終端機，執行 &lt;code>scrcpy&lt;/code>
+然後就會有一個視窗跳出來，你現在就可以在電腦上滑手機了！&lt;/li>
+&lt;/ol>
+&lt;h2 id="wireless">Wireless&lt;/h2>
+&lt;p>無線的話比較麻煩，首先是必須要可以連線，看是在同一個區域網路或是 VPN、ssh tunnel 都可以。再來是因為連線設定頗麻煩，所以我把相關的步驟寫成一個 &lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
+>script&lt;/a>，下載後給予執行權限就可以執行了（當然要安裝 scrcpy ）。有線的方式一樣很簡單，不用加任何選項就可以連接了。&lt;br>
+如果要啟用無線，只需要加上 &lt;code>-w&lt;/code> 選項（用預設的 ip &lt;code>192.168.43.1&lt;/code>)&lt;br>
+如果 ip 不是預設的話，可以加上 &lt;code>-i IP&lt;/code> 來指定其他的 ip&lt;br>
+加上 &lt;code>-f&lt;/code> 可以開啟全螢幕&lt;/p>
+&lt;h1 id="參連連結">參連連結&lt;/h1>
+&lt;p>&lt;a class="link" href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener"
+>https://github.com/Genymobile/scrcpy&lt;/a>
+&lt;a class="link" href="https://developer.android.com/studio/debug/dev-options" target="_blank" rel="noopener"
+>https://developer.android.com/studio/debug/dev-options&lt;/a>
+&lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
+>https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20&lt;/a>&lt;/p></description></item><item><title>docker login error</title><link>https://blog.simbafs.cc/p/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/docker-login-error/</guid><description>&lt;h1 id="錯誤說明">錯誤說明&lt;/h1>
+&lt;p>昨天我在 terminal 登入 docker 的時候發現不知道為什麼不能登入，我先透過網頁登入確認過密碼沒有問題，也不是打錯字的關係，但還是不能當入。總是會有類似以下的錯誤訊息。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Error saving credentials: error storing credentials - err: exit status 1, out: `exit status 1: gpg: simbafs: 已跳過: 沒有公鑰
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gpg: [stdin]: encryption failed: 沒有公鑰
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Password encryption aborted.`
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="解決方法">解決方法&lt;/h1>
+&lt;p>經過搜尋之後，我按照 &lt;a class="link" href="https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452" target="_blank" rel="noopener"
+>https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452&lt;/a> 的方法成功登入了，但是在這之前要先安裝 &lt;code>gpg&lt;/code> 和 &lt;code>pass&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt install gnupg2 pass
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接下來是我用的指令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt install gnupg2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget https://github.com/docker/docker-credential-helpers/releases/download/v0.6.3/docker-credential-pass-v0.6.3-amd64.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tar xvf docker-credential-pass-v0.6.3-amd64.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod &lt;span class="m">755&lt;/span> docker-credential-pass
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo mv docker-credential-pass /usr/bin/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ass insert docker-credential-helpers/docker-pass-initialized-check
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pass insert docker-credential-helpers/docker-pass-initialized-check
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pass show docker-credential-helpers/docker-pass-initialized-check
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-credential-pass list
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker login
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="參考連結">參考連結&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452" target="_blank" rel="noopener"
+>https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/50151833/cannot-login-to-docker-account/52881198#52881198" target="_blank" rel="noopener"
+>https://stackoverflow.com/questions/50151833/cannot-login-to-docker-account/52881198#52881198&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gist.github.com/dataday/3c267be29e32573829c4781c99ea3395" target="_blank" rel="noopener"
+>https://gist.github.com/dataday/3c267be29e32573829c4781c99ea3395&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>connect to ethernet in docker container</title><link>https://blog.simbafs.cc/p/connect-to-ethernet-in-docker-container/</link><pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/connect-to-ethernet-in-docker-container/</guid><description>&lt;h1 id="如何在-docker-container-裡連接-ethernet">如何在 docker container 裡連接 ethernet&lt;/h1>
+&lt;p>今天突然有個需求是在一個已經開啟的 container 弄東西，需要網路，但是不知道為什麼一直不上，後來發現是 docker 沒有設定 DNS 的問題，只要在外面輸入兩行指令就可以了&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">DOCKER_OPTS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;--dns 8.8.8.8&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl restart docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然後重新啟動 docker&lt;/p></description></item><item><title>docker commit</title><link>https://blog.simbafs.cc/p/docker-commit/</link><pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/docker-commit/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;p>上次提到可以用 Dockerfile 建立 docker image，但我們還有令一個方法可以建立 docker image，那就是 &lt;code>docker commit&lt;/code> 指令&lt;/p>
+&lt;h2 id="和-dockerfile-差別">和 Dockerfile 差別&lt;/h2>
+&lt;p>&lt;code>docker commit&lt;/code> 有點像是手動版的 Dockerfile，在用 Dockerfile 建構 docker image 的時候，docker build 的工作就像是自動根據 Dockerfile 操作 &lt;code>docker commit&lt;/code>。
+Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程式碼，要將他包成 Docker 就很適合用 Dockerfile 自動化操作，因為程式碼會改變，但是包裝的流程基本上都是一樣的。
+&lt;code>docker commit&lt;/code> 適合用在建構環境，因為會有比較麻煩的操作，如果寫成 Dockerfile 會比較麻煩，當然如果可以的話還是寫成 Dockerfile 會比較好，因為更新的時候會比較方便。
+在建構 image 的時候要用哪個方法就看個人取捨了。&lt;/p>
+&lt;h2 id="docker-commit-指令">&lt;code>docker commit&lt;/code> 指令&lt;/h2>
+&lt;p>&lt;code>docker commit&lt;/code> 可以把運行中的 comtainer 轉成 images，有點類似令存新檔的概念。先來看看參數吧！&lt;/p>
+&lt;h3 id="參數">參數&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ docker commit --help
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Usage: docker commit &lt;span class="o">[&lt;/span>OPTIONS&lt;span class="o">]&lt;/span> CONTAINER &lt;span class="o">[&lt;/span>REPOSITORY&lt;span class="o">[&lt;/span>:TAG&lt;span class="o">]]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Create a new image from a container&lt;span class="err">&amp;#39;&lt;/span>s changes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Options:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -a, --author string Author &lt;span class="o">(&lt;/span>e.g., &lt;span class="s2">&amp;#34;John Hannibal Smith &amp;lt;hannibal@a-team.com&amp;gt;&amp;#34;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -c, --change list Apply Dockerfile instruction to the created image
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -m, --message string Commit message
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -p, --pause Pause container during commit &lt;span class="o">(&lt;/span>default &lt;span class="nb">true&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">選項&lt;/th>
+&lt;th style="text-align:left">說明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">-a&lt;/td>
+&lt;td style="text-align:left">作者的名字&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">-c&lt;/td>
+&lt;td style="text-align:left">我還沒研究出來有什麼用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">-m&lt;/td>
+&lt;td style="text-align:left">訊息&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">-p&lt;/td>
+&lt;td style="text-align:left">建構時停容器&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>docker 基礎指令</title><link>https://blog.simbafs.cc/p/docker-%E5%9F%BA%E7%A4%8E%E6%8C%87%E4%BB%A4/</link><pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/docker-%E5%9F%BA%E7%A4%8E%E6%8C%87%E4%BB%A4/</guid><description>&lt;h1 id="install">Install&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt install docker docker.io docker-compose
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="what-is-docker">What is docker&lt;/h1>
+&lt;p>Docker 是一個容器化的技術，基本上使用的時候可以把他當成虛擬機，雖然他們的使用的技術完全不一樣。對新手來說，在 Docker 裡面有四個重要的名詞：dockerfile, docker image, docker container, docker-compose。&lt;/p>
+&lt;ol>
+&lt;li>dockerfile&lt;br>
+純文字檔，定義建立 docker image 的步驟，有點像是一個 bash shell。通常命名成 &lt;code>Dockerfile&lt;/code> ，在 build 的時候會預設用這個，也可以用 &lt;code>-f&lt;/code> 來指定其他的檔案。&lt;/li>
+&lt;li>docker image&lt;br>
+這是透過 &lt;code>docker build&lt;/code> 編譯出來的東西。可以想成 docker container 的藍圖，在 &lt;code>docker pull&lt;/code> 的時候也是下載 docker image 而不是 dockerfile。基本上 image 裡面已經包括了編譯好的執行檔和基本的環境設定，所以在 docker 外面是不用做他設定的，這也是 docker 的魅力所在。&lt;/li>
+&lt;li>docker container&lt;br>
+每個 docker image 可以產生很多個 container，也就是執行中的程式。在這裡你已經可以用 docker 來建立各種服務了。這裡也可以想像成虛擬機，用 &lt;code>docker exec -it container_name bash&lt;/code> 可以進到 container 裡面(如果裡面有 bash 的話)&lt;/li>
+&lt;li>docker-compose&lt;br>
+一個服務不是一個 container 就可以架起來的，通常需要好幾個 container。這時候如果透過指令啟動也許會有忘記啟動和設定複雜的問題，所以有了這個工具。他透過 yml 設定來啟動服務。值得注意的是在同一個 &lt;code>docker-compose.yml&lt;/code> 啟動的 container 會在同一個網路內而和外面隔開，所以如果是 containers 之間的通訊不用把 port 暴露出來，只有開給外面的要 expose。&lt;/li>
+&lt;/ol></description></item><item><title>文章更新時間錯亂問題</title><link>https://blog.simbafs.cc/p/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;h1 id="問題">問題&lt;/h1>
+&lt;p>在設定完 GitHub Action 之後，我發現我的文章的更新時間都錯了，會全部變成當天日期。但是本地生成的就沒有這個問題，經過一番盤查和猜測後，我發現問題是因為 git 不會把 modified date 紀錄，因為每台電腦的時區都是不一樣的，紀錄起來沒有意義。但是我們需要這項 meta data，所以我們就要自己想法紀錄&lt;/p>
+&lt;h1 id="解法-v10">解法 v1.0&lt;/h1>
+&lt;p>首先，因為每一篇文章 hexo 都會紀錄建立時間，所以我們可以直接把他抓出來，然後把檔案的更新時間設成這個時間就可以啦！&lt;/p>
+&lt;h2 id="更改檔案的-modified-time">更改檔案的 modified time&lt;/h2>
+&lt;p>這個功能只要用我們最熟悉的 &lt;code>touch&lt;/code> 就可以做到了。一般我們使用 &lt;code>touch&lt;/code> 的時候會把 modified time 改成當下時間，那要改任意時間只要加上 &lt;code>-t&lt;/code> 選項就可以啦&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">-t STAMP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> use [[CC]YY]MMDDhhmm[.ss] instead of current time
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>假設我們有個檔案 &lt;code>tmp&lt;/code> ，我想把他的日期改成 &lt;code>1999/3/23 12:32:33&lt;/code> ，那我可以這樣下指令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ted timeouch -t&amp;#39;19993231232.33&amp;#39; tmp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="抓出檔名日期">抓出檔名、日期&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># git create time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">grep -rnw source/_posts -e &lt;span class="s1">&amp;#39;date&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>output:（這裡的 &lt;code>date:&lt;/code> 後面我多加了一個空白，原因後面會說）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">source/_posts/hexo-installation.md:3:date: 2020-02-10 17:26:45
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/blessed.md:3:date: 2020-02-17 23:24:10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/bash.md:3:date: 2020-02-16 22:15:10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/hexo-cli-extras.md:3:date: 2020-02-11 21:26:30
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/remind-daniel.md:3:date: 2020-03-15 21:35:25
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/jquery.md:3:date: 2020-03-15 11:38:47
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/nginx-reverse-proxy-setup.md:3:date: 2020-02-13 10:34:58
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/nginx-ui.md:3:date: 2020-06-23 22:50:29
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/reverse-ssh.md:3:date: 2020-02-23 21:24:34
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/webpack-react.md:3:date: 2020-06-28 22:39:57
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/mxlinux-change-workspace.md:3:date: 2020-05-08 17:59:22
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="分離時間檔名">分離時間，檔名&lt;/h2>
+&lt;p>觀察他的輸出&lt;br>
+檔名的部份是在以冒號分隔的第一欄&lt;br>
+日期/時間是在以空格分隔的第二、三欄
+那我們就可以根據這個把他們分離出來&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># get name, time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">grep -rnw source/_posts -e &lt;span class="s1">&amp;#39;date&amp;#39;&lt;/span> &amp;gt; t
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cut -d: -f1 t &amp;gt; name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cut -d&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span> -f2,3 t &amp;gt; &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>output:（節錄，這邊沒有對的很好）
+name:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">source/_posts/sqlite.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/ssh-tunnel.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/unix-socket.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/webpack-react.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/youtube-dl.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/加入-google-search-和-sitemap.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>time:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">2020-02-24 22:14:36
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-02-23 14:30:22
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-06-28 22:39:57
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-03-04 22:48:20
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-08-19 22:37:52
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-08-20 23:33:13
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="處理日期的格式">處理日期的格式&lt;/h2>
+&lt;p>在 &lt;code>更改檔案的 modified time&lt;/code> 提到的日期格式和我們抓出來的不太一樣，所以我們需要做一些處理&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cut -d&amp;#39; &amp;#39; -f2,3 t | sed &amp;#39;s/[- ]//g&amp;#39; | sed &amp;#39;s/://&amp;#39; | sed &amp;#39;s/:/./&amp;#39; &amp;gt; time
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這樣就可以成功轉換日期格式了&lt;/p>
+&lt;h2 id="時間檔">時間檔&lt;/h2>
+&lt;p>接下來把 &lt;code>name&lt;/code>、&lt;code>time&lt;/code> 合起來就變成時間擋了，這裡有一點要注意，因為我們恢復的時候是用 for 迴圈，換行和空白都會被當成切斷符號，所以檔名和時間中間的間隔符號我們選用冒號 &lt;code>:&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">paste -d: name time &amp;gt; source/_posts/time
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="清垃圾">清垃圾&lt;/h2>
+&lt;p>最後記得把剛才產生出來但是用不到的檔案清掉&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rm t name time
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="完整程式碼">完整程式碼&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># updateDate.sh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#!/bin/bash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[[&lt;/span> -z &lt;span class="nv">$1&lt;/span> &lt;span class="o">]]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">dir&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;source/_posts&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">dir&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">grep &lt;span class="s1">&amp;#39;date: [0-9]{4}&amp;#39;&lt;/span> &lt;span class="nv">$dir&lt;/span>/*.md &amp;gt; t
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cut -d: -f1 t &amp;gt; name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cut -d&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span> -f2,3 t &lt;span class="p">|&lt;/span> sed &lt;span class="s1">&amp;#39;s/[- ]//g&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> sed &lt;span class="s1">&amp;#39;s/://&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> sed &lt;span class="s1">&amp;#39;s/:/./&amp;#39;&lt;/span> &amp;gt; &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">paste -d: name &lt;span class="nb">time&lt;/span> &amp;gt; &lt;span class="nv">$dir&lt;/span>/time
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> i in &lt;span class="k">$(&lt;/span>cat &lt;span class="nv">$dir&lt;/span>/time&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">n&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$i&lt;/span> &lt;span class="p">|&lt;/span> cut -d: -f1&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">d&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$i&lt;/span> &lt;span class="p">|&lt;/span> cut -d: -f2&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> touch -t&lt;span class="nv">$d&lt;/span> &lt;span class="nv">$n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm t name &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="備註">備註&lt;/h2>
+&lt;p>剛剛有說到在這份教學中的 &lt;code>date: &lt;/code> 都多加一個空白，原因是因為 grep 在抓時候不會只抓第一個，為了避免抓到錯的所以我故意讓他不匹配，不然再生成時間檔的時候會出錯，所以你們的文章中如果出現會匹配 &lt;code>date: [0-9]{4}&lt;/code> 的字串，記得要做一下手腳&lt;/p>
+&lt;h1 id="解法-v20">解法 v2.0&lt;/h1>
+&lt;p>上一個作法雖然可行，但是有一個缺點，就是他的更新時間都會是建立時間，不會是 modified time，所以解法二誕生了&lt;br>
+其實很簡單，改上面的一小行就好了。首先用 &lt;code>stat&lt;/code> 取出檔案的 modified time&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">stat -c %y source/_posts/*.md &amp;gt; &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">2020-03-04 22:48:20.000000000 +0800
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-08-19 22:37:52.000000000 +0800
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-08-21 22:15:44.366513358 +0800
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-07-04 10:17:39.000000000 +0800
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然後在經過適當的轉換變成我們要的格式就完成啦！&lt;/p>
+&lt;h2 id="完整程式碼-1">完整程式碼&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># storePostTime.sh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#!/bin/bash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[[&lt;/span> -z &lt;span class="nv">$1&lt;/span> &lt;span class="o">]]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">dir&lt;/span>&lt;span class="o">=&lt;/span>source/_posts
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">dir&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ls &lt;span class="nv">$dir&lt;/span>/*.md &amp;gt; name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">stat -c %y &lt;span class="nv">$dir&lt;/span>/*.md &lt;span class="p">|&lt;/span>&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> cut -d&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span> -f1,2 &lt;span class="p">|&lt;/span>&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> sed &lt;span class="s1">&amp;#39;s/[- ]//g&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span>&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> sed &lt;span class="s1">&amp;#39;s/://&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span>&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> sed &lt;span class="s1">&amp;#39;s/:/./&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span>&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> cut -d. -f1,2 &amp;gt; &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">paste -d: name &lt;span class="nb">time&lt;/span> &amp;gt; t
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mv t &lt;span class="nv">$dir&lt;/span>/time
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm name &lt;span class="nb">time&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># recorverDate.sh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#!/bin/bash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[[&lt;/span> -z &lt;span class="nv">$1&lt;/span> &lt;span class="o">]]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">file&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;source/_posts/time&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">file&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> i in &lt;span class="k">$(&lt;/span>cat &lt;span class="nv">$file&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">n&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$i&lt;/span> &lt;span class="p">|&lt;/span> cut -d: -f1&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">d&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$i&lt;/span> &lt;span class="p">|&lt;/span> cut -d: -f2&lt;span class="k">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> touch -t&lt;span class="nv">$d&lt;/span> &lt;span class="nv">$n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>gpg</title><link>https://blog.simbafs.cc/p/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/gpg/</guid><description>&lt;h1 id="sign-git-commit-with-gpg">sign git commit with gpg&lt;/h1>
+&lt;p>我按照他的作法弄完後就是沒辦法 commit
+他說 GPG 無法簽章
+後來我發現是我的 name 填錯（應該啦，我猜的）
+總而言之就重新產生 GPG key 就好了
+name 和 git 設定的一樣&lt;/p>
+&lt;h1 id="常見指令">常見指令&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ gpg --full-gen-key
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ gpg --list-secret-keys
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ gpg --armor --export &amp;lt;secret key&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="刪除金鑰">刪除金鑰&lt;/h1>
+&lt;p>在刪除的時候分成兩步驟，刪除私鑰、刪除公鑰。在刪除之前要先知道要刪除的金鑰的 ID&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gpg --list-keys
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>找到那串很長的文字，那就是 ID，複製起來，他起來也許會像這樣&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">JFDKSA8FEWHE29HFVC92UHFPA93WOHFVDOPA39U2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>再來用兩個指令就可以刪除了，注意一定要先刪私鑰。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gpg --delete-secret-key &amp;lt;ID&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gpg --delete-key &amp;lt;ID&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>isolate</title><link>https://blog.simbafs.cc/p/isolate/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/isolate/</guid><description>&lt;p>我有一個放了很久的計畫，就是自己寫一個 OJ，因為我覺得現在的那個太難用了。
+我很快的建立 repo 但是卻完全沒有進展，我寫了一個 shell script 幫忙編譯執行程式之後我就在也沒有動過他了
+我沒有繼續動工的原因是我不知道如何隔離使用者提交的程式碼
+我想過 docker 可是據說還是不安全
+還有 chroot 但是我不知道有沒有比 docker 安全而且設定好麻煩&lt;/p>
+&lt;p>昨天去考 TOI　入營考（當然沒進）的時候，我終於看到大名鼎鼎的 CMS 了！
+出來之後我發現他是用一個叫 isolate 的程式來做沙箱測試
+而且這好像是 IOI 自己寫的，應該是蠻安全的（吧？）
+今天成功編譯過後把心得寫下來&lt;/p></description></item><item><title>ssh-tunnel</title><link>https://blog.simbafs.cc/p/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-tunnel/</guid><description>&lt;p>昨天架好了 reverse ssh 讓我可以連回學校 server
+今天來研究 ssh tunnel&lt;/p>
+&lt;h1 id="簡介">簡介&lt;/h1>
+&lt;p>ssh tunnel 分正反向
+其實他們的差別只有在方向不一樣
+連語法參數都一樣&lt;/p>
+&lt;h1 id="正向-tunnel">正向 tunnel&lt;/h1>
+&lt;p>正向的 tunnel 參數是 -L
+語法：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ssh -L [bind_address:]port:host:hostport
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -L [bind_address:]port:remote_socket
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -L local_socket:host:hostport
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -L local_socket:remote_socket
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="反向-tunnel">反向 tunnel&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ssh -R [bind_address:]port:host:hostport
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -R [bind_address:]port:local_socket
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -R remote_socket:host:hostport
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -R remote_socket:local_socket
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -R [bind_address:]port
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="心得">心得&lt;/h1>
+&lt;p>看起來好像很難
+但是其實用下面這個就夠了
+正向：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ssh -L &amp;lt;local port&amp;gt;:localhost:&amp;lt;remote port&amp;gt; &amp;lt;user&amp;gt;@&amp;lt;remote&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>反向;&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ssh -R &amp;lt;remote port&amp;gt;:localhost:&amp;lt;local port&amp;gt; &amp;lt;user&amp;gt;@&amp;lt;remote&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>總而言之就是前面的和選項一樣
+如果是 -L 那前面就是 local port
+如果是 -R 那前面就是 remote port&lt;/p>
+&lt;h1 id="參考連結">參考連結&lt;/h1>
+&lt;p>&lt;a class="link" href="https://johnliu55.tw/ssh-tunnel.html" target="_blank" rel="noopener"
+>https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>reverse-ssh</title><link>https://blog.simbafs.cc/p/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/reverse-ssh/</guid><description>&lt;p>一直以來連線回社辦的電腦都要走 webtty 再開 tmate
+但是今天發現了一個新的方法可以透過反向的 ssh 連回社辦&lt;/p>
+&lt;h2 id="reverse-ssh">reverse ssh&lt;/h2>
+&lt;p>在社辦電腦&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ ssh -NfR 2222:localhost:22 simba@simba-vps
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這可以建立一個連線
+這時候到 simba-vps&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ ssh server@localhost -p 2222
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>就可以連線回社辦伺服器了&lt;/p>
+&lt;h2 id="autossh">autossh&lt;/h2>
+&lt;p>但是這樣做 ssh 連線有可能會超時然後斷掉
+這時候可以透過 autossh 來幫我們自動建立連線
+在社辦電腦&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ apt install autossh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ autossh -Mf 2222 -NR 1111:localhost:22 simba@simba-vps -p 22
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這樣就可以在 vps 上&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ ssh server@localhost -p 1111
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>來連回社辦啦！
+最後可以把這堆在 vps 上再做一次就可以在 internet 連回社辦伺服器了&lt;/p>
+&lt;h2 id="參考網址">參考網址&lt;/h2>
+&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/15983795/how-do-i-establish-a-bidirectional-ssh-tunnel" target="_blank" rel="noopener"
+>https://stackoverflow.com/questions/15983795/how-do-i-establish-a-bidirectional-ssh-tunnel&lt;/a>&lt;br>
+&lt;a class="link" href="https://ez3c.tw/2043" target="_blank" rel="noopener"
+>https://ez3c.tw/2043&lt;/a>&lt;br>
+&lt;a class="link" href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?viewmode=compact&amp;amp;topic_id=17538&amp;amp;forum=7" target="_blank" rel="noopener"
+>https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?viewmode=compact&amp;topic_id=17538&amp;forum=7&lt;/a>&lt;br>
+&lt;a class="link" href="http://blog.adahsu.net/2007/11/ssh-reverse-tunnel.html" target="_blank" rel="noopener"
+>http://blog.adahsu.net/2007/11/ssh-reverse-tunnel.html&lt;/a>&lt;br>
+&lt;a class="link" href="https://codertw.com/%E4%BC%BA%E6%9C%8D%E5%99%A8/377688/" target="_blank" rel="noopener"
+>https://codertw.com/%E4%BC%BA%E6%9C%8D%E5%99%A8/377688/&lt;/a>&lt;br>
+這篇講 ssh tunnel 最清楚&lt;br>
+&lt;a class="link" href="https://yu-jack.github.io/2019/01/08/ssh-tunnel/" target="_blank" rel="noopener"
+>https://yu-jack.github.io/2019/01/08/ssh-tunnel/&lt;/a>&lt;/p></description></item></channel></rss>

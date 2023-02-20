@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ssh on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/ssh/</link><description>Recent content in ssh on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/ssh/index.xml" rel="self" type="application/rss+xml"/><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-on-gitea-with-docker/</guid><description>&lt;p>&lt;a class="link" href="https://gitea.io" target="_blank" rel="noopener"
+>Gitea&lt;/a> 是一個開源的 git 伺服器，他的界面幾乎和 &lt;a class="link" href="https://github.com" target="_blank" rel="noopener"
+>GitHub&lt;/a> 一模一樣，但是完全開源而且非常輕，甚至一片樹梅派就可以開伺服器了。Gitea 因為是使用 &lt;a class="link" href="https://golang.org/" target="_blank" rel="noopener"
+>Golang&lt;/a> 編寫的，所以提供各種平台的執行檔。我選擇透過 docker 裝 Gitea 伺服器，但是這樣有一個問題，gitea 伺服器開在 container 內，沒辦法使用標準的 22 port，所以 git clone 就必須加上一個醜醜的數字，像是這樣&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">git clone git@domain:10022:user/repo.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這個問題 Gitea 官方已經有提供&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
+>完整的教學&lt;/a>了，但是是英文版，我這篇文章是我讀完消化過後的中文版教學&lt;/p>
+&lt;h1 id="容器-ssh-穿透">容器 ssh 穿透&lt;/h1>
+&lt;p>因為 Gitea 的 ssh 是跑在容器裡，我沒辦法讓他和 host 共用 22 port，所以要透過 host 「轉發」連線。&lt;/p>
+&lt;h2 id="1-建立-git-使用者">1. 建立 git 使用者&lt;/h2>
+&lt;p>先在 host 建立一個名叫 git 的使用者，因為這個帳號會被對應到容器內的 git 使用者，所以要有一樣的 UID, GID&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo adduser git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">grep git /etc/passwd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>記好 git 的 UID 和 GID&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">git:x:1002:1002:,,,:/home/git:/bin/bash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">------^^^^ ^^^^
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">------GID UID
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="2-docker-compose">2. docker-compose&lt;/h2>
+&lt;p>以下是我的 docker-compose，可以根據不同的需求再修改（像是加入 db）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">version: &amp;#34;3&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">services:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> gitea:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> container_name: gitea
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> image: gitea/gitea:latest
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ports:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#34;10022:22&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#34;10080:3000&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> volumes:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#34;/home/simba/website/gitea/data:/data&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#34;/home/git/.ssh:/data/git/.ssh&amp;#34; # ssh 連線需要，這樣使用者新增 ssh key 時才會同步到 host 上，使用者才連的進來
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> restart: &amp;#39;unless-stopped&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> environment:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - USER_UID=1002
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - USER_GID=1002
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>UID 和 GID 記得換成你的，我的和你的不一定一樣&lt;/p>
+&lt;h2 id="3-幫-git-帳號產生-ssh-key">3. 幫 git 帳號產生 ssh key&lt;/h2>
+&lt;p>要有 ssh key 才能轉發（host 上的 git 要連線到 container 內）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo -u git ssh-keygen -t rsa -b &lt;span class="m">4096&lt;/span> -C &lt;span class="s2">&amp;#34;Gitea Host Key&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="4-ssh-轉發">4. ssh 轉發&lt;/h2>
+&lt;p>這時候如果你開啟服務，為一個使用者新增 ssh key 你會發現在 host 上 &lt;code>~git/.ssh/authorized_keys&lt;/code> 會多出一行，長的像這樣&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">command=&amp;#34;/app/gitea/gitea --config=/data/gitea/conf/app.ini serv key-1&amp;#34;,no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty ssh-rsa AAAA......(ssh key)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這行是 Gitea 新增的，功能是讓新的 ssh 連線(user -&amp;gt; host)進來時執行 &lt;code>/app/gitea/gitea serv&lt;/code> 這個指令，但是我們希望他可以執行 ssh 轉發，所以我們可以在 host 的 &lt;code>/app/gitea/&lt;/code> 下新增一個 &lt;code>gitea&lt;/code> 執行檔幫我們做 ssh 轉發（這裡不會有 gitea 執行檔，因為是在 host，gitea 本體在 container 內）&lt;br>
+首先新增目錄 &lt;code>sudo mkdir -p /app/gitea&lt;/code>&lt;br>
+再來建立檔案 &lt;code>/app/gitea/gitea&lt;/code>，內容如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>ssh -p &lt;span class="m">2222&lt;/span> -o &lt;span class="nv">StrictHostKeyChecking&lt;/span>&lt;span class="o">=&lt;/span>no git@127.0.0.1 &lt;span class="s2">&amp;#34;SSH_ORIGINAL_COMMAND=\&amp;#34;&lt;/span>&lt;span class="nv">$SSH_ORIGINAL_COMMAND&lt;/span>&lt;span class="s2">\&amp;#34; &lt;/span>&lt;span class="nv">$0&lt;/span>&lt;span class="s2"> &lt;/span>&lt;span class="nv">$@&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>不要忘記給他執行權限 &lt;code>sudo chmod 755 /app/gitea/gitea&lt;/code>&lt;/p>
+&lt;h2 id="大功告成">大功告成！&lt;/h2>
+&lt;h1 id="心得">心得&lt;/h1>
+&lt;p>一開始我沒找到官方的教學，一方面是我想自己試試看，二方面是因為官方文件中英文完全不一樣，看英文版才完整，中文只給兩條指令。&lt;/p>
+&lt;h1 id="參考連結">參考連結&lt;/h1>
+&lt;p>&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
+>https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough&lt;/a> &lt;br>
+&lt;a class="link" href="https://asaba.sakuragawa.moe/2018/06/%E6%93%BA%E8%84%AB%E6%8E%A7%E5%88%B6%EF%BC%8C%E7%94%A8-docker-%E8%87%AA%E5%BB%BA-gitea-gogs-%E7%B7%9A%E4%B8%8A%E4%BB%A3%E7%A2%BC%E5%8D%94%E4%BD%9C%E5%B9%B3%E8%87%BA/" target="_blank" rel="noopener"
+>https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>ssh-tunnel</title><link>https://blog.simbafs.cc/p/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-tunnel/</guid><description>&lt;p>昨天架好了 reverse ssh 讓我可以連回學校 server
+今天來研究 ssh tunnel&lt;/p>
+&lt;h1 id="簡介">簡介&lt;/h1>
+&lt;p>ssh tunnel 分正反向
+其實他們的差別只有在方向不一樣
+連語法參數都一樣&lt;/p>
+&lt;h1 id="正向-tunnel">正向 tunnel&lt;/h1>
+&lt;p>正向的 tunnel 參數是 -L
+語法：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ssh -L [bind_address:]port:host:hostport
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -L [bind_address:]port:remote_socket
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -L local_socket:host:hostport
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -L local_socket:remote_socket
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="反向-tunnel">反向 tunnel&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ssh -R [bind_address:]port:host:hostport
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -R [bind_address:]port:local_socket
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -R remote_socket:host:hostport
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -R remote_socket:local_socket
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -R [bind_address:]port
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="心得">心得&lt;/h1>
+&lt;p>看起來好像很難
+但是其實用下面這個就夠了
+正向：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ssh -L &amp;lt;local port&amp;gt;:localhost:&amp;lt;remote port&amp;gt; &amp;lt;user&amp;gt;@&amp;lt;remote&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>反向;&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ssh -R &amp;lt;remote port&amp;gt;:localhost:&amp;lt;local port&amp;gt; &amp;lt;user&amp;gt;@&amp;lt;remote&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>總而言之就是前面的和選項一樣
+如果是 -L 那前面就是 local port
+如果是 -R 那前面就是 remote port&lt;/p>
+&lt;h1 id="參考連結">參考連結&lt;/h1>
+&lt;p>&lt;a class="link" href="https://johnliu55.tw/ssh-tunnel.html" target="_blank" rel="noopener"
+>https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>reverse-ssh</title><link>https://blog.simbafs.cc/p/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/reverse-ssh/</guid><description>&lt;p>一直以來連線回社辦的電腦都要走 webtty 再開 tmate
+但是今天發現了一個新的方法可以透過反向的 ssh 連回社辦&lt;/p>
+&lt;h2 id="reverse-ssh">reverse ssh&lt;/h2>
+&lt;p>在社辦電腦&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ ssh -NfR 2222:localhost:22 simba@simba-vps
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這可以建立一個連線
+這時候到 simba-vps&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ ssh server@localhost -p 2222
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>就可以連線回社辦伺服器了&lt;/p>
+&lt;h2 id="autossh">autossh&lt;/h2>
+&lt;p>但是這樣做 ssh 連線有可能會超時然後斷掉
+這時候可以透過 autossh 來幫我們自動建立連線
+在社辦電腦&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ apt install autossh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ autossh -Mf 2222 -NR 1111:localhost:22 simba@simba-vps -p 22
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這樣就可以在 vps 上&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ ssh server@localhost -p 1111
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>來連回社辦啦！
+最後可以把這堆在 vps 上再做一次就可以在 internet 連回社辦伺服器了&lt;/p>
+&lt;h2 id="參考網址">參考網址&lt;/h2>
+&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/15983795/how-do-i-establish-a-bidirectional-ssh-tunnel" target="_blank" rel="noopener"
+>https://stackoverflow.com/questions/15983795/how-do-i-establish-a-bidirectional-ssh-tunnel&lt;/a>&lt;br>
+&lt;a class="link" href="https://ez3c.tw/2043" target="_blank" rel="noopener"
+>https://ez3c.tw/2043&lt;/a>&lt;br>
+&lt;a class="link" href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?viewmode=compact&amp;amp;topic_id=17538&amp;amp;forum=7" target="_blank" rel="noopener"
+>https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?viewmode=compact&amp;topic_id=17538&amp;forum=7&lt;/a>&lt;br>
+&lt;a class="link" href="http://blog.adahsu.net/2007/11/ssh-reverse-tunnel.html" target="_blank" rel="noopener"
+>http://blog.adahsu.net/2007/11/ssh-reverse-tunnel.html&lt;/a>&lt;br>
+&lt;a class="link" href="https://codertw.com/%E4%BC%BA%E6%9C%8D%E5%99%A8/377688/" target="_blank" rel="noopener"
+>https://codertw.com/%E4%BC%BA%E6%9C%8D%E5%99%A8/377688/&lt;/a>&lt;br>
+這篇講 ssh tunnel 最清楚&lt;br>
+&lt;a class="link" href="https://yu-jack.github.io/2019/01/08/ssh-tunnel/" target="_blank" rel="noopener"
+>https://yu-jack.github.io/2019/01/08/ssh-tunnel/&lt;/a>&lt;/p></description></item></channel></rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>firefox on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/firefox/</link><description>Recent content in firefox on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 08 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/firefox/index.xml" rel="self" type="application/rss+xml"/><item><title>firefox touch screen scroll</title><link>https://blog.simbafs.cc/p/firefox-touch-screen-scroll/</link><pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/firefox-touch-screen-scroll/</guid><description>&lt;p>再換了觸控筆電後，在 firefox 一直有個問題：觸控往下滑會被當成選取，要卷動一定要用右邊的 scroll bar&lt;/p>
+&lt;h1 id="解決方案">解決方案&lt;/h1>
+&lt;p>按照 &lt;a class="link" href="https://askubuntu.com/questions/853910/ubuntu-16-and-touchscreen-scrolling-in-firefox" target="_blank" rel="noopener"
+>https://askubuntu.com/questions/853910/ubuntu-16-and-touchscreen-scrolling-in-firefox&lt;/a> 的最佳解法，真的加上 &lt;code>MOZ_USE_XINPUT2=1&lt;/code> 的環境變數就可以了。&lt;br>
+另外在設定 &lt;code>~/.local/share/applications/firefox.desktop&lt;/code> 的時候要注意有不只一個 Exec，改完如果沒有生效可以重開機看看。&lt;/p></description></item><item><title>firefox-event-listener-breakpoint</title><link>https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/</guid><description>&lt;h1 id="問題">問題&lt;/h1>
+&lt;p>最近在用 jquery 但是不知道為什麼每次 debugger 都會跳出一個通知
+&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/1.png"
+loading="lazy"
+alt="1.png"
+>
+很煩&lt;/p>
+&lt;h1 id="解決">解決&lt;/h1>
+&lt;p>後來尋線發現原來是 firefox 好心的 debugger 在 DOM 發生改變的時候通知我
+在 &lt;!-- raw HTML omitted --> 裡面 Debugger 頁籤左下有個拉頁叫「Event Listener Breakpoints」
+把裡面的東西都點掉就好了
+就是那個 DOM Mutation
+&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/2.png"
+loading="lazy"
+alt="2.png"
+>&lt;/p>
+&lt;h1 id="心得">心得&lt;/h1>
+&lt;p>我原本還以為是 jquery 的問題
+原來是好心的 firefox 啊&lt;/p></description></item></channel></rss>

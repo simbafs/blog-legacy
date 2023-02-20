@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ddos on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/ddos/</link><description>Recent content in ddos on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 13 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/ddos/index.xml" rel="self" type="application/rss+xml"/><item><title>ddos</title><link>https://blog.simbafs.cc/p/ddos/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ddos/</guid><description>&lt;h1 id="伺服器被-ddos-惹">伺服器被 DDoS 惹&lt;/h1>
+&lt;p>今天早上把社團的 reverse proxy server 換成 nginx&lt;br>
+下午心血來潮看看 log 檔
+因為沒有寫好的工具&lt;br>
+首先把 log 檔 cp 到我的電腦再來處理&lt;/p></description></item></channel></rss>

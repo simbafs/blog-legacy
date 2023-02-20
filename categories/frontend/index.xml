@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>frontend on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/frontend/</link><description>Recent content in frontend on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/frontend/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML form button</title><link>https://blog.simbafs.cc/p/html-form-button/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/html-form-button/</guid><description>&lt;p>HTML 的 form 裡的按鈕預設是 submit
+所以要加上 &lt;code>type=&amp;quot;button&amp;quot;&lt;/code> 它才不會太心急送出表單&lt;/p>
+&lt;p>按鈕的 css 「按下」 selector 好像可已用 &lt;code>:active&lt;/code>、&lt;code>:focus&lt;/code>
+但是我兩個失敗了&lt;/p></description></item><item><title>meta-tag</title><link>https://blog.simbafs.cc/p/meta-tag/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/meta-tag/</guid><description>&lt;p>今天為了幫 &lt;a class="link" href="https://daniel.simba.nctu.me" target="_blank" rel="noopener"
+>Let&amp;rsquo;s Remind Daniel&lt;/a> 做 SEO
+在 &lt;a class="link" href="https://free.com.tw/mega-tags/" target="_blank" rel="noopener"
+>免費資源網路社群&lt;/a> 找到了一個工具可以直接生成
+還有一個可以測試的工具&lt;/p>
+&lt;h1 id="連結">連結&lt;/h1>
+&lt;p>&lt;a class="link" href="https://megatags.co/" target="_blank" rel="noopener"
+>生成&lt;/a>
+&lt;a class="link" href="https://www.heymeta.com/" target="_blank" rel="noopener"
+>測試&lt;/a>&lt;/p></description></item><item><title>firefox-event-listener-breakpoint</title><link>https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/</guid><description>&lt;h1 id="問題">問題&lt;/h1>
+&lt;p>最近在用 jquery 但是不知道為什麼每次 debugger 都會跳出一個通知
+&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/1.png"
+loading="lazy"
+alt="1.png"
+>
+很煩&lt;/p>
+&lt;h1 id="解決">解決&lt;/h1>
+&lt;p>後來尋線發現原來是 firefox 好心的 debugger 在 DOM 發生改變的時候通知我
+在 &lt;!-- raw HTML omitted --> 裡面 Debugger 頁籤左下有個拉頁叫「Event Listener Breakpoints」
+把裡面的東西都點掉就好了
+就是那個 DOM Mutation
+&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/2.png"
+loading="lazy"
+alt="2.png"
+>&lt;/p>
+&lt;h1 id="心得">心得&lt;/h1>
+&lt;p>我原本還以為是 jquery 的問題
+原來是好心的 firefox 啊&lt;/p></description></item><item><title>jquery</title><link>https://blog.simbafs.cc/p/jquery/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/jquery/</guid><description>&lt;p>今天寫 jquery 遇到了一些坑&lt;/p>
+&lt;h1 id="1-submit">1. submit&lt;/h1>
+&lt;p>&lt;code>.submit()&lt;/code> 是要加在 &lt;code>form&lt;/code> 上而不是 &lt;code>submit button&lt;/code> 上&lt;/p>
+&lt;h1 id="2-this">2. this&lt;/h1>
+&lt;p>在 jquery 裡有時後會用到 handler
+正常情況下可以用 arrow function
+但是如果用到 &lt;code>this&lt;/code> 就不能用 arrow function 了
+（這不只是 jquery, JS 都是這樣）&lt;/p></description></item></channel></rss>

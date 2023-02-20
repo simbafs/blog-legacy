@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>logitech on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/logitech/</link><description>Recent content in logitech on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/logitech/index.xml" rel="self" type="application/rss+xml"/><item><title>logitech-mouse-permission-error</title><link>https://blog.simbafs.cc/p/logitech-mouse-permission-error/</link><pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/logitech-mouse-permission-error/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;p>我的無線華和滑鼠和鍵盤都是羅技的，在我的 Ubuntu 筆電上一直都沒有問題。有一次我想改我的鍵盤被配置，但是因為 logitech unifying 沒有 Linux 版，所以我另一個軟體叫 solaar，功能是差不多的。
+當我裝好軟體以後，鍵盤滑鼠操作都沒問題，只有插上滑鼠的接收器以後都對跳出一個 permission error 的錯誤視窗。雖然在 solaar 裡面就無法看到我的滑鼠就是了，但是完全不影響使用，所以我就擺在那邊放它爛，反正就是多按一個叉叉。&lt;/p>
+&lt;h1 id="嘗試自己解">嘗試自己解&lt;/h1>
+&lt;p>今天閒閒沒事做剛好來看看這個怎麼解。我一開始想說，把他的 permission 改成和鍵盤一樣就啦！於是我進行了下面的操作&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ ls /dev/hidraw*
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>拔下鍵盤的接收器，發現他是 &lt;code>/dev/hidraw4&lt;/code> 和 &lt;code>/dev/hidraw5&lt;/code>，再插上去。拔下滑鼠接收器，發現他是 &lt;code>/dev/hidraw2&lt;/code>。&lt;br>
+並找到鍵盤的權限是 &lt;code>rw-rw----&lt;/code>，滑鼠是 &lt;code>rw-------&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ chmod &lt;span class="m">660&lt;/span> /dev/hidraw2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>拔下滑鼠接收器，插上。&lt;br>
+沒用。&lt;/p>
+&lt;p>我猜這個方法會失敗應該是因為他在我改之前就已經先跳錯誤了，等我改完它右沒有偵測，我就得把它拔下來在插上去，我又會看到錯誤訊息&amp;hellip;&amp;hellip; (looping&lt;br>
+於是我上網找答案&lt;/p>
+&lt;h1 id="網路上的解">網路上的解&lt;/h1>
+&lt;p>我 Google &lt;code>ubuntu logitech permission error&lt;/code> 第一個就是我要的！&lt;/p></description></item></channel></rss>

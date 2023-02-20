@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>software on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/software/</link><description>Recent content in software on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 14 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/software/index.xml" rel="self" type="application/rss+xml"/><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/cast-phone-screen-to-computer/</guid><description>&lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
+&lt;h1 id="scrcpy">SCRCPY&lt;/h1>
+&lt;p>這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>安裝流程意外的簡單，只需要用 &lt;code>apt&lt;/code> 就可以安裝了，或是你可以自己 build，稍微看了一下 &lt;a class="link" href="https://github.com/Genymobile/scrcpy/blob/master/BUILD.md" target="_blank" rel="noopener"
+>說明&lt;/a> ，看起來不困難，但是既然 &lt;code>apt&lt;/code> 就可以安裝了我們就省一點時間&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ sudo apt install scrcpy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="usb-debug">USB debug&lt;/h2>
+&lt;p>首先無論是有線無線都要先打開手機的 &lt;code>USB debug&lt;/code> 選項，在開發人員選項裡面，詳細步驟請看 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options#enable" target="_blank" rel="noopener"
+>官方文件&lt;/a>。&lt;/p>
+&lt;h2 id="usb">USB&lt;/h2>
+&lt;p>如果不介意有一條線插著~~（順便充電）~~的話，投影畫面非常簡單，只有兩個步驟：&lt;/p>
+&lt;ol>
+&lt;li>插上 USB 並且無論跳出什麼都按「同意」「OK」&lt;/li>
+&lt;li>打開終端機，執行 &lt;code>scrcpy&lt;/code>
+然後就會有一個視窗跳出來，你現在就可以在電腦上滑手機了！&lt;/li>
+&lt;/ol>
+&lt;h2 id="wireless">Wireless&lt;/h2>
+&lt;p>無線的話比較麻煩，首先是必須要可以連線，看是在同一個區域網路或是 VPN、ssh tunnel 都可以。再來是因為連線設定頗麻煩，所以我把相關的步驟寫成一個 &lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
+>script&lt;/a>，下載後給予執行權限就可以執行了（當然要安裝 scrcpy ）。有線的方式一樣很簡單，不用加任何選項就可以連接了。&lt;br>
+如果要啟用無線，只需要加上 &lt;code>-w&lt;/code> 選項（用預設的 ip &lt;code>192.168.43.1&lt;/code>)&lt;br>
+如果 ip 不是預設的話，可以加上 &lt;code>-i IP&lt;/code> 來指定其他的 ip&lt;br>
+加上 &lt;code>-f&lt;/code> 可以開啟全螢幕&lt;/p>
+&lt;h1 id="參連連結">參連連結&lt;/h1>
+&lt;p>&lt;a class="link" href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener"
+>https://github.com/Genymobile/scrcpy&lt;/a>
+&lt;a class="link" href="https://developer.android.com/studio/debug/dev-options" target="_blank" rel="noopener"
+>https://developer.android.com/studio/debug/dev-options&lt;/a>
+&lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
+>https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20&lt;/a>&lt;/p></description></item><item><title>firefox touch screen scroll</title><link>https://blog.simbafs.cc/p/firefox-touch-screen-scroll/</link><pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/firefox-touch-screen-scroll/</guid><description>&lt;p>再換了觸控筆電後，在 firefox 一直有個問題：觸控往下滑會被當成選取，要卷動一定要用右邊的 scroll bar&lt;/p>
+&lt;h1 id="解決方案">解決方案&lt;/h1>
+&lt;p>按照 &lt;a class="link" href="https://askubuntu.com/questions/853910/ubuntu-16-and-touchscreen-scrolling-in-firefox" target="_blank" rel="noopener"
+>https://askubuntu.com/questions/853910/ubuntu-16-and-touchscreen-scrolling-in-firefox&lt;/a> 的最佳解法，真的加上 &lt;code>MOZ_USE_XINPUT2=1&lt;/code> 的環境變數就可以了。&lt;br>
+另外在設定 &lt;code>~/.local/share/applications/firefox.desktop&lt;/code> 的時候要注意有不只一個 Exec，改完如果沒有生效可以重開機看看。&lt;/p></description></item><item><title>logitech-mouse-permission-error</title><link>https://blog.simbafs.cc/p/logitech-mouse-permission-error/</link><pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/logitech-mouse-permission-error/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;p>我的無線華和滑鼠和鍵盤都是羅技的，在我的 Ubuntu 筆電上一直都沒有問題。有一次我想改我的鍵盤被配置，但是因為 logitech unifying 沒有 Linux 版，所以我另一個軟體叫 solaar，功能是差不多的。
+當我裝好軟體以後，鍵盤滑鼠操作都沒問題，只有插上滑鼠的接收器以後都對跳出一個 permission error 的錯誤視窗。雖然在 solaar 裡面就無法看到我的滑鼠就是了，但是完全不影響使用，所以我就擺在那邊放它爛，反正就是多按一個叉叉。&lt;/p>
+&lt;h1 id="嘗試自己解">嘗試自己解&lt;/h1>
+&lt;p>今天閒閒沒事做剛好來看看這個怎麼解。我一開始想說，把他的 permission 改成和鍵盤一樣就啦！於是我進行了下面的操作&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ ls /dev/hidraw*
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>拔下鍵盤的接收器，發現他是 &lt;code>/dev/hidraw4&lt;/code> 和 &lt;code>/dev/hidraw5&lt;/code>，再插上去。拔下滑鼠接收器，發現他是 &lt;code>/dev/hidraw2&lt;/code>。&lt;br>
+並找到鍵盤的權限是 &lt;code>rw-rw----&lt;/code>，滑鼠是 &lt;code>rw-------&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ chmod &lt;span class="m">660&lt;/span> /dev/hidraw2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>拔下滑鼠接收器，插上。&lt;br>
+沒用。&lt;/p>
+&lt;p>我猜這個方法會失敗應該是因為他在我改之前就已經先跳錯誤了，等我改完它右沒有偵測，我就得把它拔下來在插上去，我又會看到錯誤訊息&amp;hellip;&amp;hellip; (looping&lt;br>
+於是我上網找答案&lt;/p>
+&lt;h1 id="網路上的解">網路上的解&lt;/h1>
+&lt;p>我 Google &lt;code>ubuntu logitech permission error&lt;/code> 第一個就是我要的！&lt;/p></description></item><item><title>libreoffice-code-format-plugin-install</title><link>https://blog.simbafs.cc/p/libreoffice-code-format-plugin-install/</link><pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/libreoffice-code-format-plugin-install/</guid><description>&lt;h1 id="安裝">安裝&lt;/h1>
+&lt;ol>
+&lt;li>去 &lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
+>https://extensions.libreoffice.org/en/extensions/show/code-highlighter&lt;/a> 下載最新的外掛&lt;/li>
+&lt;li>把檔名前面的前綴刪掉，&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>例如：&lt;code>ea4db15f_codehighlighter.oxt&lt;/code> -&amp;gt; &lt;code>codehighlighter.oxt&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;ol start="3">
+&lt;li>安裝相依性套件&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install libreoffice-script-provider-python python3-pip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pip3 install pygments
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="4">
+&lt;li>安裝外掛&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>工具 &amp;gt; 擴充套件管理員 &amp;gt; 加入 &amp;gt; 選擇你的檔案&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="使用">使用&lt;/h1>
+&lt;ol>
+&lt;li>插入文字方塊&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>插入 &amp;gt; 文字方塊&lt;/p>
+&lt;/blockquote>
+&lt;ol start="2">
+&lt;li>貼上程式碼&lt;/li>
+&lt;li>選擇文字方塊，不是文字（按文字方塊的邊邊）&lt;/li>
+&lt;li>format&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>工具 &amp;gt; highlight code &amp;gt; 選得語言、style&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="參考資料">參考資料&lt;/h1>
+&lt;p>&lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
+>Libreoffice extensions&lt;/a>
+&lt;a class="link" href="https://github.com/slgobinath/libreoffice-code-highlighter/issues/29#issuecomment-635216707" target="_blank" rel="noopener"
+>issue&lt;/a>&lt;/p></description></item></channel></rss>

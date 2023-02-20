@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>code format on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/code-format/</link><description>Recent content in code format on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/code-format/index.xml" rel="self" type="application/rss+xml"/><item><title>libreoffice-code-format-plugin-install</title><link>https://blog.simbafs.cc/p/libreoffice-code-format-plugin-install/</link><pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/libreoffice-code-format-plugin-install/</guid><description>&lt;h1 id="安裝">安裝&lt;/h1>
+&lt;ol>
+&lt;li>去 &lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
+>https://extensions.libreoffice.org/en/extensions/show/code-highlighter&lt;/a> 下載最新的外掛&lt;/li>
+&lt;li>把檔名前面的前綴刪掉，&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>例如：&lt;code>ea4db15f_codehighlighter.oxt&lt;/code> -&amp;gt; &lt;code>codehighlighter.oxt&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;ol start="3">
+&lt;li>安裝相依性套件&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install libreoffice-script-provider-python python3-pip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo pip3 install pygments
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="4">
+&lt;li>安裝外掛&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>工具 &amp;gt; 擴充套件管理員 &amp;gt; 加入 &amp;gt; 選擇你的檔案&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="使用">使用&lt;/h1>
+&lt;ol>
+&lt;li>插入文字方塊&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>插入 &amp;gt; 文字方塊&lt;/p>
+&lt;/blockquote>
+&lt;ol start="2">
+&lt;li>貼上程式碼&lt;/li>
+&lt;li>選擇文字方塊，不是文字（按文字方塊的邊邊）&lt;/li>
+&lt;li>format&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>工具 &amp;gt; highlight code &amp;gt; 選得語言、style&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="參考資料">參考資料&lt;/h1>
+&lt;p>&lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
+>Libreoffice extensions&lt;/a>
+&lt;a class="link" href="https://github.com/slgobinath/libreoffice-code-highlighter/issues/29#issuecomment-635216707" target="_blank" rel="noopener"
+>issue&lt;/a>&lt;/p></description></item></channel></rss>

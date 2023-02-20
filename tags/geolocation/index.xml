@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>geolocation on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/geolocation/</link><description>Recent content in geolocation on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/geolocation/index.xml" rel="self" type="application/rss+xml"/><item><title>taiwan-town-location</title><link>https://blog.simbafs.cc/p/taiwan-town-location/</link><pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/taiwan-town-location/</guid><description>&lt;p>這是一個給經緯度吐地址的 api，甚至路段都會出來，搭配 &lt;a class="link" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation_API" target="_blank" rel="noopener"
+>web geolocation api&lt;/a> 蠻不錯的，精確度不錯。可以不知道有沒有 rate limited 的問題，目前看起來連 token 都不用。&lt;/p>
+&lt;h1 id="網址">網址&lt;/h1>
+&lt;p>&lt;a class="link" href="https://api.nlsc.gov.tw/other/TownVillagePointQuery/" target="_blank" rel="noopener"
+>https://api.nlsc.gov.tw/other/TownVillagePointQuery/&lt;/a>&lt;/p>
+&lt;h1 id="用法">用法&lt;/h1>
+&lt;p>&lt;a class="link" href="https://api.nlsc.gov.tw/other/TownVillagePointQuery/" target="_blank" rel="noopener"
+>https://api.nlsc.gov.tw/other/TownVillagePointQuery/&lt;/a>經度/緯度&lt;/p>
+&lt;h1 id="舉例">舉例：&lt;/h1>
+&lt;h2 id="request">request&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">GET https://api.nlsc.gov.tw/other/TownVillagePointQuery/121.46278679999999/25.0169826
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="response">response&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-xml" data-lang="xml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;townVillageItem&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;ctyCode&amp;gt;&lt;/span>F&lt;span class="nt">&amp;lt;/ctyCode&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;ctyName&amp;gt;&lt;/span>新北市&lt;span class="nt">&amp;lt;/ctyName&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;townCode&amp;gt;&lt;/span>F14&lt;span class="nt">&amp;lt;/townCode&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;townName&amp;gt;&lt;/span>板橋區&lt;span class="nt">&amp;lt;/townName&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;officeCode&amp;gt;&lt;/span>FA&lt;span class="nt">&amp;lt;/officeCode&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;officeName&amp;gt;&lt;/span>板橋&lt;span class="nt">&amp;lt;/officeName&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;sectCode&amp;gt;&lt;/span>0008&lt;span class="nt">&amp;lt;/sectCode&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;sectName&amp;gt;&lt;/span>民權段&lt;span class="nt">&amp;lt;/sectName&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;villageCode&amp;gt;&lt;/span>65000010020&lt;span class="nt">&amp;lt;/villageCode&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;villageName&amp;gt;&lt;/span>漢生里&lt;span class="nt">&amp;lt;/villageName&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/townVillageItem&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="參考資料">參考資料&lt;/h1>
+&lt;p>&lt;a class="link" href="https://data.gov.tw/dataset/101898" target="_blank" rel="noopener"
+>https://data.gov.tw/dataset/101898&lt;/a>&lt;/p></description></item></channel></rss>

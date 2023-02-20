@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Simba 的喵窩</title><link>https://blog.simbafs.cc/page/</link><description>Recent content in Pages on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Archives</title><link>https://blog.simbafs.cc/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/archives/</guid><description/></item><item><title>About</title><link>https://blog.simbafs.cc/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/about/</guid><description>&lt;h1 id="-哈囉問世界安好--followershttpsimgshieldsiogithubfollowerssimbafsstyleflat-squarehttpsgithubcomsimbafs">🖐️ 哈囉！問世界安好 &lt;a class="link" href="https://github.com/simbafs" target="_blank" rel="noopener"
+>&lt;img src="https://img.shields.io/github/followers/simbafs?style=flat-square"
+loading="lazy"
+alt="Followers"
+>&lt;/a>&lt;/h1>
+&lt;ul>
+&lt;li>本名: 陳宏彰&lt;/li>
+&lt;li>常用網名: simba-fs、SimbaFs&lt;/li>
+&lt;li>原 JS 愛好者 目前 Go 愛好者&lt;/li>
+&lt;li>vim is the best editor&lt;/li>
+&lt;li>前端好難&lt;/li>
+&lt;li>&lt;strong>Golang&lt;/strong>、&lt;strong>NodeJS&lt;/strong>、nextjs&lt;/li>
+&lt;li>五迷 目前最喜歡「成名在望」&lt;/li>
+&lt;li>成大物理系大二&lt;/li>
+&lt;li>&lt;a class="link" href="https://ckcsc.net" target="_blank" rel="noopener"
+>成功高中電子計算機研習社&lt;/a> 擔任 &lt;code>退休網管兼教學&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="-作品">🛠 作品&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/ncku-extended" target="_blank" rel="noopener"
+>NCKU Extended&lt;/a>&lt;br>
+成大系統瀏覽器擴充套件&lt;br>
+擴充成大系統的功能&lt;br>
+目前功能還不多，有其他想法歡迎發 Issue&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/telegrary" target="_blank" rel="noopener"
+>telegrary&lt;/a>
+Telegrary = Telegram + diary&lt;br>
+Telegrary 是一個 Telegram 機器人，讓你可以在 Telegram 上管理日記。同時 Telegrary 提供了一個 CLI 界面，讓你可以在終端機管理日記。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="-聯絡方式">📬 聯絡方式&lt;/h1>
+&lt;ul>
+&lt;li>mail: &lt;a class="link" href="mailto:me@simbafs.cc" >me@simbafs.cc&lt;/a>&lt;/li>
+&lt;li>Mastodon: &lt;!-- raw HTML omitted -->@simbafs@g0v.social&lt;!-- raw HTML omitted -->&lt;/li>
+&lt;li>Discord id: SimbaFs#2030&lt;/li>
+&lt;li>telegram: &lt;a class="link" href="https://t.me/simbafs" target="_blank" rel="noopener"
+>@simbafs&lt;/a>&lt;/li>
+&lt;li>twitter: &lt;a class="link" href="https://twitter.com/simbafs" target="_blank" rel="noopener"
+>@simbafs&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Links</title><link>https://blog.simbafs.cc/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/links/</guid><description>&lt;p>gpg key fingerprint: &lt;code>6236 A070 8FCD 894C 7AD1 A5FC DB13 A5C2 042E AEA4&lt;/code>&lt;/p></description></item><item><title>Resource</title><link>https://blog.simbafs.cc/resource/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/resource/</guid><description>&lt;h1 id="友站">友站&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://omeletwithoutegg.github.io" target="_blank" rel="noopener"
+>蛋餅的競程隨筆 https://omeletwithoutegg.github.io&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://blog.mikuc.at/" target="_blank" rel="noopener"
+>貓咪的梳妝台&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://blog.timothychen.tk/" target="_blank" rel="noopener"
+>TimothyChen&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://thect.cc" target="_blank" rel="noopener"
+>Thect&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://whitecat.tk" target="_blank" rel="noopener"
+>白貓&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://hackmd.io/@alanlai/Byh58hzIY/%2F_iosUGcpQ6KtWQuch0ApFw" target="_blank" rel="noopener"
+>laialan&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://blog.imwjs.me" target="_blank" rel="noopener"
+>Junter&amp;rsquo;s Note&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="js-資源">JS 資源&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://developer.mozilla.org" target="_blank" rel="noopener"
+>MDN https://developer.mozilla.org&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="其他">其他&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://weekly.starbugs.dev/" target="_blank" rel="noopener"
+>星八哥技術週刊 https://weekly.starbugs.dev&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Search</title><link>https://blog.simbafs.cc/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/search/</guid><description/></item></channel></rss>

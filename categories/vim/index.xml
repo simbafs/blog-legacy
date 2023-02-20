@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vim on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/vim/</link><description>Recent content in vim on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 17 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>YouComopleteMe install</title><link>https://blog.simbafs.cc/p/youcomopleteme-install/</link><pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/youcomopleteme-install/</guid><description>&lt;h1 id="下載-source-code">下載 source code&lt;/h1>
+&lt;ol>
+&lt;li>編輯 ~/.vimrc&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">Plug&lt;/span> &lt;span class="s1">&amp;#39;Valloric/YouCompleteMe&amp;#39;&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="2">
+&lt;li>接著按下 &lt;!-- raw HTML omitted -->esc&lt;!-- raw HTML omitted --> &lt;!-- raw HTML omitted -->:w | so %&lt;!-- raw HTML omitted --> 載入設定&lt;/li>
+&lt;li>接著 &lt;!-- raw HTML omitted -->:PlugInstall&lt;!-- raw HTML omitted --> 下載 source code&lt;/li>
+&lt;li>存檔離開&lt;/li>
+&lt;/ol>
+&lt;h1 id="編譯">編譯&lt;/h1>
+&lt;ol>
+&lt;li>執行 &lt;code>sudo apt install python3-dev build-essential&lt;/code>&lt;/li>
+&lt;li>進入 &lt;code>~/.vim/plugged/YouCompleteMe&lt;/code>&lt;/li>
+&lt;li>執行 &lt;code>./install.py --help&lt;/code> 並挑選需要的選項&lt;/li>
+&lt;li>執行 &lt;code>./install.py &amp;lt;你要的選項&amp;gt;&lt;/code>&lt;/li>
+&lt;/ol></description></item><item><title>vim auto comment plugin</title><link>https://blog.simbafs.cc/p/vim-auto-comment-plugin/</link><pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/vim-auto-comment-plugin/</guid><description>&lt;h1 id="套件">套件&lt;/h1>
+&lt;p>&lt;a class="link" href="https://github.com/preservim/nerdcommenter" target="_blank" rel="noopener"
+>nerdcommenter&lt;/a>&lt;/p>
+&lt;h1 id="好用的指令">好用的指令&lt;/h1>
+&lt;p>在每次動作前都要按 &lt;code>&amp;lt;leader&amp;gt;&lt;/code>，預設是 反斜線 &lt;code>\&lt;/code>&lt;/p>
+&lt;h2 id="cspace">&lt;code>c&amp;lt;space&amp;gt;&lt;/code>&lt;/h2>
+&lt;p>簡單來說就是 toggle 你的註解&lt;/p>
+&lt;h2 id="ca">&lt;code>cA&lt;/code>&lt;/h2>
+&lt;p>跳到行尾並在行尾加上註解&lt;/p></description></item><item><title>讓 YCM 接受 jsx</title><link>https://blog.simbafs.cc/p/%E8%AE%93-ycm-%E6%8E%A5%E5%8F%97-jsx/</link><pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/%E8%AE%93-ycm-%E6%8E%A5%E5%8F%97-jsx/</guid><description>&lt;p>最近寫ˋreact 的時候只要遇到 jsx 語法 YCM 就會跳出這個錯誤&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Cannot use JSX unless the &amp;#39;--jsx&amp;#39; flag is provided. (FixIt)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>研究之後發現這是要給 tsserver 一個 &lt;code>--jsx&lt;/code> 的 flag 就可以解決
+爬文半個小時後發現只要在專案下的 &lt;code>jsconfig.json&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;compilerOptions&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;target&amp;#34;: &amp;#34;es6&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;checkJs&amp;#34;: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ },
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ &amp;#34;compilerOptions&amp;#34;: {
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ &amp;#34;jsx&amp;#34;: &amp;#34;react&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gi">&lt;/span> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
