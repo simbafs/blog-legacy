@@ -2,9 +2,9 @@ name: Deploy to Github Pages
 
 on:
     push:
-        branches: [master]
+        branches: [main]
     pull_request:
-        branches: [master]
+        branches: [main]
 
 jobs:
     build:
@@ -43,12 +43,10 @@ jobs:
                   extended: true
 
             - name: Build
-              run: hugo --minify --gc
+              run: make build
 
-            - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@4.1.4
+            - name: Deploy
+              uses: peaceiris/actions-gh-pages@v3
               with:
-                  branch: gh-pages
-                  folder: public
-                  clean: true
-                  single-commit: true
+                deploy_key: ${{ secrets.DEPLOY_KEY }}
+                publish_dir: ./public

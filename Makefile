@@ -7,4 +7,7 @@ push:
 tree: 
 	tree content/post
 	# tree -d content/post
-.PHONY: push tree
+
+build:
+	hugo --minify --gc
+.PHONY: push tree build
