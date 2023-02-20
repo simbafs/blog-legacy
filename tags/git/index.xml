@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/git/</link><description>Recent content in git on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-on-gitea-with-docker/</guid><description>&lt;p>&lt;a class="link" href="https://gitea.io" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/git/</link><description>Recent content in git on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 20 Feb 2023 16:59:29 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Snippet</title><link>https://blog.simbafs.cc/p/git-snippet/</link><pubDate>Mon, 20 Feb 2023 16:59:29 +0800</pubDate><guid>https://blog.simbafs.cc/p/git-snippet/</guid><description>&lt;h1 id="git-snippet">Git Snippet&lt;/h1>
+&lt;h2 id="move-branch-to-another-commit-not-recommand">move branch to another commit (not recommand)&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> git branch --force &amp;lt;branch name&amp;gt; &amp;lt;commit id&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="list-changed-filename">list changed filename&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> git diff --name-only HEAD
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/1552340/how-to-list-only-the-names-of-files-that-changed-between-two-commits" target="_blank" rel="noopener"
+>ref: stackoverflow&lt;/a>&lt;/p></description></item><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-on-gitea-with-docker/</guid><description>&lt;p>&lt;a class="link" href="https://gitea.io" target="_blank" rel="noopener"
 >Gitea&lt;/a> 是一個開源的 git 伺服器，他的界面幾乎和 &lt;a class="link" href="https://github.com" target="_blank" rel="noopener"
 >GitHub&lt;/a> 一模一樣，但是完全開源而且非常輕，甚至一片樹梅派就可以開伺服器了。Gitea 因為是使用 &lt;a class="link" href="https://golang.org/" target="_blank" rel="noopener"
 >Golang&lt;/a> 編寫的，所以提供各種平台的執行檔。我選擇透過 docker 裝 Gitea 伺服器，但是這樣有一個問題，gitea 伺服器開在 container 內，沒辦法使用標準的 22 port，所以 git clone 就必須加上一個醜醜的數字，像是這樣&lt;/p>
