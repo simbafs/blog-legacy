@@ -5,7 +5,7 @@ rssFullContent = true
 
 [footer]
 since = 2020
-customText = ""
+customText = "好想養貓阿~~"
 
 [dateFormat]
 published = "2006/01/02"
@@ -48,7 +48,7 @@ limit = 100
 type = "tag-cloud"
 
 [widgets.homepage.params]
-limit = 1000
+limit = 20
 
 [[widgets.page]]
 type = "toc"
