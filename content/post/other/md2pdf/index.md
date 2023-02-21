@@ -1,7 +1,7 @@
 +++
 title = "Markdown to PDF"
 date = 2023-02-21T22:07:38+08:00
-tag = ['markdown', 'pdf', 'pandoc', 'latex']
+tags = ['markdown', 'pdf', 'pandoc', 'latex']
 categories = ['other']
 # image = 
 +++

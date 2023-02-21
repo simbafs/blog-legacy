@@ -1,8 +1,8 @@
 +++
 title = "{{ replace .Name "-" " " | title }}"
 date = {{ .Date }}
-draft = true
-tag = []
+tags = []
 categories = []
+draft = true
 # image = 
 +++
