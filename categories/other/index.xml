@@ -1,4 +1,200 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>other on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/other/</link><description>Recent content in other on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 Jun 2022 23:26:40 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/other/index.xml" rel="self" type="application/rss+xml"/><item><title>不同「邊數」的平面</title><link>https://blog.simbafs.cc/p/other/plantofnumbers/</link><pubDate>Sat, 11 Jun 2022 23:26:40 +0800</pubDate><guid>https://blog.simbafs.cc/p/other/plantofnumbers/</guid><description>&lt;h1 id="同邊數的平面">同「邊數」的平面&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>other on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/other/</link><description>Recent content in other on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Feb 2023 22:07:38 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/other/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/other/markdown-to-pdf/</link><pubDate>Tue, 21 Feb 2023 22:07:38 +0800</pubDate><guid>https://blog.simbafs.cc/p/other/markdown-to-pdf/</guid><description>&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
+&lt;h2 id="安裝環境">安裝環境&lt;/h2>
+&lt;p>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
+>pandoc&lt;/a> 你想得到的文件之間轉擋 &lt;a class="link" href="https://pandoc.org/diagram.svgz?v=20230203095535" target="_blank" rel="noopener"
+>官方精美的圖&lt;/a>&lt;/p>
+&lt;p>如果說你沒有中文的需求，現在就可以用 &lt;code>pandoc index.md -o out.pdf&lt;/code> 產生 PDF 檔了&lt;/p>
+&lt;h2 id="中文">中文&lt;/h2>
+&lt;h3 id="安裝字型">安裝字型&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $ sudo apt-get install texlive-fonts-recommended texlive-fonts-extra texlive-lang-chinese
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="字型設定">字型設定&lt;/h3>
+&lt;h4 id="檔案內">檔案內&lt;/h4>
+&lt;p>在 md 開頭設定一個包含中文的字型&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">CJKmainfont: &amp;#39;Noto Serif TC&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="參數">參數&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $ pandoc index.md -o out.pdf -V CJKmainfont=&amp;#39;Noto Serif TC&amp;#39;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="範本">範本&lt;/h2>
+&lt;p>pandoc 有預設的 LaTeX 範本，但是不怎麼好看，可以用網路上開源的範本，或是花時間自己刻出最適合自己的&lt;/p>
+&lt;h3 id="eisvogel">Eisvogel&lt;/h3>
+&lt;p>&lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template" target="_blank" rel="noopener"
+>GitHub 頁面&lt;/a>
+去 &lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template/releases/latest" target="_blank" rel="noopener"
+>Release&lt;/a> 下載，解壓縮到 &lt;code>~/.local/share/pandoc/templates&lt;/code>。在編譯時加上 &lt;code>--template eisvogel&lt;/code> 就可以套用模板了。&lt;/p>
+&lt;h2 id="範例">範例&lt;/h2>
+&lt;p>以下是一段測試的 markdown 產生出來的 pdf，你可以用 &lt;a class="link" href="./out.pdf" >這個連結&lt;/a> 下載來看&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">title: Test pandoc convert md to pdf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">author: SimbaFs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh"># 測試
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## list
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>&lt;span class="k">*&lt;/span> a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> b
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> c
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">*&lt;/span> d
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">*&lt;/span> e
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">*&lt;/span> f
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">*&lt;/span> g
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">1.&lt;/span> apple
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">2.&lt;/span> book
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">3.&lt;/span> cookie
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## link
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>[&lt;span class="nt">SimbaFs&amp;#39; Blog&lt;/span>](&lt;span class="na">https://blog.simbafs.cc&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## check list
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>&lt;span class="k">- [ ]&lt;/span> check 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">- [x]&lt;/span> check 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## code block
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>&lt;span class="s">```go
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">&lt;/span>&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">(){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;hello world!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">```&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## image
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>![](./blog.png)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>Info&lt;/strong>&lt;br>
+關於如何在 codeblock 中印出反單引號：&lt;a class="link" href="https://stackoverflow.com/questions/55586867/how-to-put-in-markdown-an-inline-code-block-that-only-contains-a-backtick-char" target="_blank" rel="noopener"
+>stackoverflow&lt;/a>&lt;br>
+簡單來說如果裡面要印 &lt;code>n&lt;/code> 個反單引號，外面就要用 &lt;code>n+1&lt;/code> 個反單引號括起來&lt;/p>
+&lt;/blockquote>
+&lt;p>然後這是截圖：&lt;br>
+&lt;figure>&lt;img src="./out-1.png"/>&lt;figcaption>
+&lt;h4>page 1 of out.pdf&lt;/h4>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;img src="./out-2.png"/>&lt;figcaption>
+&lt;h4>page 2 of out.pdf&lt;/h4>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>可以看到大部分的語法都可以轉換，甚至是程式碼區塊都有語法提示（syntax highlight）&lt;/p>
+&lt;h2 id="其他">其他&lt;/h2>
+&lt;h3 id="列出安裝的中文字型">列出安裝的中文字型&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $ fc-list :lang=zh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="參考連結">參考連結&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://sam.webspace.tw/2020/01/13/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%87%20Markdown%20%E8%BD%89%E7%82%BA%20PDF%20%E6%96%87%E4%BB%B6/" target="_blank" rel="noopener"
+>https://sam.webspace.tw/2020/01/13/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%87%20Markdown%20%E8%BD%89%E7%82%BA%20PDF%20%E6%96%87%E4%BB%B6/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/jgm/pandoc/wiki/Pandoc-with-Chinese" target="_blank" rel="noopener"
+>https://github.com/jgm/pandoc/wiki/Pandoc-with-Chinese&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template" target="_blank" rel="noopener"
+>https://github.com/Wandmalfarbe/pandoc-latex-template&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://tex.stackexchange.com/questions/341809/pandoc-does-not-recognize-chinese-characters" target="_blank" rel="noopener"
+>https://tex.stackexchange.com/questions/341809/pandoc-does-not-recognize-chinese-characters&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://tex.stackexchange.com/questions/179778/xelatex-under-ubuntu" target="_blank" rel="noopener"
+>https://tex.stackexchange.com/questions/179778/xelatex-under-ubuntu&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
+>https://pandoc.org/&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>不同「邊數」的平面</title><link>https://blog.simbafs.cc/p/other/plantofnumbers/</link><pubDate>Sat, 11 Jun 2022 23:26:40 +0800</pubDate><guid>https://blog.simbafs.cc/p/other/plantofnumbers/</guid><description>&lt;h1 id="同邊數的平面">同「邊數」的平面&lt;/h1>
 &lt;h2 id="圖">圖&lt;/h2>
 &lt;p>先上圖，每個都是推到邊長為 4&lt;/p>
 &lt;h2 id="3">3&lt;/h2>
