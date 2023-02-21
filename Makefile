@@ -5,7 +5,7 @@ push:
 	git push
 
 diff:
-	@echo ${filedeff}
+	@echo "$(filediff)"
 
 tree: 
 	tree content/post | less
