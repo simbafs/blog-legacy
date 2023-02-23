@@ -13,6 +13,9 @@ categories = ['other']
 如果說你沒有中文的需求，現在就可以用 `pandoc index.md -o out.pdf` 產生 PDF 檔了
 
 ## 中文
+> **Warning**  
+> 我後來不知道搞砸了什麼，反正目前中文是壞的，找到一個用網頁排版再用瀏覽器內建列印功能輸出成 PDF 的網頁：https://github.com/realdennis/md2pdf
+
 ### 安裝字型
 ```
  $ sudo apt-get install texlive-fonts-recommended texlive-fonts-extra texlive-lang-chinese
