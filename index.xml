@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simba 的喵窩</title><link>https://blog.simbafs.cc/</link><description>Recent content on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Feb 2023 22:07:38 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/other/markdown-to-pdf/</link><pubDate>Tue, 21 Feb 2023 22:07:38 +0800</pubDate><guid>https://blog.simbafs.cc/p/other/markdown-to-pdf/</guid><description>&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simba 的喵窩</title><link>https://blog.simbafs.cc/</link><description>Recent content on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 23 Feb 2023 23:23:49 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/index.xml" rel="self" type="application/rss+xml"/><item><title>Python Snippet</title><link>https://blog.simbafs.cc/p/python/python-snippet/</link><pubDate>Thu, 23 Feb 2023 23:23:49 +0800</pubDate><guid>https://blog.simbafs.cc/p/python/python-snippet/</guid><description>&lt;h1 id="python-snippet">Python Snippet&lt;/h1>
+&lt;h2 id="type-annotation">Type Annotation&lt;/h2>
+&lt;h3 id="numpy-array-as-parameter">Numpy Array as Parameter&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">func&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ndarray&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/64600748/how-do-i-write-a-2d-array-parameter-specification-in-python" target="_blank" rel="noopener"
+>stackoverflow&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="numpy">Numpy&lt;/h2>
+&lt;h3 id="determinant-of-array">Determinant of array&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">linalg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">det&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.det.html" target="_blank" rel="noopener"
+>doc&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="multiply-a-matrix-and-a-array">Multiply a Matrix and a Array&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/3890621/how-does-multiplication-differ-for-numpy-matrix-vs-array-classes" target="_blank" rel="noopener"
+>stackoverflow&lt;/a>&lt;/p>
+&lt;/blockquote></description></item><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/other/markdown-to-pdf/</link><pubDate>Tue, 21 Feb 2023 22:07:38 +0800</pubDate><guid>https://blog.simbafs.cc/p/other/markdown-to-pdf/</guid><description>&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
 &lt;h2 id="安裝環境">安裝環境&lt;/h2>
 &lt;p>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >pandoc&lt;/a> 你想得到的文件之間轉擋 &lt;a class="link" href="https://pandoc.org/diagram.svgz?v=20230203095535" target="_blank" rel="noopener"
