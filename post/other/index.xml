@@ -5,6 +5,10 @@
 >官方精美的圖&lt;/a>&lt;/p>
 &lt;p>如果說你沒有中文的需求，現在就可以用 &lt;code>pandoc index.md -o out.pdf&lt;/code> 產生 PDF 檔了&lt;/p>
 &lt;h2 id="中文">中文&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;strong>Warning&lt;/strong>&lt;br>
+我後來不知道搞砸了什麼，反正目前中文是壞的，找到一個用網頁排版再用瀏覽器內建列印功能輸出成 PDF 的網頁：https://github.com/realdennis/md2pdf&lt;/p>
+&lt;/blockquote>
 &lt;h3 id="安裝字型">安裝字型&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
