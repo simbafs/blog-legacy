@@ -6,7 +6,9 @@ categories = [ 'nodejs', "blessed" ]
 +++
 
 # blessed Contrib Tree
+
 ## Tree
+
 想說先想一個專案來練練手
 熟悉一下 blessed
 突然看到 blessed-contrib 裡有個元件叫 `tree`
@@ -16,7 +18,9 @@ categories = [ 'nodejs', "blessed" ]
 其中最重要的部份就是搞定樹狀結構
 因為他有特定的格式和選項
 下面是官方的範例
+
 ## 範例
+
 ```js
 {
   extended: true,
@@ -56,4 +60,3 @@ categories = [ 'nodejs', "blessed" ]
 `extended` 屬性是是否展開，預設 `true`
 `name` 是顯示出來的字，如果要改再設，預設是 `index`
 `myCustomProperty` 直翻是自訂屬性，應該是當 `tree.on('select')` 觸發時傳進去的
-

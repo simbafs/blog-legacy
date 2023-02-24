@@ -13,7 +13,7 @@ categories = [ "ithelp", "pure-CLI-IDE" ]
 +++
 
 今天的東西相當多，在 [GitHub README Example](https://github.com/neoclide/coc.nvim#example-vim-configuration) 中除了昨天介紹過得今天都收錄了，直接進主題吧！  
-喔！另外有些東西我真的不知道是什麼我會用原文寫並用中文括號括起來，歡迎知道的朋友留言告訴我  
+喔！另外有些東西我真的不知道是什麼我會用原文寫並用中文括號括起來，歡迎知道的朋友留言告訴我
 
 ```vim
 " 設定文字編碼（我想這個你的 init.vim/.vimrc 都應該有了）
@@ -141,4 +141,5 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 ```
 
 # 結尾
+
 呼～！總算翻譯完了，有幾個我真的看不出來在幹嘛的設定翻譯不太好請各位見諒。

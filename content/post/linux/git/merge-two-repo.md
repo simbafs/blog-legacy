@@ -7,6 +7,7 @@ categories = ['linux', 'git']
 +++
 
 # Merge Two Repo
+
 這學期修了幾個資工系的課，都需要寫程式作業，原本我是一個作業開一個 repo，但是我發現這樣好像會開超級多 repo，於是我決定要想辦法合併他們。
 
 ## 找資料
@@ -148,6 +149,6 @@ $ git remote remove a
 
 ## 參考資料
 
-- https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories
-- https://gist.github.com/x-yuri/6161d90d1af8ebac6e560bcef548c1c3
-- https://github.com/newren/git-filter-repo
+-   https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories
+-   https://gist.github.com/x-yuri/6161d90d1af8ebac6e560bcef548c1c3
+-   https://github.com/newren/git-filter-repo

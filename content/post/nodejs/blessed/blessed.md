@@ -6,10 +6,12 @@ categories = [ 'nodejs', "blessed" ]
 +++
 
 # Blessed
+
 某天我有一個問題
 gtop 的圖畫界面是怎麼做的，我知道他是用 node 寫的，對他別有興趣
 我上 github 看他的 package.json
 發現他的 depandence 只有三個
+
 ```json
 ...
 	"dependencies": {
@@ -19,6 +21,7 @@ gtop 的圖畫界面是怎麼做的，我知道他是用 node 寫的，對他別
 	},
 ...
 ```
+
 其中 `systeminformation` 很顯然是取得系統資訊
 那 GUI 的 library 應該就是 `blessed` 和 `blessed-contrib` 了
 去 `blessed` 的 github 看看
@@ -27,4 +30,3 @@ gtop 的圖畫界面是怎麼做的，我知道他是用 node 寫的，對他別
 只好自己看 docs 啦
 
 接下來是我測試的一些程式碼和截圖
-

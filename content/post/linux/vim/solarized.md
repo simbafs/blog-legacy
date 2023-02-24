@@ -7,12 +7,15 @@ categories = ['linux', 'vim']
 +++
 
 # Solarized
+
 [solarized](https://ethanschoonover.com/solarized/) 是一個文字界面常見的配色方案，不僅是用在 vim，大多數 terminal 和 editor 也都支援
 
 ## install
+
 加入 ```vim
 Plug 'ericbn/vim-solarized'
-```
+
+````
 然後安裝
 
 ## transparent background
@@ -53,4 +56,4 @@ autocmd InsertLeave * set nocursorline
 "set nocursorline
 
 " trasparent end
-```
+````

@@ -7,7 +7,9 @@ categories = ['linux']
 +++
 
 # openssl DES
+
 ## 加密
+
 ```
 openssl enc -des-cbc -a -K e0e0e0e0f1f1f1f1 -in plaintext.txt -provider legacy
 ```
@@ -20,6 +22,7 @@ openssl enc -des-cbc -a -K e0e0e0e0f1f1f1f1 -in plaintext.txt -provider legacy
 ```
 
 ## 解密
+
 ```
 openssl enc -des-cbc -d -a -K e0e0e0e0f1f1f1f1 -in plaintext.txt -provider legacy
 ```
@@ -33,8 +36,10 @@ openssl enc -des-cbc -d -a -K e0e0e0e0f1f1f1f1 -in plaintext.txt -provider legac
 ```
 
 ## 注意事項
-openssl 的選項都是一個 `-`，不像一般的 GNU 命令分長選項和短選項。另外 `-d` 和 `-a` 不能合併成 `-da` 或是 `-ad` 
+
+openssl 的選項都是一個 `-`，不像一般的 GNU 命令分長選項和短選項。另外 `-d` 和 `-a` 不能合併成 `-da` 或是 `-ad`
 
 ## 參考資料
-* https://wiki.openssl.org/index.php/Enc
-* https://github.com/openssl/openssl/issues/12906
+
+-   https://wiki.openssl.org/index.php/Enc
+-   https://github.com/openssl/openssl/issues/12906

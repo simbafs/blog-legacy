@@ -26,13 +26,8 @@ categories = ['uncategorized']
 
 ```javascript
 function myFunction() {
-  const calendar = CalendarApp.getCalendarsByName("test");
-  if (calendar)
-    calendar.createEvent(
-      "吃火鍋",
-      new Date(2022, 08, 14, 18, 00),
-      new Date(2022, 08, 14, 19, 00)
-    );
+	const calendar = CalendarApp.getCalendarsByName('test');
+	if (calendar) calendar.createEvent('吃火鍋', new Date(2022, 08, 14, 18, 00), new Date(2022, 08, 14, 19, 00));
 }
 ```
 
@@ -46,14 +41,14 @@ function myFunction() {
 
 ```javascript
 function myFunction() {
-  const calendar = CalendarApp.getCalendarsByName("test");
-  if (calendar)
-    calendar.createEventSeries(
-      "吃火鍋",
-      new Date(2022, 08, 14, 18, 00),
-      new Date(2022, 08, 14, 19, 00),
-      CalendarApp.newRecurrence().addWeeklyRule().until(semester.end)
-    );
+	const calendar = CalendarApp.getCalendarsByName('test');
+	if (calendar)
+		calendar.createEventSeries(
+			'吃火鍋',
+			new Date(2022, 08, 14, 18, 00),
+			new Date(2022, 08, 14, 19, 00),
+			CalendarApp.newRecurrence().addWeeklyRule().until(semester.end)
+		);
 }
 ```
 
@@ -68,19 +63,19 @@ function myFunction() {
 
 ```javascript
 function doGet(e) {
-  return HtmlService.createHtmlOutputFromFile("index.html");
+	return HtmlService.createHtmlOutputFromFile('index.html');
 }
 ```
 
 2. 部署成網頁應用程式
-   1. 點右上角藍色的「部署」>「新增部署作業」
-   2. 點選左上角的齒輪>網頁應用程式
-   3. 設定
-   4. 按下「部署」
-   5. 獲得正式連結
+    1. 點右上角藍色的「部署」>「新增部署作業」
+    2. 點選左上角的齒輪>網頁應用程式
+    3. 設定
+    4. 按下「部署」
+    5. 獲得正式連結
 3. 測試部署作業
-   1. 點右上角藍色的「部署」>「測試部署作業」
-   2. 獲得測試連結
+    1. 點右上角藍色的「部署」>「測試部署作業」
+    2. 獲得測試連結
 
 > **Notice**  
 > 建立測試部署作業之前需要先正式部署  
@@ -102,66 +97,61 @@ function doGet(e) {
 
 ```javascript
 function doGet(e) {
-  if (!e.parameter.data)
-    return HtmlService.createHtmlOutputFromFile("index.html");
-  return ContentService.createTextOutput(JSON.stringify(e));
+	if (!e.parameter.data) return HtmlService.createHtmlOutputFromFile('index.html');
+	return ContentService.createTextOutput(JSON.stringify(e));
 }
 
 function setCalendar(data) {
-  console.log("setCalendar", data);
-  let semester = {
-    start: new Date(...data.semester.start),
-    end: new Date(...data.semester.end),
-  };
-  console.log(semester);
-  let calendar = CalendarApp.getCalendarsByName(data.calendar)[0];
-  let recurrence = CalendarApp.newRecurrence()
-    .addWeeklyRule()
-    .until(semester.end);
-  if (!calendar) {
-    return new Error(`calendar ${data.calendar} not found`);
-  }
-  data.lessions.forEach((item) =>
-    addLession(calendar, semester, ...item, recurrence)
-  );
-  return undefined;
+	console.log('setCalendar', data);
+	let semester = {
+		start: new Date(...data.semester.start),
+		end: new Date(...data.semester.end),
+	};
+	console.log(semester);
+	let calendar = CalendarApp.getCalendarsByName(data.calendar)[0];
+	let recurrence = CalendarApp.newRecurrence().addWeeklyRule().until(semester.end);
+	if (!calendar) {
+		return new Error(`calendar ${data.calendar} not found`);
+	}
+	data.lessions.forEach(item => addLession(calendar, semester, ...item, recurrence));
+	return undefined;
 }
 
 function getTime(day, start, end) {
-  day.setMinutes(0);
-  day.setSeconds(0);
-  let table = {
-    1: 8,
-    2: 9,
-    3: 10,
-    4: 11,
-    5: 13,
-    6: 14,
-    7: 15,
-    8: 16,
-    9: 17,
-  };
-  let startDate = new Date(day);
-  startDate.setHours(table[start]);
-  startDate.setMinutes(10);
-  let endDate = new Date(day);
-  endDate.setHours(table[end] + 1);
+	day.setMinutes(0);
+	day.setSeconds(0);
+	let table = {
+		1: 8,
+		2: 9,
+		3: 10,
+		4: 11,
+		5: 13,
+		6: 14,
+		7: 15,
+		8: 16,
+		9: 17,
+	};
+	let startDate = new Date(day);
+	startDate.setHours(table[start]);
+	startDate.setMinutes(10);
+	let endDate = new Date(day);
+	endDate.setHours(table[end] + 1);
 
-  return [startDate, endDate];
+	return [startDate, endDate];
 }
 
 // setWod set day of week for a Date object
 function setDow(day, dow) {
-  let d = new Date(day);
-  d.setDate(parseInt(day.getDate()) - parseInt(day.getDay()) + parseInt(dow));
-  return d;
+	let d = new Date(day);
+	d.setDate(parseInt(day.getDate()) - parseInt(day.getDay()) + parseInt(dow));
+	return d;
 }
 
 function addLession(calendar, semester, name, dow, start, end, recurrence) {
-  console.log(name, dow, start, end);
-  let [startDate, endDate] = getTime(setDow(semester.start, dow), start, end);
-  console.log({ startDate, endDate });
-  console.log(calendar.createEventSeries(name, startDate, endDate, recurrence));
+	console.log(name, dow, start, end);
+	let [startDate, endDate] = getTime(setDow(semester.start, dow), start, end);
+	console.log({ startDate, endDate });
+	console.log(calendar.createEventSeries(name, startDate, endDate, recurrence));
 }
 ```
 

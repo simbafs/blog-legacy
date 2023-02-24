@@ -6,18 +6,22 @@ categories = [ "kotlin" ]
 +++
 
 # val vs var
+
 | kotlin | JS    |
-| :---   | :---  |
+| :----- | :---- |
 | val    | const |
 | var    | let   |
 
 # a..b
+
 | kotlin | JS                                   |
-| :---   | :---                                 |
+| :----- | :----------------------------------- |
 | a..b   | Array(b-a+1).fill(0).map(i => i + a) |
 
 # when
+
 ## kotlin
+
 ```kotlin
 fun main (){
 	val luckyNum = 4
@@ -35,4 +39,3 @@ fun main (){
 	println(result)
 }
 ```
-

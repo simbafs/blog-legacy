@@ -7,13 +7,16 @@ categories = ['game']
 +++
 
 # 砲台自動瞄準
-用處理器可以控制砲台們打的方向和什麼時候打，這樣只要有一群受控的砲台，就可以在射程範圍內指哪打哪  
+
+用處理器可以控制砲台們打的方向和什麼時候打，這樣只要有一群受控的砲台，就可以在射程範圍內指哪打哪
 
 ## 單一砲台
+
 ![one turret screenshot](./oneTurretScreeshot.png)
 
 如圖所示，砲台跟著玩家瞄準的方向打  
-以下是程式碼  
+以下是程式碼
+
 ```
 radar player any any distance duo1 1 player
 sensor x player @shootX
@@ -23,13 +26,13 @@ control shoot duo1 x y shoot 0
 ```
 
 | command | description                                                                |
-| :---    | :---                                                                       |
+| :------ | :------------------------------------------------------------------------- |
 | radar   | 取得玩家物件                                                               |
 | sensor  | 抽出玩家物件的 `shootX`、`shootY`（瞄準的點）和 `shooting`（是否正在開火） |
 | control | 控制 `duo1` 砲台                                                           |
 
 | variable | description   |
-| :---     | :---          |
+| :------- | :------------ |
 | player   | 玩家物件      |
 | x        | 瞄準的 X 座標 |
 | y        | 瞄準的 Y 座標 |
@@ -55,16 +58,16 @@ jump 1 always x false
 ```
 
 > 以下重複的就不會再多講了
- 
+
 | command | description                                                                                                                                                         |
-| :---    | :---                                                                                                                                                                |
+| :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | set     | 初始化一個變數 `n` 值為 `0`                                                                                                                                         |
 | getlink | 取得連結的第 `n` 個建築，存到 `result`                                                                                                                              |
 | op      | 執行數學運算，舉例 `add n N 1` => `n = N + 1`                                                                                                                       |
 | jump    | 根據規則跳躍到某條指令，這裡的 `1` 是指跳到第一調指令（從 0 開始數，也就是跳到 `radar`），因為我們調建設成 `always`，因此後面兩個就不必要，你在編輯畫面應該也看不到 |
 
 | variable | description          |
-| :---     | :---                 |
+| :------- | :------------------- |
 | n        | 迭代的變數           |
 | @links   | 總共有幾個連結的建築 |
 
@@ -72,5 +75,6 @@ jump 1 always x false
 ![multipleTurretsCode](./multipleTurretCode.png)
 
 ## 參考資料
+
 https://www.youtube.com/watch?v=UFK5m6qKT6U  
-https://www.youtube.com/watch?v=YMxU0jcS11I  
+https://www.youtube.com/watch?v=YMxU0jcS11I

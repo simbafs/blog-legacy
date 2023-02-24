@@ -26,9 +26,9 @@ GPG 中每個人都有一個鑰匙圈（keyring），就像你包包裡的鑰匙
 
 前面提到，主金鑰的功能是身份證明，但是怎樣的操作是屬於身份證明呢？根據這 [這篇問答](https://security.stackexchange.com/questions/73679/which-actions-does-the-gnupg-certify-capability-permit) 和 [RFC 4880](https://www.rfc-editor.org/rfc/rfc4880#section-5.2.1)，以下操作都是屬於身份證明
 
-- 對某個使用者的公鑰簽章（信任某個使用者，相關內容在信任網章節）
-- 簽發 binding signature（這裡分成 subkey binding signature 和 primary binding signature，但我還沒研究出差別）
-- 簽發金鑰撤銷金鑰（當你的子密鑰洩漏時宣告用）
+-   對某個使用者的公鑰簽章（信任某個使用者，相關內容在信任網章節）
+-   簽發 binding signature（這裡分成 subkey binding signature 和 primary binding signature，但我還沒研究出差別）
+-   簽發金鑰撤銷金鑰（當你的子密鑰洩漏時宣告用）
 
 簡單來說，就是產生、撤銷子金鑰以及和「信任」有關的操作都算是「身份證明」(Certify)
 
@@ -38,36 +38,38 @@ GPG 中每個人都有一個鑰匙圈（keyring），就像你包包裡的鑰匙
 
 其中在上一個小節提到的 Certify 功能必須**且只能**（應該吧，我是找不到怎麼在子密鑰上加 Certify）設定在主密鑰上。另外 Certify 和 Aliceuthenticate 的中文翻譯都很像，但是功能卻大大不同，Certify 剛剛上面提過，就是「信任」，Aliceuthenticate 則是像是 ssh 登入的操作（下面會提到）
 
-## uid 
+## uid
+
 每個 keyring 都對應到一個人，但通常一個人有不只一個的 email address，因此 GPG 也支援對應多個 email address，這個在 GPG 終就稱之為 uid，裡面會包含這個人的名字和 email address
 
-
 ## key fingerprint(id) and keygrip
+
 fingerprint 和 keygrip 都是要對於金鑰對識別，他們都是把要識別的公鑰對拿去 hash，功能是可以快速比較兩把 key 是否相同，例如你從網路上找到某個人的公鑰，可以用 fingerprint 和那個人比對是不是同一把 key（fingerprint 40 個字元，完整的 key 可能有上千個字元）。看到這裡你會覺得 fingerprint 和 keygrip 很像，的確，他們的差異只差在包含的資訊不一樣
 
-* fingerprint
-	* 公鑰
-	* 建立日期
-	* 演算法
-	* 公鑰 packet 版本（儲存公鑰的資料結構）
-* keygrip
-	* 公鑰
+-   fingerprint
+    -   公鑰
+    -   建立日期
+    -   演算法
+    -   公鑰 packet 版本（儲存公鑰的資料結構）
+-   keygrip
+    -   公鑰
 
-你會發現，keygrip 只包含公鑰，而 fingerprint 則是包含了一堆 gpg 內部資訊，因此我們可以說 keygrip 是「和 GPG 無關」的識別。  
+你會發現，keygrip 只包含公鑰，而 fingerprint 則是包含了一堆 gpg 內部資訊，因此我們可以說 keygrip 是「和 GPG 無關」的識別。
 
-雖然兩者都能識別主金鑰和子金鑰，但是在我自己的使用中，通常 fingerprint 會用來識別主金鑰（整個 keyring），keygrip 會拿來特別指定要用哪一個子金鑰。  
+雖然兩者都能識別主金鑰和子金鑰，但是在我自己的使用中，通常 fingerprint 會用來識別主金鑰（整個 keyring），keygrip 會拿來特別指定要用哪一個子金鑰。
 
 ## 信任網
+
 > **Information**
-> 接下來的「公鑰」通常是指 "public key packet"，也就是指令 `gpg --export` 預設會吐出來的東西，裡面包含主公鑰、子公鑰們、uid 資訊以及別人對這個公鑰的簽章等等  
+> 接下來的「公鑰」通常是指 "public key packet"，也就是指令 `gpg --export` 預設會吐出來的東西，裡面包含主公鑰、子公鑰們、uid 資訊以及別人對這個公鑰的簽章等等
 
 現在想像一個情境，Alice 要加密一段訊息傳給 Bella，所以他需要去找到 Bella 的公鑰，Alice 上網找到一個公鑰的 uid 是 `Bella <b@exmaple.com>`，於是他就用這份公鑰加密訊息後傳給 Bella，但是這份公鑰其實是 C 偽裝的，那這樣祕密訊息就會被 C 知道。
 
-為了解決這個問題，Alice 拿到公鑰後要開始傳訊息之前，需要先用一個可信的通道和 Bella 確認公鑰是否正確（當面比對 fingerprint 之類的），接者 Alice 用他的主密鑰幫 Bella 的公鑰簽章（Alice sign Bella's key），做出宣告「Alice 認為這把公鑰有效（來源和上面記載的是一致的，都是 Bella」（this key is validated）。這時候 Bella 也跟 Charlie 確認過公鑰並簽章（Bella sign Charlie's key），如果 Alice 「完整」信任 Bella 會認真確認公鑰真實性才簽章，那他就可以拿 Bella 的公鑰去驗證 Bella 真的簽章過 Charlie 的公鑰，那麼 Alice 可以根據這個結果相信 Charlie 的公鑰是真的，不用親自去找 Charlie 確認。  
+為了解決這個問題，Alice 拿到公鑰後要開始傳訊息之前，需要先用一個可信的通道和 Bella 確認公鑰是否正確（當面比對 fingerprint 之類的），接者 Alice 用他的主密鑰幫 Bella 的公鑰簽章（Alice sign Bella's key），做出宣告「Alice 認為這把公鑰有效（來源和上面記載的是一致的，都是 Bella」（this key is validated）。這時候 Bella 也跟 Charlie 確認過公鑰並簽章（Bella sign Charlie's key），如果 Alice 「完整」信任 Bella 會認真確認公鑰真實性才簽章，那他就可以拿 Bella 的公鑰去驗證 Bella 真的簽章過 Charlie 的公鑰，那麼 Alice 可以根據這個結果相信 Charlie 的公鑰是真的，不用親自去找 Charlie 確認。
 
-> 「相信公鑰有效（真實性）」和「信任簽章公鑰的人」在 GPG 裡面都是 "trust" ，有點容易搞混，但中文還是可以稍微區分開來的  
+> 「相信公鑰有效（真實性）」和「信任簽章公鑰的人」在 GPG 裡面都是 "trust" ，有點容易搞混，但中文還是可以稍微區分開來的
 
-對於公鑰簽章簽發者的信任層級可以分成以下五個  
+對於公鑰簽章簽發者的信任層級可以分成以下五個
 
 1. 不知道
 2. 不信任
@@ -79,12 +81,12 @@ fingerprint 和 keygrip 都是要對於金鑰對識別，他們都是把要識�
 
 目前為止的機制，我們要確認公鑰有效需要整條信任鍊之間都是「完整信任」且都被前一個確認是有效，但是這樣缺乏彈性。GPG 採用一個巧妙的方法來擴展目前的機制，一把公鑰如果滿足以下條件，就會被認定是有效的：
 
-1. 被足夠多的有效的人（公鑰是有效的）簽章，這意味下面條件至少要滿足一個  
-	1. 你親自對他簽章
-	2. 被一個「完整信任」的人簽章
-	3. 被三個「半信半疑」的人簽章
+1. 被足夠多的有效的人（公鑰是有效的）簽章，這意味下面條件至少要滿足一個
+    1. 你親自對他簽章
+    2. 被一個「完整信任」的人簽章
+    3. 被三個「半信半疑」的人簽章
 2. 從自己出發到那把公鑰的最短路徑小於等於五步
- 
+
 > 在實際使用時需要幾個半信半疑的人以及路徑長度限制都是可以調整的，這裡寫的是 GPG 預設的值
 
 ---
@@ -107,24 +109,24 @@ Alice--+            +-->Daniel----->Edson------>Galen
 > `$ gpg --no-options --with-colons --fixed-list-mode --list-sigs | sig2dot -a -u "[User ID not found]" > myLUG.dot ; neato -Tpng myLUG.dot > myLUG.png ; open myLUG.png`  
 > https://github.com/bmarwell/sig2dot2
 
-
 舉例來說，上圖以 Alice 為中心到 Galen 等六個人的信任關係，箭頭 `A--->B` 代表 A 為 B 的公鑰簽章，在以下的例子，我們調整為只需要兩個半信半疑的有效公鑰信任就可以信任為有效公鑰，但路徑不能超過三。
 
 下表是基於這個信任網 Alice 對其他人的信任層級和推導出來的公鑰有效性結果。  
 舉例來說，第一個情況是雖然 Alice 確認了 Bella 和 Charlie 的公鑰有效性，但是他只相信 Charlie ，根據這個可以推導出來 Daniel, Edson, Frank 三人的公鑰都是有效的，因為 Alice 對 Charlie 是完整信任，因此 Charlie 確認過的公鑰對於 Alice 都是有效的。
 
-| 情境  | 半信半疑               | 完整信任             | 一半有效      | 完整有效                      |
-| :---: | :---                   | :---                 | :---          | :---                          |
-| 1     |                        | Charlie              |               | Bella, Charlie, Daniel, Frank |
-| 2     | Bella, Chalir          |                      | Feank         | Bella, Charlie, Daniel        |
-| 3     | Charlie, Daniel        |                      | Daniel, Frank | Bella, Charlie                |
-| 4     | Charlie, Daniel, Bella |                      | Edson         | Bella, Charlie, Frank         |
-| 5     |                        | Bella, Daniel, Edson |               | Bella, Daniel, Edson, Frank   |
+| 情境 | 半信半疑               | 完整信任             | 一半有效      | 完整有效                      |
+| :--: | :--------------------- | :------------------- | :------------ | :---------------------------- |
+|  1   |                        | Charlie              |               | Bella, Charlie, Daniel, Frank |
+|  2   | Bella, Chalir          |                      | Feank         | Bella, Charlie, Daniel        |
+|  3   | Charlie, Daniel        |                      | Daniel, Frank | Bella, Charlie                |
+|  4   | Charlie, Daniel, Bella |                      | Edson         | Bella, Charlie, Frank         |
+|  5   |                        | Bella, Daniel, Edson |               | Bella, Daniel, Edson, Frank   |
+
 > 需要實驗驗證
 
 根據我的理解，首先是自己簽的公鑰一定是有效的，再來是完整相信的人簽的也是有效，再來是夠多的半信半疑的人都簽章的公鑰也有效，最後你會發現，能夠延伸到最遠的有效公鑰是信任的人的外圍一圈不超過長度限制的地方。
 
---- 
+---
 
 信任網要解決的不是技術問題，是社交問題，就算今天 GPG 的設計改成有一個權威的驗證中心去發布每一把公鑰，還是會遇到一個問題，我憑什麼相信這個驗證中心？因此 GPG 採用的信任網可以讓我們從真實世界會接觸的人開始建立信任網，再漸漸地把信任網擴張，這時我們不是因為「這是權威」而信任一把公鑰而是因為我們做出足夠的判斷才決定一把未知公鑰是否可信。
 

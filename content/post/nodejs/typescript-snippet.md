@@ -7,17 +7,19 @@ categories = ['nodejs']
 +++
 
 # TypeScript
-## keyof 
+
+## keyof
+
 ```typescript
 type SettingOptions = {
-	fontSize: number,
-	lineHeight: number,
-	letterSpacing: number,
-	color: `#${string}`,
-	backgroundColor: `#${string}`,
-}
+	fontSize: number;
+	lineHeight: number;
+	letterSpacing: number;
+	color: `#${string}`;
+	backgroundColor: `#${string}`;
+};
 
-type OptionKey = keyof SettingOptions // 'fontSize' | 'lineHeight' | 'letterSpacing' ...
+type OptionKey = keyof SettingOptions; // 'fontSize' | 'lineHeight' | 'letterSpacing' ...
 ```
 
 [docs: keyof](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html)

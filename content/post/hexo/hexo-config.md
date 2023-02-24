@@ -8,6 +8,7 @@ date = "2020-02-12"
 # 各種設定值嘗試
 
 ## Highlight
+
 ```diff
 - # highlight: rainbow
 + highlight: rainbow
@@ -27,4 +28,3 @@ console.log(a);
 int a = 7122;
 cout << a;
 ```
-

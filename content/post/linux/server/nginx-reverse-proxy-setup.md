@@ -12,5 +12,4 @@ categories = [ "linux", "server" ]
 所以要用 reverse proxy 來代理我們的多項服務  
 原本我只會用 apache2
 後來不知道是不是因為 apache 太肥導致有時候回應時間會很久  
-所以我起了將 proxy server 換成 nginx 的想法  
-
+所以我起了將 proxy server 換成 nginx 的想法
