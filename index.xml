@@ -47,8 +47,9 @@
 &lt;p>如果說你沒有中文的需求，現在就可以用 &lt;code>pandoc index.md -o out.pdf&lt;/code> 產生 PDF 檔了&lt;/p>
 &lt;h2 id="中文">中文&lt;/h2>
 &lt;blockquote>
-&lt;p>&lt;strong>Warning&lt;/strong>&lt;br>
-我後來不知道搞砸了什麼，反正目前中文是壞的，找到一個用網頁排版再用瀏覽器內建列印功能輸出成 PDF 的網頁：https://github.com/realdennis/md2pdf&lt;/p>
+&lt;p>&lt;strong>Warning&lt;/strong>
+&lt;del>我後來不知道搞砸了什麼，反正目前中文是壞的，找到一個用網頁排版再用瀏覽器內建列印功能輸出成 PDF 的網頁：https://github.com/realdennis/md2pdf&lt;/del>
+已解決&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="安裝字型">安裝字型&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -80,10 +81,13 @@
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $ pandoc index.md -o out.pdf -V CJKmainfont=&amp;#39;Noto Serif TC&amp;#39;
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $ pandoc index.md -o out.pdf -V CJKmainfont=&amp;#39;Noto Serif TC&amp;#39; --pdf-engine xelatex
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="範本">範本&lt;/h2>
+&lt;/div>&lt;blockquote>
+&lt;p>2023/02/24 新增：要加上 &lt;code>--pdf-engine xelatex&lt;/code> 才能正確輸出中文，原因是下面用的範本，他只有在使用 xelatex 和 lualatex 時才會把 &lt;code>CJKmainfont&lt;/code> 傳遞下去&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="範本">範本&lt;/h2>
 &lt;p>pandoc 有預設的 LaTeX 範本，但是不怎麼好看，可以用網路上開源的範本，或是花時間自己刻出最適合自己的&lt;/p>
 &lt;h3 id="eisvogel">Eisvogel&lt;/h3>
 &lt;p>&lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template" target="_blank" rel="noopener"
@@ -211,12 +215,12 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;blockquote>
-&lt;p>&lt;strong>Info&lt;/strong>&lt;br>
+&lt;p>&lt;strong>Info&lt;/strong>
 關於如何在 codeblock 中印出反單引號：&lt;a class="link" href="https://stackoverflow.com/questions/55586867/how-to-put-in-markdown-an-inline-code-block-that-only-contains-a-backtick-char" target="_blank" rel="noopener"
->stackoverflow&lt;/a>&lt;br>
+>stackoverflow&lt;/a>
 簡單來說如果裡面要印 &lt;code>n&lt;/code> 個反單引號，外面就要用 &lt;code>n+1&lt;/code> 個反單引號括起來&lt;/p>
 &lt;/blockquote>
-&lt;p>然後這是截圖：&lt;br>
+&lt;p>然後這是截圖：
 &lt;figure>&lt;img src="./out-1.png"/>&lt;figcaption>
 &lt;h4>page 1 of out.pdf&lt;/h4>
 &lt;/figcaption>
