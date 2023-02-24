@@ -3,7 +3,7 @@ title = "Markdown to PDF"
 date = 2023-02-21T22:07:38+08:00
 tags = ['markdown', 'pdf', 'pandoc', 'latex']
 categories = ['other']
-# image = 
+# image =
 +++
 
 # Markdown to PDF
@@ -16,8 +16,9 @@ categories = ['other']
 
 ## 中文
 
-> **Warning**  
-> 我後來不知道搞砸了什麼，反正目前中文是壞的，找到一個用網頁排版再用瀏覽器內建列印功能輸出成 PDF 的網頁：https://github.com/realdennis/md2pdf
+> **Warning**
+> ~~我後來不知道搞砸了什麼，反正目前中文是壞的，找到一個用網頁排版再用瀏覽器內建列印功能輸出成 PDF 的網頁：https://github.com/realdennis/md2pdf~~
+> 已解決
 
 ### 安裝字型
 
@@ -40,8 +41,10 @@ CJKmainfont: 'Noto Serif TC'
 #### 參數
 
 ```
- $ pandoc index.md -o out.pdf -V CJKmainfont='Noto Serif TC'
+ $ pandoc index.md -o out.pdf -V CJKmainfont='Noto Serif TC' --pdf-engine xelatex
 ```
+
+> 2023/02/24 新增：要加上 `--pdf-engine xelatex` 才能正確輸出中文，原因是下面用的範本，他只有在使用 xelatex 和 lualatex 時才會把 `CJKmainfont` 傳遞下去
 
 ## 範本
 
@@ -115,11 +118,11 @@ func main(){
 ![](./blog.png)
 ````
 
-> **Info**  
-> 關於如何在 codeblock 中印出反單引號：[stackoverflow](https://stackoverflow.com/questions/55586867/how-to-put-in-markdown-an-inline-code-block-that-only-contains-a-backtick-char)  
+> **Info**
+> 關於如何在 codeblock 中印出反單引號：[stackoverflow](https://stackoverflow.com/questions/55586867/how-to-put-in-markdown-an-inline-code-block-that-only-contains-a-backtick-char)
 > 簡單來說如果裡面要印 `n` 個反單引號，外面就要用 `n+1` 個反單引號括起來
 
-然後這是截圖：  
+然後這是截圖：
 {{< figure src="./out-1.png" title="page 1 of out.pdf" >}}
 {{< figure src="./out-2.png" title="page 2 of out.pdf" >}}
 
