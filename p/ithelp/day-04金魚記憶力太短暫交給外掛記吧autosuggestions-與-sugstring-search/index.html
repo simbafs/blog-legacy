@@ -75,7 +75,7 @@
 </span></span><span class=line><span class=cl><span class=gi>+ zplug &#39;zsh-users/zsh-history-substring-search&#39;
 </span></span></span></code></pre></td></tr></table></div></div><p>然後要綁定按鍵，一樣是放在 <code>~/.zshrc</code>，位置隨便</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-zsh data-lang=zsh><span class=line><span class=cl>bindkey <span class=s2>&#34;</span><span class=nv>$terminfo</span><span class=s2>[kcuu1]&#34;</span> history-substring-search-up 
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-zsh data-lang=zsh><span class=line><span class=cl>bindkey <span class=s2>&#34;</span><span class=nv>$terminfo</span><span class=s2>[kcuu1]&#34;</span> history-substring-search-up
 </span></span><span class=line><span class=cl>bindkey <span class=s2>&#34;</span><span class=nv>$terminfo</span><span class=s2>[kcud1]&#34;</span> history-substring-search-down
 </span></span></code></pre></td></tr></table></div></div><p><strong>重開終端機</strong>後就可以搜尋同樣開頭的指令紀錄了</p><h1 id=問題為什麼開新的終端機-autosuggestions-讀不到以前下過得指令>[問題]為什麼開新的終端機 autosuggestions 讀不到以前下過得指令？</h1><p>這是因為我們的 <code>~/.zshrc</code> 中沒有設定把 history 存下來，所以 autosuggestions 只能拿到<strong>目前這個終端機</strong>的紀錄，一關掉紀錄就不見了，autosuggestions 自然找不到。<br>要解決也很簡單，讓他把 history <strong>寫進檔案</strong>就好了，在 <code>~/.zshrc</code> 中任意地方新增這兩行</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2

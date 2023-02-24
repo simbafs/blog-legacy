@@ -26,14 +26,14 @@
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>SECRET</span> <span class=o>=</span> <span class=nx>process</span><span class=p>.</span><span class=nx>env</span><span class=p>.</span><span class=nx>HCAPTCHA_SECRET_KEY</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=k>if</span><span class=p>(</span><span class=nx>SECRET</span><span class=p>){</span>
-</span></span><span class=line><span class=cl>  <span class=c1>// 這個 route 就是本來接收/處理 form 傳遞資料進來來的 route，只是加一個 captcha.middleware.validate(SECRET)
-</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>router</span><span class=p>.</span><span class=nx>post</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=nx>captcha</span><span class=p>.</span><span class=nx>middleware</span><span class=p>.</span><span class=nx>validate</span><span class=p>(</span><span class=nx>SECRET</span><span class=p>),</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>json</span><span class=p>({</span>
-</span></span><span class=line><span class=cl>      <span class=nx>message</span><span class=o>:</span> <span class=s1>&#39;verified!&#39;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>      <span class=nx>hcaptcha</span><span class=o>:</span> <span class=nx>req</span><span class=p>.</span><span class=nx>hcaptcha</span>
-</span></span><span class=line><span class=cl>    <span class=p>});</span>
-</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nx>SECRET</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=c1>// 這個 route 就是本來接收/處理 form 傳遞資料進來來的 route，只是加一個 captcha.middleware.validate(SECRET)
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=nx>router</span><span class=p>.</span><span class=nx>post</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=nx>captcha</span><span class=p>.</span><span class=nx>middleware</span><span class=p>.</span><span class=nx>validate</span><span class=p>(</span><span class=nx>SECRET</span><span class=p>),</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=nx>res</span><span class=p>.</span><span class=nx>json</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>			<span class=nx>message</span><span class=o>:</span> <span class=s1>&#39;verified!&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>			<span class=nx>hcaptcha</span><span class=o>:</span> <span class=nx>req</span><span class=p>.</span><span class=nx>hcaptcha</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>		<span class=p>});</span>
+</span></span><span class=line><span class=cl>	<span class=p>});</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=nx>module</span><span class=p>.</span><span class=nx>exports</span> <span class=o>=</span> <span class=nx>router</span><span class=p>;</span>
 </span></span></code></pre></td></tr></table></div></div><blockquote><p>很不幸的，你會發現不管怎麼試，都驗證都不會通過，因為有一個 README.md 沒寫的 bug</p></blockquote><ol start=3><li>解 bug
@@ -56,21 +56,31 @@
 </span><span class=lnt>16
 </span><span class=lnt>17
 </span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>router</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express&#39;</span><span class=p>).</span><span class=nx>Router</span><span class=p>();</span>
 </span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>captcha</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;express-hcaptcha&#39;</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>SECRET</span> <span class=o>=</span> <span class=nx>process</span><span class=p>.</span><span class=nx>env</span><span class=p>.</span><span class=nx>HCAPTCHA_SECRET_KEY</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=k>if</span><span class=p>(</span><span class=nx>SECRET</span><span class=p>){</span>
-</span></span><span class=line><span class=cl>  <span class=nx>router</span><span class=p>.</span><span class=nx>post</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>req</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>token</span> <span class=o>=</span> <span class=nx>req</span><span class=p>.</span><span class=nx>body</span><span class=p>[</span><span class=s1>&#39;h-captcha-response&#39;</span><span class=p>];</span>
-</span></span><span class=line><span class=cl>    <span class=nx>next</span><span class=p>();</span>
-</span></span><span class=line><span class=cl>  <span class=p>},</span> <span class=nx>captcha</span><span class=p>.</span><span class=nx>middleware</span><span class=p>.</span><span class=nx>validate</span><span class=p>(</span><span class=nx>SECRET</span><span class=p>),</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>json</span><span class=p>({</span>
-</span></span><span class=line><span class=cl>      <span class=nx>message</span><span class=o>:</span> <span class=s1>&#39;verified!&#39;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>      <span class=nx>hcaptcha</span><span class=o>:</span> <span class=nx>req</span><span class=p>.</span><span class=nx>hcaptcha</span>
-</span></span><span class=line><span class=cl>    <span class=p>});</span>
-</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nx>SECRET</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=nx>router</span><span class=p>.</span><span class=nx>post</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>		<span class=s1>&#39;/&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>		<span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>			<span class=nx>req</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>token</span> <span class=o>=</span> <span class=nx>req</span><span class=p>.</span><span class=nx>body</span><span class=p>[</span><span class=s1>&#39;h-captcha-response&#39;</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>			<span class=nx>next</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>		<span class=p>},</span>
+</span></span><span class=line><span class=cl>		<span class=nx>captcha</span><span class=p>.</span><span class=nx>middleware</span><span class=p>.</span><span class=nx>validate</span><span class=p>(</span><span class=nx>SECRET</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>		<span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>			<span class=nx>res</span><span class=p>.</span><span class=nx>json</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>				<span class=nx>message</span><span class=o>:</span> <span class=s1>&#39;verified!&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>				<span class=nx>hcaptcha</span><span class=o>:</span> <span class=nx>req</span><span class=p>.</span><span class=nx>hcaptcha</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>			<span class=p>});</span>
+</span></span><span class=line><span class=cl>		<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=p>);</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=nx>module</span><span class=p>.</span><span class=nx>exports</span> <span class=o>=</span> <span class=nx>router</span><span class=p>;</span>

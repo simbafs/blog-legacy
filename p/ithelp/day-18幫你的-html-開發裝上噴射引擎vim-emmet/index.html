@@ -25,11 +25,7 @@
 </span><span class=lnt>22
 </span><span class=lnt>23
 </span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>.tab&gt;(tr#col$&gt;td*3)*4
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>會被解析成 
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>.tab&gt;(tr#col$&gt;td*3)*4 會被解析成
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;tab&#34;</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl>	<span class=p>&lt;</span><span class=nt>tr</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;col1&#34;</span><span class=p>&gt;</span>
@@ -58,21 +54,13 @@
 </span></span></span></code></pre></td></tr></table></div></div><p>然後記得修改後需要打指令 <code>:so % | PlugInstall</code> 安裝</p><h2 id=coc-emmet>coc-emmet</h2><p>coc-emmet 是個可選可不選的 coc 擴充，可以讓你不用按 emmet-vim 的快捷鍵。雖然這個擴充幾乎可以代替 emmet-vim，但是因為他依靠 coc.nvim，所以有時候他會跳不出建議，例如右括號結尾：<code>(p>div.title$)</code>，你還是只能按 emmet-vim 的快捷鍵<br>這個擴充還有個問題，像是這樣的 emmet 程式碼 <code>(p>div.title$)*6</code> 用 coc.nvim 展開後用 <code>u</code> 退回，<code>*6</code> 就神奇的消失了！（也許是我設定的問題，但不是什麼大問題）<br>總而言之這個擴充相當不錯，可以裝一下</p><h2 id=產生標籤>產生標籤</h2><p>emmet 最基本功能是幫你寫角括號，像是這樣<br><code>-></code> 左邊是 emmet 程式碼，右邊是根據左邊產生出來的 HTML</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>div 
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>-&gt; 
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>div -&gt;
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
 </span></span></code></pre></td></tr></table></div></div><h2 id=內容>內容</h2><p>在標籤後面加上大括號 <code>{}</code>，大括號內的文字就會被放進標籤裡面</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>p{hello world}
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>-&gt;
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>p{hello world} -&gt;
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span>hello world<span class=p>&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
 </span></span></code></pre></td></tr></table></div></div><h2 id=屬性>屬性</h2><p>你可以幫標籤加上屬性，在標籤後面加上 <code>[key=value]</code> 就可以指定屬性。<br>其中 <code>id</code> 和 <code>class</code> 因為太常用了，所以有自己專屬的縮寫，在井字號 <code>#</code> 後面的是 <code>id</code>，在點 <code>.</code> 後面的是 <code>class</code><br>而 <code>div</code> 這個標籤因為很常用，所以如果直接用井字號或是點可以不用寫 div（第三個範例）</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
@@ -82,22 +70,22 @@
 </span><span class=lnt>5
 </span><span class=lnt>6
 </span><span class=lnt>7
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>h1[hidden=&#34;hidden&#34;] -&gt; <span class=p>&lt;</span><span class=nt>h1</span> <span class=na>hidden</span><span class=o>=</span><span class=s>&#34;hidden&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>h1[hidden=&#34;hidden&#34;] -&gt;
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>h1</span> <span class=na>hidden</span><span class=o>=</span><span class=s>&#34;hidden&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>h1.title -&gt; <span class=p>&lt;</span><span class=nt>hi</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;title&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>hi</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#username -&gt; <span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;username&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>#username -&gt;
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;username&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>button.bg-blue.round#login -&gt; <span class=p>&lt;</span><span class=nt>button</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;login&#34;</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;bg-blue round&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
 </span></span></code></pre></td></tr></table></div></div><h2 id=並排>並排</h2><p>你可以用加號 <code>+</code> 讓兩個標籤並排</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>h1+h2
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>-&gt; 
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>h1+h2 -&gt;
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>h1</span><span class=p>&gt;&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>h2</span><span class=p>&gt;&lt;/</span><span class=nt>h2</span><span class=p>&gt;</span>
@@ -120,29 +108,13 @@
 </span><span class=lnt>17
 </span><span class=lnt>18
 </span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>div&gt;span 
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>-&gt; 
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>div&gt;span -&gt;
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl>	<span class=p>&lt;</span><span class=nt>span</span><span class=p>&gt;&lt;/</span><span class=nt>span</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>------------
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>div&gt;spam&gt;h1&gt;a
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>-&gt; 
+</span></span><span class=line><span class=cl>------------ div&gt;spam&gt;h1&gt;a -&gt;
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl>	<span class=p>&lt;</span><span class=nt>spam</span><span class=p>&gt;</span>
@@ -150,11 +122,7 @@
 </span></span><span class=line><span class=cl>	<span class=p>&lt;/</span><span class=nt>spam</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>------------
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>div.main&gt;h1.bg-green.bold&gt;a
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>-&gt;
+</span></span><span class=line><span class=cl>------------ div.main&gt;h1.bg-green.bold&gt;a -&gt;
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;main&#34;</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl>	<span class=p>&lt;</span><span class=nt>h1</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;bg-green bold&#34;</span><span class=p>&gt;&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>a</span><span class=p>&gt;&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
@@ -165,46 +133,22 @@
 </span><span class=lnt>4
 </span><span class=lnt>5
 </span><span class=lnt>6
-</span><span class=lnt>7
-</span><span class=lnt>8
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>div&gt;(h1+h2)
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>-&gt; 
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>div&gt;(h1+h2) -&gt;
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl>	<span class=p>&lt;</span><span class=nt>h1</span><span class=p>&gt;&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl>	<span class=p>&lt;</span><span class=nt>h2</span><span class=p>&gt;&lt;/</span><span class=nt>h2</span><span class=p>&gt;</span>
 </span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
-</span></span></code></pre></td></tr></table></div></div><h2 id=假內容產生>假內容產生</h2><p>有一個運算子名稱特別奇怪，他可以幫你產生假內容，還可以加數字指定假內容要有幾個單字</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>lorem
+</span></span></code></pre></td></tr></table></div></div><h2 id=假內容產生>假內容產生</h2><p>有一個運算子名稱特別奇怪，他可以幫你產生假內容，還可以加數字指定假內容要有幾個單字</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>lorem -&gt; Sit elit consectetur ullam eius aliquam repellat! Illo quaerat quisquam minima laboriosam fugit sunt Ex
+</span></span><span class=line><span class=cl>voluptas modi laboriosam commodi optio, sapiente. Quasi perferendis aliquam reprehenderit in praesentium Deserunt
+</span></span><span class=line><span class=cl>inventore natus. ------------ p&gt;lorem4 -&gt;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>-&gt;
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>Sit elit consectetur ullam eius aliquam repellat! Illo quaerat quisquam minima laboriosam fugit sunt Ex voluptas modi laboriosam commodi optio, sapiente. Quasi perferendis aliquam reprehenderit in praesentium Deserunt inventore natus.
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>------------
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>p&gt;lorem4
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>-&gt;
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>	Lorem sunt esse odio?
-</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span>Lorem sunt esse odio?<span class=p>&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
 </span></span></code></pre></td></tr></table></div></div><h1 id=結尾>結尾</h1><p>今天的內容差不多就到這裡，但是 emmet 精華的部份還沒出來呢！明天今天的程式碼一行可以產生五六行，加上明天的重複、迭代後四五百行都是小 case（呃，這麼長有點誇張）</p></section><footer class=article-footer><section class=article-tags><a href=/tags/cli/>cli</a>
 <a href=/tags/terminal/>terminal</a>
 <a href=/tags/software-development/>software development</a>

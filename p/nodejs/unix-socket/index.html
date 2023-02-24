@@ -15,7 +15,7 @@
 </span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>();</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;Hello World\n&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;Hello World\n&#39;</span><span class=p>);</span>
 </span></span><span class=line><span class=cl><span class=p>});</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=s1>&#39;/tmp/express.sock&#39;</span><span class=p>);</span>
@@ -43,13 +43,13 @@
 </span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>();</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;Hello World\n&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;Hello World\n&#39;</span><span class=p>);</span>
 </span></span><span class=line><span class=cl><span class=p>});</span>
 </span></span><span class=line><span class=cl><span class=nx>app</span><span class=p>.</span><span class=nx>listen</span><span class=p>(</span><span class=s1>&#39;/tmp/express.sock&#39;</span><span class=p>,</span> <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>);</span>
 </span></span><span class=line><span class=cl><span class=nx>process</span><span class=p>.</span><span class=nx>on</span><span class=p>(</span><span class=s1>&#39;SIGINT&#39;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=nx>fs</span><span class=p>.</span><span class=nx>unlinkSync</span><span class=p>(</span><span class=s1>&#39;/tmp/express.sock&#39;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>  <span class=nx>process</span><span class=p>.</span><span class=nx>exit</span><span class=p>(</span><span class=mi>0</span><span class=p>);</span>
-</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>	<span class=nx>fs</span><span class=p>.</span><span class=nx>unlinkSync</span><span class=p>(</span><span class=s1>&#39;/tmp/express.sock&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=nx>process</span><span class=p>.</span><span class=nx>exit</span><span class=p>(</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>});</span>
 </span></span></code></pre></td></tr></table></div></div><h2 id=測試>測試</h2><p>弄完了伺服器
 要怎麼測試呢？
 這時候可以用 <code>curl</code> 來測試</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
@@ -72,7 +72,7 @@
 </span></span><span class=line><span class=cl>  server_name t.localhost;
 </span></span><span class=line><span class=cl>  location / {
 </span></span><span class=line><span class=cl>    proxy_pass http://unix:/tmp/express.sock:/;
-</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>  }
 </span></span><span class=line><span class=cl>}
 </span></span></code></pre></td></tr></table></div></div><p>然後在 <code>/etc/hosts</code> 新增一條</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1

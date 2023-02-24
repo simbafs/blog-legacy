@@ -5,8 +5,7 @@
 &lt;h2 id="strapi-的優點">strapi 的優點&lt;/h2>
 &lt;ol>
 &lt;li>他的界面完善&lt;/li>
-&lt;li>支援多種 DB&lt;/li>
-&lt;/ol>
+&lt;li>支援多種 DB
 &lt;blockquote>
 &lt;p>MySQL &amp;gt;= 5.6&lt;br>
 MariaDB &amp;gt;= 10.1&lt;br>
@@ -14,7 +13,7 @@ PostgreSQL &amp;gt;= 10&lt;br>
 SQLite &amp;gt;= 3&lt;br>
 MongoDB &amp;gt;= 3.6&lt;/p>
 &lt;/blockquote>
-&lt;ol start="3">
+&lt;/li>
 &lt;li>存取權限控制&lt;/li>
 &lt;li>外掛&lt;/li>
 &lt;/ol>

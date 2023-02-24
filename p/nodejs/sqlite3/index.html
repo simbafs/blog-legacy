@@ -25,31 +25,27 @@
 </span><span class=lnt>19
 </span><span class=lnt>20
 </span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 因為這個需要 await 所以要放在 async 函數裡
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>(</span><span class=kr>async</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>sqlite</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s1>&#39;sqlite-async&#39;</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>	<span class=c1>// 這裡因為開 DB 會延遲，所以要 await 一下，不然等等會 undefined
 </span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=kr>const</span> <span class=nx>Url</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>sqlite</span><span class=p>.</span><span class=nx>open</span><span class=p>(</span><span class=s1>&#39;Url.db&#39;</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>	<span class=c1>// 這裡不能加 await 不然出錯
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>Url</span><span class=p>.</span><span class=nx>run</span><span class=p>(</span><span class=sb>`CREATE TABLE IF NOT EXISTS Url (
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=nx>Url</span><span class=p>.</span><span class=nx>run</span><span class=p>(</span><span class=sb>`CREATE TABLE IF NOT EXISTS Url (
 </span></span></span><span class=line><span class=cl><span class=sb>        url STRING,
 </span></span></span><span class=line><span class=cl><span class=sb>        code STRING
 </span></span></span><span class=line><span class=cl><span class=sb>    )`</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>	<span class=c1>// 這裡也要加 await 因為這也是 async
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kr>const</span> <span class=nx>stat</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>Url</span><span class=p>.</span><span class=nx>prepare</span><span class=p>(</span><span class=sb>`INSERT INTO Url VALUES (?, ?)`</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=nx>stat</span><span class=p>.</span><span class=nx>run</span><span class=p>(</span><span class=s1>&#39;https://google.com&#39;</span><span class=p>,</span> <span class=s1>&#39;goo&#39;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=nx>stat</span><span class=p>.</span><span class=nx>run</span><span class=p>(</span><span class=s1>&#39;https://youtube.com&#39;</span><span class=p>,</span> <span class=s1>&#39;yt&#39;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=nx>stat</span><span class=p>.</span><span class=nx>run</span><span class=p>(</span><span class=s1>&#39;https://gmail.com&#39;</span><span class=p>,</span> <span class=s1>&#39;gmail&#39;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=nx>stat</span><span class=p>.</span><span class=nx>run</span><span class=p>(</span><span class=s1>&#39;https://ckcsc,net&#39;</span><span class=p>,</span> <span class=s1>&#39;ckcsc&#39;</span><span class=p>);</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=kr>const</span> <span class=nx>stat</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>Url</span><span class=p>.</span><span class=nx>prepare</span><span class=p>(</span><span class=sb>`INSERT INTO Url VALUES (?, ?)`</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=nx>stat</span><span class=p>.</span><span class=nx>run</span><span class=p>(</span><span class=s1>&#39;https://google.com&#39;</span><span class=p>,</span> <span class=s1>&#39;goo&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=nx>stat</span><span class=p>.</span><span class=nx>run</span><span class=p>(</span><span class=s1>&#39;https://youtube.com&#39;</span><span class=p>,</span> <span class=s1>&#39;yt&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=nx>stat</span><span class=p>.</span><span class=nx>run</span><span class=p>(</span><span class=s1>&#39;https://gmail.com&#39;</span><span class=p>,</span> <span class=s1>&#39;gmail&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=nx>stat</span><span class=p>.</span><span class=nx>run</span><span class=p>(</span><span class=s1>&#39;https://ckcsc,net&#39;</span><span class=p>,</span> <span class=s1>&#39;ckcsc&#39;</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>	<span class=c1>// 這行和上面四行選一個加 await 否則會有些家不進去
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kr>await</span> <span class=nx>stat</span><span class=p>.</span><span class=nx>finalize</span><span class=p>();</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=kr>await</span> <span class=nx>stat</span><span class=p>.</span><span class=nx>finalize</span><span class=p>();</span>
 </span></span><span class=line><span class=cl>	<span class=c1>// 這裡用 then 也可以用 await，then 會回傳一個包含回傳值的陣列
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>Url</span><span class=p>.</span><span class=nx>all</span><span class=p>(</span><span class=s2>&#34;SELECT * FROM Url&#34;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>        <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>        <span class=p>.</span><span class=k>catch</span><span class=p>(</span><span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>);</span>
-</span></span><span class=line><span class=cl><span class=p>})()</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=nx>Url</span><span class=p>.</span><span class=nx>all</span><span class=p>(</span><span class=s1>&#39;SELECT * FROM Url&#39;</span><span class=p>).</span><span class=nx>then</span><span class=p>(</span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>).</span><span class=k>catch</span><span class=p>(</span><span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>})();</span>
 </span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/node/>node</a>
 <a href=/tags/sqlite/>sqlite</a>
 <a href=/tags/async/>async</a>

@@ -68,7 +68,7 @@
 &lt;h2 id="ipns">IPNS&lt;/h2>
 &lt;p>ipfs 有個介紹到這裡，有個小問題，一個檔案只要一更改，位址（CID）就會改變，這對於網路存取很不友善，誰知道那一大串 hash 要去哪裡找？因此 ipfs 提供了一個方案：IPNS&lt;/p>
 &lt;h3 id="publish">publish&lt;/h3>
-&lt;p>首先，我們先準備一個CID &lt;code>QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&lt;/code>，他的內容就一個字「hi」。一樣 add 之後，就要來使用 ipns 了&lt;/p>
+&lt;p>首先，我們先準備一個 CID &lt;code>QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&lt;/code>，他的內容就一個字「hi」。一樣 add 之後，就要來使用 ipns 了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -258,8 +258,7 @@ gateway timeout&amp;hellip;&lt;/p>
 &lt;p>&lt;img src="https://blog.simbafs.cc/filecoin.png"
 loading="lazy"
 alt="filecoin"
->
-&lt;a class="link" href="https://crypto.com/price/zh-TW/filecoin" target="_blank" rel="noopener"
+> &amp;gt; &lt;a class="link" href="https://crypto.com/price/zh-TW/filecoin" target="_blank" rel="noopener"
 >source: https://crypto.com/price/zh-TW/filecoin&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;p>這樣的機制能不能讓更多人願意做種？很難說&lt;/p>

@@ -558,12 +558,11 @@
 &lt;ol>
 &lt;li>去 &lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
 >https://extensions.libreoffice.org/en/extensions/show/code-highlighter&lt;/a> 下載最新的外掛&lt;/li>
-&lt;li>把檔名前面的前綴刪掉，&lt;/li>
-&lt;/ol>
+&lt;li>把檔名前面的前綴刪掉，
 &lt;blockquote>
 &lt;p>例如：&lt;code>ea4db15f_codehighlighter.oxt&lt;/code> -&amp;gt; &lt;code>codehighlighter.oxt&lt;/code>&lt;/p>
 &lt;/blockquote>
-&lt;ol start="3">
+&lt;/li>
 &lt;li>安裝相依性套件&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -577,26 +576,27 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ol start="4">
-&lt;li>安裝外掛&lt;/li>
-&lt;/ol>
+&lt;li>安裝外掛
 &lt;blockquote>
 &lt;p>工具 &amp;gt; 擴充套件管理員 &amp;gt; 加入 &amp;gt; 選擇你的檔案&lt;/p>
 &lt;/blockquote>
+&lt;/li>
+&lt;/ol>
 &lt;h1 id="使用">使用&lt;/h1>
 &lt;ol>
-&lt;li>插入文字方塊&lt;/li>
-&lt;/ol>
+&lt;li>插入文字方塊
 &lt;blockquote>
 &lt;p>插入 &amp;gt; 文字方塊&lt;/p>
 &lt;/blockquote>
-&lt;ol start="2">
+&lt;/li>
 &lt;li>貼上程式碼&lt;/li>
 &lt;li>選擇文字方塊，不是文字（按文字方塊的邊邊）&lt;/li>
-&lt;li>format&lt;/li>
-&lt;/ol>
+&lt;li>format
 &lt;blockquote>
 &lt;p>工具 &amp;gt; highlight code &amp;gt; 選得語言、style&lt;/p>
 &lt;/blockquote>
+&lt;/li>
+&lt;/ol>
 &lt;h1 id="參考資料">參考資料&lt;/h1>
 &lt;p>&lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
 >Libreoffice extensions&lt;/a>
@@ -679,7 +679,7 @@ name 和 git 設定的一樣&lt;/p>
 我沒有繼續動工的原因是我不知道如何隔離使用者提交的程式碼
 我想過 docker 可是據說還是不安全
 還有 chroot 但是我不知道有沒有比 docker 安全而且設定好麻煩&lt;/p>
-&lt;p>昨天去考 TOI　入營考（當然沒進）的時候，我終於看到大名鼎鼎的 CMS 了！
+&lt;p>昨天去考 TOI 　入營考（當然沒進）的時候，我終於看到大名鼎鼎的 CMS 了！
 出來之後我發現他是用一個叫 isolate 的程式來做沙箱測試
 而且這好像是 IOI 自己寫的，應該是蠻安全的（吧？）
 今天成功編譯過後把心得寫下來&lt;/p>

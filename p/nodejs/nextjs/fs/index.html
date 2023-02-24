@@ -13,12 +13,12 @@
 </span><span class=lnt>10
 </span><span class=lnt>11
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=c1>// pages/index.js
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>import</span> <span class=nx>fs</span> <span class=nx>from</span> <span class=s1>&#39;fs/promises&#39;</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>import</span> <span class=nx>fs</span> <span class=nx>from</span> <span class=s1>&#39;fs/promises&#39;</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kr>export</span> <span class=kr>async</span> <span class=kd>function</span> <span class=nx>getStaticProps</span><span class=p>()</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>	<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=kr>await</span> <span class=nx>fs</span><span class=p>.</span><span class=nx>stat</span><span class=p>(</span><span class=s1>&#39;./content/index.md&#39;</span><span class=p>));</span>
-</span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>posts</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;index.md&#39;</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>	<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>({</span> <span class=nx>posts</span> <span class=p>})</span>
+</span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>posts</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;index.md&#39;</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>	<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>({</span> <span class=nx>posts</span> <span class=p>});</span>
 </span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>		<span class=nx>props</span><span class=o>:</span> <span class=p>{</span> <span class=nx>posts</span> <span class=p>},</span>
 </span></span><span class=line><span class=cl>	<span class=p>};</span>
@@ -30,10 +30,10 @@
 </span><span class=lnt>5
 </span><span class=lnt>6
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=c1>// util/fsTest.js
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>import</span> <span class=nx>fs</span> <span class=nx>from</span> <span class=s1>&#39;fs/promises&#39;</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>import</span> <span class=nx>fs</span> <span class=nx>from</span> <span class=s1>&#39;fs/promises&#39;</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=nx>dirs</span><span class=p>(){</span>
-</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=kr>await</span> <span class=nx>fs</span><span class=p>.</span><span class=nx>readdir</span><span class=p>(</span><span class=sb>`</span><span class=si>${</span><span class=nx>process</span><span class=p>.</span><span class=nx>cwd</span><span class=p>()</span><span class=si>}</span><span class=sb>/content`</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=nx>dirs</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=kr>await</span> <span class=nx>fs</span><span class=p>.</span><span class=nx>readdir</span><span class=p>(</span><span class=sb>`</span><span class=si>${</span><span class=nx>process</span><span class=p>.</span><span class=nx>cwd</span><span class=p>()</span><span class=si>}</span><span class=sb>/content`</span><span class=p>);</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
@@ -44,11 +44,11 @@
 </span><span class=lnt>7
 </span><span class=lnt>8
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=c1>// pages/index.js
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>import</span> <span class=nx>fsTest</span> <span class=nx>from</span> <span class=s1>&#39;../util/fsTest&#39;</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>import</span> <span class=nx>fsTest</span> <span class=nx>from</span> <span class=s1>&#39;../util/fsTest&#39;</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kr>export</span> <span class=kr>async</span> <span class=kd>function</span> <span class=nx>getStaticProps</span><span class=p>()</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>posts</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;index.md&#39;</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>	<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>({</span> <span class=nx>posts</span><span class=p>,</span> <span class=nx>fsTest</span><span class=o>:</span> <span class=kr>await</span> <span class=nx>fsTest</span><span class=p>()</span> <span class=p>})</span>
+</span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>posts</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;index.md&#39;</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>	<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>({</span> <span class=nx>posts</span><span class=p>,</span> <span class=nx>fsTest</span><span class=o>:</span> <span class=kr>await</span> <span class=nx>fsTest</span><span class=p>()</span> <span class=p>});</span>
 </span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=p>{</span> <span class=nx>props</span><span class=o>:</span> <span class=p>{</span> <span class=nx>posts</span> <span class=p>}</span> <span class=p>};</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></td></tr></table></div></div><h2 id=有問題的>有問題的</h2><p>這個版本，<code>util/tree.js</code> 的程式碼是經過測試，是沒問題的。但是卻會回報錯誤，找不到 <code>fs</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -64,17 +64,17 @@
 </span><span class=lnt>11
 </span><span class=lnt>12
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=c1>// util/tree.js
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>import</span> <span class=nx>fs</span> <span class=nx>from</span> <span class=s1>&#39;fs/promises&#39;</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>import</span> <span class=nx>fs</span> <span class=nx>from</span> <span class=s1>&#39;fs/promises&#39;</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kr>async</span> <span class=kd>function</span> <span class=nx>tree</span><span class=p>(</span><span class=nx>root</span><span class=p>,</span> <span class=nx>opt</span><span class=p>){</span>
+</span></span><span class=line><span class=cl><span class=kr>async</span> <span class=kd>function</span> <span class=nx>tree</span><span class=p>(</span><span class=nx>root</span><span class=p>,</span> <span class=nx>opt</span><span class=p>)</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>	<span class=c1>// some verified code
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>tree2list</span><span class=p>(</span><span class=nx>tree</span><span class=p>,</span> <span class=nx>opt</span><span class=p>){</span>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>tree2list</span><span class=p>(</span><span class=nx>tree</span><span class=p>,</span> <span class=nx>opt</span><span class=p>)</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>	<span class=c1>// some verified code
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kr>export</span> <span class=p>{</span> <span class=nx>tree</span><span class=p>,</span> <span class=nx>tree2list</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kr>export</span> <span class=p>{</span> <span class=nx>tree</span><span class=p>,</span> <span class=nx>tree2list</span> <span class=p>};</span>
 </span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
@@ -86,11 +86,11 @@
 </span><span class=lnt> 9
 </span><span class=lnt>10
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=c1>// pages/index.js
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>import</span> <span class=p>{</span> <span class=nx>tree</span><span class=p>,</span> <span class=nx>tree2list</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;../util/tree&#39;</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>import</span> <span class=p>{</span> <span class=nx>tree</span><span class=p>,</span> <span class=nx>tree2list</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;../util/tree&#39;</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kr>export</span> <span class=kr>async</span> <span class=kd>function</span> <span class=nx>getStaticProps</span><span class=p>()</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>tree</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>tree</span><span class=p>(</span><span class=s1>&#39;./content&#39;</span><span class=p>,</span> <span class=p>{</span> <span class=nx>extensions</span><span class=o>:</span> <span class=p>[</span><span class=s1>&#39;.md&#39;</span><span class=p>]</span> <span class=p>})</span>
-</span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>posts</span> <span class=o>=</span> <span class=nx>tree2list</span><span class=p>(</span><span class=nx>tree</span><span class=p>,</span> <span class=p>{</span> <span class=nx>sliceHead</span><span class=o>:</span> <span class=mi>1</span> <span class=p>})</span>
+</span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>tree</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>tree</span><span class=p>(</span><span class=s1>&#39;./content&#39;</span><span class=p>,</span> <span class=p>{</span> <span class=nx>extensions</span><span class=o>:</span> <span class=p>[</span><span class=s1>&#39;.md&#39;</span><span class=p>]</span> <span class=p>});</span>
+</span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>posts</span> <span class=o>=</span> <span class=nx>tree2list</span><span class=p>(</span><span class=nx>tree</span><span class=p>,</span> <span class=p>{</span> <span class=nx>sliceHead</span><span class=o>:</span> <span class=mi>1</span> <span class=p>});</span>
 </span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>		<span class=nx>props</span><span class=o>:</span> <span class=p>{</span> <span class=nx>posts</span> <span class=p>},</span>
 </span></span><span class=line><span class=cl>	<span class=p>};</span>

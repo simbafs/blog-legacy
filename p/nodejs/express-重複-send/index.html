@@ -4,7 +4,7 @@
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>route</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;Hello world&#39;</span><span class=p>);</span>    
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;Hello world&#39;</span><span class=p>);</span>
 </span></span><span class=line><span class=cl><span class=p>});</span>
 </span></span></code></pre></td></tr></table></div></div><p>但是如果我們用到 <code>Promise</code> 的時候 <code>return</code> 並不會跳出整個 route，所以我們需要另一個方法，我的想法是一個變數儲存是否送出，然後在每次送出前都判斷，送出候更改變數值</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
@@ -21,8 +21,8 @@
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>+--------------------------+
 </span></span><span class=line><span class=cl>| is sent( flag === false) |
 </span></span><span class=line><span class=cl>+-+------------------------+
-</span></span><span class=line><span class=cl>  |no   
-</span></span><span class=line><span class=cl>  |     
+</span></span><span class=line><span class=cl>  |no
+</span></span><span class=line><span class=cl>  |
 </span></span><span class=line><span class=cl>+-+----+
 </span></span><span class=line><span class=cl>| send |
 </span></span><span class=line><span class=cl>+-+----+
@@ -40,32 +40,28 @@
 </span><span class=lnt> 8
 </span><span class=lnt> 9
 </span><span class=lnt>10
-</span><span class=lnt>11
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>route</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=kd>let</span> <span class=nx>flag</span> <span class=o>=</span> <span class=kc>false</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>  <span class=nx>doSomePromise</span><span class=p>()</span>
-</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=nx>then</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>      <span class=c1>// do something
-</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=k>if</span><span class=p>(</span><span class=o>!</span><span class=nx>flag</span><span class=p>){</span>
-</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;Hello world&#39;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>        <span class=nx>flag</span> <span class=o>=</span> <span class=kc>true</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>      <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>})</span>
-</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>	<span class=kd>let</span> <span class=nx>flag</span> <span class=o>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>	<span class=nx>doSomePromise</span><span class=p>().</span><span class=nx>then</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=c1>// do something
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nx>flag</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>			<span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;Hello world&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>			<span class=nx>flag</span> <span class=o>=</span> <span class=kc>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>		<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>});</span>
 </span></span></code></pre></td></tr></table></div></div><p>這樣就不會噴一堆 error 啦！</p><h2 id=改進版>改進版</h2><p>用了之後發現這樣有點麻煩，express 應該有內建變數儲存是否已送出才對，如果沒有，我應該也有更好的方法可以直接從 <code>req</code> 或 <code>res</code> 的狀態判斷是否已送出。找了一下，真的被我找到了 <a class=link href=https://expressjs.com/en/4x/api.html#res.headersSent target=_blank rel=noopener>res.headersSent</a> 這個內建變數，他的行為就和上面的 <code>flag</code> 一模一樣，但是我們不用自己去維護他的狀態。所以上面的範例就可以改寫成這樣</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
 </span><span class=lnt>5
 </span><span class=lnt>6
-</span><span class=lnt>7
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>route</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=nx>doSomePromise</span><span class=p>()</span>
-</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=nx>then</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>      <span class=c1>// do something
-</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nx>res</span><span class=p>.</span><span class=nx>headersSent</span> <span class=o>||</span> <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;Hello world&#39;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=p>})</span>
-</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span><span class=line><span class=cl>	<span class=nx>doSomePromise</span><span class=p>().</span><span class=nx>then</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=c1>// do something
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=nx>res</span><span class=p>.</span><span class=nx>headersSent</span> <span class=o>||</span> <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s1>&#39;Hello world&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	<span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>});</span>
 </span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/express/>express</a>
 <a href=/tags/js/>js</a>
 <a href=/tags/backend/>backend</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css integrity="sha256-J+iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s=" crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js integrity="sha256-InsNdER1b2xUewP+pKCUJpkhiqwHgqiPXDlIk7GzBu4=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI=" crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script></article><aside class=related-content--wrapper><h2 class=section-title>相關文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/nodejs/hcaptcha/><div class=article-details><h2 class=article-title>hCaptcha</h2></div></a></article><article><a href=/p/nodejs/passport.js/><div class=article-details><h2 class=article-title>Passport.js</h2></div></a></article><article><a href=/p/nodejs/typescript/><div class=article-details><h2 class=article-title>TypeScript</h2></div></a></article><article><a href=/p/nodejs/nextjs/fs/><div class=article-details><h2 class=article-title>File System</h2></div></a></article><article><a href=/p/nodejs/strapi-quick-start/><div class=article-details><h2 class=article-title>Strapi Quick Start</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;

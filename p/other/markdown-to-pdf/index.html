@@ -61,24 +61,32 @@
 </span><span class=lnt>48
 </span><span class=lnt>49
 </span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>---
 </span></span><span class=line><span class=cl>title: Test pandoc convert md to pdf
 </span></span><span class=line><span class=cl>author: SimbaFs
 </span></span><span class=line><span class=cl>---
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=gh># 測試
-</span></span></span><span class=line><span class=cl><span class=gh></span>這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。
+</span></span></span><span class=line><span class=cl><span class=gh></span>
+</span></span><span class=line><span class=cl>這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。 這是一段中文的測試，這句話很長，用來測試斷行。
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>---
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=gu>## list 
-</span></span></span><span class=line><span class=cl><span class=gu></span><span class=k>*</span> a
-</span></span><span class=line><span class=cl><span class=k>*</span> b
-</span></span><span class=line><span class=cl><span class=k>*</span> c
-</span></span><span class=line><span class=cl>	<span class=k>*</span> d
-</span></span><span class=line><span class=cl>	<span class=k>*</span> e
-</span></span><span class=line><span class=cl>		<span class=k>*</span> f
-</span></span><span class=line><span class=cl>			<span class=k>*</span> g
+</span></span><span class=line><span class=cl><span class=gu>## list
+</span></span></span><span class=line><span class=cl><span class=gu></span>
+</span></span><span class=line><span class=cl><span class=k>-</span>   a
+</span></span><span class=line><span class=cl><span class=k>-</span>   b
+</span></span><span class=line><span class=cl><span class=k>-</span>   c
+</span></span><span class=line><span class=cl>    <span class=k>-</span>   d
+</span></span><span class=line><span class=cl>    <span class=k>-</span>   e
+</span></span><span class=line><span class=cl>        <span class=k>-</span>   f
+</span></span><span class=line><span class=cl>            <span class=k>-</span>   g
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>1.</span> apple
 </span></span><span class=line><span class=cl><span class=k>2.</span> book
@@ -87,16 +95,19 @@
 </span></span><span class=line><span class=cl>---
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=gu>## link
-</span></span></span><span class=line><span class=cl><span class=gu></span>[<span class=nt>SimbaFs&#39; Blog</span>](<span class=na>https://blog.simbafs.cc</span>)
+</span></span></span><span class=line><span class=cl><span class=gu></span>
+</span></span><span class=line><span class=cl>[<span class=nt>SimbaFs&#39; Blog</span>](<span class=na>https://blog.simbafs.cc</span>)
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>---
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=gu>## check list
-</span></span></span><span class=line><span class=cl><span class=gu></span><span class=k>- [ ]</span> check 1
-</span></span><span class=line><span class=cl><span class=k>- [x]</span> check 2
+</span></span></span><span class=line><span class=cl><span class=gu></span>
+</span></span><span class=line><span class=cl><span class=k>-</span>   [ ] check 1
+</span></span><span class=line><span class=cl><span class=k>-</span>   [x] check 2
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=gu>## code block
-</span></span></span><span class=line><span class=cl><span class=gu></span><span class=s>```go
+</span></span></span><span class=line><span class=cl><span class=gu></span>
+</span></span><span class=line><span class=cl><span class=s>```go
 </span></span></span><span class=line><span class=cl><span class=s></span><span class=kn>package</span> <span class=nx>main</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kn>import</span> <span class=p>(</span>
@@ -105,12 +116,13 @@
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>main</span><span class=p>(){</span>
 </span></span><span class=line><span class=cl>	<span class=nx>fmt</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=s>&#34;hello world!&#34;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>	<span class=k>return</span> 
+</span></span><span class=line><span class=cl>	<span class=k>return</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=s>```</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=gu>## image
-</span></span></span><span class=line><span class=cl><span class=gu></span>![](./blog.png)
+</span></span></span><span class=line><span class=cl><span class=gu></span>
+</span></span><span class=line><span class=cl>![](./blog.png)
 </span></span></code></pre></td></tr></table></div></div><blockquote><p><strong>Info</strong><br>關於如何在 codeblock 中印出反單引號：<a class=link href=https://stackoverflow.com/questions/55586867/how-to-put-in-markdown-an-inline-code-block-that-only-contains-a-backtick-char target=_blank rel=noopener>stackoverflow</a><br>簡單來說如果裡面要印 <code>n</code> 個反單引號，外面就要用 <code>n+1</code> 個反單引號括起來</p></blockquote><p>然後這是截圖：<br><figure><img src=./out-1.png><figcaption><h4>page 1 of out.pdf</h4></figcaption></figure><figure><img src=./out-2.png><figcaption><h4>page 2 of out.pdf</h4></figcaption></figure></p><p>可以看到大部分的語法都可以轉換，甚至是程式碼區塊都有語法提示（syntax highlight）</p><h2 id=其他>其他</h2><h3 id=列出安裝的中文字型>列出安裝的中文字型</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl> $ fc-list :lang=zh
 </span></span></code></pre></td></tr></table></div></div><h2 id=參考連結>參考連結</h2><ul><li><a class=link href=https://sam.webspace.tw/2020/01/13/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%87%20Markdown%20%E8%BD%89%E7%82%BA%20PDF%20%E6%96%87%E4%BB%B6/ target=_blank rel=noopener>https://sam.webspace.tw/2020/01/13/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%87%20Markdown%20%E8%BD%89%E7%82%BA%20PDF%20%E6%96%87%E4%BB%B6/</a></li><li><a class=link href=https://github.com/jgm/pandoc/wiki/Pandoc-with-Chinese target=_blank rel=noopener>https://github.com/jgm/pandoc/wiki/Pandoc-with-Chinese</a></li><li><a class=link href=https://github.com/Wandmalfarbe/pandoc-latex-template target=_blank rel=noopener>https://github.com/Wandmalfarbe/pandoc-latex-template</a></li><li><a class=link href=https://tex.stackexchange.com/questions/341809/pandoc-does-not-recognize-chinese-characters target=_blank rel=noopener>https://tex.stackexchange.com/questions/341809/pandoc-does-not-recognize-chinese-characters</a></li><li><a class=link href=https://tex.stackexchange.com/questions/179778/xelatex-under-ubuntu target=_blank rel=noopener>https://tex.stackexchange.com/questions/179778/xelatex-under-ubuntu</a></li><li><a class=link href=https://pandoc.org/ target=_blank rel=noopener>https://pandoc.org/</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/markdown/>markdown</a>

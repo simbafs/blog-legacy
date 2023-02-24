@@ -65,65 +65,65 @@
 </span><span class=lnt>61
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Hexo</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>on</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>push</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>branches</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=l>master </span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>push</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>branches</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=l>master</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>jobs</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>build</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>runs-on</span><span class=p>:</span><span class=w> </span><span class=l>ubuntu-latest</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>build</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>runs-on</span><span class=p>:</span><span class=w> </span><span class=l>ubuntu-latest</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>steps</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/checkout@v1</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Use Node.js ${{ matrix.node_version }}</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/setup-node@v1</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>with</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>node_version</span><span class=p>:</span><span class=w> </span><span class=l>${{ matrix.node_version }}</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Configuration environment</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>env</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>DEPLOY_KEY</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.DEPLOY_KEY }}</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
-</span></span></span><span class=line><span class=cl><span class=sd>          mkdir -p ~/.ssh/
-</span></span></span><span class=line><span class=cl><span class=sd>          echo &#34;$DEPLOY_KEY&#34; | tr -d &#39;\r&#39; &gt; ~/.ssh/id_rsa
-</span></span></span><span class=line><span class=cl><span class=sd>          echo &#34;$DEPLOY_KEY&#34;
-</span></span></span><span class=line><span class=cl><span class=sd>          chmod 600 ~/.ssh/id_rsa
-</span></span></span><span class=line><span class=cl><span class=sd>          ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts</span><span class=w>          
-</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>git config</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>env</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>username</span><span class=p>:</span><span class=w> 
-</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>email</span><span class=p>:</span><span class=w> 
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
-</span></span></span><span class=line><span class=cl><span class=sd>          git config --global user.name &#34;$username&#34;
-</span></span></span><span class=line><span class=cl><span class=sd>          git config --global user.email &#34;$email&#34;
-</span></span></span><span class=line><span class=cl><span class=sd>          git config --global commit.gpgsign true</span><span class=w>          
-</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Imoport GPG key</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>id</span><span class=p>:</span><span class=w> </span><span class=l>import_gpg</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>crazy-max/ghaction-import-gpg@v2</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>with</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>git_user_signingkey</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>git_commit_gpgsign</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>env</span><span class=p>:</span><span class=w> 
-</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>GPG_PRIVATE_KEY</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.GPG_PRIVATE_KEY }}</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>PASSPHRASE</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.PASSPHRASE }}</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Update themes</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
-</span></span></span><span class=line><span class=cl><span class=sd>          git submodule init
-</span></span></span><span class=line><span class=cl><span class=sd>          git submodule update</span><span class=w>          
-</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Install dependencies</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
-</span></span></span><span class=line><span class=cl><span class=sd>          npm i -g hexo-cli
-</span></span></span><span class=line><span class=cl><span class=sd>          npm i</span><span class=w>          
-</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Clean file</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
-</span></span></span><span class=line><span class=cl><span class=sd>          </span><span class=w>          </span><span class=l>hexo clean  </span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Generate hexo</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
-</span></span></span><span class=line><span class=cl><span class=sd>          </span><span class=w>          </span><span class=l>hexo generate</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>list posts</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
-</span></span></span><span class=line><span class=cl><span class=sd>          </span><span class=w>          </span><span class=l>hexo list post</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Deploy hexo</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
-</span></span></span><span class=line><span class=cl><span class=sd>          </span><span class=w>          </span><span class=l>hexo deploy</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>steps</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/checkout@v1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Use Node.js ${{ matrix.node_version }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/setup-node@v1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>node_version</span><span class=p>:</span><span class=w> </span><span class=l>${{ matrix.node_version }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Configuration environment</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>env</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>DEPLOY_KEY</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.DEPLOY_KEY }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
+</span></span></span><span class=line><span class=cl><span class=sd>                  mkdir -p ~/.ssh/
+</span></span></span><span class=line><span class=cl><span class=sd>                  echo &#34;$DEPLOY_KEY&#34; | tr -d &#39;\r&#39; &gt; ~/.ssh/id_rsa
+</span></span></span><span class=line><span class=cl><span class=sd>                  echo &#34;$DEPLOY_KEY&#34;
+</span></span></span><span class=line><span class=cl><span class=sd>                  chmod 600 ~/.ssh/id_rsa
+</span></span></span><span class=line><span class=cl><span class=sd>                  ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts</span><span class=w>                  
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>git config</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>env</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>username</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>email</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
+</span></span></span><span class=line><span class=cl><span class=sd>                  git config --global user.name &#34;$username&#34;
+</span></span></span><span class=line><span class=cl><span class=sd>                  git config --global user.email &#34;$email&#34;
+</span></span></span><span class=line><span class=cl><span class=sd>                  git config --global commit.gpgsign true</span><span class=w>                  
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Imoport GPG key</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>id</span><span class=p>:</span><span class=w> </span><span class=l>import_gpg</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>crazy-max/ghaction-import-gpg@v2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>git_user_signingkey</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>git_commit_gpgsign</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>env</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>GPG_PRIVATE_KEY</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.GPG_PRIVATE_KEY }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>PASSPHRASE</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.PASSPHRASE }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Update themes</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
+</span></span></span><span class=line><span class=cl><span class=sd>                  git submodule init
+</span></span></span><span class=line><span class=cl><span class=sd>                  git submodule update</span><span class=w>                  
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Install dependencies</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
+</span></span></span><span class=line><span class=cl><span class=sd>                  npm i -g hexo-cli
+</span></span></span><span class=line><span class=cl><span class=sd>                  npm i</span><span class=w>                  
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Clean file</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
+</span></span></span><span class=line><span class=cl><span class=sd>                  </span><span class=w>                  </span><span class=l>hexo clean</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Generate hexo</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
+</span></span></span><span class=line><span class=cl><span class=sd>                  </span><span class=w>                  </span><span class=l>hexo generate</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>list posts</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
+</span></span></span><span class=line><span class=cl><span class=sd>                  </span><span class=w>                  </span><span class=l>hexo list post</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Deploy hexo</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
+</span></span></span><span class=line><span class=cl><span class=sd>                  </span><span class=w>                  </span><span class=l>hexo deploy</span><span class=w>
 </span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/hexo/>hexo</a>
 <a href=/tags/github/>GitHub</a>
 <a href=/tags/github-action/>GitHub Action</a>

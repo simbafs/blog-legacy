@@ -118,7 +118,7 @@
 &lt;p>一開始我沒找到官方的教學，一方面是我想自己試試看，二方面是因為官方文件中英文完全不一樣，看英文版才完整，中文只給兩條指令。&lt;/p>
 &lt;h2 id="參考連結">參考連結&lt;/h2>
 &lt;p>&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
->https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough&lt;/a> &lt;br>
+>https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough&lt;/a>&lt;br>
 &lt;a class="link" href="https://asaba.sakuragawa.moe/2018/06/%E6%93%BA%E8%84%AB%E6%8E%A7%E5%88%B6%EF%BC%8C%E7%94%A8-docker-%E8%87%AA%E5%BB%BA-gitea-gogs-%E7%B7%9A%E4%B8%8A%E4%BB%A3%E7%A2%BC%E5%8D%94%E4%BD%9C%E5%B9%B3%E8%87%BA/" target="_blank" rel="noopener"
 >https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>Nginx UI</title><link>https://blog.simbafs.cc/p/linux/server/nginx-ui/</link><pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/nginx-ui/</guid><description>&lt;h1 id="nginx-ui">Nginx UI&lt;/h1>
 &lt;p>前幾天發現一個專案 nginx ui

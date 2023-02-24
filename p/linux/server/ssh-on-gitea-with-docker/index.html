@@ -28,7 +28,7 @@
 </span><span class=lnt>13
 </span><span class=lnt>14
 </span><span class=lnt>15
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>version: &#34;3&#34; 
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>version: &#34;3&#34;
 </span></span><span class=line><span class=cl>services:
 </span></span><span class=line><span class=cl>    gitea:
 </span></span><span class=line><span class=cl>        container_name: gitea
@@ -36,8 +36,8 @@
 </span></span><span class=line><span class=cl>        ports:
 </span></span><span class=line><span class=cl>          - &#34;10022:22&#34;
 </span></span><span class=line><span class=cl>          - &#34;10080:3000&#34;
-</span></span><span class=line><span class=cl>        volumes: 
-</span></span><span class=line><span class=cl>          - &#34;/home/simba/website/gitea/data:/data&#34; 
+</span></span><span class=line><span class=cl>        volumes:
+</span></span><span class=line><span class=cl>          - &#34;/home/simba/website/gitea/data:/data&#34;
 </span></span><span class=line><span class=cl>          - &#34;/home/git/.ssh:/data/git/.ssh&#34;         # ssh 連線需要，這樣使用者新增 ssh key 時才會同步到 host 上，使用者才連的進來
 </span></span><span class=line><span class=cl>        restart: &#39;unless-stopped&#39;
 </span></span><span class=line><span class=cl>        environment:

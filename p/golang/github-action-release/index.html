@@ -5,9 +5,9 @@
 </span><span class=lnt>3
 </span><span class=lnt>4
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nt>on</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>push</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>tags</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=s2>&#34;v[0-9]+.[0-9]+.[0-9]+&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>push</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>tags</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=s1>&#39;v[0-9]+.[0-9]+.[0-9]+&#39;</span><span class=w>
 </span></span></span></code></pre></td></tr></table></div></div><p>意思是只有像是 <code>v0.1.13</code> 這樣的標籤會觸發，也就是你建立新版本時。</p><h3 id=編譯>編譯</h3><p>在嘗試各種套件之後，我覺得 <a class=link href=https://github.com/marketplace/actions/goreleaser-action target=_blank rel=noopener>goreleaser-action</a> 是我用起來最舒服的，不用太多設定，就直接都編譯好了（詳細設定可以去 <a class=link href=https://goreleaser.com target=_blank rel=noopener>goreleaser 的網站看</a> )<br>在 GitHub Action 中設定就下面幾行，第一個步驟是安裝 go，再來就是編譯了。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
@@ -22,14 +22,14 @@
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Set up Go</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/setup-go@v3.0.0</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>with</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>go-version</span><span class=p>:</span><span class=w> </span><span class=m>1.17</span><span class=l>.x</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>go-version</span><span class=p>:</span><span class=w> </span><span class=m>1.17</span><span class=l>.x</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w></span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Run GoReleaser</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>goreleaser/goreleaser-action@v2.9.1</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>with</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>version</span><span class=p>:</span><span class=w> </span><span class=l>latest</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>args</span><span class=p>:</span><span class=w> </span><span class=l>release --rm-dist</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>version</span><span class=p>:</span><span class=w> </span><span class=l>latest</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>args</span><span class=p>:</span><span class=w> </span><span class=l>release --rm-dist</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>env</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>GITHUB_TOKEN</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.GITHUB_TOKEN }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>GITHUB_TOKEN</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.GITHUB_TOKEN }}</span><span class=w>
 </span></span></span></code></pre></td></tr></table></div></div><p>注意，裡面有個 <code>secret.GITHUB_TOKEN</code>，這個東西你就照寫，不要抄錯，GitHub Action 會自動在 runtime 填入，所以你也不用特別去設定。</p><h3 id=上傳編譯好的執行檔>上傳編譯好的執行檔</h3><p>goreleaser 的文件裡面有推薦一個上傳的套件，但是可能是我笨，那個都不成功。我用的是另一套 <a class=link href=https://github.com/marketplace/actions/upload-to-github-release target=_blank rel=noopener>upload-to-github-release</a>，這個可以一次上傳多個檔案，設定一樣很簡單。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
@@ -45,11 +45,11 @@
 </span></span></span><span class=line><span class=cl><span class=w></span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Upload To Github Release</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>xresloader/upload-to-github-release@v1.3.2</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>env</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>GITHUB_TOKEN</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.GITHUB_TOKEN }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>GITHUB_TOKEN</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.GITHUB_TOKEN }}</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>with</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>file</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;dist/telegrary_*&#34;</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>draft</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>tag_name</span><span class=p>:</span><span class=w> </span><span class=l>${{ steps.tagName.outputs.tag }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>file</span><span class=p>:</span><span class=w> </span><span class=s1>&#39;dist/telegrary_*&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>draft</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>tag_name</span><span class=p>:</span><span class=w> </span><span class=l>${{ steps.tagName.outputs.tag }}</span><span class=w>
 </span></span></span></code></pre></td></tr></table></div></div><p>你會看到在上傳之前還有一個步驟，這個是用來取得 tag name 用的，他用來指定檔案要上傳到哪裡<br>在 <code>with.file</code> 這欄，你可以指定要上傳的檔案，這個要設成什麼就要看你 goreleaser 編譯出來的檔案放在哪，叫什麼（這個都是可以設定的）<br><code>draft</code> 設成 <code>true</code> 有個好處，就是 Action 跑玩後不會立刻建立新 Release，而是你在去手動確認，而且包括 Release name、Change log 都設定好了，你只需要看有沒有什麼說明要加，就可以直接按發布了，非常方便。當然你如果沒有什麼想說的，就可以直接設定 <code>draft: true</code>，如此一來就真的是「全自動了」</p><h2 id=完整-action-設定檔>完整 action 設定檔</h2><p>以上是細部解說，下面就是完整設定檔，如果有更新的話請到 <a class=link href=https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml target=_blank rel=noopener>https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml</a> 看最新版。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
@@ -92,42 +92,42 @@
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Release</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>on</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>push</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>tags</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=s2>&#34;v[0-9]+.[0-9]+.[0-9]+&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>push</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>tags</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=s1>&#39;v[0-9]+.[0-9]+.[0-9]+&#39;</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>jobs</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>goreleaser</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>runs-on</span><span class=p>:</span><span class=w> </span><span class=l>ubuntu-latest</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>steps</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Checkout</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/checkout@v2</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Unshallow</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=l>git fetch --prune --unshallow</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Set up Go</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/setup-go@v3.0.0</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>with</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>go-version</span><span class=p>:</span><span class=w> </span><span class=m>1.17</span><span class=l>.x</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Run GoReleaser</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>goreleaser/goreleaser-action@v2.9.1</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>with</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>version</span><span class=p>:</span><span class=w> </span><span class=l>latest</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>args</span><span class=p>:</span><span class=w> </span><span class=l>release --rm-dist</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>env</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>GITHUB_TOKEN</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.GITHUB_TOKEN }}</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>ls</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
-</span></span></span><span class=line><span class=cl><span class=sd>        </span><span class=w>        </span><span class=l>ls dist</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>little-core-labs/get-git-tag@v3.0.1</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>id</span><span class=p>:</span><span class=w> </span><span class=l>tagName</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Upload To Github Release</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>xresloader/upload-to-github-release@v1.3.2</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>env</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>GITHUB_TOKEN</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.GITHUB_TOKEN }}</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>with</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>file</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;dist/telegrary_*&#34;</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>draft</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>tag_name</span><span class=p>:</span><span class=w> </span><span class=l>${{ steps.tagName.outputs.tag }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>goreleaser</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>runs-on</span><span class=p>:</span><span class=w> </span><span class=l>ubuntu-latest</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>steps</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Checkout</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/checkout@v2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Unshallow</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=l>git fetch --prune --unshallow</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Set up Go</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/setup-go@v3.0.0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>go-version</span><span class=p>:</span><span class=w> </span><span class=m>1.17</span><span class=l>.x</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Run GoReleaser</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>goreleaser/goreleaser-action@v2.9.1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>version</span><span class=p>:</span><span class=w> </span><span class=l>latest</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>args</span><span class=p>:</span><span class=w> </span><span class=l>release --rm-dist</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>env</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>GITHUB_TOKEN</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.GITHUB_TOKEN }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>ls</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
+</span></span></span><span class=line><span class=cl><span class=sd>                  </span><span class=w>                  </span><span class=l>ls dist</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>little-core-labs/get-git-tag@v3.0.1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>id</span><span class=p>:</span><span class=w> </span><span class=l>tagName</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Upload To Github Release</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>xresloader/upload-to-github-release@v1.3.2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>env</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>GITHUB_TOKEN</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.GITHUB_TOKEN }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>              </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>file</span><span class=p>:</span><span class=w> </span><span class=s1>&#39;dist/telegrary_*&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>draft</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                  </span><span class=nt>tag_name</span><span class=p>:</span><span class=w> </span><span class=l>${{ steps.tagName.outputs.tag }}</span><span class=w>
 </span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/github/>GitHub</a>
 <a href=/tags/ci/cd/>CI/CD</a>
 <a href=/tags/github-action/>GitHub Action</a>

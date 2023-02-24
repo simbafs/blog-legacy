@@ -67,22 +67,22 @@
 </span></span><span class=line><span class=cl>    <span class=nb>exec</span> tmux
 </span></span><span class=line><span class=cl><span class=k>else</span>
 </span></span><span class=line><span class=cl>    <span class=nb>source</span> ~/.zplug/init.zsh
-</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=c1># plugins</span>
 </span></span><span class=line><span class=cl>    zplug <span class=s1>&#39;romkatv/powerlevel10k&#39;</span>, as:theme, depth:1
 </span></span><span class=line><span class=cl>    zplug <span class=s1>&#39;zsh-users/zsh-autosuggestions&#39;</span>
 </span></span><span class=line><span class=cl>    zplug <span class=s1>&#39;marlonrichert/zsh-autocomplete&#39;</span>
 </span></span><span class=line><span class=cl>    zplug <span class=s1>&#39;hlissner/zsh-autopair&#39;</span>
-</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>if</span> ! zplug check --verbose<span class=p>;</span> <span class=k>then</span>
 </span></span><span class=line><span class=cl>        <span class=nb>printf</span> <span class=s2>&#34;Install? [y/N]: &#34;</span>
 </span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nb>read</span> -q<span class=p>;</span> <span class=k>then</span>
 </span></span><span class=line><span class=cl>            echo<span class=p>;</span> zplug install
 </span></span><span class=line><span class=cl>        <span class=k>fi</span>
 </span></span><span class=line><span class=cl>    <span class=k>fi</span>
-</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    zplug load
-</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=c1># Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.</span>
 </span></span><span class=line><span class=cl>    <span class=c1># Initialization code that may require console input (password prompts, [y/n]</span>
 </span></span><span class=line><span class=cl>    <span class=c1># confirmations, etc.) must go above this block; everything else may go below.</span>
@@ -91,7 +91,7 @@
 </span></span><span class=line><span class=cl>    <span class=k>fi</span>
 </span></span><span class=line><span class=cl>    <span class=c1># To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.</span>
 </span></span><span class=line><span class=cl>    <span class=o>[[</span> ! -f ~/.p10k.zsh <span class=o>]]</span> <span class=o>||</span> <span class=nb>source</span> ~/.p10k.zsh
-</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>[[</span> -z <span class=nv>$TMUX</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
 </span></span><span class=line><span class=cl>        tmux
 </span></span><span class=line><span class=cl>        <span class=nb>exit</span>

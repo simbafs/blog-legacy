@@ -61,7 +61,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">vm&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isContext&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">context2&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// true
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 注意，其實 context1 和 context2 指向同一個物件。
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">context1&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">context2&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">context1&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">context2&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// true
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;blockquote>
@@ -86,7 +86,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">vm&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;vm&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">script&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">vm&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createScript&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;i += i; [i, i.length]&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">context&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">vm&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createContext&lt;/span>&lt;span class="p">({&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;node&amp;#39;&lt;/span>&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">context&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">vm&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createContext&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;node&amp;#39;&lt;/span> &lt;span class="p">});&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">script&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">runInContext&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">context&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [ &amp;#39;nodenode&amp;#39;, 8 ]
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
@@ -117,5 +117,5 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="執行-script--沒有預先編譯-script">執行 script (沒有預先編譯 Script)&lt;/h2>
+&lt;h2 id="執行-script-沒有預先編譯-script">執行 script (沒有預先編譯 Script)&lt;/h2>
 &lt;p>如果你很懶，或是你只是想要一次行的執行這段 code，可以用 &lt;code>vm.runInContext&lt;/code>、&lt;code>vm.runInNewContext&lt;/code> 和 &lt;code>vm.runInThisContext&lt;/code>。用法跟先編譯過再執行一樣，只是其中第一個參數變成還沒編譯過的 code (String)。&lt;/p></description></item></channel></rss>
