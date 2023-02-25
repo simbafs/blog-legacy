@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>bash on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/bash/</link><description>Recent content in bash on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/bash/index.xml" rel="self" type="application/rss+xml"/><item><title>bash number loop</title><link>https://blog.simbafs.cc/p/linux/bash/bash-number-loop/</link><pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/bash/bash-number-loop/</guid><description>&lt;h1 id="bash-number-loop">Bash Number Loop&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>bash on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/bash/</link><description>Recent content in bash on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Feb 2023 15:40:41 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/bash/index.xml" rel="self" type="application/rss+xml"/><item><title>Bash Snippet</title><link>https://blog.simbafs.cc/p/linux/bash/bash-snippet/</link><pubDate>Sat, 25 Feb 2023 15:40:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/bash/bash-snippet/</guid><description>&lt;h1 id="bash-snippet">Bash Snippet&lt;/h1>
+&lt;h2 id="clear-broken-symlinks">Clear broken symlinks&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $ find . -type l ! -exec test -e {} \; -exec sudo rm {} \;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>bash number loop</title><link>https://blog.simbafs.cc/p/linux/bash/bash-number-loop/</link><pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/bash/bash-number-loop/</guid><description>&lt;h1 id="bash-number-loop">Bash Number Loop&lt;/h1>
 &lt;p>今天在某的地方剛好看到一個 bash 的小技巧，當我們要從 1 數到 100 時，通常會用 &lt;code>seq&lt;/code> 指令來做，但是如果我們的需求剛剛好是每次遞增（遞減）1 的話，就可以使用 &lt;code>{start..end}&lt;/code> 縮寫，下面兩個範例的效果是一樣的：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
