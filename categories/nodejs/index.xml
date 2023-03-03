@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nodejs on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/nodejs/</link><description>Recent content in nodejs on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Feb 2023 23:28:41 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/nodejs/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript</title><link>https://blog.simbafs.cc/p/nodejs/typescript/</link><pubDate>Fri, 10 Feb 2023 23:28:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/nodejs/typescript/</guid><description>&lt;h1 id="typescript">TypeScript&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nodejs on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/nodejs/</link><description>Recent content in nodejs on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Feb 2023 23:28:41 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/nodejs/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript Snippet</title><link>https://blog.simbafs.cc/p/nodejs/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 23:28:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/nodejs/typescript-snippet/</guid><description>&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
 &lt;h2 id="keyof">keyof&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -25,7 +25,37 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;a class="link" href="https://www.typescriptlang.org/docs/handbook/2/keyof-types.html" target="_blank" rel="noopener"
->docs: keyof&lt;/a>&lt;/p></description></item><item><title>File System</title><link>https://blog.simbafs.cc/p/nodejs/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 22:16:42 +0800</pubDate><guid>https://blog.simbafs.cc/p/nodejs/nextjs/fs/</guid><description>&lt;h1 id="file-system">File System&lt;/h1>
+>docs: keyof&lt;/a>&lt;/p>
+&lt;h2 id="static-method-of-class">static method of class&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">class&lt;/span> &lt;span class="nx">A&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">declare&lt;/span> &lt;span class="nx">propertyA&lt;/span>: &lt;span class="kt">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">declare&lt;/span> &lt;span class="nx">propertyB&lt;/span>: &lt;span class="kt">number&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">static&lt;/span> &lt;span class="nx">build&lt;/span>&lt;span class="p">(){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">A&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">propertyA&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;default&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">propertyB&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;100&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">a&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>File System</title><link>https://blog.simbafs.cc/p/nodejs/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 22:16:42 +0800</pubDate><guid>https://blog.simbafs.cc/p/nodejs/nextjs/fs/</guid><description>&lt;h1 id="file-system">File System&lt;/h1>
 &lt;h2 id="getstaticprops">getStaticProps&lt;/h2>
 &lt;p>不知道為什麼，&lt;code>getStaticProps&lt;/code> 裡面的 &lt;code>fs&lt;/code> 時有時無。&lt;a class="link" href="https://github.com/vercel/next.js/discussions/12124" target="_blank" rel="noopener"
 >這裡&lt;/a> 似乎有關於這個問題的回答，但無效&lt;/p>
