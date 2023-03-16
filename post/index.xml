@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/</link><description>Recent content in posts on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Feb 2023 15:40:41 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Google AppScript Calender API</title><link>https://blog.simbafs.cc/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 09:58:24 +0800</pubDate><guid>https://blog.simbafs.cc/p/google-app-script-calender-api/</guid><description>&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/</link><description>Recent content in posts on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 14 Mar 2023 10:23:17 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Computer Organization</title><link>https://blog.simbafs.cc/p/computer-organization/</link><pubDate>Tue, 14 Mar 2023 10:23:17 +0800</pubDate><guid>https://blog.simbafs.cc/p/computer-organization/</guid><description>&lt;h1 id="computer-organization">Computer Organization&lt;/h1>
+&lt;h2 id="ch2">Ch2&lt;/h2>
+&lt;h2 id="hw0-install-environment">HW0 install environment&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ mkdir -p /opt/riscv/bin ~/riscv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ echo &amp;#39;export RISCV=/opt/riscv&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ echo &amp;#39;export PATH=$PATH:$RISCV/bin&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo apt install git autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev ninja-build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cd ~/riscv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git clone --recurse-submodules -j8 --depth 1 https://github.com/riscv/riscv-gnu-toolchain
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/2144406/how-to-make-shallow-git-submodules" target="_blank" rel="noopener"
+>https://stackoverflow.com/questions/2144406/how-to-make-shallow-git-submodules&lt;/a>
+這裡因為如果在 make 時再去抓 submodule 好像會怪怪的&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ cd riscv-gnu-toolchain
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ./configure --prefix=$RISCV --enable-multilib
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>執行這步之前要先去每個 submodule 下指令 &lt;code>git reset HEAD --hard&lt;/code>，應該可以修改 &lt;code>git clone&lt;/code> 指令做到，但懶得重試了&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ sudo make linux -j4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Google AppScript Calender API</title><link>https://blog.simbafs.cc/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 09:58:24 +0800</pubDate><guid>https://blog.simbafs.cc/p/google-app-script-calender-api/</guid><description>&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
 &lt;p>因為我懶的一堂一堂課加入日曆、還要按重複，所以就來研究如何自動化。我的想法是透過一個物件定義課表，然後透過程式來自動化新增。評估了幾個技術後，決定使用 Google App Script 來實做，畢竟他和日曆都是 Google 產品，整合應該是最好的（吧，而且可以弄成類似雲端應用的感覺，輕鬆開放給其他人使用。&lt;/p>
 &lt;h2 id="建立專案">建立專案&lt;/h2>
 &lt;p>在 &lt;a class="link" href="https://script.google.com/home" target="_blank" rel="noopener"
