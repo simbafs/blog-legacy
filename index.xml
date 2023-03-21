@@ -139,7 +139,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ spike --isa=RV64GC $RISCV/riscv64-unknown-linux-gnu/bin/pk /tmp/hello
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Bash Snippet</title><link>https://blog.simbafs.cc/p/linux/bash/bash-snippet/</link><pubDate>Sat, 25 Feb 2023 15:40:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/bash/bash-snippet/</guid><description>&lt;h1 id="bash-snippet">Bash Snippet&lt;/h1>
+&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
+&lt;p>上課 Homework 0 講義&lt;/p></description></item><item><title>Bash Snippet</title><link>https://blog.simbafs.cc/p/linux/bash/bash-snippet/</link><pubDate>Sat, 25 Feb 2023 15:40:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/bash/bash-snippet/</guid><description>&lt;h1 id="bash-snippet">Bash Snippet&lt;/h1>
 &lt;h2 id="clear-broken-symlinks">Clear broken symlinks&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
