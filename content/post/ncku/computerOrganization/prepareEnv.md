@@ -95,3 +95,6 @@ int main(){
 $ riscv64-unknown-linux-gnu-gcc -static -o /tmp/hello /tmp/hello.c
 $ spike --isa=RV64GC $RISCV/riscv64-unknown-linux-gnu/bin/pk /tmp/hello
 ```
+
+## 參考資料
+上課 Homework 0 講義
