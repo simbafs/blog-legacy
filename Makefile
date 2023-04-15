@@ -15,4 +15,7 @@ tree:
 
 build:
 	hugo --minify --gc
+
+server:
+	hugo server -D
 .PHONY: push tree build diff
