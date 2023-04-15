@@ -8,7 +8,6 @@ tags:
     - ninja
 categories:
     - linux
-draft: true
 image:
 ---
 
