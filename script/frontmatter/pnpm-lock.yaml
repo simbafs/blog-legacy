@@ -1,0 +1,27 @@
+lockfileVersion: '6.0'
+
+dependencies:
+  '@ltd/j-toml':
+    specifier: ^1.38.0
+    version: 1.38.0
+  just-typeof:
+    specifier: ^3.2.0
+    version: 3.2.0
+  yaml:
+    specifier: ^2.2.2
+    version: 2.2.2
+
+packages:
+
+  /@ltd/j-toml@1.38.0:
+    resolution: {integrity: sha512-lYtBcmvHustHQtg4X7TXUu1Xa/tbLC3p2wLvgQI+fWVySguVZJF60Snxijw5EiohumxZbR10kWYFFebh1zotiw==}
+    dev: false
+
+  /just-typeof@3.2.0:
+    resolution: {integrity: sha512-nOKazfzrQDEGNwXPfWEB64QD+ATZUnpOTJn0xMnCk41p297P9Emt3BlsRyWbu+CErMjopnFTGcYHJnvFX97ZIQ==}
+    dev: false
+
+  /yaml@2.2.2:
+    resolution: {integrity: sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA==}
+    engines: {node: '>= 14'}
+    dev: false
