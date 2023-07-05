@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vim on Simba 的喵窩</title><link>https://simbafs.cc/blog/categories/vim/</link><description>Recent content in vim on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 17:09:18 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/categories/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>Solarized</title><link>https://simbafs.cc/blog/p/linux/vim/solarized/</link><pubDate>Wed, 15 Jun 2022 17:09:18 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/vim/solarized/</guid><description>&lt;h1 id="solarized">Solarized&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vim on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/vim/</link><description>Recent content in vim on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 17:09:18 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>Solarized</title><link>https://blog.simbafs.cc/p/linux/vim/solarized/</link><pubDate>Wed, 15 Jun 2022 17:09:18 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/solarized/</guid><description>&lt;h1 id="solarized">Solarized&lt;/h1>
 &lt;p>&lt;a class="link" href="https://ethanschoonover.com/solarized/" target="_blank" rel="noopener"
 >solarized&lt;/a> 是一個文字界面常見的配色方案，不僅是用在 vim，大多數 terminal 和 editor 也都支援&lt;/p>
 &lt;h2 id="install">install&lt;/h2>
@@ -90,7 +90,7 @@ Plug &amp;rsquo;ericbn/vim-solarized'&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34; trasparent end
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Modeline</title><link>https://simbafs.cc/blog/p/linux/vim/modeline/</link><pubDate>Thu, 07 Apr 2022 23:13:04 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/vim/modeline/</guid><description>&lt;h1 id="modeline">Modeline&lt;/h1>
+&lt;/div></description></item><item><title>Modeline</title><link>https://blog.simbafs.cc/p/linux/vim/modeline/</link><pubDate>Thu, 07 Apr 2022 23:13:04 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/modeline/</guid><description>&lt;h1 id="modeline">Modeline&lt;/h1>
 &lt;p>&lt;code>modeline&lt;/code> 是一個可以將 vim 設定嵌入檔案的方式，這樣就可以讓某些檔案有自己的設定，像是折疊、不要行數、tab 等於多少空白等等。&lt;/p>
 &lt;h2 id="簡單的條件">簡單的條件&lt;/h2>
 &lt;p>簡單的 &lt;code>modeline&lt;/code> 需要滿足幾個條件：&lt;/p>
@@ -110,7 +110,7 @@ Plug &amp;rsquo;ericbn/vim-solarized'&lt;/p>
 &lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
 &lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file&lt;/a>&lt;br>
-help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item><title>YouComopleteMe Install</title><link>https://simbafs.cc/blog/p/linux/vim/youcomopleteme-install/</link><pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/vim/youcomopleteme-install/</guid><description>&lt;h1 id="ycm-installation">YCM Installation&lt;/h1>
+help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item><title>YouComopleteMe Install</title><link>https://blog.simbafs.cc/p/linux/vim/youcomopleteme-install/</link><pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/youcomopleteme-install/</guid><description>&lt;h1 id="ycm-installation">YCM Installation&lt;/h1>
 &lt;h2 id="下載-source-code">下載 source code&lt;/h2>
 &lt;ol>
 &lt;li>編輯 ~/.vimrc&lt;/li>
@@ -134,7 +134,7 @@ help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item>
 &lt;li>進入 &lt;code>~/.vim/plugged/YouCompleteMe&lt;/code>&lt;/li>
 &lt;li>執行 &lt;code>./install.py --help&lt;/code> 並挑選需要的選項&lt;/li>
 &lt;li>執行 &lt;code>./install.py &amp;lt;你要的選項&amp;gt;&lt;/code>&lt;/li>
-&lt;/ol></description></item><item><title>Vim Auto Comment Plugin</title><link>https://simbafs.cc/blog/p/linux/vim/vim-auto-comment-plugin/</link><pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/vim/vim-auto-comment-plugin/</guid><description>&lt;h1 id="vim-auto-comment-plugin">Vim Auto Comment Plugin&lt;/h1>
+&lt;/ol></description></item><item><title>Vim Auto Comment Plugin</title><link>https://blog.simbafs.cc/p/linux/vim/vim-auto-comment-plugin/</link><pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/vim-auto-comment-plugin/</guid><description>&lt;h1 id="vim-auto-comment-plugin">Vim Auto Comment Plugin&lt;/h1>
 &lt;h2 id="套件">套件&lt;/h2>
 &lt;p>&lt;a class="link" href="https://github.com/preservim/nerdcommenter" target="_blank" rel="noopener"
 >nerdcommenter&lt;/a>&lt;/p>
@@ -143,7 +143,7 @@ help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item>
 &lt;h2 id="cspace">&lt;code>c&amp;lt;space&amp;gt;&lt;/code>&lt;/h2>
 &lt;p>簡單來說就是 toggle 你的註解&lt;/p>
 &lt;h2 id="ca">&lt;code>cA&lt;/code>&lt;/h2>
-&lt;p>跳到行尾並在行尾加上註解&lt;/p></description></item><item><title>讓 YCM 接受 jsx</title><link>https://simbafs.cc/blog/p/linux/vim/ycm-jsx/</link><pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/vim/ycm-jsx/</guid><description>&lt;h1 id="讓-ycm-接受-jsx">讓 YCM 接受 jsx&lt;/h1>
+&lt;p>跳到行尾並在行尾加上註解&lt;/p></description></item><item><title>讓 YCM 接受 jsx</title><link>https://blog.simbafs.cc/p/linux/vim/ycm-jsx/</link><pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/ycm-jsx/</guid><description>&lt;h1 id="讓-ycm-接受-jsx">讓 YCM 接受 jsx&lt;/h1>
 &lt;p>最近寫 ˋreact 的時候只要遇到 jsx 語法 YCM 就會跳出這個錯誤&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">

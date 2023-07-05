@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>js on Simba 的喵窩</title><link>https://simbafs.cc/blog/tags/js/</link><description>Recent content in js on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Feb 2023 23:28:41 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/tags/js/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript Snippet</title><link>https://simbafs.cc/blog/p/nodejs/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 23:28:41 +0800</pubDate><guid>https://simbafs.cc/blog/p/nodejs/typescript-snippet/</guid><description>&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>js on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/js/</link><description>Recent content in js on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Feb 2023 23:28:41 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/js/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript Snippet</title><link>https://blog.simbafs.cc/p/nodejs/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 23:28:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/nodejs/typescript-snippet/</guid><description>&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
 &lt;h2 id="keyof">keyof&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -76,7 +76,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// type Key = &amp;#39;KEY_A&amp;#39; | &amp;#39;KEY_B&amp;#39;
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Google AppScript Calender API</title><link>https://simbafs.cc/blog/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 09:58:24 +0800</pubDate><guid>https://simbafs.cc/blog/p/google-app-script-calender-api/</guid><description>&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
+&lt;/div></description></item><item><title>Google AppScript Calender API</title><link>https://blog.simbafs.cc/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 09:58:24 +0800</pubDate><guid>https://blog.simbafs.cc/p/google-app-script-calender-api/</guid><description>&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
 &lt;p>因為我懶的一堂一堂課加入日曆、還要按重複，所以就來研究如何自動化。我的想法是透過一個物件定義課表，然後透過程式來自動化新增。評估了幾個技術後，決定使用 Google App Script 來實做，畢竟他和日曆都是 Google 產品，整合應該是最好的（吧，而且可以弄成類似雲端應用的感覺，輕鬆開放給其他人使用。&lt;/p>
 &lt;h2 id="建立專案">建立專案&lt;/h2>
 &lt;p>在 &lt;a class="link" href="https://script.google.com/home" target="_blank" rel="noopener"
@@ -543,7 +543,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>File System</title><link>https://simbafs.cc/blog/p/nodejs/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 22:16:42 +0800</pubDate><guid>https://simbafs.cc/blog/p/nodejs/nextjs/fs/</guid><description>&lt;h1 id="file-system">File System&lt;/h1>
+&lt;/div></description></item><item><title>File System</title><link>https://blog.simbafs.cc/p/nodejs/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 22:16:42 +0800</pubDate><guid>https://blog.simbafs.cc/p/nodejs/nextjs/fs/</guid><description>&lt;h1 id="file-system">File System&lt;/h1>
 &lt;h2 id="getstaticprops">getStaticProps&lt;/h2>
 &lt;p>不知道為什麼，&lt;code>getStaticProps&lt;/code> 裡面的 &lt;code>fs&lt;/code> 時有時無。&lt;a class="link" href="https://github.com/vercel/next.js/discussions/12124" target="_blank" rel="noopener"
 >這裡&lt;/a> 似乎有關於這個問題的回答，但無效&lt;/p>
@@ -677,7 +677,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>React 解決中文輸入法</title><link>https://simbafs.cc/blog/p/frontend/react-composition-event/</link><pubDate>Sat, 05 Feb 2022 16:59:44 +0800</pubDate><guid>https://simbafs.cc/blog/p/frontend/react-composition-event/</guid><description>&lt;p>今天在開發&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>React 解決中文輸入法</title><link>https://blog.simbafs.cc/p/frontend/react-composition-event/</link><pubDate>Sat, 05 Feb 2022 16:59:44 +0800</pubDate><guid>https://blog.simbafs.cc/p/frontend/react-composition-event/</guid><description>&lt;p>今天在開發&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
 >晶晶體產生器&lt;/a>的時候，發現中文輸入總是有問題，這時候我想起以前看過 Hackmd 官方的&lt;a class="link" href="https://hackmd.io/@hackmd/CompositionEvent" target="_blank" rel="noopener"
 >一篇 blog&lt;/a>，提到中文輸入法如果有問題，可能和組字事件有關。於是就開始研究。首先我將以下設定加入 &lt;code>textarea&lt;/code> 裡觀察組字事件的行為&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -824,7 +824,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">/&amp;gt;;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Strapi Quick Start</title><link>https://simbafs.cc/blog/p/nodejs/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/strapi-quick-start/</guid><description>&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
+&lt;/div></description></item><item><title>Strapi Quick Start</title><link>https://blog.simbafs.cc/p/nodejs/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/strapi-quick-start/</guid><description>&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
 &lt;h2 id="strapi">strapi&lt;/h2>
 &lt;h2 id="什麼是-headless-cms">什麼是 headless CMS&lt;/h2>
 &lt;p>headless CMS 顧名思義是「無頭的 內容管理系統」，意思是沒有前端、只有後端，它就是一個 DB 的 web 界面 + api server。headless CMS 專注於處理 api 的部份，前端的部份一律不關心。這對於前後端分離有很大的幫助，基本上 headless CMS 已經解決了後端 80% 的工作，剩下的就是一些客製化的邏輯，像是登入、特殊的計算等等。&lt;/p>
@@ -860,7 +860,7 @@ MongoDB &amp;gt;= 3.6&lt;/p>
 &lt;li>建立 &lt;code>collection type&lt;/code>&lt;br>
 如果你按照官網的說法，這裡又會讓你很困惑，&lt;code>+ Create new collection type&lt;/code> 按鈕到底它ㄇ的在哪？其實只要在開啟伺服器時用 develop mode 開就可以了，這個重要要的東西它又沒寫了，把你的 server 關掉，下 &lt;code>npm run develop&lt;/code> 然後再去剛剛的頁面，重新整理就可以看到那個調皮的按鈕了。&lt;/li>
 &lt;/ol>
-&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item><item><title>Node VM</title><link>https://simbafs.cc/blog/p/nodejs/node-vm/</link><pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/node-vm/</guid><description>&lt;h1 id="node-vm">Node VM&lt;/h1>
+&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item><item><title>Node VM</title><link>https://blog.simbafs.cc/p/nodejs/node-vm/</link><pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/node-vm/</guid><description>&lt;h1 id="node-vm">Node VM&lt;/h1>
 &lt;h2 id="nodejs-vm-模組">node.js VM 模組&lt;/h2>
 &lt;p>VM 是 node.js 的核心模組，提供安全的環境 (沙箱) 來測試不信任的程式碼。&lt;/p>
 &lt;h2 id="基本概念">基本概念&lt;/h2>
@@ -980,7 +980,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="執行-script-沒有預先編譯-script">執行 script (沒有預先編譯 Script)&lt;/h2>
-&lt;p>如果你很懶，或是你只是想要一次行的執行這段 code，可以用 &lt;code>vm.runInContext&lt;/code>、&lt;code>vm.runInNewContext&lt;/code> 和 &lt;code>vm.runInThisContext&lt;/code>。用法跟先編譯過再執行一樣，只是其中第一個參數變成還沒編譯過的 code (String)。&lt;/p></description></item><item><title>hCaptcha</title><link>https://simbafs.cc/blog/p/nodejs/hcaptcha/</link><pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/hcaptcha/</guid><description>&lt;h1 id="hcaptcha">hCaptcha&lt;/h1>
+&lt;p>如果你很懶，或是你只是想要一次行的執行這段 code，可以用 &lt;code>vm.runInContext&lt;/code>、&lt;code>vm.runInNewContext&lt;/code> 和 &lt;code>vm.runInThisContext&lt;/code>。用法跟先編譯過再執行一樣，只是其中第一個參數變成還沒編譯過的 code (String)。&lt;/p></description></item><item><title>hCaptcha</title><link>https://blog.simbafs.cc/p/nodejs/hcaptcha/</link><pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/hcaptcha/</guid><description>&lt;h1 id="hcaptcha">hCaptcha&lt;/h1>
 &lt;h2 id="前情提要">前情提要&lt;/h2>
 &lt;p>我們社團的短網址服務裡面常常出現一些奇怪的網址，我猜可能是有機器人在刷，所以我想加入 captcha 減少這類問題。我選擇的是 &lt;a class="link" href="https://hcaptcha.com/" target="_blank" rel="noopener"
 >hCaptcha&lt;/a> 這套，能不依賴 Google 就盡量不要。&lt;/p>
@@ -1126,7 +1126,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="結論">結論&lt;/h2>
-&lt;p>看原始碼很重要&lt;/p></description></item><item><title>Mongoose Model</title><link>https://simbafs.cc/blog/p/nodejs/mongoose-model/</link><pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/mongoose-model/</guid><description>&lt;h1 id="mongoose-model">Mongoose Model&lt;/h1>
+&lt;p>看原始碼很重要&lt;/p></description></item><item><title>Mongoose Model</title><link>https://blog.simbafs.cc/p/nodejs/mongoose-model/</link><pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/mongoose-model/</guid><description>&lt;h1 id="mongoose-model">Mongoose Model&lt;/h1>
 &lt;h2 id="環境設定">環境設定&lt;/h2>
 &lt;p>這是這次實驗用的 code&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1197,7 +1197,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/div>&lt;h2 id="取得原-schema">取得原 schema&lt;/h2>
 &lt;p>在一般操作的時候都是用 &lt;code>UserModel&lt;/code> 在操作資料庫，當要取得 schema 的時候當然也是從他裡面找最方便，當然也可以把 schema 特別弄出來，但是有點麻煩，以這次的例子說明，原本的 &lt;code>UserSchema&lt;/code> 會存在 &lt;code>UserModel.schema.obj&lt;/code> 裡。&lt;/p>
 &lt;h2 id="真實資料庫結構">真實資料庫結構&lt;/h2>
-&lt;p>在建立 model 後 mongoose 會自動新增一些欄位，例如說 &lt;code>_id&lt;/code> 之類的，要取得包含這些欄位的真實 model 結構的話可以在 &lt;code>UserModel.schema.tree&lt;/code> 找到&lt;/p></description></item><item><title>express 重複 send</title><link>https://simbafs.cc/blog/p/nodejs/express-%E9%87%8D%E8%A4%87-send/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/express-%E9%87%8D%E8%A4%87-send/</guid><description>&lt;h1 id="express-重複-send">express 重複 send&lt;/h1>
+&lt;p>在建立 model 後 mongoose 會自動新增一些欄位，例如說 &lt;code>_id&lt;/code> 之類的，要取得包含這些欄位的真實 model 結構的話可以在 &lt;code>UserModel.schema.tree&lt;/code> 找到&lt;/p></description></item><item><title>express 重複 send</title><link>https://blog.simbafs.cc/p/nodejs/express-%E9%87%8D%E8%A4%87-send/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/express-%E9%87%8D%E8%A4%87-send/</guid><description>&lt;h1 id="express-重複-send">express 重複 send&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>在 express route 裡面，我通常會在 &lt;code>res.send()&lt;/code> 之類的函式前面都會加一個 &lt;code>return&lt;/code> 防止因為程式邏輯漏洞造成重複送出然後噴 error。像是這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1291,7 +1291,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Reactjs Update State on Props Change</title><link>https://simbafs.cc/blog/p/nodejs/reactjs/reactjs-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/reactjs/reactjs-update-state-on-props-change/</guid><description>&lt;h1 id="react-update-state-on-props-change">React Update State on Props Change&lt;/h1>
+&lt;/div></description></item><item><title>Reactjs Update State on Props Change</title><link>https://blog.simbafs.cc/p/nodejs/reactjs/reactjs-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/reactjs/reactjs-update-state-on-props-change/</guid><description>&lt;h1 id="react-update-state-on-props-change">React Update State on Props Change&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>今天在研究 React
 遇到一個問題
@@ -1348,7 +1348,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props&lt;/a>
 &lt;a class="link" href="https://zh-hant.reactjs.org/docs/hooks-effect.html" target="_blank" rel="noopener"
->https://zh-hant.reactjs.org/docs/hooks-effect.html&lt;/a>&lt;/p></description></item><item><title>Webpack Reactjs</title><link>https://simbafs.cc/blog/p/nodejs/reactjs/webpack-reactjs/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/reactjs/webpack-reactjs/</guid><description>&lt;h1 id="webpack-reactjs">Webpack Reactjs&lt;/h1>
+>https://zh-hant.reactjs.org/docs/hooks-effect.html&lt;/a>&lt;/p></description></item><item><title>Webpack Reactjs</title><link>https://blog.simbafs.cc/p/nodejs/reactjs/webpack-reactjs/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/reactjs/webpack-reactjs/</guid><description>&lt;h1 id="webpack-reactjs">Webpack Reactjs&lt;/h1>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>最近開始想學 react
 在這之前當然要先把開發環境搞好
@@ -1469,10 +1469,10 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">https://github.com/simbafs/react-template
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Firefox Event Listener Breakpoint</title><link>https://simbafs.cc/blog/p/frontend/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/frontend/firefox-event-listener-breakpoint/</guid><description>&lt;h1 id="firefox-event-listener-breakpoint">Firefox Event Listener Breakpoint&lt;/h1>
+&lt;/div></description></item><item><title>Firefox Event Listener Breakpoint</title><link>https://blog.simbafs.cc/p/frontend/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/firefox-event-listener-breakpoint/</guid><description>&lt;h1 id="firefox-event-listener-breakpoint">Firefox Event Listener Breakpoint&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>最近在用 jquery 但是不知道為什麼每次 debugger 都會跳出一個通知
-&lt;img src="https://simbafs.cc/blog/images/firefox-event-listener-breakpoint/1.png"
+&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/1.png"
 loading="lazy"
 alt="1.png"
 >
@@ -1482,13 +1482,13 @@ alt="1.png"
 在 &lt;!-- raw HTML omitted --> 裡面 Debugger 頁籤左下有個拉頁叫「Event Listener Breakpoints」
 把裡面的東西都點掉就好了
 就是那個 DOM Mutation
-&lt;img src="https://simbafs.cc/blog/images/firefox-event-listener-breakpoint/2.png"
+&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/2.png"
 loading="lazy"
 alt="2.png"
 >&lt;/p>
 &lt;h2 id="心得">心得&lt;/h2>
 &lt;p>我原本還以為是 jquery 的問題
-原來是好心的 firefox 啊&lt;/p></description></item><item><title>jQuery</title><link>https://simbafs.cc/blog/p/frontend/jquery/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/frontend/jquery/</guid><description>&lt;h1 id="jquery">jQuery&lt;/h1>
+原來是好心的 firefox 啊&lt;/p></description></item><item><title>jQuery</title><link>https://blog.simbafs.cc/p/frontend/jquery/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/jquery/</guid><description>&lt;h1 id="jquery">jQuery&lt;/h1>
 &lt;p>今天寫 jquery 遇到了一些坑&lt;/p>
 &lt;h2 id="1-submit">1. submit&lt;/h2>
 &lt;p>&lt;code>.submit()&lt;/code> 是要加在 &lt;code>form&lt;/code> 上而不是 &lt;code>submit button&lt;/code> 上&lt;/p>
@@ -1496,7 +1496,7 @@ alt="2.png"
 &lt;p>在 jquery 裡有時後會用到 handler
 正常情況下可以用 arrow function
 但是如果用到 &lt;code>this&lt;/code> 就不能用 arrow function 了
-（這不只是 jquery, JS 都是這樣）&lt;/p></description></item><item><title>Passport.js</title><link>https://simbafs.cc/blog/p/nodejs/passport.js/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/passport.js/</guid><description>&lt;h1 id="passportjs">Passport.js&lt;/h1>
+（這不只是 jquery, JS 都是這樣）&lt;/p></description></item><item><title>Passport.js</title><link>https://blog.simbafs.cc/p/nodejs/passport.js/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/passport.js/</guid><description>&lt;h1 id="passportjs">Passport.js&lt;/h1>
 &lt;p>今天終於把登入做完了
 我覺得最重要的是找好的教學文章、去看沒有人看得懂的程式碼&lt;/p>
 &lt;hr>
@@ -1508,7 +1508,7 @@ alt="2.png"
 沒了！&lt;/li>
 &lt;/ol>
 &lt;p>參考的教學文：https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E7%AD%86%E8%A8%98-%E9%80%8F%E9%81%8E-passport-js-%E5%AF%A6%E4%BD%9C%E9%A9%97%E8%AD%89%E6%A9%9F%E5%88%B6-11cf478f421e
-雖然這個也沒有好到哪裡去但至少我看著他做出來了，有些部份是參考作者的餐廳程式&lt;/p></description></item><item><title>sqlite3</title><link>https://simbafs.cc/blog/p/nodejs/sqlite3/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/sqlite3/</guid><description>&lt;h1 id="sqlite3">sqlite3&lt;/h1>
+雖然這個也沒有好到哪裡去但至少我看著他做出來了，有些部份是參考作者的餐廳程式&lt;/p></description></item><item><title>sqlite3</title><link>https://blog.simbafs.cc/p/nodejs/sqlite3/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/sqlite3/</guid><description>&lt;h1 id="sqlite3">sqlite3&lt;/h1>
 &lt;p>昨天是試著去理解 sqlite3，我發現他的 callback function 真的太煩了
 於是我試著去尋找 async 的版本，還真找到了
 這個套件把整個 sqlite 包成 async 了&lt;/p>
@@ -1573,7 +1573,7 @@ alt="2.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})();&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Blessed Landmine</title><link>https://simbafs.cc/blog/p/nodejs/blessed/blessed-landmine/</link><pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/blessed/blessed-landmine/</guid><description>&lt;h1 id="blessed-landmine">Blessed Landmine&lt;/h1>
+&lt;/div></description></item><item><title>Blessed Landmine</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed-landmine/</link><pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed-landmine/</guid><description>&lt;h1 id="blessed-landmine">Blessed Landmine&lt;/h1>
 &lt;p>這是一篇我在用 blessed 時踩的一些雷&lt;/p>
 &lt;h2 id="1-記得-render">1. 記得 render&lt;/h2>
 &lt;p>今天在寫 API 時踩到兩次
@@ -1588,7 +1588,7 @@ alt="2.png"
 而且他沒有一個很好的防呆機制例如參數型別檢查
 幸好是他的程式碼沒有做 uglify
 還算簡單易懂
-而且 node 的錯誤訊息的 stack 可以引導到真正出錯的地方&lt;/p></description></item><item><title>Unix Socket</title><link>https://simbafs.cc/blog/p/nodejs/unix-socket/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/unix-socket/</guid><description>&lt;h1 id="unix-socket">Unix Socket&lt;/h1>
+而且 node 的錯誤訊息的 stack 可以引導到真正出錯的地方&lt;/p></description></item><item><title>Unix Socket</title><link>https://blog.simbafs.cc/p/nodejs/unix-socket/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/unix-socket/</guid><description>&lt;h1 id="unix-socket">Unix Socket&lt;/h1>
 &lt;p>今天心血來潮在看 unix socket
 突然想到 node 可不可以把 服務監聽在一個 socket file
 這樣在設定的時候就不用記哪個服務是幾 port&lt;/p>
@@ -1722,8 +1722,8 @@ alt="2.png"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ chmod 777 /tmp/express.sock
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>這樣就可以啦！&lt;/p></description></item><item><title>Blessed 切換畫面</title><link>https://simbafs.cc/blog/p/nodejs/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</link><pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</guid><description>&lt;h1 id="blessed-切換畫面">Blessed 切換畫面&lt;/h1>
-&lt;p>今天完成了新版本的 &lt;code>treetify&lt;/code> &lt;a class="link" href="https://simbafs.cc/blog/2020/02/18/blessed-contrib-tree/" >看這&lt;/a>
+&lt;/div>&lt;p>這樣就可以啦！&lt;/p></description></item><item><title>Blessed 切換畫面</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</link><pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</guid><description>&lt;h1 id="blessed-切換畫面">Blessed 切換畫面&lt;/h1>
+&lt;p>今天完成了新版本的 &lt;code>treetify&lt;/code> &lt;a class="link" href="https://blog.simbafs.cc/2020/02/18/blessed-contrib-tree/" >看這&lt;/a>
 同時我設計好了右邊的 &lt;code>edit&lt;/code>
 但是我的問題是他要根據情況不同切換不同的頁面
 來看看我的一些想法：&lt;/p>
@@ -1874,7 +1874,7 @@ alt="2.png"
 &lt;/div>&lt;p>這裡建立三個 &lt;code>box&lt;/code> 要顯示哪一個的時候就將他 append
 實驗證實這樣不會建立新的圖層
 而是把下面的那個搬到最上面
-完美的解決了這個問題&lt;/p></description></item><item><title>Blessed Contrib Tree</title><link>https://simbafs.cc/blog/p/nodejs/blessed/blessed-contrib-tree/</link><pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/blessed/blessed-contrib-tree/</guid><description>&lt;h1 id="blessed-contrib-tree">blessed Contrib Tree&lt;/h1>
+完美的解決了這個問題&lt;/p></description></item><item><title>Blessed Contrib Tree</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed-contrib-tree/</link><pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed-contrib-tree/</guid><description>&lt;h1 id="blessed-contrib-tree">blessed Contrib Tree&lt;/h1>
 &lt;h2 id="tree">Tree&lt;/h2>
 &lt;p>想說先想一個專案來練練手
 熟悉一下 blessed
@@ -1956,7 +1956,7 @@ alt="2.png"
 如果是空物件代表這是葉節點
 &lt;code>extended&lt;/code> 屬性是是否展開，預設 &lt;code>true&lt;/code>
 &lt;code>name&lt;/code> 是顯示出來的字，如果要改再設，預設是 &lt;code>index&lt;/code>
-&lt;code>myCustomProperty&lt;/code> 直翻是自訂屬性，應該是當 &lt;code>tree.on('select')&lt;/code> 觸發時傳進去的&lt;/p></description></item><item><title>Blessed</title><link>https://simbafs.cc/blog/p/nodejs/blessed/blessed/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/blessed/blessed/</guid><description>&lt;h1 id="blessed">Blessed&lt;/h1>
+&lt;code>myCustomProperty&lt;/code> 直翻是自訂屬性，應該是當 &lt;code>tree.on('select')&lt;/code> 觸發時傳進去的&lt;/p></description></item><item><title>Blessed</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed/</guid><description>&lt;h1 id="blessed">Blessed&lt;/h1>
 &lt;p>某天我有一個問題
 gtop 的圖畫界面是怎麼做的，我知道他是用 node 寫的，對他別有興趣
 我上 github 看他的 package.json

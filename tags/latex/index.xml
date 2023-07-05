@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>latex on Simba 的喵窩</title><link>https://simbafs.cc/blog/tags/latex/</link><description>Recent content in latex on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Feb 2023 22:07:38 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/tags/latex/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown to PDF</title><link>https://simbafs.cc/blog/p/other/markdown-to-pdf/</link><pubDate>Tue, 21 Feb 2023 22:07:38 +0800</pubDate><guid>https://simbafs.cc/blog/p/other/markdown-to-pdf/</guid><description>&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>latex on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/latex/</link><description>Recent content in latex on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Feb 2023 22:07:38 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/latex/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/other/markdown-to-pdf/</link><pubDate>Tue, 21 Feb 2023 22:07:38 +0800</pubDate><guid>https://blog.simbafs.cc/p/other/markdown-to-pdf/</guid><description>&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
 &lt;h2 id="安裝環境">安裝環境&lt;/h2>
 &lt;p>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >pandoc&lt;/a> 你想得到的文件之間轉擋 &lt;a class="link" href="https://pandoc.org/diagram.svgz?v=20230203095535" target="_blank" rel="noopener"
@@ -214,12 +214,12 @@
 >https://tex.stackexchange.com/questions/179778/xelatex-under-ubuntu&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >https://pandoc.org/&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>LaTeX Starter</title><link>https://simbafs.cc/blog/p/other/latex-starter/</link><pubDate>Wed, 22 Dec 2021 23:18:41 +0800</pubDate><guid>https://simbafs.cc/blog/p/other/latex-starter/</guid><description>&lt;h1 id="latex-stater">LaTeX Stater&lt;/h1>
+&lt;/ul></description></item><item><title>LaTeX Starter</title><link>https://blog.simbafs.cc/p/other/latex-starter/</link><pubDate>Wed, 22 Dec 2021 23:18:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/other/latex-starter/</guid><description>&lt;h1 id="latex-stater">LaTeX Stater&lt;/h1>
 &lt;p>LaTeX 是一老牌的排版系統，基本的概念是內容與呈現分離，在撰寫內容時不用管排版（所以你就不會擔心移動圖片一咪咪整份文件就跑版了）。除了排版，LaTeX 還很擅長輸出各種莫名其妙的東西，像是超複雜的數學式、象棋棋譜、化學結構&amp;hellip;&amp;hellip;&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/latex-starter/latex-example.png"
+&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/latex-starter/latex-example.png"
 loading="lazy"
 alt="莫名其妙排版範例"
 >&lt;/th>

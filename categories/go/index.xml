@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>go on Simba 的喵窩</title><link>https://simbafs.cc/blog/categories/go/</link><description>Recent content in go on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 09 Jan 2023 04:00:39 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/categories/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Bubbletea</title><link>https://simbafs.cc/blog/p/golang/bubbletea/</link><pubDate>Mon, 09 Jan 2023 04:00:39 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/bubbletea/</guid><description>&lt;h1 id="charmbraceletbubbletea">charmbracelet/bubbletea&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>go on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/go/</link><description>Recent content in go on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 09 Jan 2023 04:00:39 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Bubbletea</title><link>https://blog.simbafs.cc/p/golang/bubbletea/</link><pubDate>Mon, 09 Jan 2023 04:00:39 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/bubbletea/</guid><description>&lt;h1 id="charmbraceletbubbletea">charmbracelet/bubbletea&lt;/h1>
 &lt;p>charmbracelet/bubbletea 是一個類似於 HTML，但是他是用在終端機中建立純文字的使用者界面。&lt;/p>
 &lt;h2 id="model">model&lt;/h2>
 &lt;p>model 是 bubbletea 中最基本的元件，對應到 HTML 中就是 tag，一個 model 需要有以下三個方法&lt;/p>
@@ -116,7 +116,7 @@
 &lt;/div>&lt;h3 id="問題">問題&lt;/h3>
 &lt;p>如果子 model 變多，那對於傳遞的管理就會變得很複雜，要想的方法解決，需要可以一次管理不同類型的 model&lt;/p>
 &lt;h2 id="心得">心得&lt;/h2>
-&lt;p>&lt;code>Update&lt;/code> 中只接收和自己有關的 msg，和自己無關的就傳遞下去，絕對不操作不屬於自己的屬性，不然會出 bug&lt;/p></description></item><item><title>p2p</title><link>https://simbafs.cc/blog/p/golang/p2p/</link><pubDate>Tue, 16 Aug 2022 19:55:15 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/p2p/</guid><description>&lt;h1 id="p2p">p2p&lt;/h1>
+&lt;p>&lt;code>Update&lt;/code> 中只接收和自己有關的 msg，和自己無關的就傳遞下去，絕對不操作不屬於自己的屬性，不然會出 bug&lt;/p></description></item><item><title>p2p</title><link>https://blog.simbafs.cc/p/golang/p2p/</link><pubDate>Tue, 16 Aug 2022 19:55:15 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/p2p/</guid><description>&lt;h1 id="p2p">p2p&lt;/h1>
 &lt;p>我不太確定這是 p2p 還是穿隧，但反正功能就是可以讓兩個在不同內網的機器可以直連，不需要透過中央伺服器轉發。先上原理圖，然後再來一步一步看程式碼&lt;/p>
 &lt;p>&lt;img src="https://github.com/simbafs/experiment-p2p/raw/main/explain.png"
 loading="lazy"
@@ -327,7 +327,7 @@ alt="explain.png"
 &lt;h2 id="心得">心得&lt;/h2>
 &lt;p>如果我沒理解錯，會選用 UDP 做 p2p 是因為 UDP 的連線關掉後 NAT 不會把洞關起來，所以一開始往伺服器發訊息的動作就是在打洞，然後把洞的資訊送到另一邊，接著就可以透過這的洞直連。而 TCP 一斷掉連線洞就會關起來，所以無法做 p2p（這是個人猜測，無根據）。&lt;br>
 這時候我就很好奇，應該有人做這種公共的 p2p server 吧？搭配 SDK 應該可以很輕鬆的做到任意兩台裝置連線，這樣伺服器的 loading 也不重，需要的資源也很低，感覺可以來開一個。&lt;br>
-接著我應該會去研究是否有辦法用 TCP 做 p2p，或是如何在 UDP 上搭建一個可信賴的通訊。接著遠程目標大概是 IPFS 之類的&lt;/p></description></item><item><title>用 Github Action 編譯並發 Release</title><link>https://simbafs.cc/blog/p/golang/github-action-release/</link><pubDate>Sun, 27 Mar 2022 11:00:18 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/github-action-release/</guid><description>&lt;h1 id="用-github-action-編譯並發-release">用 Github Action 編譯並發 Release&lt;/h1>
+接著我應該會去研究是否有辦法用 TCP 做 p2p，或是如何在 UDP 上搭建一個可信賴的通訊。接著遠程目標大概是 IPFS 之類的&lt;/p></description></item><item><title>用 Github Action 編譯並發 Release</title><link>https://blog.simbafs.cc/p/golang/github-action-release/</link><pubDate>Sun, 27 Mar 2022 11:00:18 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/github-action-release/</guid><description>&lt;h1 id="用-github-action-編譯並發-release">用 Github Action 編譯並發 Release&lt;/h1>
 &lt;p>如果自己寫的小工具的 GitHub 頁面右邊 Release 那欄有個什麼東西，一定很酷對吧！如果裡面已經提供了不同作業系統編譯好的程式，一定更酷！&lt;br>
 想要建立 Release，你可以在新版本發布時自己手動 crose compile 再手動設定 Release，這個方法可行，但是聽起來全手動就很 low，我們要用一個全自動的方式發 Release！&lt;/p>
 &lt;h2 id="github-actioin">Github Actioin&lt;/h2>
@@ -502,7 +502,7 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">tag_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ steps.tagName.outputs.tag }}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Golang Plguin</title><link>https://simbafs.cc/blog/p/golang/plguin/</link><pubDate>Mon, 21 Feb 2022 18:54:55 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/plguin/</guid><description>&lt;h1 id="go-動態載入程式">Go 動態載入程式&lt;/h1>
+&lt;/div></description></item><item><title>Golang Plguin</title><link>https://blog.simbafs.cc/p/golang/plguin/</link><pubDate>Mon, 21 Feb 2022 18:54:55 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/plguin/</guid><description>&lt;h1 id="go-動態載入程式">Go 動態載入程式&lt;/h1>
 &lt;p>Go 是一個編譯式的語言，也就是說他不像 JS 那樣可以動態執行程式碼。像是 &lt;a class="link" href="https://github.com/hexojs/hexo" target="_blank" rel="noopener"
 >Hexo&lt;/a> 和 &lt;a class="link" href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener"
 >Hugo&lt;/a>，前者因為是 JS 寫的，因此支援非常豐富的外掛，但後者因為是 Go 寫的，因此在不使用其他直譯式程式語言的情況下，很難製作外掛。&lt;br>
@@ -660,7 +660,7 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>ExecCmd</title><link>https://simbafs.cc/blog/p/golang/exec-cmd/</link><pubDate>Tue, 19 Oct 2021 00:06:19 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/exec-cmd/</guid><description>&lt;h1 id="golang-執行外部命令">Golang 執行外部命令&lt;/h1>
+&lt;/div></description></item><item><title>ExecCmd</title><link>https://blog.simbafs.cc/p/golang/exec-cmd/</link><pubDate>Tue, 19 Oct 2021 00:06:19 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/exec-cmd/</guid><description>&lt;h1 id="golang-執行外部命令">Golang 執行外部命令&lt;/h1>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -719,7 +719,7 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Aconf</title><link>https://simbafs.cc/blog/p/golang/aconf/</link><pubDate>Fri, 24 Sep 2021 08:46:37 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/aconf/</guid><description>&lt;h1 id="aconf">aconf&lt;/h1>
+&lt;/div></description></item><item><title>Aconf</title><link>https://blog.simbafs.cc/p/golang/aconf/</link><pubDate>Fri, 24 Sep 2021 08:46:37 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/aconf/</guid><description>&lt;h1 id="aconf">aconf&lt;/h1>
 &lt;p>aconf 是個可以直接幫你解決所有「設定」問題的套件，設定可以有預設、從命令列參數、環境變數和設定檔，設定檔還有官方支援四種格式，dotEnv、HCL、toml、yaml 和 json。&lt;br>
 而且設定檔還可以有不只一個，他可以把多個設定檔合成，相當方便&lt;/p>
 &lt;h2 id="基本使用">基本使用&lt;/h2>
@@ -840,7 +840,7 @@ alt="explain.png"
 &lt;p>&lt;a class="link" href="https://github.com/cristalhq/aconfig" target="_blank" rel="noopener"
 >https://github.com/cristalhq/aconfig&lt;/a>&lt;br>
 &lt;a class="link" href="https://pkg.go.dev/github.com/cristalhq/aconfig" target="_blank" rel="noopener"
->https://pkg.go.dev/github.com/cristalhq/aconfig&lt;/a>&lt;/p></description></item><item><title>Golang Parse All Files In Directory Into Templates</title><link>https://simbafs.cc/blog/p/golang/golang-parse-all-files-in-directory-into-templates/</link><pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/golang/golang-parse-all-files-in-directory-into-templates/</guid><description>&lt;h1 id="golang-parse-all-files-in-directory-into-templates">Golang Parse All Files In Directory Into Templates&lt;/h1>
+>https://pkg.go.dev/github.com/cristalhq/aconfig&lt;/a>&lt;/p></description></item><item><title>Golang Parse All Files In Directory Into Templates</title><link>https://blog.simbafs.cc/p/golang/golang-parse-all-files-in-directory-into-templates/</link><pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/golang-parse-all-files-in-directory-into-templates/</guid><description>&lt;h1 id="golang-parse-all-files-in-directory-into-templates">Golang Parse All Files In Directory Into Templates&lt;/h1>
 &lt;p>在用 gin 寫伺服器的時候，我發現模板並不會被 &lt;code>go build&lt;/code> 打包進執行檔裡面，所以在執行的時候就找不到檔案，當然這個問題可以用字串的形式直接把模板放進 golang 原始碼裡面，但是這樣程式碼一複雜就會不好用，這時候就可以用 golang 的 embed 函式庫把檔案「嵌入」到原始碼裡面。但是問題又來了，嵌入了之後要怎麼把字串變成模板物件呢？&lt;/p>
 &lt;h2 id="embed">Embed&lt;/h2>
 &lt;blockquote>
