@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nodejs on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/nodejs/</link><description>Recent content in nodejs on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/nodejs/index.xml" rel="self" type="application/rss+xml"/><item><title>Strapi Quick Start</title><link>https://blog.simbafs.cc/p/nodejs/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/strapi-quick-start/</guid><description>&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nodejs on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/nodejs/</link><description>Recent content in nodejs on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/nodejs/index.xml" rel="self" type="application/rss+xml"/><item><title>Strapi Quick Start</title><link>https://blog.simbafs.cc/p/js/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/strapi-quick-start/</guid><description>&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
 &lt;h2 id="strapi">strapi&lt;/h2>
 &lt;h2 id="什麼是-headless-cms">什麼是 headless CMS&lt;/h2>
 &lt;p>headless CMS 顧名思義是「無頭的 內容管理系統」，意思是沒有前端、只有後端，它就是一個 DB 的 web 界面 + api server。headless CMS 專注於處理 api 的部份，前端的部份一律不關心。這對於前後端分離有很大的幫助，基本上 headless CMS 已經解決了後端 80% 的工作，剩下的就是一些客製化的邏輯，像是登入、特殊的計算等等。&lt;/p>
@@ -34,7 +34,7 @@ MongoDB &amp;gt;= 3.6&lt;/p>
 &lt;li>建立 &lt;code>collection type&lt;/code>&lt;br>
 如果你按照官網的說法，這裡又會讓你很困惑，&lt;code>+ Create new collection type&lt;/code> 按鈕到底它ㄇ的在哪？其實只要在開啟伺服器時用 develop mode 開就可以了，這個重要要的東西它又沒寫了，把你的 server 關掉，下 &lt;code>npm run develop&lt;/code> 然後再去剛剛的頁面，重新整理就可以看到那個調皮的按鈕了。&lt;/li>
 &lt;/ol>
-&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item><item><title>Node VM</title><link>https://blog.simbafs.cc/p/nodejs/node-vm/</link><pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/node-vm/</guid><description>&lt;h1 id="node-vm">Node VM&lt;/h1>
+&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item><item><title>Node VM</title><link>https://blog.simbafs.cc/p/js/node-vm/</link><pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/node-vm/</guid><description>&lt;h1 id="node-vm">Node VM&lt;/h1>
 &lt;h2 id="nodejs-vm-模組">node.js VM 模組&lt;/h2>
 &lt;p>VM 是 node.js 的核心模組，提供安全的環境 (沙箱) 來測試不信任的程式碼。&lt;/p>
 &lt;h2 id="基本概念">基本概念&lt;/h2>
@@ -154,7 +154,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="執行-script-沒有預先編譯-script">執行 script (沒有預先編譯 Script)&lt;/h2>
-&lt;p>如果你很懶，或是你只是想要一次行的執行這段 code，可以用 &lt;code>vm.runInContext&lt;/code>、&lt;code>vm.runInNewContext&lt;/code> 和 &lt;code>vm.runInThisContext&lt;/code>。用法跟先編譯過再執行一樣，只是其中第一個參數變成還沒編譯過的 code (String)。&lt;/p></description></item><item><title>Node Require from Project Root</title><link>https://blog.simbafs.cc/p/nodejs/node-require-from-project-root/</link><pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/node-require-from-project-root/</guid><description>&lt;h1 id="node-require-from-project-root">Node Require from Project Root&lt;/h1>
+&lt;p>如果你很懶，或是你只是想要一次行的執行這段 code，可以用 &lt;code>vm.runInContext&lt;/code>、&lt;code>vm.runInNewContext&lt;/code> 和 &lt;code>vm.runInThisContext&lt;/code>。用法跟先編譯過再執行一樣，只是其中第一個參數變成還沒編譯過的 code (String)。&lt;/p></description></item><item><title>Node Require from Project Root</title><link>https://blog.simbafs.cc/p/js/node-require-from-project-root/</link><pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/node-require-from-project-root/</guid><description>&lt;h1 id="node-require-from-project-root">Node Require from Project Root&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>在寫一個專案的時候，有時候會有一些小程式重複在不同的檔案裡用到，這時候我們會把他打包成模組放在 &lt;code>lib/&lt;/code>。但是如果資料夾結構有點點複雜的時候， &lt;code>require()&lt;/code> 的路徑就會很複雜：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">

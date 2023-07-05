@@ -606,7 +606,7 @@
 &lt;li>啟動遊戲！按照步驟裝完啟動器、關掉他&lt;/li>
 &lt;li>steam 遊戲頁面右上角齒輪 &amp;gt; 內容 &amp;gt; 捷徑 &amp;gt; 開始位置 &amp;gt; 瀏覽，改成 &lt;code>~/.local/share/Steam/steamapps/compatdata/${steam game id}/pfx/drive_c/Program Files (x86)/Nexon/Nexon Launcher/nexon_launcher.exe &lt;/code>
 好了&lt;/li>
-&lt;/ol></description></item><item><title>TypeScript Snippet</title><link>https://blog.simbafs.cc/p/nodejs/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 23:28:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/nodejs/typescript-snippet/</guid><description>&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
+&lt;/ol></description></item><item><title>TypeScript Snippet</title><link>https://blog.simbafs.cc/p/js/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 23:28:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/js/typescript-snippet/</guid><description>&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
 &lt;h2 id="keyof">keyof&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -802,7 +802,184 @@
 &lt;/div>&lt;h3 id="問題">問題&lt;/h3>
 &lt;p>如果子 model 變多，那對於傳遞的管理就會變得很複雜，要想的方法解決，需要可以一次管理不同類型的 model&lt;/p>
 &lt;h2 id="心得">心得&lt;/h2>
-&lt;p>&lt;code>Update&lt;/code> 中只接收和自己有關的 msg，和自己無關的就傳遞下去，絕對不操作不屬於自己的屬性，不然會出 bug&lt;/p></description></item><item><title>GPG with SSH</title><link>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 22:59:17 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</guid><description>&lt;h1 id="gpg-with-ssh">GPG with SSH&lt;/h1>
+&lt;p>&lt;code>Update&lt;/code> 中只接收和自己有關的 msg，和自己無關的就傳遞下去，絕對不操作不屬於自己的屬性，不然會出 bug&lt;/p></description></item><item><title>GPG and Yubikey</title><link>https://blog.simbafs.cc/p/linux/gpg-yubikey/</link><pubDate>Mon, 12 Dec 2022 23:26:53 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-yubikey/</guid><description>&lt;h1 id="gpg">GPG&lt;/h1>
+&lt;p>GPG 是由 由 PGP、OpenPGP 演化而來，屬於 GNU 計畫之一，主要功能是在不安全通道建立安全可信的通訊。為了建立安全可信，需要解決幾個問題：加密明文、驗證發送方、驗證接收方，以及為了解決前面三個問題而產生的新問題：信任。&lt;br>
+為了驗證發送方，發送方需要產生只有發送方能產生的簽章併附在內容後面。為了驗證接收方，要把內容用只有接收方才能解開的方式把內容保護起來，這同時可以做到加密明文。&lt;/p>
+&lt;p>GPG 中每個人都有一個鑰匙圈（keyring），就像你包包裡的鑰匙圈，GPG 的 keyring 也可以有不只一把金鑰。通常來說會是一把主金鑰和若干把的子金鑰，每一把都是非對稱金鑰對，也就是會有公鑰和私鑰（密鑰）。公鑰是需要公佈給其他人知道的（還要像辦法讓其他人「信任」），而私鑰是必須保護好，後面提到的 Yubikey 就是為了保護我們的私鑰，盡量讓他暴露的風險越低越好。&lt;/p>
+&lt;h2 id="主金鑰和子金鑰的關係">主金鑰和子金鑰的關係&lt;/h2>
+&lt;p>一組 GPG keyring 中會有一個主金鑰和若干個子金鑰，主金鑰的功能是身份證明和金鑰管理，而子密鑰就是一般的操作。之所以需要有這個設計，是為了盡可能保護主密鑰不洩漏。在日常的 GPG 使用中，我們不可避免需要密鑰（解密、簽章等等），如果全部都使用主密鑰操作，也不是說不行，但是萬一主密鑰洩漏，就要重新產生了。但如果將日常功能移到和主密鑰相關連的子密鑰，主密鑰僅保留重要的「身份證明」功能，如此一來就可以將 &lt;a class="link" href="https://blog.theerrorlog.com/using-gpg-zh.html" target="_blank" rel="noopener"
+>主密鑰分離&lt;/a>（這算是高階操作），把不常用到但是非常重要的主金鑰藏好（像是離線儲存，或是最極端的在離線的機器產生、匯出然後刪除）。如果主密鑰洩漏或是遺失，那就要重新產生，等於是一個全新的身份，所有信任關係必須從頭建立。&lt;/p>
+&lt;p>因為主金鑰和子金鑰是不同金鑰對，所以如果你用 Alice 子公鑰加密，是不能用 Bella 子密鑰甚至是主密鑰解密的，簽章和證明也是如此。&lt;/p>
+&lt;h3 id="如何連結子密鑰和主密鑰">如何連結子密鑰和主密鑰&lt;/h3>
+&lt;p>子金鑰和主金鑰是不同的金鑰，甚至可以用不同的演算法產生，那是什麼東西決定他們的地位差異呢？根據我對 &lt;a class="link" href="https://superuser.com/questions/1113308/what-is-the-relationship-between-an-openpgp-key-and-its-subkey" target="_blank" rel="noopener"
+>這篇問答&lt;/a> 的理解（很可能是錯的，網路上這方面的資料有夠少），在用主金鑰產生子金鑰的時候，會用主密鑰幫子金鑰「簽章」，這個稱之為「Bellainding Siganture」。GPG 就是用這個 binding signature 去證明子密鑰屬於哪個 keyring。&lt;/p>
+&lt;h3 id="什麼操作屬於身份證明certify">什麼操作屬於身份證明(Certify)&lt;/h3>
+&lt;p>前面提到，主金鑰的功能是身份證明，但是怎樣的操作是屬於身份證明呢？根據這 &lt;a class="link" href="https://security.stackexchange.com/questions/73679/which-actions-does-the-gnupg-certify-capability-permit" target="_blank" rel="noopener"
+>這篇問答&lt;/a> 和 &lt;a class="link" href="https://www.rfc-editor.org/rfc/rfc4880#section-5.2.1" target="_blank" rel="noopener"
+>RFC 4880&lt;/a>，以下操作都是屬於身份證明&lt;/p>
+&lt;ul>
+&lt;li>對某個使用者的公鑰簽章（信任某個使用者，相關內容在信任網章節）&lt;/li>
+&lt;li>簽發 binding signature（這裡分成 subkey binding signature 和 primary binding signature，但我還沒研究出差別）&lt;/li>
+&lt;li>簽發金鑰撤銷金鑰（當你的子密鑰洩漏時宣告用）&lt;/li>
+&lt;/ul>
+&lt;p>簡單來說，就是產生、撤銷子金鑰以及和「信任」有關的操作都算是「身份證明」(Certify)&lt;/p>
+&lt;h2 id="usage-flag">Usage Flag&lt;/h2>
+&lt;p>每對金鑰其實都有簽章、加密、驗證等等功能（可能會依使用的演算法不同而受限，像是 DSAlice 只能簽章），為了清楚的切分不同密鑰的功能，GPG 採用的方法是 Usage Flag，他會標注一個金鑰的用途是「&lt;strong>C&lt;/strong>ertify 身份證明」、「&lt;strong>S&lt;/strong>ign 簽章」、「&lt;strong>E&lt;/strong>ncrypt 加解密」、「&lt;strong>Alice&lt;/strong>uthenticate 認證」。如果你在產生金鑰時加上 &lt;code>--expert&lt;/code> 專家選項，你會在選擇演算法的列表看到某些選項後面帶著 &lt;code>(set your own capabilities)&lt;/code>，選這些可以讓你決定產生的金鑰有哪些 Usage Flag，不然就會使用預設的。&lt;/p>
+&lt;p>其中在上一個小節提到的 Certify 功能必須&lt;strong>且只能&lt;/strong>（應該吧，我是找不到怎麼在子密鑰上加 Certify）設定在主密鑰上。另外 Certify 和 Aliceuthenticate 的中文翻譯都很像，但是功能卻大大不同，Certify 剛剛上面提過，就是「信任」，Aliceuthenticate 則是像是 ssh 登入的操作（下面會提到）&lt;/p>
+&lt;h2 id="uid">uid&lt;/h2>
+&lt;p>每個 keyring 都對應到一個人，但通常一個人有不只一個的 email address，因此 GPG 也支援對應多個 email address，這個在 GPG 終就稱之為 uid，裡面會包含這個人的名字和 email address&lt;/p>
+&lt;h2 id="key-fingerprintid-and-keygrip">key fingerprint(id) and keygrip&lt;/h2>
+&lt;p>fingerprint 和 keygrip 都是要對於金鑰對識別，他們都是把要識別的公鑰對拿去 hash，功能是可以快速比較兩把 key 是否相同，例如你從網路上找到某個人的公鑰，可以用 fingerprint 和那個人比對是不是同一把 key（fingerprint 40 個字元，完整的 key 可能有上千個字元）。看到這裡你會覺得 fingerprint 和 keygrip 很像，的確，他們的差異只差在包含的資訊不一樣&lt;/p>
+&lt;ul>
+&lt;li>fingerprint
+&lt;ul>
+&lt;li>公鑰&lt;/li>
+&lt;li>建立日期&lt;/li>
+&lt;li>演算法&lt;/li>
+&lt;li>公鑰 packet 版本（儲存公鑰的資料結構）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>keygrip
+&lt;ul>
+&lt;li>公鑰&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>你會發現，keygrip 只包含公鑰，而 fingerprint 則是包含了一堆 gpg 內部資訊，因此我們可以說 keygrip 是「和 GPG 無關」的識別。&lt;/p>
+&lt;p>雖然兩者都能識別主金鑰和子金鑰，但是在我自己的使用中，通常 fingerprint 會用來識別主金鑰（整個 keyring），keygrip 會拿來特別指定要用哪一個子金鑰。&lt;/p>
+&lt;h2 id="信任網">信任網&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;strong>Information&lt;/strong>
+接下來的「公鑰」通常是指 &amp;ldquo;public key packet&amp;rdquo;，也就是指令 &lt;code>gpg --export&lt;/code> 預設會吐出來的東西，裡面包含主公鑰、子公鑰們、uid 資訊以及別人對這個公鑰的簽章等等&lt;/p>
+&lt;/blockquote>
+&lt;p>現在想像一個情境，Alice 要加密一段訊息傳給 Bella，所以他需要去找到 Bella 的公鑰，Alice 上網找到一個公鑰的 uid 是 &lt;code>Bella &amp;lt;b@exmaple.com&amp;gt;&lt;/code>，於是他就用這份公鑰加密訊息後傳給 Bella，但是這份公鑰其實是 C 偽裝的，那這樣祕密訊息就會被 C 知道。&lt;/p>
+&lt;p>為了解決這個問題，Alice 拿到公鑰後要開始傳訊息之前，需要先用一個可信的通道和 Bella 確認公鑰是否正確（當面比對 fingerprint 之類的），接者 Alice 用他的主密鑰幫 Bella 的公鑰簽章（Alice sign Bella&amp;rsquo;s key），做出宣告「Alice 認為這把公鑰有效（來源和上面記載的是一致的，都是 Bella」（this key is validated）。這時候 Bella 也跟 Charlie 確認過公鑰並簽章（Bella sign Charlie&amp;rsquo;s key），如果 Alice 「完整」信任 Bella 會認真確認公鑰真實性才簽章，那他就可以拿 Bella 的公鑰去驗證 Bella 真的簽章過 Charlie 的公鑰，那麼 Alice 可以根據這個結果相信 Charlie 的公鑰是真的，不用親自去找 Charlie 確認。&lt;/p>
+&lt;blockquote>
+&lt;p>「相信公鑰有效（真實性）」和「信任簽章公鑰的人」在 GPG 裡面都是 &amp;ldquo;trust&amp;rdquo; ，有點容易搞混，但中文還是可以稍微區分開來的&lt;/p>
+&lt;/blockquote>
+&lt;p>對於公鑰簽章簽發者的信任層級可以分成以下五個&lt;/p>
+&lt;ol>
+&lt;li>不知道&lt;/li>
+&lt;li>不信任&lt;/li>
+&lt;li>半信半疑&lt;/li>
+&lt;li>完整信任&lt;/li>
+&lt;li>終極信任&lt;/li>
+&lt;/ol>
+&lt;p>其中終極信任因為比較特別就先不談，在上面 Alice、Bella 和 Charlie 的例子裡，如果 Alice 沒有「完整信任」Bella，只有「半信半疑」，那麼 Charlie 的公鑰就不會被認為是有效的&lt;/p>
+&lt;p>目前為止的機制，我們要確認公鑰有效需要整條信任鍊之間都是「完整信任」且都被前一個確認是有效，但是這樣缺乏彈性。GPG 採用一個巧妙的方法來擴展目前的機制，一把公鑰如果滿足以下條件，就會被認定是有效的：&lt;/p>
+&lt;ol>
+&lt;li>被足夠多的有效的人（公鑰是有效的）簽章，這意味下面條件至少要滿足一個
+&lt;ol>
+&lt;li>你親自對他簽章&lt;/li>
+&lt;li>被一個「完整信任」的人簽章&lt;/li>
+&lt;li>被三個「半信半疑」的人簽章&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>從自己出發到那把公鑰的最短路徑小於等於五步&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>在實際使用時需要幾個半信半疑的人以及路徑長度限制都是可以調整的，這裡寫的是 GPG 預設的值&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;blockquote>
+&lt;p>&lt;strong>Danger&lt;/strong>&lt;br>
+以下內容待驗證&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> +-----&amp;gt;Bella--------+
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> | v
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Alice--+ +--&amp;gt;Daniel-----&amp;gt;Edson------&amp;gt;Galen
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> | | |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> | | |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> +-&amp;gt;Charlie---+ |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> | v
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> +--&amp;gt;Frank
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>把公鑰簽署關係畫成圖&lt;br>
+&lt;code>$ gpg --no-options --with-colons --fixed-list-mode --list-sigs | sig2dot -a -u &amp;quot;[User ID not found]&amp;quot; &amp;gt; myLUG.dot ; neato -Tpng myLUG.dot &amp;gt; myLUG.png ; open myLUG.png&lt;/code>&lt;br>
+&lt;a class="link" href="https://github.com/bmarwell/sig2dot2" target="_blank" rel="noopener"
+>https://github.com/bmarwell/sig2dot2&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>舉例來說，上圖以 Alice 為中心到 Galen 等六個人的信任關係，箭頭 &lt;code>A---&amp;gt;B&lt;/code> 代表 A 為 B 的公鑰簽章，在以下的例子，我們調整為只需要兩個半信半疑的有效公鑰信任就可以信任為有效公鑰，但路徑不能超過三。&lt;/p>
+&lt;p>下表是基於這個信任網 Alice 對其他人的信任層級和推導出來的公鑰有效性結果。&lt;br>
+舉例來說，第一個情況是雖然 Alice 確認了 Bella 和 Charlie 的公鑰有效性，但是他只相信 Charlie ，根據這個可以推導出來 Daniel, Edson, Frank 三人的公鑰都是有效的，因為 Alice 對 Charlie 是完整信任，因此 Charlie 確認過的公鑰對於 Alice 都是有效的。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">情境&lt;/th>
+&lt;th style="text-align:left">半信半疑&lt;/th>
+&lt;th style="text-align:left">完整信任&lt;/th>
+&lt;th style="text-align:left">一半有效&lt;/th>
+&lt;th style="text-align:left">完整有效&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Charlie&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Bella, Charlie, Daniel, Frank&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">2&lt;/td>
+&lt;td style="text-align:left">Bella, Chalir&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Feank&lt;/td>
+&lt;td style="text-align:left">Bella, Charlie, Daniel&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">3&lt;/td>
+&lt;td style="text-align:left">Charlie, Daniel&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Daniel, Frank&lt;/td>
+&lt;td style="text-align:left">Bella, Charlie&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">4&lt;/td>
+&lt;td style="text-align:left">Charlie, Daniel, Bella&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Edson&lt;/td>
+&lt;td style="text-align:left">Bella, Charlie, Frank&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">5&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Bella, Daniel, Edson&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Bella, Daniel, Edson, Frank&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>需要實驗驗證&lt;/p>
+&lt;/blockquote>
+&lt;p>根據我的理解，首先是自己簽的公鑰一定是有效的，再來是完整相信的人簽的也是有效，再來是夠多的半信半疑的人都簽章的公鑰也有效，最後你會發現，能夠延伸到最遠的有效公鑰是信任的人的外圍一圈不超過長度限制的地方。&lt;/p>
+&lt;hr>
+&lt;p>信任網要解決的不是技術問題，是社交問題，就算今天 GPG 的設計改成有一個權威的驗證中心去發布每一把公鑰，還是會遇到一個問題，我憑什麼相信這個驗證中心？因此 GPG 採用的信任網可以讓我們從真實世界會接觸的人開始建立信任網，再漸漸地把信任網擴張，這時我們不是因為「這是權威」而信任一把公鑰而是因為我們做出足夠的判斷才決定一把未知公鑰是否可信。&lt;/p>
+&lt;blockquote>
+&lt;p>這一小節參考 GPG 官方的教學文章 &lt;a class="link" href="https://www.gnupg.org/gph/en/manual/x334.html" target="_blank" rel="noopener"
+>https://www.gnupg.org/gph/en/manual/x334.html&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="範例">範例&lt;/h2>
+&lt;h3 id="產生金鑰對">產生金鑰對&lt;/h3>
+&lt;h3 id="gpg-with-ssh">GPG with SSH&lt;/h3>
+&lt;h3 id="簽章公鑰">簽章公鑰&lt;/h3>
+&lt;h2 id="發佈公鑰">發佈公鑰&lt;/h2>
+&lt;h1 id="yubikey">Yubikey&lt;/h1></description></item><item><title>GPG with SSH</title><link>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 22:59:17 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</guid><description>&lt;h1 id="gpg-with-ssh">GPG with SSH&lt;/h1>
 &lt;p>接續前一篇 &lt;a class="link" href="https://blog.simbafs.cc/posts/linux/gpg/" >gpg 的文章&lt;/a>&lt;/p>
 &lt;h2 id="指紋-fingerprint">指紋 Fingerprint&lt;/h2>
 &lt;p>根據 &lt;a class="link" href="https://help.gnome.org/users/seahorse/stable/misc-key-fingerprint.html.en" target="_blank" rel="noopener"
@@ -2116,7 +2293,7 @@ alt="explain.png"
 &lt;h2 id="心得">心得&lt;/h2>
 &lt;p>如果我沒理解錯，會選用 UDP 做 p2p 是因為 UDP 的連線關掉後 NAT 不會把洞關起來，所以一開始往伺服器發訊息的動作就是在打洞，然後把洞的資訊送到另一邊，接著就可以透過這的洞直連。而 TCP 一斷掉連線洞就會關起來，所以無法做 p2p（這是個人猜測，無根據）。&lt;br>
 這時候我就很好奇，應該有人做這種公共的 p2p server 吧？搭配 SDK 應該可以很輕鬆的做到任意兩台裝置連線，這樣伺服器的 loading 也不重，需要的資源也很低，感覺可以來開一個。&lt;br>
-接著我應該會去研究是否有辦法用 TCP 做 p2p，或是如何在 UDP 上搭建一個可信賴的通訊。接著遠程目標大概是 IPFS 之類的&lt;/p></description></item><item><title>File System</title><link>https://blog.simbafs.cc/p/nodejs/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 22:16:42 +0800</pubDate><guid>https://blog.simbafs.cc/p/nodejs/nextjs/fs/</guid><description>&lt;h1 id="file-system">File System&lt;/h1>
+接著我應該會去研究是否有辦法用 TCP 做 p2p，或是如何在 UDP 上搭建一個可信賴的通訊。接著遠程目標大概是 IPFS 之類的&lt;/p></description></item><item><title>File System</title><link>https://blog.simbafs.cc/p/js/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 22:16:42 +0800</pubDate><guid>https://blog.simbafs.cc/p/js/nextjs/fs/</guid><description>&lt;h1 id="file-system">File System&lt;/h1>
 &lt;h2 id="getstaticprops">getStaticProps&lt;/h2>
 &lt;p>不知道為什麼，&lt;code>getStaticProps&lt;/code> 裡面的 &lt;code>fs&lt;/code> 時有時無。&lt;a class="link" href="https://github.com/vercel/next.js/discussions/12124" target="_blank" rel="noopener"
 >這裡&lt;/a> 似乎有關於這個問題的回答，但無效&lt;/p>
@@ -2250,68 +2427,7 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/bitbucket-connect-jira/</link><pubDate>Wed, 20 Jul 2022 17:39:07 +0800</pubDate><guid>https://blog.simbafs.cc/p/bitbucket-connect-jira/</guid><description>&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
-&lt;h2 id="bitbucket-連接-jira">Bitbucket 連接 Jira&lt;/h2>
-&lt;p>先到 Bitbucket 的 repo 的 Jira issue 頁面
-&lt;img src="https://blog.simbafs.cc/1.png"
-loading="lazy"
-alt="1"
->
-點擊左上方資料夾圖示按鈕，然後點擊「Manage linked projects」
-&lt;img src="https://blog.simbafs.cc/2.png"
-loading="lazy"
-alt="2"
->
-選好 Jira 專案後，按下「Link project」
-&lt;img src="https://blog.simbafs.cc/3.png"
-loading="lazy"
-alt="3"
->
-等載入完成就可以看到 Jira issue 了
-&lt;img src="https://blog.simbafs.cc/4.png"
-loading="lazy"
-alt="4"
->&lt;/p>
-&lt;h2 id="jira-issue-連結-bitbucket-branch">Jira issue 連結 Bitbucket branch&lt;/h2>
-&lt;p>Bitbucket 的 repo 的 Jira issue 頁面，點擊要處理的 Jira issue 最右側的三個點點
-&lt;img src="https://blog.simbafs.cc/4.png"
-loading="lazy"
-alt="4"
->
-選第一個按鈕「Create Brench」
-&lt;img src="https://blog.simbafs.cc/5.png"
-loading="lazy"
-alt="5"
->
-填好 type、name 等等訊息，按下「Create」就建立好並對應了
-&lt;img src="https://blog.simbafs.cc/6.png"
-loading="lazy"
-alt="6"
->&lt;/p>
-&lt;h2 id="將遠端-git-brench-拉到本地">將遠端 Git brench 拉到本地&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">$ git pull
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git switch &amp;lt;branch name&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="合併分支">合併分支&lt;/h2>
-&lt;p>目標：將 A 分支合併到 main 分支&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ git switch main
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git merge A
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>這裡可能會產生衝突（conflict），解決後就可以繼續合併了&lt;/p></description></item><item><title>Solarized</title><link>https://blog.simbafs.cc/p/linux/vim/solarized/</link><pubDate>Wed, 15 Jun 2022 17:09:18 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/solarized/</guid><description>&lt;h1 id="solarized">Solarized&lt;/h1>
+&lt;/div></description></item><item><title>Solarized</title><link>https://blog.simbafs.cc/p/linux/vim/solarized/</link><pubDate>Wed, 15 Jun 2022 17:09:18 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/solarized/</guid><description>&lt;h1 id="solarized">Solarized&lt;/h1>
 &lt;p>&lt;a class="link" href="https://ethanschoonover.com/solarized/" target="_blank" rel="noopener"
 >solarized&lt;/a> 是一個文字界面常見的配色方案，不僅是用在 vim，大多數 terminal 和 editor 也都支援&lt;/p>
 &lt;h2 id="install">install&lt;/h2>
@@ -7899,7 +8015,7 @@ alt="memory comsumption"
 &lt;p>&lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
 >Libreoffice extensions&lt;/a>
 &lt;a class="link" href="https://github.com/slgobinath/libreoffice-code-highlighter/issues/29#issuecomment-635216707" target="_blank" rel="noopener"
->issue&lt;/a>&lt;/p></description></item><item><title>Strapi Quick Start</title><link>https://blog.simbafs.cc/p/nodejs/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/strapi-quick-start/</guid><description>&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
+>issue&lt;/a>&lt;/p></description></item><item><title>Strapi Quick Start</title><link>https://blog.simbafs.cc/p/js/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/strapi-quick-start/</guid><description>&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
 &lt;h2 id="strapi">strapi&lt;/h2>
 &lt;h2 id="什麼是-headless-cms">什麼是 headless CMS&lt;/h2>
 &lt;p>headless CMS 顧名思義是「無頭的 內容管理系統」，意思是沒有前端、只有後端，它就是一個 DB 的 web 界面 + api server。headless CMS 專注於處理 api 的部份，前端的部份一律不關心。這對於前後端分離有很大的幫助，基本上 headless CMS 已經解決了後端 80% 的工作，剩下的就是一些客製化的邏輯，像是登入、特殊的計算等等。&lt;/p>
@@ -7935,7 +8051,7 @@ MongoDB &amp;gt;= 3.6&lt;/p>
 &lt;li>建立 &lt;code>collection type&lt;/code>&lt;br>
 如果你按照官網的說法，這裡又會讓你很困惑，&lt;code>+ Create new collection type&lt;/code> 按鈕到底它ㄇ的在哪？其實只要在開啟伺服器時用 develop mode 開就可以了，這個重要要的東西它又沒寫了，把你的 server 關掉，下 &lt;code>npm run develop&lt;/code> 然後再去剛剛的頁面，重新整理就可以看到那個調皮的按鈕了。&lt;/li>
 &lt;/ol>
-&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item><item><title>Node VM</title><link>https://blog.simbafs.cc/p/nodejs/node-vm/</link><pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/node-vm/</guid><description>&lt;h1 id="node-vm">Node VM&lt;/h1>
+&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item><item><title>Node VM</title><link>https://blog.simbafs.cc/p/js/node-vm/</link><pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/node-vm/</guid><description>&lt;h1 id="node-vm">Node VM&lt;/h1>
 &lt;h2 id="nodejs-vm-模組">node.js VM 模組&lt;/h2>
 &lt;p>VM 是 node.js 的核心模組，提供安全的環境 (沙箱) 來測試不信任的程式碼。&lt;/p>
 &lt;h2 id="基本概念">基本概念&lt;/h2>
@@ -8055,7 +8171,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="執行-script-沒有預先編譯-script">執行 script (沒有預先編譯 Script)&lt;/h2>
-&lt;p>如果你很懶，或是你只是想要一次行的執行這段 code，可以用 &lt;code>vm.runInContext&lt;/code>、&lt;code>vm.runInNewContext&lt;/code> 和 &lt;code>vm.runInThisContext&lt;/code>。用法跟先編譯過再執行一樣，只是其中第一個參數變成還沒編譯過的 code (String)。&lt;/p></description></item><item><title>hCaptcha</title><link>https://blog.simbafs.cc/p/nodejs/hcaptcha/</link><pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/hcaptcha/</guid><description>&lt;h1 id="hcaptcha">hCaptcha&lt;/h1>
+&lt;p>如果你很懶，或是你只是想要一次行的執行這段 code，可以用 &lt;code>vm.runInContext&lt;/code>、&lt;code>vm.runInNewContext&lt;/code> 和 &lt;code>vm.runInThisContext&lt;/code>。用法跟先編譯過再執行一樣，只是其中第一個參數變成還沒編譯過的 code (String)。&lt;/p></description></item><item><title>hCaptcha</title><link>https://blog.simbafs.cc/p/js/hcaptcha/</link><pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/hcaptcha/</guid><description>&lt;h1 id="hcaptcha">hCaptcha&lt;/h1>
 &lt;h2 id="前情提要">前情提要&lt;/h2>
 &lt;p>我們社團的短網址服務裡面常常出現一些奇怪的網址，我猜可能是有機器人在刷，所以我想加入 captcha 減少這類問題。我選擇的是 &lt;a class="link" href="https://hcaptcha.com/" target="_blank" rel="noopener"
 >hCaptcha&lt;/a> 這套，能不依賴 Google 就盡量不要。&lt;/p>
@@ -8387,7 +8503,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">complete&lt;/span> -W &lt;span class="s2">&amp;#34;up down clean&amp;#34;&lt;/span> mongodb
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;code>-W&lt;/code> 選項代表後面是字詞列表，用 &lt;code>-F&lt;/code> 後面可以接一個函數，但是這個我沒研究，也許下一個專案就是研究 &lt;code>complete&lt;/code> 也說不定。&lt;/p></description></item><item><title>Mongoose Model</title><link>https://blog.simbafs.cc/p/nodejs/mongoose-model/</link><pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/mongoose-model/</guid><description>&lt;h1 id="mongoose-model">Mongoose Model&lt;/h1>
+&lt;/div>&lt;p>&lt;code>-W&lt;/code> 選項代表後面是字詞列表，用 &lt;code>-F&lt;/code> 後面可以接一個函數，但是這個我沒研究，也許下一個專案就是研究 &lt;code>complete&lt;/code> 也說不定。&lt;/p></description></item><item><title>Mongoose Model</title><link>https://blog.simbafs.cc/p/js/mongoose-model/</link><pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/mongoose-model/</guid><description>&lt;h1 id="mongoose-model">Mongoose Model&lt;/h1>
 &lt;h2 id="環境設定">環境設定&lt;/h2>
 &lt;p>這是這次實驗用的 code&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -8492,7 +8608,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;/div>
 &lt;/div>&lt;p>像是在安裝 &lt;code>mongodb-org&lt;/code> 的時候他就要用到 &lt;code>systemctl&lt;/code> 然後就會出錯。&lt;/p>
 &lt;h2 id="解法">解法&lt;/h2>
-&lt;p>其實 mxlinux 已經幫我們想好解法了，在開機選項時選 &lt;code>Advence&lt;/code> &amp;gt; &lt;code>Systemd&lt;/code> 就會以 systemd 開機&lt;/p></description></item><item><title>Node Require from Project Root</title><link>https://blog.simbafs.cc/p/nodejs/node-require-from-project-root/</link><pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/node-require-from-project-root/</guid><description>&lt;h1 id="node-require-from-project-root">Node Require from Project Root&lt;/h1>
+&lt;p>其實 mxlinux 已經幫我們想好解法了，在開機選項時選 &lt;code>Advence&lt;/code> &amp;gt; &lt;code>Systemd&lt;/code> 就會以 systemd 開機&lt;/p></description></item><item><title>Node Require from Project Root</title><link>https://blog.simbafs.cc/p/js/node-require-from-project-root/</link><pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/node-require-from-project-root/</guid><description>&lt;h1 id="node-require-from-project-root">Node Require from Project Root&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>在寫一個專案的時候，有時候會有一些小程式重複在不同的檔案裡用到，這時候我們會把他打包成模組放在 &lt;code>lib/&lt;/code>。但是如果資料夾結構有點點複雜的時候， &lt;code>require()&lt;/code> 的路徑就會很複雜：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -8863,7 +8979,7 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>express 重複 send</title><link>https://blog.simbafs.cc/p/nodejs/express-%E9%87%8D%E8%A4%87-send/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/express-%E9%87%8D%E8%A4%87-send/</guid><description>&lt;h1 id="express-重複-send">express 重複 send&lt;/h1>
+&lt;/div></description></item><item><title>express 重複 send</title><link>https://blog.simbafs.cc/p/js/express-%E9%87%8D%E8%A4%87-send/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/express-%E9%87%8D%E8%A4%87-send/</guid><description>&lt;h1 id="express-重複-send">express 重複 send&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>在 express route 裡面，我通常會在 &lt;code>res.send()&lt;/code> 之類的函式前面都會加一個 &lt;code>return&lt;/code> 防止因為程式邏輯漏洞造成重複送出然後噴 error。像是這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -9206,7 +9322,7 @@ alt="sitemap"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> hexo deploy&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Reactjs Update State on Props Change</title><link>https://blog.simbafs.cc/p/nodejs/reactjs/reactjs-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/reactjs/reactjs-update-state-on-props-change/</guid><description>&lt;h1 id="react-update-state-on-props-change">React Update State on Props Change&lt;/h1>
+&lt;/div></description></item><item><title>Reactjs Update State on Props Change</title><link>https://blog.simbafs.cc/p/js/reactjs/reactjs-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/reactjs-update-state-on-props-change/</guid><description>&lt;h1 id="react-update-state-on-props-change">React Update State on Props Change&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>今天在研究 React
 遇到一個問題
@@ -9299,7 +9415,7 @@ alt="sitemap"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Webpack Reactjs</title><link>https://blog.simbafs.cc/p/nodejs/reactjs/webpack-reactjs/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/reactjs/webpack-reactjs/</guid><description>&lt;h1 id="webpack-reactjs">Webpack Reactjs&lt;/h1>
+&lt;/div></description></item><item><title>Webpack Reactjs</title><link>https://blog.simbafs.cc/p/js/reactjs/webpack-reactjs/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/webpack-reactjs/</guid><description>&lt;h1 id="webpack-reactjs">Webpack Reactjs&lt;/h1>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>最近開始想學 react
 在這之前當然要先把開發環境搞好
@@ -9543,7 +9659,7 @@ alt="2.png"
 &lt;p>在 jquery 裡有時後會用到 handler
 正常情況下可以用 arrow function
 但是如果用到 &lt;code>this&lt;/code> 就不能用 arrow function 了
-（這不只是 jquery, JS 都是這樣）&lt;/p></description></item><item><title>Passport.js</title><link>https://blog.simbafs.cc/p/nodejs/passport.js/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/passport.js/</guid><description>&lt;h1 id="passportjs">Passport.js&lt;/h1>
+（這不只是 jquery, JS 都是這樣）&lt;/p></description></item><item><title>Passport.js</title><link>https://blog.simbafs.cc/p/js/passport.js/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/passport.js/</guid><description>&lt;h1 id="passportjs">Passport.js&lt;/h1>
 &lt;p>今天終於把登入做完了
 我覺得最重要的是找好的教學文章、去看沒有人看得懂的程式碼&lt;/p>
 &lt;hr>
@@ -9555,7 +9671,7 @@ alt="2.png"
 沒了！&lt;/li>
 &lt;/ol>
 &lt;p>參考的教學文：https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E7%AD%86%E8%A8%98-%E9%80%8F%E9%81%8E-passport-js-%E5%AF%A6%E4%BD%9C%E9%A9%97%E8%AD%89%E6%A9%9F%E5%88%B6-11cf478f421e
-雖然這個也沒有好到哪裡去但至少我看著他做出來了，有些部份是參考作者的餐廳程式&lt;/p></description></item><item><title>sqlite3</title><link>https://blog.simbafs.cc/p/nodejs/sqlite3/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/sqlite3/</guid><description>&lt;h1 id="sqlite3">sqlite3&lt;/h1>
+雖然這個也沒有好到哪裡去但至少我看著他做出來了，有些部份是參考作者的餐廳程式&lt;/p></description></item><item><title>sqlite3</title><link>https://blog.simbafs.cc/p/js/sqlite3/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/sqlite3/</guid><description>&lt;h1 id="sqlite3">sqlite3&lt;/h1>
 &lt;p>昨天是試著去理解 sqlite3，我發現他的 callback function 真的太煩了
 於是我試著去尋找 async 的版本，還真找到了
 這個套件把整個 sqlite 包成 async 了&lt;/p>
@@ -9696,7 +9812,7 @@ hello.sh&lt;/p>
 首先改名字我相信 youtube-dl 一定有提供這個選項，於是開始查文件。
 看到 &lt;code>-o&lt;/code> ，接下來講遇到的坑&lt;/p>
 &lt;h2 id="-o-坑">&lt;code>-o&lt;/code> 坑&lt;/h2>
-&lt;p>&lt;code>-o&lt;/code> 後面接的是一個 template string ，不是檔名，而且就算指定副檔名是 .mp3 了還是要寫成 &lt;code>%(ext)s&lt;/code>&lt;/p></description></item><item><title>Blessed Landmine</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed-landmine/</link><pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed-landmine/</guid><description>&lt;h1 id="blessed-landmine">Blessed Landmine&lt;/h1>
+&lt;p>&lt;code>-o&lt;/code> 後面接的是一個 template string ，不是檔名，而且就算指定副檔名是 .mp3 了還是要寫成 &lt;code>%(ext)s&lt;/code>&lt;/p></description></item><item><title>Blessed Landmine</title><link>https://blog.simbafs.cc/p/js/blessed/blessed-landmine/</link><pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/blessed/blessed-landmine/</guid><description>&lt;h1 id="blessed-landmine">Blessed Landmine&lt;/h1>
 &lt;p>這是一篇我在用 blessed 時踩的一些雷&lt;/p>
 &lt;h2 id="1-記得-render">1. 記得 render&lt;/h2>
 &lt;p>今天在寫 API 時踩到兩次
@@ -9840,7 +9956,7 @@ hello.sh&lt;/p>
 >https://codertw.com/%E4%BC%BA%E6%9C%8D%E5%99%A8/377688/&lt;/a>&lt;br>
 這篇講 ssh tunnel 最清楚&lt;br>
 &lt;a class="link" href="https://yu-jack.github.io/2019/01/08/ssh-tunnel/" target="_blank" rel="noopener"
->https://yu-jack.github.io/2019/01/08/ssh-tunnel/&lt;/a>&lt;/p></description></item><item><title>Unix Socket</title><link>https://blog.simbafs.cc/p/nodejs/unix-socket/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/unix-socket/</guid><description>&lt;h1 id="unix-socket">Unix Socket&lt;/h1>
+>https://yu-jack.github.io/2019/01/08/ssh-tunnel/&lt;/a>&lt;/p></description></item><item><title>Unix Socket</title><link>https://blog.simbafs.cc/p/js/unix-socket/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/unix-socket/</guid><description>&lt;h1 id="unix-socket">Unix Socket&lt;/h1>
 &lt;p>今天心血來潮在看 unix socket
 突然想到 node 可不可以把 服務監聽在一個 socket file
 這樣在設定的時候就不用記哪個服務是幾 port&lt;/p>
@@ -9974,7 +10090,7 @@ hello.sh&lt;/p>
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ chmod 777 /tmp/express.sock
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>這樣就可以啦！&lt;/p></description></item><item><title>Blessed 切換畫面</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</link><pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</guid><description>&lt;h1 id="blessed-切換畫面">Blessed 切換畫面&lt;/h1>
+&lt;/div>&lt;p>這樣就可以啦！&lt;/p></description></item><item><title>Blessed 切換畫面</title><link>https://blog.simbafs.cc/p/js/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</link><pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</guid><description>&lt;h1 id="blessed-切換畫面">Blessed 切換畫面&lt;/h1>
 &lt;p>今天完成了新版本的 &lt;code>treetify&lt;/code> &lt;a class="link" href="https://blog.simbafs.cc/2020/02/18/blessed-contrib-tree/" >看這&lt;/a>
 同時我設計好了右邊的 &lt;code>edit&lt;/code>
 但是我的問題是他要根據情況不同切換不同的頁面
@@ -10126,7 +10242,7 @@ hello.sh&lt;/p>
 &lt;/div>&lt;p>這裡建立三個 &lt;code>box&lt;/code> 要顯示哪一個的時候就將他 append
 實驗證實這樣不會建立新的圖層
 而是把下面的那個搬到最上面
-完美的解決了這個問題&lt;/p></description></item><item><title>Blessed Contrib Tree</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed-contrib-tree/</link><pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed-contrib-tree/</guid><description>&lt;h1 id="blessed-contrib-tree">blessed Contrib Tree&lt;/h1>
+完美的解決了這個問題&lt;/p></description></item><item><title>Blessed Contrib Tree</title><link>https://blog.simbafs.cc/p/js/blessed/blessed-contrib-tree/</link><pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/blessed/blessed-contrib-tree/</guid><description>&lt;h1 id="blessed-contrib-tree">blessed Contrib Tree&lt;/h1>
 &lt;h2 id="tree">Tree&lt;/h2>
 &lt;p>想說先想一個專案來練練手
 熟悉一下 blessed
@@ -10208,7 +10324,7 @@ hello.sh&lt;/p>
 如果是空物件代表這是葉節點
 &lt;code>extended&lt;/code> 屬性是是否展開，預設 &lt;code>true&lt;/code>
 &lt;code>name&lt;/code> 是顯示出來的字，如果要改再設，預設是 &lt;code>index&lt;/code>
-&lt;code>myCustomProperty&lt;/code> 直翻是自訂屬性，應該是當 &lt;code>tree.on('select')&lt;/code> 觸發時傳進去的&lt;/p></description></item><item><title>Blessed</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed/</guid><description>&lt;h1 id="blessed">Blessed&lt;/h1>
+&lt;code>myCustomProperty&lt;/code> 直翻是自訂屬性，應該是當 &lt;code>tree.on('select')&lt;/code> 觸發時傳進去的&lt;/p></description></item><item><title>Blessed</title><link>https://blog.simbafs.cc/p/js/blessed/blessed/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/blessed/blessed/</guid><description>&lt;h1 id="blessed">Blessed&lt;/h1>
 &lt;p>某天我有一個問題
 gtop 的圖畫界面是怎麼做的，我知道他是用 node 寫的，對他別有興趣
 我上 github 看他的 package.json
@@ -10801,60 +10917,65 @@ alt="Followers"
 &lt;li>前端好難&lt;/li>
 &lt;li>&lt;strong>Golang&lt;/strong>、&lt;strong>NodeJS&lt;/strong>、nextjs&lt;/li>
 &lt;li>五迷 目前最喜歡「成名在望」&lt;/li>
-&lt;li>成大物理系大二&lt;/li>
+&lt;li>成大物理系大三&lt;/li>
 &lt;li>&lt;a class="link" href="https://ckcsc.net" target="_blank" rel="noopener"
 >成功高中電子計算機研習社&lt;/a> 擔任 &lt;code>退休網管兼教學&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;!-- raw HTML omitted -->
 &lt;h1 id="-作品">🛠 作品&lt;/h1>
 &lt;ul>
 &lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/next-blog" target="_blank" rel="noopener"
+>next-blog&lt;/a>&lt;br>
+本來想自己用 nextjs 寫一個部落格系統，但是遇到一些問題失敗了，但這個我其實很滿意，一個終端機風格的操作方式，而且全 SSG，另外就算關掉 javascript 大部分功能也都還可以動，唯一的問題是檔案太肥。 &lt;br>
+tech stack: nextjs, tailwindcss&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/pixivReader" target="_blank" rel="noopener"
+>pixiv reader&lt;/a>&lt;br>
+解決看不懂 pixiv 上日文小說的困擾，pixiv 圖片很難抓但是小說完全沒鎖，然後丟進可以白漂 google 翻譯的套件，搭拉！勉強看得懂的小說完成&lt;br>
+tech stack: nextjs&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
+>晶晶體產生器&lt;/a>&lt;br>
+按右鍵把選取的文字替換成英文翻譯，我在編寫這份列表石材發現我寫過這個，好ㄎ一ㄤ喔&lt;br>
+tech stack: nextjs&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/slides" target="_blank" rel="noopener"
+>slides&lt;/a>&lt;br>
+發想自 hackmd 的簡報模式，但是這個可以開房間，一個人開房間後其他人加入，進度會跟開房間的那個人同步。這個東西寫好後一次也沒用上 QQ&lt;br>
+tech stack: expressjs, socket.io, ejs&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/twitterDL" target="_blank" rel="noopener"
+>twitterDL&lt;/a>&lt;br>
+推特 API 死了&lt;br>
+tech stack: nodejs&lt;/p>
+&lt;/li>
+&lt;li>
 &lt;p>&lt;a class="link" href="https://github.com/simbafs/ncku-extended" target="_blank" rel="noopener"
->NCKU Extended&lt;/a>&lt;br>
+>NCKU Extended&lt;/a> &lt;br>
 成大系統瀏覽器擴充套件&lt;br>
 擴充成大系統的功能&lt;br>
 目前功能還不多，有其他想法歡迎發 Issue&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>&lt;a class="link" href="https://github.com/simbafs/telegrary" target="_blank" rel="noopener"
->telegrary&lt;/a>
-Telegrary = Telegram + diary&lt;br>
-Telegrary 是一個 Telegram 機器人，讓你可以在 Telegram 上管理日記。同時 Telegrary 提供了一個 CLI 界面，讓你可以在終端機管理日記。&lt;/p>
+>telegrary&lt;/a>&lt;br>
+Telegrary = Telegram + diary &lt;br>
+Telegrary 是一個 Telegram 機器人，讓你可以在 Telegram 上管理日記。同時 Telegrary 提供了一個 CLI 界面，讓你可以在終端機管理日記。&lt;br>
+&lt;strong>機器人問題很多不建議開&lt;/strong>&lt;br>
+tech stack: golang&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;h1 id="-聯絡方式">📬 聯絡方式&lt;/h1>
 &lt;ul>
 &lt;li>mail: &lt;a class="link" href="mailto:me@simbafs.cc" >me@simbafs.cc&lt;/a>&lt;/li>
-&lt;li>Mastodon: &lt;!-- raw HTML omitted -->@simbafs@g0v.social&lt;!-- raw HTML omitted -->&lt;/li>
-&lt;li>Discord id: SimbaFs#2030&lt;/li>
+&lt;li>Mastodon: &lt;!-- raw HTML omitted -->@simbafs@masto.simbafs.cc&lt;!-- raw HTML omitted -->&lt;/li>
+&lt;li>Discord id: @simbafs&lt;/li>
 &lt;li>telegram: &lt;a class="link" href="https://t.me/simbafs" target="_blank" rel="noopener"
 >@simbafs&lt;/a>&lt;/li>
 &lt;li>twitter: &lt;a class="link" href="https://twitter.com/simbafs" target="_blank" rel="noopener"
 >@simbafs&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Contact</title><link>https://blog.simbafs.cc/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/contact/</guid><description>&lt;p>gpg key fingerprint: &lt;code>6236 A070 8FCD 894C 7AD1 A5FC DB13 A5C2 042E AEA4&lt;/code>&lt;/p></description></item><item><title>Resource</title><link>https://blog.simbafs.cc/resource/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/resource/</guid><description>&lt;h1 id="友站">友站&lt;/h1>
-&lt;ul>
-&lt;li>&lt;a class="link" href="https://omeletwithoutegg.github.io" target="_blank" rel="noopener"
->蛋餅的競程隨筆 https://omeletwithoutegg.github.io&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="https://blog.mikuc.at/" target="_blank" rel="noopener"
->貓咪的梳妝台&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="https://blog.timothychen.tk/" target="_blank" rel="noopener"
->TimothyChen&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="https://thect.cc" target="_blank" rel="noopener"
->Thect&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="https://whitecat.tk" target="_blank" rel="noopener"
->白貓&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="https://hackmd.io/@alanlai/Byh58hzIY/%2F_iosUGcpQ6KtWQuch0ApFw" target="_blank" rel="noopener"
->laialan&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="https://blog.imwjs.me" target="_blank" rel="noopener"
->Junter&amp;rsquo;s Note&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h1 id="js-資源">JS 資源&lt;/h1>
-&lt;ul>
-&lt;li>&lt;a class="link" href="https://developer.mozilla.org" target="_blank" rel="noopener"
->MDN https://developer.mozilla.org&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h1 id="其他">其他&lt;/h1>
-&lt;ul>
-&lt;li>&lt;a class="link" href="https://weekly.starbugs.dev/" target="_blank" rel="noopener"
->星八哥技術週刊 https://weekly.starbugs.dev&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Search</title><link>https://blog.simbafs.cc/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/search/</guid><description/></item></channel></rss>

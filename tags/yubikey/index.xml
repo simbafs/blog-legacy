@@ -1,4 +1,181 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>yubikey on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/yubikey/</link><description>Recent content in yubikey on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 19 Apr 2022 15:22:55 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/yubikey/index.xml" rel="self" type="application/rss+xml"/><item><title>Yubikey</title><link>https://blog.simbafs.cc/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 15:22:55 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/yubikey/</guid><description>&lt;h1 id="yubikey">Yubikey&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>yubikey on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/yubikey/</link><description>Recent content in yubikey on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 12 Dec 2022 23:26:53 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/yubikey/index.xml" rel="self" type="application/rss+xml"/><item><title>GPG and Yubikey</title><link>https://blog.simbafs.cc/p/linux/gpg-yubikey/</link><pubDate>Mon, 12 Dec 2022 23:26:53 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-yubikey/</guid><description>&lt;h1 id="gpg">GPG&lt;/h1>
+&lt;p>GPG 是由 由 PGP、OpenPGP 演化而來，屬於 GNU 計畫之一，主要功能是在不安全通道建立安全可信的通訊。為了建立安全可信，需要解決幾個問題：加密明文、驗證發送方、驗證接收方，以及為了解決前面三個問題而產生的新問題：信任。&lt;br>
+為了驗證發送方，發送方需要產生只有發送方能產生的簽章併附在內容後面。為了驗證接收方，要把內容用只有接收方才能解開的方式把內容保護起來，這同時可以做到加密明文。&lt;/p>
+&lt;p>GPG 中每個人都有一個鑰匙圈（keyring），就像你包包裡的鑰匙圈，GPG 的 keyring 也可以有不只一把金鑰。通常來說會是一把主金鑰和若干把的子金鑰，每一把都是非對稱金鑰對，也就是會有公鑰和私鑰（密鑰）。公鑰是需要公佈給其他人知道的（還要像辦法讓其他人「信任」），而私鑰是必須保護好，後面提到的 Yubikey 就是為了保護我們的私鑰，盡量讓他暴露的風險越低越好。&lt;/p>
+&lt;h2 id="主金鑰和子金鑰的關係">主金鑰和子金鑰的關係&lt;/h2>
+&lt;p>一組 GPG keyring 中會有一個主金鑰和若干個子金鑰，主金鑰的功能是身份證明和金鑰管理，而子密鑰就是一般的操作。之所以需要有這個設計，是為了盡可能保護主密鑰不洩漏。在日常的 GPG 使用中，我們不可避免需要密鑰（解密、簽章等等），如果全部都使用主密鑰操作，也不是說不行，但是萬一主密鑰洩漏，就要重新產生了。但如果將日常功能移到和主密鑰相關連的子密鑰，主密鑰僅保留重要的「身份證明」功能，如此一來就可以將 &lt;a class="link" href="https://blog.theerrorlog.com/using-gpg-zh.html" target="_blank" rel="noopener"
+>主密鑰分離&lt;/a>（這算是高階操作），把不常用到但是非常重要的主金鑰藏好（像是離線儲存，或是最極端的在離線的機器產生、匯出然後刪除）。如果主密鑰洩漏或是遺失，那就要重新產生，等於是一個全新的身份，所有信任關係必須從頭建立。&lt;/p>
+&lt;p>因為主金鑰和子金鑰是不同金鑰對，所以如果你用 Alice 子公鑰加密，是不能用 Bella 子密鑰甚至是主密鑰解密的，簽章和證明也是如此。&lt;/p>
+&lt;h3 id="如何連結子密鑰和主密鑰">如何連結子密鑰和主密鑰&lt;/h3>
+&lt;p>子金鑰和主金鑰是不同的金鑰，甚至可以用不同的演算法產生，那是什麼東西決定他們的地位差異呢？根據我對 &lt;a class="link" href="https://superuser.com/questions/1113308/what-is-the-relationship-between-an-openpgp-key-and-its-subkey" target="_blank" rel="noopener"
+>這篇問答&lt;/a> 的理解（很可能是錯的，網路上這方面的資料有夠少），在用主金鑰產生子金鑰的時候，會用主密鑰幫子金鑰「簽章」，這個稱之為「Bellainding Siganture」。GPG 就是用這個 binding signature 去證明子密鑰屬於哪個 keyring。&lt;/p>
+&lt;h3 id="什麼操作屬於身份證明certify">什麼操作屬於身份證明(Certify)&lt;/h3>
+&lt;p>前面提到，主金鑰的功能是身份證明，但是怎樣的操作是屬於身份證明呢？根據這 &lt;a class="link" href="https://security.stackexchange.com/questions/73679/which-actions-does-the-gnupg-certify-capability-permit" target="_blank" rel="noopener"
+>這篇問答&lt;/a> 和 &lt;a class="link" href="https://www.rfc-editor.org/rfc/rfc4880#section-5.2.1" target="_blank" rel="noopener"
+>RFC 4880&lt;/a>，以下操作都是屬於身份證明&lt;/p>
+&lt;ul>
+&lt;li>對某個使用者的公鑰簽章（信任某個使用者，相關內容在信任網章節）&lt;/li>
+&lt;li>簽發 binding signature（這裡分成 subkey binding signature 和 primary binding signature，但我還沒研究出差別）&lt;/li>
+&lt;li>簽發金鑰撤銷金鑰（當你的子密鑰洩漏時宣告用）&lt;/li>
+&lt;/ul>
+&lt;p>簡單來說，就是產生、撤銷子金鑰以及和「信任」有關的操作都算是「身份證明」(Certify)&lt;/p>
+&lt;h2 id="usage-flag">Usage Flag&lt;/h2>
+&lt;p>每對金鑰其實都有簽章、加密、驗證等等功能（可能會依使用的演算法不同而受限，像是 DSAlice 只能簽章），為了清楚的切分不同密鑰的功能，GPG 採用的方法是 Usage Flag，他會標注一個金鑰的用途是「&lt;strong>C&lt;/strong>ertify 身份證明」、「&lt;strong>S&lt;/strong>ign 簽章」、「&lt;strong>E&lt;/strong>ncrypt 加解密」、「&lt;strong>Alice&lt;/strong>uthenticate 認證」。如果你在產生金鑰時加上 &lt;code>--expert&lt;/code> 專家選項，你會在選擇演算法的列表看到某些選項後面帶著 &lt;code>(set your own capabilities)&lt;/code>，選這些可以讓你決定產生的金鑰有哪些 Usage Flag，不然就會使用預設的。&lt;/p>
+&lt;p>其中在上一個小節提到的 Certify 功能必須&lt;strong>且只能&lt;/strong>（應該吧，我是找不到怎麼在子密鑰上加 Certify）設定在主密鑰上。另外 Certify 和 Aliceuthenticate 的中文翻譯都很像，但是功能卻大大不同，Certify 剛剛上面提過，就是「信任」，Aliceuthenticate 則是像是 ssh 登入的操作（下面會提到）&lt;/p>
+&lt;h2 id="uid">uid&lt;/h2>
+&lt;p>每個 keyring 都對應到一個人，但通常一個人有不只一個的 email address，因此 GPG 也支援對應多個 email address，這個在 GPG 終就稱之為 uid，裡面會包含這個人的名字和 email address&lt;/p>
+&lt;h2 id="key-fingerprintid-and-keygrip">key fingerprint(id) and keygrip&lt;/h2>
+&lt;p>fingerprint 和 keygrip 都是要對於金鑰對識別，他們都是把要識別的公鑰對拿去 hash，功能是可以快速比較兩把 key 是否相同，例如你從網路上找到某個人的公鑰，可以用 fingerprint 和那個人比對是不是同一把 key（fingerprint 40 個字元，完整的 key 可能有上千個字元）。看到這裡你會覺得 fingerprint 和 keygrip 很像，的確，他們的差異只差在包含的資訊不一樣&lt;/p>
+&lt;ul>
+&lt;li>fingerprint
+&lt;ul>
+&lt;li>公鑰&lt;/li>
+&lt;li>建立日期&lt;/li>
+&lt;li>演算法&lt;/li>
+&lt;li>公鑰 packet 版本（儲存公鑰的資料結構）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>keygrip
+&lt;ul>
+&lt;li>公鑰&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>你會發現，keygrip 只包含公鑰，而 fingerprint 則是包含了一堆 gpg 內部資訊，因此我們可以說 keygrip 是「和 GPG 無關」的識別。&lt;/p>
+&lt;p>雖然兩者都能識別主金鑰和子金鑰，但是在我自己的使用中，通常 fingerprint 會用來識別主金鑰（整個 keyring），keygrip 會拿來特別指定要用哪一個子金鑰。&lt;/p>
+&lt;h2 id="信任網">信任網&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;strong>Information&lt;/strong>
+接下來的「公鑰」通常是指 &amp;ldquo;public key packet&amp;rdquo;，也就是指令 &lt;code>gpg --export&lt;/code> 預設會吐出來的東西，裡面包含主公鑰、子公鑰們、uid 資訊以及別人對這個公鑰的簽章等等&lt;/p>
+&lt;/blockquote>
+&lt;p>現在想像一個情境，Alice 要加密一段訊息傳給 Bella，所以他需要去找到 Bella 的公鑰，Alice 上網找到一個公鑰的 uid 是 &lt;code>Bella &amp;lt;b@exmaple.com&amp;gt;&lt;/code>，於是他就用這份公鑰加密訊息後傳給 Bella，但是這份公鑰其實是 C 偽裝的，那這樣祕密訊息就會被 C 知道。&lt;/p>
+&lt;p>為了解決這個問題，Alice 拿到公鑰後要開始傳訊息之前，需要先用一個可信的通道和 Bella 確認公鑰是否正確（當面比對 fingerprint 之類的），接者 Alice 用他的主密鑰幫 Bella 的公鑰簽章（Alice sign Bella&amp;rsquo;s key），做出宣告「Alice 認為這把公鑰有效（來源和上面記載的是一致的，都是 Bella」（this key is validated）。這時候 Bella 也跟 Charlie 確認過公鑰並簽章（Bella sign Charlie&amp;rsquo;s key），如果 Alice 「完整」信任 Bella 會認真確認公鑰真實性才簽章，那他就可以拿 Bella 的公鑰去驗證 Bella 真的簽章過 Charlie 的公鑰，那麼 Alice 可以根據這個結果相信 Charlie 的公鑰是真的，不用親自去找 Charlie 確認。&lt;/p>
+&lt;blockquote>
+&lt;p>「相信公鑰有效（真實性）」和「信任簽章公鑰的人」在 GPG 裡面都是 &amp;ldquo;trust&amp;rdquo; ，有點容易搞混，但中文還是可以稍微區分開來的&lt;/p>
+&lt;/blockquote>
+&lt;p>對於公鑰簽章簽發者的信任層級可以分成以下五個&lt;/p>
+&lt;ol>
+&lt;li>不知道&lt;/li>
+&lt;li>不信任&lt;/li>
+&lt;li>半信半疑&lt;/li>
+&lt;li>完整信任&lt;/li>
+&lt;li>終極信任&lt;/li>
+&lt;/ol>
+&lt;p>其中終極信任因為比較特別就先不談，在上面 Alice、Bella 和 Charlie 的例子裡，如果 Alice 沒有「完整信任」Bella，只有「半信半疑」，那麼 Charlie 的公鑰就不會被認為是有效的&lt;/p>
+&lt;p>目前為止的機制，我們要確認公鑰有效需要整條信任鍊之間都是「完整信任」且都被前一個確認是有效，但是這樣缺乏彈性。GPG 採用一個巧妙的方法來擴展目前的機制，一把公鑰如果滿足以下條件，就會被認定是有效的：&lt;/p>
+&lt;ol>
+&lt;li>被足夠多的有效的人（公鑰是有效的）簽章，這意味下面條件至少要滿足一個
+&lt;ol>
+&lt;li>你親自對他簽章&lt;/li>
+&lt;li>被一個「完整信任」的人簽章&lt;/li>
+&lt;li>被三個「半信半疑」的人簽章&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>從自己出發到那把公鑰的最短路徑小於等於五步&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>在實際使用時需要幾個半信半疑的人以及路徑長度限制都是可以調整的，這裡寫的是 GPG 預設的值&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;blockquote>
+&lt;p>&lt;strong>Danger&lt;/strong>&lt;br>
+以下內容待驗證&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> +-----&amp;gt;Bella--------+
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> | v
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Alice--+ +--&amp;gt;Daniel-----&amp;gt;Edson------&amp;gt;Galen
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> | | |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> | | |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> +-&amp;gt;Charlie---+ |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> | v
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> +--&amp;gt;Frank
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>把公鑰簽署關係畫成圖&lt;br>
+&lt;code>$ gpg --no-options --with-colons --fixed-list-mode --list-sigs | sig2dot -a -u &amp;quot;[User ID not found]&amp;quot; &amp;gt; myLUG.dot ; neato -Tpng myLUG.dot &amp;gt; myLUG.png ; open myLUG.png&lt;/code>&lt;br>
+&lt;a class="link" href="https://github.com/bmarwell/sig2dot2" target="_blank" rel="noopener"
+>https://github.com/bmarwell/sig2dot2&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>舉例來說，上圖以 Alice 為中心到 Galen 等六個人的信任關係，箭頭 &lt;code>A---&amp;gt;B&lt;/code> 代表 A 為 B 的公鑰簽章，在以下的例子，我們調整為只需要兩個半信半疑的有效公鑰信任就可以信任為有效公鑰，但路徑不能超過三。&lt;/p>
+&lt;p>下表是基於這個信任網 Alice 對其他人的信任層級和推導出來的公鑰有效性結果。&lt;br>
+舉例來說，第一個情況是雖然 Alice 確認了 Bella 和 Charlie 的公鑰有效性，但是他只相信 Charlie ，根據這個可以推導出來 Daniel, Edson, Frank 三人的公鑰都是有效的，因為 Alice 對 Charlie 是完整信任，因此 Charlie 確認過的公鑰對於 Alice 都是有效的。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">情境&lt;/th>
+&lt;th style="text-align:left">半信半疑&lt;/th>
+&lt;th style="text-align:left">完整信任&lt;/th>
+&lt;th style="text-align:left">一半有效&lt;/th>
+&lt;th style="text-align:left">完整有效&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Charlie&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Bella, Charlie, Daniel, Frank&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">2&lt;/td>
+&lt;td style="text-align:left">Bella, Chalir&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Feank&lt;/td>
+&lt;td style="text-align:left">Bella, Charlie, Daniel&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">3&lt;/td>
+&lt;td style="text-align:left">Charlie, Daniel&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Daniel, Frank&lt;/td>
+&lt;td style="text-align:left">Bella, Charlie&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">4&lt;/td>
+&lt;td style="text-align:left">Charlie, Daniel, Bella&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Edson&lt;/td>
+&lt;td style="text-align:left">Bella, Charlie, Frank&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">5&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Bella, Daniel, Edson&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">Bella, Daniel, Edson, Frank&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>需要實驗驗證&lt;/p>
+&lt;/blockquote>
+&lt;p>根據我的理解，首先是自己簽的公鑰一定是有效的，再來是完整相信的人簽的也是有效，再來是夠多的半信半疑的人都簽章的公鑰也有效，最後你會發現，能夠延伸到最遠的有效公鑰是信任的人的外圍一圈不超過長度限制的地方。&lt;/p>
+&lt;hr>
+&lt;p>信任網要解決的不是技術問題，是社交問題，就算今天 GPG 的設計改成有一個權威的驗證中心去發布每一把公鑰，還是會遇到一個問題，我憑什麼相信這個驗證中心？因此 GPG 採用的信任網可以讓我們從真實世界會接觸的人開始建立信任網，再漸漸地把信任網擴張，這時我們不是因為「這是權威」而信任一把公鑰而是因為我們做出足夠的判斷才決定一把未知公鑰是否可信。&lt;/p>
+&lt;blockquote>
+&lt;p>這一小節參考 GPG 官方的教學文章 &lt;a class="link" href="https://www.gnupg.org/gph/en/manual/x334.html" target="_blank" rel="noopener"
+>https://www.gnupg.org/gph/en/manual/x334.html&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="範例">範例&lt;/h2>
+&lt;h3 id="產生金鑰對">產生金鑰對&lt;/h3>
+&lt;h3 id="gpg-with-ssh">GPG with SSH&lt;/h3>
+&lt;h3 id="簽章公鑰">簽章公鑰&lt;/h3>
+&lt;h2 id="發佈公鑰">發佈公鑰&lt;/h2>
+&lt;h1 id="yubikey">Yubikey&lt;/h1></description></item><item><title>Yubikey</title><link>https://blog.simbafs.cc/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 15:22:55 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/yubikey/</guid><description>&lt;h1 id="yubikey">Yubikey&lt;/h1>
 &lt;p>感謝煥杰賣我一個 1200，撿到寶啦！我買的是 &lt;a class="link" href="https://www.yubico.com/tw/product/yubikey-5c-nfc/" target="_blank" rel="noopener"
 >Yubikey 5C NFC&lt;/a>，看起來幾乎所有功能都有&lt;/p>
 &lt;h2 id="login">login&lt;/h2>
