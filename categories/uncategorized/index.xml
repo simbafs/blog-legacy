@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>uncategorized on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/uncategorized/</link><description>Recent content in uncategorized on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 14 Sep 2022 09:58:24 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/uncategorized/index.xml" rel="self" type="application/rss+xml"/><item><title>Google AppScript Calender API</title><link>https://blog.simbafs.cc/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 09:58:24 +0800</pubDate><guid>https://blog.simbafs.cc/p/google-app-script-calender-api/</guid><description>&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>uncategorized on Simba 的喵窩</title><link>https://simbafs.cc/blog/categories/uncategorized/</link><description>Recent content in uncategorized on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 14 Sep 2022 09:58:24 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/categories/uncategorized/index.xml" rel="self" type="application/rss+xml"/><item><title>Google AppScript Calender API</title><link>https://simbafs.cc/blog/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 09:58:24 +0800</pubDate><guid>https://simbafs.cc/blog/p/google-app-script-calender-api/</guid><description>&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
 &lt;p>因為我懶的一堂一堂課加入日曆、還要按重複，所以就來研究如何自動化。我的想法是透過一個物件定義課表，然後透過程式來自動化新增。評估了幾個技術後，決定使用 Google App Script 來實做，畢竟他和日曆都是 Google 產品，整合應該是最好的（吧，而且可以弄成類似雲端應用的感覺，輕鬆開放給其他人使用。&lt;/p>
 &lt;h2 id="建立專案">建立專案&lt;/h2>
 &lt;p>在 &lt;a class="link" href="https://script.google.com/home" target="_blank" rel="noopener"
@@ -465,41 +465,41 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/bitbucket-connect-jira/</link><pubDate>Wed, 20 Jul 2022 17:39:07 +0800</pubDate><guid>https://blog.simbafs.cc/p/bitbucket-connect-jira/</guid><description>&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
+&lt;/div></description></item><item><title>Bitbucket Connect Jira</title><link>https://simbafs.cc/blog/p/bitbucket-connect-jira/</link><pubDate>Wed, 20 Jul 2022 17:39:07 +0800</pubDate><guid>https://simbafs.cc/blog/p/bitbucket-connect-jira/</guid><description>&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
 &lt;h2 id="bitbucket-連接-jira">Bitbucket 連接 Jira&lt;/h2>
 &lt;p>先到 Bitbucket 的 repo 的 Jira issue 頁面
-&lt;img src="https://blog.simbafs.cc/1.png"
+&lt;img src="https://simbafs.cc/blog/blog/1.png"
 loading="lazy"
 alt="1"
 >
 點擊左上方資料夾圖示按鈕，然後點擊「Manage linked projects」
-&lt;img src="https://blog.simbafs.cc/2.png"
+&lt;img src="https://simbafs.cc/blog/blog/2.png"
 loading="lazy"
 alt="2"
 >
 選好 Jira 專案後，按下「Link project」
-&lt;img src="https://blog.simbafs.cc/3.png"
+&lt;img src="https://simbafs.cc/blog/blog/3.png"
 loading="lazy"
 alt="3"
 >
 等載入完成就可以看到 Jira issue 了
-&lt;img src="https://blog.simbafs.cc/4.png"
+&lt;img src="https://simbafs.cc/blog/blog/4.png"
 loading="lazy"
 alt="4"
 >&lt;/p>
 &lt;h2 id="jira-issue-連結-bitbucket-branch">Jira issue 連結 Bitbucket branch&lt;/h2>
 &lt;p>Bitbucket 的 repo 的 Jira issue 頁面，點擊要處理的 Jira issue 最右側的三個點點
-&lt;img src="https://blog.simbafs.cc/4.png"
+&lt;img src="https://simbafs.cc/blog/blog/4.png"
 loading="lazy"
 alt="4"
 >
 選第一個按鈕「Create Brench」
-&lt;img src="https://blog.simbafs.cc/5.png"
+&lt;img src="https://simbafs.cc/blog/blog/5.png"
 loading="lazy"
 alt="5"
 >
 填好 type、name 等等訊息，按下「Create」就建立好並對應了
-&lt;img src="https://blog.simbafs.cc/6.png"
+&lt;img src="https://simbafs.cc/blog/blog/6.png"
 loading="lazy"
 alt="6"
 >&lt;/p>

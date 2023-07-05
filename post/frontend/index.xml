@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>frontend on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/frontend/</link><description>Recent content in frontend on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 05 Feb 2022 16:59:44 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/frontend/index.xml" rel="self" type="application/rss+xml"/><item><title>React 解決中文輸入法</title><link>https://blog.simbafs.cc/p/frontend/react-composition-event/</link><pubDate>Sat, 05 Feb 2022 16:59:44 +0800</pubDate><guid>https://blog.simbafs.cc/p/frontend/react-composition-event/</guid><description>&lt;p>今天在開發&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>frontend on Simba 的喵窩</title><link>https://simbafs.cc/blog/post/frontend/</link><description>Recent content in frontend on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 05 Feb 2022 16:59:44 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/post/frontend/index.xml" rel="self" type="application/rss+xml"/><item><title>React 解決中文輸入法</title><link>https://simbafs.cc/blog/p/frontend/react-composition-event/</link><pubDate>Sat, 05 Feb 2022 16:59:44 +0800</pubDate><guid>https://simbafs.cc/blog/p/frontend/react-composition-event/</guid><description>&lt;p>今天在開發&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
 >晶晶體產生器&lt;/a>的時候，發現中文輸入總是有問題，這時候我想起以前看過 Hackmd 官方的&lt;a class="link" href="https://hackmd.io/@hackmd/CompositionEvent" target="_blank" rel="noopener"
 >一篇 blog&lt;/a>，提到中文輸入法如果有問題，可能和組字事件有關。於是就開始研究。首先我將以下設定加入 &lt;code>textarea&lt;/code> 裡觀察組字事件的行為&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -145,11 +145,11 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">/&amp;gt;;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>HTML form button</title><link>https://blog.simbafs.cc/p/frontend/html-form-button/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/html-form-button/</guid><description>&lt;h1 id="html-form-button">HTML Form Button&lt;/h1>
+&lt;/div></description></item><item><title>HTML form button</title><link>https://simbafs.cc/blog/p/frontend/html-form-button/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/frontend/html-form-button/</guid><description>&lt;h1 id="html-form-button">HTML Form Button&lt;/h1>
 &lt;p>HTML 的 form 裡的按鈕預設是 submit
 所以要加上 &lt;code>type=&amp;quot;button&amp;quot;&lt;/code> 它才不會太心急送出表單&lt;/p>
 &lt;p>按鈕的 css 「按下」 selector 好像可已用 &lt;code>:active&lt;/code>、&lt;code>:focus&lt;/code>
-但是我兩個失敗了&lt;/p></description></item><item><title>Meta Tag</title><link>https://blog.simbafs.cc/p/frontend/meta-tag/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/meta-tag/</guid><description>&lt;h1 id="meta-tag">Meta Tag&lt;/h1>
+但是我兩個失敗了&lt;/p></description></item><item><title>Meta Tag</title><link>https://simbafs.cc/blog/p/frontend/meta-tag/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/frontend/meta-tag/</guid><description>&lt;h1 id="meta-tag">Meta Tag&lt;/h1>
 &lt;p>今天為了幫 &lt;a class="link" href="https://daniel.simba.nctu.me" target="_blank" rel="noopener"
 >Let&amp;rsquo;s Remind Daniel&lt;/a> 做 SEO
 在 &lt;a class="link" href="https://free.com.tw/mega-tags/" target="_blank" rel="noopener"
@@ -159,10 +159,10 @@
 &lt;p>&lt;a class="link" href="https://megatags.co/" target="_blank" rel="noopener"
 >生成&lt;/a>
 &lt;a class="link" href="https://www.heymeta.com/" target="_blank" rel="noopener"
->測試&lt;/a>&lt;/p></description></item><item><title>Firefox Event Listener Breakpoint</title><link>https://blog.simbafs.cc/p/frontend/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/firefox-event-listener-breakpoint/</guid><description>&lt;h1 id="firefox-event-listener-breakpoint">Firefox Event Listener Breakpoint&lt;/h1>
+>測試&lt;/a>&lt;/p></description></item><item><title>Firefox Event Listener Breakpoint</title><link>https://simbafs.cc/blog/p/frontend/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/frontend/firefox-event-listener-breakpoint/</guid><description>&lt;h1 id="firefox-event-listener-breakpoint">Firefox Event Listener Breakpoint&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>最近在用 jquery 但是不知道為什麼每次 debugger 都會跳出一個通知
-&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/1.png"
+&lt;img src="https://simbafs.cc/blog/images/firefox-event-listener-breakpoint/1.png"
 loading="lazy"
 alt="1.png"
 >
@@ -172,13 +172,13 @@ alt="1.png"
 在 &lt;!-- raw HTML omitted --> 裡面 Debugger 頁籤左下有個拉頁叫「Event Listener Breakpoints」
 把裡面的東西都點掉就好了
 就是那個 DOM Mutation
-&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/2.png"
+&lt;img src="https://simbafs.cc/blog/images/firefox-event-listener-breakpoint/2.png"
 loading="lazy"
 alt="2.png"
 >&lt;/p>
 &lt;h2 id="心得">心得&lt;/h2>
 &lt;p>我原本還以為是 jquery 的問題
-原來是好心的 firefox 啊&lt;/p></description></item><item><title>jQuery</title><link>https://blog.simbafs.cc/p/frontend/jquery/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/jquery/</guid><description>&lt;h1 id="jquery">jQuery&lt;/h1>
+原來是好心的 firefox 啊&lt;/p></description></item><item><title>jQuery</title><link>https://simbafs.cc/blog/p/frontend/jquery/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/frontend/jquery/</guid><description>&lt;h1 id="jquery">jQuery&lt;/h1>
 &lt;p>今天寫 jquery 遇到了一些坑&lt;/p>
 &lt;h2 id="1-submit">1. submit&lt;/h2>
 &lt;p>&lt;code>.submit()&lt;/code> 是要加在 &lt;code>form&lt;/code> 上而不是 &lt;code>submit button&lt;/code> 上&lt;/p>

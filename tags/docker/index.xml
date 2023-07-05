@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>docker on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/docker/</link><description>Recent content in docker on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 05 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>docker login error</title><link>https://blog.simbafs.cc/p/linux/docker/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-login-error/</guid><description>&lt;h1 id="docker-login-error">Docker Login Error&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>docker on Simba 的喵窩</title><link>https://simbafs.cc/blog/tags/docker/</link><description>Recent content in docker on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 05 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://simbafs.cc/blog/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>docker login error</title><link>https://simbafs.cc/blog/p/linux/docker/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/docker/docker-login-error/</guid><description>&lt;h1 id="docker-login-error">Docker Login Error&lt;/h1>
 &lt;h2 id="錯誤說明">錯誤說明&lt;/h2>
 &lt;p>昨天我在 terminal 登入 docker 的時候發現不知道為什麼不能登入，我先透過網頁登入確認過密碼沒有問題，也不是打錯字的關係，但還是不能當入。總是會有類似以下的錯誤訊息。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -59,7 +59,7 @@
 >https://stackoverflow.com/questions/50151833/cannot-login-to-docker-account/52881198#52881198&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://gist.github.com/dataday/3c267be29e32573829c4781c99ea3395" target="_blank" rel="noopener"
 >https://gist.github.com/dataday/3c267be29e32573829c4781c99ea3395&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Connect to Ethernet in Docker Container</title><link>https://blog.simbafs.cc/p/linux/docker/connect-to-ethernet-in-docker-container/</link><pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/connect-to-ethernet-in-docker-container/</guid><description>&lt;h1 id="connect-to-ethernet-in-docker-container">Connect to Ethernet in Docker Container&lt;/h1>
+&lt;/ul></description></item><item><title>Connect to Ethernet in Docker Container</title><link>https://simbafs.cc/blog/p/linux/docker/connect-to-ethernet-in-docker-container/</link><pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/docker/connect-to-ethernet-in-docker-container/</guid><description>&lt;h1 id="connect-to-ethernet-in-docker-container">Connect to Ethernet in Docker Container&lt;/h1>
 &lt;h2 id="如何在-docker-container-裡連接-ethernet">如何在 docker container 裡連接 ethernet&lt;/h2>
 &lt;p>今天突然有個需求是在一個已經開啟的 container 弄東西，需要網路，但是不知道為什麼一直不上，後來發現是 docker 沒有設定 DNS 的問題，只要在外面輸入兩行指令就可以了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -72,7 +72,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl restart docker
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>然後重新啟動 docker&lt;/p></description></item><item><title>docker commit</title><link>https://blog.simbafs.cc/p/linux/docker/docker-commit/</link><pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-commit/</guid><description>&lt;h1 id="docker-commit">Docker Commit&lt;/h1>
+&lt;/div>&lt;p>然後重新啟動 docker&lt;/p></description></item><item><title>docker commit</title><link>https://simbafs.cc/blog/p/linux/docker/docker-commit/</link><pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/docker/docker-commit/</guid><description>&lt;h1 id="docker-commit">Docker Commit&lt;/h1>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>上次提到可以用 Dockerfile 建立 docker image，但我們還有令一個方法可以建立 docker image，那就是 &lt;code>docker commit&lt;/code> 指令&lt;/p>
 &lt;h3 id="和-dockerfile-差別">和 Dockerfile 差別&lt;/h3>
@@ -134,7 +134,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;td style="text-align:left">建構時停容器&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docker 基礎指令</title><link>https://blog.simbafs.cc/p/linux/docker/docker-command/</link><pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-command/</guid><description>&lt;h1 id="docker-指令">Docker 指令&lt;/h1>
+&lt;/table></description></item><item><title>Docker 基礎指令</title><link>https://simbafs.cc/blog/p/linux/docker/docker-command/</link><pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/docker/docker-command/</guid><description>&lt;h1 id="docker-指令">Docker 指令&lt;/h1>
 &lt;h2 id="install">Install&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">

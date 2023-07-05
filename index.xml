@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simba 的喵窩</title><link>https://blog.simbafs.cc/</link><description>Recent content on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 20 May 2023 00:09:20 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/index.xml" rel="self" type="application/rss+xml"/><item><title>OCR Add PDF Text Layer</title><link>https://blog.simbafs.cc/p/linux/ocr-add-pdf-text-layer/</link><pubDate>Sat, 20 May 2023 00:09:20 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/ocr-add-pdf-text-layer/</guid><description>&lt;h1 id="ocr-add-pdf-text-layer">OCR Add PDF Text Layer&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simba 的喵窩</title><link>https://simbafs.cc/blog/</link><description>Recent content on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 20 May 2023 00:09:20 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>OCR Add PDF Text Layer</title><link>https://simbafs.cc/blog/p/linux/ocr-add-pdf-text-layer/</link><pubDate>Sat, 20 May 2023 00:09:20 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/ocr-add-pdf-text-layer/</guid><description>&lt;h1 id="ocr-add-pdf-text-layer">OCR Add PDF Text Layer&lt;/h1>
 &lt;p>眾所周知大學課本又厚又重，而且還不便宜，所以這時候如果有電子書就可以很大程度解決這個問題。但是有時候拿到的電子書是掃描的圖片（來源就&amp;hellip;&amp;hellip;咳咳），不能複製、按右鍵翻譯。這時候就可以出動光學字元辨識，幫我們把圖片轉成文字，而且順便把字放在 PDF 的文字圖層上，這樣就可以看著掃描的書，又可以選取到原本不能選取的文字。&lt;/p>
 &lt;h2 id="tesseract">tesseract&lt;/h2>
 &lt;p>我之前試過幾個線上 OCR，但都是付費功能，但這個東西不是什麼前沿技術，理論上應該不需要太強的電腦效能，於是我就想試著自己跑在我的電腦上。我首先找到的是 &lt;a class="link" href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="noopener"
@@ -26,7 +26,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>安裝好後給來源路徑、輸出路徑，然後等一會就好了，我用我的力學課本第 12 章做測試，44 頁的文字 46 秒完成，打開後內容幾乎沒錯，超棒！&lt;/p>
-&lt;p>等等就把整本課本都丟進去 &amp;gt;&amp;lt;&lt;/p></description></item><item><title>Build Aseprite</title><link>https://blog.simbafs.cc/p/linux/build-aseprite/</link><pubDate>Sat, 15 Apr 2023 10:14:40 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/build-aseprite/</guid><description>&lt;h1 id="build-aseprite">Build Aseprite&lt;/h1>
+&lt;p>等等就把整本課本都丟進去 &amp;gt;&amp;lt;&lt;/p></description></item><item><title>Build Aseprite</title><link>https://simbafs.cc/blog/p/linux/build-aseprite/</link><pubDate>Sat, 15 Apr 2023 10:14:40 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/build-aseprite/</guid><description>&lt;h1 id="build-aseprite">Build Aseprite&lt;/h1>
 &lt;p>Aseprite 是一個跨平台的像素畫編輯器，反正看起來很棒，但是官網和 itch.io 買 19.99 美金，steam 賣三百多元，為了省這個錢決定自己編譯，原始碼在 &lt;a class="link" href="https://github.com/aseprite/aseprite" target="_blank" rel="noopener"
 >https://github.com/aseprite/aseprite&lt;/a>，而且官方有一個很詳細的&lt;a class="link" href="https://github.com/aseprite/aseprite/blob/main/INSTALL.md" target="_blank" rel="noopener"
 >編譯說明&lt;/a>&lt;/p>
@@ -129,7 +129,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Type=Application
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Preparing Environment</title><link>https://blog.simbafs.cc/p/preparing-environment/</link><pubDate>Tue, 14 Mar 2023 10:23:17 +0800</pubDate><guid>https://blog.simbafs.cc/p/preparing-environment/</guid><description>&lt;h1 id="preparing-environment">Preparing Environment&lt;/h1>
+&lt;/div></description></item><item><title>Preparing Environment</title><link>https://simbafs.cc/blog/p/preparing-environment/</link><pubDate>Tue, 14 Mar 2023 10:23:17 +0800</pubDate><guid>https://simbafs.cc/blog/p/preparing-environment/</guid><description>&lt;h1 id="preparing-environment">Preparing Environment&lt;/h1>
 &lt;h2 id="gnu-toolchain">GNU toolchain&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -271,7 +271,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>上課 Homework 0 講義&lt;/p></description></item><item><title>Bash Snippet</title><link>https://blog.simbafs.cc/p/linux/bash/bash-snippet/</link><pubDate>Sat, 25 Feb 2023 15:40:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/bash/bash-snippet/</guid><description>&lt;h1 id="bash-snippet">Bash Snippet&lt;/h1>
+&lt;p>上課 Homework 0 講義&lt;/p></description></item><item><title>Bash Snippet</title><link>https://simbafs.cc/blog/p/linux/bash/bash-snippet/</link><pubDate>Sat, 25 Feb 2023 15:40:41 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/bash/bash-snippet/</guid><description>&lt;h1 id="bash-snippet">Bash Snippet&lt;/h1>
 &lt;h2 id="clear-broken-symlinks">Clear broken symlinks&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -284,7 +284,7 @@
 &lt;/div>&lt;blockquote>
 &lt;p>&lt;a class="link" href="https://unix.stackexchange.com/questions/34248/how-can-i-find-broken-symlinks" target="_blank" rel="noopener"
 >stackoverflow&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>Python Snippet</title><link>https://blog.simbafs.cc/p/python/python-snippet/</link><pubDate>Thu, 23 Feb 2023 23:23:49 +0800</pubDate><guid>https://blog.simbafs.cc/p/python/python-snippet/</guid><description>&lt;h1 id="python-snippet">Python Snippet&lt;/h1>
+&lt;/blockquote></description></item><item><title>Python Snippet</title><link>https://simbafs.cc/blog/p/python/python-snippet/</link><pubDate>Thu, 23 Feb 2023 23:23:49 +0800</pubDate><guid>https://simbafs.cc/blog/p/python/python-snippet/</guid><description>&lt;h1 id="python-snippet">Python Snippet&lt;/h1>
 &lt;h2 id="basic">Basic&lt;/h2>
 &lt;h3 id="未定長度函數參數">未定長度函數參數&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -362,7 +362,7 @@
 &lt;/div>&lt;blockquote>
 &lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/3890621/how-does-multiplication-differ-for-numpy-matrix-vs-array-classes" target="_blank" rel="noopener"
 >stackoverflow&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/other/markdown-to-pdf/</link><pubDate>Tue, 21 Feb 2023 22:07:38 +0800</pubDate><guid>https://blog.simbafs.cc/p/other/markdown-to-pdf/</guid><description>&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
+&lt;/blockquote></description></item><item><title>Markdown to PDF</title><link>https://simbafs.cc/blog/p/other/markdown-to-pdf/</link><pubDate>Tue, 21 Feb 2023 22:07:38 +0800</pubDate><guid>https://simbafs.cc/blog/p/other/markdown-to-pdf/</guid><description>&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
 &lt;h2 id="安裝環境">安裝環境&lt;/h2>
 &lt;p>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >pandoc&lt;/a> 你想得到的文件之間轉擋 &lt;a class="link" href="https://pandoc.org/diagram.svgz?v=20230203095535" target="_blank" rel="noopener"
@@ -578,7 +578,7 @@
 >https://tex.stackexchange.com/questions/179778/xelatex-under-ubuntu&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >https://pandoc.org/&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Git Snippet</title><link>https://blog.simbafs.cc/p/linux/git/git-snippet/</link><pubDate>Mon, 20 Feb 2023 16:59:29 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/git/git-snippet/</guid><description>&lt;h1 id="git-snippet">Git Snippet&lt;/h1>
+&lt;/ul></description></item><item><title>Git Snippet</title><link>https://simbafs.cc/blog/p/linux/git/git-snippet/</link><pubDate>Mon, 20 Feb 2023 16:59:29 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/git/git-snippet/</guid><description>&lt;h1 id="git-snippet">Git Snippet&lt;/h1>
 &lt;h2 id="move-branch-to-another-commit-not-recommand">move branch to another commit (not recommand)&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -598,7 +598,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/1552340/how-to-list-only-the-names-of-files-that-changed-between-two-commits" target="_blank" rel="noopener"
->ref: stackoverflow&lt;/a>&lt;/p></description></item><item><title>Linux 安裝跑跑卡丁車（nexon launcher）</title><link>https://blog.simbafs.cc/p/game/nexon/</link><pubDate>Thu, 16 Feb 2023 23:40:31 +0800</pubDate><guid>https://blog.simbafs.cc/p/game/nexon/</guid><description>&lt;h1 id="如何在-linux-安裝跑跑卡丁車">如何在 Linux 安裝跑跑卡丁車&lt;/h1>
+>ref: stackoverflow&lt;/a>&lt;/p></description></item><item><title>Linux 安裝跑跑卡丁車（nexon launcher）</title><link>https://simbafs.cc/blog/p/game/nexon/</link><pubDate>Thu, 16 Feb 2023 23:40:31 +0800</pubDate><guid>https://simbafs.cc/blog/p/game/nexon/</guid><description>&lt;h1 id="如何在-linux-安裝跑跑卡丁車">如何在 Linux 安裝跑跑卡丁車&lt;/h1>
 &lt;ol>
 &lt;li>去官網下載 Nexon 啟動器設定 exe&lt;/li>
 &lt;li>去 Steam 左下角新增遊戲 &amp;gt; 非 steam 遊戲，找到你的 exe，可能要注意一下 filetype&lt;/li>
@@ -606,7 +606,7 @@
 &lt;li>啟動遊戲！按照步驟裝完啟動器、關掉他&lt;/li>
 &lt;li>steam 遊戲頁面右上角齒輪 &amp;gt; 內容 &amp;gt; 捷徑 &amp;gt; 開始位置 &amp;gt; 瀏覽，改成 &lt;code>~/.local/share/Steam/steamapps/compatdata/${steam game id}/pfx/drive_c/Program Files (x86)/Nexon/Nexon Launcher/nexon_launcher.exe &lt;/code>
 好了&lt;/li>
-&lt;/ol></description></item><item><title>TypeScript Snippet</title><link>https://blog.simbafs.cc/p/nodejs/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 23:28:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/nodejs/typescript-snippet/</guid><description>&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
+&lt;/ol></description></item><item><title>TypeScript Snippet</title><link>https://simbafs.cc/blog/p/nodejs/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 23:28:41 +0800</pubDate><guid>https://simbafs.cc/blog/p/nodejs/typescript-snippet/</guid><description>&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
 &lt;h2 id="keyof">keyof&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -684,7 +684,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// type Key = &amp;#39;KEY_A&amp;#39; | &amp;#39;KEY_B&amp;#39;
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Bubbletea</title><link>https://blog.simbafs.cc/p/golang/bubbletea/</link><pubDate>Mon, 09 Jan 2023 04:00:39 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/bubbletea/</guid><description>&lt;h1 id="charmbraceletbubbletea">charmbracelet/bubbletea&lt;/h1>
+&lt;/div></description></item><item><title>Bubbletea</title><link>https://simbafs.cc/blog/p/golang/bubbletea/</link><pubDate>Mon, 09 Jan 2023 04:00:39 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/bubbletea/</guid><description>&lt;h1 id="charmbraceletbubbletea">charmbracelet/bubbletea&lt;/h1>
 &lt;p>charmbracelet/bubbletea 是一個類似於 HTML，但是他是用在終端機中建立純文字的使用者界面。&lt;/p>
 &lt;h2 id="model">model&lt;/h2>
 &lt;p>model 是 bubbletea 中最基本的元件，對應到 HTML 中就是 tag，一個 model 需要有以下三個方法&lt;/p>
@@ -802,8 +802,8 @@
 &lt;/div>&lt;h3 id="問題">問題&lt;/h3>
 &lt;p>如果子 model 變多，那對於傳遞的管理就會變得很複雜，要想的方法解決，需要可以一次管理不同類型的 model&lt;/p>
 &lt;h2 id="心得">心得&lt;/h2>
-&lt;p>&lt;code>Update&lt;/code> 中只接收和自己有關的 msg，和自己無關的就傳遞下去，絕對不操作不屬於自己的屬性，不然會出 bug&lt;/p></description></item><item><title>GPG with SSH</title><link>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 22:59:17 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</guid><description>&lt;h1 id="gpg-with-ssh">GPG with SSH&lt;/h1>
-&lt;p>接續前一篇 &lt;a class="link" href="https://blog.simbafs.cc/posts/linux/gpg/" >gpg 的文章&lt;/a>&lt;/p>
+&lt;p>&lt;code>Update&lt;/code> 中只接收和自己有關的 msg，和自己無關的就傳遞下去，絕對不操作不屬於自己的屬性，不然會出 bug&lt;/p></description></item><item><title>GPG with SSH</title><link>https://simbafs.cc/blog/p/linux/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 22:59:17 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/gpg-with-ssh/</guid><description>&lt;h1 id="gpg-with-ssh">GPG with SSH&lt;/h1>
+&lt;p>接續前一篇 &lt;a class="link" href="https://simbafs.cc/blog/posts/linux/gpg/" >gpg 的文章&lt;/a>&lt;/p>
 &lt;h2 id="指紋-fingerprint">指紋 Fingerprint&lt;/h2>
 &lt;p>根據 &lt;a class="link" href="https://help.gnome.org/users/seahorse/stable/misc-key-fingerprint.html.en" target="_blank" rel="noopener"
 >GNOME help&lt;/a> 的說明，不同金鑰的指紋必然不同，因此如果要驗證、查詢的話，與其用其他參數，不如用指紋，例如我的 GPG key 指紋是 &lt;code>6236 A070 8FCD 894C 7AD1 A5FC DB13 A5C2 042E AEA4&lt;/code>，看到這串就代表是我。&lt;/p>
@@ -862,7 +862,7 @@
 &lt;li>根據第三個參考網址 &lt;a class="link" href="https://gist.github.com/mcattarinussi/834fc4b641ff4572018d0c665e5a94d3#setup-the-gpg-agent-for-ssh-authentication" target="_blank" rel="noopener"
 >setup-the-gpg-agent-for-ssh-authentication&lt;/a> 章節設定 gpg-agent&lt;/li>
 &lt;/ol>
-&lt;p>這時後重新開啟終端機就可以用 gpg 取代原本的 ssh key 了，確認移除 ssh key 真的還可以登入後就可以把舊的 ssh key 收起來了。&lt;/p></description></item><item><title>Mastodon</title><link>https://blog.simbafs.cc/p/linux/mastodon/</link><pubDate>Thu, 24 Nov 2022 08:53:20 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/mastodon/</guid><description>&lt;h1 id="mastodon">Mastodon&lt;/h1>
+&lt;p>這時後重新開啟終端機就可以用 gpg 取代原本的 ssh key 了，確認移除 ssh key 真的還可以登入後就可以把舊的 ssh key 收起來了。&lt;/p></description></item><item><title>Mastodon</title><link>https://simbafs.cc/blog/p/linux/mastodon/</link><pubDate>Thu, 24 Nov 2022 08:53:20 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/mastodon/</guid><description>&lt;h1 id="mastodon">Mastodon&lt;/h1>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -878,7 +878,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;a class="link" href="https://github.com/mastodon/mastodon/issues/3676#issuecomment-307500074" target="_blank" rel="noopener"
->https://github.com/mastodon/mastodon/issues/3676#issuecomment-307500074&lt;/a>&lt;/p></description></item><item><title>Merge Two Repo</title><link>https://blog.simbafs.cc/p/linux/git/merge-two-repo/</link><pubDate>Tue, 18 Oct 2022 20:25:48 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/git/merge-two-repo/</guid><description>&lt;h1 id="merge-two-repo">Merge Two Repo&lt;/h1>
+>https://github.com/mastodon/mastodon/issues/3676#issuecomment-307500074&lt;/a>&lt;/p></description></item><item><title>Merge Two Repo</title><link>https://simbafs.cc/blog/p/linux/git/merge-two-repo/</link><pubDate>Tue, 18 Oct 2022 20:25:48 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/git/merge-two-repo/</guid><description>&lt;h1 id="merge-two-repo">Merge Two Repo&lt;/h1>
 &lt;p>這學期修了幾個資工系的課，都需要寫程式作業，原本我是一個作業開一個 repo，但是我發現這樣好像會開超級多 repo，於是我決定要想辦法合併他們。&lt;/p>
 &lt;h2 id="找資料">找資料&lt;/h2>
 &lt;p>首先去 Google 搜尋「git merge two repo」，第一條結果是是一個 13 年前的 stack overflow &lt;a class="link" href="https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories" target="_blank" rel="noopener"
@@ -1113,7 +1113,7 @@
 >https://gist.github.com/x-yuri/6161d90d1af8ebac6e560bcef548c1c3&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/newren/git-filter-repo" target="_blank" rel="noopener"
 >https://github.com/newren/git-filter-repo&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Openssl DES</title><link>https://blog.simbafs.cc/p/linux/openssl-des/</link><pubDate>Sun, 02 Oct 2022 23:22:24 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/openssl-des/</guid><description>&lt;h1 id="openssl-des">openssl DES&lt;/h1>
+&lt;/ul></description></item><item><title>Openssl DES</title><link>https://simbafs.cc/blog/p/linux/openssl-des/</link><pubDate>Sun, 02 Oct 2022 23:22:24 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/openssl-des/</guid><description>&lt;h1 id="openssl-des">openssl DES&lt;/h1>
 &lt;h2 id="加密">加密&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1170,7 +1170,7 @@
 >https://wiki.openssl.org/index.php/Enc&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/openssl/openssl/issues/12906" target="_blank" rel="noopener"
 >https://github.com/openssl/openssl/issues/12906&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Google AppScript Calender API</title><link>https://blog.simbafs.cc/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 09:58:24 +0800</pubDate><guid>https://blog.simbafs.cc/p/google-app-script-calender-api/</guid><description>&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
+&lt;/ul></description></item><item><title>Google AppScript Calender API</title><link>https://simbafs.cc/blog/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 09:58:24 +0800</pubDate><guid>https://simbafs.cc/blog/p/google-app-script-calender-api/</guid><description>&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
 &lt;p>因為我懶的一堂一堂課加入日曆、還要按重複，所以就來研究如何自動化。我的想法是透過一個物件定義課表，然後透過程式來自動化新增。評估了幾個技術後，決定使用 Google App Script 來實做，畢竟他和日曆都是 Google 產品，整合應該是最好的（吧，而且可以弄成類似雲端應用的感覺，輕鬆開放給其他人使用。&lt;/p>
 &lt;h2 id="建立專案">建立專案&lt;/h2>
 &lt;p>在 &lt;a class="link" href="https://script.google.com/home" target="_blank" rel="noopener"
@@ -1637,7 +1637,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>IPFS</title><link>https://blog.simbafs.cc/p/ipfs/</link><pubDate>Mon, 22 Aug 2022 16:44:06 +0800</pubDate><guid>https://blog.simbafs.cc/p/ipfs/</guid><description>&lt;h1 id="ipfs">IPFS&lt;/h1>
+&lt;/div></description></item><item><title>IPFS</title><link>https://simbafs.cc/blog/p/ipfs/</link><pubDate>Mon, 22 Aug 2022 16:44:06 +0800</pubDate><guid>https://simbafs.cc/blog/p/ipfs/</guid><description>&lt;h1 id="ipfs">IPFS&lt;/h1>
 &lt;p>ipfs（&lt;strong>I&lt;/strong>nter&lt;strong>P&lt;/strong>lanetary &lt;strong>F&lt;/strong>ile &lt;strong>S&lt;/strong>ystem）是一個去中心化的檔案儲存方案，為什麼說是方案，因為他包括了通訊協議、軟體、檔案系統、名稱系統、閘道器。這個概念其實不新鮮但是 ipfs 整合過去去中心化方案的優點，而且他整合很很棒，可以開箱即用（out of box）。在 &lt;a class="link" href="https://github.com/ipfs/kubo/#what-is-ipfs" target="_blank" rel="noopener"
 >ipfs 的 GitHub README.md 中&lt;/a> 中的介紹：「It is like a single BitTorrent swarm, exchanging git objects」。他傳檔案的方式就像 BT 一樣是透過 p2p，定位檔案的方式像 Git，將檔案內容雜湊。&lt;/p>
 &lt;hr>
@@ -1894,7 +1894,7 @@ gateway timeout&amp;hellip;&lt;/p>
 開發 ipfs 的 protocal lab 曾經提出一個方案來把做種的成本轉移，那就是發行 &lt;a class="link" href="https://en.wikipedia.org/wiki/Filecoin" target="_blank" rel="noopener"
 >FileCoin&lt;/a>，但是以目前的市場來看，任何加密貨幣都會被拿去炒作，然後高機率爆掉，看下圖的 FileCoin 走勢就知道他被炒過一遍了&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;img src="https://blog.simbafs.cc/filecoin.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/filecoin.png"
 loading="lazy"
 alt="filecoin"
 > &amp;gt; &lt;a class="link" href="https://crypto.com/price/zh-TW/filecoin" target="_blank" rel="noopener"
@@ -1905,7 +1905,7 @@ alt="filecoin"
 &lt;p>如果節點中心化無法解決，至少我覺得閘道器中心化是容易解決的，只要瀏覽器內嵌 ipfs 就好了，或是像當年 Adobe Flash 一樣要裝外掛（也就是類似現在的本地閘道器作法），而且當這東西變成標配之後做種的問題也順帶解決&lt;/p>
 &lt;h2 id="參考資料">參考資料&lt;/h2>
 &lt;p>&lt;a class="link" href="https://docs.ipfs.tech" target="_blank" rel="noopener"
->ipfs docs&lt;/a>&lt;/p></description></item><item><title>p2p</title><link>https://blog.simbafs.cc/p/golang/p2p/</link><pubDate>Tue, 16 Aug 2022 19:55:15 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/p2p/</guid><description>&lt;h1 id="p2p">p2p&lt;/h1>
+>ipfs docs&lt;/a>&lt;/p></description></item><item><title>p2p</title><link>https://simbafs.cc/blog/p/golang/p2p/</link><pubDate>Tue, 16 Aug 2022 19:55:15 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/p2p/</guid><description>&lt;h1 id="p2p">p2p&lt;/h1>
 &lt;p>我不太確定這是 p2p 還是穿隧，但反正功能就是可以讓兩個在不同內網的機器可以直連，不需要透過中央伺服器轉發。先上原理圖，然後再來一步一步看程式碼&lt;/p>
 &lt;p>&lt;img src="https://github.com/simbafs/experiment-p2p/raw/main/explain.png"
 loading="lazy"
@@ -2116,7 +2116,7 @@ alt="explain.png"
 &lt;h2 id="心得">心得&lt;/h2>
 &lt;p>如果我沒理解錯，會選用 UDP 做 p2p 是因為 UDP 的連線關掉後 NAT 不會把洞關起來，所以一開始往伺服器發訊息的動作就是在打洞，然後把洞的資訊送到另一邊，接著就可以透過這的洞直連。而 TCP 一斷掉連線洞就會關起來，所以無法做 p2p（這是個人猜測，無根據）。&lt;br>
 這時候我就很好奇，應該有人做這種公共的 p2p server 吧？搭配 SDK 應該可以很輕鬆的做到任意兩台裝置連線，這樣伺服器的 loading 也不重，需要的資源也很低，感覺可以來開一個。&lt;br>
-接著我應該會去研究是否有辦法用 TCP 做 p2p，或是如何在 UDP 上搭建一個可信賴的通訊。接著遠程目標大概是 IPFS 之類的&lt;/p></description></item><item><title>File System</title><link>https://blog.simbafs.cc/p/nodejs/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 22:16:42 +0800</pubDate><guid>https://blog.simbafs.cc/p/nodejs/nextjs/fs/</guid><description>&lt;h1 id="file-system">File System&lt;/h1>
+接著我應該會去研究是否有辦法用 TCP 做 p2p，或是如何在 UDP 上搭建一個可信賴的通訊。接著遠程目標大概是 IPFS 之類的&lt;/p></description></item><item><title>File System</title><link>https://simbafs.cc/blog/p/nodejs/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 22:16:42 +0800</pubDate><guid>https://simbafs.cc/blog/p/nodejs/nextjs/fs/</guid><description>&lt;h1 id="file-system">File System&lt;/h1>
 &lt;h2 id="getstaticprops">getStaticProps&lt;/h2>
 &lt;p>不知道為什麼，&lt;code>getStaticProps&lt;/code> 裡面的 &lt;code>fs&lt;/code> 時有時無。&lt;a class="link" href="https://github.com/vercel/next.js/discussions/12124" target="_blank" rel="noopener"
 >這裡&lt;/a> 似乎有關於這個問題的回答，但無效&lt;/p>
@@ -2250,41 +2250,41 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/bitbucket-connect-jira/</link><pubDate>Wed, 20 Jul 2022 17:39:07 +0800</pubDate><guid>https://blog.simbafs.cc/p/bitbucket-connect-jira/</guid><description>&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
+&lt;/div></description></item><item><title>Bitbucket Connect Jira</title><link>https://simbafs.cc/blog/p/bitbucket-connect-jira/</link><pubDate>Wed, 20 Jul 2022 17:39:07 +0800</pubDate><guid>https://simbafs.cc/blog/p/bitbucket-connect-jira/</guid><description>&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
 &lt;h2 id="bitbucket-連接-jira">Bitbucket 連接 Jira&lt;/h2>
 &lt;p>先到 Bitbucket 的 repo 的 Jira issue 頁面
-&lt;img src="https://blog.simbafs.cc/1.png"
+&lt;img src="https://simbafs.cc/blog/blog/1.png"
 loading="lazy"
 alt="1"
 >
 點擊左上方資料夾圖示按鈕，然後點擊「Manage linked projects」
-&lt;img src="https://blog.simbafs.cc/2.png"
+&lt;img src="https://simbafs.cc/blog/blog/2.png"
 loading="lazy"
 alt="2"
 >
 選好 Jira 專案後，按下「Link project」
-&lt;img src="https://blog.simbafs.cc/3.png"
+&lt;img src="https://simbafs.cc/blog/blog/3.png"
 loading="lazy"
 alt="3"
 >
 等載入完成就可以看到 Jira issue 了
-&lt;img src="https://blog.simbafs.cc/4.png"
+&lt;img src="https://simbafs.cc/blog/blog/4.png"
 loading="lazy"
 alt="4"
 >&lt;/p>
 &lt;h2 id="jira-issue-連結-bitbucket-branch">Jira issue 連結 Bitbucket branch&lt;/h2>
 &lt;p>Bitbucket 的 repo 的 Jira issue 頁面，點擊要處理的 Jira issue 最右側的三個點點
-&lt;img src="https://blog.simbafs.cc/4.png"
+&lt;img src="https://simbafs.cc/blog/blog/4.png"
 loading="lazy"
 alt="4"
 >
 選第一個按鈕「Create Brench」
-&lt;img src="https://blog.simbafs.cc/5.png"
+&lt;img src="https://simbafs.cc/blog/blog/5.png"
 loading="lazy"
 alt="5"
 >
 填好 type、name 等等訊息，按下「Create」就建立好並對應了
-&lt;img src="https://blog.simbafs.cc/6.png"
+&lt;img src="https://simbafs.cc/blog/blog/6.png"
 loading="lazy"
 alt="6"
 >&lt;/p>
@@ -2311,7 +2311,7 @@ alt="6"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git merge A
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>這裡可能會產生衝突（conflict），解決後就可以繼續合併了&lt;/p></description></item><item><title>Solarized</title><link>https://blog.simbafs.cc/p/linux/vim/solarized/</link><pubDate>Wed, 15 Jun 2022 17:09:18 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/solarized/</guid><description>&lt;h1 id="solarized">Solarized&lt;/h1>
+&lt;/div>&lt;p>這裡可能會產生衝突（conflict），解決後就可以繼續合併了&lt;/p></description></item><item><title>Solarized</title><link>https://simbafs.cc/blog/p/linux/vim/solarized/</link><pubDate>Wed, 15 Jun 2022 17:09:18 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/vim/solarized/</guid><description>&lt;h1 id="solarized">Solarized&lt;/h1>
 &lt;p>&lt;a class="link" href="https://ethanschoonover.com/solarized/" target="_blank" rel="noopener"
 >solarized&lt;/a> 是一個文字界面常見的配色方案，不僅是用在 vim，大多數 terminal 和 editor 也都支援&lt;/p>
 &lt;h2 id="install">install&lt;/h2>
@@ -2403,51 +2403,51 @@ Plug &amp;rsquo;ericbn/vim-solarized'&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34; trasparent end
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>不同「邊數」的平面</title><link>https://blog.simbafs.cc/p/other/plantofnumbers/</link><pubDate>Sat, 11 Jun 2022 23:26:40 +0800</pubDate><guid>https://blog.simbafs.cc/p/other/plantofnumbers/</guid><description>&lt;h1 id="同邊數的平面">同「邊數」的平面&lt;/h1>
+&lt;/div></description></item><item><title>不同「邊數」的平面</title><link>https://simbafs.cc/blog/p/other/plantofnumbers/</link><pubDate>Sat, 11 Jun 2022 23:26:40 +0800</pubDate><guid>https://simbafs.cc/blog/p/other/plantofnumbers/</guid><description>&lt;h1 id="同邊數的平面">同「邊數」的平面&lt;/h1>
 &lt;h2 id="圖">圖&lt;/h2>
 &lt;p>先上圖，每個都是推到邊長為 4&lt;/p>
 &lt;h2 id="3">3&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/3.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/3.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="4">4&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/4.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/4.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="5">5&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/5.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/5.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="6">6&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/6.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/6.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="7">7&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/7.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/7.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="8">8&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/8.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/8.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="9">9&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/9.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/9.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="10">10&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/10.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/10.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="11">11&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/11.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/11.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="12">12&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/12.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/12.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="13">13&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/13.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/13.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="共通性質">共通性質&lt;/h2>
@@ -2466,23 +2466,23 @@ loading="lazy"
 &lt;h2 id="鞍形">鞍形&lt;/h2>
 &lt;p>從 &lt;code>n=7&lt;/code> 開始，堆積時會自然地形成鞍形，且角度越來越小&lt;/p>
 &lt;h2 id="堆積技巧">堆積技巧&lt;/h2>
-&lt;p>首先取出「邊長」顆球球繞成環形，然後自然的繞成第二圈，整理角角形成最密堆積，然後在邊長大於 3 的邊上丟一顆球球，從最遠、最長的邊開始，邊長為三的邊會最穩定，盡量每次丟球球都要整理乾淨。堆積的時候要注意中心球球數是否跑掉。另外 11 顆前都還算好堆，12 開始會黏起來，但最後是可以穩定的分開的，13 就是完成也無法穩定分開，超過 13 還沒嘗試過。&lt;/p></description></item><item><title>兩輸入生產單位的比較</title><link>https://blog.simbafs.cc/p/game/mindustry/two-input-compare/</link><pubDate>Sun, 22 May 2022 23:06:02 +0800</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/two-input-compare/</guid><description>&lt;h1 id="目的">目的&lt;/h1>
+&lt;p>首先取出「邊長」顆球球繞成環形，然後自然的繞成第二圈，整理角角形成最密堆積，然後在邊長大於 3 的邊上丟一顆球球，從最遠、最長的邊開始，邊長為三的邊會最穩定，盡量每次丟球球都要整理乾淨。堆積的時候要注意中心球球數是否跑掉。另外 11 顆前都還算好堆，12 開始會黏起來，但最後是可以穩定的分開的，13 就是完成也無法穩定分開，超過 13 還沒嘗試過。&lt;/p></description></item><item><title>兩輸入生產單位的比較</title><link>https://simbafs.cc/blog/p/game/mindustry/two-input-compare/</link><pubDate>Sun, 22 May 2022 23:06:02 +0800</pubDate><guid>https://simbafs.cc/blog/p/game/mindustry/two-input-compare/</guid><description>&lt;h1 id="目的">目的&lt;/h1>
 &lt;ol>
 &lt;li>驗證不同設計的生產效率差異&lt;/li>
 &lt;li>用科學的方式檢驗下面這些毫無根據、隨意編造的偏見
-&lt;img src="https://blog.simbafs.cc/motivative-1.png"
+&lt;img src="https://simbafs.cc/blog/blog/motivative-1.png"
 loading="lazy"
 alt="motivative 1"
 >
-&lt;img src="https://blog.simbafs.cc/motivative-2.png"
+&lt;img src="https://simbafs.cc/blog/blog/motivative-2.png"
 loading="lazy"
 alt="motivative 2"
 >
-&lt;img src="https://blog.simbafs.cc/motivative-3.png"
+&lt;img src="https://simbafs.cc/blog/blog/motivative-3.png"
 loading="lazy"
 alt="motivative 3"
 >
-&lt;img src="https://blog.simbafs.cc/motivative-4.png"
+&lt;img src="https://simbafs.cc/blog/blog/motivative-4.png"
 loading="lazy"
 alt="motivative 4"
 >&lt;/li>
@@ -2545,15 +2545,15 @@ alt="motivative 4"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;img src="https://blog.simbafs.cc/sliicon.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/sliicon.png"
 loading="lazy"
 alt="silicon"
 >
-&lt;img src="https://blog.simbafs.cc/result.png"
+&lt;img src="https://simbafs.cc/blog/blog/result.png"
 loading="lazy"
 alt="result"
 >
-&lt;img src="https://blog.simbafs.cc/chart.png"
+&lt;img src="https://simbafs.cc/blog/blog/chart.png"
 loading="lazy"
 alt="chart"
 >&lt;/p>
@@ -2569,21 +2569,21 @@ B 唯一的缺點是佔體積大了一點點，但我個人認為，沒有任何
 &lt;h2 id="後續實驗">後續實驗&lt;/h2>
 &lt;p>根據 &lt;code>Magicaltank&lt;/code> 和 &lt;code>a0000778&lt;/code> 的建議，換成溢流器的確會增加效率，但即使沒換，但還是比 A 設計效率高。&lt;/p>
 &lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted --></description></item><item><title>迴圈的延遲</title><link>https://blog.simbafs.cc/p/game/mindustry/delayofloop/</link><pubDate>Wed, 18 May 2022 17:19:57 +0800</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/delayofloop/</guid><description>&lt;h1 id="迴圈的延遲">迴圈的延遲&lt;/h1>
+&lt;!-- raw HTML omitted --></description></item><item><title>迴圈的延遲</title><link>https://simbafs.cc/blog/p/game/mindustry/delayofloop/</link><pubDate>Wed, 18 May 2022 17:19:57 +0800</pubDate><guid>https://simbafs.cc/blog/p/game/mindustry/delayofloop/</guid><description>&lt;h1 id="迴圈的延遲">迴圈的延遲&lt;/h1>
 &lt;p>在&lt;a class="link" href="../turretautoaim" >上一篇&lt;/a>關於用 &lt;code>jump&lt;/code> 實現迴圈的部份，其實，Mindustry 的 &lt;code>jump&lt;/code> 的會有一個延遲&lt;/p>
 &lt;h2 id="單核">單核&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/singleCore.gif"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/singleCore.gif"
 loading="lazy"
 alt="single core"
 >&lt;/p>
 &lt;h2 id="多核">多核&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/fourCores.gif"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/fourCores.gif"
 loading="lazy"
 alt="four cores"
->&lt;/p></description></item><item><title>砲台自動瞄準</title><link>https://blog.simbafs.cc/p/game/mindustry/turretautoaim/</link><pubDate>Wed, 18 May 2022 16:29:13 +0800</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/turretautoaim/</guid><description>&lt;h1 id="砲台自動瞄準">砲台自動瞄準&lt;/h1>
+>&lt;/p></description></item><item><title>砲台自動瞄準</title><link>https://simbafs.cc/blog/p/game/mindustry/turretautoaim/</link><pubDate>Wed, 18 May 2022 16:29:13 +0800</pubDate><guid>https://simbafs.cc/blog/p/game/mindustry/turretautoaim/</guid><description>&lt;h1 id="砲台自動瞄準">砲台自動瞄準&lt;/h1>
 &lt;p>用處理器可以控制砲台們打的方向和什麼時候打，這樣只要有一群受控的砲台，就可以在射程範圍內指哪打哪&lt;/p>
 &lt;h2 id="單一砲台">單一砲台&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/oneTurretScreeshot.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/oneTurretScreeshot.png"
 loading="lazy"
 alt="one turret screenshot"
 >&lt;/p>
@@ -2653,7 +2653,7 @@ alt="one turret screenshot"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;img src="https://blog.simbafs.cc/oneTurretCode.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/oneTurretCode.png"
 loading="lazy"
 alt="one turret code"
 >&lt;/p>
@@ -2732,11 +2732,11 @@ alt="one turret code"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;img src="https://blog.simbafs.cc/multipleTurretsScreenshot.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/multipleTurretsScreenshot.png"
 loading="lazy"
 alt="multiple turrets screenshot"
 >&lt;br>
-&lt;img src="https://blog.simbafs.cc/multipleTurretCode.png"
+&lt;img src="https://simbafs.cc/blog/blog/multipleTurretCode.png"
 loading="lazy"
 alt="multipleTurretsCode"
 >&lt;/p>
@@ -2744,7 +2744,7 @@ alt="multipleTurretsCode"
 &lt;p>&lt;a class="link" href="https://www.youtube.com/watch?v=UFK5m6qKT6U" target="_blank" rel="noopener"
 >https://www.youtube.com/watch?v=UFK5m6qKT6U&lt;/a>&lt;br>
 &lt;a class="link" href="https://www.youtube.com/watch?v=YMxU0jcS11I" target="_blank" rel="noopener"
->https://www.youtube.com/watch?v=YMxU0jcS11I&lt;/a>&lt;/p></description></item><item><title>控制敵方路徑</title><link>https://blog.simbafs.cc/p/game/mindustry/pathofenemy/</link><pubDate>Tue, 17 May 2022 16:16:27 +0800</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/pathofenemy/</guid><description>&lt;h1 id="控制敵方路徑">控制敵方路徑&lt;/h1>
+>https://www.youtube.com/watch?v=YMxU0jcS11I&lt;/a>&lt;/p></description></item><item><title>控制敵方路徑</title><link>https://simbafs.cc/blog/p/game/mindustry/pathofenemy/</link><pubDate>Tue, 17 May 2022 16:16:27 +0800</pubDate><guid>https://simbafs.cc/blog/p/game/mindustry/pathofenemy/</guid><description>&lt;h1 id="控制敵方路徑">控制敵方路徑&lt;/h1>
 &lt;p>在遊戲中，如何有效的讓資源集中在前線是一門學問，最好的情況當然是所有可能路徑都佈置強大的火力，但真實情況往往不是如此。&lt;/p>
 &lt;p>當遇到有多個洞口的地圖時，你可能堵好一個洞，敵方就從令一個洞跑進來，然後核心就被攻破了，但是你又沒有足夠的資源和時間在第一時間把所有的洞都佈置火力。這時候你就必須了解的方式如何行動的。&lt;/p>
 &lt;blockquote>
@@ -2754,23 +2754,23 @@ alt="multipleTurretsCode"
 &lt;p>尋找路徑可說是電腦科學一個很常見又基本的問題，Mindustry 尋路演算法會考慮預估時間。這個預估時間包括距離、要打破的牆等等，計算出來了之後選擇一條最段時間的路。注意，這裡他不會考慮沿途可能遭受的火力，我們就是要利用他這點來設計。&lt;/p>
 &lt;h2 id="我的習慣作法">我的習慣作法&lt;/h2>
 &lt;p>首先，最靠近空降區的洞不一定適合佈置砲台（例如第三關廢墟海岸左上角那個超級小的洞）這些地方可能是腹地狹小或是資源不足，總之你不會想要在這裡放砲台。那就用三層銅牆（不一定要 2x2 的，1x1 也可以）把他堵起來，一層防守兩層緩衝。挑選到適合的地方佈置砲台後，不要堵死，要留一條寬至少 3 格、夠長的通道。這個通道你要確保通暢，可以毫無阻礙的通到你的核心，這樣電腦就會判定這條路毫無阻礙，優先選擇，敵人就不會亂走到你沒有佈防的地方。這樣做還有一個好處，當你可以生產機甲時，友方機甲就可以直接走出去，不會受到阻礙，你也不用幫他們開門。&lt;br>
-然後在左右佈滿砲台，記得一定要放修理方塊，這樣你才不用常常來修方塊。至於通道長度和牆壁厚度，取決於這關敵方火力強度和你選用的砲台射程，如果你能夠在對方開火之前就幹掉他們，當然牆壁可以一層意思意思就好。&lt;/p></description></item><item><title>Merge</title><link>https://blog.simbafs.cc/p/game/mindustry/merge/</link><pubDate>Tue, 17 May 2022 08:32:38 +0800</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/merge/</guid><description>&lt;h1 id="merge">Merge&lt;/h1>
+然後在左右佈滿砲台，記得一定要放修理方塊，這樣你才不用常常來修方塊。至於通道長度和牆壁厚度，取決於這關敵方火力強度和你選用的砲台射程，如果你能夠在對方開火之前就幹掉他們，當然牆壁可以一層意思意思就好。&lt;/p></description></item><item><title>Merge</title><link>https://simbafs.cc/blog/p/game/mindustry/merge/</link><pubDate>Tue, 17 May 2022 08:32:38 +0800</pubDate><guid>https://simbafs.cc/blog/p/game/mindustry/merge/</guid><description>&lt;h1 id="merge">Merge&lt;/h1>
 &lt;p>Mindustry 中，某條輸送帶（A）合併到另一條未滿的輸送帶（B）上時，如果 B 有一個足夠小的空隙，A 是有機會無法補滿的&lt;/p>
-&lt;p>&lt;img src="https://blog.simbafs.cc/gap.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/gap.png"
 loading="lazy"
 alt="gap"
 >&lt;/p>
 &lt;p>這種情況通常出現在兩列礦機的合併&lt;/p>
-&lt;p>&lt;img src="https://blog.simbafs.cc/withoutRouter.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/withoutRouter.png"
 loading="lazy"
 alt="withoutRouter"
 >&lt;/p>
 &lt;p>要解決這個狀況，最簡單的方法是加上一個分配器&lt;/p>
-&lt;p>&lt;img src="https://blog.simbafs.cc/withRouter.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/withRouter.png"
 loading="lazy"
 alt="withRouter"
 >&lt;/p>
-&lt;p>當然這裡的輸出是不能被堵住的，不然就沒有意義了(X&lt;/p></description></item><item><title>Yubikey</title><link>https://blog.simbafs.cc/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 15:22:55 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/yubikey/</guid><description>&lt;h1 id="yubikey">Yubikey&lt;/h1>
+&lt;p>當然這裡的輸出是不能被堵住的，不然就沒有意義了(X&lt;/p></description></item><item><title>Yubikey</title><link>https://simbafs.cc/blog/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 15:22:55 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/yubikey/</guid><description>&lt;h1 id="yubikey">Yubikey&lt;/h1>
 &lt;p>感謝煥杰賣我一個 1200，撿到寶啦！我買的是 &lt;a class="link" href="https://www.yubico.com/tw/product/yubikey-5c-nfc/" target="_blank" rel="noopener"
 >Yubikey 5C NFC&lt;/a>，看起來幾乎所有功能都有&lt;/p>
 &lt;h2 id="login">login&lt;/h2>
@@ -2782,7 +2782,7 @@ alt="withRouter"
 &lt;/blockquote>
 &lt;h2 id="ssh-gpg">ssh gpg&lt;/h2>
 &lt;p>&lt;del>研究中&amp;hellip;&lt;/del>
-在這裡 &lt;a class="link" href="https://blog.simbafs.cc/posts/linux/gpg-with-ssh" >GPG with SSH&lt;/a>&lt;/p>
+在這裡 &lt;a class="link" href="https://simbafs.cc/blog/posts/linux/gpg-with-ssh" >GPG with SSH&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;a class="link" href="https://medium.com/@SSWilsonKao/%E5%A6%82%E4%BD%95%E5%9C%A8-mac-%E4%B8%8A-%E6%8A%8A-yubikey-%E8%88%87-gpg-ssh-%E6%90%AD%E9%85%8D%E5%9C%A8%E4%B8%80%E8%B5%B7-5f842d20ad6a" target="_blank" rel="noopener"
 >如何在 Mac 上，把 YubiKey 與 GPG、SSH 搭配在一起&lt;/a> &amp;gt; &lt;a class="link" href="https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29" target="_blank" rel="noopener"
@@ -2951,7 +2951,7 @@ alt="withRouter"
 &lt;blockquote>
 &lt;p>根據 &lt;a class="link" href="https://developers.yubico.com/yubikey-piv-manager/PIN_and_Management_Key.html" target="_blank" rel="noopener"
 >這篇文章&lt;/a>，似乎還有其他密碼們，上面介紹的都是屬於 PIV（Personal Identity Verification），還有 OpenPGP、FIDO2 的 PIN&lt;/p>
-&lt;/blockquote></description></item><item><title>Anbox</title><link>https://blog.simbafs.cc/p/linux/anbox/</link><pubDate>Mon, 18 Apr 2022 18:53:50 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/anbox/</guid><description>&lt;h1 id="anbox">Anbox&lt;/h1>
+&lt;/blockquote></description></item><item><title>Anbox</title><link>https://simbafs.cc/blog/p/linux/anbox/</link><pubDate>Mon, 18 Apr 2022 18:53:50 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/anbox/</guid><description>&lt;h1 id="anbox">Anbox&lt;/h1>
 &lt;p>&lt;a class="link" href="https://anbox.io/" target="_blank" rel="noopener"
 >anbox&lt;/a> 是 Android in a box，是一種基於容器化技術的 Android 模擬器，所以執行速度會比較快、比較省資源，而且因為每個 App 都在各自的容器裡面，所以比較安全
 （應該沒理解錯吧？）。&lt;br>
@@ -3067,12 +3067,12 @@ alt="withRouter"
 >https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="問遺">問遺&lt;/h2>
-&lt;p>目前裝好 APP 但是我打不開&lt;/p></description></item><item><title>Ibus Font</title><link>https://blog.simbafs.cc/p/linux/ibus-font/</link><pubDate>Sat, 16 Apr 2022 21:47:25 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/ibus-font/</guid><description>&lt;h1 id="ibus-font">Ibus Font&lt;/h1>
+&lt;p>目前裝好 APP 但是我打不開&lt;/p></description></item><item><title>Ibus Font</title><link>https://simbafs.cc/blog/p/linux/ibus-font/</link><pubDate>Sat, 16 Apr 2022 21:47:25 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/ibus-font/</guid><description>&lt;h1 id="ibus-font">Ibus Font&lt;/h1>
 &lt;p>最近在打字時總覺得中文選字的時候 ibus 字體好小，於是就開始查怎麼弄&lt;/p>
 &lt;p>經過搜尋後，找到 &lt;a class="link" href="https://askubuntu.com/questions/1030442/how-to-increase-font-size-of-preview-options-when-using-an-input-method" target="_blank" rel="noopener"
 >https://askubuntu.com/questions/1030442/how-to-increase-font-size-of-preview-options-when-using-an-input-method&lt;/a> 這個網頁，總而言之就是先去裝 &lt;a class="link" href="https://extensions.gnome.org/extension/1121/ibus-font-setting/" target="_blank" rel="noopener"
 >ibus font setting&lt;/a> 這個外掛，然後就可以用 &lt;code>ibus-setup&lt;/code> 調整了&lt;br>
-照做之後的確可以調大小字體，但我不知道是不是因為裝了這個外掛的關係，反正我是成功改好了&lt;/p></description></item><item><title>kdeconnect</title><link>https://blog.simbafs.cc/p/linux/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 23:25:28 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/kdeconnect/</guid><description>&lt;h1 id="kdeconnect">kdeconnect&lt;/h1>
+照做之後的確可以調大小字體，但我不知道是不是因為裝了這個外掛的關係，反正我是成功改好了&lt;/p></description></item><item><title>kdeconnect</title><link>https://simbafs.cc/blog/p/linux/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 23:25:28 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/kdeconnect/</guid><description>&lt;h1 id="kdeconnect">kdeconnect&lt;/h1>
 &lt;p>kdeconnect 顧名思義是 kde 出的一款 connect 軟體，功能非常多而且方便。電腦和手機都安裝好軟體後，只要在同一個網域就可以配對連接&lt;/p>
 &lt;h2 id="功能介紹">功能介紹&lt;/h2>
 &lt;ol>
@@ -3103,7 +3103,7 @@ alt="withRouter"
 &lt;td style="text-align:left">&lt;code>loginctl unlock-session&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Modeline</title><link>https://blog.simbafs.cc/p/linux/vim/modeline/</link><pubDate>Thu, 07 Apr 2022 23:13:04 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/modeline/</guid><description>&lt;h1 id="modeline">Modeline&lt;/h1>
+&lt;/table></description></item><item><title>Modeline</title><link>https://simbafs.cc/blog/p/linux/vim/modeline/</link><pubDate>Thu, 07 Apr 2022 23:13:04 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/vim/modeline/</guid><description>&lt;h1 id="modeline">Modeline&lt;/h1>
 &lt;p>&lt;code>modeline&lt;/code> 是一個可以將 vim 設定嵌入檔案的方式，這樣就可以讓某些檔案有自己的設定，像是折疊、不要行數、tab 等於多少空白等等。&lt;/p>
 &lt;h2 id="簡單的條件">簡單的條件&lt;/h2>
 &lt;p>簡單的 &lt;code>modeline&lt;/code> 需要滿足幾個條件：&lt;/p>
@@ -3123,7 +3123,7 @@ alt="withRouter"
 &lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
 &lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file&lt;/a>&lt;br>
-help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item><title>用 Github Action 編譯並發 Release</title><link>https://blog.simbafs.cc/p/golang/github-action-release/</link><pubDate>Sun, 27 Mar 2022 11:00:18 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/github-action-release/</guid><description>&lt;h1 id="用-github-action-編譯並發-release">用 Github Action 編譯並發 Release&lt;/h1>
+help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item><title>用 Github Action 編譯並發 Release</title><link>https://simbafs.cc/blog/p/golang/github-action-release/</link><pubDate>Sun, 27 Mar 2022 11:00:18 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/github-action-release/</guid><description>&lt;h1 id="用-github-action-編譯並發-release">用 Github Action 編譯並發 Release&lt;/h1>
 &lt;p>如果自己寫的小工具的 GitHub 頁面右邊 Release 那欄有個什麼東西，一定很酷對吧！如果裡面已經提供了不同作業系統編譯好的程式，一定更酷！&lt;br>
 想要建立 Release，你可以在新版本發布時自己手動 crose compile 再手動設定 Release，這個方法可行，但是聽起來全手動就很 low，我們要用一個全自動的方式發 Release！&lt;/p>
 &lt;h2 id="github-actioin">Github Actioin&lt;/h2>
@@ -3298,7 +3298,7 @@ help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item>
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">tag_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ steps.tagName.outputs.tag }}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>震動 vs 振動</title><link>https://blog.simbafs.cc/p/other/vibrate/</link><pubDate>Wed, 09 Mar 2022 23:16:55 +0800</pubDate><guid>https://blog.simbafs.cc/p/other/vibrate/</guid><description>&lt;h1 id="震動-vs-振動">震動 vs 振動&lt;/h1>
+&lt;/div></description></item><item><title>震動 vs 振動</title><link>https://simbafs.cc/blog/p/other/vibrate/</link><pubDate>Wed, 09 Mar 2022 23:16:55 +0800</pubDate><guid>https://simbafs.cc/blog/p/other/vibrate/</guid><description>&lt;h1 id="震動-vs-振動">震動 vs 振動&lt;/h1>
 &lt;p>都是往復運動，但有不同，簡單來說，振動比震動有規律。
 像是單擺是振動，地震是震動，因為單擺的運動是規律的，而地震波比較不規律&lt;/p>
 &lt;p>&lt;a class="link" href="https://pedia.cloud.edu.tw/Entry/Detail/?title=%E6%8C%AF%E5%8B%95" target="_blank" rel="noopener"
@@ -3306,7 +3306,7 @@ help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item>
 &lt;a class="link" href="https://pedia.cloud.edu.tw/Entry/Detail?title=%E9%9C%87%E5%8B%95" target="_blank" rel="noopener"
 >https://pedia.cloud.edu.tw/Entry/Detail?title=%E9%9C%87%E5%8B%95&lt;/a>&lt;/p>
 &lt;p>至於為什麼我會去查這個呢？因為我發現物理實驗預報寫「簡諧震動」，但是我覺得「震」筆畫太多了，我想寫「振」於是就跑去查教育部字典&lt;/p>
-&lt;p>得證：懶惰使人進步&lt;/p></description></item><item><title>Archives</title><link>https://blog.simbafs.cc/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/archives/</guid><description/></item><item><title>Bluetooth 突然卡住都不動</title><link>https://blog.simbafs.cc/p/linux/bluwtooth-error/</link><pubDate>Wed, 02 Mar 2022 23:31:59 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/bluwtooth-error/</guid><description>&lt;h1 id="bluetooth-突然卡住都不動">Bluetooth 突然卡住都不動&lt;/h1>
+&lt;p>得證：懶惰使人進步&lt;/p></description></item><item><title>Archives</title><link>https://simbafs.cc/blog/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/archives/</guid><description/></item><item><title>Bluetooth 突然卡住都不動</title><link>https://simbafs.cc/blog/p/linux/bluwtooth-error/</link><pubDate>Wed, 02 Mar 2022 23:31:59 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/bluwtooth-error/</guid><description>&lt;h1 id="bluetooth-突然卡住都不動">Bluetooth 突然卡住都不動&lt;/h1>
 &lt;p>裝了 Ubuntu 20.04 之後不知道為什麼藍芽用一用就會卡住，所有設備都連不上，也關不掉。一開始的解決方式是重開機（這時候關機會跳一個奇怪的錯誤訊息），但是覺得太沒效率了，上網查了一下。&lt;/p>
 &lt;h2 id="原因">原因&lt;/h2>
 &lt;p>根據 &lt;a class="link" href="https://bugs.launchpad.net/ubuntu/&amp;#43;source/linux/&amp;#43;bug/1859592" target="_blank" rel="noopener"
@@ -3325,7 +3325,7 @@ help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo modprobe btusb
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>這樣藍芽就回來了。這兩個指令簡單來說就是重新載入藍芽模組，這就是為什麼重開機可以解決（重開機就是重新載入所有模組）&lt;/p></description></item><item><title>Golang Plguin</title><link>https://blog.simbafs.cc/p/golang/plguin/</link><pubDate>Mon, 21 Feb 2022 18:54:55 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/plguin/</guid><description>&lt;h1 id="go-動態載入程式">Go 動態載入程式&lt;/h1>
+&lt;/div>&lt;p>這樣藍芽就回來了。這兩個指令簡單來說就是重新載入藍芽模組，這就是為什麼重開機可以解決（重開機就是重新載入所有模組）&lt;/p></description></item><item><title>Golang Plguin</title><link>https://simbafs.cc/blog/p/golang/plguin/</link><pubDate>Mon, 21 Feb 2022 18:54:55 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/plguin/</guid><description>&lt;h1 id="go-動態載入程式">Go 動態載入程式&lt;/h1>
 &lt;p>Go 是一個編譯式的語言，也就是說他不像 JS 那樣可以動態執行程式碼。像是 &lt;a class="link" href="https://github.com/hexojs/hexo" target="_blank" rel="noopener"
 >Hexo&lt;/a> 和 &lt;a class="link" href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener"
 >Hugo&lt;/a>，前者因為是 JS 寫的，因此支援非常豐富的外掛，但後者因為是 Go 寫的，因此在不使用其他直譯式程式語言的情況下，很難製作外掛。&lt;br>
@@ -3483,7 +3483,7 @@ help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>React 解決中文輸入法</title><link>https://blog.simbafs.cc/p/frontend/react-composition-event/</link><pubDate>Sat, 05 Feb 2022 16:59:44 +0800</pubDate><guid>https://blog.simbafs.cc/p/frontend/react-composition-event/</guid><description>&lt;p>今天在開發&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>React 解決中文輸入法</title><link>https://simbafs.cc/blog/p/frontend/react-composition-event/</link><pubDate>Sat, 05 Feb 2022 16:59:44 +0800</pubDate><guid>https://simbafs.cc/blog/p/frontend/react-composition-event/</guid><description>&lt;p>今天在開發&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
 >晶晶體產生器&lt;/a>的時候，發現中文輸入總是有問題，這時候我想起以前看過 Hackmd 官方的&lt;a class="link" href="https://hackmd.io/@hackmd/CompositionEvent" target="_blank" rel="noopener"
 >一篇 blog&lt;/a>，提到中文輸入法如果有問題，可能和組字事件有關。於是就開始研究。首先我將以下設定加入 &lt;code>textarea&lt;/code> 裡觀察組字事件的行為&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -3630,12 +3630,12 @@ help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">/&amp;gt;;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>LaTeX Starter</title><link>https://blog.simbafs.cc/p/other/latex-starter/</link><pubDate>Wed, 22 Dec 2021 23:18:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/other/latex-starter/</guid><description>&lt;h1 id="latex-stater">LaTeX Stater&lt;/h1>
+&lt;/div></description></item><item><title>LaTeX Starter</title><link>https://simbafs.cc/blog/p/other/latex-starter/</link><pubDate>Wed, 22 Dec 2021 23:18:41 +0800</pubDate><guid>https://simbafs.cc/blog/p/other/latex-starter/</guid><description>&lt;h1 id="latex-stater">LaTeX Stater&lt;/h1>
 &lt;p>LaTeX 是一老牌的排版系統，基本的概念是內容與呈現分離，在撰寫內容時不用管排版（所以你就不會擔心移動圖片一咪咪整份文件就跑版了）。除了排版，LaTeX 還很擅長輸出各種莫名其妙的東西，像是超複雜的數學式、象棋棋譜、化學結構&amp;hellip;&amp;hellip;&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/latex-starter/latex-example.png"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/latex-starter/latex-example.png"
 loading="lazy"
 alt="莫名其妙排版範例"
 >&lt;/th>
@@ -3823,7 +3823,7 @@ alt="莫名其妙排版範例"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>document&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>ExecCmd</title><link>https://blog.simbafs.cc/p/golang/exec-cmd/</link><pubDate>Tue, 19 Oct 2021 00:06:19 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/exec-cmd/</guid><description>&lt;h1 id="golang-執行外部命令">Golang 執行外部命令&lt;/h1>
+&lt;/div></description></item><item><title>ExecCmd</title><link>https://simbafs.cc/blog/p/golang/exec-cmd/</link><pubDate>Tue, 19 Oct 2021 00:06:19 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/exec-cmd/</guid><description>&lt;h1 id="golang-執行外部命令">Golang 執行外部命令&lt;/h1>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -3882,7 +3882,7 @@ alt="莫名其妙排版範例"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Aconf</title><link>https://blog.simbafs.cc/p/golang/aconf/</link><pubDate>Fri, 24 Sep 2021 08:46:37 +0800</pubDate><guid>https://blog.simbafs.cc/p/golang/aconf/</guid><description>&lt;h1 id="aconf">aconf&lt;/h1>
+&lt;/div></description></item><item><title>Aconf</title><link>https://simbafs.cc/blog/p/golang/aconf/</link><pubDate>Fri, 24 Sep 2021 08:46:37 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/aconf/</guid><description>&lt;h1 id="aconf">aconf&lt;/h1>
 &lt;p>aconf 是個可以直接幫你解決所有「設定」問題的套件，設定可以有預設、從命令列參數、環境變數和設定檔，設定檔還有官方支援四種格式，dotEnv、HCL、toml、yaml 和 json。&lt;br>
 而且設定檔還可以有不只一個，他可以把多個設定檔合成，相當方便&lt;/p>
 &lt;h2 id="基本使用">基本使用&lt;/h2>
@@ -4003,10 +4003,10 @@ alt="莫名其妙排版範例"
 &lt;p>&lt;a class="link" href="https://github.com/cristalhq/aconfig" target="_blank" rel="noopener"
 >https://github.com/cristalhq/aconfig&lt;/a>&lt;br>
 &lt;a class="link" href="https://pkg.go.dev/github.com/cristalhq/aconfig" target="_blank" rel="noopener"
->https://pkg.go.dev/github.com/cristalhq/aconfig&lt;/a>&lt;/p></description></item><item><title>Day 21：儲存器與剪貼簿</title><link>https://blog.simbafs.cc/p/ithelp/day-21%E5%84%B2%E5%AD%98%E5%99%A8%E8%88%87%E5%89%AA%E8%B2%BC%E7%B0%BF/</link><pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-21%E5%84%B2%E5%AD%98%E5%99%A8%E8%88%87%E5%89%AA%E8%B2%BC%E7%B0%BF/</guid><description>&lt;table>
+>https://pkg.go.dev/github.com/cristalhq/aconfig&lt;/a>&lt;/p></description></item><item><title>Day 21：儲存器與剪貼簿</title><link>https://simbafs.cc/blog/p/ithelp/day-21%E5%84%B2%E5%AD%98%E5%99%A8%E8%88%87%E5%89%AA%E8%B2%BC%E7%B0%BF/</link><pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-21%E5%84%B2%E5%AD%98%E5%99%A8%E8%88%87%E5%89%AA%E8%B2%BC%E7%B0%BF/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day21/stackoverflow-meme.png"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day21/stackoverflow-meme.png"
 loading="lazy"
 alt="stackoverflow meme"
 >&lt;/th>
@@ -4143,7 +4143,7 @@ alt="stackoverflow meme"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day21/vim-expression-reg.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day21/vim-expression-reg.gif"
 loading="lazy"
 alt="vim expression register"
 >&lt;/th>
@@ -4158,7 +4158,7 @@ alt="vim expression register"
 &lt;p>另外這些函數也可以用 &lt;code>:call funcion()&lt;/code> 來執行&lt;/p>
 &lt;h1 id="結尾">結尾&lt;/h1>
 &lt;p>vim 的 register 真的非常好用，尤其是基礎的那 36 個儲存器，相較於系統剪貼簿又更豐富了！&lt;br>
-關於儲存器還有很多細節是我的文章無法詳細列出來的，你可以用命令 &lt;code>:help :reg&lt;/code> 看看更多儲存器的說明&lt;/p></description></item><item><title>Day 20：切水果囉！vim 切螢幕與分頁</title><link>https://blog.simbafs.cc/p/ithelp/day-20%E5%88%87%E6%B0%B4%E6%9E%9C%E5%9B%89vim-%E5%88%87%E8%9E%A2%E5%B9%95%E8%88%87%E5%88%86%E9%A0%81/</link><pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-20%E5%88%87%E6%B0%B4%E6%9E%9C%E5%9B%89vim-%E5%88%87%E8%9E%A2%E5%B9%95%E8%88%87%E5%88%86%E9%A0%81/</guid><description>&lt;h1 id="分割螢幕">分割螢幕&lt;/h1>
+關於儲存器還有很多細節是我的文章無法詳細列出來的，你可以用命令 &lt;code>:help :reg&lt;/code> 看看更多儲存器的說明&lt;/p></description></item><item><title>Day 20：切水果囉！vim 切螢幕與分頁</title><link>https://simbafs.cc/blog/p/ithelp/day-20%E5%88%87%E6%B0%B4%E6%9E%9C%E5%9B%89vim-%E5%88%87%E8%9E%A2%E5%B9%95%E8%88%87%E5%88%86%E9%A0%81/</link><pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-20%E5%88%87%E6%B0%B4%E6%9E%9C%E5%9B%89vim-%E5%88%87%E8%9E%A2%E5%B9%95%E8%88%87%E5%88%86%E9%A0%81/</guid><description>&lt;h1 id="分割螢幕">分割螢幕&lt;/h1>
 &lt;p>記的 tmux 可以切螢幕嗎？vim 也可以喔！&lt;/p>
 &lt;h2 id="命令">命令&lt;/h2>
 &lt;p>我們快速用表格帶過命令&lt;/p>
@@ -4221,7 +4221,7 @@ alt="vim expression register"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day20/vim-split-sync.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day20/vim-split-sync.gif"
 loading="lazy"
 alt="vim split sync"
 >&lt;/th>
@@ -4270,7 +4270,7 @@ alt="vim split sync"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day20/vim-tab.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day20/vim-tab.gif"
 loading="lazy"
 alt="vim tab"
 >&lt;/th>
@@ -4281,7 +4281,7 @@ alt="vim tab"
 &lt;td style="text-align:center">用 nerdtree 在新分頁開心檔案，注意看最上面，深灰色底的是現在的 tab&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Day 19：該是時候升級你的噴射引擎囉！vim-emmet 重複與迭代</title><link>https://blog.simbafs.cc/p/ithelp/day-19%E8%A9%B2%E6%98%AF%E6%99%82%E5%80%99%E5%8D%87%E7%B4%9A%E4%BD%A0%E7%9A%84%E5%99%B4%E5%B0%84%E5%BC%95%E6%93%8E%E5%9B%89vim-emmet-%E9%87%8D%E8%A4%87%E8%88%87%E8%BF%AD%E4%BB%A3/</link><pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-19%E8%A9%B2%E6%98%AF%E6%99%82%E5%80%99%E5%8D%87%E7%B4%9A%E4%BD%A0%E7%9A%84%E5%99%B4%E5%B0%84%E5%BC%95%E6%93%8E%E5%9B%89vim-emmet-%E9%87%8D%E8%A4%87%E8%88%87%E8%BF%AD%E4%BB%A3/</guid><description>&lt;h2 id="重複">重複&lt;/h2>
+&lt;/table></description></item><item><title>Day 19：該是時候升級你的噴射引擎囉！vim-emmet 重複與迭代</title><link>https://simbafs.cc/blog/p/ithelp/day-19%E8%A9%B2%E6%98%AF%E6%99%82%E5%80%99%E5%8D%87%E7%B4%9A%E4%BD%A0%E7%9A%84%E5%99%B4%E5%B0%84%E5%BC%95%E6%93%8E%E5%9B%89vim-emmet-%E9%87%8D%E8%A4%87%E8%88%87%E8%BF%AD%E4%BB%A3/</link><pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-19%E8%A9%B2%E6%98%AF%E6%99%82%E5%80%99%E5%8D%87%E7%B4%9A%E4%BD%A0%E7%9A%84%E5%99%B4%E5%B0%84%E5%BC%95%E6%93%8E%E5%9B%89vim-emmet-%E9%87%8D%E8%A4%87%E8%88%87%E8%BF%AD%E4%BB%A3/</guid><description>&lt;h2 id="重複">重複&lt;/h2>
 &lt;p>如果想讓某個標籤/群組重複，只要用乘號 &lt;code>*&lt;/code> 加上數字就可以讓他重複了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -4483,7 +4483,7 @@ alt="vim tab"
 &lt;h1 id="結論">結論&lt;/h1>
 &lt;p>這兩天我自己打的內容大概只有 1/10 吧，剩餘的都是 emmet 產生的，emmet 真的太好用了！&lt;br>
 有沒有感覺 emmet 比你想像的複雜多了，還有很多語法沒講到，像是 css 的拓展等等，更多用法可以去 emmet 的 &lt;a class="link" href="https://docs.emmet.io/cheat-sheet/" target="_blank" rel="noopener"
->官網 https://docs.emmet.io/cheat-sheet/&lt;/a> 看看喔（很容易看到頭暈，別說我沒警告你）&lt;/p></description></item><item><title>Day 18：幫你的 HTML 開發裝上噴射引擎！vim-emmet</title><link>https://blog.simbafs.cc/p/ithelp/day-18%E5%B9%AB%E4%BD%A0%E7%9A%84-html-%E9%96%8B%E7%99%BC%E8%A3%9D%E4%B8%8A%E5%99%B4%E5%B0%84%E5%BC%95%E6%93%8Evim-emmet/</link><pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-18%E5%B9%AB%E4%BD%A0%E7%9A%84-html-%E9%96%8B%E7%99%BC%E8%A3%9D%E4%B8%8A%E5%99%B4%E5%B0%84%E5%BC%95%E6%93%8Evim-emmet/</guid><description>&lt;p>emmet-vim 是 emmet 的 vim 版本（這句好像是廢話&lt;/p>
+>官網 https://docs.emmet.io/cheat-sheet/&lt;/a> 看看喔（很容易看到頭暈，別說我沒警告你）&lt;/p></description></item><item><title>Day 18：幫你的 HTML 開發裝上噴射引擎！vim-emmet</title><link>https://simbafs.cc/blog/p/ithelp/day-18%E5%B9%AB%E4%BD%A0%E7%9A%84-html-%E9%96%8B%E7%99%BC%E8%A3%9D%E4%B8%8A%E5%99%B4%E5%B0%84%E5%BC%95%E6%93%8Evim-emmet/</link><pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-18%E5%B9%AB%E4%BD%A0%E7%9A%84-html-%E9%96%8B%E7%99%BC%E8%A3%9D%E4%B8%8A%E5%99%B4%E5%B0%84%E5%BC%95%E6%93%8Evim-emmet/</guid><description>&lt;p>emmet-vim 是 emmet 的 vim 版本（這句好像是廢話&lt;/p>
 &lt;blockquote>
 &lt;p>注意：emmet-vim 用的是自己寫的而不是用 emmet.io 官方的解析引擎&lt;/p>
 &lt;/blockquote>
@@ -4716,7 +4716,7 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>今天的內容差不多就到這裡，但是 emmet 精華的部份還沒出來呢！明天今天的程式碼一行可以產生五六行，加上明天的重複、迭代後四五百行都是小 case（呃，這麼長有點誇張）&lt;/p></description></item><item><title>Day 17：coc.nvim 設定下集</title><link>https://blog.simbafs.cc/p/ithelp/day-17coc.nvim-%E8%A8%AD%E5%AE%9A%E4%B8%8B%E9%9B%86/</link><pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-17coc.nvim-%E8%A8%AD%E5%AE%9A%E4%B8%8B%E9%9B%86/</guid><description>&lt;p>今天的東西相當多，在 &lt;a class="link" href="https://github.com/neoclide/coc.nvim#example-vim-configuration" target="_blank" rel="noopener"
+&lt;p>今天的內容差不多就到這裡，但是 emmet 精華的部份還沒出來呢！明天今天的程式碼一行可以產生五六行，加上明天的重複、迭代後四五百行都是小 case（呃，這麼長有點誇張）&lt;/p></description></item><item><title>Day 17：coc.nvim 設定下集</title><link>https://simbafs.cc/blog/p/ithelp/day-17coc.nvim-%E8%A8%AD%E5%AE%9A%E4%B8%8B%E9%9B%86/</link><pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-17coc.nvim-%E8%A8%AD%E5%AE%9A%E4%B8%8B%E9%9B%86/</guid><description>&lt;p>今天的東西相當多，在 &lt;a class="link" href="https://github.com/neoclide/coc.nvim#example-vim-configuration" target="_blank" rel="noopener"
 >GitHub README Example&lt;/a> 中除了昨天介紹過得今天都收錄了，直接進主題吧！&lt;br>
 喔！另外有些東西我真的不知道是什麼我會用原文寫並用中文括號括起來，歡迎知道的朋友留言告訴我&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -4970,7 +4970,7 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>呼～！總算翻譯完了，有幾個我真的看不出來在幹嘛的設定翻譯不太好請各位見諒。&lt;/p></description></item><item><title>Day 16：自動補全！coc.nvim</title><link>https://blog.simbafs.cc/p/ithelp/day-16%E8%87%AA%E5%8B%95%E8%A3%9C%E5%85%A8coc.nvim/</link><pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-16%E8%87%AA%E5%8B%95%E8%A3%9C%E5%85%A8coc.nvim/</guid><description>&lt;p>一個好的自動補全工具可以讓你工作效率翻倍，你不用再去查文件了，自動補全不僅可以告訴你這裡有什麼函數可以用，還會告訴你參數的型態、函數功能的說明，可以說是把文件都寫在 vim 裡面了。&lt;br>
+&lt;p>呼～！總算翻譯完了，有幾個我真的看不出來在幹嘛的設定翻譯不太好請各位見諒。&lt;/p></description></item><item><title>Day 16：自動補全！coc.nvim</title><link>https://simbafs.cc/blog/p/ithelp/day-16%E8%87%AA%E5%8B%95%E8%A3%9C%E5%85%A8coc.nvim/</link><pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-16%E8%87%AA%E5%8B%95%E8%A3%9C%E5%85%A8coc.nvim/</guid><description>&lt;p>一個好的自動補全工具可以讓你工作效率翻倍，你不用再去查文件了，自動補全不僅可以告訴你這裡有什麼函數可以用，還會告訴你參數的型態、函數功能的說明，可以說是把文件都寫在 vim 裡面了。&lt;br>
 以前我用的自動補全是 &lt;a class="link" href="https://github.com/ycm-core/YouCompleteMe" target="_blank" rel="noopener"
 >You Complete Me(YCM)&lt;/a>，現在我選擇使用 &lt;a class="link" href="https://github.com/neoclide/coc.nvim" target="_blank" rel="noopener"
 >coc.nvim&lt;/a> 原因是他提供更多的補全來源、外掛和設定，而且可以用 nodejs 自製外掛，據說所有純 JS 寫的 VS code 外掛都可以裝（這個我沒實驗過，只是傳聞）。關於這兩個自動補全外掛的比較礙於篇幅請自行 Google。&lt;/p>
@@ -5130,7 +5130,7 @@ coc 擴充安裝很簡單，在 vim 裡面下指令 &lt;code>:CocInstall {extens
 &lt;/div>
 &lt;/div>&lt;h1 id="結尾">結尾&lt;/h1>
 &lt;p>coc.nvim 的設定真的很多，一眼看上去會覺得很煩，但是認真看完設定好後的 vim 真的會讓你過得非常舒服。&lt;br>
-明天是我今天沒有介紹到的部份，大部份是超難記的快捷鍵。一樣都會有全中文翻譯（但是有些我真的沒用過，只能硬著頭皮翻譯了）&lt;/p></description></item><item><title>Day 15：vim 外掛大雜燴！</title><link>https://blog.simbafs.cc/p/ithelp/day-15vim-%E5%A4%96%E6%8E%9B%E5%A4%A7%E9%9B%9C%E7%87%B4/</link><pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-15vim-%E5%A4%96%E6%8E%9B%E5%A4%A7%E9%9B%9C%E7%87%B4/</guid><description>&lt;p>看到這裡，你可能還是很疑惑，到底 vim 好用在哪？嘿嘿，那是因為強大的外掛還沒裝啦！網路上會有一些配好一堆外掛的，像是 &lt;a class="link" href="spacevim.org" >spaceVim&lt;/a>，他們的策略和 vs code 很像，先幫你裝好一對外掛，讓你隨開及用。這樣做好處是初學者比較愛，但是常常會裝了一堆用不到的功能，反而讓載入速度、記憶體用量大增。&lt;br>
+明天是我今天沒有介紹到的部份，大部份是超難記的快捷鍵。一樣都會有全中文翻譯（但是有些我真的沒用過，只能硬著頭皮翻譯了）&lt;/p></description></item><item><title>Day 15：vim 外掛大雜燴！</title><link>https://simbafs.cc/blog/p/ithelp/day-15vim-%E5%A4%96%E6%8E%9B%E5%A4%A7%E9%9B%9C%E7%87%B4/</link><pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-15vim-%E5%A4%96%E6%8E%9B%E5%A4%A7%E9%9B%9C%E7%87%B4/</guid><description>&lt;p>看到這裡，你可能還是很疑惑，到底 vim 好用在哪？嘿嘿，那是因為強大的外掛還沒裝啦！網路上會有一些配好一堆外掛的，像是 &lt;a class="link" href="spacevim.org" >spaceVim&lt;/a>，他們的策略和 vs code 很像，先幫你裝好一對外掛，讓你隨開及用。這樣做好處是初學者比較愛，但是常常會裝了一堆用不到的功能，反而讓載入速度、記憶體用量大增。&lt;br>
 所以我們自己挑我們需要的外掛裝起來，效果完全不會輸 vs code 這些笨重的編輯器！&lt;br>
 今天要介紹很多模組，都是我選出來製作一個現代化 IDE 必備的模組，相當的精華，一起來看看吧！
 記得修改後需要打指令 &lt;code>:so % | PlugInstall&lt;/code>&lt;/p>
@@ -5341,7 +5341,7 @@ nvim 0.5 版有個新功能叫做 treesitter，他的功能好像和這個有關
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">Plug&lt;/span> &lt;span class="s1">&amp;#39;cespare/vim-toml&amp;#39;&lt;/span>&lt;span class="err">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Day 14：vim-plug</title><link>https://blog.simbafs.cc/p/ithelp/day-14vim-plug/</link><pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-14vim-plug/</guid><description>&lt;p>前面講過了 zsh、tmux 的 plugin manager，vim 一樣有 plguin manager。跟前面幾個 plguin manager 很像，要安裝新的外掛只需要在某個地方加一行設定就好，這樣作的好處是哪天要再建立新的環境時只需要把設定檔帶走，而且集中式的管理可以一目了然。&lt;/p>
+&lt;/div></description></item><item><title>Day 14：vim-plug</title><link>https://simbafs.cc/blog/p/ithelp/day-14vim-plug/</link><pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-14vim-plug/</guid><description>&lt;p>前面講過了 zsh、tmux 的 plugin manager，vim 一樣有 plguin manager。跟前面幾個 plguin manager 很像，要安裝新的外掛只需要在某個地方加一行設定就好，這樣作的好處是哪天要再建立新的環境時只需要把設定檔帶走，而且集中式的管理可以一目了然。&lt;/p>
 &lt;h1 id="安裝-vim-plug">安裝 vim-plug&lt;/h1>
 &lt;p>記得昨天的 vimrc 最上面有一個備註解起來的區塊嗎？這就是載入 vim-plug 的地方，裡面就有安裝 vim-plug 的指令了。要注意你用的是 neovim 還是 vim，這兩個路徑不一樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -5456,7 +5456,7 @@ nvim 0.5 版有個新功能叫做 treesitter，他的功能好像和這個有關
 &lt;/div>
 &lt;/div>&lt;p>之後你要外掛相關的設定就不是在 vimrc 了，而是在 plugin.nvim 裡面，記得如果要備份的話要把這個檔案也備份到喔&lt;/p>
 &lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>今天的內容穿插了一些 vim 的指令，如果很難理解的話建議你要一個字母一個字母拆開看，為什麼呢？例如 &lt;code>ddo&lt;/code> 這個指令，你以為可能是要「做（do）」什麼事，其實這是 &lt;code>dd&lt;/code> 和 &lt;code>o&lt;/code> 一起寫，意思是「剪下一行」再「新增一行並進入編輯模式」。&lt;/p></description></item><item><title>Day 13：vim 設定檔</title><link>https://blog.simbafs.cc/p/ithelp/day-13vim-%E8%A8%AD%E5%AE%9A%E6%AA%94/</link><pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-13vim-%E8%A8%AD%E5%AE%9A%E6%AA%94/</guid><description>&lt;p>vim 在啟動時，都會去&lt;strong>執行你的設定檔&lt;/strong>，這個檔案&lt;strong>根據你的 vim 軟體不同而改變&lt;/strong>，如果是一般的 vim，那他會去讀 &lt;code>~/.vimrc&lt;/code>，如果是 neovim(nvim)，他會去找 &lt;code>~/.config/nvim/init.vim&lt;/code>。在接下來的文章中都以 &lt;code>vimrc&lt;/code> 代指。&lt;br>
+&lt;p>今天的內容穿插了一些 vim 的指令，如果很難理解的話建議你要一個字母一個字母拆開看，為什麼呢？例如 &lt;code>ddo&lt;/code> 這個指令，你以為可能是要「做（do）」什麼事，其實這是 &lt;code>dd&lt;/code> 和 &lt;code>o&lt;/code> 一起寫，意思是「剪下一行」再「新增一行並進入編輯模式」。&lt;/p></description></item><item><title>Day 13：vim 設定檔</title><link>https://simbafs.cc/blog/p/ithelp/day-13vim-%E8%A8%AD%E5%AE%9A%E6%AA%94/</link><pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-13vim-%E8%A8%AD%E5%AE%9A%E6%AA%94/</guid><description>&lt;p>vim 在啟動時，都會去&lt;strong>執行你的設定檔&lt;/strong>，這個檔案&lt;strong>根據你的 vim 軟體不同而改變&lt;/strong>，如果是一般的 vim，那他會去讀 &lt;code>~/.vimrc&lt;/code>，如果是 neovim(nvim)，他會去找 &lt;code>~/.config/nvim/init.vim&lt;/code>。在接下來的文章中都以 &lt;code>vimrc&lt;/code> 代指。&lt;br>
 &lt;code>vimrc&lt;/code> 內容是 vimscript，也就是所有的冒號命令&lt;strong>去掉冒號之後的內容&lt;/strong>，例如有個命令是 &lt;code>:set nu&lt;/code>，這個命令可以開啟行號顯示，如果要寫在 &lt;code>vimrc&lt;/code> 裡面，就要寫成 &lt;code>set nu&lt;/code>。&lt;/p>
 &lt;h1 id="vimrc">vimrc&lt;/h1>
 &lt;p>通常我們會在 &lt;code>vimrc&lt;/code> 中設定關於 vim 的&lt;strong>外觀&lt;/strong>、&lt;strong>行為&lt;/strong>、&lt;strong>載入外掛&lt;/strong>等等，接下來是我用多年的 vimrc 的內容，我會一個一個用註解解說他們的用處(雙引號 &lt;code>&amp;quot;&lt;/code> 開頭是 vimscript 的註解)&lt;/p>
@@ -5701,7 +5701,7 @@ ps: map 給我的感覺有點像「當你按下 {快捷鍵} 時，vim 會自動�
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>嗯&amp;hellip;&amp;hellip;這可能只在快捷鍵很常出現但是複雜時比較好用&lt;br>
-扯遠了，回到正題。如果你的命令是冒號命令的話，你必須要加上冒號和 enter，不然你在打完快捷鍵之後還要自己按 enter，所以記的在命令最後面加上 &lt;code>&amp;lt;CR&amp;gt;&lt;/code> ，這個代表的是 enter 鍵，&lt;!-- raw HTML omitted --> 也可以&lt;/p></description></item><item><title>Day 12：vim 配色方案</title><link>https://blog.simbafs.cc/p/ithelp/day-12vim-%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88/</link><pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-12vim-%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88/</guid><description>&lt;p>俗話說人要衣裝，佛要金裝，我們的 vim 也得要有&lt;strong>漂亮的外觀&lt;/strong>。今天就讓我們來看看如何&lt;del>調教&lt;/del>調整 vim 的外觀吧！&lt;/p>
+扯遠了，回到正題。如果你的命令是冒號命令的話，你必須要加上冒號和 enter，不然你在打完快捷鍵之後還要自己按 enter，所以記的在命令最後面加上 &lt;code>&amp;lt;CR&amp;gt;&lt;/code> ，這個代表的是 enter 鍵，&lt;!-- raw HTML omitted --> 也可以&lt;/p></description></item><item><title>Day 12：vim 配色方案</title><link>https://simbafs.cc/blog/p/ithelp/day-12vim-%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88/</link><pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-12vim-%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88/</guid><description>&lt;p>俗話說人要衣裝，佛要金裝，我們的 vim 也得要有&lt;strong>漂亮的外觀&lt;/strong>。今天就讓我們來看看如何&lt;del>調教&lt;/del>調整 vim 的外觀吧！&lt;/p>
 &lt;h1 id="highlight-group">Highlight group&lt;/h1>
 &lt;p>highlight group（以下簡稱 hg ）是 vim 中的一個概念，他會對應到 vim 畫面中的&lt;strong>一段區塊&lt;/strong>，可能是&lt;strong>一段文字&lt;/strong>，也可能是底下的 status bar 或是左側的行號。每一個 hg 都可以&lt;strong>設定樣式&lt;/strong>，包括&lt;strong>前景色&lt;/strong>、&lt;strong>背景色&lt;/strong>、&lt;strong>反白&lt;/strong>、&lt;strong>加底線&lt;/strong>等等，你可以用 &lt;code>:so $VIMRUNTIME/syntax/hitest.vim&lt;/code> 命令查看&lt;strong>所有的 hg 名字&lt;/strong>，他們的樣式也會直接顯示出來。&lt;br>
 如果想看某個 hg 的&lt;strong>說明&lt;/strong>的話（必須是內建的才有），可以用 &lt;code>:help hl-hgName&lt;/code> 來&lt;strong>查詢說明&lt;/strong>，例如 &lt;code>CursorLine&lt;/code> 就可以用 &lt;code>:help hl-CursorLine&lt;/code> 來看說明&lt;/p>
@@ -5763,7 +5763,7 @@ ps: map 給我的感覺有點像「當你按下 {快捷鍵} 時，vim 會自動�
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day12/256-color.png"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day12/256-color.png"
 loading="lazy"
 alt="256 color"
 >&lt;/th>
@@ -5836,7 +5836,7 @@ alt="256 color"
 &lt;/div>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day12/customed-cursorLine.png"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day12/customed-cursorLine.png"
 loading="lazy"
 alt="Customized CursorLine"
 >&lt;/th>
@@ -5850,7 +5850,7 @@ alt="Customized CursorLine"
 &lt;/table>
 &lt;h1 id="colorschema">colorschema&lt;/h1>
 &lt;p>所謂的 colorschema 其實就是一堆的 &lt;code>hi&lt;/code> 指令寫在一個檔案裡面，然後給他一個名字，vim 內建了很多 colorschema，放在 &lt;code>$VIMRUNTIME/colors&lt;/code> 目錄下。你可以用命令 &lt;code>:echo $VIMRUNTIME&lt;/code> 來取得 &lt;code>$VIMRUNTIME&lt;/code> 的值，因為&lt;strong>系統環境變數可能不會有他&lt;/strong>（我的就沒有）。
-除了去網路上下載別人設計好的 colorschema， 你也可以參考 &lt;code>$VIMRUNTIME/colors&lt;/code> 下的檔案形式來製作自己的 colorschema，或是 Google 搜尋 &lt;code>vim colorschemes generator&lt;/code> 就可以在網路上找到很多方便你製作 colorschemes 的工具&lt;/p></description></item><item><title>Day 11：批次修改！！</title><link>https://blog.simbafs.cc/p/ithelp/day-11%E6%89%B9%E6%AC%A1%E4%BF%AE%E6%94%B9/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-11%E6%89%B9%E6%AC%A1%E4%BF%AE%E6%94%B9/</guid><description>&lt;p>昨天體驗了一些快捷鍵和命令，今天要講的是在 vim 中也很常用的&lt;strong>搜尋與取代&lt;/strong>&lt;/p>
+除了去網路上下載別人設計好的 colorschema， 你也可以參考 &lt;code>$VIMRUNTIME/colors&lt;/code> 下的檔案形式來製作自己的 colorschema，或是 Google 搜尋 &lt;code>vim colorschemes generator&lt;/code> 就可以在網路上找到很多方便你製作 colorschemes 的工具&lt;/p></description></item><item><title>Day 11：批次修改！！</title><link>https://simbafs.cc/blog/p/ithelp/day-11%E6%89%B9%E6%AC%A1%E4%BF%AE%E6%94%B9/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-11%E6%89%B9%E6%AC%A1%E4%BF%AE%E6%94%B9/</guid><description>&lt;p>昨天體驗了一些快捷鍵和命令，今天要講的是在 vim 中也很常用的&lt;strong>搜尋與取代&lt;/strong>&lt;/p>
 &lt;h1 id="搜尋與取代">搜尋與取代&lt;/h1>
 &lt;p>vim 的搜尋與取代是由命令 &lt;code>s&lt;/code> 達成的，命令格式長這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -5871,7 +5871,7 @@ alt="Customized CursorLine"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day11/vim-replace.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day11/vim-replace.gif"
 loading="lazy"
 alt="vim replace"
 >&lt;/th>
@@ -5912,7 +5912,7 @@ alt="vim replace"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/../img/day11/vim-selsect.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/img/day11/vim-selsect.gif"
 loading="lazy"
 alt="vim select"
 >&lt;/th>
@@ -5951,7 +5951,7 @@ alt="vim select"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/../img/day11/vim-replace-flag.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/img/day11/vim-replace-flag.gif"
 loading="lazy"
 alt="vim replace flag"
 >&lt;/th>
@@ -5965,7 +5965,7 @@ alt="vim replace flag"
 &lt;/table>
 &lt;h1 id="結尾">結尾&lt;/h1>
 &lt;p>這兩天講的大部份是操作性質的東西，&lt;strong>不需要一次全部記起來&lt;/strong>，用的多了自然會記得，現在只需要&lt;strong>先有個印象就可以了&lt;/strong>。其實 vim 很多操作、快捷鍵都很直覺，不妨自己多試試看加了 &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted -->、&lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted --> 之後原本的快捷鍵會有什麼變化&lt;br>
-vim 的操作還有很多技巧，如果有興趣不妨去看看 vim 的文件（用命令 &lt;code>:help&lt;/code> ）中相關章節（大概是 usr_03~04 左右）的介紹，你會對 vim 有非常全面的認識。雖然文件是英文寫的，但是並沒有太難的單字，大概國中程度就可以看了&lt;/p></description></item><item><title>Day 10：新手殺，誰來教我離開 vim 阿～～</title><link>https://blog.simbafs.cc/p/ithelp/day-10%E6%96%B0%E6%89%8B%E6%AE%BA%E8%AA%B0%E4%BE%86%E6%95%99%E6%88%91%E9%9B%A2%E9%96%8B-vim-%E9%98%BF/</link><pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-10%E6%96%B0%E6%89%8B%E6%AE%BA%E8%AA%B0%E4%BE%86%E6%95%99%E6%88%91%E9%9B%A2%E9%96%8B-vim-%E9%98%BF/</guid><description>&lt;p>前面 9 天都在介紹操作環境，今天終於要進到&lt;strong>編輯器&lt;/strong>啦！我選用的編輯器是 nvim，但是如果你要用 vim 8 也是可以，因為這兩者之間幾乎&lt;strong>沒什麼差別&lt;/strong>，只是你要注意這兩者的&lt;strong>設定檔位置&lt;/strong>不同，目錄需要你&lt;strong>自己轉換&lt;/strong>。唯一不同的點大概是 nvim 內建支援用 &lt;strong>lua&lt;/strong>（一種程式語言）寫外掛，vim 8 只能用 &lt;strong>vimscript&lt;/strong>。關於兩者之間的愛恨情仇請參考&lt;a class="link" href="https://jdhao.github.io/2020/01/12/vim_nvim_history_development/" target="_blank" rel="noopener"
+vim 的操作還有很多技巧，如果有興趣不妨去看看 vim 的文件（用命令 &lt;code>:help&lt;/code> ）中相關章節（大概是 usr_03~04 左右）的介紹，你會對 vim 有非常全面的認識。雖然文件是英文寫的，但是並沒有太難的單字，大概國中程度就可以看了&lt;/p></description></item><item><title>Day 10：新手殺，誰來教我離開 vim 阿～～</title><link>https://simbafs.cc/blog/p/ithelp/day-10%E6%96%B0%E6%89%8B%E6%AE%BA%E8%AA%B0%E4%BE%86%E6%95%99%E6%88%91%E9%9B%A2%E9%96%8B-vim-%E9%98%BF/</link><pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-10%E6%96%B0%E6%89%8B%E6%AE%BA%E8%AA%B0%E4%BE%86%E6%95%99%E6%88%91%E9%9B%A2%E9%96%8B-vim-%E9%98%BF/</guid><description>&lt;p>前面 9 天都在介紹操作環境，今天終於要進到&lt;strong>編輯器&lt;/strong>啦！我選用的編輯器是 nvim，但是如果你要用 vim 8 也是可以，因為這兩者之間幾乎&lt;strong>沒什麼差別&lt;/strong>，只是你要注意這兩者的&lt;strong>設定檔位置&lt;/strong>不同，目錄需要你&lt;strong>自己轉換&lt;/strong>。唯一不同的點大概是 nvim 內建支援用 &lt;strong>lua&lt;/strong>（一種程式語言）寫外掛，vim 8 只能用 &lt;strong>vimscript&lt;/strong>。關於兩者之間的愛恨情仇請參考&lt;a class="link" href="https://jdhao.github.io/2020/01/12/vim_nvim_history_development/" target="_blank" rel="noopener"
 >這裡，他講的非常詳細&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>接下來的文章可能會出現 vim、nvim 混用，但是他們都是指 neovim，也就是我們用的這個編輯器，不用特別跑去裝兩套軟體&lt;/p>
@@ -5982,7 +5982,7 @@ vim 的操作還有很多技巧，如果有興趣不妨去看看 vim 的文件�
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day10/vim-mode.png"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day10/vim-mode.png"
 loading="lazy"
 alt="vim mode"
 >&lt;/th>
@@ -6147,7 +6147,7 @@ alt="vim mode"
 &lt;p>&lt;code>&amp;lt;C-r&amp;gt;&lt;/code> 的意思是 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->+&lt;!-- raw HTML omitted -->r&lt;!-- raw HTML omitted -->，這是 vim 常見的表示法，以後還會看到&lt;/p>
 &lt;/blockquote>
 &lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>vim 的命令（快捷鍵）其實是個非常高深的學問，我的文章可能沒辦法講的非常詳細，你可以去找其他教學，或是在 vim 中用指令 &lt;code>:help&lt;/code> 看官方的教學&lt;/p></description></item><item><title>Day 09：今天又想不出標題了！tmux plugin 和 mouse mode</title><link>https://blog.simbafs.cc/p/ithelp/day-09%E4%BB%8A%E5%A4%A9%E5%8F%88%E6%83%B3%E4%B8%8D%E5%87%BA%E6%A8%99%E9%A1%8C%E4%BA%86tmux-plugin-%E5%92%8C-mouse-mode/</link><pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-09%E4%BB%8A%E5%A4%A9%E5%8F%88%E6%83%B3%E4%B8%8D%E5%87%BA%E6%A8%99%E9%A1%8C%E4%BA%86tmux-plugin-%E5%92%8C-mouse-mode/</guid><description>&lt;p>tmux 本身已經是個非常&lt;strong>完善&lt;/strong>的軟體了，因此我只選了一個外掛，&lt;a class="link" href="https://github.com/tmux-plugins/tmux-resurrect" target="_blank" rel="noopener"
+&lt;p>vim 的命令（快捷鍵）其實是個非常高深的學問，我的文章可能沒辦法講的非常詳細，你可以去找其他教學，或是在 vim 中用指令 &lt;code>:help&lt;/code> 看官方的教學&lt;/p></description></item><item><title>Day 09：今天又想不出標題了！tmux plugin 和 mouse mode</title><link>https://simbafs.cc/blog/p/ithelp/day-09%E4%BB%8A%E5%A4%A9%E5%8F%88%E6%83%B3%E4%B8%8D%E5%87%BA%E6%A8%99%E9%A1%8C%E4%BA%86tmux-plugin-%E5%92%8C-mouse-mode/</link><pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-09%E4%BB%8A%E5%A4%A9%E5%8F%88%E6%83%B3%E4%B8%8D%E5%87%BA%E6%A8%99%E9%A1%8C%E4%BA%86tmux-plugin-%E5%92%8C-mouse-mode/</guid><description>&lt;p>tmux 本身已經是個非常&lt;strong>完善&lt;/strong>的軟體了，因此我只選了一個外掛，&lt;a class="link" href="https://github.com/tmux-plugins/tmux-resurrect" target="_blank" rel="noopener"
 >tmux-resurrect&lt;/a> 這個外掛讓你可以&lt;strong>儲存目前的 tmux 版面配置&lt;/strong>（分頁、螢幕切割、名稱等等），在下次啟動時復原，這個功能在開發專案要切分編輯、編譯、測試版面時很好用，&lt;strong>不需要每次開機都重新切版面&lt;/strong>&lt;/p>
 &lt;h1 id="安裝">安裝&lt;/h1>
 &lt;p>我們之前已經&lt;a class="link" href="" >安裝過 tmp&lt;/a> 了，現在我們只需要在 &lt;code>~/.tmux.conf&lt;/code> 中新增一行&lt;/p>
@@ -6192,7 +6192,7 @@ tmux 有自己內部的剪貼簿，不和 vim、作業系統共用&lt;br>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day09/tmux-copy-paste.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day09/tmux-copy-paste.gif"
 loading="lazy"
 alt="tmux copy paste"
 >&lt;/th>
@@ -6210,13 +6210,13 @@ alt="tmux copy paste"
 &lt;h1 id="結尾">結尾&lt;/h1>
 &lt;p>tmux 是一個&lt;strong>功能簡單&lt;/strong>但是強大的軟體，因此他的外掛明顯比 zsh 少很多（和 vim 相比可以說一個外掛都沒裝 XD），但是有一些延伸自 tmux 的軟體，例如 &lt;a class="link" href="https://tmate.io/" target="_blank" rel="noopener"
 >tmate&lt;/a>，堪稱 terminal 中的 teamviewer，而且是免費的！&lt;br>
-明天開始會進入純‧ CLI 整合式開發環境的核心—— &lt;strong>nvim&lt;/strong>，敬請期待&lt;/p></description></item><item><title>Day 08：八爪章魚之 tmux 快捷鍵</title><link>https://blog.simbafs.cc/p/ithelp/day-08%E5%85%AB%E7%88%AA%E7%AB%A0%E9%AD%9A%E4%B9%8B-tmux-%E5%BF%AB%E6%8D%B7%E9%8D%B5/</link><pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-08%E5%85%AB%E7%88%AA%E7%AB%A0%E9%AD%9A%E4%B9%8B-tmux-%E5%BF%AB%E6%8D%B7%E9%8D%B5/</guid><description>&lt;p>tmux 有許多的&lt;strong>快捷鍵&lt;/strong>來控制螢幕，不論是分割、移動都可以輕鬆完成&lt;/p>
+明天開始會進入純‧ CLI 整合式開發環境的核心—— &lt;strong>nvim&lt;/strong>，敬請期待&lt;/p></description></item><item><title>Day 08：八爪章魚之 tmux 快捷鍵</title><link>https://simbafs.cc/blog/p/ithelp/day-08%E5%85%AB%E7%88%AA%E7%AB%A0%E9%AD%9A%E4%B9%8B-tmux-%E5%BF%AB%E6%8D%B7%E9%8D%B5/</link><pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-08%E5%85%AB%E7%88%AA%E7%AB%A0%E9%AD%9A%E4%B9%8B-tmux-%E5%BF%AB%E6%8D%B7%E9%8D%B5/</guid><description>&lt;p>tmux 有許多的&lt;strong>快捷鍵&lt;/strong>來控制螢幕，不論是分割、移動都可以輕鬆完成&lt;/p>
 &lt;h1 id="分割畫面">分割畫面&lt;/h1>
 &lt;p>&lt;strong>垂直分割畫面&lt;/strong>的快捷鍵是 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->%&lt;!-- raw HTML omitted -->，&lt;strong>水平分割&lt;/strong>的快捷鍵是 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->|&lt;!-- raw HTML omitted -->(pipe，shift + enter 上面那個)。按下去畫面就會以中間分開，兩邊都是&lt;strong>獨立的&lt;/strong>，即使一邊在編譯卡住了，另一邊的編輯器還是可以正常操作的&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day08/tmux-split.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day08/tmux-split.gif"
 loading="lazy"
 alt="tmux split"
 >&lt;/th>
@@ -6235,7 +6235,7 @@ alt="tmux split"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day08/tmux-move.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day08/tmux-move.gif"
 loading="lazy"
 alt="tmux move"
 >&lt;/th>
@@ -6252,7 +6252,7 @@ alt="tmux move"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day08/tmux-resize.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day08/tmux-resize.gif"
 loading="lazy"
 alt="tmux resize"
 >&lt;/th>
@@ -6272,7 +6272,7 @@ alt="tmux resize"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day08/tmux-win-move.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day08/tmux-win-move.gif"
 loading="lazy"
 alt="tmux win move"
 >&lt;/th>
@@ -6285,13 +6285,13 @@ alt="tmux win move"
 &lt;/tbody>
 &lt;/table>
 &lt;h1 id="結論">結論&lt;/h1>
-&lt;p>今天的內容比較偏操作，自己多試試就會熟悉了。掌握 tmux 之後你會發現你根本不需要開一堆終端機視窗，&lt;strong>一個&lt;/strong>就夠用了。&lt;/p></description></item><item><title>Day 07：整合 tmux 和 zsh</title><link>https://blog.simbafs.cc/p/ithelp/day-07%E6%95%B4%E5%90%88-tmux-%E5%92%8C-zsh/</link><pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-07%E6%95%B4%E5%90%88-tmux-%E5%92%8C-zsh/</guid><description>&lt;p>昨天的結尾提到要整合 tmux 和 zsh 不是在 &lt;code>~/.zshrc&lt;/code> 結尾執行 &lt;code>tmux&lt;/code> 這麼簡單，今天就讓我們看看會遇到什麼問題吧！&lt;/p>
+&lt;p>今天的內容比較偏操作，自己多試試就會熟悉了。掌握 tmux 之後你會發現你根本不需要開一堆終端機視窗，&lt;strong>一個&lt;/strong>就夠用了。&lt;/p></description></item><item><title>Day 07：整合 tmux 和 zsh</title><link>https://simbafs.cc/blog/p/ithelp/day-07%E6%95%B4%E5%90%88-tmux-%E5%92%8C-zsh/</link><pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-07%E6%95%B4%E5%90%88-tmux-%E5%92%8C-zsh/</guid><description>&lt;p>昨天的結尾提到要整合 tmux 和 zsh 不是在 &lt;code>~/.zshrc&lt;/code> 結尾執行 &lt;code>tmux&lt;/code> 這麼簡單，今天就讓我們看看會遇到什麼問題吧！&lt;/p>
 &lt;h1 id="直接執行-tmux">直接執行 tmux&lt;/h1>
 &lt;p>在正式開始前，先讓我們看看&lt;strong>直接&lt;/strong>在 &lt;code>~/.zshrc&lt;/code> 後面執行 &lt;code>tmux&lt;/code> 會發生什麼錯誤&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day07/tmux-1.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day07/tmux-1.gif"
 loading="lazy"
 alt="tmux 1"
 >&lt;/th>
@@ -6307,7 +6307,7 @@ alt="tmux 1"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day07/tmux-reproduce.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day07/tmux-reproduce.gif"
 loading="lazy"
 alt="tmux reproduce"
 >&lt;/th>
@@ -6363,7 +6363,7 @@ alt="tmux reproduce"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day07/tmux-2.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day07/tmux-2.gif"
 loading="lazy"
 alt="tmux 2"
 >&lt;/th>
@@ -6520,11 +6520,11 @@ alt="tmux 2"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Day 06：螢幕切八段！多開神器 tmux</title><link>https://blog.simbafs.cc/p/ithelp/day-06%E8%9E%A2%E5%B9%95%E5%88%87%E5%85%AB%E6%AE%B5%E5%A4%9A%E9%96%8B%E7%A5%9E%E5%99%A8-tmux/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-06%E8%9E%A2%E5%B9%95%E5%88%87%E5%85%AB%E6%AE%B5%E5%A4%9A%E9%96%8B%E7%A5%9E%E5%99%A8-tmux/</guid><description>&lt;p>今天起要介紹的是 tmux，這是一個終端機的 &lt;strong>session 管理器&lt;/strong>，什麼是 session 呢？你可以把 session 理解為一個&lt;strong>終端機&lt;/strong>（畫面）和&lt;strong>主機&lt;/strong> （你的電腦）的連線，tmux 做的事就是把一個終端機&lt;strong>切分成多個終端機&lt;/strong>，白話說就是&lt;strong>多開神器&lt;/strong>啦！這樣你就可以左邊編輯程式、右邊看執行結果（如圖）。而且一切操作都在&lt;strong>一個&lt;/strong>終端機視窗裡面，這意味著即使你在&lt;strong>沒有圖形界面&lt;/strong>的純文字模式（像是 single user mode、ssh 連線）也可以享受如同圖形界面的便利！&lt;/p>
+&lt;/div></description></item><item><title>Day 06：螢幕切八段！多開神器 tmux</title><link>https://simbafs.cc/blog/p/ithelp/day-06%E8%9E%A2%E5%B9%95%E5%88%87%E5%85%AB%E6%AE%B5%E5%A4%9A%E9%96%8B%E7%A5%9E%E5%99%A8-tmux/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-06%E8%9E%A2%E5%B9%95%E5%88%87%E5%85%AB%E6%AE%B5%E5%A4%9A%E9%96%8B%E7%A5%9E%E5%99%A8-tmux/</guid><description>&lt;p>今天起要介紹的是 tmux，這是一個終端機的 &lt;strong>session 管理器&lt;/strong>，什麼是 session 呢？你可以把 session 理解為一個&lt;strong>終端機&lt;/strong>（畫面）和&lt;strong>主機&lt;/strong> （你的電腦）的連線，tmux 做的事就是把一個終端機&lt;strong>切分成多個終端機&lt;/strong>，白話說就是&lt;strong>多開神器&lt;/strong>啦！這樣你就可以左邊編輯程式、右邊看執行結果（如圖）。而且一切操作都在&lt;strong>一個&lt;/strong>終端機視窗裡面，這意味著即使你在&lt;strong>沒有圖形界面&lt;/strong>的純文字模式（像是 single user mode、ssh 連線）也可以享受如同圖形界面的便利！&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day06/tmuxDemo.gif"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day06/tmuxDemo.gif"
 loading="lazy"
 alt="tmux demo"
 >&lt;/th>
@@ -6608,7 +6608,7 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/div>&lt;p>要安裝外掛只要在 &lt;code>run '~/.tmux/plugins/tpm/tpm'&lt;/code> 之後加上 &lt;code>set -g @plugin &amp;lt;repo&amp;gt;&lt;/code> 就行了，在我給的 config 檔中註解有說明 repo 格式&lt;br>
 這時候啟動 tmux 就不會有錯誤了&lt;/p>
 &lt;h1 id="預告">預告&lt;/h1>
-&lt;p>今天安裝好了 tmux 和外掛管理 tpm，明天會介紹如何在開啟終端機時&lt;strong>自動開啟&lt;/strong> tmux，你以為是直接在 &lt;code>~/.zshrc&lt;/code> 中執行 tmux 嗎？嘿嘿嘿，你可以試試就知道為什麼沒這麼簡單了，明天的文章會好好介紹如何&lt;strong>完美整合 zsh 和 tmux&lt;/strong>&lt;/p></description></item><item><title>Day 05：是說，這個選項可以接什麼東西？autocomplete 與 auto-pair</title><link>https://blog.simbafs.cc/p/ithelp/day-05%E6%98%AF%E8%AA%AA%E9%80%99%E5%80%8B%E9%81%B8%E9%A0%85%E5%8F%AF%E4%BB%A5%E6%8E%A5%E4%BB%80%E9%BA%BC%E6%9D%B1%E8%A5%BFautocomplete-%E8%88%87-auto-pair/</link><pubDate>Sun, 05 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-05%E6%98%AF%E8%AA%AA%E9%80%99%E5%80%8B%E9%81%B8%E9%A0%85%E5%8F%AF%E4%BB%A5%E6%8E%A5%E4%BB%80%E9%BA%BC%E6%9D%B1%E8%A5%BFautocomplete-%E8%88%87-auto-pair/</guid><description>&lt;p>今天會介紹兩個&lt;strong>開箱即用&lt;/strong>（ out of box ）的外掛和簡化指令的 alias&lt;/p>
+&lt;p>今天安裝好了 tmux 和外掛管理 tpm，明天會介紹如何在開啟終端機時&lt;strong>自動開啟&lt;/strong> tmux，你以為是直接在 &lt;code>~/.zshrc&lt;/code> 中執行 tmux 嗎？嘿嘿嘿，你可以試試就知道為什麼沒這麼簡單了，明天的文章會好好介紹如何&lt;strong>完美整合 zsh 和 tmux&lt;/strong>&lt;/p></description></item><item><title>Day 05：是說，這個選項可以接什麼東西？autocomplete 與 auto-pair</title><link>https://simbafs.cc/blog/p/ithelp/day-05%E6%98%AF%E8%AA%AA%E9%80%99%E5%80%8B%E9%81%B8%E9%A0%85%E5%8F%AF%E4%BB%A5%E6%8E%A5%E4%BB%80%E9%BA%BC%E6%9D%B1%E8%A5%BFautocomplete-%E8%88%87-auto-pair/</link><pubDate>Sun, 05 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-05%E6%98%AF%E8%AA%AA%E9%80%99%E5%80%8B%E9%81%B8%E9%A0%85%E5%8F%AF%E4%BB%A5%E6%8E%A5%E4%BB%80%E9%BA%BC%E6%9D%B1%E8%A5%BFautocomplete-%E8%88%87-auto-pair/</guid><description>&lt;p>今天會介紹兩個&lt;strong>開箱即用&lt;/strong>（ out of box ）的外掛和簡化指令的 alias&lt;/p>
 &lt;h1 id="zsh-autocomplete">zsh-autocomplete&lt;/h1>
 &lt;p>在 CLI 下指令時，有時候會&lt;strong>忘記選項&lt;/strong>叫什麼、檔名中的 &lt;code>k&lt;/code> 到底是大寫還是小寫，這時候 autocomplete 就很好用，他會幫我們選出&lt;strong>接下來可以填的字&lt;/strong>，像是&lt;strong>選項&lt;/strong>、&lt;strong>子命令&lt;/strong>、&lt;strong>檔名&lt;/strong>等等。&lt;/p>
 &lt;table>
@@ -6772,7 +6772,7 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/div>
 &lt;/div>&lt;p>你會得到 &lt;code>mkdir: 無法建立 「src/user」 目錄: 沒有此一檔案或目錄&lt;/code>，這是因為 &lt;code>mkdir&lt;/code> &lt;strong>找不到&lt;/strong> &lt;code>user&lt;/code> 的&lt;strong>上層目錄&lt;/strong> &lt;code>src&lt;/code>，這時候加上 &lt;code>-p&lt;/code> 就不一樣了，因為 &lt;code>-p&lt;/code> 會讓 &lt;code>mkdir&lt;/code> 在上層目錄不存在時&lt;strong>自動建立&lt;/strong>，因此 &lt;code>mkdir src/user&lt;/code> 就會成功，不會再跳錯誤&lt;/p>
 &lt;h1 id="預告">預告&lt;/h1>
-&lt;p>到今天關於 zsh 的介紹就結束了，明天開始會來講講終端機管理神器 tmux&lt;/p></description></item><item><title>Day 04：金魚記憶力太短暫，交給外掛記吧！autosuggestions 與 sugstring-search</title><link>https://blog.simbafs.cc/p/ithelp/day-04%E9%87%91%E9%AD%9A%E8%A8%98%E6%86%B6%E5%8A%9B%E5%A4%AA%E7%9F%AD%E6%9A%AB%E4%BA%A4%E7%B5%A6%E5%A4%96%E6%8E%9B%E8%A8%98%E5%90%A7autosuggestions-%E8%88%87-sugstring-search/</link><pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-04%E9%87%91%E9%AD%9A%E8%A8%98%E6%86%B6%E5%8A%9B%E5%A4%AA%E7%9F%AD%E6%9A%AB%E4%BA%A4%E7%B5%A6%E5%A4%96%E6%8E%9B%E8%A8%98%E5%90%A7autosuggestions-%E8%88%87-sugstring-search/</guid><description>&lt;p>今天的內容會比平常多，但是非常紮實！&lt;/p>
+&lt;p>到今天關於 zsh 的介紹就結束了，明天開始會來講講終端機管理神器 tmux&lt;/p></description></item><item><title>Day 04：金魚記憶力太短暫，交給外掛記吧！autosuggestions 與 sugstring-search</title><link>https://simbafs.cc/blog/p/ithelp/day-04%E9%87%91%E9%AD%9A%E8%A8%98%E6%86%B6%E5%8A%9B%E5%A4%AA%E7%9F%AD%E6%9A%AB%E4%BA%A4%E7%B5%A6%E5%A4%96%E6%8E%9B%E8%A8%98%E5%90%A7autosuggestions-%E8%88%87-sugstring-search/</link><pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-04%E9%87%91%E9%AD%9A%E8%A8%98%E6%86%B6%E5%8A%9B%E5%A4%AA%E7%9F%AD%E6%9A%AB%E4%BA%A4%E7%B5%A6%E5%A4%96%E6%8E%9B%E8%A8%98%E5%90%A7autosuggestions-%E8%88%87-sugstring-search/</guid><description>&lt;p>今天的內容會比平常多，但是非常紮實！&lt;/p>
 &lt;p>有時候我們在 CLI 操作時遇到很多&lt;strong>重複&lt;/strong>的指令，像是 &lt;code>git add&lt;/code>、&lt;code>git commit -m 'ba la ba la'&lt;/code> 等等，這些指令可能又長又複雜，一直都是自己打也不是辦法，這時候就該請出 &lt;a class="link" href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="noopener"
 >autosuggestions&lt;/a> 了&lt;/p>
 &lt;h1 id="安裝-autosuggestions">安裝 autosuggestions&lt;/h1>
@@ -6931,7 +6931,7 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;h1 id="結尾">結尾&lt;/h1>
 &lt;p>今天介紹了好用的 autosuggestions 和 zplug 與 p10k 設定衝突的解決方法。&lt;br>
 不的不說 autosuggestions 真是懶人福音，打過的指令不用再打第二次&lt;br>
-明天再介紹兩個外掛後就 zsh 的部份就差不多完結了，緊接著會進入精彩的 tmux&lt;/p></description></item><item><title>Day 03：轉吧轉吧七彩霓虹燈之 p10k</title><link>https://blog.simbafs.cc/p/ithelp/day-03%E8%BD%89%E5%90%A7%E8%BD%89%E5%90%A7%E4%B8%83%E5%BD%A9%E9%9C%93%E8%99%B9%E7%87%88%E4%B9%8B-p10k/</link><pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-03%E8%BD%89%E5%90%A7%E8%BD%89%E5%90%A7%E4%B8%83%E5%BD%A9%E9%9C%93%E8%99%B9%E7%87%88%E4%B9%8B-p10k/</guid><description>&lt;p>昨天裝好外掛管理器了，接下來我們要用 zplug 來裝一些好玩的外掛囉！&lt;/p>
+明天再介紹兩個外掛後就 zsh 的部份就差不多完結了，緊接著會進入精彩的 tmux&lt;/p></description></item><item><title>Day 03：轉吧轉吧七彩霓虹燈之 p10k</title><link>https://simbafs.cc/blog/p/ithelp/day-03%E8%BD%89%E5%90%A7%E8%BD%89%E5%90%A7%E4%B8%83%E5%BD%A9%E9%9C%93%E8%99%B9%E7%87%88%E4%B9%8B-p10k/</link><pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-03%E8%BD%89%E5%90%A7%E8%BD%89%E5%90%A7%E4%B8%83%E5%BD%A9%E9%9C%93%E8%99%B9%E7%87%88%E4%B9%8B-p10k/</guid><description>&lt;p>昨天裝好外掛管理器了，接下來我們要用 zplug 來裝一些好玩的外掛囉！&lt;/p>
 &lt;h1 id="p10k">p10k&lt;/h1>
 &lt;p>p10k 是 powerlevel10k 的縮寫，這是一套 zsh 的 prompt 主題，是我用過&lt;strong>設定最簡單效果也很好&lt;/strong>的，重點是不論有&lt;strong>沒有裝特殊字型&lt;/strong>，他都可以用！&lt;/p>
 &lt;h2 id="安裝字型可跳過">安裝字型（可跳過）&lt;/h2>
@@ -6955,7 +6955,7 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/div>&lt;p>關於這段是什麼意思呢，zplug 提供了一張精美的圖來幫助我們理解&lt;br>
 首先，以 &lt;code>zplug&lt;/code> 開頭，然後接 github 的 &lt;code>username/reponame&lt;/code>，再來可以用 tag 做修飾，例如我們安裝 p10k 時就用了 &lt;code>as:theme&lt;/code> 和 &lt;code>depth:1&lt;/code>
 ，兩個 tag 之間以逗號加上&lt;strong>一個以上的空白&lt;/strong>隔開&lt;br>
-&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day03/zplug.png"
+&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day03/zplug.png"
 loading="lazy"
 alt="zplug"
 >&lt;/p>
@@ -6993,7 +6993,7 @@ alt="zplug"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day03/p10k-configure.gif"
+&lt;th style="text-align:left">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day03/p10k-configure.gif"
 loading="lazy"
 alt="p10k-configrue"
 >&lt;/th>
@@ -7016,7 +7016,7 @@ alt="p10k-configrue"
 &lt;td style="text-align:left">這是 tmux，大概下星期會介紹&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Day 02 ：zsh 與 shell script</title><link>https://blog.simbafs.cc/p/ithelp/day-02-zsh-%E8%88%87-shell-script/</link><pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-02-zsh-%E8%88%87-shell-script/</guid><description>&lt;blockquote>
+&lt;/table></description></item><item><title>Day 02 ：zsh 與 shell script</title><link>https://simbafs.cc/blog/p/ithelp/day-02-zsh-%E8%88%87-shell-script/</link><pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-02-zsh-%E8%88%87-shell-script/</guid><description>&lt;blockquote>
 &lt;p>今天內容不小心寫太長了 &amp;hellip;&amp;hellip;&lt;/p>
 &lt;/blockquote>
 &lt;p>首先，在介紹其他軟體之前，先來看看與 CLI 操作習習相關的「shell」，我選擇的 shell 是 &lt;code>zsh&lt;/code>，&lt;code>zsh&lt;/code> 在 &lt;code>bash&lt;/code> 的基礎上擴充了很多實用的功能，像是支援更好的&lt;strong>自動補全&lt;/strong>，&lt;strong>各式各樣的主題&lt;/strong>等等。&lt;/p>
@@ -7067,7 +7067,7 @@ alt="p10k-configrue"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day02/zsh-install.png"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day02/zsh-install.png"
 loading="lazy"
 alt="zsh-install"
 >&lt;/th>
@@ -7213,7 +7213,7 @@ alt="zsh-install"
 &lt;/div>&lt;p>其實 shell script 中的錢號 &lt;code>$&lt;/code> 還有超多用法，可以參考 &lt;a class="link" href="https://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables" target="_blank" rel="noopener"
 >這裡&lt;/a>&lt;/p>
 &lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>今天介紹了 zsh 和外掛管理器 zplug 還有一點點的 shell script，明天開始會用 zplug 裝各種外掛來豐富我們的純‧ CLI 整合式開發環境&lt;/p></description></item><item><title>Day 01：前言，這批很純，快進來吧！</title><link>https://blog.simbafs.cc/p/ithelp/day-01%E5%89%8D%E8%A8%80%E9%80%99%E6%89%B9%E5%BE%88%E7%B4%94%E5%BF%AB%E9%80%B2%E4%BE%86%E5%90%A7/</link><pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day-01%E5%89%8D%E8%A8%80%E9%80%99%E6%89%B9%E5%BE%88%E7%B4%94%E5%BF%AB%E9%80%B2%E4%BE%86%E5%90%A7/</guid><description>&lt;h1 id="who-am-i">Who Am I&lt;/h1>
+&lt;p>今天介紹了 zsh 和外掛管理器 zplug 還有一點點的 shell script，明天開始會用 zplug 裝各種外掛來豐富我們的純‧ CLI 整合式開發環境&lt;/p></description></item><item><title>Day 01：前言，這批很純，快進來吧！</title><link>https://simbafs.cc/blog/p/ithelp/day-01%E5%89%8D%E8%A8%80%E9%80%99%E6%89%B9%E5%BE%88%E7%B4%94%E5%BF%AB%E9%80%B2%E4%BE%86%E5%90%A7/</link><pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/ithelp/day-01%E5%89%8D%E8%A8%80%E9%80%99%E6%89%B9%E5%BE%88%E7%B4%94%E5%BF%AB%E9%80%B2%E4%BE%86%E5%90%A7/</guid><description>&lt;h1 id="who-am-i">Who Am I&lt;/h1>
 &lt;p>我今年升大一，在此生最長的假期中寫寫文章打發時間。平常喜歡寫寫程式，研究新技術。是個 CLI 忠實擁護者，電腦通常只開瀏覽器和 terminal，terminal 就是我的開發環境。&lt;br>
 慣用網名是 &lt;strong>simbafs&lt;/strong>、&lt;strong>simbafs&lt;/strong> 或 &lt;strong>SimbaFs&lt;/strong>。&lt;br>
 略懂 nodejs 和一點網頁技術，這一個月開始研究 Golang&lt;/p>
@@ -7224,7 +7224,7 @@ alt="zsh-install"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day01/mem-comsumption.png"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/ithelp/pure-CLI-IDE/day01/mem-comsumption.png"
 loading="lazy"
 alt="memory comsumption"
 >&lt;/th>
@@ -7314,7 +7314,7 @@ alt="memory comsumption"
 &lt;p>除了 &lt;a class="link" href="https://ithelp.ithome.com.tw/users/20130473/ironman/3975" target="_blank" rel="noopener"
 >IThelp&lt;/a>，我也會將這個系列的文章更新在 &lt;strong>&lt;a class="link" href="https://blog.simbafs.dev/categories/ithelp/pure-CLI-IDE" target="_blank" rel="noopener"
 >我的 blog&lt;/a>&lt;/strong> 上&lt;/p>
-&lt;p>喔對了，這整個系列我都是在我的純 CLI 環境中寫作的喔！&lt;/p></description></item><item><title>Golang Parse All Files In Directory Into Templates</title><link>https://blog.simbafs.cc/p/golang/golang-parse-all-files-in-directory-into-templates/</link><pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/golang-parse-all-files-in-directory-into-templates/</guid><description>&lt;h1 id="golang-parse-all-files-in-directory-into-templates">Golang Parse All Files In Directory Into Templates&lt;/h1>
+&lt;p>喔對了，這整個系列我都是在我的純 CLI 環境中寫作的喔！&lt;/p></description></item><item><title>Golang Parse All Files In Directory Into Templates</title><link>https://simbafs.cc/blog/p/golang/golang-parse-all-files-in-directory-into-templates/</link><pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/golang/golang-parse-all-files-in-directory-into-templates/</guid><description>&lt;h1 id="golang-parse-all-files-in-directory-into-templates">Golang Parse All Files In Directory Into Templates&lt;/h1>
 &lt;p>在用 gin 寫伺服器的時候，我發現模板並不會被 &lt;code>go build&lt;/code> 打包進執行檔裡面，所以在執行的時候就找不到檔案，當然這個問題可以用字串的形式直接把模板放進 golang 原始碼裡面，但是這樣程式碼一複雜就會不好用，這時候就可以用 golang 的 embed 函式庫把檔案「嵌入」到原始碼裡面。但是問題又來了，嵌入了之後要怎麼把字串變成模板物件呢？&lt;/p>
 &lt;h2 id="embed">Embed&lt;/h2>
 &lt;blockquote>
@@ -7492,7 +7492,7 @@ alt="memory comsumption"
 &lt;a class="link" href="https://pkg.go.dev/html/template" target="_blank" rel="noopener"
 >https://pkg.go.dev/html/template&lt;/a>&lt;br>
 &lt;a class="link" href="https://blog.wu-boy.com/2020/12/embedding-files-in-go-1-16/" target="_blank" rel="noopener"
->https://blog.wu-boy.com/2020/12/embedding-files-in-go-1-16/&lt;/a>&lt;/p></description></item><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</guid><description>&lt;h1 id="gitea">Gitea&lt;/h1>
+>https://blog.wu-boy.com/2020/12/embedding-files-in-go-1-16/&lt;/a>&lt;/p></description></item><item><title>ssh on gitea with docker</title><link>https://simbafs.cc/blog/p/linux/server/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/server/ssh-on-gitea-with-docker/</guid><description>&lt;h1 id="gitea">Gitea&lt;/h1>
 &lt;p>&lt;a class="link" href="https://gitea.io" target="_blank" rel="noopener"
 >Gitea&lt;/a> 是一個開源的 git 伺服器，他的界面幾乎和 &lt;a class="link" href="https://github.com" target="_blank" rel="noopener"
 >GitHub&lt;/a> 一模一樣，但是完全開源而且非常輕，甚至一片樹梅派就可以開伺服器了。Gitea 因為是使用 &lt;a class="link" href="https://golang.org/" target="_blank" rel="noopener"
@@ -7614,7 +7614,7 @@ alt="memory comsumption"
 &lt;p>&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
 >https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough&lt;/a>&lt;br>
 &lt;a class="link" href="https://asaba.sakuragawa.moe/2018/06/%E6%93%BA%E8%84%AB%E6%8E%A7%E5%88%B6%EF%BC%8C%E7%94%A8-docker-%E8%87%AA%E5%BB%BA-gitea-gogs-%E7%B7%9A%E4%B8%8A%E4%BB%A3%E7%A2%BC%E5%8D%94%E4%BD%9C%E5%B9%B3%E8%87%BA/" target="_blank" rel="noopener"
->https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>臺灣地址 API</title><link>https://blog.simbafs.cc/p/other/%E8%87%BA%E7%81%A3%E5%9C%B0%E5%9D%80-api/</link><pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/%E8%87%BA%E7%81%A3%E5%9C%B0%E5%9D%80-api/</guid><description>&lt;h1 id="臺灣地址-api">臺灣地址 API&lt;/h1>
+>https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>臺灣地址 API</title><link>https://simbafs.cc/blog/p/other/%E8%87%BA%E7%81%A3%E5%9C%B0%E5%9D%80-api/</link><pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/other/%E8%87%BA%E7%81%A3%E5%9C%B0%E5%9D%80-api/</guid><description>&lt;h1 id="臺灣地址-api">臺灣地址 API&lt;/h1>
 &lt;p>這是一個給經緯度吐地址的 api，甚至路段都會出來，搭配 &lt;a class="link" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation_API" target="_blank" rel="noopener"
 >web geolocation api&lt;/a> 蠻不錯的，精確度不錯。可以不知道有沒有 rate limited 的問題，目前看起來連 token 都不用。&lt;/p>
 &lt;h2 id="網址">網址&lt;/h2>
@@ -7666,7 +7666,7 @@ alt="memory comsumption"
 &lt;/div>
 &lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
 &lt;p>&lt;a class="link" href="https://data.gov.tw/dataset/101898" target="_blank" rel="noopener"
->https://data.gov.tw/dataset/101898&lt;/a>&lt;/p></description></item><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</guid><description>&lt;h1 id="cast-phone-screen-to-computer">Cast Phone Screen to Computer&lt;/h1>
+>https://data.gov.tw/dataset/101898&lt;/a>&lt;/p></description></item><item><title>Cast Phone Screen to Computer</title><link>https://simbafs.cc/blog/p/linux/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/cast-phone-screen-to-computer/</guid><description>&lt;h1 id="cast-phone-screen-to-computer">Cast Phone Screen to Computer&lt;/h1>
 &lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
 &lt;h2 id="scrcpy">SCRCPY&lt;/h2>
 &lt;p>這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。&lt;/p>
@@ -7703,7 +7703,7 @@ alt="memory comsumption"
 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options" target="_blank" rel="noopener"
 >https://developer.android.com/studio/debug/dev-options&lt;/a>
 &lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
->https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20&lt;/a>&lt;/p></description></item><item><title>YouComopleteMe Install</title><link>https://blog.simbafs.cc/p/linux/vim/youcomopleteme-install/</link><pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/youcomopleteme-install/</guid><description>&lt;h1 id="ycm-installation">YCM Installation&lt;/h1>
+>https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20&lt;/a>&lt;/p></description></item><item><title>YouComopleteMe Install</title><link>https://simbafs.cc/blog/p/linux/vim/youcomopleteme-install/</link><pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/vim/youcomopleteme-install/</guid><description>&lt;h1 id="ycm-installation">YCM Installation&lt;/h1>
 &lt;h2 id="下載-source-code">下載 source code&lt;/h2>
 &lt;ol>
 &lt;li>編輯 ~/.vimrc&lt;/li>
@@ -7727,12 +7727,12 @@ alt="memory comsumption"
 &lt;li>進入 &lt;code>~/.vim/plugged/YouCompleteMe&lt;/code>&lt;/li>
 &lt;li>執行 &lt;code>./install.py --help&lt;/code> 並挑選需要的選項&lt;/li>
 &lt;li>執行 &lt;code>./install.py &amp;lt;你要的選項&amp;gt;&lt;/code>&lt;/li>
-&lt;/ol></description></item><item><title>Firefox Touch Screen Scroll</title><link>https://blog.simbafs.cc/p/linux/firefox-touch-screen-scroll/</link><pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/firefox-touch-screen-scroll/</guid><description>&lt;h1 id="firefox-touch-screen-scroll">Firefox Touch Screen Scroll&lt;/h1>
+&lt;/ol></description></item><item><title>Firefox Touch Screen Scroll</title><link>https://simbafs.cc/blog/p/linux/firefox-touch-screen-scroll/</link><pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/firefox-touch-screen-scroll/</guid><description>&lt;h1 id="firefox-touch-screen-scroll">Firefox Touch Screen Scroll&lt;/h1>
 &lt;p>再換了觸控筆電後，在 firefox 一直有個問題：觸控往下滑會被當成選取，要卷動一定要用右邊的 scroll bar&lt;/p>
 &lt;h2 id="解決方案">解決方案&lt;/h2>
 &lt;p>按照 &lt;a class="link" href="https://askubuntu.com/questions/853910/ubuntu-16-and-touchscreen-scrolling-in-firefox" target="_blank" rel="noopener"
 >https://askubuntu.com/questions/853910/ubuntu-16-and-touchscreen-scrolling-in-firefox&lt;/a> 的最佳解法，真的加上 &lt;code>MOZ_USE_XINPUT2=1&lt;/code> 的環境變數就可以了。&lt;br>
-另外在設定 &lt;code>~/.local/share/applications/firefox.desktop&lt;/code> 的時候要注意有不只一個 Exec，改完如果沒有生效可以重開機看看。&lt;/p></description></item><item><title>beginning of kotlin</title><link>https://blog.simbafs.cc/p/kotlin/beginning-of-kotlin/</link><pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/kotlin/beginning-of-kotlin/</guid><description>&lt;h1 id="val-vs-var">val vs var&lt;/h1>
+另外在設定 &lt;code>~/.local/share/applications/firefox.desktop&lt;/code> 的時候要注意有不只一個 Exec，改完如果沒有生效可以重開機看看。&lt;/p></description></item><item><title>beginning of kotlin</title><link>https://simbafs.cc/blog/p/kotlin/beginning-of-kotlin/</link><pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/kotlin/beginning-of-kotlin/</guid><description>&lt;h1 id="val-vs-var">val vs var&lt;/h1>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -7804,7 +7804,7 @@ alt="memory comsumption"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>大學二階面試、筆試</title><link>https://blog.simbafs.cc/p/other/%E5%A4%A7%E5%AD%B8%E4%BA%8C%E9%9A%8E%E9%9D%A2%E8%A9%A6%E7%AD%86%E8%A9%A6/</link><pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/%E5%A4%A7%E5%AD%B8%E4%BA%8C%E9%9A%8E%E9%9D%A2%E8%A9%A6%E7%AD%86%E8%A9%A6/</guid><description>&lt;h1 id="大學二階面試筆試">大學二階面試、筆試&lt;/h1>
+&lt;/div></description></item><item><title>大學二階面試、筆試</title><link>https://simbafs.cc/blog/p/other/%E5%A4%A7%E5%AD%B8%E4%BA%8C%E9%9A%8E%E9%9D%A2%E8%A9%A6%E7%AD%86%E8%A9%A6/</link><pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/other/%E5%A4%A7%E5%AD%B8%E4%BA%8C%E9%9A%8E%E9%9D%A2%E8%A9%A6%E7%AD%86%E8%A9%A6/</guid><description>&lt;h1 id="大學二階面試筆試">大學二階面試、筆試&lt;/h1>
 &lt;h2 id="師大科技系面試">師大科技系面試&lt;/h2>
 &lt;blockquote>
 &lt;p>兩關各十分鐘&lt;/p>
@@ -7823,7 +7823,7 @@ alt="memory comsumption"
 &lt;li>如果團隊合作時有人擺爛，你會怎麼做？（20 秒）&lt;/li>
 &lt;/ol>
 &lt;h2 id="心得">心得&lt;/h2>
-&lt;p>這個系是團體面試，三個教授對三個考生，輪流回答問題，因為我是那組第一個，所以幾乎都是我先回答，教授沒有問什麼很難得問題，另外系主任看起來人很好。&lt;/p></description></item><item><title>Logitech Mouse Permission Error</title><link>https://blog.simbafs.cc/p/linux/logitech-mouse-permission-error/</link><pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/logitech-mouse-permission-error/</guid><description>&lt;h1 id="logitech-mouse-permission-error">Logitech Mouse Permission Error&lt;/h1>
+&lt;p>這個系是團體面試，三個教授對三個考生，輪流回答問題，因為我是那組第一個，所以幾乎都是我先回答，教授沒有問什麼很難得問題，另外系主任看起來人很好。&lt;/p></description></item><item><title>Logitech Mouse Permission Error</title><link>https://simbafs.cc/blog/p/linux/logitech-mouse-permission-error/</link><pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/logitech-mouse-permission-error/</guid><description>&lt;h1 id="logitech-mouse-permission-error">Logitech Mouse Permission Error&lt;/h1>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>我的無線華和滑鼠和鍵盤都是羅技的，在我的 Ubuntu 筆電上一直都沒有問題。有一次我想改我的鍵盤被配置，但是因為 logitech unifying 沒有 Linux 版，所以我另一個軟體叫 solaar，功能是差不多的。
 當我裝好軟體以後，鍵盤滑鼠操作都沒問題，只有插上滑鼠的接收器以後都對跳出一個 permission error 的錯誤視窗。雖然在 solaar 裡面就無法看到我的滑鼠就是了，但是完全不影響使用，所以我就擺在那邊放它爛，反正就是多按一個叉叉。&lt;/p>
@@ -7852,7 +7852,7 @@ alt="memory comsumption"
 &lt;p>我猜這個方法會失敗應該是因為他在我改之前就已經先跳錯誤了，等我改完它右沒有偵測，我就得把它拔下來在插上去，我又會看到錯誤訊息&amp;hellip;&amp;hellip; (looping&lt;br>
 於是我上網找答案&lt;/p>
 &lt;h2 id="網路上的解">網路上的解&lt;/h2>
-&lt;p>我 Google &lt;code>ubuntu logitech permission error&lt;/code> 第一個就是我要的！&lt;/p></description></item><item><title>Libreoffice Code Format Plugin Installation</title><link>https://blog.simbafs.cc/p/linux/libreoffice-code-format-plugin-installation/</link><pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/libreoffice-code-format-plugin-installation/</guid><description>&lt;h1 id="安裝">安裝&lt;/h1>
+&lt;p>我 Google &lt;code>ubuntu logitech permission error&lt;/code> 第一個就是我要的！&lt;/p></description></item><item><title>Libreoffice Code Format Plugin Installation</title><link>https://simbafs.cc/blog/p/linux/libreoffice-code-format-plugin-installation/</link><pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/libreoffice-code-format-plugin-installation/</guid><description>&lt;h1 id="安裝">安裝&lt;/h1>
 &lt;ol>
 &lt;li>去 &lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
 >https://extensions.libreoffice.org/en/extensions/show/code-highlighter&lt;/a> 下載最新的外掛&lt;/li>
@@ -7899,7 +7899,7 @@ alt="memory comsumption"
 &lt;p>&lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
 >Libreoffice extensions&lt;/a>
 &lt;a class="link" href="https://github.com/slgobinath/libreoffice-code-highlighter/issues/29#issuecomment-635216707" target="_blank" rel="noopener"
->issue&lt;/a>&lt;/p></description></item><item><title>Strapi Quick Start</title><link>https://blog.simbafs.cc/p/nodejs/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/strapi-quick-start/</guid><description>&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
+>issue&lt;/a>&lt;/p></description></item><item><title>Strapi Quick Start</title><link>https://simbafs.cc/blog/p/nodejs/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/strapi-quick-start/</guid><description>&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
 &lt;h2 id="strapi">strapi&lt;/h2>
 &lt;h2 id="什麼是-headless-cms">什麼是 headless CMS&lt;/h2>
 &lt;p>headless CMS 顧名思義是「無頭的 內容管理系統」，意思是沒有前端、只有後端，它就是一個 DB 的 web 界面 + api server。headless CMS 專注於處理 api 的部份，前端的部份一律不關心。這對於前後端分離有很大的幫助，基本上 headless CMS 已經解決了後端 80% 的工作，剩下的就是一些客製化的邏輯，像是登入、特殊的計算等等。&lt;/p>
@@ -7935,7 +7935,7 @@ MongoDB &amp;gt;= 3.6&lt;/p>
 &lt;li>建立 &lt;code>collection type&lt;/code>&lt;br>
 如果你按照官網的說法，這裡又會讓你很困惑，&lt;code>+ Create new collection type&lt;/code> 按鈕到底它ㄇ的在哪？其實只要在開啟伺服器時用 develop mode 開就可以了，這個重要要的東西它又沒寫了，把你的 server 關掉，下 &lt;code>npm run develop&lt;/code> 然後再去剛剛的頁面，重新整理就可以看到那個調皮的按鈕了。&lt;/li>
 &lt;/ol>
-&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item><item><title>Node VM</title><link>https://blog.simbafs.cc/p/nodejs/node-vm/</link><pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/node-vm/</guid><description>&lt;h1 id="node-vm">Node VM&lt;/h1>
+&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item><item><title>Node VM</title><link>https://simbafs.cc/blog/p/nodejs/node-vm/</link><pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/node-vm/</guid><description>&lt;h1 id="node-vm">Node VM&lt;/h1>
 &lt;h2 id="nodejs-vm-模組">node.js VM 模組&lt;/h2>
 &lt;p>VM 是 node.js 的核心模組，提供安全的環境 (沙箱) 來測試不信任的程式碼。&lt;/p>
 &lt;h2 id="基本概念">基本概念&lt;/h2>
@@ -8055,7 +8055,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="執行-script-沒有預先編譯-script">執行 script (沒有預先編譯 Script)&lt;/h2>
-&lt;p>如果你很懶，或是你只是想要一次行的執行這段 code，可以用 &lt;code>vm.runInContext&lt;/code>、&lt;code>vm.runInNewContext&lt;/code> 和 &lt;code>vm.runInThisContext&lt;/code>。用法跟先編譯過再執行一樣，只是其中第一個參數變成還沒編譯過的 code (String)。&lt;/p></description></item><item><title>hCaptcha</title><link>https://blog.simbafs.cc/p/nodejs/hcaptcha/</link><pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/hcaptcha/</guid><description>&lt;h1 id="hcaptcha">hCaptcha&lt;/h1>
+&lt;p>如果你很懶，或是你只是想要一次行的執行這段 code，可以用 &lt;code>vm.runInContext&lt;/code>、&lt;code>vm.runInNewContext&lt;/code> 和 &lt;code>vm.runInThisContext&lt;/code>。用法跟先編譯過再執行一樣，只是其中第一個參數變成還沒編譯過的 code (String)。&lt;/p></description></item><item><title>hCaptcha</title><link>https://simbafs.cc/blog/p/nodejs/hcaptcha/</link><pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/hcaptcha/</guid><description>&lt;h1 id="hcaptcha">hCaptcha&lt;/h1>
 &lt;h2 id="前情提要">前情提要&lt;/h2>
 &lt;p>我們社團的短網址服務裡面常常出現一些奇怪的網址，我猜可能是有機器人在刷，所以我想加入 captcha 減少這類問題。我選擇的是 &lt;a class="link" href="https://hcaptcha.com/" target="_blank" rel="noopener"
 >hCaptcha&lt;/a> 這套，能不依賴 Google 就盡量不要。&lt;/p>
@@ -8201,7 +8201,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="結論">結論&lt;/h2>
-&lt;p>看原始碼很重要&lt;/p></description></item><item><title>docker login error</title><link>https://blog.simbafs.cc/p/linux/docker/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-login-error/</guid><description>&lt;h1 id="docker-login-error">Docker Login Error&lt;/h1>
+&lt;p>看原始碼很重要&lt;/p></description></item><item><title>docker login error</title><link>https://simbafs.cc/blog/p/linux/docker/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/docker/docker-login-error/</guid><description>&lt;h1 id="docker-login-error">Docker Login Error&lt;/h1>
 &lt;h2 id="錯誤說明">錯誤說明&lt;/h2>
 &lt;p>昨天我在 terminal 登入 docker 的時候發現不知道為什麼不能登入，我先透過網頁登入確認過密碼沒有問題，也不是打錯字的關係，但還是不能當入。總是會有類似以下的錯誤訊息。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -8262,7 +8262,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 >https://stackoverflow.com/questions/50151833/cannot-login-to-docker-account/52881198#52881198&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://gist.github.com/dataday/3c267be29e32573829c4781c99ea3395" target="_blank" rel="noopener"
 >https://gist.github.com/dataday/3c267be29e32573829c4781c99ea3395&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Connect to Ethernet in Docker Container</title><link>https://blog.simbafs.cc/p/linux/docker/connect-to-ethernet-in-docker-container/</link><pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/connect-to-ethernet-in-docker-container/</guid><description>&lt;h1 id="connect-to-ethernet-in-docker-container">Connect to Ethernet in Docker Container&lt;/h1>
+&lt;/ul></description></item><item><title>Connect to Ethernet in Docker Container</title><link>https://simbafs.cc/blog/p/linux/docker/connect-to-ethernet-in-docker-container/</link><pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/docker/connect-to-ethernet-in-docker-container/</guid><description>&lt;h1 id="connect-to-ethernet-in-docker-container">Connect to Ethernet in Docker Container&lt;/h1>
 &lt;h2 id="如何在-docker-container-裡連接-ethernet">如何在 docker container 裡連接 ethernet&lt;/h2>
 &lt;p>今天突然有個需求是在一個已經開啟的 container 弄東西，需要網路，但是不知道為什麼一直不上，後來發現是 docker 沒有設定 DNS 的問題，只要在外面輸入兩行指令就可以了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -8275,7 +8275,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl restart docker
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>然後重新啟動 docker&lt;/p></description></item><item><title>docker commit</title><link>https://blog.simbafs.cc/p/linux/docker/docker-commit/</link><pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-commit/</guid><description>&lt;h1 id="docker-commit">Docker Commit&lt;/h1>
+&lt;/div>&lt;p>然後重新啟動 docker&lt;/p></description></item><item><title>docker commit</title><link>https://simbafs.cc/blog/p/linux/docker/docker-commit/</link><pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/docker/docker-commit/</guid><description>&lt;h1 id="docker-commit">Docker Commit&lt;/h1>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>上次提到可以用 Dockerfile 建立 docker image，但我們還有令一個方法可以建立 docker image，那就是 &lt;code>docker commit&lt;/code> 指令&lt;/p>
 &lt;h3 id="和-dockerfile-差別">和 Dockerfile 差別&lt;/h3>
@@ -8337,7 +8337,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;td style="text-align:left">建構時停容器&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>bash number loop</title><link>https://blog.simbafs.cc/p/linux/bash/bash-number-loop/</link><pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/bash/bash-number-loop/</guid><description>&lt;h1 id="bash-number-loop">Bash Number Loop&lt;/h1>
+&lt;/table></description></item><item><title>bash number loop</title><link>https://simbafs.cc/blog/p/linux/bash/bash-number-loop/</link><pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/bash/bash-number-loop/</guid><description>&lt;h1 id="bash-number-loop">Bash Number Loop&lt;/h1>
 &lt;p>今天在某的地方剛好看到一個 bash 的小技巧，當我們要從 1 數到 100 時，通常會用 &lt;code>seq&lt;/code> 指令來做，但是如果我們的需求剛剛好是每次遞增（遞減）1 的話，就可以使用 &lt;code>{start..end}&lt;/code> 縮寫，下面兩個範例的效果是一樣的：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -8372,7 +8372,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">touch user&lt;span class="o">{&lt;/span>1..100&lt;span class="o">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>bash completion</title><link>https://blog.simbafs.cc/p/linux/bash/bash-completion/</link><pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/bash/bash-completion/</guid><description>&lt;h1 id="bash-completion">Bash Completion&lt;/h1>
+&lt;/div></description></item><item><title>bash completion</title><link>https://simbafs.cc/blog/p/linux/bash/bash-completion/</link><pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/bash/bash-completion/</guid><description>&lt;h1 id="bash-completion">Bash Completion&lt;/h1>
 &lt;h2 id="需求">需求&lt;/h2>
 &lt;p>今天寫了一個 bash script 幫我管理 mongodb docker，在使用的時候一些子命令，像是 &lt;code>up&lt;/code>、&lt;code>down&lt;/code>、&lt;code>clean&lt;/code>。我希望可以讓 bash 當我自動補齊這些選項。&lt;/p>
 &lt;h2 id="bash_completion">&lt;code>bash_completion&lt;/code>&lt;/h2>
@@ -8387,7 +8387,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">complete&lt;/span> -W &lt;span class="s2">&amp;#34;up down clean&amp;#34;&lt;/span> mongodb
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;code>-W&lt;/code> 選項代表後面是字詞列表，用 &lt;code>-F&lt;/code> 後面可以接一個函數，但是這個我沒研究，也許下一個專案就是研究 &lt;code>complete&lt;/code> 也說不定。&lt;/p></description></item><item><title>Mongoose Model</title><link>https://blog.simbafs.cc/p/nodejs/mongoose-model/</link><pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/mongoose-model/</guid><description>&lt;h1 id="mongoose-model">Mongoose Model&lt;/h1>
+&lt;/div>&lt;p>&lt;code>-W&lt;/code> 選項代表後面是字詞列表，用 &lt;code>-F&lt;/code> 後面可以接一個函數，但是這個我沒研究，也許下一個專案就是研究 &lt;code>complete&lt;/code> 也說不定。&lt;/p></description></item><item><title>Mongoose Model</title><link>https://simbafs.cc/blog/p/nodejs/mongoose-model/</link><pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/mongoose-model/</guid><description>&lt;h1 id="mongoose-model">Mongoose Model&lt;/h1>
 &lt;h2 id="環境設定">環境設定&lt;/h2>
 &lt;p>這是這次實驗用的 code&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -8458,7 +8458,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;/div>&lt;h2 id="取得原-schema">取得原 schema&lt;/h2>
 &lt;p>在一般操作的時候都是用 &lt;code>UserModel&lt;/code> 在操作資料庫，當要取得 schema 的時候當然也是從他裡面找最方便，當然也可以把 schema 特別弄出來，但是有點麻煩，以這次的例子說明，原本的 &lt;code>UserSchema&lt;/code> 會存在 &lt;code>UserModel.schema.obj&lt;/code> 裡。&lt;/p>
 &lt;h2 id="真實資料庫結構">真實資料庫結構&lt;/h2>
-&lt;p>在建立 model 後 mongoose 會自動新增一些欄位，例如說 &lt;code>_id&lt;/code> 之類的，要取得包含這些欄位的真實 model 結構的話可以在 &lt;code>UserModel.schema.tree&lt;/code> 找到&lt;/p></description></item><item><title>Docker 基礎指令</title><link>https://blog.simbafs.cc/p/linux/docker/docker-command/</link><pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-command/</guid><description>&lt;h1 id="docker-指令">Docker 指令&lt;/h1>
+&lt;p>在建立 model 後 mongoose 會自動新增一些欄位，例如說 &lt;code>_id&lt;/code> 之類的，要取得包含這些欄位的真實 model 結構的話可以在 &lt;code>UserModel.schema.tree&lt;/code> 找到&lt;/p></description></item><item><title>Docker 基礎指令</title><link>https://simbafs.cc/blog/p/linux/docker/docker-command/</link><pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/docker/docker-command/</guid><description>&lt;h1 id="docker-指令">Docker 指令&lt;/h1>
 &lt;h2 id="install">Install&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -8479,7 +8479,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 每個 docker image 可以產生很多個 container，也就是執行中的程式。在這裡你已經可以用 docker 來建立各種服務了。這裡也可以想像成虛擬機，用 &lt;code>docker exec -it container_name bash&lt;/code> 可以進到 container 裡面(如果裡面有 bash 的話)&lt;/li>
 &lt;li>docker-compose&lt;br>
 一個服務不是一個 container 就可以架起來的，通常需要好幾個 container。這時候如果透過指令啟動也許會有忘記啟動和設定複雜的問題，所以有了這個工具。他透過 yml 設定來啟動服務。值得注意的是在同一個 &lt;code>docker-compose.yml&lt;/code> 啟動的 container 會在同一個網路內而和外面隔開，所以如果是 containers 之間的通訊不用把 port 暴露出來，只有開給外面的要 expose。&lt;/li>
-&lt;/ol></description></item><item><title>Mxlinux Boot with Systemd</title><link>https://blog.simbafs.cc/p/linux/mxlinux-boot-with-systemd/</link><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/mxlinux-boot-with-systemd/</guid><description>&lt;h1 id="mxlinux-boot-with-systemd">Mxlinux Boot with Systemd&lt;/h1>
+&lt;/ol></description></item><item><title>Mxlinux Boot with Systemd</title><link>https://simbafs.cc/blog/p/linux/mxlinux-boot-with-systemd/</link><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/mxlinux-boot-with-systemd/</guid><description>&lt;h1 id="mxlinux-boot-with-systemd">Mxlinux Boot with Systemd&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>在 mxlinux 裡面，預設的 init 不是 systmed，這導致如果想用 systemctl 的時候就會跳出錯誤說&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -8492,7 +8492,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;/div>
 &lt;/div>&lt;p>像是在安裝 &lt;code>mongodb-org&lt;/code> 的時候他就要用到 &lt;code>systemctl&lt;/code> 然後就會出錯。&lt;/p>
 &lt;h2 id="解法">解法&lt;/h2>
-&lt;p>其實 mxlinux 已經幫我們想好解法了，在開機選項時選 &lt;code>Advence&lt;/code> &amp;gt; &lt;code>Systemd&lt;/code> 就會以 systemd 開機&lt;/p></description></item><item><title>Node Require from Project Root</title><link>https://blog.simbafs.cc/p/nodejs/node-require-from-project-root/</link><pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/node-require-from-project-root/</guid><description>&lt;h1 id="node-require-from-project-root">Node Require from Project Root&lt;/h1>
+&lt;p>其實 mxlinux 已經幫我們想好解法了，在開機選項時選 &lt;code>Advence&lt;/code> &amp;gt; &lt;code>Systemd&lt;/code> 就會以 systemd 開機&lt;/p></description></item><item><title>Node Require from Project Root</title><link>https://simbafs.cc/blog/p/nodejs/node-require-from-project-root/</link><pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/node-require-from-project-root/</guid><description>&lt;h1 id="node-require-from-project-root">Node Require from Project Root&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>在寫一個專案的時候，有時候會有一些小程式重複在不同的檔案裡用到，這時候我們會把他打包成模組放在 &lt;code>lib/&lt;/code>。但是如果資料夾結構有點點複雜的時候， &lt;code>require()&lt;/code> 的路徑就會很複雜：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -8552,7 +8552,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;a class="link" href="https://www.npmjs.com/package/rooty" target="_blank" rel="noopener"
 >https://www.npmjs.com/package/rooty&lt;/a>&lt;br>
 ^^^&lt;br>
-這個是在 github issue 裡面看到的，沒試過，但是應該也可以用吧？只是我覺得沒有 &lt;code>paths&lt;/code> 的解法來的優雅。&lt;/p></description></item><item><title>Vim Auto Comment Plugin</title><link>https://blog.simbafs.cc/p/linux/vim/vim-auto-comment-plugin/</link><pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/vim-auto-comment-plugin/</guid><description>&lt;h1 id="vim-auto-comment-plugin">Vim Auto Comment Plugin&lt;/h1>
+這個是在 github issue 裡面看到的，沒試過，但是應該也可以用吧？只是我覺得沒有 &lt;code>paths&lt;/code> 的解法來的優雅。&lt;/p></description></item><item><title>Vim Auto Comment Plugin</title><link>https://simbafs.cc/blog/p/linux/vim/vim-auto-comment-plugin/</link><pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/vim/vim-auto-comment-plugin/</guid><description>&lt;h1 id="vim-auto-comment-plugin">Vim Auto Comment Plugin&lt;/h1>
 &lt;h2 id="套件">套件&lt;/h2>
 &lt;p>&lt;a class="link" href="https://github.com/preservim/nerdcommenter" target="_blank" rel="noopener"
 >nerdcommenter&lt;/a>&lt;/p>
@@ -8561,7 +8561,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;h2 id="cspace">&lt;code>c&amp;lt;space&amp;gt;&lt;/code>&lt;/h2>
 &lt;p>簡單來說就是 toggle 你的註解&lt;/p>
 &lt;h2 id="ca">&lt;code>cA&lt;/code>&lt;/h2>
-&lt;p>跳到行尾並在行尾加上註解&lt;/p></description></item><item><title>文章更新時間錯亂問題</title><link>https://blog.simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;h1 id="問題">問題&lt;/h1>
+&lt;p>跳到行尾並在行尾加上註解&lt;/p></description></item><item><title>文章更新時間錯亂問題</title><link>https://simbafs.cc/blog/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;h1 id="問題">問題&lt;/h1>
 &lt;p>在設定完 GitHub Action 之後，我發現我的文章的更新時間都錯了，會全部變成當天日期。但是本地生成的就沒有這個問題，經過一番盤查和猜測後，我發現問題是因為 git 不會把 modified date 紀錄，因為每台電腦的時區都是不一樣的，紀錄起來沒有意義。但是我們需要這項 meta data，所以我們就要自己想法紀錄&lt;/p>
 &lt;h1 id="解法-v10">解法 v1.0&lt;/h1>
 &lt;p>首先，因為每一篇文章 hexo 都會紀錄建立時間，所以我們可以直接把他抓出來，然後把檔案的更新時間設成這個時間就可以啦！&lt;/p>
@@ -8863,7 +8863,7 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>express 重複 send</title><link>https://blog.simbafs.cc/p/nodejs/express-%E9%87%8D%E8%A4%87-send/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/express-%E9%87%8D%E8%A4%87-send/</guid><description>&lt;h1 id="express-重複-send">express 重複 send&lt;/h1>
+&lt;/div></description></item><item><title>express 重複 send</title><link>https://simbafs.cc/blog/p/nodejs/express-%E9%87%8D%E8%A4%87-send/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/express-%E9%87%8D%E8%A4%87-send/</guid><description>&lt;h1 id="express-重複-send">express 重複 send&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>在 express route 裡面，我通常會在 &lt;code>res.send()&lt;/code> 之類的函式前面都會加一個 &lt;code>return&lt;/code> 防止因為程式邏輯漏洞造成重複送出然後噴 error。像是這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -8957,7 +8957,7 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>加入 google search 和 sitemap</title><link>https://blog.simbafs.cc/p/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</guid><description>&lt;h1 id="前置設定">前置設定&lt;/h1>
+&lt;/div></description></item><item><title>加入 google search 和 sitemap</title><link>https://simbafs.cc/blog/p/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</guid><description>&lt;h1 id="前置設定">前置設定&lt;/h1>
 &lt;h2 id="npm-安裝-hexo-generator-sitemap">npm 安裝 &lt;code>hexo-generator-sitemap&lt;/code>&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -8991,12 +8991,12 @@ name:&lt;/p>
 &lt;li>首先到 &lt;a class="link" href="https://search.google.com/search-console/" target="_blank" rel="noopener"
 >Google Search Console&lt;/a> 新增一個網域
 選擇右邊，輸入你的網址
-&lt;img src="https://blog.simbafs.cc/images/google-search-analytics/addDomain.png"
+&lt;img src="https://simbafs.cc/blog/images/google-search-analytics/addDomain.png"
 loading="lazy"
 alt="add demain"
 >&lt;/li>
 &lt;li>下載提供的 html 並放到 &lt;code>source/&lt;/code> 資料夾
-&lt;img src="https://blog.simbafs.cc/images/google-search-analytics/verifyDomain.png"
+&lt;img src="https://simbafs.cc/blog/images/google-search-analytics/verifyDomain.png"
 loading="lazy"
 alt="download html file and place to source/"
 >&lt;/li>
@@ -9031,12 +9031,12 @@ alt="download html file and place to source/"
 &lt;h1 id="sitemap">Sitemap&lt;/h1>
 &lt;p>驗證好了之後進入 Google Search Console，在側邊欄找到 &lt;code>索引&lt;/code> -&amp;gt; &lt;code>Sitemap&lt;/code>
 輸入 &lt;code>sitemap.xml&lt;/code> 按提交
-&lt;img src="https://blog.simbafs.cc/images/google-search-analytics/sitemap.png"
+&lt;img src="https://simbafs.cc/blog/images/google-search-analytics/sitemap.png"
 loading="lazy"
 alt="sitemap"
 >&lt;/p>
 &lt;h1 id="google-analytics">Google analytics&lt;/h1>
-&lt;p>待新增&lt;/p></description></item><item><title>GitHub Action 自動部署 hexo</title><link>https://blog.simbafs.cc/p/hexo/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</link><pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;p>待新增&lt;/p></description></item><item><title>GitHub Action 自動部署 hexo</title><link>https://simbafs.cc/blog/p/hexo/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</link><pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/hexo/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
 &lt;p>本來部署 hexo 都是手動下指令，但是這樣在手機上因為沒辦法裝 hexo ,所以一直不能在手機上寫文章。剛好想到 GitHub Action 可以滿足我的需求，上網查了一下資料發現蠻多人有和我一樣的需求，這次參考的是 &lt;a class="link" href="https://owlran.github.io/2020/04/26/hexo-blog-github-action/" target="_blank" rel="noopener"
 >owlran 大大的文章&lt;/a>。&lt;/p>
 &lt;h1 id="ssh-key">ssh key&lt;/h1>
@@ -9206,7 +9206,7 @@ alt="sitemap"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> hexo deploy&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Reactjs Update State on Props Change</title><link>https://blog.simbafs.cc/p/nodejs/reactjs/reactjs-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/reactjs/reactjs-update-state-on-props-change/</guid><description>&lt;h1 id="react-update-state-on-props-change">React Update State on Props Change&lt;/h1>
+&lt;/div></description></item><item><title>Reactjs Update State on Props Change</title><link>https://simbafs.cc/blog/p/nodejs/reactjs/reactjs-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/reactjs/reactjs-update-state-on-props-change/</guid><description>&lt;h1 id="react-update-state-on-props-change">React Update State on Props Change&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>今天在研究 React
 遇到一個問題
@@ -9263,7 +9263,7 @@ alt="sitemap"
 &lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props&lt;/a>
 &lt;a class="link" href="https://zh-hant.reactjs.org/docs/hooks-effect.html" target="_blank" rel="noopener"
->https://zh-hant.reactjs.org/docs/hooks-effect.html&lt;/a>&lt;/p></description></item><item><title>讓 YCM 接受 jsx</title><link>https://blog.simbafs.cc/p/linux/vim/ycm-jsx/</link><pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/ycm-jsx/</guid><description>&lt;h1 id="讓-ycm-接受-jsx">讓 YCM 接受 jsx&lt;/h1>
+>https://zh-hant.reactjs.org/docs/hooks-effect.html&lt;/a>&lt;/p></description></item><item><title>讓 YCM 接受 jsx</title><link>https://simbafs.cc/blog/p/linux/vim/ycm-jsx/</link><pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/vim/ycm-jsx/</guid><description>&lt;h1 id="讓-ycm-接受-jsx">讓 YCM 接受 jsx&lt;/h1>
 &lt;p>最近寫 ˋreact 的時候只要遇到 jsx 語法 YCM 就會跳出這個錯誤&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -9299,7 +9299,7 @@ alt="sitemap"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Webpack Reactjs</title><link>https://blog.simbafs.cc/p/nodejs/reactjs/webpack-reactjs/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/reactjs/webpack-reactjs/</guid><description>&lt;h1 id="webpack-reactjs">Webpack Reactjs&lt;/h1>
+&lt;/div></description></item><item><title>Webpack Reactjs</title><link>https://simbafs.cc/blog/p/nodejs/reactjs/webpack-reactjs/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/reactjs/webpack-reactjs/</guid><description>&lt;h1 id="webpack-reactjs">Webpack Reactjs&lt;/h1>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>最近開始想學 react
 在這之前當然要先把開發環境搞好
@@ -9420,7 +9420,7 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">https://github.com/simbafs/react-template
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Nginx UI</title><link>https://blog.simbafs.cc/p/linux/server/nginx-ui/</link><pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/nginx-ui/</guid><description>&lt;h1 id="nginx-ui">Nginx UI&lt;/h1>
+&lt;/div></description></item><item><title>Nginx UI</title><link>https://simbafs.cc/blog/p/linux/server/nginx-ui/</link><pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/server/nginx-ui/</guid><description>&lt;h1 id="nginx-ui">Nginx UI&lt;/h1>
 &lt;p>前幾天發現一個專案 nginx ui
 他是一個可以讓你在網頁上更改 nginx config 的專案&lt;/p>
 &lt;h2 id="安裝">安裝&lt;/h2>
@@ -9443,11 +9443,11 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/div>
 &lt;/div>&lt;p>然後打開瀏覽器 http://localhost:8080 就可以看到管理頁面了
 很陽春，就是不用 ssh 進 server，沒什麼特點
-我應該是不會用這套&lt;/p></description></item><item><title>HTML form button</title><link>https://blog.simbafs.cc/p/frontend/html-form-button/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/html-form-button/</guid><description>&lt;h1 id="html-form-button">HTML Form Button&lt;/h1>
+我應該是不會用這套&lt;/p></description></item><item><title>HTML form button</title><link>https://simbafs.cc/blog/p/frontend/html-form-button/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/frontend/html-form-button/</guid><description>&lt;h1 id="html-form-button">HTML Form Button&lt;/h1>
 &lt;p>HTML 的 form 裡的按鈕預設是 submit
 所以要加上 &lt;code>type=&amp;quot;button&amp;quot;&lt;/code> 它才不會太心急送出表單&lt;/p>
 &lt;p>按鈕的 css 「按下」 selector 好像可已用 &lt;code>:active&lt;/code>、&lt;code>:focus&lt;/code>
-但是我兩個失敗了&lt;/p></description></item><item><title>Mxlinux Change Workspace</title><link>https://blog.simbafs.cc/p/linux/mxlinux-change-workspace/</link><pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/mxlinux-change-workspace/</guid><description>&lt;h1 id="mxlinux-change-workspace">Mxlinux Change Workspace&lt;/h1>
+但是我兩個失敗了&lt;/p></description></item><item><title>Mxlinux Change Workspace</title><link>https://simbafs.cc/blog/p/linux/mxlinux-change-workspace/</link><pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/mxlinux-change-workspace/</guid><description>&lt;h1 id="mxlinux-change-workspace">Mxlinux Change Workspace&lt;/h1>
 &lt;h2 id="切換工作區">切換工作區&lt;/h2>
 &lt;p>今天想要在 mxlinux 中快速的切換工作區
 我看到可以用滑鼠滾輪切換
@@ -9456,7 +9456,7 @@ webpack 負責串街所有工作&lt;/p>
 發現可以透過 &lt;code>Ctrl&lt;/code>+&lt;code>Alt&lt;/code>+&lt;code>up/down/home/end&lt;/code> 來切換&lt;/p>
 &lt;h2 id="參考資料">參考資料&lt;/h2>
 &lt;p>&lt;a class="link" href="https://unix.stackexchange.com/questions/270334/how-to-move-a-window-to-another-workspace-in-xfce" target="_blank" rel="noopener"
->https://unix.stackexchange.com/questions/270334/how-to-move-a-window-to-another-workspace-in-xfce&lt;/a>&lt;/p></description></item><item><title>GPG</title><link>https://blog.simbafs.cc/p/linux/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg/</guid><description>&lt;h1 id="gpg">GPG&lt;/h1>
+>https://unix.stackexchange.com/questions/270334/how-to-move-a-window-to-another-workspace-in-xfce&lt;/a>&lt;/p></description></item><item><title>GPG</title><link>https://simbafs.cc/blog/p/linux/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/gpg/</guid><description>&lt;h1 id="gpg">GPG&lt;/h1>
 &lt;h2 id="sign-git-commit-with-gpg">sign git commit with gpg&lt;/h2>
 &lt;p>我按照他的作法弄完後就是沒辦法 commit
 他說 GPG 無法簽章
@@ -9506,7 +9506,7 @@ name 和 git 設定的一樣&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gpg --delete-key &amp;lt;ID&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Meta Tag</title><link>https://blog.simbafs.cc/p/frontend/meta-tag/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/meta-tag/</guid><description>&lt;h1 id="meta-tag">Meta Tag&lt;/h1>
+&lt;/div></description></item><item><title>Meta Tag</title><link>https://simbafs.cc/blog/p/frontend/meta-tag/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/frontend/meta-tag/</guid><description>&lt;h1 id="meta-tag">Meta Tag&lt;/h1>
 &lt;p>今天為了幫 &lt;a class="link" href="https://daniel.simba.nctu.me" target="_blank" rel="noopener"
 >Let&amp;rsquo;s Remind Daniel&lt;/a> 做 SEO
 在 &lt;a class="link" href="https://free.com.tw/mega-tags/" target="_blank" rel="noopener"
@@ -9516,10 +9516,10 @@ name 和 git 設定的一樣&lt;/p>
 &lt;p>&lt;a class="link" href="https://megatags.co/" target="_blank" rel="noopener"
 >生成&lt;/a>
 &lt;a class="link" href="https://www.heymeta.com/" target="_blank" rel="noopener"
->測試&lt;/a>&lt;/p></description></item><item><title>Firefox Event Listener Breakpoint</title><link>https://blog.simbafs.cc/p/frontend/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/firefox-event-listener-breakpoint/</guid><description>&lt;h1 id="firefox-event-listener-breakpoint">Firefox Event Listener Breakpoint&lt;/h1>
+>測試&lt;/a>&lt;/p></description></item><item><title>Firefox Event Listener Breakpoint</title><link>https://simbafs.cc/blog/p/frontend/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/frontend/firefox-event-listener-breakpoint/</guid><description>&lt;h1 id="firefox-event-listener-breakpoint">Firefox Event Listener Breakpoint&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>最近在用 jquery 但是不知道為什麼每次 debugger 都會跳出一個通知
-&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/1.png"
+&lt;img src="https://simbafs.cc/blog/images/firefox-event-listener-breakpoint/1.png"
 loading="lazy"
 alt="1.png"
 >
@@ -9529,13 +9529,13 @@ alt="1.png"
 在 &lt;!-- raw HTML omitted --> 裡面 Debugger 頁籤左下有個拉頁叫「Event Listener Breakpoints」
 把裡面的東西都點掉就好了
 就是那個 DOM Mutation
-&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/2.png"
+&lt;img src="https://simbafs.cc/blog/images/firefox-event-listener-breakpoint/2.png"
 loading="lazy"
 alt="2.png"
 >&lt;/p>
 &lt;h2 id="心得">心得&lt;/h2>
 &lt;p>我原本還以為是 jquery 的問題
-原來是好心的 firefox 啊&lt;/p></description></item><item><title>jQuery</title><link>https://blog.simbafs.cc/p/frontend/jquery/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/jquery/</guid><description>&lt;h1 id="jquery">jQuery&lt;/h1>
+原來是好心的 firefox 啊&lt;/p></description></item><item><title>jQuery</title><link>https://simbafs.cc/blog/p/frontend/jquery/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/frontend/jquery/</guid><description>&lt;h1 id="jquery">jQuery&lt;/h1>
 &lt;p>今天寫 jquery 遇到了一些坑&lt;/p>
 &lt;h2 id="1-submit">1. submit&lt;/h2>
 &lt;p>&lt;code>.submit()&lt;/code> 是要加在 &lt;code>form&lt;/code> 上而不是 &lt;code>submit button&lt;/code> 上&lt;/p>
@@ -9543,7 +9543,7 @@ alt="2.png"
 &lt;p>在 jquery 裡有時後會用到 handler
 正常情況下可以用 arrow function
 但是如果用到 &lt;code>this&lt;/code> 就不能用 arrow function 了
-（這不只是 jquery, JS 都是這樣）&lt;/p></description></item><item><title>Passport.js</title><link>https://blog.simbafs.cc/p/nodejs/passport.js/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/passport.js/</guid><description>&lt;h1 id="passportjs">Passport.js&lt;/h1>
+（這不只是 jquery, JS 都是這樣）&lt;/p></description></item><item><title>Passport.js</title><link>https://simbafs.cc/blog/p/nodejs/passport.js/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/passport.js/</guid><description>&lt;h1 id="passportjs">Passport.js&lt;/h1>
 &lt;p>今天終於把登入做完了
 我覺得最重要的是找好的教學文章、去看沒有人看得懂的程式碼&lt;/p>
 &lt;hr>
@@ -9555,7 +9555,7 @@ alt="2.png"
 沒了！&lt;/li>
 &lt;/ol>
 &lt;p>參考的教學文：https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E7%AD%86%E8%A8%98-%E9%80%8F%E9%81%8E-passport-js-%E5%AF%A6%E4%BD%9C%E9%A9%97%E8%AD%89%E6%A9%9F%E5%88%B6-11cf478f421e
-雖然這個也沒有好到哪裡去但至少我看著他做出來了，有些部份是參考作者的餐廳程式&lt;/p></description></item><item><title>sqlite3</title><link>https://blog.simbafs.cc/p/nodejs/sqlite3/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/sqlite3/</guid><description>&lt;h1 id="sqlite3">sqlite3&lt;/h1>
+雖然這個也沒有好到哪裡去但至少我看著他做出來了，有些部份是參考作者的餐廳程式&lt;/p></description></item><item><title>sqlite3</title><link>https://simbafs.cc/blog/p/nodejs/sqlite3/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/sqlite3/</guid><description>&lt;h1 id="sqlite3">sqlite3&lt;/h1>
 &lt;p>昨天是試著去理解 sqlite3，我發現他的 callback function 真的太煩了
 於是我試著去尋找 async 的版本，還真找到了
 這個套件把整個 sqlite 包成 async 了&lt;/p>
@@ -9620,7 +9620,7 @@ alt="2.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})();&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>isolate</title><link>https://blog.simbafs.cc/p/linux/isolate/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/isolate/</guid><description>&lt;h1 id="isolate">isolate&lt;/h1>
+&lt;/div></description></item><item><title>isolate</title><link>https://simbafs.cc/blog/p/linux/isolate/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/isolate/</guid><description>&lt;h1 id="isolate">isolate&lt;/h1>
 &lt;p>我有一個放了很久的計畫，就是自己寫一個 OJ，因為我覺得現在的那個太難用了。
 我很快的建立 repo 但是卻完全沒有進展，我寫了一個 shell script 幫忙編譯執行程式之後我就在也沒有動過他了
 我沒有繼續動工的原因是我不知道如何隔離使用者提交的程式碼
@@ -9691,12 +9691,12 @@ hello.sh&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>他最後會輸出執行時間和執行成功的訊息
-其他的內容等等再補&lt;/p></description></item><item><title>youtube-dl</title><link>https://blog.simbafs.cc/p/linux/youtube-dl/</link><pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/youtube-dl/</guid><description>&lt;h1 id="youtube-dl">Youtube DL&lt;/h1>
+其他的內容等等再補&lt;/p></description></item><item><title>youtube-dl</title><link>https://simbafs.cc/blog/p/linux/youtube-dl/</link><pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/youtube-dl/</guid><description>&lt;h1 id="youtube-dl">Youtube DL&lt;/h1>
 &lt;p>最近在下載 youtube 音樂，每次下載都要把檔案重新改名，很麻煩。所以就想要寫一個 shell script 來幫我解決。
 首先改名字我相信 youtube-dl 一定有提供這個選項，於是開始查文件。
 看到 &lt;code>-o&lt;/code> ，接下來講遇到的坑&lt;/p>
 &lt;h2 id="-o-坑">&lt;code>-o&lt;/code> 坑&lt;/h2>
-&lt;p>&lt;code>-o&lt;/code> 後面接的是一個 template string ，不是檔名，而且就算指定副檔名是 .mp3 了還是要寫成 &lt;code>%(ext)s&lt;/code>&lt;/p></description></item><item><title>Blessed Landmine</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed-landmine/</link><pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed-landmine/</guid><description>&lt;h1 id="blessed-landmine">Blessed Landmine&lt;/h1>
+&lt;p>&lt;code>-o&lt;/code> 後面接的是一個 template string ，不是檔名，而且就算指定副檔名是 .mp3 了還是要寫成 &lt;code>%(ext)s&lt;/code>&lt;/p></description></item><item><title>Blessed Landmine</title><link>https://simbafs.cc/blog/p/nodejs/blessed/blessed-landmine/</link><pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/blessed/blessed-landmine/</guid><description>&lt;h1 id="blessed-landmine">Blessed Landmine&lt;/h1>
 &lt;p>這是一篇我在用 blessed 時踩的一些雷&lt;/p>
 &lt;h2 id="1-記得-render">1. 記得 render&lt;/h2>
 &lt;p>今天在寫 API 時踩到兩次
@@ -9711,7 +9711,7 @@ hello.sh&lt;/p>
 而且他沒有一個很好的防呆機制例如參數型別檢查
 幸好是他的程式碼沒有做 uglify
 還算簡單易懂
-而且 node 的錯誤訊息的 stack 可以引導到真正出錯的地方&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://blog.simbafs.cc/p/linux/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ssh-tunnel/</guid><description>&lt;h1 id="ssh-tunnel">SSH Tunnel&lt;/h1>
+而且 node 的錯誤訊息的 stack 可以引導到真正出錯的地方&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://simbafs.cc/blog/p/linux/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/ssh-tunnel/</guid><description>&lt;h1 id="ssh-tunnel">SSH Tunnel&lt;/h1>
 &lt;p>昨天架好了 reverse ssh 讓我可以連回學校 server
 今天來研究 ssh tunnel&lt;/p>
 &lt;h2 id="簡介">簡介&lt;/h2>
@@ -9778,7 +9778,7 @@ hello.sh&lt;/p>
 如果是 -R 那前面就是 remote port&lt;/p>
 &lt;h2 id="參考連結">參考連結&lt;/h2>
 &lt;p>&lt;a class="link" href="https://johnliu55.tw/ssh-tunnel.html" target="_blank" rel="noopener"
->https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://blog.simbafs.cc/p/linux/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/reverse-ssh/</guid><description>&lt;h1 id="reverse-ssh">Reverse SSH&lt;/h1>
+>https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://simbafs.cc/blog/p/linux/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/reverse-ssh/</guid><description>&lt;h1 id="reverse-ssh">Reverse SSH&lt;/h1>
 &lt;p>一直以來連線回社辦的電腦都要走 webtty 再開 tmate
 但是今天發現了一個新的方法可以透過反向的 ssh 連回社辦&lt;/p>
 &lt;h2 id="reverse-ssh-1">reverse ssh&lt;/h2>
@@ -9840,7 +9840,7 @@ hello.sh&lt;/p>
 >https://codertw.com/%E4%BC%BA%E6%9C%8D%E5%99%A8/377688/&lt;/a>&lt;br>
 這篇講 ssh tunnel 最清楚&lt;br>
 &lt;a class="link" href="https://yu-jack.github.io/2019/01/08/ssh-tunnel/" target="_blank" rel="noopener"
->https://yu-jack.github.io/2019/01/08/ssh-tunnel/&lt;/a>&lt;/p></description></item><item><title>Unix Socket</title><link>https://blog.simbafs.cc/p/nodejs/unix-socket/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/unix-socket/</guid><description>&lt;h1 id="unix-socket">Unix Socket&lt;/h1>
+>https://yu-jack.github.io/2019/01/08/ssh-tunnel/&lt;/a>&lt;/p></description></item><item><title>Unix Socket</title><link>https://simbafs.cc/blog/p/nodejs/unix-socket/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/unix-socket/</guid><description>&lt;h1 id="unix-socket">Unix Socket&lt;/h1>
 &lt;p>今天心血來潮在看 unix socket
 突然想到 node 可不可以把 服務監聽在一個 socket file
 這樣在設定的時候就不用記哪個服務是幾 port&lt;/p>
@@ -9974,8 +9974,8 @@ hello.sh&lt;/p>
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ chmod 777 /tmp/express.sock
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>這樣就可以啦！&lt;/p></description></item><item><title>Blessed 切換畫面</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</link><pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</guid><description>&lt;h1 id="blessed-切換畫面">Blessed 切換畫面&lt;/h1>
-&lt;p>今天完成了新版本的 &lt;code>treetify&lt;/code> &lt;a class="link" href="https://blog.simbafs.cc/2020/02/18/blessed-contrib-tree/" >看這&lt;/a>
+&lt;/div>&lt;p>這樣就可以啦！&lt;/p></description></item><item><title>Blessed 切換畫面</title><link>https://simbafs.cc/blog/p/nodejs/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</link><pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</guid><description>&lt;h1 id="blessed-切換畫面">Blessed 切換畫面&lt;/h1>
+&lt;p>今天完成了新版本的 &lt;code>treetify&lt;/code> &lt;a class="link" href="https://simbafs.cc/blog/2020/02/18/blessed-contrib-tree/" >看這&lt;/a>
 同時我設計好了右邊的 &lt;code>edit&lt;/code>
 但是我的問題是他要根據情況不同切換不同的頁面
 來看看我的一些想法：&lt;/p>
@@ -10126,7 +10126,7 @@ hello.sh&lt;/p>
 &lt;/div>&lt;p>這裡建立三個 &lt;code>box&lt;/code> 要顯示哪一個的時候就將他 append
 實驗證實這樣不會建立新的圖層
 而是把下面的那個搬到最上面
-完美的解決了這個問題&lt;/p></description></item><item><title>Blessed Contrib Tree</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed-contrib-tree/</link><pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed-contrib-tree/</guid><description>&lt;h1 id="blessed-contrib-tree">blessed Contrib Tree&lt;/h1>
+完美的解決了這個問題&lt;/p></description></item><item><title>Blessed Contrib Tree</title><link>https://simbafs.cc/blog/p/nodejs/blessed/blessed-contrib-tree/</link><pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/blessed/blessed-contrib-tree/</guid><description>&lt;h1 id="blessed-contrib-tree">blessed Contrib Tree&lt;/h1>
 &lt;h2 id="tree">Tree&lt;/h2>
 &lt;p>想說先想一個專案來練練手
 熟悉一下 blessed
@@ -10208,7 +10208,7 @@ hello.sh&lt;/p>
 如果是空物件代表這是葉節點
 &lt;code>extended&lt;/code> 屬性是是否展開，預設 &lt;code>true&lt;/code>
 &lt;code>name&lt;/code> 是顯示出來的字，如果要改再設，預設是 &lt;code>index&lt;/code>
-&lt;code>myCustomProperty&lt;/code> 直翻是自訂屬性，應該是當 &lt;code>tree.on('select')&lt;/code> 觸發時傳進去的&lt;/p></description></item><item><title>Blessed</title><link>https://blog.simbafs.cc/p/nodejs/blessed/blessed/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nodejs/blessed/blessed/</guid><description>&lt;h1 id="blessed">Blessed&lt;/h1>
+&lt;code>myCustomProperty&lt;/code> 直翻是自訂屬性，應該是當 &lt;code>tree.on('select')&lt;/code> 觸發時傳進去的&lt;/p></description></item><item><title>Blessed</title><link>https://simbafs.cc/blog/p/nodejs/blessed/blessed/</link><pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/nodejs/blessed/blessed/</guid><description>&lt;h1 id="blessed">Blessed&lt;/h1>
 &lt;p>某天我有一個問題
 gtop 的圖畫界面是怎麼做的，我知道他是用 node 寫的，對他別有興趣
 我上 github 看他的 package.json
@@ -10239,7 +10239,7 @@ gtop 的圖畫界面是怎麼做的，我知道他是用 node 寫的，對他別
 沒想到這是一個超強大的函式庫
 可是網路上的教學卻很少
 只好自己看 docs 啦&lt;/p>
-&lt;p>接下來是我測試的一些程式碼和截圖&lt;/p></description></item><item><title>Server Tool</title><link>https://blog.simbafs.cc/p/linux/server/server-tool/</link><pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/server-tool/</guid><description>&lt;h1 id="server-tool">Server Tool&lt;/h1>
+&lt;p>接下來是我測試的一些程式碼和截圖&lt;/p></description></item><item><title>Server Tool</title><link>https://simbafs.cc/blog/p/linux/server/server-tool/</link><pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/server/server-tool/</guid><description>&lt;h1 id="server-tool">Server Tool&lt;/h1>
 &lt;h2 id="用-bash-寫-log-分析工具">用 bash 寫 log 分析工具&lt;/h2>
 &lt;p>因為我們的 server 不知道是為什麼一直受到 DDoS 攻擊&lt;br>
 我想知道是什麼時段容易受到攻擊和每次多久、來自那個 ip&lt;br>
@@ -10321,7 +10321,7 @@ dash 沒有支援這個語法
 &lt;p>&lt;a class="link" href="https://www.regextester.com/" target="_blank" rel="noopener"
 >https://www.regextester.com/&lt;/a>
 這個網站可以測試 RegEx
-蠻不錯的&lt;/p></description></item><item><title>ddos</title><link>https://blog.simbafs.cc/p/linux/server/ddos/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/ddos/</guid><description>&lt;h1 id="ddos">DDOS&lt;/h1>
+蠻不錯的&lt;/p></description></item><item><title>ddos</title><link>https://simbafs.cc/blog/p/linux/server/ddos/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/server/ddos/</guid><description>&lt;h1 id="ddos">DDOS&lt;/h1>
 &lt;h2 id="伺服器被-ddos-惹">伺服器被 DDoS 惹&lt;/h2>
 &lt;p>今天早上把社團的 reverse proxy server 換成 nginx&lt;br>
 下午心血來潮看看 log 檔
@@ -10457,13 +10457,13 @@ dash 沒有支援這個語法
 &lt;/div>&lt;p>&lt;code>$ nginx -t&lt;/code> 確認設定檔沒問題
 &lt;code>$ systemctl restart nginx&lt;/code> 來重啟伺服器
 然後就大公告成了～～
-明天再來看看有沒有問題&lt;/p></description></item><item><title>Nginx Reverse Proxy Setup</title><link>https://blog.simbafs.cc/p/linux/server/nginx-reverse-proxy-setup/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/nginx-reverse-proxy-setup/</guid><description>&lt;h1 id="nginx-反向代理伺服器-reverse-proxy">nginx 反向代理伺服器 (reverse proxy)&lt;/h1>
+明天再來看看有沒有問題&lt;/p></description></item><item><title>Nginx Reverse Proxy Setup</title><link>https://simbafs.cc/blog/p/linux/server/nginx-reverse-proxy-setup/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/server/nginx-reverse-proxy-setup/</guid><description>&lt;h1 id="nginx-反向代理伺服器-reverse-proxy">nginx 反向代理伺服器 (reverse proxy)&lt;/h1>
 &lt;p>之前社網 server 因為學校防火牆限制只能對外開 80 443 兩個 port&lt;br>
 而且我們只有一個 ip (203.64.138.177)&lt;br>
 所以要用 reverse proxy 來代理我們的多項服務&lt;br>
 原本我只會用 apache2
 後來不知道是不是因為 apache 太肥導致有時候回應時間會很久&lt;br>
-所以我起了將 proxy server 換成 nginx 的想法&lt;/p></description></item><item><title>hexo-config</title><link>https://blog.simbafs.cc/p/hexo/hexo-config/</link><pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/hexo-config/</guid><description>&lt;h1 id="各種設定值嘗試">各種設定值嘗試&lt;/h1>
+所以我起了將 proxy server 換成 nginx 的想法&lt;/p></description></item><item><title>hexo-config</title><link>https://simbafs.cc/blog/p/hexo/hexo-config/</link><pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/hexo/hexo-config/</guid><description>&lt;h1 id="各種設定值嘗試">各種設定值嘗試&lt;/h1>
 &lt;h2 id="highlight">Highlight&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -10505,7 +10505,7 @@ dash 沒有支援這個語法
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Audo Depoly by Github Action</title><link>https://blog.simbafs.cc/p/hexo/audo-depoly-by-github-action/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/audo-depoly-by-github-action/</guid><description>&lt;h1 id="github-action-自動部署-hexo">GitHub Action 自動部署 Hexo&lt;/h1>
+&lt;/div></description></item><item><title>Audo Depoly by Github Action</title><link>https://simbafs.cc/blog/p/hexo/audo-depoly-by-github-action/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/hexo/audo-depoly-by-github-action/</guid><description>&lt;h1 id="github-action-自動部署-hexo">GitHub Action 自動部署 Hexo&lt;/h1>
 &lt;h2 id="自動部屬部落格">自動部屬部落格&lt;/h2>
 &lt;p>參考網址：&lt;a class="link" href="https://op30132.github.io/2020/02/05/github-action/" target="_blank" rel="noopener"
 >https://op30132.github.io/2020/02/05/github-action/&lt;/a>
@@ -10634,7 +10634,7 @@ dash 沒有支援這個語法
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> hexo d&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>gitalk</title><link>https://blog.simbafs.cc/p/hexo/gitalk/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/gitalk/</guid><description>&lt;h1 id="啟用-gitalk-留言">啟用 gitalk 留言&lt;/h1>
+&lt;/div></description></item><item><title>gitalk</title><link>https://simbafs.cc/blog/p/hexo/gitalk/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/hexo/gitalk/</guid><description>&lt;h1 id="啟用-gitalk-留言">啟用 gitalk 留言&lt;/h1>
 &lt;ol>
 &lt;li>到&lt;a class="link" href="https://github.com/settings/applications/new" target="_blank" rel="noopener"
 >這個網址&lt;/a>填資料&lt;/li>
@@ -10711,14 +10711,14 @@ dash 沒有支援這個語法
 &lt;/div>
 &lt;/div>&lt;ol start="4">
 &lt;li>完成！注意 gitalk 在本地端是沒有用的喔！記得 &lt;code>hexo g; hexo d&lt;/code>&lt;/li>
-&lt;/ol></description></item><item><title>hexo-cli-extras</title><link>https://blog.simbafs.cc/p/hexo/hexo-cli-extras/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/hexo-cli-extras/</guid><description>&lt;h1 id="好用的插件">好用的插件&lt;/h1>
+&lt;/ol></description></item><item><title>hexo-cli-extras</title><link>https://simbafs.cc/blog/p/hexo/hexo-cli-extras/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/hexo/hexo-cli-extras/</guid><description>&lt;h1 id="好用的插件">好用的插件&lt;/h1>
 &lt;p>因為 hexo 本身沒有提供編輯器&lt;br>
 所以每次在編輯文章時都需要打路徑&lt;br>
 這個插件他會去找到你的文章&lt;br>
 然後給你選要編輯那一個&lt;br>
 這只是其中一個功能&lt;br>
 還有&lt;strong>重新命名&lt;/strong>、&lt;strong>刪除&lt;/strong>、&lt;strong>隔離&lt;/strong>和&lt;strong>加入&lt;/strong>&lt;br>
-&lt;strong>隔離&lt;/strong>是將其他文章暫時隔離，&lt;strong>加入&lt;/strong>是將文章加回來&lt;/p></description></item><item><title>hexo-installation</title><link>https://blog.simbafs.cc/p/hexo/hexo-installation/</link><pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/hexo-installation/</guid><description>&lt;h1 id="把-hexo-部屬到-gh-page">把 hexo 部屬到 gh-page&lt;/h1>
+&lt;strong>隔離&lt;/strong>是將其他文章暫時隔離，&lt;strong>加入&lt;/strong>是將文章加回來&lt;/p></description></item><item><title>hexo-installation</title><link>https://simbafs.cc/blog/p/hexo/hexo-installation/</link><pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/hexo/hexo-installation/</guid><description>&lt;h1 id="把-hexo-部屬到-gh-page">把 hexo 部屬到 gh-page&lt;/h1>
 &lt;p>執行&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -10788,7 +10788,7 @@ dash 沒有支援這個語法
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git push -u origin hexo
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>完成&lt;/p></description></item><item><title>About</title><link>https://blog.simbafs.cc/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/about/</guid><description>&lt;h1 id="-哈囉問世界安好-followershttpsimgshieldsiogithubfollowerssimbafsstyleflat-squarehttpsgithubcomsimbafs">🖐️ 哈囉！問世界安好 &lt;a class="link" href="https://github.com/simbafs" target="_blank" rel="noopener"
+&lt;/div>&lt;p>完成&lt;/p></description></item><item><title>About</title><link>https://simbafs.cc/blog/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/about/</guid><description>&lt;h1 id="-哈囉問世界安好-followershttpsimgshieldsiogithubfollowerssimbafsstyleflat-squarehttpsgithubcomsimbafs">🖐️ 哈囉！問世界安好 &lt;a class="link" href="https://github.com/simbafs" target="_blank" rel="noopener"
 >&lt;img src="https://img.shields.io/github/followers/simbafs?style=flat-square"
 loading="lazy"
 alt="Followers"
@@ -10831,7 +10831,7 @@ Telegrary 是一個 Telegram 機器人，讓你可以在 Telegram 上管理日�
 >@simbafs&lt;/a>&lt;/li>
 &lt;li>twitter: &lt;a class="link" href="https://twitter.com/simbafs" target="_blank" rel="noopener"
 >@simbafs&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Contact</title><link>https://blog.simbafs.cc/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/contact/</guid><description>&lt;p>gpg key fingerprint: &lt;code>6236 A070 8FCD 894C 7AD1 A5FC DB13 A5C2 042E AEA4&lt;/code>&lt;/p></description></item><item><title>Resource</title><link>https://blog.simbafs.cc/resource/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/resource/</guid><description>&lt;h1 id="友站">友站&lt;/h1>
+&lt;/ul></description></item><item><title>Contact</title><link>https://simbafs.cc/blog/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/contact/</guid><description>&lt;p>gpg key fingerprint: &lt;code>6236 A070 8FCD 894C 7AD1 A5FC DB13 A5C2 042E AEA4&lt;/code>&lt;/p></description></item><item><title>Resource</title><link>https://simbafs.cc/blog/resource/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/resource/</guid><description>&lt;h1 id="友站">友站&lt;/h1>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://omeletwithoutegg.github.io" target="_blank" rel="noopener"
 >蛋餅的競程隨筆 https://omeletwithoutegg.github.io&lt;/a>&lt;/li>
@@ -10857,4 +10857,4 @@ Telegrary 是一個 Telegram 機器人，讓你可以在 Telegram 上管理日�
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://weekly.starbugs.dev/" target="_blank" rel="noopener"
 >星八哥技術週刊 https://weekly.starbugs.dev&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Search</title><link>https://blog.simbafs.cc/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/search/</guid><description/></item></channel></rss>
+&lt;/ul></description></item><item><title>Search</title><link>https://simbafs.cc/blog/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/search/</guid><description/></item></channel></rss>

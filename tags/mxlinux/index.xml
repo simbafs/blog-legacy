@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mxlinux on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/mxlinux/</link><description>Recent content in mxlinux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 05 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/mxlinux/index.xml" rel="self" type="application/rss+xml"/><item><title>Mxlinux Boot with Systemd</title><link>https://blog.simbafs.cc/p/linux/mxlinux-boot-with-systemd/</link><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/mxlinux-boot-with-systemd/</guid><description>&lt;h1 id="mxlinux-boot-with-systemd">Mxlinux Boot with Systemd&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mxlinux on Simba 的喵窩</title><link>https://simbafs.cc/blog/tags/mxlinux/</link><description>Recent content in mxlinux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 05 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://simbafs.cc/blog/tags/mxlinux/index.xml" rel="self" type="application/rss+xml"/><item><title>Mxlinux Boot with Systemd</title><link>https://simbafs.cc/blog/p/linux/mxlinux-boot-with-systemd/</link><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/mxlinux-boot-with-systemd/</guid><description>&lt;h1 id="mxlinux-boot-with-systemd">Mxlinux Boot with Systemd&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>在 mxlinux 裡面，預設的 init 不是 systmed，這導致如果想用 systemctl 的時候就會跳出錯誤說&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -11,7 +11,7 @@
 &lt;/div>
 &lt;/div>&lt;p>像是在安裝 &lt;code>mongodb-org&lt;/code> 的時候他就要用到 &lt;code>systemctl&lt;/code> 然後就會出錯。&lt;/p>
 &lt;h2 id="解法">解法&lt;/h2>
-&lt;p>其實 mxlinux 已經幫我們想好解法了，在開機選項時選 &lt;code>Advence&lt;/code> &amp;gt; &lt;code>Systemd&lt;/code> 就會以 systemd 開機&lt;/p></description></item><item><title>Mxlinux Change Workspace</title><link>https://blog.simbafs.cc/p/linux/mxlinux-change-workspace/</link><pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/mxlinux-change-workspace/</guid><description>&lt;h1 id="mxlinux-change-workspace">Mxlinux Change Workspace&lt;/h1>
+&lt;p>其實 mxlinux 已經幫我們想好解法了，在開機選項時選 &lt;code>Advence&lt;/code> &amp;gt; &lt;code>Systemd&lt;/code> 就會以 systemd 開機&lt;/p></description></item><item><title>Mxlinux Change Workspace</title><link>https://simbafs.cc/blog/p/linux/mxlinux-change-workspace/</link><pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/mxlinux-change-workspace/</guid><description>&lt;h1 id="mxlinux-change-workspace">Mxlinux Change Workspace&lt;/h1>
 &lt;h2 id="切換工作區">切換工作區&lt;/h2>
 &lt;p>今天想要在 mxlinux 中快速的切換工作區
 我看到可以用滑鼠滾輪切換

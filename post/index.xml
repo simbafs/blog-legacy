@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/</link><description>Recent content in posts on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 20 May 2023 00:09:20 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Preparing Environment</title><link>https://blog.simbafs.cc/p/preparing-environment/</link><pubDate>Tue, 14 Mar 2023 10:23:17 +0800</pubDate><guid>https://blog.simbafs.cc/p/preparing-environment/</guid><description>&lt;h1 id="preparing-environment">Preparing Environment&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Simba 的喵窩</title><link>https://simbafs.cc/blog/post/</link><description>Recent content in posts on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 20 May 2023 00:09:20 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Preparing Environment</title><link>https://simbafs.cc/blog/p/preparing-environment/</link><pubDate>Tue, 14 Mar 2023 10:23:17 +0800</pubDate><guid>https://simbafs.cc/blog/p/preparing-environment/</guid><description>&lt;h1 id="preparing-environment">Preparing Environment&lt;/h1>
 &lt;h2 id="gnu-toolchain">GNU toolchain&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -140,7 +140,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>上課 Homework 0 講義&lt;/p></description></item><item><title>Google AppScript Calender API</title><link>https://blog.simbafs.cc/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 09:58:24 +0800</pubDate><guid>https://blog.simbafs.cc/p/google-app-script-calender-api/</guid><description>&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
+&lt;p>上課 Homework 0 講義&lt;/p></description></item><item><title>Google AppScript Calender API</title><link>https://simbafs.cc/blog/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 09:58:24 +0800</pubDate><guid>https://simbafs.cc/blog/p/google-app-script-calender-api/</guid><description>&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
 &lt;p>因為我懶的一堂一堂課加入日曆、還要按重複，所以就來研究如何自動化。我的想法是透過一個物件定義課表，然後透過程式來自動化新增。評估了幾個技術後，決定使用 Google App Script 來實做，畢竟他和日曆都是 Google 產品，整合應該是最好的（吧，而且可以弄成類似雲端應用的感覺，輕鬆開放給其他人使用。&lt;/p>
 &lt;h2 id="建立專案">建立專案&lt;/h2>
 &lt;p>在 &lt;a class="link" href="https://script.google.com/home" target="_blank" rel="noopener"
@@ -607,7 +607,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>IPFS</title><link>https://blog.simbafs.cc/p/ipfs/</link><pubDate>Mon, 22 Aug 2022 16:44:06 +0800</pubDate><guid>https://blog.simbafs.cc/p/ipfs/</guid><description>&lt;h1 id="ipfs">IPFS&lt;/h1>
+&lt;/div></description></item><item><title>IPFS</title><link>https://simbafs.cc/blog/p/ipfs/</link><pubDate>Mon, 22 Aug 2022 16:44:06 +0800</pubDate><guid>https://simbafs.cc/blog/p/ipfs/</guid><description>&lt;h1 id="ipfs">IPFS&lt;/h1>
 &lt;p>ipfs（&lt;strong>I&lt;/strong>nter&lt;strong>P&lt;/strong>lanetary &lt;strong>F&lt;/strong>ile &lt;strong>S&lt;/strong>ystem）是一個去中心化的檔案儲存方案，為什麼說是方案，因為他包括了通訊協議、軟體、檔案系統、名稱系統、閘道器。這個概念其實不新鮮但是 ipfs 整合過去去中心化方案的優點，而且他整合很很棒，可以開箱即用（out of box）。在 &lt;a class="link" href="https://github.com/ipfs/kubo/#what-is-ipfs" target="_blank" rel="noopener"
 >ipfs 的 GitHub README.md 中&lt;/a> 中的介紹：「It is like a single BitTorrent swarm, exchanging git objects」。他傳檔案的方式就像 BT 一樣是透過 p2p，定位檔案的方式像 Git，將檔案內容雜湊。&lt;/p>
 &lt;hr>
@@ -864,7 +864,7 @@ gateway timeout&amp;hellip;&lt;/p>
 開發 ipfs 的 protocal lab 曾經提出一個方案來把做種的成本轉移，那就是發行 &lt;a class="link" href="https://en.wikipedia.org/wiki/Filecoin" target="_blank" rel="noopener"
 >FileCoin&lt;/a>，但是以目前的市場來看，任何加密貨幣都會被拿去炒作，然後高機率爆掉，看下圖的 FileCoin 走勢就知道他被炒過一遍了&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;img src="https://blog.simbafs.cc/filecoin.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/filecoin.png"
 loading="lazy"
 alt="filecoin"
 > &amp;gt; &lt;a class="link" href="https://crypto.com/price/zh-TW/filecoin" target="_blank" rel="noopener"
@@ -875,41 +875,41 @@ alt="filecoin"
 &lt;p>如果節點中心化無法解決，至少我覺得閘道器中心化是容易解決的，只要瀏覽器內嵌 ipfs 就好了，或是像當年 Adobe Flash 一樣要裝外掛（也就是類似現在的本地閘道器作法），而且當這東西變成標配之後做種的問題也順帶解決&lt;/p>
 &lt;h2 id="參考資料">參考資料&lt;/h2>
 &lt;p>&lt;a class="link" href="https://docs.ipfs.tech" target="_blank" rel="noopener"
->ipfs docs&lt;/a>&lt;/p></description></item><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/bitbucket-connect-jira/</link><pubDate>Wed, 20 Jul 2022 17:39:07 +0800</pubDate><guid>https://blog.simbafs.cc/p/bitbucket-connect-jira/</guid><description>&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
+>ipfs docs&lt;/a>&lt;/p></description></item><item><title>Bitbucket Connect Jira</title><link>https://simbafs.cc/blog/p/bitbucket-connect-jira/</link><pubDate>Wed, 20 Jul 2022 17:39:07 +0800</pubDate><guid>https://simbafs.cc/blog/p/bitbucket-connect-jira/</guid><description>&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
 &lt;h2 id="bitbucket-連接-jira">Bitbucket 連接 Jira&lt;/h2>
 &lt;p>先到 Bitbucket 的 repo 的 Jira issue 頁面
-&lt;img src="https://blog.simbafs.cc/1.png"
+&lt;img src="https://simbafs.cc/blog/blog/1.png"
 loading="lazy"
 alt="1"
 >
 點擊左上方資料夾圖示按鈕，然後點擊「Manage linked projects」
-&lt;img src="https://blog.simbafs.cc/2.png"
+&lt;img src="https://simbafs.cc/blog/blog/2.png"
 loading="lazy"
 alt="2"
 >
 選好 Jira 專案後，按下「Link project」
-&lt;img src="https://blog.simbafs.cc/3.png"
+&lt;img src="https://simbafs.cc/blog/blog/3.png"
 loading="lazy"
 alt="3"
 >
 等載入完成就可以看到 Jira issue 了
-&lt;img src="https://blog.simbafs.cc/4.png"
+&lt;img src="https://simbafs.cc/blog/blog/4.png"
 loading="lazy"
 alt="4"
 >&lt;/p>
 &lt;h2 id="jira-issue-連結-bitbucket-branch">Jira issue 連結 Bitbucket branch&lt;/h2>
 &lt;p>Bitbucket 的 repo 的 Jira issue 頁面，點擊要處理的 Jira issue 最右側的三個點點
-&lt;img src="https://blog.simbafs.cc/4.png"
+&lt;img src="https://simbafs.cc/blog/blog/4.png"
 loading="lazy"
 alt="4"
 >
 選第一個按鈕「Create Brench」
-&lt;img src="https://blog.simbafs.cc/5.png"
+&lt;img src="https://simbafs.cc/blog/blog/5.png"
 loading="lazy"
 alt="5"
 >
 填好 type、name 等等訊息，按下「Create」就建立好並對應了
-&lt;img src="https://blog.simbafs.cc/6.png"
+&lt;img src="https://simbafs.cc/blog/blog/6.png"
 loading="lazy"
 alt="6"
 >&lt;/p>

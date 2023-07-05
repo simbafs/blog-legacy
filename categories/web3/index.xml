@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>web3 on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/web3/</link><description>Recent content in web3 on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 22 Aug 2022 16:44:06 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/web3/index.xml" rel="self" type="application/rss+xml"/><item><title>IPFS</title><link>https://blog.simbafs.cc/p/ipfs/</link><pubDate>Mon, 22 Aug 2022 16:44:06 +0800</pubDate><guid>https://blog.simbafs.cc/p/ipfs/</guid><description>&lt;h1 id="ipfs">IPFS&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>web3 on Simba 的喵窩</title><link>https://simbafs.cc/blog/categories/web3/</link><description>Recent content in web3 on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 22 Aug 2022 16:44:06 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/categories/web3/index.xml" rel="self" type="application/rss+xml"/><item><title>IPFS</title><link>https://simbafs.cc/blog/p/ipfs/</link><pubDate>Mon, 22 Aug 2022 16:44:06 +0800</pubDate><guid>https://simbafs.cc/blog/p/ipfs/</guid><description>&lt;h1 id="ipfs">IPFS&lt;/h1>
 &lt;p>ipfs（&lt;strong>I&lt;/strong>nter&lt;strong>P&lt;/strong>lanetary &lt;strong>F&lt;/strong>ile &lt;strong>S&lt;/strong>ystem）是一個去中心化的檔案儲存方案，為什麼說是方案，因為他包括了通訊協議、軟體、檔案系統、名稱系統、閘道器。這個概念其實不新鮮但是 ipfs 整合過去去中心化方案的優點，而且他整合很很棒，可以開箱即用（out of box）。在 &lt;a class="link" href="https://github.com/ipfs/kubo/#what-is-ipfs" target="_blank" rel="noopener"
 >ipfs 的 GitHub README.md 中&lt;/a> 中的介紹：「It is like a single BitTorrent swarm, exchanging git objects」。他傳檔案的方式就像 BT 一樣是透過 p2p，定位檔案的方式像 Git，將檔案內容雜湊。&lt;/p>
 &lt;hr>
@@ -255,7 +255,7 @@ gateway timeout&amp;hellip;&lt;/p>
 開發 ipfs 的 protocal lab 曾經提出一個方案來把做種的成本轉移，那就是發行 &lt;a class="link" href="https://en.wikipedia.org/wiki/Filecoin" target="_blank" rel="noopener"
 >FileCoin&lt;/a>，但是以目前的市場來看，任何加密貨幣都會被拿去炒作，然後高機率爆掉，看下圖的 FileCoin 走勢就知道他被炒過一遍了&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;img src="https://blog.simbafs.cc/filecoin.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/filecoin.png"
 loading="lazy"
 alt="filecoin"
 > &amp;gt; &lt;a class="link" href="https://crypto.com/price/zh-TW/filecoin" target="_blank" rel="noopener"
