@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Simba 的喵窩</title><link>https://simbafs.cc/tags/linux/</link><description>Recent content in linux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 18 Apr 2022 18:53:50 +0800</lastBuildDate><atom:link href="https://simbafs.cc/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Anbox</title><link>https://simbafs.cc/p/linux/anbox/</link><pubDate>Mon, 18 Apr 2022 18:53:50 +0800</pubDate><guid>https://simbafs.cc/p/linux/anbox/</guid><description>&lt;h1 id="anbox">Anbox&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Simba 的喵窩</title><link>https://simbafs.cc/blog/tags/linux/</link><description>Recent content in linux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 18 Apr 2022 18:53:50 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Anbox</title><link>https://simbafs.cc/blog/p/linux/anbox/</link><pubDate>Mon, 18 Apr 2022 18:53:50 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/anbox/</guid><description>&lt;h1 id="anbox">Anbox&lt;/h1>
 &lt;p>&lt;a class="link" href="https://anbox.io/" target="_blank" rel="noopener"
 >anbox&lt;/a> 是 Android in a box，是一種基於容器化技術的 Android 模擬器，所以執行速度會比較快、比較省資源，而且因為每個 App 都在各自的容器裡面，所以比較安全
 （應該沒理解錯吧？）。&lt;br>
@@ -114,7 +114,7 @@
 >https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="問遺">問遺&lt;/h2>
-&lt;p>目前裝好 APP 但是我打不開&lt;/p></description></item><item><title>kdeconnect</title><link>https://simbafs.cc/p/linux/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 23:25:28 +0800</pubDate><guid>https://simbafs.cc/p/linux/kdeconnect/</guid><description>&lt;h1 id="kdeconnect">kdeconnect&lt;/h1>
+&lt;p>目前裝好 APP 但是我打不開&lt;/p></description></item><item><title>kdeconnect</title><link>https://simbafs.cc/blog/p/linux/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 23:25:28 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/kdeconnect/</guid><description>&lt;h1 id="kdeconnect">kdeconnect&lt;/h1>
 &lt;p>kdeconnect 顧名思義是 kde 出的一款 connect 軟體，功能非常多而且方便。電腦和手機都安裝好軟體後，只要在同一個網域就可以配對連接&lt;/p>
 &lt;h2 id="功能介紹">功能介紹&lt;/h2>
 &lt;ol>
@@ -145,7 +145,7 @@
 &lt;td style="text-align:left">&lt;code>loginctl unlock-session&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Cast Phone Screen to Computer</title><link>https://simbafs.cc/p/linux/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/cast-phone-screen-to-computer/</guid><description>&lt;h1 id="cast-phone-screen-to-computer">Cast Phone Screen to Computer&lt;/h1>
+&lt;/table></description></item><item><title>Cast Phone Screen to Computer</title><link>https://simbafs.cc/blog/p/linux/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/cast-phone-screen-to-computer/</guid><description>&lt;h1 id="cast-phone-screen-to-computer">Cast Phone Screen to Computer&lt;/h1>
 &lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
 &lt;h2 id="scrcpy">SCRCPY&lt;/h2>
 &lt;p>這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。&lt;/p>
@@ -182,7 +182,7 @@
 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options" target="_blank" rel="noopener"
 >https://developer.android.com/studio/debug/dev-options&lt;/a>
 &lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
->https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20&lt;/a>&lt;/p></description></item><item><title>docker login error</title><link>https://simbafs.cc/p/linux/docker/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/docker/docker-login-error/</guid><description>&lt;h1 id="docker-login-error">Docker Login Error&lt;/h1>
+>https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20&lt;/a>&lt;/p></description></item><item><title>docker login error</title><link>https://simbafs.cc/blog/p/linux/docker/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/docker/docker-login-error/</guid><description>&lt;h1 id="docker-login-error">Docker Login Error&lt;/h1>
 &lt;h2 id="錯誤說明">錯誤說明&lt;/h2>
 &lt;p>昨天我在 terminal 登入 docker 的時候發現不知道為什麼不能登入，我先透過網頁登入確認過密碼沒有問題，也不是打錯字的關係，但還是不能當入。總是會有類似以下的錯誤訊息。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -243,7 +243,7 @@
 >https://stackoverflow.com/questions/50151833/cannot-login-to-docker-account/52881198#52881198&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://gist.github.com/dataday/3c267be29e32573829c4781c99ea3395" target="_blank" rel="noopener"
 >https://gist.github.com/dataday/3c267be29e32573829c4781c99ea3395&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Connect to Ethernet in Docker Container</title><link>https://simbafs.cc/p/linux/docker/connect-to-ethernet-in-docker-container/</link><pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/docker/connect-to-ethernet-in-docker-container/</guid><description>&lt;h1 id="connect-to-ethernet-in-docker-container">Connect to Ethernet in Docker Container&lt;/h1>
+&lt;/ul></description></item><item><title>Connect to Ethernet in Docker Container</title><link>https://simbafs.cc/blog/p/linux/docker/connect-to-ethernet-in-docker-container/</link><pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/docker/connect-to-ethernet-in-docker-container/</guid><description>&lt;h1 id="connect-to-ethernet-in-docker-container">Connect to Ethernet in Docker Container&lt;/h1>
 &lt;h2 id="如何在-docker-container-裡連接-ethernet">如何在 docker container 裡連接 ethernet&lt;/h2>
 &lt;p>今天突然有個需求是在一個已經開啟的 container 弄東西，需要網路，但是不知道為什麼一直不上，後來發現是 docker 沒有設定 DNS 的問題，只要在外面輸入兩行指令就可以了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -256,7 +256,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl restart docker
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>然後重新啟動 docker&lt;/p></description></item><item><title>docker commit</title><link>https://simbafs.cc/p/linux/docker/docker-commit/</link><pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/docker/docker-commit/</guid><description>&lt;h1 id="docker-commit">Docker Commit&lt;/h1>
+&lt;/div>&lt;p>然後重新啟動 docker&lt;/p></description></item><item><title>docker commit</title><link>https://simbafs.cc/blog/p/linux/docker/docker-commit/</link><pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/docker/docker-commit/</guid><description>&lt;h1 id="docker-commit">Docker Commit&lt;/h1>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>上次提到可以用 Dockerfile 建立 docker image，但我們還有令一個方法可以建立 docker image，那就是 &lt;code>docker commit&lt;/code> 指令&lt;/p>
 &lt;h3 id="和-dockerfile-差別">和 Dockerfile 差別&lt;/h3>
@@ -318,7 +318,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;td style="text-align:left">建構時停容器&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docker 基礎指令</title><link>https://simbafs.cc/p/linux/docker/docker-command/</link><pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/docker/docker-command/</guid><description>&lt;h1 id="docker-指令">Docker 指令&lt;/h1>
+&lt;/table></description></item><item><title>Docker 基礎指令</title><link>https://simbafs.cc/blog/p/linux/docker/docker-command/</link><pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/docker/docker-command/</guid><description>&lt;h1 id="docker-指令">Docker 指令&lt;/h1>
 &lt;h2 id="install">Install&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -339,7 +339,7 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 每個 docker image 可以產生很多個 container，也就是執行中的程式。在這裡你已經可以用 docker 來建立各種服務了。這裡也可以想像成虛擬機，用 &lt;code>docker exec -it container_name bash&lt;/code> 可以進到 container 裡面(如果裡面有 bash 的話)&lt;/li>
 &lt;li>docker-compose&lt;br>
 一個服務不是一個 container 就可以架起來的，通常需要好幾個 container。這時候如果透過指令啟動也許會有忘記啟動和設定複雜的問題，所以有了這個工具。他透過 yml 設定來啟動服務。值得注意的是在同一個 &lt;code>docker-compose.yml&lt;/code> 啟動的 container 會在同一個網路內而和外面隔開，所以如果是 containers 之間的通訊不用把 port 暴露出來，只有開給外面的要 expose。&lt;/li>
-&lt;/ol></description></item><item><title>文章更新時間錯亂問題</title><link>https://simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;h1 id="問題">問題&lt;/h1>
+&lt;/ol></description></item><item><title>文章更新時間錯亂問題</title><link>https://simbafs.cc/blog/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;h1 id="問題">問題&lt;/h1>
 &lt;p>在設定完 GitHub Action 之後，我發現我的文章的更新時間都錯了，會全部變成當天日期。但是本地生成的就沒有這個問題，經過一番盤查和猜測後，我發現問題是因為 git 不會把 modified date 紀錄，因為每台電腦的時區都是不一樣的，紀錄起來沒有意義。但是我們需要這項 meta data，所以我們就要自己想法紀錄&lt;/p>
 &lt;h1 id="解法-v10">解法 v1.0&lt;/h1>
 &lt;p>首先，因為每一篇文章 hexo 都會紀錄建立時間，所以我們可以直接把他抓出來，然後把檔案的更新時間設成這個時間就可以啦！&lt;/p>
@@ -641,7 +641,7 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>GPG</title><link>https://simbafs.cc/p/linux/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/gpg/</guid><description>&lt;h1 id="gpg">GPG&lt;/h1>
+&lt;/div></description></item><item><title>GPG</title><link>https://simbafs.cc/blog/p/linux/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/gpg/</guid><description>&lt;h1 id="gpg">GPG&lt;/h1>
 &lt;h2 id="sign-git-commit-with-gpg">sign git commit with gpg&lt;/h2>
 &lt;p>我按照他的作法弄完後就是沒辦法 commit
 他說 GPG 無法簽章
@@ -691,7 +691,7 @@ name 和 git 設定的一樣&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gpg --delete-key &amp;lt;ID&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>isolate</title><link>https://simbafs.cc/p/linux/isolate/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/isolate/</guid><description>&lt;h1 id="isolate">isolate&lt;/h1>
+&lt;/div></description></item><item><title>isolate</title><link>https://simbafs.cc/blog/p/linux/isolate/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/isolate/</guid><description>&lt;h1 id="isolate">isolate&lt;/h1>
 &lt;p>我有一個放了很久的計畫，就是自己寫一個 OJ，因為我覺得現在的那個太難用了。
 我很快的建立 repo 但是卻完全沒有進展，我寫了一個 shell script 幫忙編譯執行程式之後我就在也沒有動過他了
 我沒有繼續動工的原因是我不知道如何隔離使用者提交的程式碼
@@ -762,7 +762,7 @@ hello.sh&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>他最後會輸出執行時間和執行成功的訊息
-其他的內容等等再補&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://simbafs.cc/p/linux/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/ssh-tunnel/</guid><description>&lt;h1 id="ssh-tunnel">SSH Tunnel&lt;/h1>
+其他的內容等等再補&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://simbafs.cc/blog/p/linux/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/ssh-tunnel/</guid><description>&lt;h1 id="ssh-tunnel">SSH Tunnel&lt;/h1>
 &lt;p>昨天架好了 reverse ssh 讓我可以連回學校 server
 今天來研究 ssh tunnel&lt;/p>
 &lt;h2 id="簡介">簡介&lt;/h2>
@@ -829,7 +829,7 @@ hello.sh&lt;/p>
 如果是 -R 那前面就是 remote port&lt;/p>
 &lt;h2 id="參考連結">參考連結&lt;/h2>
 &lt;p>&lt;a class="link" href="https://johnliu55.tw/ssh-tunnel.html" target="_blank" rel="noopener"
->https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://simbafs.cc/p/linux/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/reverse-ssh/</guid><description>&lt;h1 id="reverse-ssh">Reverse SSH&lt;/h1>
+>https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://simbafs.cc/blog/p/linux/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/reverse-ssh/</guid><description>&lt;h1 id="reverse-ssh">Reverse SSH&lt;/h1>
 &lt;p>一直以來連線回社辦的電腦都要走 webtty 再開 tmate
 但是今天發現了一個新的方法可以透過反向的 ssh 連回社辦&lt;/p>
 &lt;h2 id="reverse-ssh-1">reverse ssh&lt;/h2>

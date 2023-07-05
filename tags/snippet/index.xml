@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>snippet on Simba 的喵窩</title><link>https://simbafs.cc/tags/snippet/</link><description>Recent content in snippet on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Feb 2023 15:40:41 +0800</lastBuildDate><atom:link href="https://simbafs.cc/tags/snippet/index.xml" rel="self" type="application/rss+xml"/><item><title>Bash Snippet</title><link>https://simbafs.cc/p/linux/bash/bash-snippet/</link><pubDate>Sat, 25 Feb 2023 15:40:41 +0800</pubDate><guid>https://simbafs.cc/p/linux/bash/bash-snippet/</guid><description>&lt;h1 id="bash-snippet">Bash Snippet&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>snippet on Simba 的喵窩</title><link>https://simbafs.cc/blog/tags/snippet/</link><description>Recent content in snippet on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Feb 2023 15:40:41 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/tags/snippet/index.xml" rel="self" type="application/rss+xml"/><item><title>Bash Snippet</title><link>https://simbafs.cc/blog/p/linux/bash/bash-snippet/</link><pubDate>Sat, 25 Feb 2023 15:40:41 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/bash/bash-snippet/</guid><description>&lt;h1 id="bash-snippet">Bash Snippet&lt;/h1>
 &lt;h2 id="clear-broken-symlinks">Clear broken symlinks&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -11,7 +11,7 @@
 &lt;/div>&lt;blockquote>
 &lt;p>&lt;a class="link" href="https://unix.stackexchange.com/questions/34248/how-can-i-find-broken-symlinks" target="_blank" rel="noopener"
 >stackoverflow&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>Python Snippet</title><link>https://simbafs.cc/p/python/python-snippet/</link><pubDate>Thu, 23 Feb 2023 23:23:49 +0800</pubDate><guid>https://simbafs.cc/p/python/python-snippet/</guid><description>&lt;h1 id="python-snippet">Python Snippet&lt;/h1>
+&lt;/blockquote></description></item><item><title>Python Snippet</title><link>https://simbafs.cc/blog/p/python/python-snippet/</link><pubDate>Thu, 23 Feb 2023 23:23:49 +0800</pubDate><guid>https://simbafs.cc/blog/p/python/python-snippet/</guid><description>&lt;h1 id="python-snippet">Python Snippet&lt;/h1>
 &lt;h2 id="basic">Basic&lt;/h2>
 &lt;h3 id="未定長度函數參數">未定長度函數參數&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -89,7 +89,7 @@
 &lt;/div>&lt;blockquote>
 &lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/3890621/how-does-multiplication-differ-for-numpy-matrix-vs-array-classes" target="_blank" rel="noopener"
 >stackoverflow&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>TypeScript Snippet</title><link>https://simbafs.cc/p/nodejs/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 23:28:41 +0800</pubDate><guid>https://simbafs.cc/p/nodejs/typescript-snippet/</guid><description>&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
+&lt;/blockquote></description></item><item><title>TypeScript Snippet</title><link>https://simbafs.cc/blog/p/nodejs/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 23:28:41 +0800</pubDate><guid>https://simbafs.cc/blog/p/nodejs/typescript-snippet/</guid><description>&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
 &lt;h2 id="keyof">keyof&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">

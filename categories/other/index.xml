@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>other on Simba 的喵窩</title><link>https://simbafs.cc/categories/other/</link><description>Recent content in other on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Feb 2023 22:07:38 +0800</lastBuildDate><atom:link href="https://simbafs.cc/categories/other/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown to PDF</title><link>https://simbafs.cc/p/other/markdown-to-pdf/</link><pubDate>Tue, 21 Feb 2023 22:07:38 +0800</pubDate><guid>https://simbafs.cc/p/other/markdown-to-pdf/</guid><description>&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>other on Simba 的喵窩</title><link>https://simbafs.cc/blog/categories/other/</link><description>Recent content in other on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Feb 2023 22:07:38 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/categories/other/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown to PDF</title><link>https://simbafs.cc/blog/p/other/markdown-to-pdf/</link><pubDate>Tue, 21 Feb 2023 22:07:38 +0800</pubDate><guid>https://simbafs.cc/blog/p/other/markdown-to-pdf/</guid><description>&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
 &lt;h2 id="安裝環境">安裝環境&lt;/h2>
 &lt;p>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >pandoc&lt;/a> 你想得到的文件之間轉擋 &lt;a class="link" href="https://pandoc.org/diagram.svgz?v=20230203095535" target="_blank" rel="noopener"
@@ -214,51 +214,51 @@
 >https://tex.stackexchange.com/questions/179778/xelatex-under-ubuntu&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >https://pandoc.org/&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>不同「邊數」的平面</title><link>https://simbafs.cc/p/other/plantofnumbers/</link><pubDate>Sat, 11 Jun 2022 23:26:40 +0800</pubDate><guid>https://simbafs.cc/p/other/plantofnumbers/</guid><description>&lt;h1 id="同邊數的平面">同「邊數」的平面&lt;/h1>
+&lt;/ul></description></item><item><title>不同「邊數」的平面</title><link>https://simbafs.cc/blog/p/other/plantofnumbers/</link><pubDate>Sat, 11 Jun 2022 23:26:40 +0800</pubDate><guid>https://simbafs.cc/blog/p/other/plantofnumbers/</guid><description>&lt;h1 id="同邊數的平面">同「邊數」的平面&lt;/h1>
 &lt;h2 id="圖">圖&lt;/h2>
 &lt;p>先上圖，每個都是推到邊長為 4&lt;/p>
 &lt;h2 id="3">3&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/3.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/3.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="4">4&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/4.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/4.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="5">5&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/5.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/5.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="6">6&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/6.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/6.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="7">7&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/7.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/7.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="8">8&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/8.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/8.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="9">9&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/9.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/9.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="10">10&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/10.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/10.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="11">11&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/11.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/11.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="12">12&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/12.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/12.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="13">13&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/13.jpg"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/13.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;h2 id="共通性質">共通性質&lt;/h2>
@@ -277,7 +277,7 @@ loading="lazy"
 &lt;h2 id="鞍形">鞍形&lt;/h2>
 &lt;p>從 &lt;code>n=7&lt;/code> 開始，堆積時會自然地形成鞍形，且角度越來越小&lt;/p>
 &lt;h2 id="堆積技巧">堆積技巧&lt;/h2>
-&lt;p>首先取出「邊長」顆球球繞成環形，然後自然的繞成第二圈，整理角角形成最密堆積，然後在邊長大於 3 的邊上丟一顆球球，從最遠、最長的邊開始，邊長為三的邊會最穩定，盡量每次丟球球都要整理乾淨。堆積的時候要注意中心球球數是否跑掉。另外 11 顆前都還算好堆，12 開始會黏起來，但最後是可以穩定的分開的，13 就是完成也無法穩定分開，超過 13 還沒嘗試過。&lt;/p></description></item><item><title>震動 vs 振動</title><link>https://simbafs.cc/p/other/vibrate/</link><pubDate>Wed, 09 Mar 2022 23:16:55 +0800</pubDate><guid>https://simbafs.cc/p/other/vibrate/</guid><description>&lt;h1 id="震動-vs-振動">震動 vs 振動&lt;/h1>
+&lt;p>首先取出「邊長」顆球球繞成環形，然後自然的繞成第二圈，整理角角形成最密堆積，然後在邊長大於 3 的邊上丟一顆球球，從最遠、最長的邊開始，邊長為三的邊會最穩定，盡量每次丟球球都要整理乾淨。堆積的時候要注意中心球球數是否跑掉。另外 11 顆前都還算好堆，12 開始會黏起來，但最後是可以穩定的分開的，13 就是完成也無法穩定分開，超過 13 還沒嘗試過。&lt;/p></description></item><item><title>震動 vs 振動</title><link>https://simbafs.cc/blog/p/other/vibrate/</link><pubDate>Wed, 09 Mar 2022 23:16:55 +0800</pubDate><guid>https://simbafs.cc/blog/p/other/vibrate/</guid><description>&lt;h1 id="震動-vs-振動">震動 vs 振動&lt;/h1>
 &lt;p>都是往復運動，但有不同，簡單來說，振動比震動有規律。
 像是單擺是振動，地震是震動，因為單擺的運動是規律的，而地震波比較不規律&lt;/p>
 &lt;p>&lt;a class="link" href="https://pedia.cloud.edu.tw/Entry/Detail/?title=%E6%8C%AF%E5%8B%95" target="_blank" rel="noopener"
@@ -285,12 +285,12 @@ loading="lazy"
 &lt;a class="link" href="https://pedia.cloud.edu.tw/Entry/Detail?title=%E9%9C%87%E5%8B%95" target="_blank" rel="noopener"
 >https://pedia.cloud.edu.tw/Entry/Detail?title=%E9%9C%87%E5%8B%95&lt;/a>&lt;/p>
 &lt;p>至於為什麼我會去查這個呢？因為我發現物理實驗預報寫「簡諧震動」，但是我覺得「震」筆畫太多了，我想寫「振」於是就跑去查教育部字典&lt;/p>
-&lt;p>得證：懶惰使人進步&lt;/p></description></item><item><title>LaTeX Starter</title><link>https://simbafs.cc/p/other/latex-starter/</link><pubDate>Wed, 22 Dec 2021 23:18:41 +0800</pubDate><guid>https://simbafs.cc/p/other/latex-starter/</guid><description>&lt;h1 id="latex-stater">LaTeX Stater&lt;/h1>
+&lt;p>得證：懶惰使人進步&lt;/p></description></item><item><title>LaTeX Starter</title><link>https://simbafs.cc/blog/p/other/latex-starter/</link><pubDate>Wed, 22 Dec 2021 23:18:41 +0800</pubDate><guid>https://simbafs.cc/blog/p/other/latex-starter/</guid><description>&lt;h1 id="latex-stater">LaTeX Stater&lt;/h1>
 &lt;p>LaTeX 是一老牌的排版系統，基本的概念是內容與呈現分離，在撰寫內容時不用管排版（所以你就不會擔心移動圖片一咪咪整份文件就跑版了）。除了排版，LaTeX 還很擅長輸出各種莫名其妙的東西，像是超複雜的數學式、象棋棋譜、化學結構&amp;hellip;&amp;hellip;&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/images/latex-starter/latex-example.png"
+&lt;th style="text-align:center">&lt;img src="https://simbafs.cc/blog/images/latex-starter/latex-example.png"
 loading="lazy"
 alt="莫名其妙排版範例"
 >&lt;/th>
@@ -478,7 +478,7 @@ alt="莫名其妙排版範例"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>document&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>臺灣地址 API</title><link>https://simbafs.cc/p/other/%E8%87%BA%E7%81%A3%E5%9C%B0%E5%9D%80-api/</link><pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/other/%E8%87%BA%E7%81%A3%E5%9C%B0%E5%9D%80-api/</guid><description>&lt;h1 id="臺灣地址-api">臺灣地址 API&lt;/h1>
+&lt;/div></description></item><item><title>臺灣地址 API</title><link>https://simbafs.cc/blog/p/other/%E8%87%BA%E7%81%A3%E5%9C%B0%E5%9D%80-api/</link><pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/other/%E8%87%BA%E7%81%A3%E5%9C%B0%E5%9D%80-api/</guid><description>&lt;h1 id="臺灣地址-api">臺灣地址 API&lt;/h1>
 &lt;p>這是一個給經緯度吐地址的 api，甚至路段都會出來，搭配 &lt;a class="link" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation_API" target="_blank" rel="noopener"
 >web geolocation api&lt;/a> 蠻不錯的，精確度不錯。可以不知道有沒有 rate limited 的問題，目前看起來連 token 都不用。&lt;/p>
 &lt;h2 id="網址">網址&lt;/h2>
@@ -530,7 +530,7 @@ alt="莫名其妙排版範例"
 &lt;/div>
 &lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
 &lt;p>&lt;a class="link" href="https://data.gov.tw/dataset/101898" target="_blank" rel="noopener"
->https://data.gov.tw/dataset/101898&lt;/a>&lt;/p></description></item><item><title>大學二階面試、筆試</title><link>https://simbafs.cc/p/other/%E5%A4%A7%E5%AD%B8%E4%BA%8C%E9%9A%8E%E9%9D%A2%E8%A9%A6%E7%AD%86%E8%A9%A6/</link><pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/other/%E5%A4%A7%E5%AD%B8%E4%BA%8C%E9%9A%8E%E9%9D%A2%E8%A9%A6%E7%AD%86%E8%A9%A6/</guid><description>&lt;h1 id="大學二階面試筆試">大學二階面試、筆試&lt;/h1>
+>https://data.gov.tw/dataset/101898&lt;/a>&lt;/p></description></item><item><title>大學二階面試、筆試</title><link>https://simbafs.cc/blog/p/other/%E5%A4%A7%E5%AD%B8%E4%BA%8C%E9%9A%8E%E9%9D%A2%E8%A9%A6%E7%AD%86%E8%A9%A6/</link><pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/other/%E5%A4%A7%E5%AD%B8%E4%BA%8C%E9%9A%8E%E9%9D%A2%E8%A9%A6%E7%AD%86%E8%A9%A6/</guid><description>&lt;h1 id="大學二階面試筆試">大學二階面試、筆試&lt;/h1>
 &lt;h2 id="師大科技系面試">師大科技系面試&lt;/h2>
 &lt;blockquote>
 &lt;p>兩關各十分鐘&lt;/p>

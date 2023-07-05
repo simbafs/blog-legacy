@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mindustry on Simba 的喵窩</title><link>https://simbafs.cc/tags/mindustry/</link><description>Recent content in mindustry on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 22 May 2022 23:06:02 +0800</lastBuildDate><atom:link href="https://simbafs.cc/tags/mindustry/index.xml" rel="self" type="application/rss+xml"/><item><title>兩輸入生產單位的比較</title><link>https://simbafs.cc/p/game/mindustry/two-input-compare/</link><pubDate>Sun, 22 May 2022 23:06:02 +0800</pubDate><guid>https://simbafs.cc/p/game/mindustry/two-input-compare/</guid><description>&lt;h1 id="目的">目的&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mindustry on Simba 的喵窩</title><link>https://simbafs.cc/blog/tags/mindustry/</link><description>Recent content in mindustry on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 22 May 2022 23:06:02 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/tags/mindustry/index.xml" rel="self" type="application/rss+xml"/><item><title>兩輸入生產單位的比較</title><link>https://simbafs.cc/blog/p/game/mindustry/two-input-compare/</link><pubDate>Sun, 22 May 2022 23:06:02 +0800</pubDate><guid>https://simbafs.cc/blog/p/game/mindustry/two-input-compare/</guid><description>&lt;h1 id="目的">目的&lt;/h1>
 &lt;ol>
 &lt;li>驗證不同設計的生產效率差異&lt;/li>
 &lt;li>用科學的方式檢驗下面這些毫無根據、隨意編造的偏見
-&lt;img src="https://simbafs.cc/motivative-1.png"
+&lt;img src="https://simbafs.cc/blog/blog/motivative-1.png"
 loading="lazy"
 alt="motivative 1"
 >
-&lt;img src="https://simbafs.cc/motivative-2.png"
+&lt;img src="https://simbafs.cc/blog/blog/motivative-2.png"
 loading="lazy"
 alt="motivative 2"
 >
-&lt;img src="https://simbafs.cc/motivative-3.png"
+&lt;img src="https://simbafs.cc/blog/blog/motivative-3.png"
 loading="lazy"
 alt="motivative 3"
 >
-&lt;img src="https://simbafs.cc/motivative-4.png"
+&lt;img src="https://simbafs.cc/blog/blog/motivative-4.png"
 loading="lazy"
 alt="motivative 4"
 >&lt;/li>
@@ -77,15 +77,15 @@ alt="motivative 4"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;img src="https://simbafs.cc/sliicon.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/sliicon.png"
 loading="lazy"
 alt="silicon"
 >
-&lt;img src="https://simbafs.cc/result.png"
+&lt;img src="https://simbafs.cc/blog/blog/result.png"
 loading="lazy"
 alt="result"
 >
-&lt;img src="https://simbafs.cc/chart.png"
+&lt;img src="https://simbafs.cc/blog/blog/chart.png"
 loading="lazy"
 alt="chart"
 >&lt;/p>
@@ -101,21 +101,21 @@ B 唯一的缺點是佔體積大了一點點，但我個人認為，沒有任何
 &lt;h2 id="後續實驗">後續實驗&lt;/h2>
 &lt;p>根據 &lt;code>Magicaltank&lt;/code> 和 &lt;code>a0000778&lt;/code> 的建議，換成溢流器的確會增加效率，但即使沒換，但還是比 A 設計效率高。&lt;/p>
 &lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted --></description></item><item><title>迴圈的延遲</title><link>https://simbafs.cc/p/game/mindustry/delayofloop/</link><pubDate>Wed, 18 May 2022 17:19:57 +0800</pubDate><guid>https://simbafs.cc/p/game/mindustry/delayofloop/</guid><description>&lt;h1 id="迴圈的延遲">迴圈的延遲&lt;/h1>
+&lt;!-- raw HTML omitted --></description></item><item><title>迴圈的延遲</title><link>https://simbafs.cc/blog/p/game/mindustry/delayofloop/</link><pubDate>Wed, 18 May 2022 17:19:57 +0800</pubDate><guid>https://simbafs.cc/blog/p/game/mindustry/delayofloop/</guid><description>&lt;h1 id="迴圈的延遲">迴圈的延遲&lt;/h1>
 &lt;p>在&lt;a class="link" href="../turretautoaim" >上一篇&lt;/a>關於用 &lt;code>jump&lt;/code> 實現迴圈的部份，其實，Mindustry 的 &lt;code>jump&lt;/code> 的會有一個延遲&lt;/p>
 &lt;h2 id="單核">單核&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/singleCore.gif"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/singleCore.gif"
 loading="lazy"
 alt="single core"
 >&lt;/p>
 &lt;h2 id="多核">多核&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/fourCores.gif"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/fourCores.gif"
 loading="lazy"
 alt="four cores"
->&lt;/p></description></item><item><title>砲台自動瞄準</title><link>https://simbafs.cc/p/game/mindustry/turretautoaim/</link><pubDate>Wed, 18 May 2022 16:29:13 +0800</pubDate><guid>https://simbafs.cc/p/game/mindustry/turretautoaim/</guid><description>&lt;h1 id="砲台自動瞄準">砲台自動瞄準&lt;/h1>
+>&lt;/p></description></item><item><title>砲台自動瞄準</title><link>https://simbafs.cc/blog/p/game/mindustry/turretautoaim/</link><pubDate>Wed, 18 May 2022 16:29:13 +0800</pubDate><guid>https://simbafs.cc/blog/p/game/mindustry/turretautoaim/</guid><description>&lt;h1 id="砲台自動瞄準">砲台自動瞄準&lt;/h1>
 &lt;p>用處理器可以控制砲台們打的方向和什麼時候打，這樣只要有一群受控的砲台，就可以在射程範圍內指哪打哪&lt;/p>
 &lt;h2 id="單一砲台">單一砲台&lt;/h2>
-&lt;p>&lt;img src="https://simbafs.cc/oneTurretScreeshot.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/oneTurretScreeshot.png"
 loading="lazy"
 alt="one turret screenshot"
 >&lt;/p>
@@ -185,7 +185,7 @@ alt="one turret screenshot"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;img src="https://simbafs.cc/oneTurretCode.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/oneTurretCode.png"
 loading="lazy"
 alt="one turret code"
 >&lt;/p>
@@ -264,11 +264,11 @@ alt="one turret code"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;img src="https://simbafs.cc/multipleTurretsScreenshot.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/multipleTurretsScreenshot.png"
 loading="lazy"
 alt="multiple turrets screenshot"
 >&lt;br>
-&lt;img src="https://simbafs.cc/multipleTurretCode.png"
+&lt;img src="https://simbafs.cc/blog/blog/multipleTurretCode.png"
 loading="lazy"
 alt="multipleTurretsCode"
 >&lt;/p>
@@ -276,7 +276,7 @@ alt="multipleTurretsCode"
 &lt;p>&lt;a class="link" href="https://www.youtube.com/watch?v=UFK5m6qKT6U" target="_blank" rel="noopener"
 >https://www.youtube.com/watch?v=UFK5m6qKT6U&lt;/a>&lt;br>
 &lt;a class="link" href="https://www.youtube.com/watch?v=YMxU0jcS11I" target="_blank" rel="noopener"
->https://www.youtube.com/watch?v=YMxU0jcS11I&lt;/a>&lt;/p></description></item><item><title>控制敵方路徑</title><link>https://simbafs.cc/p/game/mindustry/pathofenemy/</link><pubDate>Tue, 17 May 2022 16:16:27 +0800</pubDate><guid>https://simbafs.cc/p/game/mindustry/pathofenemy/</guid><description>&lt;h1 id="控制敵方路徑">控制敵方路徑&lt;/h1>
+>https://www.youtube.com/watch?v=YMxU0jcS11I&lt;/a>&lt;/p></description></item><item><title>控制敵方路徑</title><link>https://simbafs.cc/blog/p/game/mindustry/pathofenemy/</link><pubDate>Tue, 17 May 2022 16:16:27 +0800</pubDate><guid>https://simbafs.cc/blog/p/game/mindustry/pathofenemy/</guid><description>&lt;h1 id="控制敵方路徑">控制敵方路徑&lt;/h1>
 &lt;p>在遊戲中，如何有效的讓資源集中在前線是一門學問，最好的情況當然是所有可能路徑都佈置強大的火力，但真實情況往往不是如此。&lt;/p>
 &lt;p>當遇到有多個洞口的地圖時，你可能堵好一個洞，敵方就從令一個洞跑進來，然後核心就被攻破了，但是你又沒有足夠的資源和時間在第一時間把所有的洞都佈置火力。這時候你就必須了解的方式如何行動的。&lt;/p>
 &lt;blockquote>
@@ -286,19 +286,19 @@ alt="multipleTurretsCode"
 &lt;p>尋找路徑可說是電腦科學一個很常見又基本的問題，Mindustry 尋路演算法會考慮預估時間。這個預估時間包括距離、要打破的牆等等，計算出來了之後選擇一條最段時間的路。注意，這裡他不會考慮沿途可能遭受的火力，我們就是要利用他這點來設計。&lt;/p>
 &lt;h2 id="我的習慣作法">我的習慣作法&lt;/h2>
 &lt;p>首先，最靠近空降區的洞不一定適合佈置砲台（例如第三關廢墟海岸左上角那個超級小的洞）這些地方可能是腹地狹小或是資源不足，總之你不會想要在這裡放砲台。那就用三層銅牆（不一定要 2x2 的，1x1 也可以）把他堵起來，一層防守兩層緩衝。挑選到適合的地方佈置砲台後，不要堵死，要留一條寬至少 3 格、夠長的通道。這個通道你要確保通暢，可以毫無阻礙的通到你的核心，這樣電腦就會判定這條路毫無阻礙，優先選擇，敵人就不會亂走到你沒有佈防的地方。這樣做還有一個好處，當你可以生產機甲時，友方機甲就可以直接走出去，不會受到阻礙，你也不用幫他們開門。&lt;br>
-然後在左右佈滿砲台，記得一定要放修理方塊，這樣你才不用常常來修方塊。至於通道長度和牆壁厚度，取決於這關敵方火力強度和你選用的砲台射程，如果你能夠在對方開火之前就幹掉他們，當然牆壁可以一層意思意思就好。&lt;/p></description></item><item><title>Merge</title><link>https://simbafs.cc/p/game/mindustry/merge/</link><pubDate>Tue, 17 May 2022 08:32:38 +0800</pubDate><guid>https://simbafs.cc/p/game/mindustry/merge/</guid><description>&lt;h1 id="merge">Merge&lt;/h1>
+然後在左右佈滿砲台，記得一定要放修理方塊，這樣你才不用常常來修方塊。至於通道長度和牆壁厚度，取決於這關敵方火力強度和你選用的砲台射程，如果你能夠在對方開火之前就幹掉他們，當然牆壁可以一層意思意思就好。&lt;/p></description></item><item><title>Merge</title><link>https://simbafs.cc/blog/p/game/mindustry/merge/</link><pubDate>Tue, 17 May 2022 08:32:38 +0800</pubDate><guid>https://simbafs.cc/blog/p/game/mindustry/merge/</guid><description>&lt;h1 id="merge">Merge&lt;/h1>
 &lt;p>Mindustry 中，某條輸送帶（A）合併到另一條未滿的輸送帶（B）上時，如果 B 有一個足夠小的空隙，A 是有機會無法補滿的&lt;/p>
-&lt;p>&lt;img src="https://simbafs.cc/gap.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/gap.png"
 loading="lazy"
 alt="gap"
 >&lt;/p>
 &lt;p>這種情況通常出現在兩列礦機的合併&lt;/p>
-&lt;p>&lt;img src="https://simbafs.cc/withoutRouter.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/withoutRouter.png"
 loading="lazy"
 alt="withoutRouter"
 >&lt;/p>
 &lt;p>要解決這個狀況，最簡單的方法是加上一個分配器&lt;/p>
-&lt;p>&lt;img src="https://simbafs.cc/withRouter.png"
+&lt;p>&lt;img src="https://simbafs.cc/blog/blog/withRouter.png"
 loading="lazy"
 alt="withRouter"
 >&lt;/p>

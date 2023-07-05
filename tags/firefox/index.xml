@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>firefox on Simba 的喵窩</title><link>https://simbafs.cc/tags/firefox/</link><description>Recent content in firefox on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 08 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://simbafs.cc/tags/firefox/index.xml" rel="self" type="application/rss+xml"/><item><title>Firefox Touch Screen Scroll</title><link>https://simbafs.cc/p/linux/firefox-touch-screen-scroll/</link><pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/firefox-touch-screen-scroll/</guid><description>&lt;h1 id="firefox-touch-screen-scroll">Firefox Touch Screen Scroll&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>firefox on Simba 的喵窩</title><link>https://simbafs.cc/blog/tags/firefox/</link><description>Recent content in firefox on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 08 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://simbafs.cc/blog/tags/firefox/index.xml" rel="self" type="application/rss+xml"/><item><title>Firefox Touch Screen Scroll</title><link>https://simbafs.cc/blog/p/linux/firefox-touch-screen-scroll/</link><pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/firefox-touch-screen-scroll/</guid><description>&lt;h1 id="firefox-touch-screen-scroll">Firefox Touch Screen Scroll&lt;/h1>
 &lt;p>再換了觸控筆電後，在 firefox 一直有個問題：觸控往下滑會被當成選取，要卷動一定要用右邊的 scroll bar&lt;/p>
 &lt;h2 id="解決方案">解決方案&lt;/h2>
 &lt;p>按照 &lt;a class="link" href="https://askubuntu.com/questions/853910/ubuntu-16-and-touchscreen-scrolling-in-firefox" target="_blank" rel="noopener"
 >https://askubuntu.com/questions/853910/ubuntu-16-and-touchscreen-scrolling-in-firefox&lt;/a> 的最佳解法，真的加上 &lt;code>MOZ_USE_XINPUT2=1&lt;/code> 的環境變數就可以了。&lt;br>
-另外在設定 &lt;code>~/.local/share/applications/firefox.desktop&lt;/code> 的時候要注意有不只一個 Exec，改完如果沒有生效可以重開機看看。&lt;/p></description></item><item><title>Firefox Event Listener Breakpoint</title><link>https://simbafs.cc/p/frontend/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/frontend/firefox-event-listener-breakpoint/</guid><description>&lt;h1 id="firefox-event-listener-breakpoint">Firefox Event Listener Breakpoint&lt;/h1>
+另外在設定 &lt;code>~/.local/share/applications/firefox.desktop&lt;/code> 的時候要注意有不只一個 Exec，改完如果沒有生效可以重開機看看。&lt;/p></description></item><item><title>Firefox Event Listener Breakpoint</title><link>https://simbafs.cc/blog/p/frontend/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/frontend/firefox-event-listener-breakpoint/</guid><description>&lt;h1 id="firefox-event-listener-breakpoint">Firefox Event Listener Breakpoint&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>最近在用 jquery 但是不知道為什麼每次 debugger 都會跳出一個通知
-&lt;img src="https://simbafs.cc/images/firefox-event-listener-breakpoint/1.png"
+&lt;img src="https://simbafs.cc/blog/images/firefox-event-listener-breakpoint/1.png"
 loading="lazy"
 alt="1.png"
 >
@@ -16,7 +16,7 @@ alt="1.png"
 在 &lt;!-- raw HTML omitted --> 裡面 Debugger 頁籤左下有個拉頁叫「Event Listener Breakpoints」
 把裡面的東西都點掉就好了
 就是那個 DOM Mutation
-&lt;img src="https://simbafs.cc/images/firefox-event-listener-breakpoint/2.png"
+&lt;img src="https://simbafs.cc/blog/images/firefox-event-listener-breakpoint/2.png"
 loading="lazy"
 alt="2.png"
 >&lt;/p>
