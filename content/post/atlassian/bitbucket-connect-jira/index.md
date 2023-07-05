@@ -4,6 +4,7 @@ slug = ""
 date = 2022-07-20T17:39:07+08:00
 tags = ['git']
 categories = ['uncategorized']
+draft = true
 +++
 
 # Bitbucket Connect Jira

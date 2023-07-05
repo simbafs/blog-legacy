@@ -35,11 +35,11 @@ type = "search"
 [[widgets.homepage]]
 type = "archives"
 
-[widgets.homepage.params]
-limit = 10
+# [widgets.homepage.params]
+# limit = 10
 
-[[widgets.homepage]]
-type = "categories"
+# [[widgets.homepage]]
+# type = "categories"
 
 [widgets.homepage.params]
 limit = 100

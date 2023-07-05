@@ -1,8 +1,9 @@
 +++
 title = "GPG and Yubikey"
-slug = ""
+slug = "gpg-yubikey"
 date = 2022-12-12T23:26:53+08:00
-draft = true
+tags = ['GPG', 'SSH', 'yubikey']
+categories = ['linux']
 +++
 
 # GPG
