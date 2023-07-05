@@ -55,6 +55,7 @@ comments: false
 
 # 📬 聯絡方式
 
+-   gpg fingerprint: [FB39 7B64 177E 7C69 6E4D  707F 2FAD 6967 8674 CF25](https://github.com/simbafs.gpg)
 -   mail: [me@simbafs.cc](mailto:me@simbafs.cc)
 -   Mastodon: <a rel="me" href="https://masto.simbafs.cc/@simbafs">@simbafs@masto.simbafs.cc</a>
 -   Discord id: @simbafs
