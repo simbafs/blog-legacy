@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://simbafs.cc/blog"
+baseurl = "https://blog.simbafs.cc"
 languageCode = "en-us"
 paginate = 10
 title = "Simba 的喵窩"
