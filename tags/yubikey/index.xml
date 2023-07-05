@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>yubikey on Simba 的喵窩</title><link>https://simbafs.cc/blog/tags/yubikey/</link><description>Recent content in yubikey on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 19 Apr 2022 15:22:55 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/tags/yubikey/index.xml" rel="self" type="application/rss+xml"/><item><title>Yubikey</title><link>https://simbafs.cc/blog/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 15:22:55 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/yubikey/</guid><description>&lt;h1 id="yubikey">Yubikey&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>yubikey on Simba 的喵窩</title><link>https://simbafs.cc/tags/yubikey/</link><description>Recent content in yubikey on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 19 Apr 2022 15:22:55 +0800</lastBuildDate><atom:link href="https://simbafs.cc/tags/yubikey/index.xml" rel="self" type="application/rss+xml"/><item><title>Yubikey</title><link>https://simbafs.cc/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 15:22:55 +0800</pubDate><guid>https://simbafs.cc/p/linux/yubikey/</guid><description>&lt;h1 id="yubikey">Yubikey&lt;/h1>
 &lt;p>感謝煥杰賣我一個 1200，撿到寶啦！我買的是 &lt;a class="link" href="https://www.yubico.com/tw/product/yubikey-5c-nfc/" target="_blank" rel="noopener"
 >Yubikey 5C NFC&lt;/a>，看起來幾乎所有功能都有&lt;/p>
 &lt;h2 id="login">login&lt;/h2>
@@ -10,7 +10,7 @@
 &lt;/blockquote>
 &lt;h2 id="ssh-gpg">ssh gpg&lt;/h2>
 &lt;p>&lt;del>研究中&amp;hellip;&lt;/del>
-在這裡 &lt;a class="link" href="https://simbafs.cc/blog/posts/linux/gpg-with-ssh" >GPG with SSH&lt;/a>&lt;/p>
+在這裡 &lt;a class="link" href="https://simbafs.cc/posts/linux/gpg-with-ssh" >GPG with SSH&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;a class="link" href="https://medium.com/@SSWilsonKao/%E5%A6%82%E4%BD%95%E5%9C%A8-mac-%E4%B8%8A-%E6%8A%8A-yubikey-%E8%88%87-gpg-ssh-%E6%90%AD%E9%85%8D%E5%9C%A8%E4%B8%80%E8%B5%B7-5f842d20ad6a" target="_blank" rel="noopener"
 >如何在 Mac 上，把 YubiKey 與 GPG、SSH 搭配在一起&lt;/a> &amp;gt; &lt;a class="link" href="https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29" target="_blank" rel="noopener"

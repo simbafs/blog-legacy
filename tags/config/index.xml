@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>config on Simba 的喵窩</title><link>https://simbafs.cc/blog/tags/config/</link><description>Recent content in config on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 07 Apr 2022 23:13:04 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/tags/config/index.xml" rel="self" type="application/rss+xml"/><item><title>Modeline</title><link>https://simbafs.cc/blog/p/linux/vim/modeline/</link><pubDate>Thu, 07 Apr 2022 23:13:04 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/vim/modeline/</guid><description>&lt;h1 id="modeline">Modeline&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>config on Simba 的喵窩</title><link>https://simbafs.cc/tags/config/</link><description>Recent content in config on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 07 Apr 2022 23:13:04 +0800</lastBuildDate><atom:link href="https://simbafs.cc/tags/config/index.xml" rel="self" type="application/rss+xml"/><item><title>Modeline</title><link>https://simbafs.cc/p/linux/vim/modeline/</link><pubDate>Thu, 07 Apr 2022 23:13:04 +0800</pubDate><guid>https://simbafs.cc/p/linux/vim/modeline/</guid><description>&lt;h1 id="modeline">Modeline&lt;/h1>
 &lt;p>&lt;code>modeline&lt;/code> 是一個可以將 vim 設定嵌入檔案的方式，這樣就可以讓某些檔案有自己的設定，像是折疊、不要行數、tab 等於多少空白等等。&lt;/p>
 &lt;h2 id="簡單的條件">簡單的條件&lt;/h2>
 &lt;p>簡單的 &lt;code>modeline&lt;/code> 需要滿足幾個條件：&lt;/p>
@@ -18,7 +18,7 @@
 &lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
 &lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file&lt;/a>&lt;br>
-help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item><title>Aconf</title><link>https://simbafs.cc/blog/p/golang/aconf/</link><pubDate>Fri, 24 Sep 2021 08:46:37 +0800</pubDate><guid>https://simbafs.cc/blog/p/golang/aconf/</guid><description>&lt;h1 id="aconf">aconf&lt;/h1>
+help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item><title>Aconf</title><link>https://simbafs.cc/p/golang/aconf/</link><pubDate>Fri, 24 Sep 2021 08:46:37 +0800</pubDate><guid>https://simbafs.cc/p/golang/aconf/</guid><description>&lt;h1 id="aconf">aconf&lt;/h1>
 &lt;p>aconf 是個可以直接幫你解決所有「設定」問題的套件，設定可以有預設、從命令列參數、環境變數和設定檔，設定檔還有官方支援四種格式，dotEnv、HCL、toml、yaml 和 json。&lt;br>
 而且設定檔還可以有不只一個，他可以把多個設定檔合成，相當方便&lt;/p>
 &lt;h2 id="基本使用">基本使用&lt;/h2>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>bash on Simba 的喵窩</title><link>https://simbafs.cc/blog/tags/bash/</link><description>Recent content in bash on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Feb 2023 15:40:41 +0800</lastBuildDate><atom:link href="https://simbafs.cc/blog/tags/bash/index.xml" rel="self" type="application/rss+xml"/><item><title>Bash Snippet</title><link>https://simbafs.cc/blog/p/linux/bash/bash-snippet/</link><pubDate>Sat, 25 Feb 2023 15:40:41 +0800</pubDate><guid>https://simbafs.cc/blog/p/linux/bash/bash-snippet/</guid><description>&lt;h1 id="bash-snippet">Bash Snippet&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>bash on Simba 的喵窩</title><link>https://simbafs.cc/tags/bash/</link><description>Recent content in bash on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Feb 2023 15:40:41 +0800</lastBuildDate><atom:link href="https://simbafs.cc/tags/bash/index.xml" rel="self" type="application/rss+xml"/><item><title>Bash Snippet</title><link>https://simbafs.cc/p/linux/bash/bash-snippet/</link><pubDate>Sat, 25 Feb 2023 15:40:41 +0800</pubDate><guid>https://simbafs.cc/p/linux/bash/bash-snippet/</guid><description>&lt;h1 id="bash-snippet">Bash Snippet&lt;/h1>
 &lt;h2 id="clear-broken-symlinks">Clear broken symlinks&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -11,7 +11,7 @@
 &lt;/div>&lt;blockquote>
 &lt;p>&lt;a class="link" href="https://unix.stackexchange.com/questions/34248/how-can-i-find-broken-symlinks" target="_blank" rel="noopener"
 >stackoverflow&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>bash number loop</title><link>https://simbafs.cc/blog/p/linux/bash/bash-number-loop/</link><pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/bash/bash-number-loop/</guid><description>&lt;h1 id="bash-number-loop">Bash Number Loop&lt;/h1>
+&lt;/blockquote></description></item><item><title>bash number loop</title><link>https://simbafs.cc/p/linux/bash/bash-number-loop/</link><pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/bash/bash-number-loop/</guid><description>&lt;h1 id="bash-number-loop">Bash Number Loop&lt;/h1>
 &lt;p>今天在某的地方剛好看到一個 bash 的小技巧，當我們要從 1 數到 100 時，通常會用 &lt;code>seq&lt;/code> 指令來做，但是如果我們的需求剛剛好是每次遞增（遞減）1 的話，就可以使用 &lt;code>{start..end}&lt;/code> 縮寫，下面兩個範例的效果是一樣的：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -46,7 +46,7 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">touch user&lt;span class="o">{&lt;/span>1..100&lt;span class="o">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>bash completion</title><link>https://simbafs.cc/blog/p/linux/bash/bash-completion/</link><pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/bash/bash-completion/</guid><description>&lt;h1 id="bash-completion">Bash Completion&lt;/h1>
+&lt;/div></description></item><item><title>bash completion</title><link>https://simbafs.cc/p/linux/bash/bash-completion/</link><pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/bash/bash-completion/</guid><description>&lt;h1 id="bash-completion">Bash Completion&lt;/h1>
 &lt;h2 id="需求">需求&lt;/h2>
 &lt;p>今天寫了一個 bash script 幫我管理 mongodb docker，在使用的時候一些子命令，像是 &lt;code>up&lt;/code>、&lt;code>down&lt;/code>、&lt;code>clean&lt;/code>。我希望可以讓 bash 當我自動補齊這些選項。&lt;/p>
 &lt;h2 id="bash_completion">&lt;code>bash_completion&lt;/code>&lt;/h2>
@@ -61,7 +61,7 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">complete&lt;/span> -W &lt;span class="s2">&amp;#34;up down clean&amp;#34;&lt;/span> mongodb
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;code>-W&lt;/code> 選項代表後面是字詞列表，用 &lt;code>-F&lt;/code> 後面可以接一個函數，但是這個我沒研究，也許下一個專案就是研究 &lt;code>complete&lt;/code> 也說不定。&lt;/p></description></item><item><title>文章更新時間錯亂問題</title><link>https://simbafs.cc/blog/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;h1 id="問題">問題&lt;/h1>
+&lt;/div>&lt;p>&lt;code>-W&lt;/code> 選項代表後面是字詞列表，用 &lt;code>-F&lt;/code> 後面可以接一個函數，但是這個我沒研究，也許下一個專案就是研究 &lt;code>complete&lt;/code> 也說不定。&lt;/p></description></item><item><title>文章更新時間錯亂問題</title><link>https://simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;h1 id="問題">問題&lt;/h1>
 &lt;p>在設定完 GitHub Action 之後，我發現我的文章的更新時間都錯了，會全部變成當天日期。但是本地生成的就沒有這個問題，經過一番盤查和猜測後，我發現問題是因為 git 不會把 modified date 紀錄，因為每台電腦的時區都是不一樣的，紀錄起來沒有意義。但是我們需要這項 meta data，所以我們就要自己想法紀錄&lt;/p>
 &lt;h1 id="解法-v10">解法 v1.0&lt;/h1>
 &lt;p>首先，因為每一篇文章 hexo 都會紀錄建立時間，所以我們可以直接把他抓出來，然後把檔案的更新時間設成這個時間就可以啦！&lt;/p>
@@ -363,12 +363,12 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>youtube-dl</title><link>https://simbafs.cc/blog/p/linux/youtube-dl/</link><pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/youtube-dl/</guid><description>&lt;h1 id="youtube-dl">Youtube DL&lt;/h1>
+&lt;/div></description></item><item><title>youtube-dl</title><link>https://simbafs.cc/p/linux/youtube-dl/</link><pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/youtube-dl/</guid><description>&lt;h1 id="youtube-dl">Youtube DL&lt;/h1>
 &lt;p>最近在下載 youtube 音樂，每次下載都要把檔案重新改名，很麻煩。所以就想要寫一個 shell script 來幫我解決。
 首先改名字我相信 youtube-dl 一定有提供這個選項，於是開始查文件。
 看到 &lt;code>-o&lt;/code> ，接下來講遇到的坑&lt;/p>
 &lt;h2 id="-o-坑">&lt;code>-o&lt;/code> 坑&lt;/h2>
-&lt;p>&lt;code>-o&lt;/code> 後面接的是一個 template string ，不是檔名，而且就算指定副檔名是 .mp3 了還是要寫成 &lt;code>%(ext)s&lt;/code>&lt;/p></description></item><item><title>Server Tool</title><link>https://simbafs.cc/blog/p/linux/server/server-tool/</link><pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/server/server-tool/</guid><description>&lt;h1 id="server-tool">Server Tool&lt;/h1>
+&lt;p>&lt;code>-o&lt;/code> 後面接的是一個 template string ，不是檔名，而且就算指定副檔名是 .mp3 了還是要寫成 &lt;code>%(ext)s&lt;/code>&lt;/p></description></item><item><title>Server Tool</title><link>https://simbafs.cc/p/linux/server/server-tool/</link><pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/server/server-tool/</guid><description>&lt;h1 id="server-tool">Server Tool&lt;/h1>
 &lt;h2 id="用-bash-寫-log-分析工具">用 bash 寫 log 分析工具&lt;/h2>
 &lt;p>因為我們的 server 不知道是為什麼一直受到 DDoS 攻擊&lt;br>
 我想知道是什麼時段容易受到攻擊和每次多久、來自那個 ip&lt;br>
@@ -450,7 +450,7 @@ dash 沒有支援這個語法
 &lt;p>&lt;a class="link" href="https://www.regextester.com/" target="_blank" rel="noopener"
 >https://www.regextester.com/&lt;/a>
 這個網站可以測試 RegEx
-蠻不錯的&lt;/p></description></item><item><title>ddos</title><link>https://simbafs.cc/blog/p/linux/server/ddos/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/blog/p/linux/server/ddos/</guid><description>&lt;h1 id="ddos">DDOS&lt;/h1>
+蠻不錯的&lt;/p></description></item><item><title>ddos</title><link>https://simbafs.cc/p/linux/server/ddos/</link><pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate><guid>https://simbafs.cc/p/linux/server/ddos/</guid><description>&lt;h1 id="ddos">DDOS&lt;/h1>
 &lt;h2 id="伺服器被-ddos-惹">伺服器被 DDoS 惹&lt;/h2>
 &lt;p>今天早上把社團的 reverse proxy server 換成 nginx&lt;br>
 下午心血來潮看看 log 檔
