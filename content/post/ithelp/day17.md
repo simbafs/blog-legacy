@@ -1,16 +1,17 @@
-+++
-title = "Day 17：coc.nvim 設定下集"
-date = "2021-09-17"
-tags = [
-  "cli",
-  "terminal",
-  "software development",
-  "vim",
-  "tmux",
-  "zsh"
-]
-categories = [ "ithelp", "pure-CLI-IDE" ]
-+++
+---
+categories:
+- ithelp
+- pure-CLI-IDE
+date: "2021-09-17"
+tags:
+- cli
+- terminal
+- software development
+- vim
+- tmux
+- zsh
+title: Day 17：coc.nvim 設定下集
+---
 
 今天的東西相當多，在 [GitHub README Example](https://github.com/neoclide/coc.nvim#example-vim-configuration) 中除了昨天介紹過得今天都收錄了，直接進主題吧！  
 喔！另外有些東西我真的不知道是什麼我會用原文寫並用中文括號括起來，歡迎知道的朋友留言告訴我

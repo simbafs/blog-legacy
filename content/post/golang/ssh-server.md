@@ -1,11 +1,14 @@
-+++
-title = "SSH Server"
-slug = ""
-date = 2022-08-03T14:15:31+08:00
-draft = true
-tags = ['ssh', 'tunnel']
-categories = ['go']
-+++
+---
+categories:
+- go
+date: "2022-08-03T14:15:31+08:00"
+draft: true
+slug: ""
+tags:
+- ssh
+- tunnel
+title: SSH Server
+---
 
 # 步驟
 

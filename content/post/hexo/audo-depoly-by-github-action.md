@@ -1,9 +1,13 @@
-+++
-title = "Audo Depoly by Github Action"
-date = "2020-02-11"
-tags = [ "hexo", "github action", 'cloud' ]
-categories = [ "hexo" ]
-+++
+---
+categories:
+- hexo
+date: "2020-02-11"
+tags:
+- hexo
+- github action
+- cloud
+title: Audo Depoly by Github Action
+---
 
 # GitHub Action 自動部署 Hexo
 

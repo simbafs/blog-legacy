@@ -1,10 +1,14 @@
-+++
-title = "Bluetooth 突然卡住都不動"
-slug = "bluwtooth-error"
-date = 2022-03-02T23:31:59+08:00
-tag = ["bluetooth", 'ubuntu-20.04', 'linux']
-categories = ['linux']
-+++
+---
+categories:
+- linux
+date: "2022-03-02T23:31:59+08:00"
+slug: bluwtooth-error
+tag:
+- bluetooth
+- ubuntu-20.04
+- linux
+title: Bluetooth 突然卡住都不動
+---
 
 # Bluetooth 突然卡住都不動
 

@@ -1,9 +1,11 @@
-+++
-title = "hexo-cli-extras"
-tags = [ "hexo" ]
-categories = [ "hexo" ]
-date = "2020-02-11"
-+++
+---
+categories:
+- hexo
+date: "2020-02-11"
+tags:
+- hexo
+title: hexo-cli-extras
+---
 
 # 好用的插件
 

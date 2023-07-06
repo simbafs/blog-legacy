@@ -1,9 +1,12 @@
-+++
-title = "youtube-dl"
-date = "2020-03-04"
-tags = [ "youtube-dl", "bash" ]
-categories = [ "linux" ]
-+++
+---
+categories:
+- linux
+date: "2020-03-04"
+tags:
+- youtube-dl
+- bash
+title: youtube-dl
+---
 
 # Youtube DL
 

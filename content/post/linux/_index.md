@@ -1,3 +1,3 @@
-+++
-title = 'linux'
-+++
+---
+title: linux
+---

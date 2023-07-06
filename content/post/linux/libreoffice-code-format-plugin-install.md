@@ -1,9 +1,12 @@
-+++
-title = "Libreoffice Code Format Plugin Installation"
-date = "2021-03-13"
-tags = [ "libreoffice", "code format" ]
-categories = [ "linux" ]
-+++
+---
+categories:
+- linux
+date: "2021-03-13"
+tags:
+- libreoffice
+- code format
+title: Libreoffice Code Format Plugin Installation
+---
 
 # 安裝
 

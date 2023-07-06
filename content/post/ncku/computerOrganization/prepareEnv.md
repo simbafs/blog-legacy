@@ -1,13 +1,13 @@
 ---
-title: Preparing Environment
-date: 2023-03-14T10:23:17+08:00
-tags:
-    - note
-    - riscv
-    - kernel
 categories:
-    - 'computer organization'
-image:
+- computer organization
+date: "2023-03-14T10:23:17+08:00"
+image: null
+tags:
+- note
+- riscv
+- kernel
+title: Preparing Environment
 ---
 
 # Preparing Environment

@@ -1,16 +1,17 @@
-+++
-title = "Day 10：新手殺，誰來教我離開 vim 阿～～"
-date = "2021-09-10"
-tags = [
-  "cli",
-  "terminal",
-  "software development",
-  "vim",
-  "tmux",
-  "zsh"
-]
-categories = [ "ithelp", "pure-CLI-IDE" ]
-+++
+---
+categories:
+- ithelp
+- pure-CLI-IDE
+date: "2021-09-10"
+tags:
+- cli
+- terminal
+- software development
+- vim
+- tmux
+- zsh
+title: Day 10：新手殺，誰來教我離開 vim 阿～～
+---
 
 前面 9 天都在介紹操作環境，今天終於要進到**編輯器**啦！我選用的編輯器是 nvim，但是如果你要用 vim 8 也是可以，因為這兩者之間幾乎**沒什麼差別**，只是你要注意這兩者的**設定檔位置**不同，目錄需要你**自己轉換**。唯一不同的點大概是 nvim 內建支援用 **lua**（一種程式語言）寫外掛，vim 8 只能用 **vimscript**。關於兩者之間的愛恨情仇請參考[這裡，他講的非常詳細](https://jdhao.github.io/2020/01/12/vim_nvim_history_development/)
 

@@ -1,9 +1,13 @@
-+++
-title = "express 重複 send"
-date = "2020-08-19"
-tags = [ "express", 'js', 'backend' ]
-categories = [ "nodejs" ]
-+++
+---
+categories:
+- nodejs
+date: "2020-08-19"
+tags:
+- express
+- js
+- backend
+title: express 重複 send
+---
 
 # express 重複 send
 

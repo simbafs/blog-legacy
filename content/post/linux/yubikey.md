@@ -1,10 +1,15 @@
-+++
-title = "Yubikey"
-date = 2022-04-19T15:22:55+08:00
-lastmod = 2022-12-07
-tags = ['yubikey', 'ssh', 'gpg', 'security']
-categories = ['linux']
-+++
+---
+categories:
+- linux
+date: "2022-04-19T15:22:55+08:00"
+lastmod: "2022-12-07"
+tags:
+- yubikey
+- ssh
+- gpg
+- security
+title: Yubikey
+---
 
 # Yubikey
 

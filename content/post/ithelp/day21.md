@@ -1,16 +1,17 @@
-+++
-title = "Day 21：儲存器與剪貼簿"
-date = "2021-09-21"
-tags = [
-  "cli",
-  "terminal",
-  "software development",
-  "vim",
-  "tmux",
-  "zsh"
-]
-categories = [ "ithelp", "pure-CLI-IDE" ]
-+++
+---
+categories:
+- ithelp
+- pure-CLI-IDE
+date: "2021-09-21"
+tags:
+- cli
+- terminal
+- software development
+- vim
+- tmux
+- zsh
+title: Day 21：儲存器與剪貼簿
+---
 
 |                     ![stackoverflow meme](/images/ithelp/pure-CLI-IDE/day21/stackoverflow-meme.png)                      |
 | :----------------------------------------------------------------------------------------------------------------------: |

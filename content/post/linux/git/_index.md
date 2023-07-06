@@ -1,3 +1,3 @@
-+++
-title = "git"
-+++
+---
+title: git
+---

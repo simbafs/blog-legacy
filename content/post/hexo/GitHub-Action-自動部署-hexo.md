@@ -1,9 +1,14 @@
-+++
-title = "GitHub Action 自動部署 hexo"
-tags = [ "hexo", "github", "github-action", "CI/Cl" ]
-categories = [ "hexo" ]
-date = "2020-08-16"
-+++
+---
+categories:
+- hexo
+date: "2020-08-16"
+tags:
+- hexo
+- github
+- github-action
+- CI/Cl
+title: GitHub Action 自動部署 hexo
+---
 
 # 前言
 

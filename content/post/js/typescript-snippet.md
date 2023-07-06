@@ -1,10 +1,14 @@
-+++
-title = "TypeScript Snippet"
-slug = ""
-date = 2023-02-10T23:28:41+08:00
-tags = ["ts", 'snippet', 'js']
-categories = ['nodejs']
-+++
+---
+categories:
+- nodejs
+date: "2023-02-10T23:28:41+08:00"
+slug: ""
+tags:
+- ts
+- snippet
+- js
+title: TypeScript Snippet
+---
 
 # TypeScript Snippet
 

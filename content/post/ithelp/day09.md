@@ -1,16 +1,17 @@
-+++
-title = "Day 09：今天又想不出標題了！tmux plugin 和 mouse mode"
-date = "2021-09-09"
-tags = [
-  "cli",
-  "terminal",
-  "software development",
-  "vim",
-  "tmux",
-  "zsh"
-]
-categories = [ "ithelp", "pure-CLI-IDE" ]
-+++
+---
+categories:
+- ithelp
+- pure-CLI-IDE
+date: "2021-09-09"
+tags:
+- cli
+- terminal
+- software development
+- vim
+- tmux
+- zsh
+title: Day 09：今天又想不出標題了！tmux plugin 和 mouse mode
+---
 
 tmux 本身已經是個非常**完善**的軟體了，因此我只選了一個外掛，[tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) 這個外掛讓你可以**儲存目前的 tmux 版面配置**（分頁、螢幕切割、名稱等等），在下次啟動時復原，這個功能在開發專案要切分編輯、編譯、測試版面時很好用，**不需要每次開機都重新切版面**
 

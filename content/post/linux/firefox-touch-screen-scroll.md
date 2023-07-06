@@ -1,9 +1,14 @@
-+++
-title = "Firefox Touch Screen Scroll"
-date = "2021-05-08"
-tags = [ "firefox", "ubuntu", 'gnome', 'desktop' ]
-categories = [ "linux" ]
-+++
+---
+categories:
+- linux
+date: "2021-05-08"
+tags:
+- firefox
+- ubuntu
+- gnome
+- desktop
+title: Firefox Touch Screen Scroll
+---
 
 # Firefox Touch Screen Scroll
 

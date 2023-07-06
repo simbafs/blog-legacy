@@ -1,10 +1,15 @@
-+++
-title = "Linux 安裝跑跑卡丁車（nexon launcher）"
-slug = "nexon"
-date = 2023-02-16T23:40:31+08:00
-tags = ['nexon', 'steam', 'wine', 'proton']
-categories = ['game']
-+++
+---
+categories:
+- game
+date: "2023-02-16T23:40:31+08:00"
+slug: nexon
+tags:
+- nexon
+- steam
+- wine
+- proton
+title: Linux 安裝跑跑卡丁車（nexon launcher）
+---
 
 # 如何在 Linux 安裝跑跑卡丁車
 

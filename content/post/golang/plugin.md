@@ -1,10 +1,13 @@
-+++
-title = "Golang Plguin"
-slug = "plguin"
-date = 2022-02-21T18:54:55+08:00
-tags = ['plugin', 'share object']
-categories = ['go']
-+++
+---
+categories:
+- go
+date: "2022-02-21T18:54:55+08:00"
+slug: plguin
+tags:
+- plugin
+- share object
+title: Golang Plguin
+---
 
 # Go 動態載入程式
 

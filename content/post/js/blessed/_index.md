@@ -1,3 +1,3 @@
-+++
-title = 'blessed'
-+++
+---
+title: blessed
+---

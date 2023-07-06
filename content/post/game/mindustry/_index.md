@@ -1,3 +1,3 @@
-+++
-title = 'Mindustry'
-+++
+---
+title: Mindustry
+---

@@ -1,9 +1,11 @@
-+++
-title = "beginning of kotlin"
-date = "2021-05-04"
-tags = [ "kotlin" ]
-categories = [ "kotlin" ]
-+++
+---
+categories:
+- kotlin
+date: "2021-05-04"
+tags:
+- kotlin
+title: beginning of kotlin
+---
 
 # val vs var
 

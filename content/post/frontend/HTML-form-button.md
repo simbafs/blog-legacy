@@ -1,9 +1,12 @@
-+++
-title = "HTML form button"
-date = "2020-06-01"
-tags = [ 'frontent', "HTML" ]
-categories = [ "frontend" ]
-+++
+---
+categories:
+- frontend
+date: "2020-06-01"
+tags:
+- frontent
+- HTML
+title: HTML form button
+---
 
 # HTML Form Button
 

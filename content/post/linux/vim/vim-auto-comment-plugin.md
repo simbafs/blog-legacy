@@ -1,9 +1,14 @@
-+++
-title = "Vim Auto Comment Plugin"
-date = "2020-08-25"
-tags = [ "vim", 'auto', 'plugin']
-categories = [ "linux", 'vim' ]
-+++
+---
+categories:
+- linux
+- vim
+date: "2020-08-25"
+tags:
+- vim
+- auto
+- plugin
+title: Vim Auto Comment Plugin
+---
 
 # Vim Auto Comment Plugin
 

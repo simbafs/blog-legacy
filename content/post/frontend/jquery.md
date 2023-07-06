@@ -1,9 +1,12 @@
-+++
-title = "jQuery"
-date = "2020-03-15"
-tags = [ 'js', "jquery" ]
-categories = [ "frontend" ]
-+++
+---
+categories:
+- frontend
+date: "2020-03-15"
+tags:
+- js
+- jquery
+title: jQuery
+---
 
 # jQuery
 

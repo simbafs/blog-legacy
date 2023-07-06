@@ -1,10 +1,13 @@
-+++
-title = "Bubbletea"
-slug = ""
-date = 2023-01-09T04:00:39+08:00
-tags = ['bubbletea', 'cli']
-categories = ['go']
-+++
+---
+categories:
+- go
+date: "2023-01-09T04:00:39+08:00"
+slug: ""
+tags:
+- bubbletea
+- cli
+title: Bubbletea
+---
 
 # charmbracelet/bubbletea
 

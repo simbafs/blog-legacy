@@ -1,3 +1,3 @@
-+++
-title = 'other'
-+++
+---
+title: other
+---

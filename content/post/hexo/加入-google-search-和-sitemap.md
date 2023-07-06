@@ -1,9 +1,11 @@
-+++
-title = "加入 google search 和 sitemap"
-tags = [ "hexo" ]
-categories = [ "hexo" ]
-date = "2020-08-19"
-+++
+---
+categories:
+- hexo
+date: "2020-08-19"
+tags:
+- hexo
+title: 加入 google search 和 sitemap
+---
 
 # 前置設定
 

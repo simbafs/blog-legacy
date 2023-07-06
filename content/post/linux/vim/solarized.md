@@ -1,10 +1,14 @@
-+++
-title = "Solarized"
-slug = ""
-date = 2022-06-15T17:09:18+08:00
-tags = ['vim', 'colorscheme']
-categories = ['linux', 'vim']
-+++
+---
+categories:
+- linux
+- vim
+date: "2022-06-15T17:09:18+08:00"
+slug: ""
+tags:
+- vim
+- colorscheme
+title: Solarized
+---
 
 # Solarized
 

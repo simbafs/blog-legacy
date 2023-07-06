@@ -1,3 +1,3 @@
-+++
-title = 'server'
-+++
+---
+title: server
+---

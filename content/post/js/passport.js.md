@@ -1,9 +1,14 @@
-+++
-title = "Passport.js"
-date = "2020-03-15"
-tags = [ "node", "express", "passport.js", 'js' ]
-categories = [ "nodejs" ]
-+++
+---
+categories:
+- nodejs
+date: "2020-03-15"
+tags:
+- node
+- express
+- passport.js
+- js
+title: Passport.js
+---
 
 # Passport.js
 

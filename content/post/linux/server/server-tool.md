@@ -1,9 +1,13 @@
-+++
-title = "Server Tool"
-date = "2020-02-16"
-tags = [ "bash", "RegEx" ]
-categories = [ "linux", "server" ]
-+++
+---
+categories:
+- linux
+- server
+date: "2020-02-16"
+tags:
+- bash
+- RegEx
+title: Server Tool
+---
 
 # Server Tool
 

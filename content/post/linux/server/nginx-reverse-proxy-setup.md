@@ -1,9 +1,14 @@
-+++
-title = "Nginx Reverse Proxy Setup"
-date = "2020-02-13"
-tags = [ "nginx", "reverse proxy", "certbot" ]
-categories = [ "linux", "server" ]
-+++
+---
+categories:
+- linux
+- server
+date: "2020-02-13"
+tags:
+- nginx
+- reverse proxy
+- certbot
+title: Nginx Reverse Proxy Setup
+---
 
 # nginx 反向代理伺服器 (reverse proxy)
 

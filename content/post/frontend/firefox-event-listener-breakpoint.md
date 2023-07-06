@@ -1,9 +1,13 @@
-+++
-title = "Firefox Event Listener Breakpoint"
-date = "2020-03-25"
-tags = [ 'js', 'frontend', "firefox" ]
-categories = [ "frontend" ]
-+++
+---
+categories:
+- frontend
+date: "2020-03-25"
+tags:
+- js
+- frontend
+- firefox
+title: Firefox Event Listener Breakpoint
+---
 
 # Firefox Event Listener Breakpoint
 

@@ -1,10 +1,13 @@
-+++
-title = "IPFS"
-slug = ""
-date = 2022-08-22T16:44:06+08:00
-tags = ['web3' ,'decentralized']
-categories = ['web3']
-+++
+---
+categories:
+- web3
+date: "2022-08-22T16:44:06+08:00"
+slug: ""
+tags:
+- web3
+- decentralized
+title: IPFS
+---
 
 # IPFS
 

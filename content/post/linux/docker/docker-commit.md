@@ -1,9 +1,13 @@
-+++
-title = "docker commit"
-date = "2020-11-27"
-tags = [ "docker", "linux" ]
-categories = [ 'linux',  "docker" ]
-+++
+---
+categories:
+- linux
+- docker
+date: "2020-11-27"
+tags:
+- docker
+- linux
+title: docker commit
+---
 
 # Docker Commit
 

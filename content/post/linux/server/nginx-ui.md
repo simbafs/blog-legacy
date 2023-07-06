@@ -1,9 +1,11 @@
-+++
-title = "Nginx UI"
-date = "2020-06-23"
-tags = [ "nginx linux" ]
-categories = [ "server" ]
-+++
+---
+categories:
+- server
+date: "2020-06-23"
+tags:
+- nginx linux
+title: Nginx UI
+---
 
 # Nginx UI
 

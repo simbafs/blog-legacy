@@ -1,16 +1,17 @@
-+++
-title = "Day 04：金魚記憶力太短暫，交給外掛記吧！autosuggestions 與 sugstring-search"
-date = "2021-09-04"
-tags = [
-  "cli",
-  "terminal",
-  "software development",
-  "vim",
-  "tmux",
-  "zsh"
-]
-categories = [ "ithelp", "pure-CLI-IDE" ]
-+++
+---
+categories:
+- ithelp
+- pure-CLI-IDE
+date: "2021-09-04"
+tags:
+- cli
+- terminal
+- software development
+- vim
+- tmux
+- zsh
+title: Day 04：金魚記憶力太短暫，交給外掛記吧！autosuggestions 與 sugstring-search
+---
 
 今天的內容會比平常多，但是非常紮實！
 

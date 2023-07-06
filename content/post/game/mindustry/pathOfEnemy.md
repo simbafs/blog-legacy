@@ -1,10 +1,12 @@
-+++
-title = "控制敵方路徑"
-slug = "PathOfEnemy"
-date = 2022-05-17T16:16:27+08:00
-tags = ['mindustry']
-categories = ['game']
-+++
+---
+categories:
+- game
+date: "2022-05-17T16:16:27+08:00"
+slug: PathOfEnemy
+tags:
+- mindustry
+title: 控制敵方路徑
+---
 
 # 控制敵方路徑
 

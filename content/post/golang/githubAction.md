@@ -1,10 +1,15 @@
-+++
-title = "用 Github Action 編譯並發 Release"
-slug = "github-action-release"
-date = 2022-03-27T11:00:18+08:00
-tags = ["GitHub", "CI/CD", "GitHub Action", 'cloud']
-categories = ["go"]
-+++
+---
+categories:
+- go
+date: "2022-03-27T11:00:18+08:00"
+slug: github-action-release
+tags:
+- GitHub
+- CI/CD
+- GitHub Action
+- cloud
+title: 用 Github Action 編譯並發 Release
+---
 
 # 用 Github Action 編譯並發 Release
 

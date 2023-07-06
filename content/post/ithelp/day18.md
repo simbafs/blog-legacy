@@ -1,16 +1,17 @@
-+++
-title = "Day 18：幫你的 HTML 開發裝上噴射引擎！vim-emmet"
-date = "2021-09-18"
-tags = [
-  "cli",
-  "terminal",
-  "software development",
-  "vim",
-  "tmux",
-  "zsh"
-]
-categories = [ "ithelp", "pure-CLI-IDE" ]
-+++
+---
+categories:
+- ithelp
+- pure-CLI-IDE
+date: "2021-09-18"
+tags:
+- cli
+- terminal
+- software development
+- vim
+- tmux
+- zsh
+title: Day 18：幫你的 HTML 開發裝上噴射引擎！vim-emmet
+---
 
 emmet-vim 是 emmet 的 vim 版本（這句好像是廢話
 

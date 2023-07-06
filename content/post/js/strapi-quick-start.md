@@ -1,19 +1,19 @@
-+++
-title = "Strapi Quick Start"
-tags = [
-  "node",
-  "nodejs",
-  "headless api",
-  "api",
-  "strapi",
-  "database",
-  "selfhost",
-  'js',
-  'cms'
-]
-categories = [ "nodejs" ]
-date = "2021-02-28"
-+++
+---
+categories:
+- nodejs
+date: "2021-02-28"
+tags:
+- node
+- nodejs
+- headless api
+- api
+- strapi
+- database
+- selfhost
+- js
+- cms
+title: Strapi Quick Start
+---
 
 strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server
 

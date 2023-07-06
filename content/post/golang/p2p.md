@@ -1,10 +1,14 @@
-+++
-title = "p2p"
-slug = ""
-date = 2022-08-16T19:55:15+08:00
-tags = ['p2p', 'network', 'tunnel']
-categories = ['go']
-+++
+---
+categories:
+- go
+date: "2022-08-16T19:55:15+08:00"
+slug: ""
+tags:
+- p2p
+- network
+- tunnel
+title: p2p
+---
 
 # p2p
 

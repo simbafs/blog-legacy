@@ -1,3 +1,3 @@
-+++
-title = 'bash'
-+++
+---
+title: bash
+---

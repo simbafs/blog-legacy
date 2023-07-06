@@ -1,16 +1,17 @@
-+++
-title = "Day 02 ：zsh 與 shell script"
-date = "2021-09-02"
-tags = [
-  "cli",
-  "terminal",
-  "software development",
-  "vim",
-  "tmux",
-  "zsh"
-]
-categories = [ "ithelp", "pure-CLI-IDE" ]
-+++
+---
+categories:
+- ithelp
+- pure-CLI-IDE
+date: "2021-09-02"
+tags:
+- cli
+- terminal
+- software development
+- vim
+- tmux
+- zsh
+title: Day 02 ：zsh 與 shell script
+---
 
 > 今天內容不小心寫太長了 ......
 

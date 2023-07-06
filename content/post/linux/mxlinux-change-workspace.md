@@ -1,9 +1,11 @@
-+++
-title = "Mxlinux Change Workspace"
-date = "2020-05-08"
-tags = [ "mxlinux" ]
-categories = [ "linux" ]
-+++
+---
+categories:
+- linux
+date: "2020-05-08"
+tags:
+- mxlinux
+title: Mxlinux Change Workspace
+---
 
 # Mxlinux Change Workspace
 

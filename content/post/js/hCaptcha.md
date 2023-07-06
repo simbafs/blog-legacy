@@ -1,9 +1,15 @@
-+++
-title = "hCaptcha"
-date = "2021-01-05"
-tags = [ "captcha", "hCaptcha", "node", "express", 'js' ]
-categories = [ "nodejs" ]
-+++
+---
+categories:
+- nodejs
+date: "2021-01-05"
+tags:
+- captcha
+- hCaptcha
+- node
+- express
+- js
+title: hCaptcha
+---
 
 # hCaptcha
 

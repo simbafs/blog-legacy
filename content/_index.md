@@ -1,8 +1,8 @@
 ---
 menu:
-    main:
-        name: Home
-        weight: 1
-        params:
-            icon: home
+  main:
+    name: Home
+    params:
+      icon: home
+    weight: 1
 ---

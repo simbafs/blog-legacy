@@ -1,10 +1,14 @@
-+++
-title = "Google AppScript Calender API"
-slug = "google-app-script-calender-api"
-date = 2022-09-14T09:58:24+08:00
-tags = ['js', 'google', 'cloud']
-categories = ['uncategorized']
-+++
+---
+categories:
+- uncategorized
+date: "2022-09-14T09:58:24+08:00"
+slug: google-app-script-calender-api
+tags:
+- js
+- google
+- cloud
+title: Google AppScript Calender API
+---
 
 # Google AppScript
 

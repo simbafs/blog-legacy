@@ -1,9 +1,14 @@
-+++
-title = "Blessed"
-date = "2020-02-17"
-tags = [ "blessed", 'js', 'cli' ]
-categories = [ 'nodejs', "blessed" ]
-+++
+---
+categories:
+- nodejs
+- blessed
+date: "2020-02-17"
+tags:
+- blessed
+- js
+- cli
+title: Blessed
+---
 
 # Blessed
 

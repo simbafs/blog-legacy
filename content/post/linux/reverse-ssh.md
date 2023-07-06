@@ -1,9 +1,13 @@
-+++
-title = "Reverse SSH"
-date = "2020-02-23"
-tags = [ "ssh", "linux", 'tunnel' ]
-categories = [ "linux" ]
-+++
+---
+categories:
+- linux
+date: "2020-02-23"
+tags:
+- ssh
+- linux
+- tunnel
+title: Reverse SSH
+---
 
 # Reverse SSH
 

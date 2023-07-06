@@ -1,9 +1,14 @@
-+++
-title = "Unix Socket"
-tags = [ "unix socket", "node", "nginx", 'js' ]
-categories = [ "nodejs" ]
-date = "2020-02-23"
-+++
+---
+categories:
+- nodejs
+date: "2020-02-23"
+tags:
+- unix socket
+- node
+- nginx
+- js
+title: Unix Socket
+---
 
 # Unix Socket
 

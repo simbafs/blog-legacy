@@ -1,9 +1,12 @@
-+++
-title = "gitalk"
-tags = [ "hexo", "github" ]
-categories = [ "hexo" ]
-date = "2020-02-11"
-+++
+---
+categories:
+- hexo
+date: "2020-02-11"
+tags:
+- hexo
+- github
+title: gitalk
+---
 
 # 啟用 gitalk 留言
 

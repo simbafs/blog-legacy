@@ -1,13 +1,13 @@
 ---
-title: OpenTTD
-date: 2023-03-12T02:18:59+08:00
-tags:
-    - openttd
-    - game
 categories:
-    - game
+- game
+date: "2023-03-12T02:18:59+08:00"
 draft: true
-image:
+image: null
+tags:
+- openttd
+- game
+title: OpenTTD
 ---
 
 > **提醒我放圖片**

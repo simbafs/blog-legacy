@@ -1,10 +1,15 @@
-+++
-title = "讓 YCM 接受 jsx"
-slug = 'ycm-jsx'
-date = "2020-07-04"
-tags = [ "vim", "jsx", "react" ]
-categories = ['linux', "vim" ]
-+++
+---
+categories:
+- linux
+- vim
+date: "2020-07-04"
+slug: ycm-jsx
+tags:
+- vim
+- jsx
+- react
+title: 讓 YCM 接受 jsx
+---
 
 # 讓 YCM 接受 jsx
 

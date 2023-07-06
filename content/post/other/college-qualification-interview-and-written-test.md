@@ -1,9 +1,11 @@
-+++
-title = "大學二階面試、筆試"
-date = "2021-04-18"
-tags = [ "college" ]
-categories = [ "other" ]
-+++
+---
+categories:
+- other
+date: "2021-04-18"
+tags:
+- college
+title: 大學二階面試、筆試
+---
 
 # 大學二階面試、筆試
 

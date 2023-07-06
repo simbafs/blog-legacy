@@ -1,16 +1,17 @@
-+++
-title = "Day 13：vim 設定檔"
-date = "2021-09-13"
-tags = [
-  "cli",
-  "terminal",
-  "software development",
-  "vim",
-  "tmux",
-  "zsh"
-]
-categories = [ "ithelp", "pure-CLI-IDE" ]
-+++
+---
+categories:
+- ithelp
+- pure-CLI-IDE
+date: "2021-09-13"
+tags:
+- cli
+- terminal
+- software development
+- vim
+- tmux
+- zsh
+title: Day 13：vim 設定檔
+---
 
 vim 在啟動時，都會去**執行你的設定檔**，這個檔案**根據你的 vim 軟體不同而改變**，如果是一般的 vim，那他會去讀 `~/.vimrc`，如果是 neovim(nvim)，他會去找 `~/.config/nvim/init.vim`。在接下來的文章中都以 `vimrc` 代指。  
 `vimrc` 內容是 vimscript，也就是所有的冒號命令**去掉冒號之後的內容**，例如有個命令是 `:set nu`，這個命令可以開啟行號顯示，如果要寫在 `vimrc` 裡面，就要寫成 `set nu`。

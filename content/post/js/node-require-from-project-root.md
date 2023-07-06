@@ -1,9 +1,11 @@
-+++
-title = "Node Require from Project Root"
-date = "2020-09-02"
-tags = [ "nodejs" ]
-categories = [ "nodejs" ]
-+++
+---
+categories:
+- nodejs
+date: "2020-09-02"
+tags:
+- nodejs
+title: Node Require from Project Root
+---
 
 # Node Require from Project Root
 

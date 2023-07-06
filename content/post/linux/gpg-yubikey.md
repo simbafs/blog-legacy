@@ -1,10 +1,14 @@
-+++
-title = "GPG and Yubikey"
-slug = "gpg-yubikey"
-date = 2022-12-12T23:26:53+08:00
-tags = ['GPG', 'SSH', 'yubikey']
-categories = ['linux']
-+++
+---
+categories:
+- linux
+date: "2022-12-12T23:26:53+08:00"
+slug: gpg-yubikey
+tags:
+- GPG
+- SSH
+- yubikey
+title: GPG and Yubikey
+---
 
 # GPG
 

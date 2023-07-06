@@ -1,16 +1,17 @@
-+++
-title = "Day 05：是說，這個選項可以接什麼東西？autocomplete 與 auto-pair"
-date = "2021-09-05"
-tags = [
-  "cli",
-  "terminal",
-  "software development",
-  "vim",
-  "tmux",
-  "zsh"
-]
-categories = [ "ithelp", "pure-CLI-IDE" ]
-+++
+---
+categories:
+- ithelp
+- pure-CLI-IDE
+date: "2021-09-05"
+tags:
+- cli
+- terminal
+- software development
+- vim
+- tmux
+- zsh
+title: Day 05：是說，這個選項可以接什麼東西？autocomplete 與 auto-pair
+---
 
 今天會介紹兩個**開箱即用**（ out of box ）的外掛和簡化指令的 alias
 

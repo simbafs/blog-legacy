@@ -1,9 +1,12 @@
-+++
-title = "Mxlinux Boot with Systemd"
-date = "2020-09-05"
-tags = [ "mxlinux", "systemd" ]
-categories = [ "linux" ]
-+++
+---
+categories:
+- linux
+date: "2020-09-05"
+tags:
+- mxlinux
+- systemd
+title: Mxlinux Boot with Systemd
+---
 
 # Mxlinux Boot with Systemd
 

@@ -1,9 +1,14 @@
-+++
-title = "Node VM"
-date = "2021-01-13"
-tags = [ "node", "nodejs", "vm" , 'js']
-categories = [ "nodejs" ]
-+++
+---
+categories:
+- nodejs
+date: "2021-01-13"
+tags:
+- node
+- nodejs
+- vm
+- js
+title: Node VM
+---
 
 # Node VM
 

@@ -1,10 +1,12 @@
-+++
-title = "Merge"
-slug = ""
-date = 2022-05-17T08:32:38+08:00
-tags = ['mindustry']
-categories = ['game']
-+++
+---
+categories:
+- game
+date: "2022-05-17T08:32:38+08:00"
+slug: ""
+tags:
+- mindustry
+title: Merge
+---
 
 # Merge
 

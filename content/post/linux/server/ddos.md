@@ -1,9 +1,13 @@
-+++
-title = "ddos"
-date = "2020-02-13"
-tags = [ "ddos", "bash" ]
-categories = [ "linux", "server" ]
-+++
+---
+categories:
+- linux
+- server
+date: "2020-02-13"
+tags:
+- ddos
+- bash
+title: ddos
+---
 
 # DDOS
 

@@ -1,16 +1,17 @@
-+++
-title = "Day 07：整合 tmux 和 zsh"
-date = "2021-09-07"
-tags = [
-  "cli",
-  "terminal",
-  "software development",
-  "vim",
-  "tmux",
-  "zsh"
-]
-categories = [ "ithelp", "pure-CLI-IDE" ]
-+++
+---
+categories:
+- ithelp
+- pure-CLI-IDE
+date: "2021-09-07"
+tags:
+- cli
+- terminal
+- software development
+- vim
+- tmux
+- zsh
+title: Day 07：整合 tmux 和 zsh
+---
 
 昨天的結尾提到要整合 tmux 和 zsh 不是在 `~/.zshrc` 結尾執行 `tmux` 這麼簡單，今天就讓我們看看會遇到什麼問題吧！
 

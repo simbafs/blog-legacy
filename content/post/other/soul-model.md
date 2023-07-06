@@ -1,11 +1,13 @@
-+++
-title = "靈魂世界模型"
-slug = "soul-model"
-date = 2022-06-14T14:58:56+08:00
-draft = true
-tags = ['fantasy']
-categories = ['other']
-+++
+---
+categories:
+- other
+date: "2022-06-14T14:58:56+08:00"
+draft: true
+slug: soul-model
+tags:
+- fantasy
+title: 靈魂世界模型
+---
 
 # 靈魂世界模型
 

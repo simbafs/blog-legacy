@@ -1,9 +1,13 @@
-+++
-title = "Meta Tag"
-date = "2020-03-28"
-tags = [ "html", "meta", 'seo' ]
-categories = [ "frontend" ]
-+++
+---
+categories:
+- frontend
+date: "2020-03-28"
+tags:
+- html
+- meta
+- seo
+title: Meta Tag
+---
 
 # Meta Tag
 

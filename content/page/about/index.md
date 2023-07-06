@@ -1,11 +1,11 @@
 ---
-title: About
-menu:
-    main:
-        weight: 4
-        params:
-            icon: user
 comments: false
+menu:
+  main:
+    params:
+      icon: user
+    weight: 4
+title: About
 ---
 
 # 🖐️ 哈囉！問世界安好 [![Followers](https://img.shields.io/github/followers/simbafs?style=flat-square)](https://github.com/simbafs)

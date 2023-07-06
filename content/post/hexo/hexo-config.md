@@ -1,9 +1,14 @@
-+++
-title = "hexo-config"
-tags = [ "hexo", "cactus", "highlight", "RSS" ]
-categories = [ "hexo" ]
-date = "2020-02-12"
-+++
+---
+categories:
+- hexo
+date: "2020-02-12"
+tags:
+- hexo
+- cactus
+- highlight
+- RSS
+title: hexo-config
+---
 
 # 各種設定值嘗試
 

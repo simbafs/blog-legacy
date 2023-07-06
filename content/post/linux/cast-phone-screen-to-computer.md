@@ -1,9 +1,15 @@
-+++
-title = "Cast Phone Screen to Computer"
-date = "2021-06-14"
-tags = [ "android", "linux", "adb", "wireless", "usb debug" ]
-categories = [ "linux" ]
-+++
+---
+categories:
+- linux
+date: "2021-06-14"
+tags:
+- android
+- linux
+- adb
+- wireless
+- usb debug
+title: Cast Phone Screen to Computer
+---
 
 # Cast Phone Screen to Computer
 

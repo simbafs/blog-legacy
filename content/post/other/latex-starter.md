@@ -1,10 +1,12 @@
-+++
-title = "LaTeX Starter"
-slug = "LaTeX-starter"
-date = 2021-12-22T23:18:41+08:00
-tags = ['latex']
-categories = [ "other" ]
-+++
+---
+categories:
+- other
+date: "2021-12-22T23:18:41+08:00"
+slug: LaTeX-starter
+tags:
+- latex
+title: LaTeX Starter
+---
 
 # LaTeX Stater
 

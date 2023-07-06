@@ -1,16 +1,17 @@
-+++
-title = "Day 12：vim 配色方案"
-date = "2021-09-12"
-tags = [
-  "cli",
-  "terminal",
-  "software development",
-  "vim",
-  "tmux",
-  "zsh"
-]
-categories = [ "ithelp", "pure-CLI-IDE" ]
-+++
+---
+categories:
+- ithelp
+- pure-CLI-IDE
+date: "2021-09-12"
+tags:
+- cli
+- terminal
+- software development
+- vim
+- tmux
+- zsh
+title: Day 12：vim 配色方案
+---
 
 俗話說人要衣裝，佛要金裝，我們的 vim 也得要有**漂亮的外觀**。今天就讓我們來看看如何~~調教~~調整 vim 的外觀吧！
 

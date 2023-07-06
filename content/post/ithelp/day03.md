@@ -1,16 +1,17 @@
-+++
-title = "Day 03：轉吧轉吧七彩霓虹燈之 p10k"
-date = "2021-09-03"
-tags = [
-  "cli",
-  "terminal",
-  "software development",
-  "vim",
-  "tmux",
-  "zsh"
-]
-categories = [ "ithelp", "pure-CLI-IDE" ]
-+++
+---
+categories:
+- ithelp
+- pure-CLI-IDE
+date: "2021-09-03"
+tags:
+- cli
+- terminal
+- software development
+- vim
+- tmux
+- zsh
+title: Day 03：轉吧轉吧七彩霓虹燈之 p10k
+---
 
 昨天裝好外掛管理器了，接下來我們要用 zplug 來裝一些好玩的外掛囉！
 

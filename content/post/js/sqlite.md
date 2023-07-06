@@ -1,9 +1,16 @@
-+++
-title = "sqlite3"
-date = "2020-03-13"
-tags = [ "node", "sqlite", "async", 'js', 'sql', 'database' ]
-categories = [ "nodejs" ]
-+++
+---
+categories:
+- nodejs
+date: "2020-03-13"
+tags:
+- node
+- sqlite
+- async
+- js
+- sql
+- database
+title: sqlite3
+---
 
 # sqlite3
 

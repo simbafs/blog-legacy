@@ -1,9 +1,11 @@
-+++
-title = "hexo-installation"
-tags = [ "hexo" ]
-categories = [ "hexo" ]
-date = "2020-02-10"
-+++
+---
+categories:
+- hexo
+date: "2020-02-10"
+tags:
+- hexo
+title: hexo-installation
+---
 
 # 把 hexo 部屬到 gh-page
 

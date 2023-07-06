@@ -1,10 +1,12 @@
-+++
-title = "Git Snippet"
-date = "2023-02-20T16:59:29+08:00"
-tags = ["git"]
-categories = ["linux", 'git']
-# image = 
-+++
+---
+categories:
+- linux
+- git
+date: "2023-02-20T16:59:29+08:00"
+tags:
+- git
+title: Git Snippet
+---
 
 # Git Snippet
 

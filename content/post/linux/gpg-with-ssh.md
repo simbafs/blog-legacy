@@ -1,9 +1,14 @@
-+++
-title = "GPG with SSH"
-date = 2022-12-06T22:59:17+08:00
-tags = ['GPG', 'SSH', 'encryption', 'cryptography']
-categories = ['linux']
-+++
+---
+categories:
+- linux
+date: "2022-12-06T22:59:17+08:00"
+tags:
+- GPG
+- SSH
+- encryption
+- cryptography
+title: GPG with SSH
+---
 
 # GPG with SSH
 

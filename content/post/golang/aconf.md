@@ -1,10 +1,17 @@
-+++
-title = "Aconf"
-slug = "aconf"
-date = 2021-09-24T08:46:37+08:00
-tags = ['config', 'toml', 'json', 'yaml', 'env', 'flag']
-categories = ['go']
-+++
+---
+categories:
+- go
+date: "2021-09-24T08:46:37+08:00"
+slug: aconf
+tags:
+- config
+- toml
+- json
+- yaml
+- env
+- flag
+title: Aconf
+---
 
 # aconf
 

@@ -1,10 +1,12 @@
-+++
-title = "不同「邊數」的平面"
-slug = "plantOfNumbers"
-date = 2022-06-11T23:26:40+08:00
-tags = ['buckyball']
-categories = ['other']
-+++
+---
+categories:
+- other
+date: "2022-06-11T23:26:40+08:00"
+slug: plantOfNumbers
+tags:
+- buckyball
+title: 不同「邊數」的平面
+---
 
 # 同「邊數」的平面
 

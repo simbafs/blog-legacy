@@ -1,9 +1,15 @@
-+++
-title = "Blessed Contrib Tree"
-date = "2020-02-18"
-tags = [ "blessed", "blessed-contrib", 'js','cli' ]
-categories = [ 'nodejs', "blessed" ]
-+++
+---
+categories:
+- nodejs
+- blessed
+date: "2020-02-18"
+tags:
+- blessed
+- blessed-contrib
+- js
+- cli
+title: Blessed Contrib Tree
+---
 
 # blessed Contrib Tree
 

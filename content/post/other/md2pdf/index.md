@@ -1,10 +1,14 @@
-+++
-title = "Markdown to PDF"
-date = 2023-02-21T22:07:38+08:00
-tags = ['markdown', 'pdf', 'pandoc', 'latex']
-categories = ['other']
-# image =
-+++
+---
+categories:
+- other
+date: "2023-02-21T22:07:38+08:00"
+tags:
+- markdown
+- pdf
+- pandoc
+- latex
+title: Markdown to PDF
+---
 
 # Markdown to PDF
 

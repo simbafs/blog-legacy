@@ -1,10 +1,14 @@
-+++
-title = "Merge Two Repo"
-slug = ""
-date = 2022-10-18T20:25:48+08:00
-tags = ['git', 'merge']
-categories = ['linux', 'git']
-+++
+---
+categories:
+- linux
+- git
+date: "2022-10-18T20:25:48+08:00"
+slug: ""
+tags:
+- git
+- merge
+title: Merge Two Repo
+---
 
 # Merge Two Repo
 

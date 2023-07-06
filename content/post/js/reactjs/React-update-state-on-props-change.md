@@ -1,9 +1,15 @@
-+++
-title = "Reactjs Update State on Props Change"
-date = "2020-07-12"
-tags = [ "reactjs", 'state', 'js', 'frontend' ]
-categories = [ 'nodejs', "reactjs" ]
-+++
+---
+categories:
+- nodejs
+- reactjs
+date: "2020-07-12"
+tags:
+- reactjs
+- state
+- js
+- frontend
+title: Reactjs Update State on Props Change
+---
 
 # React Update State on Props Change
 

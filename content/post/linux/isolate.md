@@ -1,9 +1,13 @@
-+++
-title = "isolate"
-date = "2020-03-09"
-tags = [ "linux", "sandbox", 'onlinejudge' ]
-categories = [ "linux" ]
-+++
+---
+categories:
+- linux
+date: "2020-03-09"
+tags:
+- linux
+- sandbox
+- onlinejudge
+title: isolate
+---
 
 # isolate
 

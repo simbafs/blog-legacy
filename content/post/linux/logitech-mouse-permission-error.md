@@ -1,9 +1,12 @@
-+++
-title = "Logitech Mouse Permission Error"
-tags = [ "ubuntu", "logitech" ]
-categories = [ "linux" ]
-date = "2021-03-15"
-+++
+---
+categories:
+- linux
+date: "2021-03-15"
+tags:
+- ubuntu
+- logitech
+title: Logitech Mouse Permission Error
+---
 
 # Logitech Mouse Permission Error
 

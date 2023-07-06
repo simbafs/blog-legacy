@@ -1,13 +1,13 @@
 ---
-title: Python Snippet
-date: 2023-02-23T23:23:49+08:00
-tags:
-    - python
-    - snippet
-    - numpy
 categories:
-    - python
-image:
+- python
+date: "2023-02-23T23:23:49+08:00"
+image: null
+tags:
+- python
+- snippet
+- numpy
+title: Python Snippet
 ---
 
 # Python Snippet

@@ -1,10 +1,11 @@
-+++
-title = "震動 vs 振動"
-slug = "vibrate"
-date = 2022-03-09T23:16:55+08:00
-tags = []
-categories = ['other']
-+++
+---
+categories:
+- other
+date: "2022-03-09T23:16:55+08:00"
+slug: vibrate
+tags: []
+title: 震動 vs 振動
+---
 
 # 震動 vs 振動
 

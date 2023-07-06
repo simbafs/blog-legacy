@@ -1,10 +1,16 @@
-+++
-title = "File System"
-slug = "fs"
-date = 2022-08-04T22:16:42+08:00
-tags = ['fs', 'filesystem', 'js', 'nextjs']
-categories = ['nodejs', 'nextjs']
-+++
+---
+categories:
+- nodejs
+- nextjs
+date: "2022-08-04T22:16:42+08:00"
+slug: fs
+tags:
+- fs
+- filesystem
+- js
+- nextjs
+title: File System
+---
 
 # File System
 

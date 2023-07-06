@@ -1,9 +1,13 @@
-+++
-title = "GPG"
-date = "2020-03-28"
-tags = [ "git", "linux", "gpg" ]
-categories = [ "linux" ]
-+++
+---
+categories:
+- linux
+date: "2020-03-28"
+tags:
+- git
+- linux
+- gpg
+title: GPG
+---
 
 # GPG
 
