@@ -1,12 +1,13 @@
 ---
-categories:
-- frontend
-date: "2020-03-28"
-tags:
-- html
-- meta
-- seo
 title: Meta Tag
+slug: meta-tag
+date: '2020-03-28'
+tags:
+  - html
+  - meta
+  - seo
+categories:
+  - frontend
 ---
 
 # Meta Tag

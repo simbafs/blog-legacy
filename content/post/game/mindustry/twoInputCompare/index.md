@@ -1,11 +1,13 @@
 ---
-categories:
-- game
-date: "2022-05-22T23:06:02+08:00"
-slug: two-input-compare
-tags:
-- mindustry
 title: 兩輸入生產單位的比較
+slug: two-input-compare
+date: '2022-05-22'
+tags:
+  - mindustry
+categories:
+  - game
+  - mindustry
+  - twoInputCompare
 ---
 
 # 目的

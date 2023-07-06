@@ -1,10 +1,11 @@
 ---
-categories:
-- linux
-date: "2020-05-08"
-tags:
-- mxlinux
 title: Mxlinux Change Workspace
+slug: mxlinux-change-workspace
+date: '2020-05-08'
+tags:
+  - mxlinux
+categories:
+  - linux
 ---
 
 # Mxlinux Change Workspace

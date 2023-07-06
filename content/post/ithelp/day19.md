@@ -1,16 +1,16 @@
 ---
-categories:
-- ithelp
-- pure-CLI-IDE
-date: "2021-09-19"
-tags:
-- cli
-- terminal
-- software development
-- vim
-- tmux
-- zsh
 title: Day 19：該是時候升級你的噴射引擎囉！vim-emmet 重複與迭代
+slug: day19
+date: '2021-09-19'
+tags:
+  - cli
+  - terminal
+  - software development
+  - vim
+  - tmux
+  - zsh
+categories:
+  - ithelp
 ---
 
 ## 重複

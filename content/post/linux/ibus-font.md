@@ -1,12 +1,12 @@
 ---
-categories:
-- linux
-date: "2022-04-16T21:47:25+08:00"
-slug: ibus-font
-tags:
-- ibus
-- font
 title: Ibus Font
+slug: ibus-font
+date: '2022-04-16'
+tags:
+  - ibus
+  - font
+categories:
+  - linux
 ---
 
 # Ibus Font

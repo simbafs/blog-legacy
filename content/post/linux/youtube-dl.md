@@ -1,11 +1,12 @@
 ---
-categories:
-- linux
-date: "2020-03-04"
-tags:
-- youtube-dl
-- bash
 title: youtube-dl
+slug: youtube-dl
+date: '2020-03-04'
+tags:
+  - youtube-dl
+  - bash
+categories:
+  - linux
 ---
 
 # Youtube DL

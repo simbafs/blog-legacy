@@ -1,12 +1,13 @@
 ---
-categories:
-- linux
-date: "2020-02-23"
-tags:
-- ssh
-- linux
-- tunnel
 title: Reverse SSH
+slug: reverse-ssh
+date: '2020-02-23'
+tags:
+  - ssh
+  - linux
+  - tunnel
+categories:
+  - linux
 ---
 
 # Reverse SSH

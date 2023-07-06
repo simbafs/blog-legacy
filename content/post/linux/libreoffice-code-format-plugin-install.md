@@ -1,11 +1,12 @@
 ---
-categories:
-- linux
-date: "2021-03-13"
-tags:
-- libreoffice
-- code format
 title: Libreoffice Code Format Plugin Installation
+slug: libreoffice-code-format-plugin-install
+date: '2021-03-13'
+tags:
+  - libreoffice
+  - code format
+categories:
+  - linux
 ---
 
 # 安裝

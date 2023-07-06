@@ -1,14 +1,15 @@
 ---
-categories:
-- linux
-- server
-date: "2021-07-13"
-tags:
-- gitea
-- ssh
-- self-host
-- git
 title: ssh on gitea with docker
+slug: ssh-on-gitea-with-docker
+date: '2021-07-13'
+tags:
+  - gitea
+  - ssh
+  - self-host
+  - git
+categories:
+  - linux
+  - server
 ---
 
 # Gitea

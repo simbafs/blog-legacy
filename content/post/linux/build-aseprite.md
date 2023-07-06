@@ -1,14 +1,14 @@
 ---
-categories:
-- linux
-date: "2023-04-15T10:14:40+08:00"
-image: null
-tags:
-- aseprite
-- pixel art
-- cmake
-- ninja
 title: Build Aseprite
+slug: build-aseprite
+date: '2023-04-15'
+tags:
+  - aseprite
+  - pixel art
+  - cmake
+  - ninja
+categories:
+  - linux
 ---
 
 # Build Aseprite

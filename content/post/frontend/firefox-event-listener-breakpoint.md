@@ -1,12 +1,13 @@
 ---
-categories:
-- frontend
-date: "2020-03-25"
-tags:
-- js
-- frontend
-- firefox
 title: Firefox Event Listener Breakpoint
+slug: firefox-event-listener-breakpoint
+date: '2020-03-25'
+tags:
+  - js
+  - frontend
+  - firefox
+categories:
+  - frontend
 ---
 
 # Firefox Event Listener Breakpoint

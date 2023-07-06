@@ -1,13 +1,12 @@
 ---
-categories:
-- go
-date: "2022-08-03T14:15:31+08:00"
-draft: true
-slug: ""
-tags:
-- ssh
-- tunnel
 title: SSH Server
+slug: ssh-server
+date: '2022-08-03'
+tags:
+  - ssh
+  - tunnel
+categories:
+  - golang
 ---
 
 # 步驟

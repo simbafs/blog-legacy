@@ -1,13 +1,14 @@
 ---
-categories:
-- nodejs
-- blessed
-date: "2020-02-20"
-tags:
-- blessed
-- js
-- cli
 title: Blessed 切換畫面
+slug: blessed切換畫面
+date: '2020-02-20'
+tags:
+  - blessed
+  - js
+  - cli
+categories:
+  - js
+  - blessed
 ---
 
 # Blessed 切換畫面

@@ -1,13 +1,13 @@
 ---
-categories:
-- linux
-- docker
-date: "2020-09-10"
-slug: docker command
-tags:
-- docker
-- linux
 title: Docker 基礎指令
+slug: docker command
+date: '2020-09-10'
+tags:
+  - docker
+  - linux
+categories:
+  - linux
+  - docker
 ---
 
 # Docker 指令

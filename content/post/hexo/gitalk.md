@@ -1,11 +1,12 @@
 ---
-categories:
-- hexo
-date: "2020-02-11"
-tags:
-- hexo
-- github
 title: gitalk
+slug: gitalk
+date: '2020-02-11'
+tags:
+  - hexo
+  - github
+categories:
+  - hexo
 ---
 
 # 啟用 gitalk 留言

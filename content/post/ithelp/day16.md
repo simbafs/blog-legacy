@@ -1,16 +1,16 @@
 ---
-categories:
-- ithelp
-- pure-CLI-IDE
-date: "2021-09-16"
-tags:
-- cli
-- terminal
-- software development
-- vim
-- tmux
-- zsh
 title: Day 16：自動補全！coc.nvim
+slug: day16
+date: '2021-09-16'
+tags:
+  - cli
+  - terminal
+  - software development
+  - vim
+  - tmux
+  - zsh
+categories:
+  - ithelp
 ---
 
 一個好的自動補全工具可以讓你工作效率翻倍，你不用再去查文件了，自動補全不僅可以告訴你這裡有什麼函數可以用，還會告訴你參數的型態、函數功能的說明，可以說是把文件都寫在 vim 裡面了。  

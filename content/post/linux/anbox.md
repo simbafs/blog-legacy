@@ -1,14 +1,14 @@
 ---
-categories:
-- linux
-date: "2022-04-18T18:53:50+08:00"
-slug: ""
-tags:
-- anbox
-- linux
-- android
-- emulator
 title: Anbox
+slug: anbox
+date: '2022-04-18'
+tags:
+  - anbox
+  - linux
+  - android
+  - emulator
+categories:
+  - linux
 ---
 
 # Anbox

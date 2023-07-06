@@ -1,13 +1,13 @@
 ---
-categories:
-- go
-date: "2022-08-16T19:55:15+08:00"
-slug: ""
-tags:
-- p2p
-- network
-- tunnel
 title: p2p
+slug: p2p
+date: '2022-08-16'
+tags:
+  - p2p
+  - network
+  - tunnel
+categories:
+  - golang
 ---
 
 # p2p

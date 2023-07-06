@@ -1,13 +1,14 @@
 ---
-categories:
-- nodejs
-date: "2020-03-15"
-tags:
-- node
-- express
-- passport.js
-- js
 title: Passport.js
+slug: passport.js
+date: '2020-03-15'
+tags:
+  - node
+  - express
+  - passport.js
+  - js
+categories:
+  - js
 ---
 
 # Passport.js

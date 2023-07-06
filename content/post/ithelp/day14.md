@@ -1,16 +1,16 @@
 ---
-categories:
-- ithelp
-- pure-CLI-IDE
-date: "2021-09-14"
-tags:
-- cli
-- terminal
-- software development
-- vim
-- tmux
-- zsh
 title: Day 14：vim-plug
+slug: day14
+date: '2021-09-14'
+tags:
+  - cli
+  - terminal
+  - software development
+  - vim
+  - tmux
+  - zsh
+categories:
+  - ithelp
 ---
 
 前面講過了 zsh、tmux 的 plugin manager，vim 一樣有 plguin manager。跟前面幾個 plguin manager 很像，要安裝新的外掛只需要在某個地方加一行設定就好，這樣作的好處是哪天要再建立新的環境時只需要把設定檔帶走，而且集中式的管理可以一目了然。

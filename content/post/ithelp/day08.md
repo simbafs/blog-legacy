@@ -1,16 +1,16 @@
 ---
-categories:
-- ithelp
-- pure-CLI-IDE
-date: "2021-09-08"
-tags:
-- cli
-- terminal
-- software development
-- vim
-- tmux
-- zsh
 title: Day 08：八爪章魚之 tmux 快捷鍵
+slug: day08
+date: '2021-09-08'
+tags:
+  - cli
+  - terminal
+  - software development
+  - vim
+  - tmux
+  - zsh
+categories:
+  - ithelp
 ---
 
 tmux 有許多的**快捷鍵**來控制螢幕，不論是分割、移動都可以輕鬆完成

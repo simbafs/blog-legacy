@@ -1,12 +1,13 @@
 ---
-categories:
-- linux
-date: "2020-02-24"
-tags:
-- ssh
-- linux
-- tunnel
 title: SSH Tunnel
+slug: ssh-tunnel
+date: '2020-02-24'
+tags:
+  - ssh
+  - linux
+  - tunnel
+categories:
+  - linux
 ---
 
 # SSH Tunnel

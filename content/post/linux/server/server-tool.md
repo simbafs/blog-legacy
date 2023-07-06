@@ -1,12 +1,13 @@
 ---
-categories:
-- linux
-- server
-date: "2020-02-16"
-tags:
-- bash
-- RegEx
 title: Server Tool
+slug: server-tool
+date: '2020-02-16'
+tags:
+  - bash
+  - RegEx
+categories:
+  - linux
+  - server
 ---
 
 # Server Tool

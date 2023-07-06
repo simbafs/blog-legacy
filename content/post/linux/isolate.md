@@ -1,12 +1,13 @@
 ---
-categories:
-- linux
-date: "2020-03-09"
-tags:
-- linux
-- sandbox
-- onlinejudge
 title: isolate
+slug: isolate
+date: '2020-03-09'
+tags:
+  - linux
+  - sandbox
+  - onlinejudge
+categories:
+  - linux
 ---
 
 # isolate

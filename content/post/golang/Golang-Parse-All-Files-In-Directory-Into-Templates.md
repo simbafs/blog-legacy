@@ -1,13 +1,14 @@
 ---
-categories:
-- go
-date: "2021-07-30"
-tags:
-- golang
-- template
-- gin
-- embed
 title: Golang Parse All Files In Directory Into Templates
+slug: Golang-Parse-All-Files-In-Directory-Into-Templates
+date: '2021-07-30'
+tags:
+  - golang
+  - template
+  - gin
+  - embed
+categories:
+  - golang
 ---
 
 # Golang Parse All Files In Directory Into Templates

@@ -1,10 +1,11 @@
 ---
-categories:
-- kotlin
-date: "2021-05-04"
-tags:
-- kotlin
 title: beginning of kotlin
+slug: beginning-of-kotlin
+date: '2021-05-04'
+tags:
+  - kotlin
+categories:
+  - kotlin
 ---
 
 # val vs var

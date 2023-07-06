@@ -1,13 +1,15 @@
 ---
-categories:
-- other
-date: "2023-02-21T22:07:38+08:00"
-tags:
-- markdown
-- pdf
-- pandoc
-- latex
 title: Markdown to PDF
+slug: index
+date: '2023-02-21'
+tags:
+  - markdown
+  - pdf
+  - pandoc
+  - latex
+categories:
+  - other
+  - md2pdf
 ---
 
 # Markdown to PDF

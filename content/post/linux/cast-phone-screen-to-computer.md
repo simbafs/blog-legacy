@@ -1,14 +1,15 @@
 ---
-categories:
-- linux
-date: "2021-06-14"
-tags:
-- android
-- linux
-- adb
-- wireless
-- usb debug
 title: Cast Phone Screen to Computer
+slug: cast-phone-screen-to-computer
+date: '2021-06-14'
+tags:
+  - android
+  - linux
+  - adb
+  - wireless
+  - usb debug
+categories:
+  - linux
 ---
 
 # Cast Phone Screen to Computer

@@ -1,12 +1,12 @@
 ---
-categories:
-- uncategorized
-date: "2022-07-20T17:39:07+08:00"
-draft: true
-slug: ""
-tags:
-- git
 title: Bitbucket Connect Jira
+slug: index
+date: '2022-07-20'
+tags:
+  - git
+categories:
+  - atlassian
+  - bitbucket-connect-jira
 ---
 
 # Bitbucket Connect Jira

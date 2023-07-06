@@ -1,15 +1,16 @@
 ---
-categories:
-- linux
-- vim
-date: "2021-05-17"
-tags:
-- vim
-- YCM
-- complete
-- completing
-- dev
 title: YouComopleteMe Install
+slug: YouComopleteMe-install
+date: '2021-05-17'
+tags:
+  - vim
+  - YCM
+  - complete
+  - completing
+  - dev
+categories:
+  - linux
+  - vim
 ---
 
 # YCM Installation

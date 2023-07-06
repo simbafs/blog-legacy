@@ -1,18 +1,16 @@
 ---
-categories:
-- ithelp
-- pure-CLI-IDE
-date: "2021-09-01"
-munu:
-- main
-tags:
-- cli
-- terminal
-- software development
-- vim
-- tmux
-- zsh
 title: Day 01：前言，這批很純，快進來吧！
+slug: day01
+date: '2021-09-01'
+tags:
+  - cli
+  - terminal
+  - software development
+  - vim
+  - tmux
+  - zsh
+categories:
+  - ithelp
 ---
 
 # Who Am I

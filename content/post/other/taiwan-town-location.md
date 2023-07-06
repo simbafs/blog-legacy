@@ -1,13 +1,14 @@
 ---
-categories:
-- other
-date: "2021-06-24"
-tags:
-- taiwan
-- geolocation
-- opendata
-- api
 title: 臺灣地址 API
+slug: taiwan-town-location
+date: '2021-06-24'
+tags:
+  - taiwan
+  - geolocation
+  - opendata
+  - api
+categories:
+  - other
 ---
 
 # 臺灣地址 API

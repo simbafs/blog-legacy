@@ -1,14 +1,15 @@
 ---
-categories:
-- linux
-- bash
-date: "2020-11-15"
-tags:
-- bash
-- loop
-- seq
-- tips
 title: bash number loop
+slug: bash-number-loop
+date: '2020-11-15'
+tags:
+  - bash
+  - loop
+  - seq
+  - tips
+categories:
+  - linux
+  - bash
 ---
 
 # Bash Number Loop

@@ -1,13 +1,14 @@
 ---
-categories:
-- linux
-date: "2022-12-06T22:59:17+08:00"
-tags:
-- GPG
-- SSH
-- encryption
-- cryptography
 title: GPG with SSH
+slug: gpg-with-ssh
+date: '2022-12-06'
+tags:
+  - GPG
+  - SSH
+  - encryption
+  - cryptography
+categories:
+  - linux
 ---
 
 # GPG with SSH

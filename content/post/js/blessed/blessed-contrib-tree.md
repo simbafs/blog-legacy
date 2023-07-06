@@ -1,14 +1,15 @@
 ---
-categories:
-- nodejs
-- blessed
-date: "2020-02-18"
-tags:
-- blessed
-- blessed-contrib
-- js
-- cli
 title: Blessed Contrib Tree
+slug: blessed-contrib-tree
+date: '2020-02-18'
+tags:
+  - blessed
+  - blessed-contrib
+  - js
+  - cli
+categories:
+  - js
+  - blessed
 ---
 
 # blessed Contrib Tree

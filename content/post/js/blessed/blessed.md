@@ -1,13 +1,14 @@
 ---
-categories:
-- nodejs
-- blessed
-date: "2020-02-17"
-tags:
-- blessed
-- js
-- cli
 title: Blessed
+slug: blessed
+date: '2020-02-17'
+tags:
+  - blessed
+  - js
+  - cli
+categories:
+  - js
+  - blessed
 ---
 
 # Blessed

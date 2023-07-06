@@ -1,12 +1,12 @@
 ---
-categories:
-- linux
-date: "2023-05-20T00:09:20+08:00"
-image: null
-tags:
-- pdf
-- ocr
 title: OCR Add PDF Text Layer
+slug: ocr-add-pdf-layer
+date: '2023-05-19'
+tags:
+  - pdf
+  - ocr
+categories:
+  - linux
 ---
 
 # OCR Add PDF Text Layer

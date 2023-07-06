@@ -1,11 +1,12 @@
 ---
-categories:
-- frontend
-date: "2020-03-15"
-tags:
-- js
-- jquery
 title: jQuery
+slug: jquery
+date: '2020-03-15'
+tags:
+  - js
+  - jquery
+categories:
+  - frontend
 ---
 
 # jQuery

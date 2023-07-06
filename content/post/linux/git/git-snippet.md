@@ -1,11 +1,12 @@
 ---
-categories:
-- linux
-- git
-date: "2023-02-20T16:59:29+08:00"
-tags:
-- git
 title: Git Snippet
+slug: git-snippet
+date: '2023-02-20'
+tags:
+  - git
+categories:
+  - linux
+  - git
 ---
 
 # Git Snippet

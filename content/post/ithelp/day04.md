@@ -1,16 +1,16 @@
 ---
-categories:
-- ithelp
-- pure-CLI-IDE
-date: "2021-09-04"
-tags:
-- cli
-- terminal
-- software development
-- vim
-- tmux
-- zsh
 title: Day 04：金魚記憶力太短暫，交給外掛記吧！autosuggestions 與 sugstring-search
+slug: day04
+date: '2021-09-04'
+tags:
+  - cli
+  - terminal
+  - software development
+  - vim
+  - tmux
+  - zsh
+categories:
+  - ithelp
 ---
 
 今天的內容會比平常多，但是非常紮實！

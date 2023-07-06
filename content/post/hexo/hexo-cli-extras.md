@@ -1,10 +1,11 @@
 ---
-categories:
-- hexo
-date: "2020-02-11"
-tags:
-- hexo
 title: hexo-cli-extras
+slug: hexo-cli-extras
+date: '2020-02-11'
+tags:
+  - hexo
+categories:
+  - hexo
 ---
 
 # 好用的插件

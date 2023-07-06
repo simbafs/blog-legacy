@@ -1,13 +1,14 @@
 ---
-categories:
-- linux
-- server
-date: "2020-02-13"
-tags:
-- nginx
-- reverse proxy
-- certbot
 title: Nginx Reverse Proxy Setup
+slug: nginx-reverse-proxy-setup
+date: '2020-02-13'
+tags:
+  - nginx
+  - reverse proxy
+  - certbot
+categories:
+  - linux
+  - server
 ---
 
 # nginx 反向代理伺服器 (reverse proxy)

@@ -1,12 +1,13 @@
 ---
-categories:
-- linux
-- docker
-date: "2020-11-27"
-tags:
-- docker
-- linux
 title: docker commit
+slug: docker-commit
+date: '2020-11-27'
+tags:
+  - docker
+  - linux
+categories:
+  - linux
+  - docker
 ---
 
 # Docker Commit

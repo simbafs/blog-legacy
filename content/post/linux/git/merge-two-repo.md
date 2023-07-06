@@ -1,13 +1,13 @@
 ---
-categories:
-- linux
-- git
-date: "2022-10-18T20:25:48+08:00"
-slug: ""
-tags:
-- git
-- merge
 title: Merge Two Repo
+slug: merge-two-repo
+date: '2022-10-18'
+tags:
+  - git
+  - merge
+categories:
+  - linux
+  - git
 ---
 
 # Merge Two Repo

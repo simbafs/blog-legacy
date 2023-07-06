@@ -1,12 +1,12 @@
 ---
-categories:
-- go
-date: "2022-02-21T18:54:55+08:00"
-slug: plguin
-tags:
-- plugin
-- share object
 title: Golang Plguin
+slug: plguin
+date: '2022-02-21'
+tags:
+  - plugin
+  - share object
+categories:
+  - golang
 ---
 
 # Go 動態載入程式

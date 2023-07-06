@@ -1,12 +1,12 @@
 ---
-categories:
-- go
-date: "2021-10-19T00:06:19+08:00"
-slug: exec-cmd
-tags:
-- exec
-- process
 title: ExecCmd
+slug: exec-cmd
+date: '2021-10-18'
+tags:
+  - exec
+  - process
+categories:
+  - golang
 ---
 
 # Golang 執行外部命令

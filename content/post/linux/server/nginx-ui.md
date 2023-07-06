@@ -1,10 +1,12 @@
 ---
-categories:
-- server
-date: "2020-06-23"
-tags:
-- nginx linux
 title: Nginx UI
+slug: nginx-ui
+date: '2020-06-23'
+tags:
+  - nginx linux
+categories:
+  - linux
+  - server
 ---
 
 # Nginx UI

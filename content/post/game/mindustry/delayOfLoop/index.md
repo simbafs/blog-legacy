@@ -1,11 +1,13 @@
 ---
-categories:
-- game
-date: "2022-05-18T17:19:57+08:00"
-slug: delayOfLoop
-tags:
-- mindustry
 title: 迴圈的延遲
+slug: delayOfLoop
+date: '2022-05-18'
+tags:
+  - mindustry
+categories:
+  - game
+  - mindustry
+  - delayOfLoop
 ---
 
 # 迴圈的延遲

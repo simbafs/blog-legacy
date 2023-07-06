@@ -1,16 +1,16 @@
 ---
-categories:
-- ithelp
-- pure-CLI-IDE
-date: "2021-09-06"
-tags:
-- cli
-- terminal
-- software development
-- vim
-- tmux
-- zsh
 title: Day 06：螢幕切八段！多開神器 tmux
+slug: day06
+date: '2021-09-06'
+tags:
+  - cli
+  - terminal
+  - software development
+  - vim
+  - tmux
+  - zsh
+categories:
+  - ithelp
 ---
 
 今天起要介紹的是 tmux，這是一個終端機的 **session 管理器**，什麼是 session 呢？你可以把 session 理解為一個**終端機**（畫面）和**主機** （你的電腦）的連線，tmux 做的事就是把一個終端機**切分成多個終端機**，白話說就是**多開神器**啦！這樣你就可以左邊編輯程式、右邊看執行結果（如圖）。而且一切操作都在**一個**終端機視窗裡面，這意味著即使你在**沒有圖形界面**的純文字模式（像是 single user mode、ssh 連線）也可以享受如同圖形界面的便利！

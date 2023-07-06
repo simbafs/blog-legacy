@@ -1,12 +1,13 @@
 ---
-categories:
-- linux
-- docker
-date: "2020-12-05"
-tags:
-- docker
-- linux
 title: docker login error
+slug: docker-login-error
+date: '2020-12-05'
+tags:
+  - docker
+  - linux
+categories:
+  - linux
+  - docker
 ---
 
 # Docker Login Error

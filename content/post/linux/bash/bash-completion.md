@@ -1,12 +1,13 @@
 ---
-categories:
-- linux
-- bash
-date: "2020-11-14"
-tags:
-- bash
-- completion
 title: bash completion
+slug: bash-completion
+date: '2020-11-14'
+tags:
+  - bash
+  - completion
+categories:
+  - linux
+  - bash
 ---
 
 # Bash Completion

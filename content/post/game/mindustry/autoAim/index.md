@@ -1,11 +1,13 @@
 ---
-categories:
-- game
-date: "2022-05-18T16:29:13+08:00"
-slug: turretAutoAim
-tags:
-- mindustry
 title: 砲台自動瞄準
+slug: turretAutoAim
+date: '2022-05-18'
+tags:
+  - mindustry
+categories:
+  - game
+  - mindustry
+  - autoAim
 ---
 
 # 砲台自動瞄準

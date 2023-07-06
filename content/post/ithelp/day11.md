@@ -1,16 +1,16 @@
 ---
-categories:
-- ithelp
-- pure-CLI-IDE
-date: "2021-09-11"
-tags:
-- cli
-- terminal
-- software development
-- vim
-- tmux
-- zsh
 title: Day 11：批次修改！！
+slug: day11
+date: '2021-09-11'
+tags:
+  - cli
+  - terminal
+  - software development
+  - vim
+  - tmux
+  - zsh
+categories:
+  - ithelp
 ---
 
 昨天體驗了一些快捷鍵和命令，今天要講的是在 vim 中也很常用的**搜尋與取代**

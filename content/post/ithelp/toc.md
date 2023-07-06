@@ -1,7 +1,10 @@
 ---
-date: "2021-09-01"
-draft: true
 title: Tabel Of Content
+slug: toc
+date: '2021-09-01'
+tags: []
+categories:
+  - ithelp
 ---
 
 # 純‧CLI 整合式開發環境

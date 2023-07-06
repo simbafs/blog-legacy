@@ -1,13 +1,13 @@
 ---
-categories:
-- linux
-- vim
-date: "2022-06-15T17:09:18+08:00"
-slug: ""
-tags:
-- vim
-- colorscheme
 title: Solarized
+slug: solarized
+date: '2022-06-15'
+tags:
+  - vim
+  - colorscheme
+categories:
+  - linux
+  - vim
 ---
 
 # Solarized

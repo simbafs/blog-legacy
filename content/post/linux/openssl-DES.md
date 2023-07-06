@@ -1,13 +1,13 @@
 ---
-categories:
-- linux
-date: "2022-10-02T23:22:24+08:00"
-slug: openssl-DES
-tags:
-- cryptography
-- encryption
-- decryption
 title: Openssl DES
+slug: openssl-DES
+date: '2022-10-02'
+tags:
+  - cryptography
+  - encryption
+  - decryption
+categories:
+  - linux
 ---
 
 # openssl DES

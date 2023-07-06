@@ -1,16 +1,16 @@
 ---
-categories:
-- linux
-- vim
-date: "2022-04-07T23:13:04+08:00"
-slug: modeline
-tags:
-- modeline
-- vim
-- config
-- file
-- editor
 title: Modeline
+slug: modeline
+date: '2022-04-07'
+tags:
+  - modeline
+  - vim
+  - config
+  - file
+  - editor
+categories:
+  - linux
+  - vim
 ---
 
 # Modeline

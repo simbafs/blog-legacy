@@ -1,13 +1,14 @@
 ---
-categories:
-- hexo
-date: "2020-02-12"
-tags:
-- hexo
-- cactus
-- highlight
-- RSS
 title: hexo-config
+slug: hexo-config
+date: '2020-02-12'
+tags:
+  - hexo
+  - cactus
+  - highlight
+  - RSS
+categories:
+  - hexo
 ---
 
 # 各種設定值嘗試

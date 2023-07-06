@@ -1,14 +1,15 @@
 ---
-categories:
-- nodejs
-date: "2021-01-05"
-tags:
-- captcha
-- hCaptcha
-- node
-- express
-- js
 title: hCaptcha
+slug: hCaptcha
+date: '2021-01-05'
+tags:
+  - captcha
+  - hCaptcha
+  - node
+  - express
+  - js
+categories:
+  - js
 ---
 
 # hCaptcha

@@ -1,13 +1,14 @@
 ---
-categories:
-- nodejs
-date: "2020-02-23"
-tags:
-- unix socket
-- node
-- nginx
-- js
 title: Unix Socket
+slug: unix-socket
+date: '2020-02-23'
+tags:
+  - unix socket
+  - node
+  - nginx
+  - js
+categories:
+  - js
 ---
 
 # Unix Socket

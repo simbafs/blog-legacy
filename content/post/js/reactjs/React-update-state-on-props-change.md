@@ -1,14 +1,15 @@
 ---
-categories:
-- nodejs
-- reactjs
-date: "2020-07-12"
-tags:
-- reactjs
-- state
-- js
-- frontend
 title: Reactjs Update State on Props Change
+slug: React-update-state-on-props-change
+date: '2020-07-12'
+tags:
+  - reactjs
+  - state
+  - js
+  - frontend
+categories:
+  - js
+  - reactjs
 ---
 
 # React Update State on Props Change

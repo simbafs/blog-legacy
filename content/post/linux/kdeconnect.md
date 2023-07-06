@@ -1,13 +1,14 @@
 ---
-categories:
-- linux
-date: "2022-04-07T23:25:28+08:00"
-tags:
-- linux
-- kde
-- kdeconnect
-- android
 title: kdeconnect
+slug: kdeconnect
+date: '2022-04-07'
+tags:
+  - linux
+  - kde
+  - kdeconnect
+  - android
+categories:
+  - linux
 ---
 
 # kdeconnect

@@ -1,10 +1,11 @@
 ---
-categories:
-- hexo
-date: "2020-08-19"
-tags:
-- hexo
 title: 加入 google search 和 sitemap
+slug: 加入-google-search-和-sitemap
+date: '2020-08-19'
+tags:
+  - hexo
+categories:
+  - hexo
 ---
 
 # 前置設定

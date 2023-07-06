@@ -1,11 +1,12 @@
 ---
-categories:
-- frontend
-date: "2020-06-01"
-tags:
-- frontent
-- HTML
 title: HTML form button
+slug: HTML-form-button
+date: '2020-06-01'
+tags:
+  - frontent
+  - HTML
+categories:
+  - frontend
 ---
 
 # HTML Form Button

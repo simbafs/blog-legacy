@@ -1,13 +1,14 @@
 ---
-categories:
-- linux
-- vim
-date: "2020-08-25"
-tags:
-- vim
-- auto
-- plugin
 title: Vim Auto Comment Plugin
+slug: vim-auto-comment-plugin
+date: '2020-08-25'
+tags:
+  - vim
+  - auto
+  - plugin
+categories:
+  - linux
+  - vim
 ---
 
 # Vim Auto Comment Plugin

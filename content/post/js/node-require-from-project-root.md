@@ -1,10 +1,11 @@
 ---
-categories:
-- nodejs
-date: "2020-09-02"
-tags:
-- nodejs
 title: Node Require from Project Root
+slug: node-require-from-project-root
+date: '2020-09-02'
+tags:
+  - nodejs
+categories:
+  - js
 ---
 
 # Node Require from Project Root

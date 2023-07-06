@@ -1,10 +1,11 @@
 ---
-categories:
-- hexo
-date: "2020-02-10"
-tags:
-- hexo
 title: hexo-installation
+slug: hexo-installation
+date: '2020-02-10'
+tags:
+  - hexo
+categories:
+  - hexo
 ---
 
 # 把 hexo 部屬到 gh-page

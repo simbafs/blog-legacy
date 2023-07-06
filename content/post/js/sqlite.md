@@ -1,15 +1,16 @@
 ---
-categories:
-- nodejs
-date: "2020-03-13"
-tags:
-- node
-- sqlite
-- async
-- js
-- sql
-- database
 title: sqlite3
+slug: sqlite
+date: '2020-03-13'
+tags:
+  - node
+  - sqlite
+  - async
+  - js
+  - sql
+  - database
+categories:
+  - js
 ---
 
 # sqlite3

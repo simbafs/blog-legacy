@@ -1,12 +1,12 @@
 ---
-categories:
-- go
-date: "2023-01-09T04:00:39+08:00"
-slug: ""
-tags:
-- bubbletea
-- cli
 title: Bubbletea
+slug: bubbletea
+date: '2023-01-08'
+tags:
+  - bubbletea
+  - cli
+categories:
+  - golang
 ---
 
 # charmbracelet/bubbletea

@@ -1,11 +1,12 @@
 ---
-categories:
-- linux
-date: "2022-11-24T08:53:20+08:00"
-tags:
-- mastodon
-- error
 title: Mastodon
+slug: mastodon
+date: '2022-11-24'
+tags:
+  - mastodon
+  - error
+categories:
+  - linux
 ---
 
 # Mastodon

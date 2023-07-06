@@ -1,14 +1,15 @@
 ---
-categories:
-- nodejs
-date: "2020-11-10"
-tags:
-- mongoose
-- node
-- js
-- database
-- nosql
 title: Mongoose Model
+slug: Mongoose-Model
+date: '2020-11-10'
+tags:
+  - mongoose
+  - node
+  - js
+  - database
+  - nosql
+categories:
+  - js
 ---
 
 # Mongoose Model

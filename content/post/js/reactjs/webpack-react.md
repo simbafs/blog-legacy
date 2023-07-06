@@ -1,14 +1,15 @@
 ---
-categories:
-- nodejs
-- reactjs
-date: "2020-06-28"
-tags:
-- webpack
-- reactjs
-- frontend
-- js
 title: Webpack Reactjs
+slug: webpack-react
+date: '2020-06-28'
+tags:
+  - webpack
+  - reactjs
+  - frontend
+  - js
+categories:
+  - js
+  - reactjs
 ---
 
 # Webpack Reactjs

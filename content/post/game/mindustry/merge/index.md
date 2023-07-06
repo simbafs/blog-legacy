@@ -1,11 +1,13 @@
 ---
-categories:
-- game
-date: "2022-05-17T08:32:38+08:00"
-slug: ""
-tags:
-- mindustry
 title: Merge
+slug: index
+date: '2022-05-17'
+tags:
+  - mindustry
+categories:
+  - game
+  - mindustry
+  - merge
 ---
 
 # Merge

@@ -1,15 +1,15 @@
 ---
-categories:
-- linux
-- bash
-date: "2023-02-25T15:40:41+08:00"
-image: null
-tags:
-- bash
-- snippet
-- command
-- cli
 title: Bash Snippet
+slug: snippet
+date: '2023-02-25'
+tags:
+  - bash
+  - snippet
+  - command
+  - cli
+categories:
+  - linux
+  - bash
 ---
 
 # Bash Snippet
