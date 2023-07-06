@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>atlassian on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/atlassian/</link><description>Recent content in atlassian on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 20 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/atlassian/index.xml" rel="self" type="application/rss+xml"/><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
+&lt;h2 id="bitbucket-連接-jira">Bitbucket 連接 Jira&lt;/h2>
+&lt;p>先到 Bitbucket 的 repo 的 Jira issue 頁面
+&lt;img src="https://blog.simbafs.cc/1.png"
+loading="lazy"
+alt="1"
+>
+點擊左上方資料夾圖示按鈕，然後點擊「Manage linked projects」
+&lt;img src="https://blog.simbafs.cc/2.png"
+loading="lazy"
+alt="2"
+>
+選好 Jira 專案後，按下「Link project」
+&lt;img src="https://blog.simbafs.cc/3.png"
+loading="lazy"
+alt="3"
+>
+等載入完成就可以看到 Jira issue 了
+&lt;img src="https://blog.simbafs.cc/4.png"
+loading="lazy"
+alt="4"
+>&lt;/p>
+&lt;h2 id="jira-issue-連結-bitbucket-branch">Jira issue 連結 Bitbucket branch&lt;/h2>
+&lt;p>Bitbucket 的 repo 的 Jira issue 頁面，點擊要處理的 Jira issue 最右側的三個點點
+&lt;img src="https://blog.simbafs.cc/4.png"
+loading="lazy"
+alt="4"
+>
+選第一個按鈕「Create Brench」
+&lt;img src="https://blog.simbafs.cc/5.png"
+loading="lazy"
+alt="5"
+>
+填好 type、name 等等訊息，按下「Create」就建立好並對應了
+&lt;img src="https://blog.simbafs.cc/6.png"
+loading="lazy"
+alt="6"
+>&lt;/p>
+&lt;h2 id="將遠端-git-brench-拉到本地">將遠端 Git brench 拉到本地&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">$ git pull
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git switch &amp;lt;branch name&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="合併分支">合併分支&lt;/h2>
+&lt;p>目標：將 A 分支合併到 main 分支&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ git switch main
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git merge A
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>這裡可能會產生衝突（conflict），解決後就可以繼續合併了&lt;/p></description></item></channel></rss>

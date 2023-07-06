@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>js on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/js/</link><description>Recent content in js on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Feb 2023 23:28:41 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/js/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript Snippet</title><link>https://blog.simbafs.cc/p/js/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 23:28:41 +0800</pubDate><guid>https://blog.simbafs.cc/p/js/typescript-snippet/</guid><description>&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>js on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/js/</link><description>Recent content in js on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/js/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript Snippet</title><link>https://blog.simbafs.cc/p/js/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/typescript-snippet/</guid><description>&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
 &lt;h2 id="keyof">keyof&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -76,7 +76,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// type Key = &amp;#39;KEY_A&amp;#39; | &amp;#39;KEY_B&amp;#39;
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Google AppScript Calender API</title><link>https://blog.simbafs.cc/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 09:58:24 +0800</pubDate><guid>https://blog.simbafs.cc/p/google-app-script-calender-api/</guid><description>&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
+&lt;/div></description></item><item><title>Google AppScript Calender API</title><link>https://blog.simbafs.cc/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/google-app-script-calender-api/</guid><description>&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
 &lt;p>因為我懶的一堂一堂課加入日曆、還要按重複，所以就來研究如何自動化。我的想法是透過一個物件定義課表，然後透過程式來自動化新增。評估了幾個技術後，決定使用 Google App Script 來實做，畢竟他和日曆都是 Google 產品，整合應該是最好的（吧，而且可以弄成類似雲端應用的感覺，輕鬆開放給其他人使用。&lt;/p>
 &lt;h2 id="建立專案">建立專案&lt;/h2>
 &lt;p>在 &lt;a class="link" href="https://script.google.com/home" target="_blank" rel="noopener"
@@ -543,7 +543,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>File System</title><link>https://blog.simbafs.cc/p/js/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 22:16:42 +0800</pubDate><guid>https://blog.simbafs.cc/p/js/nextjs/fs/</guid><description>&lt;h1 id="file-system">File System&lt;/h1>
+&lt;/div></description></item><item><title>File System</title><link>https://blog.simbafs.cc/p/js/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/nextjs/fs/</guid><description>&lt;h1 id="file-system">File System&lt;/h1>
 &lt;h2 id="getstaticprops">getStaticProps&lt;/h2>
 &lt;p>不知道為什麼，&lt;code>getStaticProps&lt;/code> 裡面的 &lt;code>fs&lt;/code> 時有時無。&lt;a class="link" href="https://github.com/vercel/next.js/discussions/12124" target="_blank" rel="noopener"
 >這裡&lt;/a> 似乎有關於這個問題的回答，但無效&lt;/p>
@@ -677,7 +677,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>React 解決中文輸入法</title><link>https://blog.simbafs.cc/p/frontend/react-composition-event/</link><pubDate>Sat, 05 Feb 2022 16:59:44 +0800</pubDate><guid>https://blog.simbafs.cc/p/frontend/react-composition-event/</guid><description>&lt;p>今天在開發&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>React 解決中文輸入法</title><link>https://blog.simbafs.cc/p/frontend/react-composition-event/</link><pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/react-composition-event/</guid><description>&lt;p>今天在開發&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
 >晶晶體產生器&lt;/a>的時候，發現中文輸入總是有問題，這時候我想起以前看過 Hackmd 官方的&lt;a class="link" href="https://hackmd.io/@hackmd/CompositionEvent" target="_blank" rel="noopener"
 >一篇 blog&lt;/a>，提到中文輸入法如果有問題，可能和組字事件有關。於是就開始研究。首先我將以下設定加入 &lt;code>textarea&lt;/code> 裡觀察組字事件的行為&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1291,7 +1291,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Reactjs Update State on Props Change</title><link>https://blog.simbafs.cc/p/js/reactjs/reactjs-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/reactjs-update-state-on-props-change/</guid><description>&lt;h1 id="react-update-state-on-props-change">React Update State on Props Change&lt;/h1>
+&lt;/div></description></item><item><title>Reactjs Update State on Props Change</title><link>https://blog.simbafs.cc/p/js/reactjs/react-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/react-update-state-on-props-change/</guid><description>&lt;h1 id="react-update-state-on-props-change">React Update State on Props Change&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>今天在研究 React
 遇到一個問題
@@ -1348,7 +1348,7 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props&lt;/a>
 &lt;a class="link" href="https://zh-hant.reactjs.org/docs/hooks-effect.html" target="_blank" rel="noopener"
->https://zh-hant.reactjs.org/docs/hooks-effect.html&lt;/a>&lt;/p></description></item><item><title>Webpack Reactjs</title><link>https://blog.simbafs.cc/p/js/reactjs/webpack-reactjs/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/webpack-reactjs/</guid><description>&lt;h1 id="webpack-reactjs">Webpack Reactjs&lt;/h1>
+>https://zh-hant.reactjs.org/docs/hooks-effect.html&lt;/a>&lt;/p></description></item><item><title>Webpack Reactjs</title><link>https://blog.simbafs.cc/p/js/reactjs/webpack-react/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/webpack-react/</guid><description>&lt;h1 id="webpack-reactjs">Webpack Reactjs&lt;/h1>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>最近開始想學 react
 在這之前當然要先把開發環境搞好
@@ -1508,7 +1508,7 @@ alt="2.png"
 沒了！&lt;/li>
 &lt;/ol>
 &lt;p>參考的教學文：https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E7%AD%86%E8%A8%98-%E9%80%8F%E9%81%8E-passport-js-%E5%AF%A6%E4%BD%9C%E9%A9%97%E8%AD%89%E6%A9%9F%E5%88%B6-11cf478f421e
-雖然這個也沒有好到哪裡去但至少我看著他做出來了，有些部份是參考作者的餐廳程式&lt;/p></description></item><item><title>sqlite3</title><link>https://blog.simbafs.cc/p/js/sqlite3/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/sqlite3/</guid><description>&lt;h1 id="sqlite3">sqlite3&lt;/h1>
+雖然這個也沒有好到哪裡去但至少我看著他做出來了，有些部份是參考作者的餐廳程式&lt;/p></description></item><item><title>sqlite3</title><link>https://blog.simbafs.cc/p/js/sqlite/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/sqlite/</guid><description>&lt;h1 id="sqlite3">sqlite3&lt;/h1>
 &lt;p>昨天是試著去理解 sqlite3，我發現他的 callback function 真的太煩了
 於是我試著去尋找 async 的版本，還真找到了
 這個套件把整個 sqlite 包成 async 了&lt;/p>
@@ -1722,7 +1722,7 @@ alt="2.png"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ chmod 777 /tmp/express.sock
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>這樣就可以啦！&lt;/p></description></item><item><title>Blessed 切換畫面</title><link>https://blog.simbafs.cc/p/js/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</link><pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/blessed/blessed-%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</guid><description>&lt;h1 id="blessed-切換畫面">Blessed 切換畫面&lt;/h1>
+&lt;/div>&lt;p>這樣就可以啦！&lt;/p></description></item><item><title>Blessed 切換畫面</title><link>https://blog.simbafs.cc/p/js/blessed/blessed%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</link><pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/blessed/blessed%E5%88%87%E6%8F%9B%E7%95%AB%E9%9D%A2/</guid><description>&lt;h1 id="blessed-切換畫面">Blessed 切換畫面&lt;/h1>
 &lt;p>今天完成了新版本的 &lt;code>treetify&lt;/code> &lt;a class="link" href="https://blog.simbafs.cc/2020/02/18/blessed-contrib-tree/" >看這&lt;/a>
 同時我設計好了右邊的 &lt;code>edit&lt;/code>
 但是我的問題是他要根據情況不同切換不同的頁面

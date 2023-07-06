@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>autoAim on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/autoaim/</link><description>Recent content in autoAim on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/autoaim/index.xml" rel="self" type="application/rss+xml"/><item><title>砲台自動瞄準</title><link>https://blog.simbafs.cc/p/game/mindustry/turretautoaim/</link><pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/turretautoaim/</guid><description>&lt;h1 id="砲台自動瞄準">砲台自動瞄準&lt;/h1>
+&lt;p>用處理器可以控制砲台們打的方向和什麼時候打，這樣只要有一群受控的砲台，就可以在射程範圍內指哪打哪&lt;/p>
+&lt;h2 id="單一砲台">單一砲台&lt;/h2>
+&lt;p>&lt;img src="https://blog.simbafs.cc/oneTurretScreeshot.png"
+loading="lazy"
+alt="one turret screenshot"
+>&lt;/p>
+&lt;p>如圖所示，砲台跟著玩家瞄準的方向打&lt;br>
+以下是程式碼&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">radar player any any distance duo1 1 player
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sensor x player @shootX
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sensor y player @shootY
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sensor shoot player @shooting
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">control shoot duo1 x y shoot 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">command&lt;/th>
+&lt;th style="text-align:left">description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">radar&lt;/td>
+&lt;td style="text-align:left">取得玩家物件&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">sensor&lt;/td>
+&lt;td style="text-align:left">抽出玩家物件的 &lt;code>shootX&lt;/code>、&lt;code>shootY&lt;/code>（瞄準的點）和 &lt;code>shooting&lt;/code>（是否正在開火）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">control&lt;/td>
+&lt;td style="text-align:left">控制 &lt;code>duo1&lt;/code> 砲台&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">variable&lt;/th>
+&lt;th style="text-align:left">description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">player&lt;/td>
+&lt;td style="text-align:left">玩家物件&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">x&lt;/td>
+&lt;td style="text-align:left">瞄準的 X 座標&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">y&lt;/td>
+&lt;td style="text-align:left">瞄準的 Y 座標&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">shooting&lt;/td>
+&lt;td style="text-align:left">是否開火&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="https://blog.simbafs.cc/oneTurretCode.png"
+loading="lazy"
+alt="one turret code"
+>&lt;/p>
+&lt;h2 id="多個砲台">多個砲台&lt;/h2>
+&lt;p>上面的指令只能控制一個砲台，那麼要怎麼控制多個砲台呢？答案是 loop，但是 Mindustry 沒有提供 loop，我們只能用 &lt;code>jump&lt;/code>，那麼就來看看程式吧！&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">set n 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">getlink result n
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">radar player any any distance result 1 player
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sensor x player @shootX
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sensor y player @shootY
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sensor shoot player @shooting
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">control shoot result x y shoot 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">op add n n 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">op mod n n @links
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jump 1 always x false
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>以下重複的就不會再多講了&lt;/p>
+&lt;/blockquote>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">command&lt;/th>
+&lt;th style="text-align:left">description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">set&lt;/td>
+&lt;td style="text-align:left">初始化一個變數 &lt;code>n&lt;/code> 值為 &lt;code>0&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getlink&lt;/td>
+&lt;td style="text-align:left">取得連結的第 &lt;code>n&lt;/code> 個建築，存到 &lt;code>result&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">op&lt;/td>
+&lt;td style="text-align:left">執行數學運算，舉例 &lt;code>add n N 1&lt;/code> =&amp;gt; &lt;code>n = N + 1&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">jump&lt;/td>
+&lt;td style="text-align:left">根據規則跳躍到某條指令，這裡的 &lt;code>1&lt;/code> 是指跳到第一調指令（從 0 開始數，也就是跳到 &lt;code>radar&lt;/code>），因為我們調建設成 &lt;code>always&lt;/code>，因此後面兩個就不必要，你在編輯畫面應該也看不到&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">variable&lt;/th>
+&lt;th style="text-align:left">description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">n&lt;/td>
+&lt;td style="text-align:left">迭代的變數&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">@links&lt;/td>
+&lt;td style="text-align:left">總共有幾個連結的建築&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="https://blog.simbafs.cc/multipleTurretsScreenshot.png"
+loading="lazy"
+alt="multiple turrets screenshot"
+>&lt;br>
+&lt;img src="https://blog.simbafs.cc/multipleTurretCode.png"
+loading="lazy"
+alt="multipleTurretsCode"
+>&lt;/p>
+&lt;h2 id="參考資料">參考資料&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.youtube.com/watch?v=UFK5m6qKT6U" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=UFK5m6qKT6U&lt;/a>&lt;br>
+&lt;a class="link" href="https://www.youtube.com/watch?v=YMxU0jcS11I" target="_blank" rel="noopener"
+>https://www.youtube.com/watch?v=YMxU0jcS11I&lt;/a>&lt;/p></description></item></channel></rss>

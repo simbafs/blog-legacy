@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SSH on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/ssh/</link><description>Recent content in SSH on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 12 Dec 2022 23:26:53 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/ssh/index.xml" rel="self" type="application/rss+xml"/><item><title>GPG and Yubikey</title><link>https://blog.simbafs.cc/p/linux/gpg-yubikey/</link><pubDate>Mon, 12 Dec 2022 23:26:53 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-yubikey/</guid><description>&lt;h1 id="gpg">GPG&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ssh on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/ssh/</link><description>Recent content in ssh on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 12 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/ssh/index.xml" rel="self" type="application/rss+xml"/><item><title>GPG and Yubikey</title><link>https://blog.simbafs.cc/p/linux/gpg-yubikey/</link><pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-yubikey/</guid><description>&lt;h1 id="gpg">GPG&lt;/h1>
 &lt;p>GPG 是由 由 PGP、OpenPGP 演化而來，屬於 GNU 計畫之一，主要功能是在不安全通道建立安全可信的通訊。為了建立安全可信，需要解決幾個問題：加密明文、驗證發送方、驗證接收方，以及為了解決前面三個問題而產生的新問題：信任。&lt;br>
 為了驗證發送方，發送方需要產生只有發送方能產生的簽章併附在內容後面。為了驗證接收方，要把內容用只有接收方才能解開的方式把內容保護起來，這同時可以做到加密明文。&lt;/p>
 &lt;p>GPG 中每個人都有一個鑰匙圈（keyring），就像你包包裡的鑰匙圈，GPG 的 keyring 也可以有不只一把金鑰。通常來說會是一把主金鑰和若干把的子金鑰，每一把都是非對稱金鑰對，也就是會有公鑰和私鑰（密鑰）。公鑰是需要公佈給其他人知道的（還要像辦法讓其他人「信任」），而私鑰是必須保護好，後面提到的 Yubikey 就是為了保護我們的私鑰，盡量讓他暴露的風險越低越好。&lt;/p>
@@ -175,7 +175,7 @@
 &lt;h3 id="gpg-with-ssh">GPG with SSH&lt;/h3>
 &lt;h3 id="簽章公鑰">簽章公鑰&lt;/h3>
 &lt;h2 id="發佈公鑰">發佈公鑰&lt;/h2>
-&lt;h1 id="yubikey">Yubikey&lt;/h1></description></item><item><title>GPG with SSH</title><link>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 22:59:17 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</guid><description>&lt;h1 id="gpg-with-ssh">GPG with SSH&lt;/h1>
+&lt;h1 id="yubikey">Yubikey&lt;/h1></description></item><item><title>GPG with SSH</title><link>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</guid><description>&lt;h1 id="gpg-with-ssh">GPG with SSH&lt;/h1>
 &lt;p>接續前一篇 &lt;a class="link" href="https://blog.simbafs.cc/posts/linux/gpg/" >gpg 的文章&lt;/a>&lt;/p>
 &lt;h2 id="指紋-fingerprint">指紋 Fingerprint&lt;/h2>
 &lt;p>根據 &lt;a class="link" href="https://help.gnome.org/users/seahorse/stable/misc-key-fingerprint.html.en" target="_blank" rel="noopener"
@@ -235,7 +235,13 @@
 &lt;li>根據第三個參考網址 &lt;a class="link" href="https://gist.github.com/mcattarinussi/834fc4b641ff4572018d0c665e5a94d3#setup-the-gpg-agent-for-ssh-authentication" target="_blank" rel="noopener"
 >setup-the-gpg-agent-for-ssh-authentication&lt;/a> 章節設定 gpg-agent&lt;/li>
 &lt;/ol>
-&lt;p>這時後重新開啟終端機就可以用 gpg 取代原本的 ssh key 了，確認移除 ssh key 真的還可以登入後就可以把舊的 ssh key 收起來了。&lt;/p></description></item><item><title>Yubikey</title><link>https://blog.simbafs.cc/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 15:22:55 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/yubikey/</guid><description>&lt;h1 id="yubikey">Yubikey&lt;/h1>
+&lt;p>這時後重新開啟終端機就可以用 gpg 取代原本的 ssh key 了，確認移除 ssh key 真的還可以登入後就可以把舊的 ssh key 收起來了。&lt;/p></description></item><item><title>SSH Server</title><link>https://blog.simbafs.cc/p/golang/ssh-server/</link><pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-server/</guid><description>&lt;h1 id="步驟">步驟&lt;/h1>
+&lt;ol>
+&lt;li>聆聽某個 tcp port/socket &lt;code>net.Listen()&lt;/code>&lt;/li>
+&lt;li>用 &lt;code>for{}&lt;/code> 接受每個進來的 tcp 連線 &lt;code>listener.Accept()&lt;/code>&lt;/li>
+&lt;li>建立 ssh 連線 &lt;code>ssh.NewServerConn&lt;/code>，使 tcp 連線升級成 ssh 連線&lt;/li>
+&lt;li>&lt;/li>
+&lt;/ol></description></item><item><title>Yubikey</title><link>https://blog.simbafs.cc/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/yubikey/</guid><description>&lt;h1 id="yubikey">Yubikey&lt;/h1>
 &lt;p>感謝煥杰賣我一個 1200，撿到寶啦！我買的是 &lt;a class="link" href="https://www.yubico.com/tw/product/yubikey-5c-nfc/" target="_blank" rel="noopener"
 >Yubikey 5C NFC&lt;/a>，看起來幾乎所有功能都有&lt;/p>
 &lt;h2 id="login">login&lt;/h2>

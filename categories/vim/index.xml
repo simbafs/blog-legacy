@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vim on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/vim/</link><description>Recent content in vim on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 17:09:18 +0800</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>Solarized</title><link>https://blog.simbafs.cc/p/linux/vim/solarized/</link><pubDate>Wed, 15 Jun 2022 17:09:18 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/solarized/</guid><description>&lt;h1 id="solarized">Solarized&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vim on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/vim/</link><description>Recent content in vim on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>Solarized</title><link>https://blog.simbafs.cc/p/linux/vim/solarized/</link><pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/solarized/</guid><description>&lt;h1 id="solarized">Solarized&lt;/h1>
 &lt;p>&lt;a class="link" href="https://ethanschoonover.com/solarized/" target="_blank" rel="noopener"
 >solarized&lt;/a> 是一個文字界面常見的配色方案，不僅是用在 vim，大多數 terminal 和 editor 也都支援&lt;/p>
 &lt;h2 id="install">install&lt;/h2>
@@ -90,7 +90,7 @@ Plug &amp;rsquo;ericbn/vim-solarized'&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34; trasparent end
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Modeline</title><link>https://blog.simbafs.cc/p/linux/vim/modeline/</link><pubDate>Thu, 07 Apr 2022 23:13:04 +0800</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/modeline/</guid><description>&lt;h1 id="modeline">Modeline&lt;/h1>
+&lt;/div></description></item><item><title>Modeline</title><link>https://blog.simbafs.cc/p/linux/vim/modeline/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/modeline/</guid><description>&lt;h1 id="modeline">Modeline&lt;/h1>
 &lt;p>&lt;code>modeline&lt;/code> 是一個可以將 vim 設定嵌入檔案的方式，這樣就可以讓某些檔案有自己的設定，像是折疊、不要行數、tab 等於多少空白等等。&lt;/p>
 &lt;h2 id="簡單的條件">簡單的條件&lt;/h2>
 &lt;p>簡單的 &lt;code>modeline&lt;/code> 需要滿足幾個條件：&lt;/p>

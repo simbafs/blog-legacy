@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ncku on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/ncku/</link><description>Recent content in ncku on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/ncku/index.xml" rel="self" type="application/rss+xml"/><item><title>Preparing Environment</title><link>https://blog.simbafs.cc/p/prepareenv/</link><pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/prepareenv/</guid><description>&lt;h1 id="preparing-environment">Preparing Environment&lt;/h1>
+&lt;h2 id="gnu-toolchain">GNU toolchain&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ mkdir -p /opt/riscv/bin ~/riscv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ echo &amp;#39;export RISCV=/opt/riscv&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ echo &amp;#39;export PATH=$PATH:$RISCV/bin&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo apt install git autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev ninja-build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cd ~/riscv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git clone --recurse-submodules -j8 --depth 1 https://github.com/riscv/riscv-gnu-toolchain
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/2144406/how-to-make-shallow-git-submodules" target="_blank" rel="noopener"
+>https://stackoverflow.com/questions/2144406/how-to-make-shallow-git-submodules&lt;/a>
+這裡因為如果在 make 時再去抓 submodule 好像會怪怪的&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ cd riscv-gnu-toolchain
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ./configure --prefix=$RISCV --enable-multilib
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>執行這步之前要先去每個 submodule 下指令 &lt;code>git reset HEAD --hard&lt;/code>，應該可以修改 &lt;code>git clone&lt;/code> 指令做到，但懶得重試了&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ sudo make linux -j4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>這步驟要編很久&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="其他工具">其他工具&lt;/h2>
+&lt;p>其他工具包含 spike、proxy kernel，這兩個編譯方式都一樣&lt;/p>
+&lt;h3 id="spike">spike&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ cd ~/riscv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo apt-get install device-tree-compiler
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git clone --depth 1 https://github.com/riscv/riscv-isa-sim.git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cd riscv-isa-sim
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ mkdir build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cd build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ../configure --prefix=$RISCV
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ make
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo make install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ cd ~/riscv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git clone https://github.com/riscv/riscv-pk.git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cd riscv-pk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ mkdir build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cd build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ../configure --prefix=$RISCV --host=riscv64-unknown-linux-gnu
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ make
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo make install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="測試">測試&lt;/h2>
+&lt;h3 id="gnu-toolchain-1">GNU toolchain&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ riscv64-unknown-linux-gnu-gcc -v
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="others-tool">others tool&lt;/h3>
+&lt;blockquote>
+&lt;p>/tmp/hello.c&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">(){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;hello world&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>執行&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ riscv64-unknown-linux-gnu-gcc -static -o /tmp/hello /tmp/hello.c
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ spike --isa=RV64GC $RISCV/riscv64-unknown-linux-gnu/bin/pk /tmp/hello
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
+&lt;p>上課 Homework 0 講義&lt;/p></description></item></channel></rss>
