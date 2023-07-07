@@ -15,6 +15,7 @@ type MatterData = {
     tags: string[]
     categories: string[]
     image: string | undefined
+    draft: boolean
 }
 
 // formatMatter({}, './content/post/other/some.md', './content/post/',  stat)
@@ -25,7 +26,8 @@ function formatMatter(matter: any, filepath: string, ctime: Date): MatterData {
         date: formatDate(matter?.date || ctime),
         tags: matter?.tags || [],
         categories: filepath.split(path.sep).slice(4, -1), // 4 = ../../content/post
-        image: matter?.image || undefined
+        image: matter?.image || undefined,
+        draft: matter?.draft || false,
     }
 }
 
