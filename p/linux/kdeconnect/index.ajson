@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams"
+    ],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "name": "kdeconnect",
+    "type": "Article","content": "\u003ch1 id=\"kdeconnect\"\u003ekdeconnect\u003c/h1\u003e\n\u003cp\u003ekdeconnect 顧名思義是 kde 出的一款 connect 軟體，功能非常多而且方便。電腦和手機都安裝好軟體後，只要在同一個網域就可以配對連接\u003c/p\u003e\n\u003ch2 id=\"功能介紹\"\u003e功能介紹\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e基本訊息 - 在電腦和手機上可以互相看到電池、網路等基本訊息\u003c/li\u003e\n\u003cli\u003e通知 - 可以設定電腦顯示手機通知或手機顯示電腦通知，或是兩者都開啟，我通常只開前者\u003c/li\u003e\n\u003cli\u003e媒體控制 - 無論是 VLC、YouTube、Nefflix 或任何網頁，都可以控制進度、音量、暫停，而且雙方都可以控制。這個是我最愛的功能之一\u003c/li\u003e\n\u003cli\u003e命令控制 - kdeconnect 可以讓你在手機上執行電腦上預先設定好的指令，像是關機、鎖定等等，下面會推薦幾個我設定的命令\u003c/li\u003e\n\u003cli\u003e傳檔案和資料夾共用 - kdeconnect 可以讓你連接電腦和手機上特定的資料夾，或是傳送單一檔案\u003c/li\u003e\n\u003cli\u003e共用剪貼簿 - 如其名，這是一個非常實用的功能，但是有時候觸發條件怪怪的\u003c/li\u003e\n\u003cli\u003e輸入 - 不論是滑鼠、鍵盤，兩邊都可以互相當對方的輸入裝置，這個功能非常好用\n還有像是讓手機大叫（找手機用）、簡報控制、傳簡訊、手機有電話的時候自動暫停音樂等等奇奇怪怪的功能\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"推薦命令\"\u003e推薦命令\u003c/h2\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth style=\"text-align:center\"\u003eDescription\u003c/th\u003e\n\u003cth style=\"text-align:left\"\u003eCommand\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:center\"\u003e鎖定螢幕並暫停 VLC 播放\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003e\u003ccode\u003eloginctl lock-session; dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\"text-align:center\"\u003e解除鎖定螢幕（免密碼）\u003c/td\u003e\n\u003ctd style=\"text-align:left\"\u003e\u003ccode\u003eloginctl unlock-session\u003c/code\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n","mediaType": "text/html",
+    "published": "2022-04-07T00:00:00+00:00",
+    "updated": "2022-04-07T00:00:00+00:00",
+    "id": "https://blog.simbafs.cc/p/linux/kdeconnect/",
+    "url": "https://blog.simbafs.cc/p/linux/kdeconnect/",
+    "attributedTo": "https://blog.simbafs.cc"
+}

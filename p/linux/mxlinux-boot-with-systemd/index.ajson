@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams"
+    ],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "name": "Mxlinux Boot with Systemd",
+    "type": "Article","content": "\u003ch1 id=\"mxlinux-boot-with-systemd\"\u003eMxlinux Boot with Systemd\u003c/h1\u003e\n\u003ch2 id=\"問題\"\u003e問題\u003c/h2\u003e\n\u003cp\u003e在 mxlinux 裡面，預設的 init 不是 systmed，這導致如果想用 systemctl 的時候就會跳出錯誤說\u003c/p\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cdiv class=\"chroma\"\u003e\n\u003ctable class=\"lntable\"\u003e\u003ctr\u003e\u003ctd class=\"lntd\"\u003e\n\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode\u003e\u003cspan class=\"lnt\"\u003e1\n\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/td\u003e\n\u003ctd class=\"lntd\"\u003e\n\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-fallback\" data-lang=\"fallback\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003eSystem has not been booted with systemd as init system\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\u003c/div\u003e\n\u003c/div\u003e\u003cp\u003e像是在安裝 \u003ccode\u003emongodb-org\u003c/code\u003e 的時候他就要用到 \u003ccode\u003esystemctl\u003c/code\u003e 然後就會出錯。\u003c/p\u003e\n\u003ch2 id=\"解法\"\u003e解法\u003c/h2\u003e\n\u003cp\u003e其實 mxlinux 已經幫我們想好解法了，在開機選項時選 \u003ccode\u003eAdvence\u003c/code\u003e \u0026gt; \u003ccode\u003eSystemd\u003c/code\u003e 就會以 systemd 開機\u003c/p\u003e\n","mediaType": "text/html",
+    "published": "2020-09-05T00:00:00+00:00",
+    "updated": "2020-09-05T00:00:00+00:00",
+    "id": "https://blog.simbafs.cc/p/linux/mxlinux-boot-with-systemd/",
+    "url": "https://blog.simbafs.cc/p/linux/mxlinux-boot-with-systemd/",
+    "attributedTo": "https://blog.simbafs.cc"
+}

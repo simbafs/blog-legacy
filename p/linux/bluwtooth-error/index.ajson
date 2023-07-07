@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams"
+    ],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "name": "Bluetooth 突然卡住都不動",
+    "type": "Article","content": "\u003ch1 id=\"bluetooth-突然卡住都不動\"\u003eBluetooth 突然卡住都不動\u003c/h1\u003e\n\u003cp\u003e裝了 Ubuntu 20.04 之後不知道為什麼藍芽用一用就會卡住，所有設備都連不上，也關不掉。一開始的解決方式是重開機（這時候關機會跳一個奇怪的錯誤訊息），但是覺得太沒效率了，上網查了一下。\u003c/p\u003e\n\u003ch2 id=\"原因\"\u003e原因\u003c/h2\u003e\n\u003cp\u003e根據 \u003ca class=\"link\" href=\"https://bugs.launchpad.net/ubuntu/\u0026#43;source/linux/\u0026#43;bug/1859592\"  target=\"_blank\" rel=\"noopener\"\n    \u003e這個網頁\u003c/a\u003e，這個似乎是 linux 核心的藍芽驅動有問題（我沒有認真看，但好像是升級到最新的 linux kernel 就可以解決了）。\u003cbr\u003e\n雖然升級 linux kernel 應該可以一勞永逸解決這個問題，但是這個 bug 其實不常出現，為了他編譯核心有點大題小做，所以我們需要一個簡單的方法解決。\u003c/p\u003e\n\u003ch2 id=\"輕便解法\"\u003e輕便解法\u003c/h2\u003e\n\u003cp\u003e根據 \u003ca class=\"link\" href=\"https://askubuntu.com/questions/1231074/ubuntu-20-04-bluetooth-not-working\"  target=\"_blank\" rel=\"noopener\"\n    \u003e這篇問答\u003c/a\u003e，經過我的測試，第一個答案就可以解決了，當藍芽又掛掉時，執行\u003c/p\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cdiv class=\"chroma\"\u003e\n\u003ctable class=\"lntable\"\u003e\u003ctr\u003e\u003ctd class=\"lntd\"\u003e\n\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode\u003e\u003cspan class=\"lnt\"\u003e1\n\u003c/span\u003e\u003cspan class=\"lnt\"\u003e2\n\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/td\u003e\n\u003ctd class=\"lntd\"\u003e\n\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-bash\" data-lang=\"bash\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003esudo rmmod btusb\n\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003esudo modprobe btusb\n\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\u003c/div\u003e\n\u003c/div\u003e\u003cp\u003e這樣藍芽就回來了。這兩個指令簡單來說就是重新載入藍芽模組，這就是為什麼重開機可以解決（重開機就是重新載入所有模組）\u003c/p\u003e\n","mediaType": "text/html",
+    "published": "2022-03-02T00:00:00+00:00",
+    "updated": "2022-03-02T00:00:00+00:00",
+    "id": "https://blog.simbafs.cc/p/linux/bluwtooth-error/",
+    "url": "https://blog.simbafs.cc/p/linux/bluwtooth-error/",
+    "attributedTo": "https://blog.simbafs.cc"
+}

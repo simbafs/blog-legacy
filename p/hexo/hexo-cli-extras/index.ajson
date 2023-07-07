@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams"
+    ],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "name": "hexo-cli-extras",
+    "type": "Article","content": "\u003ch1 id=\"好用的插件\"\u003e好用的插件\u003c/h1\u003e\n\u003cp\u003e因為 hexo 本身沒有提供編輯器\u003cbr\u003e\n所以每次在編輯文章時都需要打路徑\u003cbr\u003e\n這個插件他會去找到你的文章\u003cbr\u003e\n然後給你選要編輯那一個\u003cbr\u003e\n這只是其中一個功能\u003cbr\u003e\n還有\u003cstrong\u003e重新命名\u003c/strong\u003e、\u003cstrong\u003e刪除\u003c/strong\u003e、\u003cstrong\u003e隔離\u003c/strong\u003e和\u003cstrong\u003e加入\u003c/strong\u003e\u003cbr\u003e\n\u003cstrong\u003e隔離\u003c/strong\u003e是將其他文章暫時隔離，\u003cstrong\u003e加入\u003c/strong\u003e是將文章加回來\u003c/p\u003e\n","mediaType": "text/html",
+    "published": "2020-02-11T00:00:00+00:00",
+    "updated": "2020-02-11T00:00:00+00:00",
+    "id": "https://blog.simbafs.cc/p/hexo/hexo-cli-extras/",
+    "url": "https://blog.simbafs.cc/p/hexo/hexo-cli-extras/",
+    "attributedTo": "https://blog.simbafs.cc"
+}

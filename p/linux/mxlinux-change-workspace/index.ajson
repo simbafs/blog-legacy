@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams"
+    ],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "name": "Mxlinux Change Workspace",
+    "type": "Article","content": "\u003ch1 id=\"mxlinux-change-workspace\"\u003eMxlinux Change Workspace\u003c/h1\u003e\n\u003ch2 id=\"切換工作區\"\u003e切換工作區\u003c/h2\u003e\n\u003cp\u003e今天想要在 mxlinux 中快速的切換工作區\n我看到可以用滑鼠滾輪切換\n可是我想要的是鍵盤快捷鍵\n上網查了一下\n發現可以透過 \u003ccode\u003eCtrl\u003c/code\u003e+\u003ccode\u003eAlt\u003c/code\u003e+\u003ccode\u003eup/down/home/end\u003c/code\u003e 來切換\u003c/p\u003e\n\u003ch2 id=\"參考資料\"\u003e參考資料\u003c/h2\u003e\n\u003cp\u003e\u003ca class=\"link\" href=\"https://unix.stackexchange.com/questions/270334/how-to-move-a-window-to-another-workspace-in-xfce\"  target=\"_blank\" rel=\"noopener\"\n    \u003ehttps://unix.stackexchange.com/questions/270334/how-to-move-a-window-to-another-workspace-in-xfce\u003c/a\u003e\u003c/p\u003e\n","mediaType": "text/html",
+    "published": "2020-05-08T00:00:00+00:00",
+    "updated": "2020-05-08T00:00:00+00:00",
+    "id": "https://blog.simbafs.cc/p/linux/mxlinux-change-workspace/",
+    "url": "https://blog.simbafs.cc/p/linux/mxlinux-change-workspace/",
+    "attributedTo": "https://blog.simbafs.cc"
+}

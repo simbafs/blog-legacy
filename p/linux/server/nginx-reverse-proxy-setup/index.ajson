@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams"
+    ],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "name": "Nginx Reverse Proxy Setup",
+    "type": "Article","content": "\u003ch1 id=\"nginx-反向代理伺服器-reverse-proxy\"\u003enginx 反向代理伺服器 (reverse proxy)\u003c/h1\u003e\n\u003cp\u003e之前社網 server 因為學校防火牆限制只能對外開 80 443 兩個 port\u003cbr\u003e\n而且我們只有一個 ip (203.64.138.177)\u003cbr\u003e\n所以要用 reverse proxy 來代理我們的多項服務\u003cbr\u003e\n原本我只會用 apache2\n後來不知道是不是因為 apache 太肥導致有時候回應時間會很久\u003cbr\u003e\n所以我起了將 proxy server 換成 nginx 的想法\u003c/p\u003e\n","mediaType": "text/html",
+    "published": "2020-02-13T00:00:00+00:00",
+    "updated": "2020-02-13T00:00:00+00:00",
+    "id": "https://blog.simbafs.cc/p/linux/server/nginx-reverse-proxy-setup/",
+    "url": "https://blog.simbafs.cc/p/linux/server/nginx-reverse-proxy-setup/",
+    "attributedTo": "https://blog.simbafs.cc"
+}

@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams"
+    ],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "name": "大學二階面試、筆試",
+    "type": "Article","content": "\u003ch1 id=\"大學二階面試筆試\"\u003e大學二階面試、筆試\u003c/h1\u003e\n\u003ch2 id=\"師大科技系面試\"\u003e師大科技系面試\u003c/h2\u003e\n\u003cblockquote\u003e\n\u003cp\u003e兩關各十分鐘\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003ch2 id=\"第一關\"\u003e第一關：\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e自我介紹\u003c/li\u003e\n\u003cli\u003e一分鐘補充說明（有利備審、競賽）解決問題的經驗\u003c/li\u003e\n\u003cli\u003e自由談話時間\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"第二關\"\u003e第二關：\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e自我介紹一分鐘\u003c/li\u003e\n\u003cli\u003e科技系分幾組？差別在哪？你會選哪組？\u003c/li\u003e\n\u003cli\u003e我看你的自傳有寫「專案開發」，有例子嗎？\u003c/li\u003e\n\u003cli\u003e如果團隊合作時有人擺爛，你會怎麼做？（20 秒）\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"心得\"\u003e心得\u003c/h2\u003e\n\u003cp\u003e這個系是團體面試，三個教授對三個考生，輪流回答問題，因為我是那組第一個，所以幾乎都是我先回答，教授沒有問什麼很難得問題，另外系主任看起來人很好。\u003c/p\u003e\n","mediaType": "text/html",
+    "published": "2021-04-18T00:00:00+00:00",
+    "updated": "2021-04-18T00:00:00+00:00",
+    "id": "https://blog.simbafs.cc/p/other/college-qualification-interview-and-written-test/",
+    "url": "https://blog.simbafs.cc/p/other/college-qualification-interview-and-written-test/",
+    "attributedTo": "https://blog.simbafs.cc"
+}

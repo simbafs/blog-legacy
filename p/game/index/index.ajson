@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams"
+    ],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "name": "OpenTTD",
+    "type": "Article","content": "\u003cblockquote\u003e\n\u003cp\u003e\u003cstrong\u003e提醒我放圖片\u003c/strong\u003e\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003ch1 id=\"openttd\"\u003eOpenTTD\u003c/h1\u003e\n\u003cp\u003eOpenTTD 是一款二十年前出的遊戲，可以看做是 City Skyline 的阿祖，前有在 \u003ca class=\"link\" href=\"https://store.steampowered.com/app/1536610/OpenTTD/\"  target=\"_blank\" rel=\"noopener\"\n    \u003esteam\u003c/a\u003e 上架。遊戲目標是從 1950 年經營一間運輸公司，一百年後到 2050 年根據九個項目評分，有支援多人一起玩，可以合作經營一間公司，也可以各自開公司對抗。經營的項目包括車輛、火車、飛機、單軌、路面電車和船運。\u003c/p\u003e\n\u003ch2 id=\"市內公車策略\"\u003e市內公車策略\u003c/h2\u003e\n\u003cp\u003e規劃市內公車時有幾個要考量的點\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e路線規劃盡量減少彎路\u003c/li\u003e\n\u003cli\u003e盡量經過人多的地區（覆蓋率）\u003c/li\u003e\n\u003cli\u003e車太多會塞車\u003c/li\u003e\n\u003cli\u003e未來可擴展性\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e第一點是因為轉彎會減速，越少彎帶表平均速度越快。第二點則是要衝高服務人次，越多人代表越賺錢。第三點則是因為車輛不像船會穿模，要解決這點最直覺是不要買那麼多車，但是市中心人就是很多，如果車太少利用率就會一直滿載，車站等候人數就會很多，所以一個可以暫時解決的方案是讓每條路都有車走，分散車流。而城市會隨著發展自己擴張，所以就必須預留以後可以向外延伸的接口。\u003c/p\u003e\n\u003cp\u003e一座城市會有兩種公車站，一種是客運，另一種是貨運站，負責郵件和商品。我自己的規劃是類似梅花座，\u003c/p\u003e\n","mediaType": "text/html",
+    "published": "2023-03-11T00:00:00+00:00",
+    "updated": "2023-03-11T00:00:00+00:00",
+    "id": "https://blog.simbafs.cc/p/game/index/",
+    "url": "https://blog.simbafs.cc/p/game/index/",
+    "attributedTo": "https://blog.simbafs.cc"
+}

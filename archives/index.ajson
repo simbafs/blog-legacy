@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams"
+    ],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "name": "Archives",
+    "type": "Article","content": "","mediaType": "text/html",
+    "published": "2022-03-06T00:00:00+00:00",
+    "updated": "2022-03-06T00:00:00+00:00",
+    "id": "https://blog.simbafs.cc/archives/",
+    "url": "https://blog.simbafs.cc/archives/",
+    "attributedTo": "https://blog.simbafs.cc"
+}

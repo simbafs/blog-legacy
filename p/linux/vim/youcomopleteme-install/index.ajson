@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams"
+    ],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "name": "YouComopleteMe Install",
+    "type": "Article","content": "\u003ch1 id=\"ycm-installation\"\u003eYCM Installation\u003c/h1\u003e\n\u003ch2 id=\"下載-source-code\"\u003e下載 source code\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e編輯 ~/.vimrc\u003c/li\u003e\n\u003c/ol\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cdiv class=\"chroma\"\u003e\n\u003ctable class=\"lntable\"\u003e\u003ctr\u003e\u003ctd class=\"lntd\"\u003e\n\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode\u003e\u003cspan class=\"lnt\"\u003e1\n\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/td\u003e\n\u003ctd class=\"lntd\"\u003e\n\u003cpre tabindex=\"0\" class=\"chroma\"\u003e\u003ccode class=\"language-vim\" data-lang=\"vim\"\u003e\u003cspan class=\"line\"\u003e\u003cspan class=\"cl\"\u003e\u003cspan class=\"nx\"\u003ePlug\u003c/span\u003e \u003cspan class=\"s1\"\u003e\u0026#39;Valloric/YouCompleteMe\u0026#39;\u003c/span\u003e\u003cspan class=\"err\"\u003e\n\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\n\u003c/div\u003e\n\u003c/div\u003e\u003col start=\"2\"\u003e\n\u003cli\u003e接著按下 \u003c!-- raw HTML omitted --\u003eesc\u003c!-- raw HTML omitted --\u003e \u003c!-- raw HTML omitted --\u003e:w | so %\u003c!-- raw HTML omitted --\u003e 載入設定\u003c/li\u003e\n\u003cli\u003e接著 \u003c!-- raw HTML omitted --\u003e:PlugInstall\u003c!-- raw HTML omitted --\u003e 下載 source code\u003c/li\u003e\n\u003cli\u003e存檔離開\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"編譯\"\u003e編譯\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e執行 \u003ccode\u003esudo apt install python3-dev build-essential\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e進入 \u003ccode\u003e~/.vim/plugged/YouCompleteMe\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e執行 \u003ccode\u003e./install.py --help\u003c/code\u003e 並挑選需要的選項\u003c/li\u003e\n\u003cli\u003e執行 \u003ccode\u003e./install.py \u0026lt;你要的選項\u0026gt;\u003c/code\u003e\u003c/li\u003e\n\u003c/ol\u003e\n","mediaType": "text/html",
+    "published": "2021-05-17T00:00:00+00:00",
+    "updated": "2021-05-17T00:00:00+00:00",
+    "id": "https://blog.simbafs.cc/p/linux/vim/youcomopleteme-install/",
+    "url": "https://blog.simbafs.cc/p/linux/vim/youcomopleteme-install/",
+    "attributedTo": "https://blog.simbafs.cc"
+}

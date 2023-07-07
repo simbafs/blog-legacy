@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams"
+    ],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "name": "SSH Server",
+    "type": "Article","content": "\u003ch1 id=\"步驟\"\u003e步驟\u003c/h1\u003e\n\u003col\u003e\n\u003cli\u003e聆聽某個 tcp port/socket \u003ccode\u003enet.Listen()\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e用 \u003ccode\u003efor{}\u003c/code\u003e 接受每個進來的 tcp 連線 \u003ccode\u003elistener.Accept()\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e建立 ssh 連線 \u003ccode\u003essh.NewServerConn\u003c/code\u003e，使 tcp 連線升級成 ssh 連線\u003c/li\u003e\n\u003cli\u003e\u003c/li\u003e\n\u003c/ol\u003e\n","mediaType": "text/html",
+    "published": "2022-08-03T00:00:00+00:00",
+    "updated": "2022-08-03T00:00:00+00:00",
+    "id": "https://blog.simbafs.cc/p/golang/ssh-server/",
+    "url": "https://blog.simbafs.cc/p/golang/ssh-server/",
+    "attributedTo": "https://blog.simbafs.cc"
+}
