@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>docker on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/docker/</link><description>Recent content in docker on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 05 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>docker login error</title><link>https://blog.simbafs.cc/p/linux/docker/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-login-error/</guid><description>&lt;h1 id="docker-login-error">Docker Login Error&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>docker on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/docker/</link><description>Recent content in docker on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Cache Layer</title><link>https://blog.simbafs.cc/p/linux/docker/cache-layer/</link><pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/cache-layer/</guid><description>&lt;h1 id="cache-layer">Cache Layer&lt;/h1>
+&lt;p>Dockerfile 中總是有些步驟很耗時間，但是其實每次都在做一樣的事，例如 &lt;code>npm i&lt;/code>、&lt;code>go mod download&lt;/code> 等等，每次其實都下載一樣的檔案。
+docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache layer，最後的 image 就是這一層一層疊起來的。如果之前的 cache layer 都在且這次檔案變動跟之前一樣，那就會直接跳過命令執行，用快取帶替，直接來看例子&lt;/p>
+&lt;h2 id="沒有利用快取">沒有利用快取&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-dockerfile" data-lang="dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="k">COPY&lt;/span> . .&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go mod download&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go build -o main .&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">CMD&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;./main&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>COPY . .&lt;/code> 把所有檔案複製進來，然後 &lt;code>RUN go mod download&lt;/code> 看到，source code 有變動耶！快取不能用，因此重新下載一份相依套件，然後再執行後續動作&lt;/p>
+&lt;h2 id="利用快取">利用快取&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-dockerfile" data-lang="dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="k">COPY&lt;/span> go.mod go.sum ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go mod download&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> . .&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go build -o main .&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">CMD&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;./main&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>COPY go.mod go.sum ./&lt;/code> 只會把 &lt;code>go.mod&lt;/code> 和 &lt;code>go.sum&lt;/code> 放進來，如果相依性沒有改變的話等於跟之前 &lt;code>docker build&lt;/code> 時條件一樣，因此當 docker 執行到 &lt;code>RUN go mod download&lt;/code> 時就可以直接找之前的 cache layer，跳過下載過程，然後再繼續後面的動作&lt;/p>
+&lt;h2 id="加速編譯的原則">加速編譯的原則&lt;/h2>
+&lt;p>按照前面利用快取的例子歸納，只要我們把執行越慢、越不常改變的步驟往前移，就可以用之前的 cache layer。而在這裡需要注意的是，&lt;code>COPY&lt;/code> 時只把下一個指令需要的檔案複製進來就好，盡量避免一次複製一整個目錄，這樣有助於減少檔案變動，更好的利用之前的 cache layer。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> +-------------------------------------+
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1 |Big, slow, infrequently changes layer|
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> +---+----------------------------+----+
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2 | |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> +---+--------------------+---+
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3 | |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> +---+------------+---+
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4 |Small, quick|
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> +------------+
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="其他猜想">其他猜想&lt;/h2>
+&lt;p>我沒用過這個東西，所以以下描述只是猜想，可能跟實務上有出入。&lt;br>
+因為 docker 的 cache layer 是儲存在本機上，所以我換一台電腦執行 &lt;code>docker build&lt;/code> 就無法用到之前的 cache layer，所以保持在同一臺電腦編譯是最好的，可能這個就是之前看過的 build server？說不定有這個好處。&lt;/p></description></item><item><title>docker login error</title><link>https://blog.simbafs.cc/p/linux/docker/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-login-error/</guid><description>&lt;h1 id="docker-login-error">Docker Login Error&lt;/h1>
 &lt;h2 id="錯誤說明">錯誤說明&lt;/h2>
 &lt;p>昨天我在 terminal 登入 docker 的時候發現不知道為什麼不能登入，我先透過網頁登入確認過密碼沒有問題，也不是打錯字的關係，但還是不能當入。總是會有類似以下的錯誤訊息。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
