@@ -27,7 +27,7 @@ function formatMatter(matter: any, filepath: string, ctime: Date): MatterData {
         tags: matter?.tags || [],
         categories: filepath.split(path.sep).slice(4, -1), // 4 = ../../content/post
         image: matter?.image || undefined,
-        draft: matter?.draft || false,
+        draft: matter?.draft || undefined
     }
 }
 

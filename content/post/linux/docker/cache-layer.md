@@ -3,13 +3,13 @@ title: Cache Layer
 slug: cache-layer
 date: '2023-07-07'
 tags:
-    - docker
-    - accelerate
-    - image
-    - cache
+  - docker
+  - accelerate
+  - image
+  - cache
 categories:
-    - linux
-    - docker
+  - linux
+  - docker
 ---
 
 # Cache Layer
