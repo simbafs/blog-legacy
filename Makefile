@@ -18,4 +18,7 @@ build:
 
 server:
 	hugo server -D
+
+frontmatter:
+	cd ./script/formatmatter/ && ts-node index.ts
 .PHONY: push tree build diff
