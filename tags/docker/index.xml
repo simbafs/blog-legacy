@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>docker on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/docker/</link><description>Recent content in docker on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Cache Layer</title><link>https://blog.simbafs.cc/p/linux/docker/cache-layer/</link><pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/cache-layer/</guid><description>&lt;h1 id="cache-layer">Cache Layer&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>docker on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/docker/</link><description>Recent content in docker on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 09 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Wireshark Over SSH in Docker</title><link>https://blog.simbafs.cc/p/linux/docker/wireshark-over-ssh-in-docker/</link><pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/wireshark-over-ssh-in-docker/</guid><description>&lt;h1 id="wireshark-over-ssh-in-docker">Wireshark Over SSH in Docker&lt;/h1>
+&lt;p>分成兩個部份，一個是把封包從 docker container 裡面弄出來，再來是在本地的 &lt;a class="link" href="https://zh.wikipedia.org/zh-tw/Wireshark" target="_blank" rel="noopener"
+>wireshark&lt;/a> 抓到遠端的封包&lt;/p>
+&lt;h2 id="把封包弄出-docker-container">把封包弄出 docker container&lt;/h2>
+&lt;p>使用 &lt;a class="link" href="https://github.com/nicolaka/netshoot" target="_blank" rel="noopener"
+>nicolaka/netshoot&lt;/a> 這個 docker image，把他跟目標 container 放在同一個 network 下，例如以下會把封包全部丟進 /data/nginx.pcap 這個檔案裡&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;3.6&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">services&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">tcpdump&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">nicolaka/netshoot&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">depends_on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">nginx&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">command&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">tcpdump -i eth0 -w /data/nginx.pcap&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">network_mode&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">service:nginx&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">volumes&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">$PWD/data:/data&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">nginx&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">nginx:alpine&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">ports&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="m">80&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="m">80&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="本地的-wireshark-抓到遠端的封包">本地的 wireshark 抓到遠端的封包&lt;/h2>
+&lt;p>我們有了 /data/nginx.pcap 之後，就可以用 ssh 把檔案印出來，然後吐給 wireshark&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ssh ssh_host &amp;#34;cat path/to/nginx.pcap&amp;#34; | wireshark -k -i -
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/howto_use_wireshark_over_ssh.html" target="_blank" rel="noopener"
+>https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/howto_use_wireshark_over_ssh.html&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/nicolaka/netshoot" target="_blank" rel="noopener"
+>https://github.com/nicolaka/netshoot&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Cache Layer</title><link>https://blog.simbafs.cc/p/linux/docker/cache-layer/</link><pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/cache-layer/</guid><description>&lt;h1 id="cache-layer">Cache Layer&lt;/h1>
 &lt;p>Dockerfile 中總是有些步驟很耗時間，但是其實每次都在做一樣的事，例如 &lt;code>npm i&lt;/code>、&lt;code>go mod download&lt;/code> 等等，每次其實都下載一樣的檔案。
 docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache layer，最後的 image 就是這一層一層疊起來的。如果之前的 cache layer 都在且這次檔案變動跟之前一樣，那就會直接跳過命令執行，用快取帶替，直接來看例子&lt;/p>
 &lt;h2 id="沒有利用快取">沒有利用快取&lt;/h2>
