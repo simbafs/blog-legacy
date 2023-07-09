@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams"
+    ],
+    "to": ["https://www.w3.org/ns/activitystreams#Public"],
+    "name": "@blog",
+    "type": "Article","content": "\u003cp\u003e嗨！點 \u0026raquo;\u003ca class=\"link\" href=\"/\" \u003e這裡\u003c/a\u003e\u0026laquo; 進入主頁\u003c/p\u003e\n","mediaType": "text/html",
+    "published": "0001-01-01T00:00:00+00:00",
+    "updated": "0001-01-01T00:00:00+00:00",
+    "id": "https://blog.simbafs.cc/@blog/",
+    "url": "https://blog.simbafs.cc/@blog/",
+    "attributedTo": "https://blog.simbafs.cc"
+}
