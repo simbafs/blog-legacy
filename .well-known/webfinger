@@ -1,0 +1,19 @@
+{
+    "subject": "acct:blog@blog.simbafs.cc",
+    "links": [
+        {
+            "rel": "http://webfinger.net/rel/profile-page",
+            "type": "text/html",
+            "href": "https://blog.simbafs.cc/@blog"
+        },
+        {
+            "rel": "self",
+            "type": "application/activity+json",
+            "href": "https://blog.simbafs.cc/users/blog"
+        },
+        {
+            "rel": "http://ostatus.org/schema/1.0/subscribe",
+            "template": "https://masto.simbafs.cc/authorize_interaction?uri={uri}"
+        }
+    ]
+}
