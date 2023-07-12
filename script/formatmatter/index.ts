@@ -21,6 +21,7 @@ type MatterData = {
 // formatMatter({}, './content/post/other/some.md', './content/post/',  stat)
 function formatMatter(matter: any, filepath: string, ctime: Date): MatterData {
     return {
+        ...matter,
         title: matter?.title || path.basename(filepath, path.extname(filepath)),
         slug: matter?.slug || path.basename(filepath, path.extname(filepath)),
         date: formatDate(matter?.date || ctime),

@@ -3,10 +3,10 @@ title: SSH Server
 slug: ssh-server
 date: '2023-07-12'
 tags:
-    - golang
-    - ssh
+  - golang
+  - ssh
 categories:
-    - golang
+  - golang
 ---
 
 # SSH Server
