@@ -1088,9 +1088,9 @@
 >https://github.com/Scalingo/go-ssh-examples/blob/master/server_complex.go&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://pkg.go.dev/golang.org/x/crypto/ssh" target="_blank" rel="noopener"
 >https://pkg.go.dev/golang.org/x/crypto/ssh&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>SSH Server Key Auth</title><link>https://blog.simbafs.cc/p/golang/ssh-server-key-auth/</link><pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-server-key-auth/</guid><description>&lt;h1 id="ssh-server-key-auth">SSH Server Key Auth&lt;/h1>
+&lt;/ul></description></item><item><title>SSH Server Util</title><link>https://blog.simbafs.cc/p/golang/ssh-server-uitl/</link><pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-server-uitl/</guid><description>&lt;h1 id="ssh-server-util">SSH Server Util&lt;/h1>
+&lt;h2 id="publickeycallback">PublicKeyCallback&lt;/h2>
 &lt;p>在 &lt;a class="link" href="../ssh-server" >golang/ssh-server&lt;/a> 中的 ssh 伺服器是沒有驗證使用者身份的，因為在 &lt;code>ssh.ServerConfig&lt;/code> 中設定了 &lt;code>NoClientAuth: true&lt;/code>。用下面的 &lt;code>ssh.SererConfig&lt;/code> 可以設定用只有指定的使用者可以進入，不過這個版本中沒有處理時序攻擊（Timming attack），也就是用比對公鑰的時間不同獲取資訊的攻擊手段。&lt;/p>
-&lt;h2 id="程式">程式&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1168,6 +1168,60 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Errorf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;unknown public key for %q&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">conn&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">User&lt;/span>&lt;span class="p">())&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="parsepayload">ParsePayload&lt;/h2>
+&lt;p>payload 格式是四個 byte 代表長度，接著是一串資料，如果有第二段就重複以上，例如 &lt;code>[0 0 0 3 65 66 67]&lt;/code> 的 &lt;code>[0 0 0 3]&lt;/code> 代表接下來資料長度是 3，然後是資料 &lt;code>[65 66 67]&lt;/code>，也就是 &lt;code>ABC&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">ParsePayload&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">payload&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">byte&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">string&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">result&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">string&lt;/span>&lt;span class="p">{}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">index&lt;/span> &lt;span class="kt">uint32&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">min&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="kd">func&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="kt">uint32&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span> &lt;span class="kt">uint32&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">uint32&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nx">b&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">a&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">b&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="nx">index&lt;/span> &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nb">uint32&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">payload&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">length&lt;/span> &lt;span class="kt">uint32&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">length&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nf">min&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">uint32&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">payload&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="p">])&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="mi">24&lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="nb">uint32&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">payload&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">])&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="mi">16&lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="nb">uint32&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">payload&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">])&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="mi">8&lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="nb">uint32&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">payload&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">uint32&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">payload&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">result&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">result&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">string&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">payload&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">]))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">index&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">4&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">length&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
