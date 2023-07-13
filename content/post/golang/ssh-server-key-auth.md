@@ -1,6 +1,6 @@
 ---
-title: SSH Server Key Auth
-slug: ssh-server-key-auth
+title: SSH Server Util
+slug: ssh-server-uitl
 date: '2023-07-12'
 tags: 
     - golang
@@ -12,11 +12,11 @@ categories:
     - golang
 ---
 
-# SSH Server Key Auth
+# SSH Server Util
+
+## PublicKeyCallback
 
 在 [golang/ssh-server](../ssh-server) 中的 ssh 伺服器是沒有驗證使用者身份的，因為在 `ssh.ServerConfig` 中設定了 `NoClientAuth: true`。用下面的 `ssh.SererConfig` 可以設定用只有指定的使用者可以進入，不過這個版本中沒有處理時序攻擊（Timming attack），也就是用比對公鑰的時間不同獲取資訊的攻擊手段。
-
-## 程式
 
 ```go
 var allowedUser = map[string][]string{
@@ -55,6 +55,36 @@ sshConf := &ssh.ServerConfig{
 		}
 		return nil, fmt.Errorf("unknown public key for %q", conn.User())
 	},
+}
+```
+
+## ParsePayload
+
+payload 格式是四個 byte 代表長度，接著是一串資料，如果有第二段就重複以上，例如 `[0 0 0 3 65 66 67]` 的 `[0 0 0 3]` 代表接下來資料長度是 3，然後是資料 `[65 66 67]`，也就是 `ABC`
+
+```go
+func ParsePayload(payload []byte) []string {
+	result := []string{}
+	var index uint32 = 0
+
+	min := func(a uint32, b uint32) uint32 {
+		if a < b {
+			return a
+		}
+		return b
+	}
+
+	for index < uint32(len(payload)) {
+		var length uint32
+		length = min(
+			uint32(payload[index])<<24|uint32(payload[index+1])<<16|uint32(payload[index+2])<<8|uint32(payload[index+3]),
+			uint32(len(payload))-index-4,
+		)
+		result = append(result, string(payload[index+4:index+4+length]))
+		index += 4 + length
+	}
+
+	return result
 }
 ```
 
