@@ -2,14 +2,14 @@
 title: SSH Server Util
 slug: ssh-server-uitl
 date: '2023-07-12'
-tags: 
-    - golang
-    - ssh
-    - authentication
-    - publicKey
-    - sshKey
+tags:
+  - golang
+  - ssh
+  - authentication
+  - publicKey
+  - sshKey
 categories:
-    - golang
+  - golang
 ---
 
 # SSH Server Util
