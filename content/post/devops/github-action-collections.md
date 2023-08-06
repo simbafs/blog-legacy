@@ -48,3 +48,5 @@ jobs:
                   docker build . -t ghcr.io/simbafs/coscup-attendance:latest -t ghcr.io/simbafs/coscup-attendance:${{ steps.vars.outputs.tag }}
                   docker push ghcr.io/simbafs/coscup-attendance:latest
 ```
+
+> modified from https://dev.to/willvelida/pushing-container-images-to-github-container-registry-with-github-actions-1m6b
