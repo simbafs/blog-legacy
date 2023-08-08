@@ -21,3 +21,9 @@ categories:
 ```
 
 > [stackoverflow](https://unix.stackexchange.com/questions/34248/how-can-i-find-broken-symlinks)
+
+## Random String
+
+```
+$ cat /dev/random | head | md5sum | head -c 32
+```
