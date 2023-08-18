@@ -1,15 +1,17 @@
 ---
 title: Firenvim
 slug: firenvim
-date: 2023-08-18T13:37:03+08:00
+date: '2023-08-18'
 tags:
-    - nvim
-    - vim
-    - vi
-    - firefox
-    - browser
-    - editor
+  - nvim
+  - vim
+  - vi
+  - firefox
+  - browser
+  - editor
 categories:
+  - linux
+  - vim
 ---
 
 # Firenvim
