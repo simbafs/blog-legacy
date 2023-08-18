@@ -2,8 +2,8 @@
 date := $(shell date +%Y-%m-%d)
 push: 
 	git add .
-	git add .
 	git commit -m "$(date)"
+	git pull
 	git push
 
 diff:
