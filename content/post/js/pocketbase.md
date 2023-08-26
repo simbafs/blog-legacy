@@ -15,11 +15,11 @@ categories:
 
 # PocketBase
 
-[PocketBase](https://pocketbase.io/) 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的因此是獨立的單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結構、關聯和使用者驗證和權限控管等功能了
+[PocketBase](https://pocketbase.io/) 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的，因此可以編譯成一個單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結構、關聯、使用者驗證和權限控管等功能了
 
 ![demo](/images/pocketbase/demo.png)
 
-接著是我用 pocketbase 寫一個貼文佈告欄系統的過程
+接下來是我用 pocketbase 寫一個貼文佈告欄系統的過程
 
 ## 安裝
 
@@ -31,7 +31,7 @@ categories:
 
 ## 設定 Collection
 
-啟動伺服器後開啟管理頁面 [http://localhost:8090/\_](http://localhost:8090/_)，他會叫你設定第一個管理員帳號密碼，進入後會發現已經預設一個 users Collection（以下沿用 sqlite 稱呼，稱之為表格），那麼我們就保留他吧。
+啟動伺服器後開啟管理頁面 [http://localhost:8090/_](http://localhost:8090/_)，他會叫你設定第一個管理員帳號密碼，進入後會發現已經預設一個 users Collection（以下沿用 sqlite 稱呼，稱之為表格），那麼我們就保留他吧。
 
 ### 表格種類
 
@@ -99,8 +99,8 @@ pocketbase 會自動維護 `authStore`，預設是存在 localStorage 裡面，�
 
 ### typescript
 
-在開始抓資料前，我們來處理一下 typescript 的部份，如果這裡設定好，後面開發會輕鬆很多，有個工具叫做 `pocketbase-typegen` 可以自動根據 pocketbase 設定產生型別定義檔案，用指令 `npx pocketbase-typegen --db ../pb_data/data.db --out src/pocketbase-type.ts` 就會產生好我們要的檔案了。
-裡面現在有幾個型別，第一類是 `xxxRecord`，這類是根據資料庫設定直接產出來的，再來是 `xxxResponse`，這個是 js-sdk 會吐給我們的，我們要用的也是這個
+在開始抓資料前，我們來處理一下 typescript 的部份，如果這裡設定好，後面開發會輕鬆很多，有個工具叫做 [pocketbase-typegen](https://github.com/patmood/pocketbase-typegen) 可以自動根據 pocketbase 設定產生型別定義檔案，用指令 `npx pocketbase-typegen --db ../pb_data/data.db --out src/pocketbase-type.ts` 就會產生好我們要的檔案了。  
+裡面有幾種型別，第一類是 `xxxRecord`，這類是根據資料庫設定直接產出來的，再來是 `xxxResponse`，這個是 js-sdk 會吐給我們的，我們要用的也是這個
 
 ### 列出 post
 
