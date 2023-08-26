@@ -361,9 +361,12 @@ function usePosts(pb: Pocketbase) {
 }
 ```
 
+### 權限
+目前看起來很棒，但是你會發現用其他帳號登入的話就會 `expand` 就會失敗，是因為預設的 users collection `list` 和 `view` 都是只有自己才能看，所以我們需要把他刪掉變成空字串，這樣才可以讓其他人也抓到 `expand` 
+
 ## 最後成果
 
-程式碼可以在 [這裡](https://github.com/simbafs/pocketbase-experinment/tree/5ab09e9fffbb9e160aa3fb0453ee9a58adb02eb8) 找到
+程式碼可以在 [這裡](https://github.com/simbafs/pocketbase-experinment/tree/d720bc52b00485ceebb1f6ced4429a30000bee8c) 找到
 
 ![demo 3](/images/pocketbase/demo3.png)
 ![demo 4](/images/pocketbase/demo4.png)
