@@ -363,7 +363,7 @@ function usePosts(pb: Pocketbase) {
 
 ## 最後成果
 
-程式碼可以在 [這裡](https://github.com/simbafs/pocketbase-experinment/tree/4ef502654210f6711aa83b47c23f5997a2997a74) 找到
+程式碼可以在 [這裡](https://github.com/simbafs/pocketbase-experinment/tree/5ab09e9fffbb9e160aa3fb0453ee9a58adb02eb8) 找到
 
 ![demo 3](/images/pocketbase/demo3.png)
 ![demo 4](/images/pocketbase/demo4.png)
