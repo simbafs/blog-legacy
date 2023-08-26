@@ -1,0 +1,502 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="PocketBase PocketBase 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的因此是獨立的單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結"><title>PocketBase</title><link rel=canonical href=https://blog.simbafs.cc/p/js/pocketbase/><link rel=stylesheet href=/scss/style.min.0f5cda4d015597f3308ce4ac337123b1bfeeb5a695217e091ff22d2d46366a84.css><meta property="og:title" content="PocketBase"><meta property="og:description" content="PocketBase PocketBase 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的因此是獨立的單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結"><meta property="og:url" content="https://blog.simbafs.cc/p/js/pocketbase/"><meta property="og:site_name" content="Simba 的喵窩"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="pocketbase"><meta property="article:tag" content="sqlite"><meta property="article:tag" content="nextjs"><meta property="article:tag" content="api"><meta property="article:tag" content="backend"><meta property="article:tag" content="saas"><meta property="article:published_time" content="2023-08-26T00:00:00+00:00"><meta property="article:modified_time" content="2023-08-26T00:00:00+00:00"><meta name=twitter:site content="@simbafs"><meta name=twitter:creator content="@simbafs"><meta name=twitter:title content="PocketBase"><meta name=twitter:description content="PocketBase PocketBase 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的因此是獨立的單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結"><script async src="https://www.googletagmanager.com/gtag/js?id=G-DTMEFY7DTF"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-DTMEFY7DTF")</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切換選單>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hua1d55c26052b345e2b49223d0087ef3a_89734_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a>
+<span class=emoji>💤</span></figure><div class=site-meta><h1 class=site-name><a href=/>Simba 的喵窩</a></h1><h2 class=site-description>成大物理系大三</h2></div></header><ol class=social-menu><li><a href=https://github.com/simbafs target=_blank title=GitHub rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=/index.xml target=_blank title=RSS rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0116 16"/><path d="M4 11a9 9 0 019 9"/></svg></a></li><li><a href=https://twitter.com/simbafs target=_blank title=Twitter rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>Home</span></a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><li><a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><div class=menu-bottom-section><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>夜晚模式</span></li></div></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目錄</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#安裝>安裝</a><ol><li><a href=#專案結構>專案結構</a></li></ol></li><li><a href=#設定-collection>設定 Collection</a><ol><li><a href=#表格種類>表格種類</a></li><li><a href=#users>users</a></li><li><a href=#posts>posts</a></li></ol></li><li><a href=#前端-js-sdk>前端 JS SDK</a><ol><li><a href=#登入>登入</a></li><li><a href=#typescript>typescript</a></li><li><a href=#列出-post>列出 post</a><ol><li><a href=#subscribe>Subscribe</a></li><li><a href=#顯示-posts>顯示 posts</a></li></ol></li><li><a href=#發文>發文</a></li><li><a href=#登入後隱藏>登入後隱藏</a></li><li><a href=#加上作者>加上作者</a></li></ol></li><li><a href=#最後成果>最後成果</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/js/>js</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/js/pocketbase/>PocketBase</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>2023/08/26</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>閱讀時間: 5 分鐘</time></div></footer></div></header><section class=article-content><h1 id=pocketbase>PocketBase</h1><p><a class=link href=https://pocketbase.io/ target=_blank rel=noopener>PocketBase</a> 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的因此是獨立的單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結構、關聯和使用者驗證和權限控管等功能了</p><p><img src=/images/pocketbase/demo.png loading=lazy alt=demo></p><p>接著是我用 pocketbase 寫一個貼文佈告欄系統的過程</p><h2 id=安裝>安裝</h2><p>安裝很簡單，去 <a class=link href=https://pocketbase.io/docs/ target=_blank rel=noopener>https://pocketbase.io/docs/</a> 找到你的作業系統對應的檔案，下載下來後放到 <code>$PATH</code> 裡面，在你的專案目錄就執行就可以了</p><h3 id=專案結構>專案結構</h3><p>執行 <code>pocketbase serve</code> 後會啟動 pocketbase 伺服器，並自動初始化兩個資料夾 <code>pb_data</code> 和 <code>pb_migrations</code>，前者是存放你的資料庫設定、資料、log 的地方，後者是每次更動資料庫（新增刪改表格、欄位等等）時的操作，方便你在不同環境下同步資料庫設定而不損壞資料，還有一個資料夾是 <code>pb_public</code>，你可以把前端程式放在這裡他會幫你放在 <code>/</code> 路徑下</p><h2 id=設定-collection>設定 Collection</h2><p>啟動伺服器後開啟管理頁面 <a class=link href=http://localhost:8090/_ target=_blank rel=noopener>http://localhost:8090/_</a>，他會叫你設定第一個管理員帳號密碼，進入後會發現已經預設一個 users Collection（以下沿用 sqlite 稱呼，稱之為表格），那麼我們就保留他吧。</p><h3 id=表格種類>表格種類</h3><p>pocketbase 中表格有三種，第一種是一般的 base 基礎表格，就是拿來存資料的，第二種是 auth 驗證表格，對登入驗證有專門的設定，第三種是 view 表格，這個我還沒用過，更多範例可以看官方的 <a class=link href=https://pocketbase.io/docs/collections/#view-collection target=_blank rel=noopener>文件</a></p><h3 id=users>users</h3><p>這裡 users 應該不用多做調整，先新增一個使用者吧，這裡的使用者是沒有管理員權限的，要設定管理員要到 <a class=link href=http://127.0.0.1:8090/_/#/settings/admins target=_blank rel=noopener>http://127.0.0.1:8090/_/#/settings/admins</a>
+<img src=/images/pocketbase/newUser.png loading=lazy alt="new user"></p><h3 id=posts>posts</h3><p>接著建立新的 base collection，有 <code>auther</code>、<code>content</code> 兩個欄位，其中 <code>author</code> 是關聯到 <code>users</code> 表格，表示這邊文章是哪個使用者寫的，並且都設為非空。
+<img src=/images/pocketbase/newCollection_fields.png loading=lazy alt="new collection field">
+接著我們設定存取權限，預設全部都是只開放管理員，但這太沒意思了，點 <code>list</code>、<code>view</code> 和 <code>create</code> 的框框一下變成所有人都能存取，再來設定 <code>create</code> 的條件是 <code>@request.auth.id = author.id</code>，意思是發出請求的人跟 <code>author</code> 欄位的人必須是同一個人才行。剩下的有點麻煩我就先不做了
+<img src=/images/pocketbase/newCollection_rules.png loading=lazy alt="new collection rule"></p><p>那麼我們的後端大致完成，可以去寫前端了</p><h2 id=前端-js-sdk>前端 JS SDK</h2><p>pocketbase 官方有提供一個 <a class=link href=https://github.com/pocketbase/js-sdk target=_blank rel=noopener>JS SDK</a> 可以使用，裝好後我們開一個 nextjs 專案，開啟 <code>src/</code> 目錄、<code>typescript</code> 跟 tailwindcss。把預設的雜七雜八的東西刪掉後，我們從一個乾淨的 <code>src/pages/index.tsx</code> 開始。</p><h3 id=登入>登入</h3><p>我們需要兩個框框一個按鈕來登入使用者帳號，<code>input()</code> 是 tailwindcss vairant，反正就是設定按鈕樣式而已</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kd>function</span> <span class=nx>Home() {</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>pb</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=k>new</span> <span class=nx>Pocketbase</span><span class=p>(</span><span class=s1>&#39;http://localhost:8090&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>email</span><span class=p>,</span> <span class=nx>setEmail</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>password</span><span class=p>,</span> <span class=nx>setPassword</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>handleLogin</span> <span class=o>=</span> <span class=p>()</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>pb</span><span class=p>.</span><span class=nx>collection</span><span class=p>(</span><span class=s1>&#39;users&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>authWithPassword</span><span class=p>(</span><span class=nx>email</span><span class=p>,</span> <span class=nx>password</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>,</span> <span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>className</span><span class=o>=</span><span class=s>&#34;h-screen max-w-[800px] mx-auto flex flex-col&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>input</span>
+</span></span><span class=line><span class=cl>        <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span>
+</span></span><span class=line><span class=cl>        <span class=na>type</span><span class=o>=</span><span class=s>&#34;email&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=na>value</span><span class=o>=</span><span class=p>{</span><span class=nx>email</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=na>onChange</span><span class=o>=</span><span class=p>{</span><span class=nx>e</span> <span class=o>=&gt;</span> <span class=nx>setEmail</span><span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>value</span><span class=p>)}</span>
+</span></span><span class=line><span class=cl>        <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;email&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>input</span>
+</span></span><span class=line><span class=cl>        <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span>
+</span></span><span class=line><span class=cl>        <span class=na>type</span><span class=o>=</span><span class=s>&#34;password&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=na>value</span><span class=o>=</span><span class=p>{</span><span class=nx>password</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=na>onChange</span><span class=o>=</span><span class=p>{</span><span class=nx>e</span> <span class=o>=&gt;</span> <span class=nx>setPassword</span><span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>value</span><span class=p>)}</span>
+</span></span><span class=line><span class=cl>        <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;password&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>button</span> <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;button&#34;</span> <span class=na>onClick</span><span class=o>=</span><span class=p>{</span><span class=nx>handleLogin</span><span class=p>}&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=nx>Login</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>pocketbase 會自動維護 <code>authStore</code>，預設是存在 localStorage 裡面，因此我們只有第一次要登入，第二次他其實會自動把 token 什麼的從 localStorage 抓出來，省了我們不少力氣</p><h3 id=typescript>typescript</h3><p>在開始抓資料前，我們來處理一下 typescript 的部份，如果這裡設定好，後面開發會輕鬆很多，有個工具叫做 <code>pocketbase-typegen</code> 可以自動根據 pocketbase 設定產生型別定義檔案，用指令 <code>npx pocketbase-typegen --db ../pb_data/data.db --out src/pocketbase-type.ts</code> 就會產生好我們要的檔案了。
+裡面現在有幾個型別，第一類是 <code>xxxRecord</code>，這類是根據資料庫設定直接產出來的，再來是 <code>xxxResponse</code>，這個是 js-sdk 會吐給我們的，我們要用的也是這個</p><h3 id=列出-post>列出 post</h3><p>我們寫一個 hook 來處理抓資料的工作</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=line><span class=cl><span class=kd>function</span> <span class=nx>usePosts</span><span class=p>(</span><span class=nx>pb</span>: <span class=kt>Pocketbase</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>type</span> <span class=nx>Post</span> <span class=o>=</span> <span class=nx>PostResponse</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>post</span><span class=p>,</span> <span class=nx>setPost</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>&lt;</span><span class=nt>Post</span><span class=err>[]</span><span class=p>&gt;([])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>useEffect</span><span class=p>(()</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>pb</span><span class=p>.</span><span class=nx>collection</span><span class=p>(</span><span class=s1>&#39;posts&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>getList</span><span class=p>&lt;</span><span class=nt>Post</span><span class=p>&gt;()</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>result</span> <span class=o>=&gt;</span> <span class=nx>setPost</span><span class=p>(</span><span class=nx>result</span><span class=p>.</span><span class=nx>items</span><span class=p>.</span><span class=nx>reverse</span><span class=p>()))</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span> <span class=p>[</span><span class=nx>pb</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>posts</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h4 id=subscribe>Subscribe</h4><p>這個 hook 會在一開始就抓取全部的 posts，但是後續更新怎麼辦？pocketbase 提供 Subscribe，他會透過 websocket 或是 SSE 的方式把資料庫的更新即時通知前端，我們就修改一下上面的程式碼</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=line><span class=cl><span class=kd>function</span> <span class=nx>usePosts</span><span class=p>(</span><span class=nx>pb</span>: <span class=kt>Pocketbase</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>type</span> <span class=nx>Post</span> <span class=o>=</span> <span class=nx>PostsResponse</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>posts</span><span class=p>,</span> <span class=nx>updatePosts</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useReducer</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>(</span><span class=nx>state</span>: <span class=kt>Post</span><span class=p>[],</span> <span class=nx>action</span>: <span class=kt>Post</span> <span class=o>|</span> <span class=nx>Post</span><span class=p>[])</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=p>(</span><span class=nb>Array</span><span class=p>.</span><span class=nx>isArray</span><span class=p>(</span><span class=nx>action</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>action</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> <span class=p>[</span><span class=nx>action</span><span class=p>,</span> <span class=p>...</span><span class=nx>state</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>[]</span>
+</span></span><span class=line><span class=cl>  <span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>useEffect</span><span class=p>(()</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>pb</span><span class=p>.</span><span class=nx>collection</span><span class=p>(</span><span class=s1>&#39;posts&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>getList</span><span class=p>&lt;</span><span class=nt>Post</span><span class=p>&gt;()</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>result</span> <span class=o>=&gt;</span> <span class=nx>updatePosts</span><span class=p>(</span><span class=nx>result</span><span class=p>.</span><span class=nx>items</span><span class=p>.</span><span class=nx>reverse</span><span class=p>()))</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>then</span><span class=p>(()</span> <span class=o>=&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=nx>pb</span><span class=p>.</span><span class=nx>realtime</span><span class=p>.</span><span class=nx>subscribe</span><span class=p>(</span><span class=s1>&#39;posts&#39;</span><span class=p>,</span> <span class=nx>e</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=k>switch</span> <span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>action</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>case</span> <span class=s1>&#39;create&#39;</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>              <span class=nx>updatePosts</span><span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>record</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>              <span class=k>break</span>
+</span></span><span class=line><span class=cl>            <span class=k>default</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>              <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>          <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>})</span>
+</span></span><span class=line><span class=cl>      <span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=p>()</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>pb</span><span class=p>.</span><span class=nx>realtime</span><span class=p>.</span><span class=nx>unsubscribe</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span> <span class=p>[</span><span class=nx>pb</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>posts</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>這裡還有一個地方要注意，因為 nextjs 預設開啟嚴格模式，會導致 useEffect 在開發時會被執行兩次，也就是說你會 subscribe 兩次，而且似乎沒辦法關掉，唯一的方式是去 <code>next.config.js</code> 把 <code>reactStrictMode</code> 設成 <code>false</code></p><h4 id=顯示-posts>顯示 posts</h4><p>那麼，現在我們就有一個一開始會抓取所有 posts、會即時更新的 hook 啦，把他加進畫面裡吧</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kd>function</span> <span class=nx>Home() {</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>pb</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=k>new</span> <span class=nx>Pocketbase</span><span class=p>(</span><span class=s1>&#39;http://localhost:8090&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>email</span><span class=p>,</span> <span class=nx>setEmail</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>password</span><span class=p>,</span> <span class=nx>setPassword</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>posts</span> <span class=o>=</span> <span class=nx>usePosts</span><span class=p>(</span><span class=nx>pb</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>handleLogin</span> <span class=o>=</span> <span class=p>()</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>pb</span><span class=p>.</span><span class=nx>collection</span><span class=p>(</span><span class=s1>&#39;users&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>authWithPassword</span><span class=p>(</span><span class=nx>email</span><span class=p>,</span> <span class=nx>password</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>,</span> <span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>className</span><span class=o>=</span><span class=s>&#34;h-screen max-w-[800px] mx-auto flex flex-col&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>input</span>
+</span></span><span class=line><span class=cl>        <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span>
+</span></span><span class=line><span class=cl>        <span class=na>type</span><span class=o>=</span><span class=s>&#34;email&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=na>value</span><span class=o>=</span><span class=p>{</span><span class=nx>email</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=na>onChange</span><span class=o>=</span><span class=p>{</span><span class=nx>e</span> <span class=o>=&gt;</span> <span class=nx>setEmail</span><span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>value</span><span class=p>)}</span>
+</span></span><span class=line><span class=cl>        <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;email&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>input</span>
+</span></span><span class=line><span class=cl>        <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span>
+</span></span><span class=line><span class=cl>        <span class=na>type</span><span class=o>=</span><span class=s>&#34;password&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=na>value</span><span class=o>=</span><span class=p>{</span><span class=nx>password</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=na>onChange</span><span class=o>=</span><span class=p>{</span><span class=nx>e</span> <span class=o>=&gt;</span> <span class=nx>setPassword</span><span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>value</span><span class=p>)}</span>
+</span></span><span class=line><span class=cl>        <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;password&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>button</span> <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;button&#34;</span> <span class=na>onClick</span><span class=o>=</span><span class=p>{</span><span class=nx>handleLogin</span><span class=p>}&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=nx>Login</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>hr</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=p>{</span><span class=nx>posts</span><span class=p>.</span><span class=nx>map</span><span class=p>(</span><span class=nx>item</span> <span class=o>=&gt;</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;</span><span class=nt>div</span> <span class=na>className</span><span class=o>=</span><span class=s>&#34;m-2 p-2 border-2 border-stone-400 rounded-lg&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>          <span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;{</span><span class=nx>item</span><span class=p>.</span><span class=nx>content</span><span class=p>}&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>))}</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>目前畫面長這樣<br><img src=/images/pocketbase/demo2.png loading=lazy alt="demo 2"></p><h3 id=發文>發文</h3><p>發文就是去戳 post 的 create API，這部份也很簡單，加入一個 <code>&lt;textarea></code>，按下後把內容送出去就好，這部份長這樣</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=line><span class=cl><span class=kr>const</span> <span class=p>[</span><span class=nx>content</span><span class=p>,</span> <span class=nx>setContent</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>handleSend</span> <span class=o>=</span> <span class=p>()</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>pb</span><span class=p>.</span><span class=nx>collection</span><span class=p>(</span><span class=s1>&#39;posts&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=nx>create</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>      <span class=nx>author</span>: <span class=kt>pb.authStore.model?.id</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nx>content</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>})</span>
+</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=nx>then</span><span class=p>(()</span> <span class=o>=&gt;</span> <span class=nx>setContent</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>,</span> <span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>textarea</span>
+</span></span><span class=line><span class=cl>      <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span>
+</span></span><span class=line><span class=cl>      <span class=na>value</span><span class=o>=</span><span class=p>{</span><span class=nx>content</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=na>onChange</span><span class=o>=</span><span class=p>{</span><span class=nx>e</span> <span class=o>=&gt;</span> <span class=nx>setContent</span><span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>value</span><span class=p>)}</span>
+</span></span><span class=line><span class=cl>      <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;content&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>button</span> <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span> <span class=na>onClick</span><span class=o>=</span><span class=p>{</span><span class=nx>handleSend</span><span class=p>}</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;button&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>Send</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;/&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=登入後隱藏>登入後隱藏</h3><p>現在畫面上會有登入的兩個輸入框和一個按鈕，然後還有發文的框框和按鈕，問題是這兩個部份一個是未登入的時候才需要顯示，一個是已登入才能顯示，所以我們需要一個判斷有沒有登入的方法，最簡單就是判斷 <code>pb.authStore.token !== ''</code>，但這會遇到一個問題，就是 nextjs 會做 hydration，伺服器看起來沒有登入（一定不會有 token），所以顯示登入框框，但是在瀏覽器一開始 pocketbase 就會很好心幫我們載入 <code>authStore</code>，所以顯示發文框框，這樣會跳 hydration error，所以需要動點手腳</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=line><span class=cl><span class=kr>const</span> <span class=p>[</span><span class=nx>isLogin</span><span class=p>,</span> <span class=nx>setIsLogin</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=kc>false</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// prevent dom tree not the same in server and client, which will cause hydration error
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>useEffect</span><span class=p>(()</span> <span class=o>=&gt;</span> <span class=nx>setIsLogin</span><span class=p>(</span><span class=nx>pb</span><span class=p>.</span><span class=nx>authStore</span><span class=p>.</span><span class=nx>token</span> <span class=o>!==</span> <span class=s1>&#39;&#39;</span><span class=p>),</span> <span class=p>[</span><span class=nx>pb</span><span class=p>.</span><span class=nx>authStore</span><span class=p>.</span><span class=nx>token</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>return</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>isLogin</span> <span class=o>?</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>textarea</span>
+</span></span><span class=line><span class=cl>        <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span>
+</span></span><span class=line><span class=cl>        <span class=na>value</span><span class=o>=</span><span class=p>{</span><span class=nx>content</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=na>onChange</span><span class=o>=</span><span class=p>{</span><span class=nx>e</span> <span class=o>=&gt;</span> <span class=nx>setContent</span><span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>value</span><span class=p>)}</span>
+</span></span><span class=line><span class=cl>        <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;content&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>button</span> <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span> <span class=na>onClick</span><span class=o>=</span><span class=p>{</span><span class=nx>handleSend</span><span class=p>}</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;button&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=nx>Send</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>)</span> <span class=o>:</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>input</span>
+</span></span><span class=line><span class=cl>        <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span>
+</span></span><span class=line><span class=cl>        <span class=na>type</span><span class=o>=</span><span class=s>&#34;email&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=na>value</span><span class=o>=</span><span class=p>{</span><span class=nx>email</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=na>onChange</span><span class=o>=</span><span class=p>{</span><span class=nx>e</span> <span class=o>=&gt;</span> <span class=nx>setEmail</span><span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>value</span><span class=p>)}</span>
+</span></span><span class=line><span class=cl>        <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;email&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>input</span>
+</span></span><span class=line><span class=cl>        <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span>
+</span></span><span class=line><span class=cl>        <span class=na>type</span><span class=o>=</span><span class=s>&#34;password&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=na>value</span><span class=o>=</span><span class=p>{</span><span class=nx>password</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=na>onChange</span><span class=o>=</span><span class=p>{</span><span class=nx>e</span> <span class=o>=&gt;</span> <span class=nx>setPassword</span><span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>value</span><span class=p>)}</span>
+</span></span><span class=line><span class=cl>        <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;password&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>button</span> <span class=na>className</span><span class=o>=</span><span class=p>{</span><span class=nx>input</span><span class=p>()}</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;button&#34;</span> <span class=na>onClick</span><span class=o>=</span><span class=p>{</span><span class=nx>handleLogin</span><span class=p>}&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=nx>Login</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=加上作者>加上作者</h3><p>基本上已經完成了，但是我還想加上顯示這篇文章的作者是誰，會用到 js-sdk 的 <code>expand</code> 功能，修改 <code>usePosts</code> 函數，這裡因為 subscribe 好像沒有 <code>expand</code> 選項可以加，所以再額外發一個 api call 去抓有 <code>expand</code> 的資料</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=line><span class=cl><span class=kd>function</span> <span class=nx>usePosts</span><span class=p>(</span><span class=nx>pb</span>: <span class=kt>Pocketbase</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>type</span> <span class=nx>Post</span> <span class=o>=</span> <span class=nx>PostsResponse</span><span class=o>&lt;</span><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>author</span>: <span class=kt>UsersResponse</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span><span class=o>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>posts</span><span class=p>,</span> <span class=nx>updatePosts</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useReducer</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>(</span><span class=nx>state</span>: <span class=kt>Post</span><span class=p>[],</span> <span class=nx>action</span>: <span class=kt>Post</span> <span class=o>|</span> <span class=nx>Post</span><span class=p>[])</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=p>(</span><span class=nb>Array</span><span class=p>.</span><span class=nx>isArray</span><span class=p>(</span><span class=nx>action</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>action</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> <span class=p>[</span><span class=nx>action</span><span class=p>,</span> <span class=p>...</span><span class=nx>state</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>[]</span>
+</span></span><span class=line><span class=cl>  <span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>useEffect</span><span class=p>(()</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>pb</span><span class=p>.</span><span class=nx>collection</span><span class=p>(</span><span class=s1>&#39;posts&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>getList</span><span class=p>&lt;</span><span class=nt>Post</span><span class=p>&gt;(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>50</span><span class=p>,</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>expand</span><span class=o>:</span> <span class=s1>&#39;author&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=p>})</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>result</span> <span class=o>=&gt;</span> <span class=nx>updatePosts</span><span class=p>(</span><span class=nx>result</span><span class=p>.</span><span class=nx>items</span><span class=p>.</span><span class=nx>reverse</span><span class=p>()))</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>then</span><span class=p>(()</span> <span class=o>=&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=nx>pb</span><span class=p>.</span><span class=nx>realtime</span><span class=p>.</span><span class=nx>subscribe</span><span class=p>(</span><span class=s1>&#39;posts&#39;</span><span class=p>,</span> <span class=nx>e</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=k>switch</span> <span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>action</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>case</span> <span class=s1>&#39;create&#39;</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>              <span class=c1>// updatePosts(e.record)
+</span></span></span><span class=line><span class=cl><span class=c1></span>              <span class=nx>pb</span><span class=p>.</span><span class=nx>collection</span><span class=p>(</span><span class=s1>&#39;posts&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=p>.</span><span class=nx>getOne</span><span class=p>&lt;</span><span class=nt>Post</span><span class=p>&gt;(</span><span class=nx>e</span><span class=p>.</span><span class=nx>record</span><span class=p>.</span><span class=nx>id</span><span class=p>,</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                  <span class=nx>expand</span><span class=o>:</span> <span class=s1>&#39;author&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=p>})</span>
+</span></span><span class=line><span class=cl>                <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>e</span> <span class=o>=&gt;</span> <span class=nx>updatePosts</span><span class=p>(</span><span class=nx>e</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>              <span class=k>break</span>
+</span></span><span class=line><span class=cl>            <span class=k>default</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>              <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>          <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>})</span>
+</span></span><span class=line><span class=cl>      <span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=p>()</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>pb</span><span class=p>.</span><span class=nx>realtime</span><span class=p>.</span><span class=nx>unsubscribe</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span> <span class=p>[</span><span class=nx>pb</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>posts</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>顯示文章的地方就改成這樣</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-tsx data-lang=tsx><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>posts</span><span class=p>.</span><span class=nx>map</span><span class=p>(</span><span class=nx>item</span> <span class=o>=&gt;</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>className</span><span class=o>=</span><span class=s>&#34;m-2 p-2 border-2 border-stone-400 rounded-lg&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;{</span><span class=nx>item</span><span class=p>.</span><span class=nx>content</span><span class=p>}&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>hr</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>p</span> <span class=na>className</span><span class=o>=</span><span class=s>&#34;text-sm text-stone-400&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=nx>by</span> <span class=p>{</span><span class=nx>item</span><span class=p>.</span><span class=nx>expand</span><span class=o>?</span><span class=p>.</span><span class=nx>author</span><span class=p>.</span><span class=nx>name</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=最後成果>最後成果</h2><p>程式碼可以在 <a class=link href=https://github.com/simbafs/pocketbase-experinment/tree/4ef502654210f6711aa83b47c23f5997a2997a74 target=_blank rel=noopener>這裡</a> 找到</p><p><img src=/images/pocketbase/demo3.png loading=lazy alt="demo 3">
+<img src=/images/pocketbase/demo4.png loading=lazy alt="demo 4"></p></section><footer class=article-footer><section class=article-tags><a href=/tags/pocketbase/>pocketbase</a>
+<a href=/tags/sqlite/>sqlite</a>
+<a href=/tags/nextjs/>nextjs</a>
+<a href=/tags/api/>api</a>
+<a href=/tags/backend/>backend</a>
+<a href=/tags/saas/>saas</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css integrity="sha256-J+iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s=" crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js integrity="sha256-InsNdER1b2xUewP+pKCUJpkhiqwHgqiPXDlIk7GzBu4=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI=" crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],ignoredClasses:["gist"]})})</script></article><aside class=related-content--wrapper><h2 class=section-title>相關文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/js/nextjs/fs/><div class=article-details><h2 class=article-title>File System</h2></div></a></article><article><a href=/p/js/strapi-quick-start/><div class=article-details><h2 class=article-title>Strapi Quick Start</h2></div></a></article><article><a href=/p/js/express-%E9%87%8D%E8%A4%87-send/><div class=article-details><h2 class=article-title>express 重複 send</h2></div></a></article><article><a href=/p/js/sqlite/><div class=article-details><h2 class=article-title>sqlite3</h2></div></a></article><article><a href=/p/js/typescript-snippet/><div class=article-details><h2 class=article-title>TypeScript Snippet</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+2020 -
+2023 Simba 的喵窩</section><section class=powerby>好想養貓阿~~<br>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 建立<br>主題 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.18.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 設計</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
