@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pocketbase on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/pocketbase/</link><description>Recent content in pocketbase on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/pocketbase/index.xml" rel="self" type="application/rss+xml"/><item><title>PocketBase</title><link>https://blog.simbafs.cc/p/js/pocketbase/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/pocketbase/</guid><description>&lt;h1 id="pocketbase">PocketBase&lt;/h1>
 &lt;p>&lt;a class="link" href="https://pocketbase.io/" target="_blank" rel="noopener"
->PocketBase&lt;/a> 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的因此是獨立的單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結構、關聯和使用者驗證和權限控管等功能了&lt;/p>
+>PocketBase&lt;/a> 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的，因此可以編譯成一個單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結構、關聯、使用者驗證和權限控管等功能了&lt;/p>
 &lt;p>&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo.png"
 loading="lazy"
 alt="demo"
 >&lt;/p>
-&lt;p>接著是我用 pocketbase 寫一個貼文佈告欄系統的過程&lt;/p>
+&lt;p>接下來是我用 pocketbase 寫一個貼文佈告欄系統的過程&lt;/p>
 &lt;h2 id="安裝">安裝&lt;/h2>
 &lt;p>安裝很簡單，去 &lt;a class="link" href="https://pocketbase.io/docs/" target="_blank" rel="noopener"
 >https://pocketbase.io/docs/&lt;/a> 找到你的作業系統對應的檔案，下載下來後放到 &lt;code>$PATH&lt;/code> 裡面，在你的專案目錄就執行就可以了&lt;/p>
@@ -115,8 +115,9 @@ alt="new collection rule"
 &lt;/div>
 &lt;/div>&lt;p>pocketbase 會自動維護 &lt;code>authStore&lt;/code>，預設是存在 localStorage 裡面，因此我們只有第一次要登入，第二次他其實會自動把 token 什麼的從 localStorage 抓出來，省了我們不少力氣&lt;/p>
 &lt;h3 id="typescript">typescript&lt;/h3>
-&lt;p>在開始抓資料前，我們來處理一下 typescript 的部份，如果這裡設定好，後面開發會輕鬆很多，有個工具叫做 &lt;code>pocketbase-typegen&lt;/code> 可以自動根據 pocketbase 設定產生型別定義檔案，用指令 &lt;code>npx pocketbase-typegen --db ../pb_data/data.db --out src/pocketbase-type.ts&lt;/code> 就會產生好我們要的檔案了。
-裡面現在有幾個型別，第一類是 &lt;code>xxxRecord&lt;/code>，這類是根據資料庫設定直接產出來的，再來是 &lt;code>xxxResponse&lt;/code>，這個是 js-sdk 會吐給我們的，我們要用的也是這個&lt;/p>
+&lt;p>在開始抓資料前，我們來處理一下 typescript 的部份，如果這裡設定好，後面開發會輕鬆很多，有個工具叫做 &lt;a class="link" href="https://github.com/patmood/pocketbase-typegen" target="_blank" rel="noopener"
+>pocketbase-typegen&lt;/a> 可以自動根據 pocketbase 設定產生型別定義檔案，用指令 &lt;code>npx pocketbase-typegen --db ../pb_data/data.db --out src/pocketbase-type.ts&lt;/code> 就會產生好我們要的檔案了。&lt;br>
+裡面有幾種型別，第一類是 &lt;code>xxxRecord&lt;/code>，這類是根據資料庫設定直接產出來的，再來是 &lt;code>xxxResponse&lt;/code>，這個是 js-sdk 會吐給我們的，我們要用的也是這個&lt;/p>
 &lt;h3 id="列出-post">列出 post&lt;/h3>
 &lt;p>我們寫一個 hook 來處理抓資料的工作&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -592,8 +593,10 @@ alt="demo 2"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="最後成果">最後成果&lt;/h2>
-&lt;p>程式碼可以在 &lt;a class="link" href="https://github.com/simbafs/pocketbase-experinment/tree/5ab09e9fffbb9e160aa3fb0453ee9a58adb02eb8" target="_blank" rel="noopener"
+&lt;/div>&lt;h3 id="權限">權限&lt;/h3>
+&lt;p>目前看起來很棒，但是你會發現用其他帳號登入的話就會 &lt;code>expand&lt;/code> 就會失敗，是因為預設的 users collection &lt;code>list&lt;/code> 和 &lt;code>view&lt;/code> 都是只有自己才能看，所以我們需要把他刪掉變成空字串，這樣才可以讓其他人也抓到 &lt;code>expand&lt;/code>&lt;/p>
+&lt;h2 id="最後成果">最後成果&lt;/h2>
+&lt;p>程式碼可以在 &lt;a class="link" href="https://github.com/simbafs/pocketbase-experinment/tree/d720bc52b00485ceebb1f6ced4429a30000bee8c" target="_blank" rel="noopener"
 >這裡&lt;/a> 找到&lt;/p>
 &lt;p>&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo3.png"
 loading="lazy"
