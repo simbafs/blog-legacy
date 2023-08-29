@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simba 的喵窩</title><link>https://blog.simbafs.cc/</link><description>Recent content on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/index.xml" rel="self" type="application/rss+xml"/><item><title>PocketBase</title><link>https://blog.simbafs.cc/p/js/pocketbase/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/pocketbase/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/pocketbase.png" alt="Featured image of post PocketBase" />&lt;h1 id="pocketbase">PocketBase&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simba 的喵窩</title><link>https://blog.simbafs.cc/</link><description>Recent content on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/index.xml" rel="self" type="application/rss+xml"/><item><title>@blog</title><link>https://blog.simbafs.cc/index/</link><pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/index/</guid><description>&lt;p>嗨！點 &amp;raquo;&lt;a class="link" href="https://blog.simbafs.cc/" >這裡&lt;/a>&amp;laquo; 進入主頁&lt;/p></description></item><item><title>About</title><link>https://blog.simbafs.cc/index/</link><pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/index/</guid><description>&lt;h1 id="-哈囉問世界安好-followershttpsimgshieldsiogithubfollowerssimbafsstyleflat-squarehttpsgithubcomsimbafs">🖐️ 哈囉！問世界安好 &lt;a class="link" href="https://github.com/simbafs" target="_blank" rel="noopener"
+>&lt;img src="https://img.shields.io/github/followers/simbafs?style=flat-square"
+loading="lazy"
+alt="Followers"
+>&lt;/a>&lt;/h1>
+&lt;ul>
+&lt;li>本名: 陳宏彰&lt;/li>
+&lt;li>常用網名: simba-fs、SimbaFs&lt;/li>
+&lt;li>原 JS 愛好者 目前 Go 愛好者&lt;/li>
+&lt;li>vim is the best editor&lt;/li>
+&lt;li>前端好難&lt;/li>
+&lt;li>&lt;strong>Golang&lt;/strong>、&lt;strong>NodeJS&lt;/strong>、nextjs&lt;/li>
+&lt;li>五迷 目前最喜歡「成名在望」&lt;/li>
+&lt;li>成大物理系大三&lt;/li>
+&lt;li>&lt;a class="link" href="https://ckcsc.net" target="_blank" rel="noopener"
+>成功高中電子計算機研習社&lt;/a> 擔任 &lt;code>退休網管兼教學&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h1 id="-作品">🛠 作品&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/next-blog" target="_blank" rel="noopener"
+>next-blog&lt;/a>&lt;br>
+本來想自己用 nextjs 寫一個部落格系統，但是遇到一些問題失敗了，但這個我其實很滿意，一個終端機風格的操作方式，而且全 SSG，另外就算關掉 javascript 大部分功能也都還可以動，唯一的問題是檔案太肥。 &lt;br>
+tech stack: nextjs, tailwindcss&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/pixivReader" target="_blank" rel="noopener"
+>pixiv reader&lt;/a>&lt;br>
+解決看不懂 pixiv 上日文小說的困擾，pixiv 圖片很難抓但是小說完全沒鎖，然後丟進可以白漂 google 翻譯的套件，搭拉！勉強看得懂的小說完成&lt;br>
+tech stack: nextjs&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
+>晶晶體產生器&lt;/a>&lt;br>
+按右鍵把選取的文字替換成英文翻譯，我在編寫這份列表石材發現我寫過這個，好ㄎ一ㄤ喔&lt;br>
+tech stack: nextjs&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/slides" target="_blank" rel="noopener"
+>slides&lt;/a>&lt;br>
+發想自 hackmd 的簡報模式，但是這個可以開房間，一個人開房間後其他人加入，進度會跟開房間的那個人同步。這個東西寫好後一次也沒用上 QQ&lt;br>
+tech stack: expressjs, socket.io, ejs&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/twitterDL" target="_blank" rel="noopener"
+>twitterDL&lt;/a>&lt;br>
+推特 API 死了&lt;br>
+tech stack: nodejs&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/ncku-extended" target="_blank" rel="noopener"
+>NCKU Extended&lt;/a> &lt;br>
+成大系統瀏覽器擴充套件&lt;br>
+擴充成大系統的功能&lt;br>
+目前功能還不多，有其他想法歡迎發 Issue&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/simbafs/telegrary" target="_blank" rel="noopener"
+>telegrary&lt;/a>&lt;br>
+Telegrary = Telegram + diary &lt;br>
+Telegrary 是一個 Telegram 機器人，讓你可以在 Telegram 上管理日記。同時 Telegrary 提供了一個 CLI 界面，讓你可以在終端機管理日記。&lt;br>
+&lt;strong>機器人問題很多不建議開&lt;/strong>&lt;br>
+tech stack: golang&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="-聯絡方式">📬 聯絡方式&lt;/h1>
+&lt;ul>
+&lt;li>gpg fingerprint: &lt;a class="link" href="https://github.com/simbafs.gpg" target="_blank" rel="noopener"
+>FB39 7B64 177E 7C69 6E4D 707F 2FAD 6967 8674 CF25&lt;/a>&lt;/li>
+&lt;li>mail: &lt;a class="link" href="mailto:me@simbafs.cc" >me@simbafs.cc&lt;/a>&lt;/li>
+&lt;li>Mastodon: &lt;!-- raw HTML omitted -->@simbafs@masto.simbafs.cc&lt;!-- raw HTML omitted -->&lt;/li>
+&lt;li>Discord id: @simbafs&lt;/li>
+&lt;li>telegram: &lt;a class="link" href="https://t.me/simbafs" target="_blank" rel="noopener"
+>@simbafs&lt;/a>&lt;/li>
+&lt;li>twitter: &lt;a class="link" href="https://twitter.com/simbafs" target="_blank" rel="noopener"
+>@simbafs&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Search</title><link>https://blog.simbafs.cc/search/</link><pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/search/</guid><description/></item><item><title>PocketBase</title><link>https://blog.simbafs.cc/p/js/pocketbase/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/pocketbase/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/pocketbase.png" alt="Featured image of post PocketBase" />&lt;h1 id="pocketbase">PocketBase&lt;/h1>
 &lt;p>&lt;a class="link" href="https://pocketbase.io/" target="_blank" rel="noopener"
 >PocketBase&lt;/a> 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的，因此可以編譯成一個單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結構、關聯、使用者驗證和權限控管等功能了&lt;/p>
 &lt;p>&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo.png"
@@ -14579,80 +14655,4 @@ dash 沒有支援這個語法
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git push -u origin hexo
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>完成&lt;/p></description></item><item><title>@blog</title><link>https://blog.simbafs.cc/@blog/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/@blog/</guid><description>&lt;p>嗨！點 &amp;raquo;&lt;a class="link" href="https://blog.simbafs.cc/" >這裡&lt;/a>&amp;laquo; 進入主頁&lt;/p></description></item><item><title>About</title><link>https://blog.simbafs.cc/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/about/</guid><description>&lt;h1 id="-哈囉問世界安好-followershttpsimgshieldsiogithubfollowerssimbafsstyleflat-squarehttpsgithubcomsimbafs">🖐️ 哈囉！問世界安好 &lt;a class="link" href="https://github.com/simbafs" target="_blank" rel="noopener"
->&lt;img src="https://img.shields.io/github/followers/simbafs?style=flat-square"
-loading="lazy"
-alt="Followers"
->&lt;/a>&lt;/h1>
-&lt;ul>
-&lt;li>本名: 陳宏彰&lt;/li>
-&lt;li>常用網名: simba-fs、SimbaFs&lt;/li>
-&lt;li>原 JS 愛好者 目前 Go 愛好者&lt;/li>
-&lt;li>vim is the best editor&lt;/li>
-&lt;li>前端好難&lt;/li>
-&lt;li>&lt;strong>Golang&lt;/strong>、&lt;strong>NodeJS&lt;/strong>、nextjs&lt;/li>
-&lt;li>五迷 目前最喜歡「成名在望」&lt;/li>
-&lt;li>成大物理系大三&lt;/li>
-&lt;li>&lt;a class="link" href="https://ckcsc.net" target="_blank" rel="noopener"
->成功高中電子計算機研習社&lt;/a> 擔任 &lt;code>退休網管兼教學&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h1 id="-作品">🛠 作品&lt;/h1>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;a class="link" href="https://github.com/simbafs/next-blog" target="_blank" rel="noopener"
->next-blog&lt;/a>&lt;br>
-本來想自己用 nextjs 寫一個部落格系統，但是遇到一些問題失敗了，但這個我其實很滿意，一個終端機風格的操作方式，而且全 SSG，另外就算關掉 javascript 大部分功能也都還可以動，唯一的問題是檔案太肥。 &lt;br>
-tech stack: nextjs, tailwindcss&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a class="link" href="https://github.com/simbafs/pixivReader" target="_blank" rel="noopener"
->pixiv reader&lt;/a>&lt;br>
-解決看不懂 pixiv 上日文小說的困擾，pixiv 圖片很難抓但是小說完全沒鎖，然後丟進可以白漂 google 翻譯的套件，搭拉！勉強看得懂的小說完成&lt;br>
-tech stack: nextjs&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
->晶晶體產生器&lt;/a>&lt;br>
-按右鍵把選取的文字替換成英文翻譯，我在編寫這份列表石材發現我寫過這個，好ㄎ一ㄤ喔&lt;br>
-tech stack: nextjs&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a class="link" href="https://github.com/simbafs/slides" target="_blank" rel="noopener"
->slides&lt;/a>&lt;br>
-發想自 hackmd 的簡報模式，但是這個可以開房間，一個人開房間後其他人加入，進度會跟開房間的那個人同步。這個東西寫好後一次也沒用上 QQ&lt;br>
-tech stack: expressjs, socket.io, ejs&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a class="link" href="https://github.com/simbafs/twitterDL" target="_blank" rel="noopener"
->twitterDL&lt;/a>&lt;br>
-推特 API 死了&lt;br>
-tech stack: nodejs&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a class="link" href="https://github.com/simbafs/ncku-extended" target="_blank" rel="noopener"
->NCKU Extended&lt;/a> &lt;br>
-成大系統瀏覽器擴充套件&lt;br>
-擴充成大系統的功能&lt;br>
-目前功能還不多，有其他想法歡迎發 Issue&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a class="link" href="https://github.com/simbafs/telegrary" target="_blank" rel="noopener"
->telegrary&lt;/a>&lt;br>
-Telegrary = Telegram + diary &lt;br>
-Telegrary 是一個 Telegram 機器人，讓你可以在 Telegram 上管理日記。同時 Telegrary 提供了一個 CLI 界面，讓你可以在終端機管理日記。&lt;br>
-&lt;strong>機器人問題很多不建議開&lt;/strong>&lt;br>
-tech stack: golang&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="-聯絡方式">📬 聯絡方式&lt;/h1>
-&lt;ul>
-&lt;li>gpg fingerprint: &lt;a class="link" href="https://github.com/simbafs.gpg" target="_blank" rel="noopener"
->FB39 7B64 177E 7C69 6E4D 707F 2FAD 6967 8674 CF25&lt;/a>&lt;/li>
-&lt;li>mail: &lt;a class="link" href="mailto:me@simbafs.cc" >me@simbafs.cc&lt;/a>&lt;/li>
-&lt;li>Mastodon: &lt;!-- raw HTML omitted -->@simbafs@masto.simbafs.cc&lt;!-- raw HTML omitted -->&lt;/li>
-&lt;li>Discord id: @simbafs&lt;/li>
-&lt;li>telegram: &lt;a class="link" href="https://t.me/simbafs" target="_blank" rel="noopener"
->@simbafs&lt;/a>&lt;/li>
-&lt;li>twitter: &lt;a class="link" href="https://twitter.com/simbafs" target="_blank" rel="noopener"
->@simbafs&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Search</title><link>https://blog.simbafs.cc/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/search/</guid><description/></item></channel></rss>
+&lt;/div>&lt;p>完成&lt;/p></description></item></channel></rss>
