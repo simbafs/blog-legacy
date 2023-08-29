@@ -1,58 +1,58 @@
-// import matter from 'gray-matter'
-// import fs from 'fs/promises'
-// import path from 'path'
-// import yaml from 'js-yaml'
-//
-// import getOG from './getOg'
-
-const matter = require('gray-matter')
-const fs = require('fs/promises')
 const path = require('path')
+const fs = require('fs/promises')
+const exec = require('util').promisify(require('child_process').exec)
+const matter = require('gray-matter')
 const yaml = require('js-yaml')
-const getOG = require('./getOg')
+const { getOg } = require('@simbafs/og')
 
-// any format of date string to yyyy-mm-dd
-function formatDate(date/*: string*/)/*: string*/ {
-    return new Date(date).toISOString().split('T')[0];
+/**
+ * date string to yyyy-mm-dd
+ * @param {string} date
+ *
+ * @returns {string}
+ */
+function formatDate(date) {
+    return new Date(date).toISOString().split('T')[0]
 }
-
-// type MatterData = {
-//     title: string
-//     slug: string
-//     date: string
-//     tags: string[]
-//     categories: string[]
-//     image: string | undefined
-//     draft: boolean
-// }
 
 const doRenderOG = process.argv.includes('--og')
 
-// formatMatter({}, './content/post/other/some.md', './content/post/',  stat)
-async function formatMatter(matter/*: any*/, filepath/*: string*/, ctime/*: Date*/) {
-    const data/*: MatterData*/ = {
+/**
+ * @param {object} matter
+ * @param {string} filepath
+ * @param {Date} ctime
+ *
+ * @returns {Promise<object>}
+ */
+async function formatMatter(matter, filepath, ctime) {
+    const data = {
         ...matter,
         title: matter?.title || path.basename(filepath, path.extname(filepath)),
         slug: matter?.slug || path.basename(filepath, path.extname(filepath)),
         date: formatDate(matter?.date || ctime),
         tags: matter?.tags || [],
-        categories: filepath.split(path.sep).slice(4, -1), // 4 = ../../content/post
+        categories: filepath.split(path.sep).slice(2, -1), // 4 = content/post
         image: matter?.image || undefined,
-        draft: matter?.draft || undefined
+        draft: matter?.draft || undefined,
     }
 
     const pathArray = filepath.split('/').slice(4)
 
     if (doRenderOG) {
-        const { png } = await getOG({
+        const { png } = await getOg({
             title: data.title,
             subtitle: `${data.date} by simbafs`,
-            tags: data.tags.join(', ')
+            tags: data.tags,
         })
         // console.log(pathArray.slice(0, -1), pathArray.slice(-1)[0].replace('.md', '.png'))
-        await fs.mkdir(path.join('../../static/og', ...pathArray.slice(0, -1)), { recursive: true })
+        await fs.mkdir(path.join('static/og', ...pathArray.slice(0, -1)), {
+            recursive: true,
+        })
 
-        await fs.writeFile(path.join('../../static/og', ...pathArray).replace(/\.md$/, '.png'), png)
+        await fs.writeFile(
+            path.join('static/og', ...pathArray).replace(/\.md$/, '.png'),
+            png
+        )
 
         data.image = path.join('/og', ...pathArray).replace(/\.md$/, '.png')
     }
@@ -60,31 +60,32 @@ async function formatMatter(matter/*: any*/, filepath/*: string*/, ctime/*: Date
     return data
 }
 
-async function main(source/*: string*/) {
-    const files = await fs.readdir(source)
+async function main() {
+    const files = await exec('hugo list all')
+        .then(({ stdout }) => stdout.split('\n')
+            .map(item => item.split(',')[0])
+            .slice(1)
+            .filter(item => !item.match(/_index.md$/))
+            .filter(item => item)
+        )
+        .catch(console.error)
     for (const file of files) {
-        const stat = await fs.stat(path.join(source, file))
-        if (stat.isDirectory()) {
-            main(path.join(source, file))
-            continue
-        }
-
-        if (path.extname(file) !== '.md' || file === '_index.md') {
-            continue
-        }
-
-        console.log(path.join(source, file))
+        console.log(file)
 
         // read
-        const fileContent = await fs.readFile(path.join(source, file), 'utf-8')
+        const fileContent = await fs.readFile(file, 'utf-8').catch(console.error)
+        const stat = await fs.stat(file).catch(console.error)
 
         // format
         const { data, content } = matter(fileContent)
-        const formattedData = await formatMatter(data, path.join(source, file), stat.ctime)
+        const formattedData = await formatMatter(data, file, stat.ctime)
 
         // write
         try {
-            await fs.writeFile(path.join(source, file), `---\n${yaml.dump(formattedData)}---\n${content}`)
+            await fs.writeFile(
+                file,
+                `---\n${yaml.dump(formattedData)}---\n${content}`
+            )
         } catch (e) {
             console.error(e)
             console.log(data)
@@ -92,5 +93,4 @@ async function main(source/*: string*/) {
     }
 }
 
-main('../../content/post')
-    .catch(console.error)
+main().catch(console.error)

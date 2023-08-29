@@ -1,6 +1,7 @@
 {
 	"dependencies": {
 		"@resvg/resvg-js": "^2.4.1",
+		"@simbafs/og": "^1.0.2",
 		"@types/js-yaml": "^4.0.5",
 		"@types/node": "^20.4.0",
 		"front-matter-markdown": "^0.4.5",

@@ -8,6 +8,9 @@ dependencies:
   '@resvg/resvg-js':
     specifier: ^2.4.1
     version: 2.4.1
+  '@simbafs/og':
+    specifier: ^1.0.2
+    version: 1.0.2
   '@types/js-yaml':
     specifier: ^4.0.5
     version: 4.0.5
@@ -165,6 +168,16 @@ packages:
     dependencies:
       fflate: 0.7.4
       string.prototype.codepointat: 0.2.1
+    dev: false
+
+  /@simbafs/og@1.0.2:
+    resolution: {integrity: sha512-d+LNAETr8AcMX5pKAVLHCctbHe3Xm0UrgbzNkiWm5KX5Rpr9wjuvDgCGhJLv6RWLtn5XxBjILvw1qD4E+XXGyg==}
+    hasBin: true
+    dependencies:
+      '@resvg/resvg-js': 2.4.1
+      gray-matter: 4.0.3
+      satori: 0.10.3
+      satori-html: 0.3.2
     dev: false
 
   /@types/js-yaml@4.0.5:

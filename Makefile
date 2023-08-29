@@ -20,7 +20,7 @@ server:
 	hugo server -D
 
 frontmatter:
-	cd ./script/frontmatter/ && node index.js
+	node ./script/frontmatter/index.js
 
 og: 
 	cd ./script/frontmatter/ && node index.js --og

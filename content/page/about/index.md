@@ -6,6 +6,11 @@ menu:
       icon: user
     weight: 4
 title: About
+slug: index
+date: '2023-08-29'
+tags: []
+categories:
+  - about
 ---
 
 # 🖐️ 哈囉！問世界安好 [![Followers](https://img.shields.io/github/followers/simbafs?style=flat-square)](https://github.com/simbafs)
