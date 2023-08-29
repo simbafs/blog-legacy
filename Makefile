@@ -23,6 +23,6 @@ frontmatter:
 	node ./script/frontmatter/index.js
 
 og: 
-	cd ./script/frontmatter/ && node index.js --og
+	node ./script/frontmatter/index.js --og
 
 .PHONY: push tree build diff og frontmatter server

@@ -36,7 +36,7 @@ async function formatMatter(matter, filepath, ctime) {
         draft: matter?.draft || undefined,
     }
 
-    const pathArray = filepath.split('/').slice(4)
+    const pathArray = filepath.split('/').slice(2)
 
     if (doRenderOG) {
         const { png } = await getOg({
@@ -45,7 +45,7 @@ async function formatMatter(matter, filepath, ctime) {
             tags: data.tags,
         })
         // console.log(pathArray.slice(0, -1), pathArray.slice(-1)[0].replace('.md', '.png'))
-        await fs.mkdir(path.join('static/og', ...pathArray.slice(0, -1)), {
+        await fs.mkdir(path.join('static', 'og', ...pathArray.slice(0, -1)), {
             recursive: true,
         })
 
