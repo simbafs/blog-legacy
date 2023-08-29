@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ssh on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/ssh/</link><description>Recent content in ssh on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 14 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/ssh/index.xml" rel="self" type="application/rss+xml"/><item><title>SSH TCP/IP Forward</title><link>https://blog.simbafs.cc/p/golang/ssh-tcpip-forward/</link><pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-tcpip-forward/</guid><description>&lt;h1 id="ssh-tcpip-forward">Ssh TCP/IP Forward&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ssh on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/ssh/</link><description>Recent content in ssh on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 14 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/ssh/index.xml" rel="self" type="application/rss+xml"/><item><title>SSH TCP/IP Forward</title><link>https://blog.simbafs.cc/p/golang/ssh-tcpip-forward/</link><pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-tcpip-forward/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/ssh-tcpip-forward.png" alt="Featured image of post SSH TCP/IP Forward" />&lt;h1 id="ssh-tcpip-forward">Ssh TCP/IP Forward&lt;/h1>
 &lt;p>這篇文章是講怎麼用 golang 寫一個 ssh server 可以執行 tcp 轉發，這方面的資料在 Google 講的特別少，有可能都被「我的 ssh 壞掉了不會轉發怎麼辦」淹沒了，然後類似的專案又太複雜很難懂。研究兩天的結論是去看 RFC（Request For Comments） 最快，裡面寫得最清楚。&lt;/p>
 &lt;p>目前這個版本只適用把本地端口開到伺服器上，也就是 &lt;code>ssh -R&lt;/code>，反向的 &lt;code>ssh -L&lt;/code> 的之後再研究補充。&lt;/p>
 &lt;h2 id="開啟伺服器">開啟伺服器&lt;/h2>
@@ -897,7 +897,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>ssh protocol 比我想像的還要複雜，像是 tcp forwarding 和 x11 forwarding 為什麼差這麼多？個人猜測可能是跟他們在 OSI 模型中不同層的關係。而一個東西要真的了解他在幹麻還是讀文件最快，如果我只看 Google 上別人的文章、程式碼和 ChatGPT 的唬爛，也許我在 Global request 之前就放棄了，再不然也會被 tcpip-forward channel 和 session chennel 發起人不同卡住做不下去。&lt;/p></description></item><item><title>SSH Server</title><link>https://blog.simbafs.cc/p/golang/ssh-server/</link><pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-server/</guid><description>&lt;h1 id="ssh-server">SSH Server&lt;/h1>
+&lt;p>ssh protocol 比我想像的還要複雜，像是 tcp forwarding 和 x11 forwarding 為什麼差這麼多？個人猜測可能是跟他們在 OSI 模型中不同層的關係。而一個東西要真的了解他在幹麻還是讀文件最快，如果我只看 Google 上別人的文章、程式碼和 ChatGPT 的唬爛，也許我在 Global request 之前就放棄了，再不然也會被 tcpip-forward channel 和 session chennel 發起人不同卡住做不下去。&lt;/p></description></item><item><title>SSH Server</title><link>https://blog.simbafs.cc/p/golang/ssh-server/</link><pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-server/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/ssh-server.png" alt="Featured image of post SSH Server" />&lt;h1 id="ssh-server">SSH Server&lt;/h1>
 &lt;h2 id="開啟伺服器">開啟伺服器&lt;/h2>
 &lt;h3 id="建立設定">建立設定&lt;/h3>
 &lt;p>&lt;code>main&lt;/code> 函數開頭先建立了 &lt;code>ssh.ServerConfig&lt;/code>、把伺服器的金鑰讀進來&lt;/p>
@@ -1987,7 +1987,7 @@
 >https://github.com/Scalingo/go-ssh-examples/blob/master/server_complex.go&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://pkg.go.dev/golang.org/x/crypto/ssh" target="_blank" rel="noopener"
 >https://pkg.go.dev/golang.org/x/crypto/ssh&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>SSH Server Util</title><link>https://blog.simbafs.cc/p/golang/ssh-server-uitl/</link><pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-server-uitl/</guid><description>&lt;h1 id="ssh-server-util">SSH Server Util&lt;/h1>
+&lt;/ul></description></item><item><title>SSH Server Util</title><link>https://blog.simbafs.cc/p/golang/ssh-server-uitl/</link><pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-server-uitl/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/ssh-server-util.png" alt="Featured image of post SSH Server Util" />&lt;h1 id="ssh-server-util">SSH Server Util&lt;/h1>
 &lt;h2 id="publickeycallback">PublicKeyCallback&lt;/h2>
 &lt;p>在 &lt;a class="link" href="../ssh-server" >golang/ssh-server&lt;/a> 中的 ssh 伺服器是沒有驗證使用者身份的，因為在 &lt;code>ssh.ServerConfig&lt;/code> 中設定了 &lt;code>NoClientAuth: true&lt;/code>。用下面的 &lt;code>ssh.SererConfig&lt;/code> 可以設定用只有指定的使用者可以進入，不過這個版本中沒有處理時序攻擊（Timming attack），也就是用比對公鑰的時間不同獲取資訊的攻擊手段。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -2128,7 +2128,7 @@
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://pkg.go.dev/golang.org/x/crypto/ssh" target="_blank" rel="noopener"
 >https://pkg.go.dev/golang.org/x/crypto/ssh&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Wireshark Over SSH in Docker</title><link>https://blog.simbafs.cc/p/linux/docker/wireshark-over-ssh-in-docker/</link><pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/wireshark-over-ssh-in-docker/</guid><description>&lt;h1 id="wireshark-over-ssh-in-docker">Wireshark Over SSH in Docker&lt;/h1>
+&lt;/ul></description></item><item><title>Wireshark Over SSH in Docker</title><link>https://blog.simbafs.cc/p/linux/docker/wireshark-over-ssh-in-docker/</link><pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/wireshark-over-ssh-in-docker/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/wireshark-over-ssh-in-docker.png" alt="Featured image of post Wireshark Over SSH in Docker" />&lt;h1 id="wireshark-over-ssh-in-docker">Wireshark Over SSH in Docker&lt;/h1>
 &lt;p>分成兩個部份，一個是把封包從 docker container 裡面弄出來，再來是在本地的 &lt;a class="link" href="https://zh.wikipedia.org/zh-tw/Wireshark" target="_blank" rel="noopener"
 >wireshark&lt;/a> 抓到遠端的封包&lt;/p>
 &lt;h2 id="把封包弄出-docker-container">把封包弄出 docker container&lt;/h2>
@@ -2186,7 +2186,7 @@
 >https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/howto_use_wireshark_over_ssh.html&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/nicolaka/netshoot" target="_blank" rel="noopener"
 >https://github.com/nicolaka/netshoot&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>GPG and Yubikey</title><link>https://blog.simbafs.cc/p/linux/gpg-yubikey/</link><pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-yubikey/</guid><description>&lt;h1 id="gpg">GPG&lt;/h1>
+&lt;/ul></description></item><item><title>GPG and Yubikey</title><link>https://blog.simbafs.cc/p/linux/gpg-yubikey/</link><pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-yubikey/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/gpg-yubikey.png" alt="Featured image of post GPG and Yubikey" />&lt;h1 id="gpg">GPG&lt;/h1>
 &lt;p>GPG 是由 由 PGP、OpenPGP 演化而來，屬於 GNU 計畫之一，主要功能是在不安全通道建立安全可信的通訊。為了建立安全可信，需要解決幾個問題：加密明文、驗證發送方、驗證接收方，以及為了解決前面三個問題而產生的新問題：信任。&lt;br>
 為了驗證發送方，發送方需要產生只有發送方能產生的簽章併附在內容後面。為了驗證接收方，要把內容用只有接收方才能解開的方式把內容保護起來，這同時可以做到加密明文。&lt;/p>
 &lt;p>GPG 中每個人都有一個鑰匙圈（keyring），就像你包包裡的鑰匙圈，GPG 的 keyring 也可以有不只一把金鑰。通常來說會是一把主金鑰和若干把的子金鑰，每一把都是非對稱金鑰對，也就是會有公鑰和私鑰（密鑰）。公鑰是需要公佈給其他人知道的（還要像辦法讓其他人「信任」），而私鑰是必須保護好，後面提到的 Yubikey 就是為了保護我們的私鑰，盡量讓他暴露的風險越低越好。&lt;/p>
@@ -2363,7 +2363,7 @@
 &lt;h3 id="gpg-with-ssh">GPG with SSH&lt;/h3>
 &lt;h3 id="簽章公鑰">簽章公鑰&lt;/h3>
 &lt;h2 id="發佈公鑰">發佈公鑰&lt;/h2>
-&lt;h1 id="yubikey">Yubikey&lt;/h1></description></item><item><title>GPG with SSH</title><link>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</guid><description>&lt;h1 id="gpg-with-ssh">GPG with SSH&lt;/h1>
+&lt;h1 id="yubikey">Yubikey&lt;/h1></description></item><item><title>GPG with SSH</title><link>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/gpg-with-ssh.png" alt="Featured image of post GPG with SSH" />&lt;h1 id="gpg-with-ssh">GPG with SSH&lt;/h1>
 &lt;p>接續前一篇 &lt;a class="link" href="https://blog.simbafs.cc/posts/linux/gpg/" >gpg 的文章&lt;/a>&lt;/p>
 &lt;h2 id="指紋-fingerprint">指紋 Fingerprint&lt;/h2>
 &lt;p>根據 &lt;a class="link" href="https://help.gnome.org/users/seahorse/stable/misc-key-fingerprint.html.en" target="_blank" rel="noopener"
@@ -2423,7 +2423,7 @@
 &lt;li>根據第三個參考網址 &lt;a class="link" href="https://gist.github.com/mcattarinussi/834fc4b641ff4572018d0c665e5a94d3#setup-the-gpg-agent-for-ssh-authentication" target="_blank" rel="noopener"
 >setup-the-gpg-agent-for-ssh-authentication&lt;/a> 章節設定 gpg-agent&lt;/li>
 &lt;/ol>
-&lt;p>這時後重新開啟終端機就可以用 gpg 取代原本的 ssh key 了，確認移除 ssh key 真的還可以登入後就可以把舊的 ssh key 收起來了。&lt;/p></description></item><item><title>Yubikey</title><link>https://blog.simbafs.cc/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/yubikey/</guid><description>&lt;h1 id="yubikey">Yubikey&lt;/h1>
+&lt;p>這時後重新開啟終端機就可以用 gpg 取代原本的 ssh key 了，確認移除 ssh key 真的還可以登入後就可以把舊的 ssh key 收起來了。&lt;/p></description></item><item><title>Yubikey</title><link>https://blog.simbafs.cc/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/yubikey/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/yubikey.png" alt="Featured image of post Yubikey" />&lt;h1 id="yubikey">Yubikey&lt;/h1>
 &lt;p>感謝煥杰賣我一個 1200，撿到寶啦！我買的是 &lt;a class="link" href="https://www.yubico.com/tw/product/yubikey-5c-nfc/" target="_blank" rel="noopener"
 >Yubikey 5C NFC&lt;/a>，看起來幾乎所有功能都有&lt;/p>
 &lt;h2 id="login">login&lt;/h2>
@@ -2604,7 +2604,7 @@
 &lt;blockquote>
 &lt;p>根據 &lt;a class="link" href="https://developers.yubico.com/yubikey-piv-manager/PIN_and_Management_Key.html" target="_blank" rel="noopener"
 >這篇文章&lt;/a>，似乎還有其他密碼們，上面介紹的都是屬於 PIV（Personal Identity Verification），還有 OpenPGP、FIDO2 的 PIN&lt;/p>
-&lt;/blockquote></description></item><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</guid><description>&lt;h1 id="gitea">Gitea&lt;/h1>
+&lt;/blockquote></description></item><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/server/ssh-on-gitea-with-docker.png" alt="Featured image of post ssh on gitea with docker" />&lt;h1 id="gitea">Gitea&lt;/h1>
 &lt;p>&lt;a class="link" href="https://gitea.io" target="_blank" rel="noopener"
 >Gitea&lt;/a> 是一個開源的 git 伺服器，他的界面幾乎和 &lt;a class="link" href="https://github.com" target="_blank" rel="noopener"
 >GitHub&lt;/a> 一模一樣，但是完全開源而且非常輕，甚至一片樹梅派就可以開伺服器了。Gitea 因為是使用 &lt;a class="link" href="https://golang.org/" target="_blank" rel="noopener"
@@ -2726,7 +2726,7 @@
 &lt;p>&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
 >https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough&lt;/a>&lt;br>
 &lt;a class="link" href="https://asaba.sakuragawa.moe/2018/06/%E6%93%BA%E8%84%AB%E6%8E%A7%E5%88%B6%EF%BC%8C%E7%94%A8-docker-%E8%87%AA%E5%BB%BA-gitea-gogs-%E7%B7%9A%E4%B8%8A%E4%BB%A3%E7%A2%BC%E5%8D%94%E4%BD%9C%E5%B9%B3%E8%87%BA/" target="_blank" rel="noopener"
->https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://blog.simbafs.cc/p/linux/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ssh-tunnel/</guid><description>&lt;h1 id="ssh-tunnel">SSH Tunnel&lt;/h1>
+>https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://blog.simbafs.cc/p/linux/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ssh-tunnel/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/ssh-tunnel.png" alt="Featured image of post SSH Tunnel" />&lt;h1 id="ssh-tunnel">SSH Tunnel&lt;/h1>
 &lt;p>昨天架好了 reverse ssh 讓我可以連回學校 server
 今天來研究 ssh tunnel&lt;/p>
 &lt;h2 id="簡介">簡介&lt;/h2>
@@ -2793,7 +2793,7 @@
 如果是 -R 那前面就是 remote port&lt;/p>
 &lt;h2 id="參考連結">參考連結&lt;/h2>
 &lt;p>&lt;a class="link" href="https://johnliu55.tw/ssh-tunnel.html" target="_blank" rel="noopener"
->https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://blog.simbafs.cc/p/linux/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/reverse-ssh/</guid><description>&lt;h1 id="reverse-ssh">Reverse SSH&lt;/h1>
+>https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://blog.simbafs.cc/p/linux/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/reverse-ssh/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/reverse-ssh.png" alt="Featured image of post Reverse SSH" />&lt;h1 id="reverse-ssh">Reverse SSH&lt;/h1>
 &lt;p>一直以來連線回社辦的電腦都要走 webtty 再開 tmate
 但是今天發現了一個新的方法可以透過反向的 ssh 連回社辦&lt;/p>
 &lt;h2 id="reverse-ssh-1">reverse ssh&lt;/h2>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>database on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/database/</link><description>Recent content in database on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/database/index.xml" rel="self" type="application/rss+xml"/><item><title>Strapi Quick Start</title><link>https://blog.simbafs.cc/p/js/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/strapi-quick-start/</guid><description>&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>database on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/database/</link><description>Recent content in database on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/database/index.xml" rel="self" type="application/rss+xml"/><item><title>Strapi Quick Start</title><link>https://blog.simbafs.cc/p/js/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/strapi-quick-start/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/strapi-quick-start.png" alt="Featured image of post Strapi Quick Start" />&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
 &lt;h2 id="strapi">strapi&lt;/h2>
 &lt;h2 id="什麼是-headless-cms">什麼是 headless CMS&lt;/h2>
 &lt;p>headless CMS 顧名思義是「無頭的 內容管理系統」，意思是沒有前端、只有後端，它就是一個 DB 的 web 界面 + api server。headless CMS 專注於處理 api 的部份，前端的部份一律不關心。這對於前後端分離有很大的幫助，基本上 headless CMS 已經解決了後端 80% 的工作，剩下的就是一些客製化的邏輯，像是登入、特殊的計算等等。&lt;/p>
@@ -34,7 +34,7 @@ MongoDB &amp;gt;= 3.6&lt;/p>
 &lt;li>建立 &lt;code>collection type&lt;/code>&lt;br>
 如果你按照官網的說法，這裡又會讓你很困惑，&lt;code>+ Create new collection type&lt;/code> 按鈕到底它ㄇ的在哪？其實只要在開啟伺服器時用 develop mode 開就可以了，這個重要要的東西它又沒寫了，把你的 server 關掉，下 &lt;code>npm run develop&lt;/code> 然後再去剛剛的頁面，重新整理就可以看到那個調皮的按鈕了。&lt;/li>
 &lt;/ol>
-&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item><item><title>Mongoose Model</title><link>https://blog.simbafs.cc/p/js/mongoose-model/</link><pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/mongoose-model/</guid><description>&lt;h1 id="mongoose-model">Mongoose Model&lt;/h1>
+&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item><item><title>Mongoose Model</title><link>https://blog.simbafs.cc/p/js/mongoose-model/</link><pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/mongoose-model/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/Mongoose-Model.png" alt="Featured image of post Mongoose Model" />&lt;h1 id="mongoose-model">Mongoose Model&lt;/h1>
 &lt;h2 id="環境設定">環境設定&lt;/h2>
 &lt;p>這是這次實驗用的 code&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -105,7 +105,7 @@ MongoDB &amp;gt;= 3.6&lt;/p>
 &lt;/div>&lt;h2 id="取得原-schema">取得原 schema&lt;/h2>
 &lt;p>在一般操作的時候都是用 &lt;code>UserModel&lt;/code> 在操作資料庫，當要取得 schema 的時候當然也是從他裡面找最方便，當然也可以把 schema 特別弄出來，但是有點麻煩，以這次的例子說明，原本的 &lt;code>UserSchema&lt;/code> 會存在 &lt;code>UserModel.schema.obj&lt;/code> 裡。&lt;/p>
 &lt;h2 id="真實資料庫結構">真實資料庫結構&lt;/h2>
-&lt;p>在建立 model 後 mongoose 會自動新增一些欄位，例如說 &lt;code>_id&lt;/code> 之類的，要取得包含這些欄位的真實 model 結構的話可以在 &lt;code>UserModel.schema.tree&lt;/code> 找到&lt;/p></description></item><item><title>sqlite3</title><link>https://blog.simbafs.cc/p/js/sqlite/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/sqlite/</guid><description>&lt;h1 id="sqlite3">sqlite3&lt;/h1>
+&lt;p>在建立 model 後 mongoose 會自動新增一些欄位，例如說 &lt;code>_id&lt;/code> 之類的，要取得包含這些欄位的真實 model 結構的話可以在 &lt;code>UserModel.schema.tree&lt;/code> 找到&lt;/p></description></item><item><title>sqlite3</title><link>https://blog.simbafs.cc/p/js/sqlite/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/sqlite/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/sqlite.png" alt="Featured image of post sqlite3" />&lt;h1 id="sqlite3">sqlite3&lt;/h1>
 &lt;p>昨天是試著去理解 sqlite3，我發現他的 callback function 真的太煩了
 於是我試著去尋找 async 的版本，還真找到了
 這個套件把整個 sqlite 包成 async 了&lt;/p>

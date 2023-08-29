@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/linux/</link><description>Recent content in linux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 18 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>OCR Add PDF Text Layer</title><link>https://blog.simbafs.cc/p/linux/ocr-add-pdf-layer/</link><pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ocr-add-pdf-layer/</guid><description>&lt;h1 id="ocr-add-pdf-text-layer">OCR Add PDF Text Layer&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/linux/</link><description>Recent content in linux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 18 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>OCR Add PDF Text Layer</title><link>https://blog.simbafs.cc/p/linux/ocr-add-pdf-layer/</link><pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ocr-add-pdf-layer/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/ocr-add-pdf-layer.png" alt="Featured image of post OCR Add PDF Text Layer" />&lt;h1 id="ocr-add-pdf-text-layer">OCR Add PDF Text Layer&lt;/h1>
 &lt;p>眾所周知大學課本又厚又重，而且還不便宜，所以這時候如果有電子書就可以很大程度解決這個問題。但是有時候拿到的電子書是掃描的圖片（來源就&amp;hellip;&amp;hellip;咳咳），不能複製、按右鍵翻譯。這時候就可以出動光學字元辨識，幫我們把圖片轉成文字，而且順便把字放在 PDF 的文字圖層上，這樣就可以看著掃描的書，又可以選取到原本不能選取的文字。&lt;/p>
 &lt;h2 id="tesseract">tesseract&lt;/h2>
 &lt;p>我之前試過幾個線上 OCR，但都是付費功能，但這個東西不是什麼前沿技術，理論上應該不需要太強的電腦效能，於是我就想試著自己跑在我的電腦上。我首先找到的是 &lt;a class="link" href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="noopener"
@@ -26,7 +26,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>安裝好後給來源路徑、輸出路徑，然後等一會就好了，我用我的力學課本第 12 章做測試，44 頁的文字 46 秒完成，打開後內容幾乎沒錯，超棒！&lt;/p>
-&lt;p>等等就把整本課本都丟進去 &amp;gt;&amp;lt;&lt;/p></description></item><item><title>Build Aseprite</title><link>https://blog.simbafs.cc/p/linux/build-aseprite/</link><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/build-aseprite/</guid><description>&lt;h1 id="build-aseprite">Build Aseprite&lt;/h1>
+&lt;p>等等就把整本課本都丟進去 &amp;gt;&amp;lt;&lt;/p></description></item><item><title>Build Aseprite</title><link>https://blog.simbafs.cc/p/linux/build-aseprite/</link><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/build-aseprite/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/build-aseprite.png" alt="Featured image of post Build Aseprite" />&lt;h1 id="build-aseprite">Build Aseprite&lt;/h1>
 &lt;p>Aseprite 是一個跨平台的像素畫編輯器，反正看起來很棒，但是官網和 itch.io 買 19.99 美金，steam 賣三百多元，為了省這個錢決定自己編譯，原始碼在 &lt;a class="link" href="https://github.com/aseprite/aseprite" target="_blank" rel="noopener"
 >https://github.com/aseprite/aseprite&lt;/a>，而且官方有一個很詳細的&lt;a class="link" href="https://github.com/aseprite/aseprite/blob/main/INSTALL.md" target="_blank" rel="noopener"
 >編譯說明&lt;/a>&lt;/p>
@@ -129,7 +129,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Type=Application
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>GPG and Yubikey</title><link>https://blog.simbafs.cc/p/linux/gpg-yubikey/</link><pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-yubikey/</guid><description>&lt;h1 id="gpg">GPG&lt;/h1>
+&lt;/div></description></item><item><title>GPG and Yubikey</title><link>https://blog.simbafs.cc/p/linux/gpg-yubikey/</link><pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-yubikey/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/gpg-yubikey.png" alt="Featured image of post GPG and Yubikey" />&lt;h1 id="gpg">GPG&lt;/h1>
 &lt;p>GPG 是由 由 PGP、OpenPGP 演化而來，屬於 GNU 計畫之一，主要功能是在不安全通道建立安全可信的通訊。為了建立安全可信，需要解決幾個問題：加密明文、驗證發送方、驗證接收方，以及為了解決前面三個問題而產生的新問題：信任。&lt;br>
 為了驗證發送方，發送方需要產生只有發送方能產生的簽章併附在內容後面。為了驗證接收方，要把內容用只有接收方才能解開的方式把內容保護起來，這同時可以做到加密明文。&lt;/p>
 &lt;p>GPG 中每個人都有一個鑰匙圈（keyring），就像你包包裡的鑰匙圈，GPG 的 keyring 也可以有不只一把金鑰。通常來說會是一把主金鑰和若干把的子金鑰，每一把都是非對稱金鑰對，也就是會有公鑰和私鑰（密鑰）。公鑰是需要公佈給其他人知道的（還要像辦法讓其他人「信任」），而私鑰是必須保護好，後面提到的 Yubikey 就是為了保護我們的私鑰，盡量讓他暴露的風險越低越好。&lt;/p>
@@ -306,7 +306,7 @@
 &lt;h3 id="gpg-with-ssh">GPG with SSH&lt;/h3>
 &lt;h3 id="簽章公鑰">簽章公鑰&lt;/h3>
 &lt;h2 id="發佈公鑰">發佈公鑰&lt;/h2>
-&lt;h1 id="yubikey">Yubikey&lt;/h1></description></item><item><title>GPG with SSH</title><link>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</guid><description>&lt;h1 id="gpg-with-ssh">GPG with SSH&lt;/h1>
+&lt;h1 id="yubikey">Yubikey&lt;/h1></description></item><item><title>GPG with SSH</title><link>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/gpg-with-ssh.png" alt="Featured image of post GPG with SSH" />&lt;h1 id="gpg-with-ssh">GPG with SSH&lt;/h1>
 &lt;p>接續前一篇 &lt;a class="link" href="https://blog.simbafs.cc/posts/linux/gpg/" >gpg 的文章&lt;/a>&lt;/p>
 &lt;h2 id="指紋-fingerprint">指紋 Fingerprint&lt;/h2>
 &lt;p>根據 &lt;a class="link" href="https://help.gnome.org/users/seahorse/stable/misc-key-fingerprint.html.en" target="_blank" rel="noopener"
@@ -366,7 +366,7 @@
 &lt;li>根據第三個參考網址 &lt;a class="link" href="https://gist.github.com/mcattarinussi/834fc4b641ff4572018d0c665e5a94d3#setup-the-gpg-agent-for-ssh-authentication" target="_blank" rel="noopener"
 >setup-the-gpg-agent-for-ssh-authentication&lt;/a> 章節設定 gpg-agent&lt;/li>
 &lt;/ol>
-&lt;p>這時後重新開啟終端機就可以用 gpg 取代原本的 ssh key 了，確認移除 ssh key 真的還可以登入後就可以把舊的 ssh key 收起來了。&lt;/p></description></item><item><title>Mastodon</title><link>https://blog.simbafs.cc/p/linux/mastodon/</link><pubDate>Thu, 24 Nov 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/mastodon/</guid><description>&lt;h1 id="mastodon">Mastodon&lt;/h1>
+&lt;p>這時後重新開啟終端機就可以用 gpg 取代原本的 ssh key 了，確認移除 ssh key 真的還可以登入後就可以把舊的 ssh key 收起來了。&lt;/p></description></item><item><title>Mastodon</title><link>https://blog.simbafs.cc/p/linux/mastodon/</link><pubDate>Thu, 24 Nov 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/mastodon/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/mastodon.png" alt="Featured image of post Mastodon" />&lt;h1 id="mastodon">Mastodon&lt;/h1>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -382,7 +382,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;a class="link" href="https://github.com/mastodon/mastodon/issues/3676#issuecomment-307500074" target="_blank" rel="noopener"
->https://github.com/mastodon/mastodon/issues/3676#issuecomment-307500074&lt;/a>&lt;/p></description></item><item><title>Openssl DES</title><link>https://blog.simbafs.cc/p/linux/openssl-des/</link><pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/openssl-des/</guid><description>&lt;h1 id="openssl-des">openssl DES&lt;/h1>
+>https://github.com/mastodon/mastodon/issues/3676#issuecomment-307500074&lt;/a>&lt;/p></description></item><item><title>Openssl DES</title><link>https://blog.simbafs.cc/p/linux/openssl-des/</link><pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/openssl-des/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/openssl-DES.png" alt="Featured image of post Openssl DES" />&lt;h1 id="openssl-des">openssl DES&lt;/h1>
 &lt;h2 id="加密">加密&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -439,7 +439,7 @@
 >https://wiki.openssl.org/index.php/Enc&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/openssl/openssl/issues/12906" target="_blank" rel="noopener"
 >https://github.com/openssl/openssl/issues/12906&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Yubikey</title><link>https://blog.simbafs.cc/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/yubikey/</guid><description>&lt;h1 id="yubikey">Yubikey&lt;/h1>
+&lt;/ul></description></item><item><title>Yubikey</title><link>https://blog.simbafs.cc/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/yubikey/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/yubikey.png" alt="Featured image of post Yubikey" />&lt;h1 id="yubikey">Yubikey&lt;/h1>
 &lt;p>感謝煥杰賣我一個 1200，撿到寶啦！我買的是 &lt;a class="link" href="https://www.yubico.com/tw/product/yubikey-5c-nfc/" target="_blank" rel="noopener"
 >Yubikey 5C NFC&lt;/a>，看起來幾乎所有功能都有&lt;/p>
 &lt;h2 id="login">login&lt;/h2>
@@ -620,7 +620,7 @@
 &lt;blockquote>
 &lt;p>根據 &lt;a class="link" href="https://developers.yubico.com/yubikey-piv-manager/PIN_and_Management_Key.html" target="_blank" rel="noopener"
 >這篇文章&lt;/a>，似乎還有其他密碼們，上面介紹的都是屬於 PIV（Personal Identity Verification），還有 OpenPGP、FIDO2 的 PIN&lt;/p>
-&lt;/blockquote></description></item><item><title>Anbox</title><link>https://blog.simbafs.cc/p/linux/anbox/</link><pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/anbox/</guid><description>&lt;h1 id="anbox">Anbox&lt;/h1>
+&lt;/blockquote></description></item><item><title>Anbox</title><link>https://blog.simbafs.cc/p/linux/anbox/</link><pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/anbox/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/anbox.png" alt="Featured image of post Anbox" />&lt;h1 id="anbox">Anbox&lt;/h1>
 &lt;p>&lt;a class="link" href="https://anbox.io/" target="_blank" rel="noopener"
 >anbox&lt;/a> 是 Android in a box，是一種基於容器化技術的 Android 模擬器，所以執行速度會比較快、比較省資源，而且因為每個 App 都在各自的容器裡面，所以比較安全
 （應該沒理解錯吧？）。&lt;br>
@@ -736,12 +736,12 @@
 >https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="問遺">問遺&lt;/h2>
-&lt;p>目前裝好 APP 但是我打不開&lt;/p></description></item><item><title>Ibus Font</title><link>https://blog.simbafs.cc/p/linux/ibus-font/</link><pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ibus-font/</guid><description>&lt;h1 id="ibus-font">Ibus Font&lt;/h1>
+&lt;p>目前裝好 APP 但是我打不開&lt;/p></description></item><item><title>Ibus Font</title><link>https://blog.simbafs.cc/p/linux/ibus-font/</link><pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ibus-font/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/ibus-font.png" alt="Featured image of post Ibus Font" />&lt;h1 id="ibus-font">Ibus Font&lt;/h1>
 &lt;p>最近在打字時總覺得中文選字的時候 ibus 字體好小，於是就開始查怎麼弄&lt;/p>
 &lt;p>經過搜尋後，找到 &lt;a class="link" href="https://askubuntu.com/questions/1030442/how-to-increase-font-size-of-preview-options-when-using-an-input-method" target="_blank" rel="noopener"
 >https://askubuntu.com/questions/1030442/how-to-increase-font-size-of-preview-options-when-using-an-input-method&lt;/a> 這個網頁，總而言之就是先去裝 &lt;a class="link" href="https://extensions.gnome.org/extension/1121/ibus-font-setting/" target="_blank" rel="noopener"
 >ibus font setting&lt;/a> 這個外掛，然後就可以用 &lt;code>ibus-setup&lt;/code> 調整了&lt;br>
-照做之後的確可以調大小字體，但我不知道是不是因為裝了這個外掛的關係，反正我是成功改好了&lt;/p></description></item><item><title>kdeconnect</title><link>https://blog.simbafs.cc/p/linux/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/kdeconnect/</guid><description>&lt;h1 id="kdeconnect">kdeconnect&lt;/h1>
+照做之後的確可以調大小字體，但我不知道是不是因為裝了這個外掛的關係，反正我是成功改好了&lt;/p></description></item><item><title>kdeconnect</title><link>https://blog.simbafs.cc/p/linux/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/kdeconnect/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/kdeconnect.png" alt="Featured image of post kdeconnect" />&lt;h1 id="kdeconnect">kdeconnect&lt;/h1>
 &lt;p>kdeconnect 顧名思義是 kde 出的一款 connect 軟體，功能非常多而且方便。電腦和手機都安裝好軟體後，只要在同一個網域就可以配對連接&lt;/p>
 &lt;h2 id="功能介紹">功能介紹&lt;/h2>
 &lt;ol>
@@ -772,7 +772,7 @@
 &lt;td style="text-align:left">&lt;code>loginctl unlock-session&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Bluetooth 突然卡住都不動</title><link>https://blog.simbafs.cc/p/linux/bluwtooth-error/</link><pubDate>Wed, 02 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/bluwtooth-error/</guid><description>&lt;h1 id="bluetooth-突然卡住都不動">Bluetooth 突然卡住都不動&lt;/h1>
+&lt;/table></description></item><item><title>Bluetooth 突然卡住都不動</title><link>https://blog.simbafs.cc/p/linux/bluwtooth-error/</link><pubDate>Wed, 02 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/bluwtooth-error/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/bluetooth-error.png" alt="Featured image of post Bluetooth 突然卡住都不動" />&lt;h1 id="bluetooth-突然卡住都不動">Bluetooth 突然卡住都不動&lt;/h1>
 &lt;p>裝了 Ubuntu 20.04 之後不知道為什麼藍芽用一用就會卡住，所有設備都連不上，也關不掉。一開始的解決方式是重開機（這時候關機會跳一個奇怪的錯誤訊息），但是覺得太沒效率了，上網查了一下。&lt;/p>
 &lt;h2 id="原因">原因&lt;/h2>
 &lt;p>根據 &lt;a class="link" href="https://bugs.launchpad.net/ubuntu/&amp;#43;source/linux/&amp;#43;bug/1859592" target="_blank" rel="noopener"
@@ -791,7 +791,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo modprobe btusb
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>這樣藍芽就回來了。這兩個指令簡單來說就是重新載入藍芽模組，這就是為什麼重開機可以解決（重開機就是重新載入所有模組）&lt;/p></description></item><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</guid><description>&lt;h1 id="cast-phone-screen-to-computer">Cast Phone Screen to Computer&lt;/h1>
+&lt;/div>&lt;p>這樣藍芽就回來了。這兩個指令簡單來說就是重新載入藍芽模組，這就是為什麼重開機可以解決（重開機就是重新載入所有模組）&lt;/p></description></item><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/cast-phone-screen-to-computer.png" alt="Featured image of post Cast Phone Screen to Computer" />&lt;h1 id="cast-phone-screen-to-computer">Cast Phone Screen to Computer&lt;/h1>
 &lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
 &lt;h2 id="scrcpy">SCRCPY&lt;/h2>
 &lt;p>這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。&lt;/p>
@@ -828,12 +828,12 @@
 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options" target="_blank" rel="noopener"
 >https://developer.android.com/studio/debug/dev-options&lt;/a>
 &lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
->https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20&lt;/a>&lt;/p></description></item><item><title>Firefox Touch Screen Scroll</title><link>https://blog.simbafs.cc/p/linux/firefox-touch-screen-scroll/</link><pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/firefox-touch-screen-scroll/</guid><description>&lt;h1 id="firefox-touch-screen-scroll">Firefox Touch Screen Scroll&lt;/h1>
+>https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20&lt;/a>&lt;/p></description></item><item><title>Firefox Touch Screen Scroll</title><link>https://blog.simbafs.cc/p/linux/firefox-touch-screen-scroll/</link><pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/firefox-touch-screen-scroll/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/firefox-touch-screen-scroll.png" alt="Featured image of post Firefox Touch Screen Scroll" />&lt;h1 id="firefox-touch-screen-scroll">Firefox Touch Screen Scroll&lt;/h1>
 &lt;p>再換了觸控筆電後，在 firefox 一直有個問題：觸控往下滑會被當成選取，要卷動一定要用右邊的 scroll bar&lt;/p>
 &lt;h2 id="解決方案">解決方案&lt;/h2>
 &lt;p>按照 &lt;a class="link" href="https://askubuntu.com/questions/853910/ubuntu-16-and-touchscreen-scrolling-in-firefox" target="_blank" rel="noopener"
 >https://askubuntu.com/questions/853910/ubuntu-16-and-touchscreen-scrolling-in-firefox&lt;/a> 的最佳解法，真的加上 &lt;code>MOZ_USE_XINPUT2=1&lt;/code> 的環境變數就可以了。&lt;br>
-另外在設定 &lt;code>~/.local/share/applications/firefox.desktop&lt;/code> 的時候要注意有不只一個 Exec，改完如果沒有生效可以重開機看看。&lt;/p></description></item><item><title>Logitech Mouse Permission Error</title><link>https://blog.simbafs.cc/p/linux/logitech-mouse-permission-error/</link><pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/logitech-mouse-permission-error/</guid><description>&lt;h1 id="logitech-mouse-permission-error">Logitech Mouse Permission Error&lt;/h1>
+另外在設定 &lt;code>~/.local/share/applications/firefox.desktop&lt;/code> 的時候要注意有不只一個 Exec，改完如果沒有生效可以重開機看看。&lt;/p></description></item><item><title>Logitech Mouse Permission Error</title><link>https://blog.simbafs.cc/p/linux/logitech-mouse-permission-error/</link><pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/logitech-mouse-permission-error/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/logitech-mouse-permission-error.png" alt="Featured image of post Logitech Mouse Permission Error" />&lt;h1 id="logitech-mouse-permission-error">Logitech Mouse Permission Error&lt;/h1>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>我的無線華和滑鼠和鍵盤都是羅技的，在我的 Ubuntu 筆電上一直都沒有問題。有一次我想改我的鍵盤被配置，但是因為 logitech unifying 沒有 Linux 版，所以我另一個軟體叫 solaar，功能是差不多的。
 當我裝好軟體以後，鍵盤滑鼠操作都沒問題，只有插上滑鼠的接收器以後都對跳出一個 permission error 的錯誤視窗。雖然在 solaar 裡面就無法看到我的滑鼠就是了，但是完全不影響使用，所以我就擺在那邊放它爛，反正就是多按一個叉叉。&lt;/p>
@@ -862,7 +862,7 @@
 &lt;p>我猜這個方法會失敗應該是因為他在我改之前就已經先跳錯誤了，等我改完它右沒有偵測，我就得把它拔下來在插上去，我又會看到錯誤訊息&amp;hellip;&amp;hellip; (looping&lt;br>
 於是我上網找答案&lt;/p>
 &lt;h2 id="網路上的解">網路上的解&lt;/h2>
-&lt;p>我 Google &lt;code>ubuntu logitech permission error&lt;/code> 第一個就是我要的！&lt;/p></description></item><item><title>Libreoffice Code Format Plugin Installation</title><link>https://blog.simbafs.cc/p/linux/libreoffice-code-format-plugin-install/</link><pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/libreoffice-code-format-plugin-install/</guid><description>&lt;h1 id="安裝">安裝&lt;/h1>
+&lt;p>我 Google &lt;code>ubuntu logitech permission error&lt;/code> 第一個就是我要的！&lt;/p></description></item><item><title>Libreoffice Code Format Plugin Installation</title><link>https://blog.simbafs.cc/p/linux/libreoffice-code-format-plugin-install/</link><pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/libreoffice-code-format-plugin-install/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/libreoffice-code-format-plugin-install.png" alt="Featured image of post Libreoffice Code Format Plugin Installation" />&lt;h1 id="安裝">安裝&lt;/h1>
 &lt;ol>
 &lt;li>去 &lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
 >https://extensions.libreoffice.org/en/extensions/show/code-highlighter&lt;/a> 下載最新的外掛&lt;/li>
@@ -909,7 +909,7 @@
 &lt;p>&lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
 >Libreoffice extensions&lt;/a>
 &lt;a class="link" href="https://github.com/slgobinath/libreoffice-code-highlighter/issues/29#issuecomment-635216707" target="_blank" rel="noopener"
->issue&lt;/a>&lt;/p></description></item><item><title>Mxlinux Boot with Systemd</title><link>https://blog.simbafs.cc/p/linux/mxlinux-boot-with-systemd/</link><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/mxlinux-boot-with-systemd/</guid><description>&lt;h1 id="mxlinux-boot-with-systemd">Mxlinux Boot with Systemd&lt;/h1>
+>issue&lt;/a>&lt;/p></description></item><item><title>Mxlinux Boot with Systemd</title><link>https://blog.simbafs.cc/p/linux/mxlinux-boot-with-systemd/</link><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/mxlinux-boot-with-systemd/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/mxlinux-boot-with-systemd.png" alt="Featured image of post Mxlinux Boot with Systemd" />&lt;h1 id="mxlinux-boot-with-systemd">Mxlinux Boot with Systemd&lt;/h1>
 &lt;h2 id="問題">問題&lt;/h2>
 &lt;p>在 mxlinux 裡面，預設的 init 不是 systmed，這導致如果想用 systemctl 的時候就會跳出錯誤說&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -922,7 +922,7 @@
 &lt;/div>
 &lt;/div>&lt;p>像是在安裝 &lt;code>mongodb-org&lt;/code> 的時候他就要用到 &lt;code>systemctl&lt;/code> 然後就會出錯。&lt;/p>
 &lt;h2 id="解法">解法&lt;/h2>
-&lt;p>其實 mxlinux 已經幫我們想好解法了，在開機選項時選 &lt;code>Advence&lt;/code> &amp;gt; &lt;code>Systemd&lt;/code> 就會以 systemd 開機&lt;/p></description></item><item><title>Mxlinux Change Workspace</title><link>https://blog.simbafs.cc/p/linux/mxlinux-change-workspace/</link><pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/mxlinux-change-workspace/</guid><description>&lt;h1 id="mxlinux-change-workspace">Mxlinux Change Workspace&lt;/h1>
+&lt;p>其實 mxlinux 已經幫我們想好解法了，在開機選項時選 &lt;code>Advence&lt;/code> &amp;gt; &lt;code>Systemd&lt;/code> 就會以 systemd 開機&lt;/p></description></item><item><title>Mxlinux Change Workspace</title><link>https://blog.simbafs.cc/p/linux/mxlinux-change-workspace/</link><pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/mxlinux-change-workspace/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/mxlinux-change-workspace.png" alt="Featured image of post Mxlinux Change Workspace" />&lt;h1 id="mxlinux-change-workspace">Mxlinux Change Workspace&lt;/h1>
 &lt;h2 id="切換工作區">切換工作區&lt;/h2>
 &lt;p>今天想要在 mxlinux 中快速的切換工作區
 我看到可以用滑鼠滾輪切換
@@ -931,7 +931,7 @@
 發現可以透過 &lt;code>Ctrl&lt;/code>+&lt;code>Alt&lt;/code>+&lt;code>up/down/home/end&lt;/code> 來切換&lt;/p>
 &lt;h2 id="參考資料">參考資料&lt;/h2>
 &lt;p>&lt;a class="link" href="https://unix.stackexchange.com/questions/270334/how-to-move-a-window-to-another-workspace-in-xfce" target="_blank" rel="noopener"
->https://unix.stackexchange.com/questions/270334/how-to-move-a-window-to-another-workspace-in-xfce&lt;/a>&lt;/p></description></item><item><title>GPG</title><link>https://blog.simbafs.cc/p/linux/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg/</guid><description>&lt;h1 id="gpg">GPG&lt;/h1>
+>https://unix.stackexchange.com/questions/270334/how-to-move-a-window-to-another-workspace-in-xfce&lt;/a>&lt;/p></description></item><item><title>GPG</title><link>https://blog.simbafs.cc/p/linux/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/gpg.png" alt="Featured image of post GPG" />&lt;h1 id="gpg">GPG&lt;/h1>
 &lt;h2 id="sign-git-commit-with-gpg">sign git commit with gpg&lt;/h2>
 &lt;p>我按照他的作法弄完後就是沒辦法 commit
 他說 GPG 無法簽章
@@ -981,7 +981,7 @@ name 和 git 設定的一樣&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gpg --delete-key &amp;lt;ID&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>isolate</title><link>https://blog.simbafs.cc/p/linux/isolate/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/isolate/</guid><description>&lt;h1 id="isolate">isolate&lt;/h1>
+&lt;/div></description></item><item><title>isolate</title><link>https://blog.simbafs.cc/p/linux/isolate/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/isolate/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/isolate.png" alt="Featured image of post isolate" />&lt;h1 id="isolate">isolate&lt;/h1>
 &lt;p>我有一個放了很久的計畫，就是自己寫一個 OJ，因為我覺得現在的那個太難用了。
 我很快的建立 repo 但是卻完全沒有進展，我寫了一個 shell script 幫忙編譯執行程式之後我就在也沒有動過他了
 我沒有繼續動工的原因是我不知道如何隔離使用者提交的程式碼
@@ -1052,12 +1052,12 @@ hello.sh&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>他最後會輸出執行時間和執行成功的訊息
-其他的內容等等再補&lt;/p></description></item><item><title>youtube-dl</title><link>https://blog.simbafs.cc/p/linux/youtube-dl/</link><pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/youtube-dl/</guid><description>&lt;h1 id="youtube-dl">Youtube DL&lt;/h1>
+其他的內容等等再補&lt;/p></description></item><item><title>youtube-dl</title><link>https://blog.simbafs.cc/p/linux/youtube-dl/</link><pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/youtube-dl/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/youtube-dl.png" alt="Featured image of post youtube-dl" />&lt;h1 id="youtube-dl">Youtube DL&lt;/h1>
 &lt;p>最近在下載 youtube 音樂，每次下載都要把檔案重新改名，很麻煩。所以就想要寫一個 shell script 來幫我解決。
 首先改名字我相信 youtube-dl 一定有提供這個選項，於是開始查文件。
 看到 &lt;code>-o&lt;/code> ，接下來講遇到的坑&lt;/p>
 &lt;h2 id="-o-坑">&lt;code>-o&lt;/code> 坑&lt;/h2>
-&lt;p>&lt;code>-o&lt;/code> 後面接的是一個 template string ，不是檔名，而且就算指定副檔名是 .mp3 了還是要寫成 &lt;code>%(ext)s&lt;/code>&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://blog.simbafs.cc/p/linux/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ssh-tunnel/</guid><description>&lt;h1 id="ssh-tunnel">SSH Tunnel&lt;/h1>
+&lt;p>&lt;code>-o&lt;/code> 後面接的是一個 template string ，不是檔名，而且就算指定副檔名是 .mp3 了還是要寫成 &lt;code>%(ext)s&lt;/code>&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://blog.simbafs.cc/p/linux/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ssh-tunnel/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/ssh-tunnel.png" alt="Featured image of post SSH Tunnel" />&lt;h1 id="ssh-tunnel">SSH Tunnel&lt;/h1>
 &lt;p>昨天架好了 reverse ssh 讓我可以連回學校 server
 今天來研究 ssh tunnel&lt;/p>
 &lt;h2 id="簡介">簡介&lt;/h2>
@@ -1124,7 +1124,7 @@ hello.sh&lt;/p>
 如果是 -R 那前面就是 remote port&lt;/p>
 &lt;h2 id="參考連結">參考連結&lt;/h2>
 &lt;p>&lt;a class="link" href="https://johnliu55.tw/ssh-tunnel.html" target="_blank" rel="noopener"
->https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://blog.simbafs.cc/p/linux/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/reverse-ssh/</guid><description>&lt;h1 id="reverse-ssh">Reverse SSH&lt;/h1>
+>https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://blog.simbafs.cc/p/linux/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/reverse-ssh/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/reverse-ssh.png" alt="Featured image of post Reverse SSH" />&lt;h1 id="reverse-ssh">Reverse SSH&lt;/h1>
 &lt;p>一直以來連線回社辦的電腦都要走 webtty 再開 tmate
 但是今天發現了一個新的方法可以透過反向的 ssh 連回社辦&lt;/p>
 &lt;h2 id="reverse-ssh-1">reverse ssh&lt;/h2>

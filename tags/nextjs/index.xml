@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nextjs on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/nextjs/</link><description>Recent content in nextjs on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/nextjs/index.xml" rel="self" type="application/rss+xml"/><item><title>PocketBase</title><link>https://blog.simbafs.cc/p/js/pocketbase/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/pocketbase/</guid><description>&lt;h1 id="pocketbase">PocketBase&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nextjs on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/nextjs/</link><description>Recent content in nextjs on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/nextjs/index.xml" rel="self" type="application/rss+xml"/><item><title>PocketBase</title><link>https://blog.simbafs.cc/p/js/pocketbase/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/pocketbase/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/pocketbase.png" alt="Featured image of post PocketBase" />&lt;h1 id="pocketbase">PocketBase&lt;/h1>
 &lt;p>&lt;a class="link" href="https://pocketbase.io/" target="_blank" rel="noopener"
 >PocketBase&lt;/a> 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的，因此可以編譯成一個單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結構、關聯、使用者驗證和權限控管等功能了&lt;/p>
 &lt;p>&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo.png"
@@ -605,7 +605,7 @@ alt="demo 3"
 &lt;img src="https://blog.simbafs.cc/images/pocketbase/demo4.png"
 loading="lazy"
 alt="demo 4"
->&lt;/p></description></item><item><title>Dockerfile Collection</title><link>https://blog.simbafs.cc/p/linux/docker/dockerfile-collection/</link><pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/dockerfile-collection/</guid><description>&lt;h1 id="dockerfile-collection">Dockerfile Collection&lt;/h1>
+>&lt;/p></description></item><item><title>Dockerfile Collection</title><link>https://blog.simbafs.cc/p/linux/docker/dockerfile-collection/</link><pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/dockerfile-collection/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/Dockerfile-collection.png" alt="Featured image of post Dockerfile Collection" />&lt;h1 id="dockerfile-collection">Dockerfile Collection&lt;/h1>
 &lt;h2 id="nextjs-with-pnpm">Nextjs with pnpm&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -664,7 +664,7 @@ alt="demo 4"
 &lt;/div>&lt;blockquote>
 &lt;p>modified from &lt;a class="link" href="https://pnpm.io/docker" target="_blank" rel="noopener"
 >https://pnpm.io/docker&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>File System</title><link>https://blog.simbafs.cc/p/js/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/nextjs/fs/</guid><description>&lt;h1 id="file-system">File System&lt;/h1>
+&lt;/blockquote></description></item><item><title>File System</title><link>https://blog.simbafs.cc/p/js/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/nextjs/fs/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/nextjs/fs.png" alt="Featured image of post File System" />&lt;h1 id="file-system">File System&lt;/h1>
 &lt;h2 id="getstaticprops">getStaticProps&lt;/h2>
 &lt;p>不知道為什麼，&lt;code>getStaticProps&lt;/code> 裡面的 &lt;code>fs&lt;/code> 時有時無。&lt;a class="link" href="https://github.com/vercel/next.js/discussions/12124" target="_blank" rel="noopener"
 >這裡&lt;/a> 似乎有關於這個問題的回答，但無效&lt;/p>

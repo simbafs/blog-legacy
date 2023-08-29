@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sqlite on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/sqlite/</link><description>Recent content in sqlite on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/sqlite/index.xml" rel="self" type="application/rss+xml"/><item><title>PocketBase</title><link>https://blog.simbafs.cc/p/js/pocketbase/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/pocketbase/</guid><description>&lt;h1 id="pocketbase">PocketBase&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sqlite on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/sqlite/</link><description>Recent content in sqlite on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/sqlite/index.xml" rel="self" type="application/rss+xml"/><item><title>PocketBase</title><link>https://blog.simbafs.cc/p/js/pocketbase/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/pocketbase/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/pocketbase.png" alt="Featured image of post PocketBase" />&lt;h1 id="pocketbase">PocketBase&lt;/h1>
 &lt;p>&lt;a class="link" href="https://pocketbase.io/" target="_blank" rel="noopener"
 >PocketBase&lt;/a> 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的，因此可以編譯成一個單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結構、關聯、使用者驗證和權限控管等功能了&lt;/p>
 &lt;p>&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo.png"
@@ -605,7 +605,7 @@ alt="demo 3"
 &lt;img src="https://blog.simbafs.cc/images/pocketbase/demo4.png"
 loading="lazy"
 alt="demo 4"
->&lt;/p></description></item><item><title>sqlite3</title><link>https://blog.simbafs.cc/p/js/sqlite/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/sqlite/</guid><description>&lt;h1 id="sqlite3">sqlite3&lt;/h1>
+>&lt;/p></description></item><item><title>sqlite3</title><link>https://blog.simbafs.cc/p/js/sqlite/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/sqlite/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/sqlite.png" alt="Featured image of post sqlite3" />&lt;h1 id="sqlite3">sqlite3&lt;/h1>
 &lt;p>昨天是試著去理解 sqlite3，我發現他的 callback function 真的太煩了
 於是我試著去尋找 async 的版本，還真找到了
 這個套件把整個 sqlite 包成 async 了&lt;/p>

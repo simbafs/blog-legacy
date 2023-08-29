@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hexo on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/hexo/</link><description>Recent content in hexo on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 20 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/hexo/index.xml" rel="self" type="application/rss+xml"/><item><title>文章更新時間錯亂問題</title><link>https://blog.simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;h1 id="問題">問題&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hexo on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/hexo/</link><description>Recent content in hexo on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 20 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/hexo/index.xml" rel="self" type="application/rss+xml"/><item><title>文章更新時間錯亂問題</title><link>https://blog.simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C.png" alt="Featured image of post 文章更新時間錯亂問題" />&lt;h1 id="問題">問題&lt;/h1>
 &lt;p>在設定完 GitHub Action 之後，我發現我的文章的更新時間都錯了，會全部變成當天日期。但是本地生成的就沒有這個問題，經過一番盤查和猜測後，我發現問題是因為 git 不會把 modified date 紀錄，因為每台電腦的時區都是不一樣的，紀錄起來沒有意義。但是我們需要這項 meta data，所以我們就要自己想法紀錄&lt;/p>
 &lt;h1 id="解法-v10">解法 v1.0&lt;/h1>
 &lt;p>首先，因為每一篇文章 hexo 都會紀錄建立時間，所以我們可以直接把他抓出來，然後把檔案的更新時間設成這個時間就可以啦！&lt;/p>
@@ -300,7 +300,7 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>加入 google search 和 sitemap</title><link>https://blog.simbafs.cc/p/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</guid><description>&lt;h1 id="前置設定">前置設定&lt;/h1>
+&lt;/div></description></item><item><title>加入 google search 和 sitemap</title><link>https://blog.simbafs.cc/p/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap.png" alt="Featured image of post 加入 google search 和 sitemap" />&lt;h1 id="前置設定">前置設定&lt;/h1>
 &lt;h2 id="npm-安裝-hexo-generator-sitemap">npm 安裝 &lt;code>hexo-generator-sitemap&lt;/code>&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -379,7 +379,7 @@ loading="lazy"
 alt="sitemap"
 >&lt;/p>
 &lt;h1 id="google-analytics">Google analytics&lt;/h1>
-&lt;p>待新增&lt;/p></description></item><item><title>GitHub Action 自動部署 hexo</title><link>https://blog.simbafs.cc/p/hexo/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</link><pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;p>待新增&lt;/p></description></item><item><title>GitHub Action 自動部署 hexo</title><link>https://blog.simbafs.cc/p/hexo/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</link><pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/GitHub-Action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo.png" alt="Featured image of post GitHub Action 自動部署 hexo" />&lt;h1 id="前言">前言&lt;/h1>
 &lt;p>本來部署 hexo 都是手動下指令，但是這樣在手機上因為沒辦法裝 hexo ,所以一直不能在手機上寫文章。剛好想到 GitHub Action 可以滿足我的需求，上網查了一下資料發現蠻多人有和我一樣的需求，這次參考的是 &lt;a class="link" href="https://owlran.github.io/2020/04/26/hexo-blog-github-action/" target="_blank" rel="noopener"
 >owlran 大大的文章&lt;/a>。&lt;/p>
 &lt;h1 id="ssh-key">ssh key&lt;/h1>
@@ -549,7 +549,7 @@ alt="sitemap"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> hexo deploy&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>hexo-config</title><link>https://blog.simbafs.cc/p/hexo/hexo-config/</link><pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/hexo-config/</guid><description>&lt;h1 id="各種設定值嘗試">各種設定值嘗試&lt;/h1>
+&lt;/div></description></item><item><title>hexo-config</title><link>https://blog.simbafs.cc/p/hexo/hexo-config/</link><pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/hexo-config/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/hexo-config.png" alt="Featured image of post hexo-config" />&lt;h1 id="各種設定值嘗試">各種設定值嘗試&lt;/h1>
 &lt;h2 id="highlight">Highlight&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -591,7 +591,7 @@ alt="sitemap"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Audo Depoly by Github Action</title><link>https://blog.simbafs.cc/p/hexo/audo-depoly-by-github-action/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/audo-depoly-by-github-action/</guid><description>&lt;h1 id="github-action-自動部署-hexo">GitHub Action 自動部署 Hexo&lt;/h1>
+&lt;/div></description></item><item><title>Audo Depoly by Github Action</title><link>https://blog.simbafs.cc/p/hexo/audo-depoly-by-github-action/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/audo-depoly-by-github-action/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/audo-depoly-by-github-action.png" alt="Featured image of post Audo Depoly by Github Action" />&lt;h1 id="github-action-自動部署-hexo">GitHub Action 自動部署 Hexo&lt;/h1>
 &lt;h2 id="自動部屬部落格">自動部屬部落格&lt;/h2>
 &lt;p>參考網址：&lt;a class="link" href="https://op30132.github.io/2020/02/05/github-action/" target="_blank" rel="noopener"
 >https://op30132.github.io/2020/02/05/github-action/&lt;/a>
@@ -720,7 +720,7 @@ alt="sitemap"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> hexo d&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>gitalk</title><link>https://blog.simbafs.cc/p/hexo/gitalk/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/gitalk/</guid><description>&lt;h1 id="啟用-gitalk-留言">啟用 gitalk 留言&lt;/h1>
+&lt;/div></description></item><item><title>gitalk</title><link>https://blog.simbafs.cc/p/hexo/gitalk/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/gitalk/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/gitalk.png" alt="Featured image of post gitalk" />&lt;h1 id="啟用-gitalk-留言">啟用 gitalk 留言&lt;/h1>
 &lt;ol>
 &lt;li>到&lt;a class="link" href="https://github.com/settings/applications/new" target="_blank" rel="noopener"
 >這個網址&lt;/a>填資料&lt;/li>
@@ -797,14 +797,14 @@ alt="sitemap"
 &lt;/div>
 &lt;/div>&lt;ol start="4">
 &lt;li>完成！注意 gitalk 在本地端是沒有用的喔！記得 &lt;code>hexo g; hexo d&lt;/code>&lt;/li>
-&lt;/ol></description></item><item><title>hexo-cli-extras</title><link>https://blog.simbafs.cc/p/hexo/hexo-cli-extras/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/hexo-cli-extras/</guid><description>&lt;h1 id="好用的插件">好用的插件&lt;/h1>
+&lt;/ol></description></item><item><title>hexo-cli-extras</title><link>https://blog.simbafs.cc/p/hexo/hexo-cli-extras/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/hexo-cli-extras/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/hexo-cli-extras.png" alt="Featured image of post hexo-cli-extras" />&lt;h1 id="好用的插件">好用的插件&lt;/h1>
 &lt;p>因為 hexo 本身沒有提供編輯器&lt;br>
 所以每次在編輯文章時都需要打路徑&lt;br>
 這個插件他會去找到你的文章&lt;br>
 然後給你選要編輯那一個&lt;br>
 這只是其中一個功能&lt;br>
 還有&lt;strong>重新命名&lt;/strong>、&lt;strong>刪除&lt;/strong>、&lt;strong>隔離&lt;/strong>和&lt;strong>加入&lt;/strong>&lt;br>
-&lt;strong>隔離&lt;/strong>是將其他文章暫時隔離，&lt;strong>加入&lt;/strong>是將文章加回來&lt;/p></description></item><item><title>hexo-installation</title><link>https://blog.simbafs.cc/p/hexo/hexo-installation/</link><pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/hexo-installation/</guid><description>&lt;h1 id="把-hexo-部屬到-gh-page">把 hexo 部屬到 gh-page&lt;/h1>
+&lt;strong>隔離&lt;/strong>是將其他文章暫時隔離，&lt;strong>加入&lt;/strong>是將文章加回來&lt;/p></description></item><item><title>hexo-installation</title><link>https://blog.simbafs.cc/p/hexo/hexo-installation/</link><pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/hexo-installation/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/hexo-installation.png" alt="Featured image of post hexo-installation" />&lt;h1 id="把-hexo-部屬到-gh-page">把 hexo 部屬到 gh-page&lt;/h1>
 &lt;p>執行&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">

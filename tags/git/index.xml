@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/git/</link><description>Recent content in git on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 20 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Snippet</title><link>https://blog.simbafs.cc/p/linux/git/git-snippet/</link><pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/git/git-snippet/</guid><description>&lt;h1 id="git-snippet">Git Snippet&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/git/</link><description>Recent content in git on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 20 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Snippet</title><link>https://blog.simbafs.cc/p/linux/git/git-snippet/</link><pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/git/git-snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/git/git-snippet.png" alt="Featured image of post Git Snippet" />&lt;h1 id="git-snippet">Git Snippet&lt;/h1>
 &lt;h2 id="move-branch-to-another-commit-not-recommand">move branch to another commit (not recommand)&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -18,7 +18,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/1552340/how-to-list-only-the-names-of-files-that-changed-between-two-commits" target="_blank" rel="noopener"
->ref: stackoverflow&lt;/a>&lt;/p></description></item><item><title>Merge Two Repo</title><link>https://blog.simbafs.cc/p/linux/git/merge-two-repo/</link><pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/git/merge-two-repo/</guid><description>&lt;h1 id="merge-two-repo">Merge Two Repo&lt;/h1>
+>ref: stackoverflow&lt;/a>&lt;/p></description></item><item><title>Merge Two Repo</title><link>https://blog.simbafs.cc/p/linux/git/merge-two-repo/</link><pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/git/merge-two-repo/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/git/merge-two-repo.png" alt="Featured image of post Merge Two Repo" />&lt;h1 id="merge-two-repo">Merge Two Repo&lt;/h1>
 &lt;p>這學期修了幾個資工系的課，都需要寫程式作業，原本我是一個作業開一個 repo，但是我發現這樣好像會開超級多 repo，於是我決定要想辦法合併他們。&lt;/p>
 &lt;h2 id="找資料">找資料&lt;/h2>
 &lt;p>首先去 Google 搜尋「git merge two repo」，第一條結果是是一個 13 年前的 stack overflow &lt;a class="link" href="https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories" target="_blank" rel="noopener"
@@ -253,7 +253,7 @@
 >https://gist.github.com/x-yuri/6161d90d1af8ebac6e560bcef548c1c3&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/newren/git-filter-repo" target="_blank" rel="noopener"
 >https://github.com/newren/git-filter-repo&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
+&lt;/ul></description></item><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/atlassian/bitbucket-connect-jira/index.png" alt="Featured image of post Bitbucket Connect Jira" />&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
 &lt;h2 id="bitbucket-連接-jira">Bitbucket 連接 Jira&lt;/h2>
 &lt;p>先到 Bitbucket 的 repo 的 Jira issue 頁面
 &lt;img src="https://blog.simbafs.cc/1.png"
@@ -314,7 +314,7 @@ alt="6"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git merge A
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>這裡可能會產生衝突（conflict），解決後就可以繼續合併了&lt;/p></description></item><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</guid><description>&lt;h1 id="gitea">Gitea&lt;/h1>
+&lt;/div>&lt;p>這裡可能會產生衝突（conflict），解決後就可以繼續合併了&lt;/p></description></item><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/server/ssh-on-gitea-with-docker.png" alt="Featured image of post ssh on gitea with docker" />&lt;h1 id="gitea">Gitea&lt;/h1>
 &lt;p>&lt;a class="link" href="https://gitea.io" target="_blank" rel="noopener"
 >Gitea&lt;/a> 是一個開源的 git 伺服器，他的界面幾乎和 &lt;a class="link" href="https://github.com" target="_blank" rel="noopener"
 >GitHub&lt;/a> 一模一樣，但是完全開源而且非常輕，甚至一片樹梅派就可以開伺服器了。Gitea 因為是使用 &lt;a class="link" href="https://golang.org/" target="_blank" rel="noopener"
@@ -436,7 +436,7 @@ alt="6"
 &lt;p>&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
 >https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough&lt;/a>&lt;br>
 &lt;a class="link" href="https://asaba.sakuragawa.moe/2018/06/%E6%93%BA%E8%84%AB%E6%8E%A7%E5%88%B6%EF%BC%8C%E7%94%A8-docker-%E8%87%AA%E5%BB%BA-gitea-gogs-%E7%B7%9A%E4%B8%8A%E4%BB%A3%E7%A2%BC%E5%8D%94%E4%BD%9C%E5%B9%B3%E8%87%BA/" target="_blank" rel="noopener"
->https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>GPG</title><link>https://blog.simbafs.cc/p/linux/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg/</guid><description>&lt;h1 id="gpg">GPG&lt;/h1>
+>https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>GPG</title><link>https://blog.simbafs.cc/p/linux/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/gpg.png" alt="Featured image of post GPG" />&lt;h1 id="gpg">GPG&lt;/h1>
 &lt;h2 id="sign-git-commit-with-gpg">sign git commit with gpg&lt;/h2>
 &lt;p>我按照他的作法弄完後就是沒辦法 commit
 他說 GPG 無法簽章

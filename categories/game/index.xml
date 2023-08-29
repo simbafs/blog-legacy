@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>game on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/game/</link><description>Recent content in game on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/game/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenTTD</title><link>https://blog.simbafs.cc/p/game/index/</link><pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/index/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>game on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/game/</link><description>Recent content in game on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/game/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenTTD</title><link>https://blog.simbafs.cc/p/game/index/</link><pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/openttd/index.png" alt="Featured image of post OpenTTD" />&lt;blockquote>
 &lt;p>&lt;strong>提醒我放圖片&lt;/strong>&lt;/p>
 &lt;/blockquote>
 &lt;h1 id="openttd">OpenTTD&lt;/h1>
@@ -13,7 +13,7 @@
 &lt;li>未來可擴展性&lt;/li>
 &lt;/ol>
 &lt;p>第一點是因為轉彎會減速，越少彎帶表平均速度越快。第二點則是要衝高服務人次，越多人代表越賺錢。第三點則是因為車輛不像船會穿模，要解決這點最直覺是不要買那麼多車，但是市中心人就是很多，如果車太少利用率就會一直滿載，車站等候人數就會很多，所以一個可以暫時解決的方案是讓每條路都有車走，分散車流。而城市會隨著發展自己擴張，所以就必須預留以後可以向外延伸的接口。&lt;/p>
-&lt;p>一座城市會有兩種公車站，一種是客運，另一種是貨運站，負責郵件和商品。我自己的規劃是類似梅花座，&lt;/p></description></item><item><title>Linux 安裝跑跑卡丁車（nexon launcher）</title><link>https://blog.simbafs.cc/p/game/nexon/</link><pubDate>Thu, 16 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/nexon/</guid><description>&lt;h1 id="如何在-linux-安裝跑跑卡丁車">如何在 Linux 安裝跑跑卡丁車&lt;/h1>
+&lt;p>一座城市會有兩種公車站，一種是客運，另一種是貨運站，負責郵件和商品。我自己的規劃是類似梅花座，&lt;/p></description></item><item><title>Linux 安裝跑跑卡丁車（nexon launcher）</title><link>https://blog.simbafs.cc/p/game/nexon/</link><pubDate>Thu, 16 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/nexon/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/nexon.png" alt="Featured image of post Linux 安裝跑跑卡丁車（nexon launcher）" />&lt;h1 id="如何在-linux-安裝跑跑卡丁車">如何在 Linux 安裝跑跑卡丁車&lt;/h1>
 &lt;ol>
 &lt;li>去官網下載 Nexon 啟動器設定 exe&lt;/li>
 &lt;li>去 Steam 左下角新增遊戲 &amp;gt; 非 steam 遊戲，找到你的 exe，可能要注意一下 filetype&lt;/li>
@@ -21,7 +21,7 @@
 &lt;li>啟動遊戲！按照步驟裝完啟動器、關掉他&lt;/li>
 &lt;li>steam 遊戲頁面右上角齒輪 &amp;gt; 內容 &amp;gt; 捷徑 &amp;gt; 開始位置 &amp;gt; 瀏覽，改成 &lt;code>~/.local/share/Steam/steamapps/compatdata/${steam game id}/pfx/drive_c/Program Files (x86)/Nexon/Nexon Launcher/nexon_launcher.exe &lt;/code>
 好了&lt;/li>
-&lt;/ol></description></item><item><title>兩輸入生產單位的比較</title><link>https://blog.simbafs.cc/p/game/mindustry/two-input-compare/</link><pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/two-input-compare/</guid><description>&lt;h1 id="目的">目的&lt;/h1>
+&lt;/ol></description></item><item><title>兩輸入生產單位的比較</title><link>https://blog.simbafs.cc/p/game/mindustry/two-input-compare/</link><pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/two-input-compare/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/mindustry/twoInputCompare/index.png" alt="Featured image of post 兩輸入生產單位的比較" />&lt;h1 id="目的">目的&lt;/h1>
 &lt;ol>
 &lt;li>驗證不同設計的生產效率差異&lt;/li>
 &lt;li>用科學的方式檢驗下面這些毫無根據、隨意編造的偏見
@@ -124,7 +124,7 @@ B 唯一的缺點是佔體積大了一點點，但我個人認為，沒有任何
 &lt;h2 id="後續實驗">後續實驗&lt;/h2>
 &lt;p>根據 &lt;code>Magicaltank&lt;/code> 和 &lt;code>a0000778&lt;/code> 的建議，換成溢流器的確會增加效率，但即使沒換，但還是比 A 設計效率高。&lt;/p>
 &lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted --></description></item><item><title>砲台自動瞄準</title><link>https://blog.simbafs.cc/p/game/mindustry/turretautoaim/</link><pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/turretautoaim/</guid><description>&lt;h1 id="砲台自動瞄準">砲台自動瞄準&lt;/h1>
+&lt;!-- raw HTML omitted --></description></item><item><title>砲台自動瞄準</title><link>https://blog.simbafs.cc/p/game/mindustry/turretautoaim/</link><pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/turretautoaim/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/mindustry/autoAim/index.png" alt="Featured image of post 砲台自動瞄準" />&lt;h1 id="砲台自動瞄準">砲台自動瞄準&lt;/h1>
 &lt;p>用處理器可以控制砲台們打的方向和什麼時候打，這樣只要有一群受控的砲台，就可以在射程範圍內指哪打哪&lt;/p>
 &lt;h2 id="單一砲台">單一砲台&lt;/h2>
 &lt;p>&lt;img src="https://blog.simbafs.cc/oneTurretScreeshot.png"
@@ -288,7 +288,7 @@ alt="multipleTurretsCode"
 &lt;p>&lt;a class="link" href="https://www.youtube.com/watch?v=UFK5m6qKT6U" target="_blank" rel="noopener"
 >https://www.youtube.com/watch?v=UFK5m6qKT6U&lt;/a>&lt;br>
 &lt;a class="link" href="https://www.youtube.com/watch?v=YMxU0jcS11I" target="_blank" rel="noopener"
->https://www.youtube.com/watch?v=YMxU0jcS11I&lt;/a>&lt;/p></description></item><item><title>迴圈的延遲</title><link>https://blog.simbafs.cc/p/game/mindustry/delayofloop/</link><pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/delayofloop/</guid><description>&lt;h1 id="迴圈的延遲">迴圈的延遲&lt;/h1>
+>https://www.youtube.com/watch?v=YMxU0jcS11I&lt;/a>&lt;/p></description></item><item><title>迴圈的延遲</title><link>https://blog.simbafs.cc/p/game/mindustry/delayofloop/</link><pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/delayofloop/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/mindustry/delayOfLoop/index.png" alt="Featured image of post 迴圈的延遲" />&lt;h1 id="迴圈的延遲">迴圈的延遲&lt;/h1>
 &lt;p>在&lt;a class="link" href="../turretautoaim" >上一篇&lt;/a>關於用 &lt;code>jump&lt;/code> 實現迴圈的部份，其實，Mindustry 的 &lt;code>jump&lt;/code> 的會有一個延遲&lt;/p>
 &lt;h2 id="單核">單核&lt;/h2>
 &lt;p>&lt;img src="https://blog.simbafs.cc/singleCore.gif"
@@ -299,7 +299,7 @@ alt="single core"
 &lt;p>&lt;img src="https://blog.simbafs.cc/fourCores.gif"
 loading="lazy"
 alt="four cores"
->&lt;/p></description></item><item><title>Merge</title><link>https://blog.simbafs.cc/p/game/mindustry/index/</link><pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/index/</guid><description>&lt;h1 id="merge">Merge&lt;/h1>
+>&lt;/p></description></item><item><title>Merge</title><link>https://blog.simbafs.cc/p/game/mindustry/index/</link><pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/mindustry/merge/index.png" alt="Featured image of post Merge" />&lt;h1 id="merge">Merge&lt;/h1>
 &lt;p>Mindustry 中，某條輸送帶（A）合併到另一條未滿的輸送帶（B）上時，如果 B 有一個足夠小的空隙，A 是有機會無法補滿的&lt;/p>
 &lt;p>&lt;img src="https://blog.simbafs.cc/gap.png"
 loading="lazy"
@@ -315,7 +315,7 @@ alt="withoutRouter"
 loading="lazy"
 alt="withRouter"
 >&lt;/p>
-&lt;p>當然這裡的輸出是不能被堵住的，不然就沒有意義了(X&lt;/p></description></item><item><title>控制敵方路徑</title><link>https://blog.simbafs.cc/p/game/mindustry/pathofenemy/</link><pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/pathofenemy/</guid><description>&lt;h1 id="控制敵方路徑">控制敵方路徑&lt;/h1>
+&lt;p>當然這裡的輸出是不能被堵住的，不然就沒有意義了(X&lt;/p></description></item><item><title>控制敵方路徑</title><link>https://blog.simbafs.cc/p/game/mindustry/pathofenemy/</link><pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/pathofenemy/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/mindustry/pathOfEnemy.png" alt="Featured image of post 控制敵方路徑" />&lt;h1 id="控制敵方路徑">控制敵方路徑&lt;/h1>
 &lt;p>在遊戲中，如何有效的讓資源集中在前線是一門學問，最好的情況當然是所有可能路徑都佈置強大的火力，但真實情況往往不是如此。&lt;/p>
 &lt;p>當遇到有多個洞口的地圖時，你可能堵好一個洞，敵方就從令一個洞跑進來，然後核心就被攻破了，但是你又沒有足夠的資源和時間在第一時間把所有的洞都佈置火力。這時候你就必須了解的方式如何行動的。&lt;/p>
 &lt;blockquote>

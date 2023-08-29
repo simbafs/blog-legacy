@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tunnel on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/tunnel/</link><description>Recent content in tunnel on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 16 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/tunnel/index.xml" rel="self" type="application/rss+xml"/><item><title>p2p</title><link>https://blog.simbafs.cc/p/golang/p2p/</link><pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/p2p/</guid><description>&lt;h1 id="p2p">p2p&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tunnel on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/tunnel/</link><description>Recent content in tunnel on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 16 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/tunnel/index.xml" rel="self" type="application/rss+xml"/><item><title>p2p</title><link>https://blog.simbafs.cc/p/golang/p2p/</link><pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/p2p/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/p2p.png" alt="Featured image of post p2p" />&lt;h1 id="p2p">p2p&lt;/h1>
 &lt;p>我不太確定這是 p2p 還是穿隧，但反正功能就是可以讓兩個在不同內網的機器可以直連，不需要透過中央伺服器轉發。先上原理圖，然後再來一步一步看程式碼&lt;/p>
 &lt;p>&lt;img src="https://github.com/simbafs/experiment-p2p/raw/main/explain.png"
 loading="lazy"
@@ -209,7 +209,7 @@ alt="explain.png"
 &lt;h2 id="心得">心得&lt;/h2>
 &lt;p>如果我沒理解錯，會選用 UDP 做 p2p 是因為 UDP 的連線關掉後 NAT 不會把洞關起來，所以一開始往伺服器發訊息的動作就是在打洞，然後把洞的資訊送到另一邊，接著就可以透過這的洞直連。而 TCP 一斷掉連線洞就會關起來，所以無法做 p2p（這是個人猜測，無根據）。&lt;br>
 這時候我就很好奇，應該有人做這種公共的 p2p server 吧？搭配 SDK 應該可以很輕鬆的做到任意兩台裝置連線，這樣伺服器的 loading 也不重，需要的資源也很低，感覺可以來開一個。&lt;br>
-接著我應該會去研究是否有辦法用 TCP 做 p2p，或是如何在 UDP 上搭建一個可信賴的通訊。接著遠程目標大概是 IPFS 之類的&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://blog.simbafs.cc/p/linux/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ssh-tunnel/</guid><description>&lt;h1 id="ssh-tunnel">SSH Tunnel&lt;/h1>
+接著我應該會去研究是否有辦法用 TCP 做 p2p，或是如何在 UDP 上搭建一個可信賴的通訊。接著遠程目標大概是 IPFS 之類的&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://blog.simbafs.cc/p/linux/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ssh-tunnel/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/ssh-tunnel.png" alt="Featured image of post SSH Tunnel" />&lt;h1 id="ssh-tunnel">SSH Tunnel&lt;/h1>
 &lt;p>昨天架好了 reverse ssh 讓我可以連回學校 server
 今天來研究 ssh tunnel&lt;/p>
 &lt;h2 id="簡介">簡介&lt;/h2>
@@ -276,7 +276,7 @@ alt="explain.png"
 如果是 -R 那前面就是 remote port&lt;/p>
 &lt;h2 id="參考連結">參考連結&lt;/h2>
 &lt;p>&lt;a class="link" href="https://johnliu55.tw/ssh-tunnel.html" target="_blank" rel="noopener"
->https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://blog.simbafs.cc/p/linux/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/reverse-ssh/</guid><description>&lt;h1 id="reverse-ssh">Reverse SSH&lt;/h1>
+>https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://blog.simbafs.cc/p/linux/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/reverse-ssh/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/reverse-ssh.png" alt="Featured image of post Reverse SSH" />&lt;h1 id="reverse-ssh">Reverse SSH&lt;/h1>
 &lt;p>一直以來連線回社辦的電腦都要走 webtty 再開 tmate
 但是今天發現了一個新的方法可以透過反向的 ssh 連回社辦&lt;/p>
 &lt;h2 id="reverse-ssh-1">reverse ssh&lt;/h2>
