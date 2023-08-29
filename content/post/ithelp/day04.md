@@ -11,6 +11,7 @@ tags:
   - zsh
 categories:
   - ithelp
+image: /og/ithelp/day04.png
 ---
 
 今天的內容會比平常多，但是非常紮實！

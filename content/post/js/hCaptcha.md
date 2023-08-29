@@ -10,6 +10,7 @@ tags:
   - js
 categories:
   - js
+image: /og/js/hCaptcha.png
 ---
 
 # hCaptcha

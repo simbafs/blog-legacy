@@ -11,6 +11,7 @@ tags:
   - zsh
 categories:
   - ithelp
+image: /og/ithelp/day14.png
 ---
 
 前面講過了 zsh、tmux 的 plugin manager，vim 一樣有 plguin manager。跟前面幾個 plguin manager 很像，要安裝新的外掛只需要在某個地方加一行設定就好，這樣作的好處是哪天要再建立新的環境時只需要把設定檔帶走，而且集中式的管理可以一目了然。

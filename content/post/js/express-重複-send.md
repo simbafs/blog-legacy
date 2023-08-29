@@ -8,6 +8,7 @@ tags:
   - backend
 categories:
   - js
+image: /og/js/express-重複-send.png
 ---
 
 # express 重複 send

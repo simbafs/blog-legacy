@@ -8,6 +8,7 @@ tags:
   - cloud
 categories:
   - cloud
+image: /og/cloud/googleAppScript.png
 ---
 
 # Google AppScript

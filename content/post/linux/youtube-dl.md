@@ -7,6 +7,7 @@ tags:
   - bash
 categories:
   - linux
+image: /og/linux/youtube-dl.png
 ---
 
 # Youtube DL

@@ -14,6 +14,7 @@ tags:
   - cms
 categories:
   - js
+image: /og/js/strapi-quick-start.png
 ---
 
 strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server

@@ -10,6 +10,7 @@ tags:
   - usb debug
 categories:
   - linux
+image: /og/linux/cast-phone-screen-to-computer.png
 ---
 
 # Cast Phone Screen to Computer

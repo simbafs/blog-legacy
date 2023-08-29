@@ -8,6 +8,7 @@ tags:
 categories:
   - linux
   - vim
+image: /og/linux/vim/solarized.png
 ---
 
 # Solarized

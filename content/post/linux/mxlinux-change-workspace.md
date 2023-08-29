@@ -6,6 +6,7 @@ tags:
   - mxlinux
 categories:
   - linux
+image: /og/linux/mxlinux-change-workspace.png
 ---
 
 # Mxlinux Change Workspace

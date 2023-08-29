@@ -7,6 +7,7 @@ tags:
   - logitech
 categories:
   - linux
+image: /og/linux/logitech-mouse-permission-error.png
 ---
 
 # Logitech Mouse Permission Error

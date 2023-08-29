@@ -7,6 +7,7 @@ tags:
   - systemd
 categories:
   - linux
+image: /og/linux/mxlinux-boot-with-systemd.png
 ---
 
 # Mxlinux Boot with Systemd

@@ -7,6 +7,7 @@ tags:
   - ocr
 categories:
   - linux
+image: /og/linux/ocr-add-pdf-layer.png
 ---
 
 # OCR Add PDF Text Layer

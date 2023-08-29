@@ -7,6 +7,7 @@ tags:
   - ssh
 categories:
   - golang
+image: /og/golang/ssh-server.png
 ---
 
 # SSH Server

@@ -10,6 +10,7 @@ tags:
 categories:
   - linux
   - server
+image: /og/linux/server/ssh-on-gitea-with-docker.png
 ---
 
 # Gitea

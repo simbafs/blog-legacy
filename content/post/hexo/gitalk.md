@@ -7,6 +7,7 @@ tags:
   - github
 categories:
   - hexo
+image: /og/hexo/gitalk.png
 ---
 
 # 啟用 gitalk 留言

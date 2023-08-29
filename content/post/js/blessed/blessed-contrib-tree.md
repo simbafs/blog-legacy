@@ -10,6 +10,7 @@ tags:
 categories:
   - js
   - blessed
+image: /og/js/blessed/blessed-contrib-tree.png
 ---
 
 # blessed Contrib Tree

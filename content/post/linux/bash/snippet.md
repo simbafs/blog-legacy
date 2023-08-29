@@ -10,6 +10,7 @@ tags:
 categories:
   - linux
   - bash
+image: /og/linux/bash/snippet.png
 ---
 
 # Bash Snippet

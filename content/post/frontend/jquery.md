@@ -7,6 +7,7 @@ tags:
   - jquery
 categories:
   - frontend
+image: /og/frontend/jquery.png
 ---
 
 # jQuery

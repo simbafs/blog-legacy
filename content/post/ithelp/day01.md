@@ -11,6 +11,7 @@ tags:
   - zsh
 categories:
   - ithelp
+image: /og/ithelp/day01.png
 ---
 
 # Who Am I

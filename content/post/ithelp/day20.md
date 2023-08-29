@@ -11,6 +11,7 @@ tags:
   - zsh
 categories:
   - ithelp
+image: /og/ithelp/day20.png
 ---
 
 # 分割螢幕

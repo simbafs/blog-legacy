@@ -7,6 +7,7 @@ tags:
   - HTML
 categories:
   - frontend
+image: /og/frontend/HTML-form-button.png
 ---
 
 # HTML Form Button

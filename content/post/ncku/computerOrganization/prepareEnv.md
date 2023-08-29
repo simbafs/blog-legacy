@@ -9,6 +9,7 @@ tags:
 categories:
   - ncku
   - computerOrganization
+image: /og/ncku/computerOrganization/prepareEnv.png
 ---
 
 # Preparing Environment

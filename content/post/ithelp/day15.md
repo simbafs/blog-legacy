@@ -11,6 +11,7 @@ tags:
   - zsh
 categories:
   - ithelp
+image: /og/ithelp/day15.png
 ---
 
 看到這裡，你可能還是很疑惑，到底 vim 好用在哪？嘿嘿，那是因為強大的外掛還沒裝啦！網路上會有一些配好一堆外掛的，像是 [spaceVim](spacevim.org)，他們的策略和 vs code 很像，先幫你裝好一對外掛，讓你隨開及用。這樣做好處是初學者比較愛，但是常常會裝了一堆用不到的功能，反而讓載入速度、記憶體用量大增。  

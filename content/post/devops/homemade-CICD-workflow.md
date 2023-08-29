@@ -9,6 +9,7 @@ tags:
   - webhook
 categories:
   - devops
+image: /og/devops/homemade-CICD-workflow.png
 ---
 
 # Homemade CI/CD Workflow

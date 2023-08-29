@@ -10,6 +10,7 @@ tags:
   - sshKey
 categories:
   - golang
+image: /og/golang/ssh-server-util.png
 ---
 
 # SSH Server Util

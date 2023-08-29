@@ -6,6 +6,7 @@ tags:
   - hexo
 categories:
   - hexo
+image: /og/hexo/加入-google-search-和-sitemap.png
 ---
 
 # 前置設定

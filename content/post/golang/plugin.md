@@ -7,6 +7,7 @@ tags:
   - share object
 categories:
   - golang
+image: /og/golang/plugin.png
 ---
 
 # Go 動態載入程式

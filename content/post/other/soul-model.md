@@ -6,6 +6,7 @@ tags:
   - fantasy
 categories:
   - other
+image: /og/other/soul-model.png
 ---
 
 # 靈魂世界模型

@@ -8,6 +8,7 @@ tags:
 categories:
   - linux
   - server
+image: /og/linux/server/ddos.png
 ---
 
 # DDOS

@@ -11,6 +11,7 @@ tags:
   - database
 categories:
   - js
+image: /og/js/sqlite.png
 ---
 
 # sqlite3

@@ -11,6 +11,7 @@ tags:
 categories:
   - linux
   - vim
+image: /og/linux/vim/YouComopleteMe-install.png
 ---
 
 # YCM Installation

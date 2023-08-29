@@ -11,6 +11,7 @@ tags:
   - zsh
 categories:
   - ithelp
+image: /og/ithelp/day21.png
 ---
 
 |                     ![stackoverflow meme](/images/ithelp/pure-CLI-IDE/day21/stackoverflow-meme.png)                      |

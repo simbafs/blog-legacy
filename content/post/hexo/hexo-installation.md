@@ -6,6 +6,7 @@ tags:
   - hexo
 categories:
   - hexo
+image: /og/hexo/hexo-installation.png
 ---
 
 # 把 hexo 部屬到 gh-page

@@ -9,6 +9,7 @@ tags:
   - cloud
 categories:
   - golang
+image: /og/golang/githubAction.png
 ---
 
 # 用 Github Action 編譯並發 Release

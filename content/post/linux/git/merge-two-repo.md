@@ -8,6 +8,7 @@ tags:
 categories:
   - linux
   - git
+image: /og/linux/git/merge-two-repo.png
 ---
 
 # Merge Two Repo

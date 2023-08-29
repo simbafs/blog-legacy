@@ -6,6 +6,7 @@ tags: []
 categories:
   - devops
 draft: true
+image: /og/devops/github-action-collections.png
 ---
 
 # Github Action Collections

@@ -9,6 +9,7 @@ tags:
   - security
 categories:
   - linux
+image: /og/linux/yubikey.png
 ---
 
 # Yubikey

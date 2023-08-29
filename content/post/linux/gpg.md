@@ -8,6 +8,7 @@ tags:
   - gpg
 categories:
   - linux
+image: /og/linux/gpg.png
 ---
 
 # GPG

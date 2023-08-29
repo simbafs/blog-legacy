@@ -8,6 +8,7 @@ tags:
   - onlinejudge
 categories:
   - linux
+image: /og/linux/isolate.png
 ---
 
 # isolate

@@ -20,5 +20,9 @@ server:
 	hugo server -D
 
 frontmatter:
-	cd ./script/formatmatter/ && ts-node index.ts
-.PHONY: push tree build diff
+	cd ./script/frontmatter/ && node index.js
+
+og: 
+	cd ./script/frontmatter/ && node index.js --og
+
+.PHONY: push tree build diff og frontmatter server

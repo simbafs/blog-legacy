@@ -11,6 +11,7 @@ tags:
   - zsh
 categories:
   - ithelp
+image: /og/ithelp/day02.png
 ---
 
 > 今天內容不小心寫太長了 ......

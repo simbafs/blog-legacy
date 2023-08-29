@@ -3,14 +3,15 @@ title: PocketBase
 slug: pocketbase
 date: '2023-08-26'
 tags:
-    - pocketbase
-    - sqlite
-    - nextjs
-    - api
-    - backend
-    - saas
+  - pocketbase
+  - sqlite
+  - nextjs
+  - api
+  - backend
+  - saas
 categories:
-    - js
+  - js
+image: /og/js/pocketbase.png
 ---
 
 # PocketBase

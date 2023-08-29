@@ -10,6 +10,7 @@ tags:
 categories:
   - linux
   - bash
+image: /og/linux/bash/bash-number-loop.png
 ---
 
 # Bash Number Loop

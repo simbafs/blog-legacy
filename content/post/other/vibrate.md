@@ -5,6 +5,7 @@ date: '2022-03-09'
 tags: []
 categories:
   - other
+image: /og/other/vibrate.png
 ---
 
 # 震動 vs 振動

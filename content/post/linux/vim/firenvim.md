@@ -12,6 +12,7 @@ tags:
 categories:
   - linux
   - vim
+image: /og/linux/vim/firenvim.png
 ---
 
 # Firenvim

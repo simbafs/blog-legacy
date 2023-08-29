@@ -9,6 +9,7 @@ tags:
 categories:
   - js
   - blessed
+image: /og/js/blessed/blessed.png
 ---
 
 # Blessed

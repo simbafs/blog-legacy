@@ -9,6 +9,7 @@ tags:
   - cryptography
 categories:
   - linux
+image: /og/linux/gpg-with-ssh.png
 ---
 
 # GPG with SSH

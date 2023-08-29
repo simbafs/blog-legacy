@@ -7,6 +7,7 @@ tags:
 categories:
   - linux
   - git
+image: /og/linux/git/git-snippet.png
 ---
 
 # Git Snippet

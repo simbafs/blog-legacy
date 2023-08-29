@@ -7,6 +7,7 @@ tags:
   - code format
 categories:
   - linux
+image: /og/linux/libreoffice-code-format-plugin-install.png
 ---
 
 # 安裝

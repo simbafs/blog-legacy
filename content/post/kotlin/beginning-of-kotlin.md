@@ -6,6 +6,7 @@ tags:
   - kotlin
 categories:
   - kotlin
+image: /og/kotlin/beginning-of-kotlin.png
 ---
 
 # val vs var

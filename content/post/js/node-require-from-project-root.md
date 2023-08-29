@@ -6,6 +6,7 @@ tags:
   - nodejs
 categories:
   - js
+image: /og/js/node-require-from-project-root.png
 ---
 
 # Node Require from Project Root

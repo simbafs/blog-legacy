@@ -10,6 +10,7 @@ tags:
 categories:
   - linux
   - docker
+image: /og/linux/docker/cache-layer.png
 ---
 
 # Cache Layer

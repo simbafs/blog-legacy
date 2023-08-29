@@ -7,6 +7,7 @@ tags:
   - process
 categories:
   - golang
+image: /og/golang/execCmd.png
 ---
 
 # Golang 執行外部命令

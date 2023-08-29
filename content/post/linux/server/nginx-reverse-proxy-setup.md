@@ -9,6 +9,7 @@ tags:
 categories:
   - linux
   - server
+image: /og/linux/server/nginx-reverse-proxy-setup.png
 ---
 
 # nginx 反向代理伺服器 (reverse proxy)

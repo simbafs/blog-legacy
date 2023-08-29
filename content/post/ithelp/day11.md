@@ -11,6 +11,7 @@ tags:
   - zsh
 categories:
   - ithelp
+image: /og/ithelp/day11.png
 ---
 
 昨天體驗了一些快捷鍵和命令，今天要講的是在 vim 中也很常用的**搜尋與取代**
