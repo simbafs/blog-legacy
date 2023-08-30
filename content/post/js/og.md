@@ -8,7 +8,6 @@ tags:
   - png
 categories:
   - js
-draft: true
 image: /og/js/og.png
 ---
 
