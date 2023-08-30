@@ -61,35 +61,61 @@ async function formatMatter(matter, filepath, ctime) {
 }
 
 async function main() {
-    const files = await exec('hugo list all')
-        .then(({ stdout }) => stdout.split('\n')
-            .map(item => item.split(',')[0])
-            .slice(1)
-            .filter(item => !item.match(/_index.md$/))
-            .filter(item => item)
-        )
-        .catch(console.error)
+    const onlyChange =
+        process.argv.includes('-c') || process.argv.includes('--only-change')
+    let files
+    if (onlyChange) {
+        files = await exec('git add . && git diff HEAD --name-only')
+            .then(({ stdout }) =>
+                stdout
+                    .split('\n')
+                    .filter(item => item && item.match(/^content.*\.md$/))
+            )
+            .catch(e => {
+                console.error(e)
+                process.exit(1)
+            })
+    } else {
+        files = await exec('hugo list all')
+            .then(({ stdout }) =>
+                stdout
+                    .split('\n')
+                    .map(item => item.split(',')[0])
+                    .filter(
+                        item =>
+                            item &&
+                            item.match(/^content.*\.md$/) &&
+                            !item.match(/_index.md$/)
+                    )
+            )
+            .catch(e => {
+                console.error(e)
+                process.exit(1)
+            })
+    }
     for (const file of files) {
         console.log(file)
 
         // read
-        const fileContent = await fs.readFile(file, 'utf-8').catch(console.error)
         const stat = await fs.stat(file).catch(console.error)
+        if (!stat) continue
+
+        const fileContent = await fs
+            .readFile(file, 'utf-8')
+            .catch(console.error)
 
         // format
         const { data, content } = matter(fileContent)
         const formattedData = await formatMatter(data, file, stat.ctime)
 
         // write
-        try {
-            await fs.writeFile(
-                file,
-                `---\n${yaml.dump(formattedData)}---\n${content}`
-            )
-        } catch (e) {
+        fs.writeFile(
+            file,
+            `---\n${yaml.dump(formattedData)}---\n${content}`
+        ).catch(e => {
             console.error(e)
             console.log(data)
-        }
+        })
     }
 }
 

@@ -1,6 +1,7 @@
 # filediff := $(shell git diff --name-only HEAD | grep --color=never content/post | sed -e 's/content\/post\///')
 date := $(shell date +%Y-%m-%d)
 push: 
+	make og
 	git add .
 	git commit -m "$(date)"
 	git pull
@@ -20,9 +21,9 @@ server:
 	hugo server -D
 
 frontmatter:
-	node ./script/frontmatter/index.js
+	node ./script/frontmatter/index.js --only-change
 
 og: 
-	node ./script/frontmatter/index.js --og
+	node ./script/frontmatter/index.js --og --only-change
 
 .PHONY: push tree build diff og frontmatter server
