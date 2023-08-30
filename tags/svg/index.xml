@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>svg on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/svg/</link><description>Recent content in svg on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/svg/index.xml" rel="self" type="application/rss+xml"/><item><title>編譯時期產生縮圖</title><link>https://blog.simbafs.cc/p/js/og/</link><pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/og/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/og.png" alt="Featured image of post 編譯時期產生縮圖" />&lt;h1 id="og">OG&lt;/h1>
+&lt;p>這裡的目的是要編譯時期靜態產生 OG image，也就是封面圖，為什麼不用 &lt;code>@vercel/og&lt;/code> 在需要的時候在 edge runtime 上產生呢？我就喜歡弄成靜態的&lt;/p>
+&lt;h2 id="selenium">selenium&lt;/h2>
+&lt;p>我想要程式化的產生圖片，根據提供的資訊替換標題、附標題、標籤等資訊，首先想到的就是 react 產出網頁截圖，當然不是人工截圖，是用 selenium 這樣的自動化工具，之前看過保哥一篇文章介紹這樣的操作，但是有個問題是我只是想產一張圖片還開一個瀏覽器是不是太癰腫了，無論是時間上或是記憶體開銷上。&lt;/p>
+&lt;h2 id="satori">Satori&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/vercel/satori/" target="_blank" rel="noopener"
+>satori&lt;/a> 是 &lt;code>@vercel/og&lt;/code> 背後使用的函式庫，把 jsx 輸出成 svg，vercel 為什麼選擇 svg 當作輸出目標其實不難想像，畢竟 svg 和 html 其實都是標籤形式，比起直接輸出成 png，svg 看起來有機會多了，於是我開始從 satori 開始。首先是 GitHub 上的範例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// api.jsx
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">import&lt;/span> &lt;span class="nx">satori&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;satori&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">svg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">satori&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">div&lt;/span> &lt;span class="nx">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{{&lt;/span> &lt;span class="nx">color&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;black&amp;#39;&lt;/span> &lt;span class="p">}}&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="nx">hello&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">world&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/div&amp;gt;, {&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">600&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">height&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">400&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fonts&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Roboto&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Use `fs` (Node.js only) or `fetch` to read the font as Buffer/ArrayBuffer and provide `data` here.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">robotoArrayBuffer&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">weight&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">400&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">style&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;normal&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>看起來使用很簡單，就是把 jsx 丟進去，設定長寬跟至少一個字體就行了，注意！問題來了，我沒有從頭搞過 jsx，直接拿 &lt;code>$ nodejs api.jsx&lt;/code> 一定會噴錯誤，有沒有可能我丟 HTML 字串進去也行呢？並且根據我的需求 &lt;strong>直接執行 node og.js 就會產生圖片&lt;/strong> 進行一些修改：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">satori&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;satori&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">fs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;fs&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">font&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">readFileSync&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;/home/simba/.local/share/fonts/jf-openhuninn-1.1.ttf&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">satori&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`&amp;lt;div style={{ color: &amp;#39;black&amp;#39; }}&amp;gt;hello, world&amp;lt;/div&amp;gt;`&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">600&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">height&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">400&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fonts&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;jf-openhuninn-1.1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Use `fs` (Node.js only) or `fetch` to read the font as Buffer/ArrayBuffer and provide `data` here.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">font&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">weight&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">400&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">style&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;normal&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>執行後看似很順利的產生了 svg&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-svg" data-lang="svg">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;svg&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;600&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;400&amp;#34;&lt;/span> &lt;span class="na">viewBox=&lt;/span>&lt;span class="s">&amp;#34;0 0 600 400&amp;#34;&lt;/span> &lt;span class="na">xmlns=&lt;/span>&lt;span class="s">&amp;#34;http://www.w3.org/2000/svg&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;0&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;12.502665651180502&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;40.78125&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>&lt;span class="ni">&amp;amp;lt;&lt;/span>&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;40.78125&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;12.502665651180502&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;99.140625&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>div&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;139.921875&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;12.502665651180502&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;21.09375&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span> &lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;0&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;28.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;155.390625&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>style&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;155.390625&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;28.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;50.0625&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>=&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;205.453125&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;28.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;24.1875&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>{&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;229.640625&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;28.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;24.1875&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>{&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;253.828125&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;28.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;21.09375&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span> &lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;274.921875&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;28.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;167.1328125&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>color&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;442.0546875&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;28.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;18.28125&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>:&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;460.3359375&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;28.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;21.09375&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span> &lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;0&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;44.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;15.609375&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>&lt;span class="ni">&amp;amp;#39;&lt;/span>&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;15.609375&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;44.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;177.1875&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>black&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;192.796875&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;44.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;15.609375&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>&lt;span class="ni">&amp;amp;#39;&lt;/span>&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;208.40625&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;44.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;21.09375&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span> &lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;229.5&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;44.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;24.1875&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>}&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;253.6875&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;44.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;24.1875&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>}&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;277.875&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;44.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;40.78125&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>&lt;span class="ni">&amp;amp;gt;&lt;/span>&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;318.65625&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;44.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;160.3828125&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>hello&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;479.0390625&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;44.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;18.28125&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>,&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;497.3203125&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;44.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;21.09375&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span> &lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;0&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;60.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;187.2421875&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>world&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;187.2421875&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;60.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;40.78125&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>&lt;span class="ni">&amp;amp;lt;&lt;/span>&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;228.0234375&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;60.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;31.1484375&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>/&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;259.171875&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;60.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;99.140625&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>div&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;text&lt;/span> &lt;span class="na">x=&lt;/span>&lt;span class="s">&amp;#34;358.3125&amp;#34;&lt;/span> &lt;span class="na">y=&lt;/span>&lt;span class="s">&amp;#34;60.5026656511805&amp;#34;&lt;/span> &lt;span class="na">width=&lt;/span>&lt;span class="s">&amp;#34;40.78125&amp;#34;&lt;/span> &lt;span class="na">height=&lt;/span>&lt;span class="s">&amp;#34;16&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>&lt;span class="ni">&amp;amp;gt;&lt;/span>&lt;span class="nt">&amp;lt;/text&amp;gt;&amp;lt;/svg&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>把他打開看看&lt;br>
+&lt;img src="https://blog.simbafs.cc/images/og/1.png"
+loading="lazy"
+alt="1.png"
+>&lt;br>
+這是一張透明背景，有黑色字印著散落的程式碼的圖片，我不知道 satori 內部是怎麼想的，反正這樣鐵定不行，那我們還是只能丟 jsx 進去了&lt;/p>
+&lt;h2 id="satori-html">satori-html&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/natemoo-re/satori-html" target="_blank" rel="noopener"
+>satori-html&lt;/a> 是個函式庫專門用來填補 HTML 到 satori 之間間隔，他會吃 HTML 字串，然後吐一個 &lt;code>react-elements-like object&lt;/code>，可以簡單的理解成 jsx 編譯後的輸出。來試試看：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">html&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;satori-html&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">html&lt;/span>&lt;span class="sb">`&amp;lt;div style={{ color: &amp;#39;black&amp;#39; }}&amp;gt;hello, world&amp;lt;/div&amp;gt;`&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>執行！哇，他會吐一個 &lt;code>Error [ERR_REQUIRE_ESM]: require() of ES Module satori-html@0.3.2/node_modules/satori-html/dist/index.js from index.js not supported.&lt;/code> 這樣的錯誤，不過還好，後面有給方法（讚啦）：&lt;code>Instead change the require of index.js in index.js to a dynamic import() which is available in all CommonJS modules.&lt;/code>。好的，修改後長這樣：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="p">;(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">html&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="kr">import&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;satori-html&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">html&lt;/span>&lt;span class="sb">`&amp;lt;div style={{ color: &amp;#39;black&amp;#39; }}&amp;gt;hello, world&amp;lt;/div&amp;gt;`&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="mi">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>輸出長這樣&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;div&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;props&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;style&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;display&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;flex&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;flexDirection&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;column&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;width&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;100%&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;height&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;100%&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;children&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;div&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;props&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;color:&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;style&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;children&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;hello, world&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>看起來可以塞進 satori 試試看了&lt;/p>
+&lt;h2 id="合體">合體！&lt;/h2>
+&lt;p>把上面兩個湊起來長這樣&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">satori&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;satori&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">fs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;fs&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">font&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">readFileSync&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;/home/simba/.local/share/fonts/jf-openhuninn-1.1.ttf&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">getOg&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">html&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="kr">import&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;satori-html&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">markup&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">html&lt;/span>&lt;span class="sb">`&amp;lt;div style={{ color: &amp;#39;black&amp;#39; }}&amp;gt;hello, world&amp;lt;/div&amp;gt;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">satori&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">markup&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">600&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">height&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">400&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fonts&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;jf-openhuninn-1.1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">font&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">weight&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">400&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">style&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;normal&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">getOg&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>吐出來的 svg 長這樣&lt;br>
+&lt;img src="https://blog.simbafs.cc/images/og/2.svg"
+loading="lazy"
+alt="2.svg"
+>&lt;br>
+看起來合理多了，那麼接下來的問題就是輸出成 png 了&lt;/p>
+&lt;h2 id="svg-to-png">svg to png&lt;/h2>
+&lt;p>根據谷歌大神神諭，用 &lt;code>@resvg/resvg-js&lt;/code> 可以把 svg 轉成 png，看範例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">promises&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;fs&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">join&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;path&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">Resvg&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;@resvg/resvg-js&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">svg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">promises&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">readFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">__dirname&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;./text.svg&amp;#39;&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">opts&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">background&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;rgba(238, 235, 230, .9)&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fitTo&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">mode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;width&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1200&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">font&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fontFiles&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;./example/SourceHanSerifCN-Light-subset.ttf&amp;#39;&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="c1">// Load custom fonts.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">loadSystemFonts&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// It will be faster to disable loading system fonts.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">defaultFontFamily&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Source Han Serif CN Light&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">resvg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Resvg&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">svg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">opts&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">pngData&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">resvg&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">render&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">pngBuffer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">pngData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">asPng&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">info&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Original SVG Size:&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sb">`&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">resvg&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">width&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb"> x &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">resvg&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">height&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">info&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Output PNG Size :&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sb">`&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">pngData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">width&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb"> x &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">pngData&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">height&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">promises&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">__dirname&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;./text-out.png&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="nx">pngBuffer&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">main&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>看來是丟 svg 和 &lt;code>opt&lt;/code> 進去就可以了，來驗證看看吧！：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">satori&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;satori&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">fs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;fs&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">Resvg&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;@resvg/resvg-js&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">font&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">readFileSync&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;/home/simba/.local/share/fonts/jf-openhuninn-1.1.ttf&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">getOg&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">html&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="kr">import&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;satori-html&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">markup&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">html&lt;/span>&lt;span class="sb">`&amp;lt;div style={{ color: &amp;#39;black&amp;#39; }}&amp;gt;hello, world&amp;lt;/div&amp;gt;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">satori&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">markup&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">600&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">height&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">400&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fonts&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;jf-openhuninn-1.1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">font&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">weight&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">400&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">style&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;normal&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">svg&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">png&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Resvg&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">svg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">background&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;rgba(238, 235, 230, 0)&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fitTo&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">mode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;width&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">600&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}).&lt;/span>&lt;span class="nx">render&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">asPng&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">svg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">png&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">getOg&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(({&lt;/span> &lt;span class="nx">png&lt;/span> &lt;span class="p">})&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">writeFileSync&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;og.png&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">png&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>輸出結果長這樣&lt;/p>
+&lt;p>&lt;img src="https://blog.simbafs.cc/images/og/3.png"
+loading="lazy"
+alt="3.png"
+>&lt;/p>
+&lt;p>嗯，很棒&lt;/p>
+&lt;h2 id="打包">打包&lt;/h2>
+&lt;p>核心程式碼都有了，接著我們只需要寫好範本、加上一些細節，躂啦！就完成了
+&lt;img src="https://blog.simbafs.cc/images/og/drawAnOwl.jpg"
+loading="lazy"
+>
+附上完成後的連結 &lt;a class="link" href="https://github.com/simbafs/og" target="_blank" rel="noopener"
+>https://github.com/simbafs/og&lt;/a>&lt;/p></description></item></channel></rss>
