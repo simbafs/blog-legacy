@@ -1,5 +1,5 @@
 [[imports]]
 path = "github.com/CaiJimmy/hugo-theme-stack/v3"
 
-[[imports]]
-path = "git.jlel.se/jlelse/hugo-activitystreams"
+# [[imports]]
+# path = "git.jlel.se/jlelse/hugo-activitystreams"

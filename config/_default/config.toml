@@ -16,5 +16,5 @@ hasCJKLanguage = true
 disqusShortname = "hugo-theme-stack"
 
 [outputs]
-home = ['HTML', 'AMP', 'RSS', 'activity']
-page = ['HTML', 'activity']
+home = ['HTML', 'AMP', 'RSS']
+page = ['HTML']

@@ -74,8 +74,8 @@ enabled = true
 
 ## Comments
 [comments]
-enabled = false
-provider = ""
+enabled = true
+provider = "gitalk"
 
 [comments.disqusjs]
 shortname = ""
@@ -137,11 +137,12 @@ reactionsEnabled = 1
 emitMetadata = 0
 
 [comments.gitalk]
-owner = ""
-admin = ""
-repo = ""
-clientID = ""
-clientSecret = ""
+owner = "simbafs"
+admin = "simbafs"
+repo = "https://github.com/simbafs/blog"
+clientID = "<< gitalk.clientID >>"
+clientSecret = "<< gitalk.clientSecret >>"
+language = "zh-TW"
 
 [comments.cusdis]
 host = ""
