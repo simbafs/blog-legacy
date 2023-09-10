@@ -139,7 +139,7 @@ emitMetadata = 0
 [comments.gitalk]
 owner = "simbafs"
 admin = "simbafs"
-repo = "https://github.com/simbafs/blog"
+repo = "blog"
 clientID = "<< gitalk.clientID >>"
 clientSecret = "<< gitalk.clientSecret >>"
 language = "zh-TW"
