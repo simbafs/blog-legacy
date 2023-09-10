@@ -44,8 +44,8 @@ jobs:
 
       - name: gitalk setup
         run: |
-          sed -r 's/<< gitalk.ClientID >>/${{ secrets.GITALKCLIENTID }}' config/_default/params.toml
-          sed -r 's/<< gitalk.clientSecret >>/${{ secrets.GITALKCLIENTSECRET }}' config/_default/params.toml
+          sed -i 's/<< gitalk.clientID >>/${{ secrets.GITALKCLIENTID }}/g' config/_default/params.toml
+          sed -i 's/<< gitalk.clientSecret >>/${{ secrets.GITALKCLIENTSECRET }}/g' config/_default/params.toml
 
       - name: Build
         run: make build
