@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nodejs on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/js/</link><description>Recent content in nodejs on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/js/index.xml" rel="self" type="application/rss+xml"/><item><title>編譯時期產生縮圖</title><link>https://blog.simbafs.cc/p/js/og/</link><pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/og/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/og.png" alt="Featured image of post 編譯時期產生縮圖" />&lt;h1 id="og">OG&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nodejs on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/js/</link><description>Recent content in nodejs on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 02 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/js/index.xml" rel="self" type="application/rss+xml"/><item><title>Ts to Jsdoc</title><link>https://blog.simbafs.cc/p/js/ts-to-jsdoc/</link><pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/ts-to-jsdoc/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/ts-to-jsdoc.png" alt="Featured image of post Ts to Jsdoc" />&lt;h1 id="ts-to-jsdoc">Ts to Jsdoc&lt;/h1>
+&lt;h2 id="generics">Generics&lt;/h2>
+&lt;p>&lt;a class="link" href="https://medium.com/@antonkrinitsyn/jsdoc-generic-types-typescript-db213cf48640" target="_blank" rel="noopener"
+>https://medium.com/@antonkrinitsyn/jsdoc-generic-types-typescript-db213cf48640&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">type&lt;/span> &lt;span class="nx">List&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="nx">T&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="cm">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @template T
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @typedef {[]T} List
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="reducer">reducer&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">reducer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">state&lt;/span>: &lt;span class="kt">number&lt;/span>&lt;span class="p">[],&lt;/span> &lt;span class="nx">action&lt;/span>: &lt;span class="kt">number&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nx">state&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">action&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>is equivalent to&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">reducer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/** @type {number[]} */&lt;/span> &lt;span class="nx">state&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/** @type {number} */&lt;/span> &lt;span class="nx">action&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nx">state&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">action&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>編譯時期產生縮圖</title><link>https://blog.simbafs.cc/p/js/og/</link><pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/og/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/og.png" alt="Featured image of post 編譯時期產生縮圖" />&lt;h1 id="og">OG&lt;/h1>
 &lt;p>這裡的目的是要編譯時期靜態產生 OG image，也就是封面圖，為什麼不用 &lt;code>@vercel/og&lt;/code> 在需要的時候在 edge runtime 上產生呢？我就喜歡弄成靜態的&lt;/p>
 &lt;h2 id="selenium">selenium&lt;/h2>
 &lt;p>我想要程式化的產生圖片，根據提供的資訊替換標題、附標題、標籤等資訊，首先想到的就是 react 產出網頁截圖，當然不是人工截圖，是用 selenium 這樣的自動化工具，之前看過保哥一篇文章介紹這樣的操作，但是有個問題是我只是想產一張圖片還開一個瀏覽器是不是太癰腫了，無論是時間上或是記憶體開銷上。&lt;/p>
