@@ -1,11 +1,11 @@
 ---
 title: Ts to Jsdoc
 slug: ts-to-jsdoc
-date: 2023-09-02T12:49:39+08:00
-tags:
+date: '2023-09-02'
+tags: []
 categories:
-draft: true
-image:
+  - js
+image: /og/js/ts-to-jsdoc.png
 ---
 
 # Ts to Jsdoc
@@ -13,6 +13,17 @@ image:
 ## Generics
 
 https://medium.com/@antonkrinitsyn/jsdoc-generic-types-typescript-db213cf48640
+
+```ts
+type List<T> = []T
+```
+
+```js
+/**
+ * @template T
+ * @typedef {[]T} List
+ */
+```
 
 ## reducer
 
