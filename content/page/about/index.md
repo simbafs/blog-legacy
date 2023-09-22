@@ -6,7 +6,7 @@ menu:
       icon: user
     weight: 4
 title: About
-slug: index
+slug: about
 date: '2023-08-29'
 tags: []
 categories:
