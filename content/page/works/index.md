@@ -8,8 +8,9 @@ menu:
 title: Works
 slug: works
 tags: []
+draft: true
 ---
 
 # 作品集
 
-{{< card title="title" description="description" image="image" link="link">}}
+{{< listWork >}}

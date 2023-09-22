@@ -26,4 +26,7 @@ frontmatter:
 og: 
 	node ./script/frontmatter/index.js --og --only-change
 
+clean: 
+	rm -r public
+
 .PHONY: push tree build diff og frontmatter server

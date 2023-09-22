@@ -1,0 +1,13 @@
+{{ range $key, $value := $.Site.Data.repos }}
+<h2>{{ $key }}</h2>
+<ul>
+    {{ range $value }}
+    <li>
+        <strong><a href="{{ .link }}" target="_blank">{{ .name }}</a></strong>
+        {{ if .desc }}
+        : {{ .desc }}
+        {{ end }}
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
