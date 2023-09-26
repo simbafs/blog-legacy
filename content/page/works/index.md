@@ -8,7 +8,6 @@ menu:
 title: Works
 slug: works
 tags: []
-draft: true
 ---
 
 # 作品集
