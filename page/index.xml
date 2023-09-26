@@ -74,4 +74,221 @@ tech stack: golang&lt;/p>
 >@simbafs&lt;/a>&lt;/li>
 &lt;li>twitter: &lt;a class="link" href="https://twitter.com/simbafs" target="_blank" rel="noopener"
 >@simbafs&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Search</title><link>https://blog.simbafs.cc/search/</link><pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/search/</guid><description>&lt;img src="https://blog.simbafs.cc/og/search/index.png" alt="Featured image of post Search" /></description></item><item><title>Archives</title><link>https://blog.simbafs.cc/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/archives/</guid><description>&lt;img src="https://blog.simbafs.cc/og/archives/index.png" alt="Featured image of post Archives" /></description></item></channel></rss>
+&lt;/ul></description></item><item><title>Search</title><link>https://blog.simbafs.cc/search/</link><pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/search/</guid><description>&lt;img src="https://blog.simbafs.cc/og/search/index.png" alt="Featured image of post Search" /></description></item><item><title>Archives</title><link>https://blog.simbafs.cc/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/archives/</guid><description>&lt;img src="https://blog.simbafs.cc/og/archives/index.png" alt="Featured image of post Archives" /></description></item><item><title>Works</title><link>https://blog.simbafs.cc/works/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/works/</guid><description>&lt;h1 id="作品集">作品集&lt;/h1>
+&lt;h2>HTML&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/2048" target="_blank">2048&lt;/a>&lt;/strong>
+: 2048 game
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/browser-voice-recognition" target="_blank">browser-voice-recognition&lt;/a>&lt;/strong>
+: 社課範例
+&lt;/li>
+&lt;/ul>
+&lt;h2>experinment&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/experinment-flutter" target="_blank">experinment-flutter&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/experinment-p2p" target="_blank">experinment-p2p&lt;/a>&lt;/strong>
+: Implement p2p with go
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/experinment-pocketbase" target="_blank">experinment-pocketbase&lt;/a>&lt;/strong>
+: post system based on pocketbase, experimental project
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/experinment-go-plugin" target="_blank">experinment-go-plugin&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;/ul>
+&lt;h2>golang&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/bitdiff" target="_blank">bitdiff&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/echoServer" target="_blank">echoServer&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/go-chat" target="_blank">go-chat&lt;/a>&lt;/strong>
+: 我的 Golang 練習作品，用 Golang 寫的純文字聊天室
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/golang-node-http-compare" target="_blank">golang-node-http-compare&lt;/a>&lt;/strong>
+: comparing response time of servers written in golang and nodejs
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/keyv" target="_blank">keyv&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/keyvSqlite3" target="_blank">keyvSqlite3&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/native-go-ssh-server" target="_blank">native-go-ssh-server&lt;/a>&lt;/strong>
+: A repo to test how to use golang.org/x/crypto/ssh to build a ssh server
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/telegrary" target="_blank">telegrary&lt;/a>&lt;/strong>
+: Telegrary = Telegram &amp;#43; Diary
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/TUImd" target="_blank">TUImd&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/tunex" target="_blank">tunex&lt;/a>&lt;/strong>
+: Tunnel Express, yet another servro alternative.
+&lt;/li>
+&lt;/ul>
+&lt;h2>misc&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/2021-ironman-example" target="_blank">2021-ironman-example&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/blender" target="_blank">blender&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/CFCorsProxy" target="_blank">CFCorsProxy&lt;/a>&lt;/strong>
+: a cloudflare CORS proxy worker
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/cksh-2021-yearbook" target="_blank">cksh-2021-yearbook&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/coscup-streaming-script" target="_blank">coscup-streaming-script&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/dotfile" target="_blank">dotfile&lt;/a>&lt;/strong>
+: my config files
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/ipfs-tool" target="_blank">ipfs-tool&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/matplotlib-docker" target="_blank">matplotlib-docker&lt;/a>&lt;/strong>
+: Run matplotlib in docker
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/userscript" target="_blank">userscript&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/yt-dl-tool" target="_blank">yt-dl-tool&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;/ul>
+&lt;h2>ncku&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/millikan" target="_blank">millikan&lt;/a>&lt;/strong>
+: 計算密立根油滴實驗的結果
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/ncku-course" target="_blank">ncku-course&lt;/a>&lt;/strong>
+: 共享成績分佈圖
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/ncku-ebook" target="_blank">ncku-ebook&lt;/a>&lt;/strong>
+: 成大物理系課本電子書下載連結
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/NCKU-Extended" target="_blank">NCKU-Extended&lt;/a>&lt;/strong>
+: 成大選課系統瀏覽器擴充套件
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/NCKU-IS" target="_blank">NCKU-IS&lt;/a>&lt;/strong>
+: NCKU Information Security
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/NCKU-NA" target="_blank">NCKU-NA&lt;/a>&lt;/strong>
+: NCKU Numerical Analysis
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/ncku-pd-1" target="_blank">ncku-pd-1&lt;/a>&lt;/strong>
+: NCKU Programming Design 1
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/ncku-physic-python-HW" target="_blank">ncku-physic-python-HW&lt;/a>&lt;/strong>
+: 成大物理普物（一）python 作業
+&lt;/li>
+&lt;/ul>
+&lt;h2>nodejs&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/aurl" target="_blank">aurl&lt;/a>&lt;/strong>
+: URL shortener written in nodejs.
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/daniel" target="_blank">daniel&lt;/a>&lt;/strong>
+: 王品庠有很多事情會忘記，大家一起來提醒他吧！
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/getObj.js" target="_blank">getObj.js&lt;/a>&lt;/strong>
+: parse a string and get property from a object by the parsed result.
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/ip-qrcode" target="_blank">ip-qrcode&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/js-loop-execution-time" target="_blank">js-loop-execution-time&lt;/a>&lt;/strong>
+: calculate the execution time of some loops in Nodejs
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/json-viewer" target="_blank">json-viewer&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/og" target="_blank">og&lt;/a>&lt;/strong>
+: statically generate og image in png based on provided information
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/shwoo-spider" target="_blank">shwoo-spider&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/simply.js" target="_blank">simply.js&lt;/a>&lt;/strong>
+: a Discord bot library
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/slides" target="_blank">slides&lt;/a>&lt;/strong>
+: Convert Markdown docs into slides, support meeting mode. Similar to hackmd. 將 Markdown 文件轉換為簡報，支援會議模式。 類似於 hackmd
+&lt;/li>
+&lt;/ul>
+&lt;h2>reactjs&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/astro-blog" target="_blank">astro-blog&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/boshiamy" target="_blank">boshiamy&lt;/a>&lt;/strong>
+: 嘸蝦米練習網頁
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/coscup-attendance" target="_blank">coscup-attendance&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/go-next-monorepo" target="_blank">go-next-monorepo&lt;/a>&lt;/strong>
+: Template for golang and nextjs in a monorepo
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/JingJing" target="_blank">JingJing&lt;/a>&lt;/strong>
+: 晶晶體產生器——你給我中文，我幫你轉成晶晶體
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/next-blog" target="_blank">next-blog&lt;/a>&lt;/strong>
+: MD blog driven in nextjs
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/pixivReader" target="_blank">pixivReader&lt;/a>&lt;/strong>
+: use google translate to translate novel from pixiv
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/todo" target="_blank">todo&lt;/a>&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/weatherApp" target="_blank">weatherApp&lt;/a>&lt;/strong>
+: Weather app build with nextjs
+&lt;/li>
+&lt;li>
+&lt;strong>&lt;a href="https://github.com/simbafs/wsync" target="_blank">wsync&lt;/a>&lt;/strong>
+: sync states from backend and frontend
+&lt;/li>
+&lt;/ul></description></item></channel></rss>
