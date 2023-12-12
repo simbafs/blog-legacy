@@ -497,26 +497,26 @@ docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache la
 &lt;/span>&lt;span class="lnt">20
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ cd aseprite
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ mkdir build
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cd build
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ export CC=clang
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ export CXX=clang++
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">cd&lt;/span> &lt;span class="n">aseprite&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">mkdir&lt;/span> &lt;span class="n">build&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">cd&lt;/span> &lt;span class="n">build&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="k">export&lt;/span> &lt;span class="n">CC&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">clang&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="k">export&lt;/span> &lt;span class="n">CXX&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">clang&lt;/span>&lt;span class="o">++&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># add by me
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ export CMAKE_CXX_COMPILER=&amp;#34;ccache&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># add by me&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="k">export&lt;/span> &lt;span class="n">CMAKE_CXX_COMPILER&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;ccache&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cmake \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DCMAKE_CXX_FLAGS:STRING=-stdlib=libc++ \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DCMAKE_EXE_LINKER_FLAGS:STRING=-stdlib=libc++ \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DLAF_BACKEND=skia \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DSKIA_DIR=$HOME/deps/skia \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DSKIA_LIBRARY_DIR=$HOME/deps/skia/out/Release-x64 \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DSKIA_LIBRARY=$HOME/deps/skia/out/Release-x64/libskia.a \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -G Ninja \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ..
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ninja aseprite
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">cmake&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DCMAKE_BUILD_TYPE&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">RelWithDebInfo&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DCMAKE_CXX_FLAGS&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">STRING&lt;/span>&lt;span class="o">=-&lt;/span>&lt;span class="n">stdlib&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">libc&lt;/span>&lt;span class="o">++&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DCMAKE_EXE_LINKER_FLAGS&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">STRING&lt;/span>&lt;span class="o">=-&lt;/span>&lt;span class="n">stdlib&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">libc&lt;/span>&lt;span class="o">++&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DLAF_BACKEND&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">skia&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DSKIA_DIR&lt;/span>&lt;span class="o">=$&lt;/span>&lt;span class="n">HOME&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">deps&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">skia&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DSKIA_LIBRARY_DIR&lt;/span>&lt;span class="o">=$&lt;/span>&lt;span class="n">HOME&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">deps&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">skia&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">out&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Release&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">x64&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DSKIA_LIBRARY&lt;/span>&lt;span class="o">=$&lt;/span>&lt;span class="n">HOME&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">deps&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">skia&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">out&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Release&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">x64&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">libskia&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">a&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">G&lt;/span> &lt;span class="n">Ninja&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">..&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">ninja&lt;/span> &lt;span class="n">aseprite&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="execute-path">Execute Path&lt;/h2>
@@ -2178,9 +2178,9 @@ name 和 git 設定的一樣&lt;/p>
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ gpg --full-gen-key
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ gpg --list-secret-keys
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ gpg --armor --export &amp;lt;secret key&amp;gt;
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">gpg&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">full&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">gen&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">key&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">gpg&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">list&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">secret&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">keys&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">gpg&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">armor&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="k">export&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">secret&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="刪除金鑰">刪除金鑰&lt;/h2>
@@ -2252,8 +2252,8 @@ name 和 git 設定的一樣&lt;/p>
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># isolate --init
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/var/local/lib/isolate/0
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># isolate --init&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">/&lt;/span>&lt;span class="k">var&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">local&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lib&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">isolate&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="mi">0&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>建立一個新的沙箱

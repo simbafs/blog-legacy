@@ -398,24 +398,24 @@
 &lt;/span>&lt;span class="lnt">18
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;% if(page.comments &amp;amp;&amp;amp; theme.gitalk.enabled){ %&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&amp;#34;&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;script src=&amp;#34;https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;div id=&amp;#34;gitalk-container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var gitalk = new Gitalk({
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> clientID: &amp;#39;&amp;lt;%= theme.gitalk.clientID %&amp;gt;&amp;#39;,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> clientSecret: &amp;#39;&amp;lt;%= theme.gitalk.clientSecret %&amp;gt;&amp;#39;,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: md5(window.location.pathname),
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repo: &amp;#39;&amp;lt;%= theme.gitalk.repo %&amp;gt;&amp;#39;,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> owner: &amp;#39;&amp;lt;%= theme.gitalk.owner %&amp;gt;&amp;#39;,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> admin: &amp;#39;&amp;lt;%= theme.gitalk.admin %&amp;gt;&amp;#39;,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> distractionFreeMode: &amp;#39;&amp;lt;%= theme.gitalk.on %&amp;gt;&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> })
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> gitalk.render(&amp;#39;gitalk-container&amp;#39;)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/script&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;% } %&amp;gt;
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;%&lt;/span> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">page&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">comments&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">theme&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">gitalk&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">enabled&lt;/span>&lt;span class="p">){&lt;/span> &lt;span class="o">%&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">link&lt;/span> &lt;span class="n">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="n">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">script&lt;/span> &lt;span class="n">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="n">script&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">script&lt;/span> &lt;span class="n">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="n">script&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">div&lt;/span> &lt;span class="n">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;gitalk-container&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="n">div&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">script&lt;/span> &lt;span class="n">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;text/javascript&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">gitalk&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">new&lt;/span> &lt;span class="n">Gitalk&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">clientID&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;%= theme.gitalk.clientID %&amp;gt;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">clientSecret&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;%= theme.gitalk.clientSecret %&amp;gt;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">id&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">md5&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">window&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">location&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pathname&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">repo&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;%= theme.gitalk.repo %&amp;gt;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">owner&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;%= theme.gitalk.owner %&amp;gt;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">admin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;%= theme.gitalk.admin %&amp;gt;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">distractionFreeMode&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;%= theme.gitalk.on %&amp;gt;&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">gitalk&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">render&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;gitalk-container&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;/&lt;/span>&lt;span class="n">script&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;%&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">%&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ol start="4">

@@ -4116,26 +4116,26 @@ docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache la
 &lt;/span>&lt;span class="lnt">20
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ cd aseprite
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ mkdir build
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cd build
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ export CC=clang
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ export CXX=clang++
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">cd&lt;/span> &lt;span class="n">aseprite&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">mkdir&lt;/span> &lt;span class="n">build&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">cd&lt;/span> &lt;span class="n">build&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="k">export&lt;/span> &lt;span class="n">CC&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">clang&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="k">export&lt;/span> &lt;span class="n">CXX&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">clang&lt;/span>&lt;span class="o">++&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># add by me
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ export CMAKE_CXX_COMPILER=&amp;#34;ccache&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># add by me&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="k">export&lt;/span> &lt;span class="n">CMAKE_CXX_COMPILER&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;ccache&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cmake \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DCMAKE_CXX_FLAGS:STRING=-stdlib=libc++ \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DCMAKE_EXE_LINKER_FLAGS:STRING=-stdlib=libc++ \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DLAF_BACKEND=skia \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DSKIA_DIR=$HOME/deps/skia \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DSKIA_LIBRARY_DIR=$HOME/deps/skia/out/Release-x64 \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -DSKIA_LIBRARY=$HOME/deps/skia/out/Release-x64/libskia.a \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -G Ninja \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ..
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ninja aseprite
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">cmake&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DCMAKE_BUILD_TYPE&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">RelWithDebInfo&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DCMAKE_CXX_FLAGS&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">STRING&lt;/span>&lt;span class="o">=-&lt;/span>&lt;span class="n">stdlib&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">libc&lt;/span>&lt;span class="o">++&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DCMAKE_EXE_LINKER_FLAGS&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">STRING&lt;/span>&lt;span class="o">=-&lt;/span>&lt;span class="n">stdlib&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">libc&lt;/span>&lt;span class="o">++&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DLAF_BACKEND&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">skia&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DSKIA_DIR&lt;/span>&lt;span class="o">=$&lt;/span>&lt;span class="n">HOME&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">deps&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">skia&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DSKIA_LIBRARY_DIR&lt;/span>&lt;span class="o">=$&lt;/span>&lt;span class="n">HOME&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">deps&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">skia&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">out&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Release&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">x64&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">DSKIA_LIBRARY&lt;/span>&lt;span class="o">=$&lt;/span>&lt;span class="n">HOME&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">deps&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">skia&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">out&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">Release&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">x64&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">libskia&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">a&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">G&lt;/span> &lt;span class="n">Ninja&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">..&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">ninja&lt;/span> &lt;span class="n">aseprite&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="execute-path">Execute Path&lt;/h2>
@@ -4181,12 +4181,12 @@ docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache la
 &lt;/span>&lt;span class="lnt">6
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ mkdir -p /opt/riscv/bin ~/riscv
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ echo &amp;#39;export RISCV=/opt/riscv&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ echo &amp;#39;export PATH=$PATH:$RISCV/bin&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo apt install git autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev ninja-build
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cd ~/riscv
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git clone --recurse-submodules -j8 --depth 1 https://github.com/riscv/riscv-gnu-toolchain
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">mkdir&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">opt&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">riscv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">bin&lt;/span> &lt;span class="o">~/&lt;/span>&lt;span class="n">riscv&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">echo&lt;/span> &lt;span class="s1">&amp;#39;export RISCV=/opt/riscv&amp;#39;&lt;/span> &lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="o">~/.&lt;/span>&lt;span class="n">zshrc&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">echo&lt;/span> &lt;span class="s1">&amp;#39;export PATH=$PATH:$RISCV/bin&amp;#39;&lt;/span> &lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="o">~/.&lt;/span>&lt;span class="n">zshrc&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">sudo&lt;/span> &lt;span class="n">apt&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">autoconf&lt;/span> &lt;span class="n">automake&lt;/span> &lt;span class="n">autotools&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dev&lt;/span> &lt;span class="n">curl&lt;/span> &lt;span class="n">python3&lt;/span> &lt;span class="n">libmpc&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dev&lt;/span> &lt;span class="n">libmpfr&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dev&lt;/span> &lt;span class="n">libgmp&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dev&lt;/span> &lt;span class="n">gawk&lt;/span> &lt;span class="n">build&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">essential&lt;/span> &lt;span class="n">bison&lt;/span> &lt;span class="n">flex&lt;/span> &lt;span class="n">texinfo&lt;/span> &lt;span class="n">gperf&lt;/span> &lt;span class="n">libtool&lt;/span> &lt;span class="n">patchutils&lt;/span> &lt;span class="n">bc&lt;/span> &lt;span class="n">zlib1g&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dev&lt;/span> &lt;span class="n">libexpat1&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dev&lt;/span> &lt;span class="n">ninja&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">build&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">cd&lt;/span> &lt;span class="o">~/&lt;/span>&lt;span class="n">riscv&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">clone&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">recurse&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">submodules&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">j8&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">depth&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="n">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="o">//&lt;/span>&lt;span class="n">github&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">riscv&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">riscv&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">gnu&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">toolchain&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;blockquote>
@@ -4200,8 +4200,8 @@ docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache la
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ cd riscv-gnu-toolchain
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ./configure --prefix=$RISCV --enable-multilib
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">cd&lt;/span> &lt;span class="n">riscv&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">gnu&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">toolchain&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="o">./&lt;/span>&lt;span class="n">configure&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">prefix&lt;/span>&lt;span class="o">=$&lt;/span>&lt;span class="n">RISCV&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">enable&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">multilib&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;blockquote>
@@ -11145,29 +11145,29 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/span>&lt;span class="lnt">23
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">source ~/.zplug/init.zsh
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">source&lt;/span> &lt;span class="o">~/.&lt;/span>&lt;span class="n">zplug&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">init&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zsh&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># plugins
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zplug &amp;#39;romkatv/powerlevel10k&amp;#39;, as:theme, depth:1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zplug &amp;#39;zsh-users/zsh-autosuggestions&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># plugins&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">zplug&lt;/span> &lt;span class="s1">&amp;#39;romkatv/powerlevel10k&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">as&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">theme&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">depth&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">zplug&lt;/span> &lt;span class="s1">&amp;#39;zsh-users/zsh-autosuggestions&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">if ! zplug check --verbose; then
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> printf &amp;#34;Install? [y/N]: &amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if read -q; then
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo; zplug install
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">!&lt;/span> &lt;span class="n">zplug&lt;/span> &lt;span class="n">check&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">verbose&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span> &lt;span class="s2">&amp;#34;Install? [y/N]: &amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">read&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">echo&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">zplug&lt;/span> &lt;span class="n">install&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">fi&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zplug load
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">zplug&lt;/span> &lt;span class="nb">load&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Initialization code that may require console input (password prompts, [y/n]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># confirmations, etc.) must go above this block; everything else may go below.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">if [[ -r &amp;#34;${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh&amp;#34; ]]; then
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> source &amp;#34;${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Initialization code that may require console input (password prompts, [y/n]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># confirmations, etc.) must go above this block; everything else may go below.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">[[&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">r&lt;/span> &lt;span class="s2">&amp;#34;${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh&amp;#34;&lt;/span> &lt;span class="p">]];&lt;/span> &lt;span class="n">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">source&lt;/span> &lt;span class="s2">&amp;#34;${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">[[&lt;/span> &lt;span class="o">!&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">f&lt;/span> &lt;span class="o">~/.&lt;/span>&lt;span class="n">p10k&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zsh&lt;/span> &lt;span class="p">]]&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">source&lt;/span> &lt;span class="o">~/.&lt;/span>&lt;span class="n">p10k&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zsh&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h1 id="問題為什麼按-kbd方向鍵上kbd-時會出現和現在指令開頭不同的字">[問題]為什麼按 &lt;!-- raw HTML omitted -->方向鍵上&lt;!-- raw HTML omitted --> 時會出現和現在指令開頭不同的字&lt;/h1>
@@ -11413,18 +11413,18 @@ alt="zsh-install"
 &lt;/span>&lt;span class="lnt">12
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">source ~/.zplug/init.zsh
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">source&lt;/span> &lt;span class="o">~/.&lt;/span>&lt;span class="n">zplug&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">init&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zsh&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># plugins
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># plugins&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">if ! zplug check --verbose; then
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> printf &amp;#34;Install? [y/N]: &amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if read -q; then
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo; zplug install
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">!&lt;/span> &lt;span class="n">zplug&lt;/span> &lt;span class="n">check&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">verbose&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span> &lt;span class="s2">&amp;#34;Install? [y/N]: &amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">read&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">echo&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">zplug&lt;/span> &lt;span class="n">install&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">fi&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zplug load
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">zplug&lt;/span> &lt;span class="nb">load&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>第一行是&lt;strong>啟動&lt;/strong> zplug
@@ -13698,15 +13698,15 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;span class="lnt">9
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm i -D \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @babel/core \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @babel/cli \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @babel/preset-env \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @babel/preset-react \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> babel-loader \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> react \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> react-dom \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> webpack
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">npm&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">D&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">babel&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">core&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">babel&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">cli&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">babel&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">preset&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">env&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">babel&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">preset&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">react&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">babel&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">loader&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">react&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">react&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dom&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">webpack&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="packagejson">package.json&lt;/h2>
@@ -13833,9 +13833,9 @@ name 和 git 設定的一樣&lt;/p>
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ gpg --full-gen-key
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ gpg --list-secret-keys
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ gpg --armor --export &amp;lt;secret key&amp;gt;
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">gpg&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">full&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">gen&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">key&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">gpg&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">list&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">secret&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">keys&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">gpg&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">armor&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="k">export&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">secret&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="刪除金鑰">刪除金鑰&lt;/h2>
@@ -14021,8 +14021,8 @@ alt="2.png"
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># isolate --init
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/var/local/lib/isolate/0
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># isolate --init&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">/&lt;/span>&lt;span class="k">var&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">local&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">lib&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">isolate&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="mi">0&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>建立一個新的沙箱
@@ -15051,24 +15051,24 @@ dash 沒有支援這個語法
 &lt;/span>&lt;span class="lnt">18
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;% if(page.comments &amp;amp;&amp;amp; theme.gitalk.enabled){ %&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&amp;#34;&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;script src=&amp;#34;https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;div id=&amp;#34;gitalk-container&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var gitalk = new Gitalk({
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> clientID: &amp;#39;&amp;lt;%= theme.gitalk.clientID %&amp;gt;&amp;#39;,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> clientSecret: &amp;#39;&amp;lt;%= theme.gitalk.clientSecret %&amp;gt;&amp;#39;,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: md5(window.location.pathname),
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repo: &amp;#39;&amp;lt;%= theme.gitalk.repo %&amp;gt;&amp;#39;,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> owner: &amp;#39;&amp;lt;%= theme.gitalk.owner %&amp;gt;&amp;#39;,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> admin: &amp;#39;&amp;lt;%= theme.gitalk.admin %&amp;gt;&amp;#39;,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> distractionFreeMode: &amp;#39;&amp;lt;%= theme.gitalk.on %&amp;gt;&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> })
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> gitalk.render(&amp;#39;gitalk-container&amp;#39;)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/script&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;% } %&amp;gt;
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;%&lt;/span> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">page&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">comments&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">theme&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">gitalk&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">enabled&lt;/span>&lt;span class="p">){&lt;/span> &lt;span class="o">%&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">link&lt;/span> &lt;span class="n">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="n">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">script&lt;/span> &lt;span class="n">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="n">script&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">script&lt;/span> &lt;span class="n">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="n">script&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">div&lt;/span> &lt;span class="n">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;gitalk-container&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="n">div&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">script&lt;/span> &lt;span class="n">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;text/javascript&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">gitalk&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">new&lt;/span> &lt;span class="n">Gitalk&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">clientID&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;%= theme.gitalk.clientID %&amp;gt;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">clientSecret&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;%= theme.gitalk.clientSecret %&amp;gt;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">id&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">md5&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">window&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">location&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pathname&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">repo&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;%= theme.gitalk.repo %&amp;gt;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">owner&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;%= theme.gitalk.owner %&amp;gt;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">admin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;%= theme.gitalk.admin %&amp;gt;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">distractionFreeMode&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;%= theme.gitalk.on %&amp;gt;&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">gitalk&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">render&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;gitalk-container&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;/&lt;/span>&lt;span class="n">script&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;%&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">%&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ol start="4">

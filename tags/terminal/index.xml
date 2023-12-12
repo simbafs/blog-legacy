@@ -2838,29 +2838,29 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/span>&lt;span class="lnt">23
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">source ~/.zplug/init.zsh
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">source&lt;/span> &lt;span class="o">~/.&lt;/span>&lt;span class="n">zplug&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">init&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zsh&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># plugins
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zplug &amp;#39;romkatv/powerlevel10k&amp;#39;, as:theme, depth:1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zplug &amp;#39;zsh-users/zsh-autosuggestions&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># plugins&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">zplug&lt;/span> &lt;span class="s1">&amp;#39;romkatv/powerlevel10k&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">as&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">theme&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">depth&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">zplug&lt;/span> &lt;span class="s1">&amp;#39;zsh-users/zsh-autosuggestions&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">if ! zplug check --verbose; then
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> printf &amp;#34;Install? [y/N]: &amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if read -q; then
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo; zplug install
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">!&lt;/span> &lt;span class="n">zplug&lt;/span> &lt;span class="n">check&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">verbose&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span> &lt;span class="s2">&amp;#34;Install? [y/N]: &amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">read&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">echo&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">zplug&lt;/span> &lt;span class="n">install&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">fi&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zplug load
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">zplug&lt;/span> &lt;span class="nb">load&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Initialization code that may require console input (password prompts, [y/n]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># confirmations, etc.) must go above this block; everything else may go below.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">if [[ -r &amp;#34;${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh&amp;#34; ]]; then
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> source &amp;#34;${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Initialization code that may require console input (password prompts, [y/n]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># confirmations, etc.) must go above this block; everything else may go below.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">[[&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">r&lt;/span> &lt;span class="s2">&amp;#34;${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh&amp;#34;&lt;/span> &lt;span class="p">]];&lt;/span> &lt;span class="n">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">source&lt;/span> &lt;span class="s2">&amp;#34;${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">[[&lt;/span> &lt;span class="o">!&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">f&lt;/span> &lt;span class="o">~/.&lt;/span>&lt;span class="n">p10k&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zsh&lt;/span> &lt;span class="p">]]&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">source&lt;/span> &lt;span class="o">~/.&lt;/span>&lt;span class="n">p10k&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zsh&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h1 id="問題為什麼按-kbd方向鍵上kbd-時會出現和現在指令開頭不同的字">[問題]為什麼按 &lt;!-- raw HTML omitted -->方向鍵上&lt;!-- raw HTML omitted --> 時會出現和現在指令開頭不同的字&lt;/h1>
@@ -3106,18 +3106,18 @@ alt="zsh-install"
 &lt;/span>&lt;span class="lnt">12
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">source ~/.zplug/init.zsh
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">source&lt;/span> &lt;span class="o">~/.&lt;/span>&lt;span class="n">zplug&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">init&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zsh&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># plugins
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># plugins&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">if ! zplug check --verbose; then
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> printf &amp;#34;Install? [y/N]: &amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if read -q; then
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo; zplug install
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">!&lt;/span> &lt;span class="n">zplug&lt;/span> &lt;span class="n">check&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">verbose&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span> &lt;span class="s2">&amp;#34;Install? [y/N]: &amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">read&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">echo&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">zplug&lt;/span> &lt;span class="n">install&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">fi&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zplug load
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">zplug&lt;/span> &lt;span class="nb">load&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>第一行是&lt;strong>啟動&lt;/strong> zplug
