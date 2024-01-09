@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/linux/</link><description>Recent content in linux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 16 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare SSH Tunnel</title><link>https://blog.simbafs.cc/p/linux/cloudflare-ssh-tunnel/</link><pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/cloudflare-ssh-tunnel/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/cloudflare-ssh-tunnel.png" alt="Featured image of post Cloudflare SSH Tunnel" />&lt;h1 id="cloudflare-ssh-tunnel">Cloudflare SSH Tunnel&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/linux/</link><description>Recent content in linux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 09 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Crop and Resize PDF</title><link>https://blog.simbafs.cc/p/linux/crop-and-resize-pdf/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/crop-and-resize-pdf/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/crop-and-resize-pdf.png" alt="Featured image of post Crop and Resize PDF" />&lt;h1 id="crop-and-resize-pdf">Crop and Resize PDF&lt;/h1>
+&lt;p>我下載了一堆研究所考古題，不過有些檔案的白邊太多了，我希望能夠裁掉，然後又因為列印時需要，所以希望能再縮放成 A4。&lt;/p>
+&lt;p>首先是查到&lt;a class="link" href="https://www.baeldung.com/linux/pdf-files-crop-cli" target="_blank" rel="noopener"
+>這篇&lt;/a>文章有教怎麼縮放 pdf&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ pdfjam --keepinfo --trim &amp;#34;20mm 48mm 55mm 25mm&amp;#34; --fitpaper true single-page.pdf --outfile single-page-manualcropped.pdf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>不過這時候大小是裁切過的大小，所以需要縮放成 A4。又查到&lt;a class="link" href="https://superuser.com/questions/676013/scaling-pdf-content-and-page-dimensions-from-command-line" target="_blank" rel="noopener"
+>這篇&lt;/a>，把他跟上面裁切的指令結合，就變成&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ pdfjam --keepinfo --trim &amp;#34;124px 247px 124px 117px&amp;#34; --papersize &amp;#39;{21cm, 29.7cm}&amp;#39; --outfile out.pdf EC24_110_1.pdf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>pdfjam&lt;/code> 提供一個 &lt;code>--batch&lt;/code> 指令，所以如果全部要切的邊都一樣，就可以用&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pdfjam --keepinfo --trim &amp;#34;124px 247px 124px 117px&amp;#34; --papersize &amp;#39;{21cm, 29.7cm}&amp;#39; --batch *.pdf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>一次切完&lt;/p>
+&lt;h1 id="reference">Reference&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.baeldung.com/linux/pdf-files-crop-cli" target="_blank" rel="noopener"
+>https://www.baeldung.com/linux/pdf-files-crop-cli&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://superuser.com/questions/676013/scaling-pdf-content-and-page-dimensions-from-command-line" target="_blank" rel="noopener"
+>https://superuser.com/questions/676013/scaling-pdf-content-and-page-dimensions-from-command-line&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Cloudflare SSH Tunnel</title><link>https://blog.simbafs.cc/p/linux/cloudflare-ssh-tunnel/</link><pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/cloudflare-ssh-tunnel/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/cloudflare-ssh-tunnel.png" alt="Featured image of post Cloudflare SSH Tunnel" />&lt;h1 id="cloudflare-ssh-tunnel">Cloudflare SSH Tunnel&lt;/h1>
 &lt;p>先新增 self host application，選 webssh，然後建立同一個網域的 ssh tunnel，完成！細節請參考 &lt;a class="link" href="https://chriskirby.net/web-browser-ssh-terminal-to-homelab-with-cloudflare-zero-trust/" target="_blank" rel="noopener"
 >https://chriskirby.net/web-browser-ssh-terminal-to-homelab-with-cloudflare-zero-trust/&lt;/a> &lt;br>
 用戶端只需要裝 cloudflared 就好，不用塞 token，當第一次連線時會開啟一個瀏覽器視窗驗證身分，驗證完的 token 會存在 &lt;code>~/.cloudflared/&lt;/code> 下，第二次連線就感受不到 cloudflared 的存在了&lt;/p>
