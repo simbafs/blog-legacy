@@ -1,0 +1,25 @@
+<!-- mermaid -->
+{{ if .Params.mermaid }}
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.7.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+<script>
+    // Replace mermaid pre.code to div
+    Array.from(document.querySelectorAll('.language-fallback'))
+        .map(e => e.closest('.highlight'))
+        .forEach(el => {
+            console.log(el)
+            el.outerHTML = `<pre class="mermaid">${el.querySelector('.language-fallback').textContent}</pre>`
+        })
+</script>
+<style>
+    /* Set svg to center */
+    .mermaid svg {
+        display: block;
+        margin: auto;
+    }
+
+    .mermaid {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+</style>
+{{ end }}

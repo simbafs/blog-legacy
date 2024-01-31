@@ -1,0 +1,8 @@
+{{ if (.Get "source") }}
+<div style="display: grid; grid-template-columns: 1fr 1fr;;">
+    {{ highlight (strings.Trim .Inner "\n") "text" }}
+    {{ highlight (strings.Trim .Inner "\n") "mermaid"}}
+</div>
+{{ else }}
+{{ highlight (strings.Trim .Inner "\n") "mermaid" }}
+{{ end }}
