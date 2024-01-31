@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tree on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/tree/</link><description>Recent content in tree on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/tree/index.xml" rel="self" type="application/rss+xml"/><item><title>Mermaid Binary Tree</title><link>https://blog.simbafs.cc/p/other/mermaid-binary-tree/</link><pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/mermaid-binary-tree/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/mermaid-binary-tree.png" alt="Featured image of post Mermaid Binary Tree" />&lt;h1 id="mermaid-binary-tree">Mermaid Binary Tree&lt;/h1>
+&lt;p>今天寫筆記遇到一個需求，我想要用 mermaid 畫出下面這顆二元樹，其中 &lt;code>B&lt;/code> 沒有左節點，我希望能夠明確的標示出 &lt;code>D&lt;/code> 是 &lt;code>B&lt;/code> 的右節點&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">graph
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> A --- B &amp;amp; C
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B ~~~ 1:::hidden
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B --- D
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">classDef hidden display: none;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="mermaid">mermaid&lt;/h2>
+&lt;p>如果無腦用一般 &lt;a class="link" href="https://mermaid.js.org" target="_blank" rel="noopener"
+>mermaid&lt;/a> 的寫法會像這樣&lt;/p>
+&lt;div style="display: grid; grid-template-columns: 1fr 1fr;;">
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">graph
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> A --- B &amp;amp; C
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B --- D&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">graph
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> A --- B &amp;amp; C
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B --- D&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;code>D&lt;/code> 就直直的放在 &lt;code>B&lt;/code> 的下面，網路上找了一圈都沒看到可以把 &lt;code>D&lt;/code> 往右靠的方法。最後，我想出來的方法是在 &lt;code>D&lt;/code> 的左邊畫一個隱形的節點，用一條隱形的邊連起來，這樣 mermaid 就會自然的把 &lt;code>D&lt;/code> 往右邊擺了。&lt;/p>
+&lt;h3 id="隱形的邊">隱形的邊&lt;/h3>
+&lt;p>首先，根據 &lt;a class="link" href="https://mermaid.js.org/syntax/flowchart.html#an-invisible-link" target="_blank" rel="noopener"
+>官方文件&lt;/a> 我們可以用 &lt;code>~~~&lt;/code> 畫一條隱形的邊&lt;/p>
+&lt;div style="display: grid; grid-template-columns: 1fr 1fr;;">
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">graph
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> A --- B &amp;amp; C
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B ~~~ E[hidden node]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B --- D&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">graph
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> A --- B &amp;amp; C
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B ~~~ E[hidden node]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B --- D&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h3 id="隱形的節點">隱形的節點&lt;/h3>
+&lt;p>再來，要把 &lt;code>E&lt;/code> 隱藏，&lt;a class="link" href="https://stackoverflow.com/questions/50268757/draw-arrow-from-node-to-nothing" target="_blank" rel="noopener"
+>這篇問答&lt;/a> 提供了很多方法，不過我最喜歡的是定義一個 class 的方式&lt;/p>
+&lt;div style="display: grid; grid-template-columns: 1fr 1fr;;">
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">graph
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> A --- B &amp;amp; C
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B ~~~ 1:::hidden
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B --- D
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">classDef hidden display: none;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">graph
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> A --- B &amp;amp; C
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B ~~~ 1:::hidden
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B --- D
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">classDef hidden display: none;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>這樣我們就得到一張有明確左右節點的二元樹了！&lt;/p>
+&lt;h2 id="goat">GoAT&lt;/h2>
+&lt;p>寫這篇的時候發現 hugo 原生支援 &lt;a class="link" href="https://github.com/bep/goat" target="_blank" rel="noopener"
+>GoAT&lt;/a>，於是就拿來畫畫看，&lt;/p>
+&lt;div class="goat svg-container ">
+&lt;svg
+xmlns="http://www.w3.org/2000/svg"
+font-family="Menlo,Lucida Console,monospace"
+viewBox="0 0 96 217"
+>
+&lt;g transform='translate(8,16)'>
+&lt;path d='M 24,0 L 56,0' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 24,32 L 40,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 40,32 L 56,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 0,80 L 16,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 16,80 L 32,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 48,80 L 64,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 64,80 L 80,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 0,112 L 16,112' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 16,112 L 32,112' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 48,112 L 80,112' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 24,160 L 40,160' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 40,160 L 56,160' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 24,192 L 56,192' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 0,80 L 0,112' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 24,0 L 24,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 24,160 L 24,192' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 32,80 L 32,112' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 48,80 L 48,112' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 56,0 L 56,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 56,160 L 56,192' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 80,80 L 80,112' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 16,80 L 40,32' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 16,112 L 40,160' fill='none' stroke='currentColor'>&lt;/path>
+&lt;path d='M 40,32 L 64,80' fill='none' stroke='currentColor'>&lt;/path>
+&lt;text text-anchor='middle' x='16' y='100' fill='currentColor' style='font-size:1em'>B&lt;/text>
+&lt;text text-anchor='middle' x='40' y='20' fill='currentColor' style='font-size:1em'>A&lt;/text>
+&lt;text text-anchor='middle' x='40' y='180' fill='currentColor' style='font-size:1em'>D&lt;/text>
+&lt;text text-anchor='middle' x='64' y='100' fill='currentColor' style='font-size:1em'>C&lt;/text>
+&lt;/g>
+&lt;/svg>
+&lt;/div>
+&lt;p>效果不錯，不過原始碼就&amp;hellip;&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl"> .---.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> | A |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;-+-&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> / \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> / \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.-+-. .-+-.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| B | | C |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#39;-+-&amp;#39; &amp;#39;---&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .-+-.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> | D |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;---&amp;#39;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>光是對齊那謝角角跟線就花了十分鐘，有夠麻煩。這東西畫出來的圖確實好看，而且就算是純文字也很輕易看得懂（不像 mermaid 還有隱藏線跟隱藏節點要忽略），但是畫起來太累了，如果沒有工具，我絕對不會畫第二遍。我是有找到 &lt;a class="link" href="https://textik.com" target="_blank" rel="noopener"
+>https://textik.com&lt;/a> 勉強可以用，不過也不適合拿來畫 binary tree，而且他的格式沒有跟 GoAT 完全兼容，需要再自己修改一些眉眉角角，所以還是放棄 GoAT 了。&lt;/p></description></item></channel></rss>
