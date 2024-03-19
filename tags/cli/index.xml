@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>cli on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/cli/</link><description>Recent content in cli on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 09 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>Crop and Resize PDF</title><link>https://blog.simbafs.cc/p/linux/crop-and-resize-pdf/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/crop-and-resize-pdf/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/crop-and-resize-pdf.png" alt="Featured image of post Crop and Resize PDF" />&lt;h1 id="crop-and-resize-pdf">Crop and Resize PDF&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cli on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/cli/</link><description>Recent content in Cli on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 09 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>Crop and Resize PDF</title><link>https://blog.simbafs.cc/p/linux/crop-and-resize-pdf/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/crop-and-resize-pdf/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/crop-and-resize-pdf.png" alt="Featured image of post Crop and Resize PDF" />&lt;h1 id="crop-and-resize-pdf">Crop and Resize PDF&lt;/h1>
 &lt;p>我下載了一堆研究所考古題，不過有些檔案的白邊太多了，我希望能夠裁掉，然後又因為列印時需要，所以希望能再縮放成 A4。&lt;/p>
 &lt;p>首先是查到&lt;a class="link" href="https://www.baeldung.com/linux/pdf-files-crop-cli" target="_blank" rel="noopener"
 >這篇&lt;/a>文章有教怎麼縮放 pdf&lt;/p>
@@ -2086,7 +2086,7 @@ alt="vim replace"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/../img/day11/vim-selsect.gif"
+&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/img/day11/vim-selsect.gif"
 loading="lazy"
 alt="vim select"
 >&lt;/th>
@@ -2125,7 +2125,7 @@ alt="vim select"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/../img/day11/vim-replace-flag.gif"
+&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/img/day11/vim-replace-flag.gif"
 loading="lazy"
 alt="vim replace flag"
 >&lt;/th>

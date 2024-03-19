@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>latex on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/latex/</link><description>Recent content in latex on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/latex/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/other/index/</link><pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/md2pdf/index.png" alt="Featured image of post Markdown to PDF" />&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Latex on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/latex/</link><description>Recent content in Latex on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/latex/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/other/index/</link><pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/md2pdf/index.png" alt="Featured image of post Markdown to PDF" />&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
 &lt;h2 id="安裝環境">安裝環境&lt;/h2>
 &lt;p>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >pandoc&lt;/a> 你想得到的文件之間轉擋 &lt;a class="link" href="https://pandoc.org/diagram.svgz?v=20230203095535" target="_blank" rel="noopener"
@@ -180,11 +180,11 @@
 簡單來說如果裡面要印 &lt;code>n&lt;/code> 個反單引號，外面就要用 &lt;code>n+1&lt;/code> 個反單引號括起來&lt;/p>
 &lt;/blockquote>
 &lt;p>然後這是截圖：
-&lt;figure>&lt;img src="./out-1.png"/>&lt;figcaption>
+&lt;figure>&lt;img src="./out-1.png">&lt;figcaption>
 &lt;h4>page 1 of out.pdf&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
-&lt;figure>&lt;img src="./out-2.png"/>&lt;figcaption>
+&lt;figure>&lt;img src="./out-2.png">&lt;figcaption>
 &lt;h4>page 2 of out.pdf&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tmux on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/tmux/</link><description>Recent content in tmux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/tmux/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 21：儲存器與剪貼簿</title><link>https://blog.simbafs.cc/p/ithelp/day21/</link><pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day21/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day21.png" alt="Featured image of post Day 21：儲存器與剪貼簿" />&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tmux on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/tmux/</link><description>Recent content in Tmux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/tmux/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 21：儲存器與剪貼簿</title><link>https://blog.simbafs.cc/p/ithelp/day21/</link><pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day21/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day21.png" alt="Featured image of post Day 21：儲存器與剪貼簿" />&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day21/stackoverflow-meme.png"
@@ -1907,7 +1907,7 @@ alt="vim replace"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/../img/day11/vim-selsect.gif"
+&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/img/day11/vim-selsect.gif"
 loading="lazy"
 alt="vim select"
 >&lt;/th>
@@ -1946,7 +1946,7 @@ alt="vim select"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/../img/day11/vim-replace-flag.gif"
+&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/img/day11/vim-replace-flag.gif"
 loading="lazy"
 alt="vim replace flag"
 >&lt;/th>

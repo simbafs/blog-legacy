@@ -5004,11 +5004,11 @@ docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache la
 簡單來說如果裡面要印 &lt;code>n&lt;/code> 個反單引號，外面就要用 &lt;code>n+1&lt;/code> 個反單引號括起來&lt;/p>
 &lt;/blockquote>
 &lt;p>然後這是截圖：
-&lt;figure>&lt;img src="./out-1.png"/>&lt;figcaption>
+&lt;figure>&lt;img src="./out-1.png">&lt;figcaption>
 &lt;h4>page 1 of out.pdf&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
-&lt;figure>&lt;img src="./out-2.png"/>&lt;figcaption>
+&lt;figure>&lt;img src="./out-2.png">&lt;figcaption>
 &lt;h4>page 2 of out.pdf&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
@@ -10609,7 +10609,7 @@ alt="vim replace"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/../img/day11/vim-selsect.gif"
+&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/img/day11/vim-selsect.gif"
 loading="lazy"
 alt="vim select"
 >&lt;/th>
@@ -10648,7 +10648,7 @@ alt="vim select"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/../img/day11/vim-replace-flag.gif"
+&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/img/day11/vim-replace-flag.gif"
 loading="lazy"
 alt="vim replace flag"
 >&lt;/th>
@@ -14584,6 +14584,33 @@ hello.sh&lt;/p>
 &lt;/div>
 &lt;/div>&lt;p>來連回社辦啦！
 最後可以把這堆在 vps 上再做一次就可以在 internet 連回社辦伺服器了&lt;/p>
+&lt;h3 id="centos">CentOS&lt;/h3>
+&lt;blockquote>
+&lt;p>update: 2024/03/19
+最近接管實驗室的伺服器，系統是 CentOS，似乎是 CentOS 上 autossh 版本問題，需要用以下指令才能正確啟動 autossh&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">autossh -M 0 -f \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -oStrictHostKeyChecking=no \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -oServerAliveInterval=15 \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -oServerAliveCountMax=4 \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -L 3130:localhost:3130 \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -N -i /path/to/some.pem user@remotehost
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>參考網址 &lt;a class="link" href="https://stackoverflow.com/a/46710513/10858268" target="_blank" rel="noopener"
+>https://stackoverflow.com/a/46710513/10858268&lt;/a>&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="參考網址">參考網址&lt;/h2>
 &lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/15983795/how-do-i-establish-a-bidirectional-ssh-tunnel" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/15983795/how-do-i-establish-a-bidirectional-ssh-tunnel&lt;/a>&lt;br>
@@ -14597,7 +14624,9 @@ hello.sh&lt;/p>
 >https://codertw.com/%E4%BC%BA%E6%9C%8D%E5%99%A8/377688/&lt;/a>&lt;br>
 這篇講 ssh tunnel 最清楚&lt;br>
 &lt;a class="link" href="https://yu-jack.github.io/2019/01/08/ssh-tunnel/" target="_blank" rel="noopener"
->https://yu-jack.github.io/2019/01/08/ssh-tunnel/&lt;/a>&lt;/p></description></item><item><title>Unix Socket</title><link>https://blog.simbafs.cc/p/js/unix-socket/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/unix-socket/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/unix-socket.png" alt="Featured image of post Unix Socket" />&lt;h1 id="unix-socket">Unix Socket&lt;/h1>
+>https://yu-jack.github.io/2019/01/08/ssh-tunnel/&lt;/a>
+&lt;a class="link" href="https://stackoverflow.com/a/46710513/10858268" target="_blank" rel="noopener"
+>https://stackoverflow.com/a/46710513/10858268&lt;/a>&lt;/p></description></item><item><title>Unix Socket</title><link>https://blog.simbafs.cc/p/js/unix-socket/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/unix-socket/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/unix-socket.png" alt="Featured image of post Unix Socket" />&lt;h1 id="unix-socket">Unix Socket&lt;/h1>
 &lt;p>今天心血來潮在看 unix socket
 突然想到 node 可不可以把 服務監聽在一個 socket file
 這樣在設定的時候就不用記哪個服務是幾 port&lt;/p>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>other on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/other/</link><description>Recent content in other on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/other/index.xml" rel="self" type="application/rss+xml"/><item><title>Mermaid Binary Tree</title><link>https://blog.simbafs.cc/p/other/mermaid-binary-tree/</link><pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/mermaid-binary-tree/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/mermaid-binary-tree.png" alt="Featured image of post Mermaid Binary Tree" />&lt;h1 id="mermaid-binary-tree">Mermaid Binary Tree&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Other on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/other/</link><description>Recent content in Other on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/other/index.xml" rel="self" type="application/rss+xml"/><item><title>Mermaid Binary Tree</title><link>https://blog.simbafs.cc/p/other/mermaid-binary-tree/</link><pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/mermaid-binary-tree/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/mermaid-binary-tree.png" alt="Featured image of post Mermaid Binary Tree" />&lt;h1 id="mermaid-binary-tree">Mermaid Binary Tree&lt;/h1>
 &lt;p>今天寫筆記遇到一個需求，我想要用 mermaid 畫出下面這顆二元樹，其中 &lt;code>B&lt;/code> 沒有左節點，我希望能夠明確的標示出 &lt;code>D&lt;/code> 是 &lt;code>B&lt;/code> 的右節點&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -380,11 +380,11 @@ viewBox="0 0 96 217"
 簡單來說如果裡面要印 &lt;code>n&lt;/code> 個反單引號，外面就要用 &lt;code>n+1&lt;/code> 個反單引號括起來&lt;/p>
 &lt;/blockquote>
 &lt;p>然後這是截圖：
-&lt;figure>&lt;img src="./out-1.png"/>&lt;figcaption>
+&lt;figure>&lt;img src="./out-1.png">&lt;figcaption>
 &lt;h4>page 1 of out.pdf&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
-&lt;figure>&lt;img src="./out-2.png"/>&lt;figcaption>
+&lt;figure>&lt;img src="./out-2.png">&lt;figcaption>
 &lt;h4>page 2 of out.pdf&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
