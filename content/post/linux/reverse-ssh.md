@@ -53,6 +53,21 @@ $ ssh server@localhost -p 1111
 來連回社辦啦！
 最後可以把這堆在 vps 上再做一次就可以在 internet 連回社辦伺服器了
 
+### CentOS
+> update: 2024/03/19
+最近接管實驗室的伺服器，系統是 CentOS，似乎是 CentOS 上 autossh 版本問題，需要用以下指令才能正確啟動 autossh
+
+```
+autossh -M 0 -f \
+    -oStrictHostKeyChecking=no \
+    -oServerAliveInterval=15 \
+    -oServerAliveCountMax=4 \
+    -L 3130:localhost:3130 \
+    -N -i /path/to/some.pem user@remotehost
+```
+
+> 參考網址 https://stackoverflow.com/a/46710513/10858268
+
 ## 參考網址
 
 https://stackoverflow.com/questions/15983795/how-do-i-establish-a-bidirectional-ssh-tunnel  
@@ -62,3 +77,4 @@ http://blog.adahsu.net/2007/11/ssh-reverse-tunnel.html
 https://codertw.com/%E4%BC%BA%E6%9C%8D%E5%99%A8/377688/  
 這篇講 ssh tunnel 最清楚  
 https://yu-jack.github.io/2019/01/08/ssh-tunnel/
+https://stackoverflow.com/a/46710513/10858268
