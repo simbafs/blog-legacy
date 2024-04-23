@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Simba 的喵窩</title><link>https://blog.simbafs.cc/posts/</link><description>Recent content in Posts on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 23 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>KDE Touchpad Gesture</title><link>https://blog.simbafs.cc/posts/linux/kde-touchpad-gesture/</link><pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/posts/linux/kde-touchpad-gesture/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/kde-touchpad-gesture.png" alt="Featured image of post KDE Touchpad Gesture" />&lt;h1 id="kde-touchpad-gesture">KDE Touchpad Gesture&lt;/h1>
+&lt;p>目前我的筆電作業系統是 KDE neon，他一直有個地方讓我覺得很不方便，就是沒有觸控版手勢操作，這個 &lt;a class="link" href="https://github.com/NayamAmarshe/ToucheggKDE" target="_blank" rel="noopener"
+>repo&lt;/a> 就是透過 touchegg 補齊了這方面的缺陷，他安裝超級簡單只有兩個步驟&lt;/p>
+&lt;h2 id="1-安裝-touchegg">1. 安裝 touchegg&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ apt install touchegg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="2-把設定檔放進去">2. 把設定檔放進去&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ mkdir -p ~/.config/touchegg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ cd ~/.config/touchegg/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ wget https://raw.githubusercontent.com/NayamAmarshe/ToucheggKDE/main/touchegg.conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="3-重開機">3. 重開機&lt;/h2>
+&lt;p>我猜重新登入圖形界面應該就有效了，不果反正重開機也沒多慢，就重開機，開機完就可以用手勢切換工作區囉。&lt;/p></description></item></channel></rss>
