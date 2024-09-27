@@ -1,7 +1,7 @@
 # filediff := $(shell git diff --name-only HEAD | grep --color=never content/post | sed -e 's/content\/post\///')
 date := $(shell date +%Y-%m-%d)
 push: 
-	make og
+	# make og
 	git add .
 	git commit -m "$(date)"
 	git pull
