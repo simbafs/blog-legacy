@@ -1,13 +1,15 @@
 ---
 title: Circle Transition in Motion Canvas
 slug: circle-transition-in-motion-canvas
-date: 2024-09-30T01:01:53+08:00
+date: '2024-09-29'
 tags:
-    - animation
-    - motion canvas
-    - transition
+  - animation
+  - motion canvas
+  - transition
 categories:
-image:
+  - js
+  - circle-transition-in-motion-canvas
+image: /og/js/circle-transition-in-motion-canvas/index.png
 ---
 
 # Circle Transition in Motion Canvas

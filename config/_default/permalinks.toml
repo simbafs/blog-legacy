@@ -1,3 +1,4 @@
 # Permalinks format of each content section
-post = "/p/:sections[1:]/:slug/"
+post = "/p/:slug/"
+# post = "/p/:sections[1:]/:slug/"
 page = "/:slug/"

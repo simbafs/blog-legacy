@@ -1,14 +1,15 @@
 ---
 title: Pointer to Structure Passed to Interface
 slug: pointer-to-structure-passed-to-interface
-date: 2024-09-28T00:42:57+08:00
+date: '2024-09-27'
 tags:
-    - pointer
-    - interface
-    - structure
+  - pointer
+  - interface
+  - structure
 categories:
+  - golang
 draft: true
-image:
+image: /og/golang/pointer-to-structure-passed-to-interface.png
 ---
 
 以下程式碼中的 `Admin` 實作了 `User`

@@ -29,4 +29,7 @@ og:
 clean: 
 	rm -r public
 
-.PHONY: push tree build diff og frontmatter server
+updateTheme: 
+	hugo mod get -u github.com/CaiJimmy/hugo-theme-stack/v3
+
+.PHONY: push tree build diff og frontmatter server updateTheme

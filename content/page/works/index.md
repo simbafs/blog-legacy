@@ -8,6 +8,10 @@ menu:
 title: Works
 slug: works
 tags: []
+date: '2024-06-19'
+categories:
+  - works
+image: /og/works/index.png
 ---
 
 # 作品集
