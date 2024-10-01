@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UseState on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/usestate/</link><description>Recent content in UseState on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/usestate/index.xml" rel="self" type="application/rss+xml"/><item><title>Reset State When State Chagne</title><link>https://blog.simbafs.cc/p/js/reactjs/reset-state-when-state-chagne/</link><pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/reset-state-when-state-chagne/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/reset-state-when-state-chagne.png" alt="Featured image of post Reset State When State Chagne" />&lt;h1 id="reset-state-when-state-chagne">Reset State When State Chagne&lt;/h1>
-&lt;p>我現在正在做一個 Popup 元件（component），內容是一個表單，以下是幾個需求&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UseState on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/usestate/</link><description>Recent content in UseState on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/usestate/index.xml" rel="self" type="application/rss+xml"/><item><title>Reset State When State Chagne</title><link>https://blog.simbafs.cc/p/reset-state-when-state-chagne/</link><pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/reset-state-when-state-chagne/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/reset-state-when-state-chagne.png" alt="Featured image of post Reset State When State Chagne" />&lt;h1 id="reset-state-when-state-chagne">&lt;a href="#reset-state-when-state-chagne" class="header-anchor">&lt;/a>Reset State When State Chagne
+&lt;/h1>&lt;p>我現在正在做一個 Popup 元件（component），內容是一個表單，以下是幾個需求&lt;/p>
 &lt;ol>
 &lt;li>點擊外面、叉叉和 Cancel 要關掉&lt;/li>
 &lt;li>點擊 Save 要做一些事後關掉&lt;/li>
 &lt;li>無論怎麼關掉的，都要清除表單狀態（reset）&lt;/li>
 &lt;li>這個頁面會有不同 Popup，裡面的表單不一樣&lt;/li>
 &lt;/ol>
-&lt;h2 id="popup-元件設計">Popup 元件設計&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="popup-元件設計">&lt;a href="#popup-%e5%85%83%e4%bb%b6%e8%a8%ad%e8%a8%88" class="header-anchor">&lt;/a>Popup 元件設計
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -105,16 +105,16 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>我知所以把 &lt;code>MyForm&lt;/code> 抽出來做成另一個元件，是因為我覺得我的 &lt;code>Page&lt;/code> 函數太長了，想分開&lt;/p>
-&lt;h2 id="問題">問題&lt;/h2>
-&lt;p>這樣看起來很棒，設計得很有彈性，也達成了大部分需求，但是需求 3 卻沒有達成，問題就在我是用 &lt;code>display: none&lt;/code> 隱藏 &lt;code>Popup&lt;/code> 的，因此下次再打開 &lt;code>Popup&lt;/code> 時對於 React 來說這個元件沒變化，不會重設一個新的 &lt;code>Popup&lt;/code>。&lt;/p>
-&lt;h2 id="我如何解決的">我如何解決的&lt;/h2>
-&lt;p>我曾經想過，手動在 &lt;code>MyForm&lt;/code> 兩個按鈕的事件加上 &lt;code>updateDate(defaultValue)&lt;/code>，但是這樣的話，點擊表單外面半透明的區域關掉表單不會清除表單內容，如果把表單和 Popup 合在一起又破壞了當初彈性的設計。不合起來的話也是做得到，但是會變得很複雜不好維護。&lt;/p>
+&lt;h2 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h2>&lt;p>這樣看起來很棒，設計得很有彈性，也達成了大部分需求，但是需求 3 卻沒有達成，問題就在我是用 &lt;code>display: none&lt;/code> 隱藏 &lt;code>Popup&lt;/code> 的，因此下次再打開 &lt;code>Popup&lt;/code> 時對於 React 來說這個元件沒變化，不會重設一個新的 &lt;code>Popup&lt;/code>。&lt;/p>
+&lt;h2 id="我如何解決的">&lt;a href="#%e6%88%91%e5%a6%82%e4%bd%95%e8%a7%a3%e6%b1%ba%e7%9a%84" class="header-anchor">&lt;/a>我如何解決的
+&lt;/h2>&lt;p>我曾經想過，手動在 &lt;code>MyForm&lt;/code> 兩個按鈕的事件加上 &lt;code>updateDate(defaultValue)&lt;/code>，但是這樣的話，點擊表單外面半透明的區域關掉表單不會清除表單內容，如果把表單和 Popup 合在一起又破壞了當初彈性的設計。不合起來的話也是做得到，但是會變得很複雜不好維護。&lt;/p>
 &lt;p>最後，我只在 Popup 上新增了一個 &lt;code>key&lt;/code> 屬性，就解決了這個問題。&lt;/p>
-&lt;h3 id="元件的生命週期">元件的生命週期&lt;/h3>
-&lt;p>要解釋這個問題就要先解釋元件的生命週期和 React 如何處理 state。一個元件的 state 在整個元件的生命週期中，React 會保證這個 state 是同一個 value，直到元件不再出現在 virtual DOM 上。&lt;br>
+&lt;h3 id="元件的生命週期">&lt;a href="#%e5%85%83%e4%bb%b6%e7%9a%84%e7%94%9f%e5%91%bd%e9%80%b1%e6%9c%9f" class="header-anchor">&lt;/a>元件的生命週期
+&lt;/h3>&lt;p>要解釋這個問題就要先解釋元件的生命週期和 React 如何處理 state。一個元件的 state 在整個元件的生命週期中，React 會保證這個 state 是同一個 value，直到元件不再出現在 virtual DOM 上。&lt;br>
 React 會把每個「frame」在 virtual DOM 中相同位置的同類型元件視為相同（例如 Popup 和 Popup、button 和 button），並且把上一個 frame 的 state 塞給這個元件，當 React 發現原本這裡有個元件，但是現在卻找不到了，那麼 React 就會視這個元件「消亡」，隨之清除原本應該給這個元件的 state。&lt;/p>
-&lt;h3 id="key">key&lt;/h3>
-&lt;p>除了檢查位置以外，React 還會檢查這個元件的 &lt;code>key&lt;/code> 屬性，即使位置一樣，&lt;code>key&lt;/code> 不一樣 React 依舊會把他視為是一個新的元件，並給他全新的 state。&lt;br>
+&lt;h3 id="key">&lt;a href="#key" class="header-anchor">&lt;/a>key
+&lt;/h3>&lt;p>除了檢查位置以外，React 還會檢查這個元件的 &lt;code>key&lt;/code> 屬性，即使位置一樣，&lt;code>key&lt;/code> 不一樣 React 依舊會把他視為是一個新的元件，並給他全新的 state。&lt;br>
 這個特性最常出現在用一個陣列去批次產生 JSX 的時候&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -133,8 +133,8 @@ React 會把每個「frame」在 virtual DOM 中相同位置的同類型元件�
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這樣當插入、刪除 &lt;code>userIds&lt;/code> 其中某個元素時，即便位置不一樣 React 還是可以透過 &lt;code>key&lt;/code> 去追蹤元件，並給他正確的 state&lt;/p>
-&lt;h3 id="利用-key-去清除-state">利用 key 去清除 state&lt;/h3>
-&lt;p>那麼，我們需要的就是在 &lt;code>open&lt;/code> 有變化時，塞給 &lt;code>Popup&lt;/code> 一個和上次不同的 key，就可以讓 React 知道這是一個新的元件，要給他新的 state&lt;/p>
+&lt;h3 id="利用-key-去清除-state">&lt;a href="#%e5%88%a9%e7%94%a8-key-%e5%8e%bb%e6%b8%85%e9%99%a4-state" class="header-anchor">&lt;/a>利用 key 去清除 state
+&lt;/h3>&lt;p>那麼，我們需要的就是在 &lt;code>open&lt;/code> 有變化時，塞給 &lt;code>Popup&lt;/code> 一個和上次不同的 key，就可以讓 React 知道這是一個新的元件，要給他新的 state&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cmd on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/cmd/</link><description>Recent content in Cmd on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 09 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/cmd/index.xml" rel="self" type="application/rss+xml"/><item><title>Crop and Resize PDF</title><link>https://blog.simbafs.cc/p/linux/crop-and-resize-pdf/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/crop-and-resize-pdf/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/crop-and-resize-pdf.png" alt="Featured image of post Crop and Resize PDF" />&lt;h1 id="crop-and-resize-pdf">Crop and Resize PDF&lt;/h1>
-&lt;p>我下載了一堆研究所考古題，不過有些檔案的白邊太多了，我希望能夠裁掉，然後又因為列印時需要，所以希望能再縮放成 A4。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cmd on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/cmd/</link><description>Recent content in Cmd on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 09 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/cmd/index.xml" rel="self" type="application/rss+xml"/><item><title>Crop and Resize PDF</title><link>https://blog.simbafs.cc/p/crop-and-resize-pdf/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/crop-and-resize-pdf/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/crop-and-resize-pdf.png" alt="Featured image of post Crop and Resize PDF" />&lt;h1 id="crop-and-resize-pdf">&lt;a href="#crop-and-resize-pdf" class="header-anchor">&lt;/a>Crop and Resize PDF
+&lt;/h1>&lt;p>我下載了一堆研究所考古題，不過有些檔案的白邊太多了，我希望能夠裁掉，然後又因為列印時需要，所以希望能再縮放成 A4。&lt;/p>
 &lt;p>首先是查到&lt;a class="link" href="https://www.baeldung.com/linux/pdf-files-crop-cli" target="_blank" rel="noopener"
 >這篇&lt;/a>文章有教怎麼縮放 pdf&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -30,8 +30,8 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>一次切完&lt;/p>
-&lt;h1 id="reference">Reference&lt;/h1>
-&lt;ul>
+&lt;h1 id="reference">&lt;a href="#reference" class="header-anchor">&lt;/a>Reference
+&lt;/h1>&lt;ul>
 &lt;li>&lt;a class="link" href="https://www.baeldung.com/linux/pdf-files-crop-cli" target="_blank" rel="noopener"
 >https://www.baeldung.com/linux/pdf-files-crop-cli&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://superuser.com/questions/676013/scaling-pdf-content-and-page-dimensions-from-command-line" target="_blank" rel="noopener"

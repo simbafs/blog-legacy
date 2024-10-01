@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Numpy on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/numpy/</link><description>Recent content in Numpy on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 23 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/numpy/index.xml" rel="self" type="application/rss+xml"/><item><title>Python Snippet</title><link>https://blog.simbafs.cc/p/python/snippet/</link><pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/python/snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/python/snippet.png" alt="Featured image of post Python Snippet" />&lt;h1 id="python-snippet">Python Snippet&lt;/h1>
-&lt;h2 id="basic">Basic&lt;/h2>
-&lt;h3 id="未定長度函數參數">未定長度函數參數&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Numpy on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/numpy/</link><description>Recent content in Numpy on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 23 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/numpy/index.xml" rel="self" type="application/rss+xml"/><item><title>Python Snippet</title><link>https://blog.simbafs.cc/p/snippet/</link><pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/python/snippet.png" alt="Featured image of post Python Snippet" />&lt;h1 id="python-snippet">&lt;a href="#python-snippet" class="header-anchor">&lt;/a>Python Snippet
+&lt;/h1>&lt;h2 id="basic">&lt;a href="#basic" class="header-anchor">&lt;/a>Basic
+&lt;/h2>&lt;h3 id="未定長度函數參數">&lt;a href="#%e6%9c%aa%e5%ae%9a%e9%95%b7%e5%ba%a6%e5%87%bd%e6%95%b8%e5%8f%83%e6%95%b8" class="header-anchor">&lt;/a>未定長度函數參數
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -13,8 +13,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">])&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="polynomal">polynomal&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h3 id="polynomal">&lt;a href="#polynomal" class="header-anchor">&lt;/a>polynomal
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -36,9 +36,9 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">f&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="type-annotation">Type Annotation&lt;/h2>
-&lt;h3 id="numpy-array-as-parameter">Numpy Array as Parameter&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="type-annotation">&lt;a href="#type-annotation" class="header-anchor">&lt;/a>Type Annotation
+&lt;/h2>&lt;h3 id="numpy-array-as-parameter">&lt;a href="#numpy-array-as-parameter" class="header-anchor">&lt;/a>Numpy Array as Parameter
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -50,9 +50,9 @@
 &lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/64600748/how-do-i-write-a-2d-array-parameter-specification-in-python" target="_blank" rel="noopener"
 >stackoverflow&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="numpy">Numpy&lt;/h2>
-&lt;h3 id="determinant-of-array">Determinant of array&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="numpy">&lt;a href="#numpy" class="header-anchor">&lt;/a>Numpy
+&lt;/h2>&lt;h3 id="determinant-of-array">&lt;a href="#determinant-of-array" class="header-anchor">&lt;/a>Determinant of array
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -64,8 +64,8 @@
 &lt;p>&lt;a class="link" href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.det.html" target="_blank" rel="noopener"
 >doc&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="multiply-a-matrix-and-a-array">Multiply a Matrix and a Array&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h3 id="multiply-a-matrix-and-a-array">&lt;a href="#multiply-a-matrix-and-a-array" class="header-anchor">&lt;/a>Multiply a Matrix and a Array
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>

@@ -1,40 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kotlin on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/kotlin/</link><description>Recent content in Kotlin on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 04 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/kotlin/index.xml" rel="self" type="application/rss+xml"/><item><title>beginning of kotlin</title><link>https://blog.simbafs.cc/p/kotlin/beginning-of-kotlin/</link><pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/kotlin/beginning-of-kotlin/</guid><description>&lt;img src="https://blog.simbafs.cc/og/kotlin/beginning-of-kotlin.png" alt="Featured image of post beginning of kotlin" />&lt;h1 id="val-vs-var">val vs var&lt;/h1>
-&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kotlin on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/kotlin/</link><description>Recent content in Kotlin on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 04 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/kotlin/index.xml" rel="self" type="application/rss+xml"/><item><title>beginning of kotlin</title><link>https://blog.simbafs.cc/p/beginning-of-kotlin/</link><pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/beginning-of-kotlin/</guid><description>&lt;img src="https://blog.simbafs.cc/og/kotlin/beginning-of-kotlin.png" alt="Featured image of post beginning of kotlin" />&lt;h1 id="val-vs-var">&lt;a href="#val-vs-var" class="header-anchor">&lt;/a>val vs var
+&lt;/h1>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">kotlin&lt;/th>
-&lt;th style="text-align:left">JS&lt;/th>
+&lt;th style="text-align: left">kotlin&lt;/th>
+&lt;th style="text-align: left">JS&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">val&lt;/td>
-&lt;td style="text-align:left">const&lt;/td>
+&lt;td style="text-align: left">val&lt;/td>
+&lt;td style="text-align: left">const&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">var&lt;/td>
-&lt;td style="text-align:left">let&lt;/td>
+&lt;td style="text-align: left">var&lt;/td>
+&lt;td style="text-align: left">let&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="ab">a..b&lt;/h1>
-&lt;table>
+&lt;h1 id="ab">&lt;a href="#ab" class="header-anchor">&lt;/a>a..b
+&lt;/h1>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">kotlin&lt;/th>
-&lt;th style="text-align:left">JS&lt;/th>
+&lt;th style="text-align: left">kotlin&lt;/th>
+&lt;th style="text-align: left">JS&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">a..b&lt;/td>
-&lt;td style="text-align:left">Array(b-a+1).fill(0).map(i =&amp;gt; i + a)&lt;/td>
+&lt;td style="text-align: left">a..b&lt;/td>
+&lt;td style="text-align: left">Array(b-a+1).fill(0).map(i =&amp;gt; i + a)&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="when">when&lt;/h1>
-&lt;h2 id="kotlin">kotlin&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h1 id="when">&lt;a href="#when" class="header-anchor">&lt;/a>when
+&lt;/h1>&lt;h2 id="kotlin">&lt;a href="#kotlin" class="header-anchor">&lt;/a>kotlin
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2

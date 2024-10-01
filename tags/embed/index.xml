@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Embed on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/embed/</link><description>Recent content in Embed on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 30 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/embed/index.xml" rel="self" type="application/rss+xml"/><item><title>Golang Parse All Files In Directory Into Templates</title><link>https://blog.simbafs.cc/p/golang/golang-parse-all-files-in-directory-into-templates/</link><pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/golang-parse-all-files-in-directory-into-templates/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/Golang-Parse-All-Files-In-Directory-Into-Templates.png" alt="Featured image of post Golang Parse All Files In Directory Into Templates" />&lt;h1 id="golang-parse-all-files-in-directory-into-templates">Golang Parse All Files In Directory Into Templates&lt;/h1>
-&lt;p>在用 gin 寫伺服器的時候，我發現模板並不會被 &lt;code>go build&lt;/code> 打包進執行檔裡面，所以在執行的時候就找不到檔案，當然這個問題可以用字串的形式直接把模板放進 golang 原始碼裡面，但是這樣程式碼一複雜就會不好用，這時候就可以用 golang 的 embed 函式庫把檔案「嵌入」到原始碼裡面。但是問題又來了，嵌入了之後要怎麼把字串變成模板物件呢？&lt;/p>
-&lt;h2 id="embed">Embed&lt;/h2>
-&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Embed on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/embed/</link><description>Recent content in Embed on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 30 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/embed/index.xml" rel="self" type="application/rss+xml"/><item><title>Golang Parse All Files In Directory Into Templates</title><link>https://blog.simbafs.cc/p/golang-parse-all-files-in-directory-into-templates/</link><pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang-parse-all-files-in-directory-into-templates/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/Golang-Parse-All-Files-In-Directory-Into-Templates.png" alt="Featured image of post Golang Parse All Files In Directory Into Templates" />&lt;h1 id="golang-parse-all-files-in-directory-into-templates">&lt;a href="#golang-parse-all-files-in-directory-into-templates" class="header-anchor">&lt;/a>Golang Parse All Files In Directory Into Templates
+&lt;/h1>&lt;p>在用 gin 寫伺服器的時候，我發現模板並不會被 &lt;code>go build&lt;/code> 打包進執行檔裡面，所以在執行的時候就找不到檔案，當然這個問題可以用字串的形式直接把模板放進 golang 原始碼裡面，但是這樣程式碼一複雜就會不好用，這時候就可以用 golang 的 embed 函式庫把檔案「嵌入」到原始碼裡面。但是問題又來了，嵌入了之後要怎麼把字串變成模板物件呢？&lt;/p>
+&lt;h2 id="embed">&lt;a href="#embed" class="header-anchor">&lt;/a>Embed
+&lt;/h2>&lt;blockquote>
 &lt;p>&lt;code>embed&lt;/code> 套件是 1.16 新出的功能，所以如果想用的話記得要更新 go 到 1.16 以上&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;code>embed&lt;/code> 嵌入檔案的方式是透過特殊格式的註解宣告，直接看官方範例：&lt;/p>
@@ -54,9 +54,9 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>可以看到，&lt;code>embed&lt;/code> 可以把檔案讀成三種格式 &lt;code>string&lt;/code>、&lt;code>[]byte&lt;/code>、&lt;code>embed.FS&lt;/code>，前兩者只能讀「一個」檔案，如果你只用這兩個的話引入時要用 &lt;code>_ &amp;quot;embed&amp;quot;&lt;/code>。&lt;code>embed.FS&lt;/code> 除了可以嵌入多個檔案之外，因為實做了 &lt;code>fs.FS&lt;/code> 所以可以使用當作一個檔案系統操作。&lt;/p>
-&lt;h2 id="tmeplate">Tmeplate&lt;/h2>
-&lt;h3 id="no-recursive">No Recursive&lt;/h3>
-&lt;p>最簡單的方法，你可以直接使用&lt;/p>
+&lt;h2 id="tmeplate">&lt;a href="#tmeplate" class="header-anchor">&lt;/a>Tmeplate
+&lt;/h2>&lt;h3 id="no-recursive">&lt;a href="#no-recursive" class="header-anchor">&lt;/a>No Recursive
+&lt;/h3>&lt;p>最簡單的方法，你可以直接使用&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -70,8 +70,8 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這個方法有個缺點，像上面這樣有子目錄就要一個一個設定，ParseFS 不會幫你往下尋找&lt;/p>
-&lt;h3 id="recursive">Recursive&lt;/h3>
-&lt;p>善用 &lt;code>embed.FS&lt;/code>，我們可以將資料夾下所有檔案載入成模板&lt;/p>
+&lt;h3 id="recursive">&lt;a href="#recursive" class="header-anchor">&lt;/a>Recursive
+&lt;/h3>&lt;p>善用 &lt;code>embed.FS&lt;/code>，我們可以將資料夾下所有檔案載入成模板&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -161,15 +161,15 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這種寫法雖然程式寫的比較多，但是在模板多的時候優勢就顯現出來了，完全不用管有幾層資料夾，反正放在 &lt;code>view&lt;/code> 裡面就可以了。&lt;/p>
-&lt;h2 id="關於-template-奇怪的坑">關於 Template 奇怪的坑&lt;/h2>
-&lt;p>如果仔細看你會發現 &lt;code>html/template&lt;/code> 套件有提供一個函數 &lt;code>ParseFS&lt;/code> 函數，可以直接傳 &lt;code>FS&lt;/code> 物件進去（如 #No-Recursive 的用法），但是因為 &lt;code>ParseFS&lt;/code> 在判定 template name 時是用檔名而不是路徑，所以不同資料夾下如果都有檔名一樣的模板，只有最後一個會生效。所以這個只適用沒有子目錄的情形，擴充性不足有點可惜。因此在 #Recursive 中我使用 &lt;code>Assets.ReadFile&lt;/code> 把檔案讀進來，再以字串傳進 Parse 就是為了避免這個 bug&lt;/p>
-&lt;h2 id="關於-golang-117-的坑">關於 Golang 1.17 的坑&lt;/h2>
-&lt;h3 id="空格">空格&lt;/h3>
-&lt;p>升到 Golang 1.17 之後，原本可以用 &lt;code>// go:embed filename&lt;/code> 引入，現在一定要用 &lt;code>//go:embed filename&lt;/code>，斜線和 &lt;code>go&lt;/code> 中間不能有空白。&lt;/p>
-&lt;h3 id="不能用開頭">不能用「.」開頭&lt;/h3>
-&lt;p>我不確定這是不是 1.17 的改變，我忘記以前 1.16.5 有沒有試過這個，&lt;code>filename&lt;/code> 不能是「.」開頭，也就是說不能寫 &lt;code>../filename&lt;/code>，所以要引入的檔案或目錄一定要放在 &lt;code>go run .&lt;/code> 或 &lt;code>go build&lt;/code> 執行的目錄下&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>&lt;a class="link" href="https://pkg.go.dev/embed" target="_blank" rel="noopener"
+&lt;h2 id="關於-template-奇怪的坑">&lt;a href="#%e9%97%9c%e6%96%bc-template-%e5%a5%87%e6%80%aa%e7%9a%84%e5%9d%91" class="header-anchor">&lt;/a>關於 Template 奇怪的坑
+&lt;/h2>&lt;p>如果仔細看你會發現 &lt;code>html/template&lt;/code> 套件有提供一個函數 &lt;code>ParseFS&lt;/code> 函數，可以直接傳 &lt;code>FS&lt;/code> 物件進去（如 #No-Recursive 的用法），但是因為 &lt;code>ParseFS&lt;/code> 在判定 template name 時是用檔名而不是路徑，所以不同資料夾下如果都有檔名一樣的模板，只有最後一個會生效。所以這個只適用沒有子目錄的情形，擴充性不足有點可惜。因此在 #Recursive 中我使用 &lt;code>Assets.ReadFile&lt;/code> 把檔案讀進來，再以字串傳進 Parse 就是為了避免這個 bug&lt;/p>
+&lt;h2 id="關於-golang-117-的坑">&lt;a href="#%e9%97%9c%e6%96%bc-golang-117-%e7%9a%84%e5%9d%91" class="header-anchor">&lt;/a>關於 Golang 1.17 的坑
+&lt;/h2>&lt;h3 id="空格">&lt;a href="#%e7%a9%ba%e6%a0%bc" class="header-anchor">&lt;/a>空格
+&lt;/h3>&lt;p>升到 Golang 1.17 之後，原本可以用 &lt;code>// go:embed filename&lt;/code> 引入，現在一定要用 &lt;code>//go:embed filename&lt;/code>，斜線和 &lt;code>go&lt;/code> 中間不能有空白。&lt;/p>
+&lt;h3 id="不能用開頭">&lt;a href="#%e4%b8%8d%e8%83%bd%e7%94%a8%e9%96%8b%e9%a0%ad" class="header-anchor">&lt;/a>不能用「.」開頭
+&lt;/h3>&lt;p>我不確定這是不是 1.17 的改變，我忘記以前 1.16.5 有沒有試過這個，&lt;code>filename&lt;/code> 不能是「.」開頭，也就是說不能寫 &lt;code>../filename&lt;/code>，所以要引入的檔案或目錄一定要放在 &lt;code>go run .&lt;/code> 或 &lt;code>go build&lt;/code> 執行的目錄下&lt;/p>
+&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;p>&lt;a class="link" href="https://pkg.go.dev/embed" target="_blank" rel="noopener"
 >https://pkg.go.dev/embed&lt;/a>&lt;br>
 &lt;a class="link" href="https://pkg.go.dev/io/fs" target="_blank" rel="noopener"
 >https://pkg.go.dev/io/fs&lt;/a>&lt;br>

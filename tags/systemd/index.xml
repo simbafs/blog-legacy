@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Systemd on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/systemd/</link><description>Recent content in Systemd on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 05 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/systemd/index.xml" rel="self" type="application/rss+xml"/><item><title>Mxlinux Boot with Systemd</title><link>https://blog.simbafs.cc/p/linux/mxlinux-boot-with-systemd/</link><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/mxlinux-boot-with-systemd/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/mxlinux-boot-with-systemd.png" alt="Featured image of post Mxlinux Boot with Systemd" />&lt;h1 id="mxlinux-boot-with-systemd">Mxlinux Boot with Systemd&lt;/h1>
-&lt;h2 id="問題">問題&lt;/h2>
-&lt;p>在 mxlinux 裡面，預設的 init 不是 systmed，這導致如果想用 systemctl 的時候就會跳出錯誤說&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Systemd on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/systemd/</link><description>Recent content in Systemd on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 05 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/systemd/index.xml" rel="self" type="application/rss+xml"/><item><title>Mxlinux Boot with Systemd</title><link>https://blog.simbafs.cc/p/mxlinux-boot-with-systemd/</link><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/mxlinux-boot-with-systemd/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/mxlinux-boot-with-systemd.png" alt="Featured image of post Mxlinux Boot with Systemd" />&lt;h1 id="mxlinux-boot-with-systemd">&lt;a href="#mxlinux-boot-with-systemd" class="header-anchor">&lt;/a>Mxlinux Boot with Systemd
+&lt;/h1>&lt;h2 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h2>&lt;p>在 mxlinux 裡面，預設的 init 不是 systmed，這導致如果想用 systemctl 的時候就會跳出錯誤說&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -10,5 +10,5 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>像是在安裝 &lt;code>mongodb-org&lt;/code> 的時候他就要用到 &lt;code>systemctl&lt;/code> 然後就會出錯。&lt;/p>
-&lt;h2 id="解法">解法&lt;/h2>
-&lt;p>其實 mxlinux 已經幫我們想好解法了，在開機選項時選 &lt;code>Advence&lt;/code> &amp;gt; &lt;code>Systemd&lt;/code> 就會以 systemd 開機&lt;/p></description></item></channel></rss>
+&lt;h2 id="解法">&lt;a href="#%e8%a7%a3%e6%b3%95" class="header-anchor">&lt;/a>解法
+&lt;/h2>&lt;p>其實 mxlinux 已經幫我們想好解法了，在開機選項時選 &lt;code>Advence&lt;/code> &amp;gt; &lt;code>Systemd&lt;/code> 就會以 systemd 開機&lt;/p></description></item></channel></rss>

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DelayOfLoop on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/delayofloop/</link><description>Recent content in DelayOfLoop on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/delayofloop/index.xml" rel="self" type="application/rss+xml"/><item><title>迴圈的延遲</title><link>https://blog.simbafs.cc/p/game/mindustry/delayofloop/</link><pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/delayofloop/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/mindustry/delayOfLoop/index.png" alt="Featured image of post 迴圈的延遲" />&lt;h1 id="迴圈的延遲">迴圈的延遲&lt;/h1>
-&lt;p>在&lt;a class="link" href="../turretautoaim" >上一篇&lt;/a>關於用 &lt;code>jump&lt;/code> 實現迴圈的部份，其實，Mindustry 的 &lt;code>jump&lt;/code> 的會有一個延遲&lt;/p>
-&lt;h2 id="單核">單核&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/singleCore.gif"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DelayOfLoop on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/delayofloop/</link><description>Recent content in DelayOfLoop on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/delayofloop/index.xml" rel="self" type="application/rss+xml"/><item><title>迴圈的延遲</title><link>https://blog.simbafs.cc/p/delayofloop/</link><pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/delayofloop/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/mindustry/delayOfLoop/index.png" alt="Featured image of post 迴圈的延遲" />&lt;h1 id="迴圈的延遲">&lt;a href="#%e8%bf%b4%e5%9c%88%e7%9a%84%e5%bb%b6%e9%81%b2" class="header-anchor">&lt;/a>迴圈的延遲
+&lt;/h1>&lt;p>在&lt;a class="link" href="../turretautoaim" >上一篇&lt;/a>關於用 &lt;code>jump&lt;/code> 實現迴圈的部份，其實，Mindustry 的 &lt;code>jump&lt;/code> 的會有一個延遲&lt;/p>
+&lt;h2 id="單核">&lt;a href="#%e5%96%ae%e6%a0%b8" class="header-anchor">&lt;/a>單核
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/singleCore.gif"
 loading="lazy"
 alt="single core"
 >&lt;/p>
-&lt;h2 id="多核">多核&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/fourCores.gif"
+&lt;h2 id="多核">&lt;a href="#%e5%a4%9a%e6%a0%b8" class="header-anchor">&lt;/a>多核
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/fourCores.gif"
 loading="lazy"
 alt="four cores"
 >&lt;/p></description></item></channel></rss>

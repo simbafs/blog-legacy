@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/cloud/</link><description>Recent content in Cloud on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 14 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/cloud/index.xml" rel="self" type="application/rss+xml"/><item><title>Google AppScript Calender API</title><link>https://blog.simbafs.cc/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/google-app-script-calender-api/</guid><description>&lt;img src="https://blog.simbafs.cc/og/cloud/googleAppScript.png" alt="Featured image of post Google AppScript Calender API" />&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
-&lt;p>因為我懶的一堂一堂課加入日曆、還要按重複，所以就來研究如何自動化。我的想法是透過一個物件定義課表，然後透過程式來自動化新增。評估了幾個技術後，決定使用 Google App Script 來實做，畢竟他和日曆都是 Google 產品，整合應該是最好的（吧，而且可以弄成類似雲端應用的感覺，輕鬆開放給其他人使用。&lt;/p>
-&lt;h2 id="建立專案">建立專案&lt;/h2>
-&lt;p>在 &lt;a class="link" href="https://script.google.com/home" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/cloud/</link><description>Recent content in Cloud on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 14 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/cloud/index.xml" rel="self" type="application/rss+xml"/><item><title>Google AppScript Calender API</title><link>https://blog.simbafs.cc/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/google-app-script-calender-api/</guid><description>&lt;img src="https://blog.simbafs.cc/og/cloud/googleAppScript.png" alt="Featured image of post Google AppScript Calender API" />&lt;h1 id="google-appscript">&lt;a href="#google-appscript" class="header-anchor">&lt;/a>Google AppScript
+&lt;/h1>&lt;p>因為我懶的一堂一堂課加入日曆、還要按重複，所以就來研究如何自動化。我的想法是透過一個物件定義課表，然後透過程式來自動化新增。評估了幾個技術後，決定使用 Google App Script 來實做，畢竟他和日曆都是 Google 產品，整合應該是最好的（吧，而且可以弄成類似雲端應用的感覺，輕鬆開放給其他人使用。&lt;/p>
+&lt;h2 id="建立專案">&lt;a href="#%e5%bb%ba%e7%ab%8b%e5%b0%88%e6%a1%88" class="header-anchor">&lt;/a>建立專案
+&lt;/h2>&lt;p>在 &lt;a class="link" href="https://script.google.com/home" target="_blank" rel="noopener"
 >https://script.google.com/home&lt;/a> 建立新專案後，會自動建立 &lt;code>程式碼.gs&lt;/code>，雖然他寫 &lt;code>.gs&lt;/code>，但可以直接當作 javascript 看，看設定頁面，背後應該也是 V8 在執行。&lt;/p>
-&lt;h2 id="連結-google-calendar">連結 Google Calendar&lt;/h2>
-&lt;p>我們的程式要連結日曆，需要權限和 API，點擊左側「服務」右邊的「+」，找到 &lt;code>Google Calendar API&lt;/code>，按新增&lt;/p>
-&lt;h2 id="新增一個活動">新增一個活動&lt;/h2>
-&lt;p>先透過一些範例來看看怎麼和 Google Calendar 互動&lt;/p>
-&lt;h3 id="單次的活動">單次的活動&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="連結-google-calendar">&lt;a href="#%e9%80%a3%e7%b5%90-google-calendar" class="header-anchor">&lt;/a>連結 Google Calendar
+&lt;/h2>&lt;p>我們的程式要連結日曆，需要權限和 API，點擊左側「服務」右邊的「+」，找到 &lt;code>Google Calendar API&lt;/code>，按新增&lt;/p>
+&lt;h2 id="新增一個活動">&lt;a href="#%e6%96%b0%e5%a2%9e%e4%b8%80%e5%80%8b%e6%b4%bb%e5%8b%95" class="header-anchor">&lt;/a>新增一個活動
+&lt;/h2>&lt;p>先透過一些範例來看看怎麼和 Google Calendar 互動&lt;/p>
+&lt;h3 id="單次的活動">&lt;a href="#%e5%96%ae%e6%ac%a1%e7%9a%84%e6%b4%bb%e5%8b%95" class="header-anchor">&lt;/a>單次的活動
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -27,8 +27,8 @@
 >https://developers.google.com/apps-script/reference/calendar/calendar#createeventtitle,-starttime,-endtime&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;p>寫好函數後，把上方的測試函數改成 &lt;code>myFunction&lt;/code>，然後按「執行」，就會單次執行這個函數了&lt;/p>
-&lt;h3 id="重覆的活動">重覆的活動&lt;/h3>
-&lt;p>接下來，來試試重複的活動，基本上只是新增一個 &lt;code>RecurrenceRule&lt;/code> 物件&lt;/p>
+&lt;h3 id="重覆的活動">&lt;a href="#%e9%87%8d%e8%a6%86%e7%9a%84%e6%b4%bb%e5%8b%95" class="header-anchor">&lt;/a>重覆的活動
+&lt;/h3>&lt;p>接下來，來試試重複的活動，基本上只是新增一個 &lt;code>RecurrenceRule&lt;/code> 物件&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -61,8 +61,8 @@
 &lt;a class="link" href="https://developers.google.com/apps-script/reference/calendar/event-recurrence" target="_blank" rel="noopener"
 >https://developers.google.com/apps-script/reference/calendar/event-recurrence&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="http">http&lt;/h2>
-&lt;p>現在我們能和日曆溝通了，理論上在加上一個好用的 API 界面就可以結束了，但是我還想加上一個 web 界面，這樣就可以不用每次都來編輯程式碼。&lt;/p>
+&lt;h2 id="http">&lt;a href="#http" class="header-anchor">&lt;/a>http
+&lt;/h2>&lt;p>現在我們能和日曆溝通了，理論上在加上一個好用的 API 界面就可以結束了，但是我還想加上一個 web 界面，這樣就可以不用每次都來編輯程式碼。&lt;/p>
 &lt;ol>
 &lt;li>新增 &lt;code>doGet(e)&lt;/code> 函數&lt;/li>
 &lt;/ol>
@@ -106,11 +106,11 @@
 >https://developers.google.com/apps-script/guides/web&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;p>然後就可以用這些東西湊一湊弄出一個好用的課表 WebApp 了&lt;/p>
-&lt;h2 id="驗證應用程式">驗證應用程式&lt;/h2>
-&lt;p>現在登入我們的網頁都會跳說這個應用程式不安全，需要提交程式給 Google 驗證後才能移除，不然就會一直出現這個醜醜的畫面，但是我還沒研究出來怎麼弄，也懶得弄。https://medium.com/@joshchang_51558/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%9C%89%E6%95%88%E7%9A%84%E9%80%9A%E9%81%8E-google-oauth-scope-verification-35019d93ce95 這個看起來應該可以參考&lt;/p>
-&lt;h2 id="我的程式碼">我的程式碼&lt;/h2>
-&lt;h3 id="maings">main.gs&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="驗證應用程式">&lt;a href="#%e9%a9%97%e8%ad%89%e6%87%89%e7%94%a8%e7%a8%8b%e5%bc%8f" class="header-anchor">&lt;/a>驗證應用程式
+&lt;/h2>&lt;p>現在登入我們的網頁都會跳說這個應用程式不安全，需要提交程式給 Google 驗證後才能移除，不然就會一直出現這個醜醜的畫面，但是我還沒研究出來怎麼弄，也懶得弄。https://medium.com/@joshchang_51558/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%9C%89%E6%95%88%E7%9A%84%E9%80%9A%E9%81%8E-google-oauth-scope-verification-35019d93ce95 這個看起來應該可以參考&lt;/p>
+&lt;h2 id="我的程式碼">&lt;a href="#%e6%88%91%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc" class="header-anchor">&lt;/a>我的程式碼
+&lt;/h2>&lt;h3 id="maings">&lt;a href="#maings" class="header-anchor">&lt;/a>main.gs
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -230,8 +230,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="indexhtml">index.html&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h3 id="indexhtml">&lt;a href="#indexhtml" class="header-anchor">&lt;/a>index.html
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -465,13 +465,13 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>用 Github Action 編譯並發 Release</title><link>https://blog.simbafs.cc/p/golang/github-action-release/</link><pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/github-action-release/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/githubAction.png" alt="Featured image of post 用 Github Action 編譯並發 Release" />&lt;h1 id="用-github-action-編譯並發-release">用 Github Action 編譯並發 Release&lt;/h1>
-&lt;p>如果自己寫的小工具的 GitHub 頁面右邊 Release 那欄有個什麼東西，一定很酷對吧！如果裡面已經提供了不同作業系統編譯好的程式，一定更酷！&lt;br>
+&lt;/div></description></item><item><title>用 Github Action 編譯並發 Release</title><link>https://blog.simbafs.cc/p/github-action-release/</link><pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/github-action-release/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/githubAction.png" alt="Featured image of post 用 Github Action 編譯並發 Release" />&lt;h1 id="用-github-action-編譯並發-release">&lt;a href="#%e7%94%a8-github-action-%e7%b7%a8%e8%ad%af%e4%b8%a6%e7%99%bc-release" class="header-anchor">&lt;/a>用 Github Action 編譯並發 Release
+&lt;/h1>&lt;p>如果自己寫的小工具的 GitHub 頁面右邊 Release 那欄有個什麼東西，一定很酷對吧！如果裡面已經提供了不同作業系統編譯好的程式，一定更酷！&lt;br>
 想要建立 Release，你可以在新版本發布時自己手動 crose compile 再手動設定 Release，這個方法可行，但是聽起來全手動就很 low，我們要用一個全自動的方式發 Release！&lt;/p>
-&lt;h2 id="github-actioin">Github Actioin&lt;/h2>
-&lt;p>既然我們程式碼都託管在 GitHub 了，直接用 Gtithub Action 是很合理的吧！&lt;/p>
-&lt;h3 id="觸發條件">觸發條件&lt;/h3>
-&lt;p>因為我們要做的是發布版本，不是每個 commit 都要觸發，因此觸發條件就設成&lt;/p>
+&lt;h2 id="github-actioin">&lt;a href="#github-actioin" class="header-anchor">&lt;/a>Github Actioin
+&lt;/h2>&lt;p>既然我們程式碼都託管在 GitHub 了，直接用 Gtithub Action 是很合理的吧！&lt;/p>
+&lt;h3 id="觸發條件">&lt;a href="#%e8%a7%b8%e7%99%bc%e6%a2%9d%e4%bb%b6" class="header-anchor">&lt;/a>觸發條件
+&lt;/h3>&lt;p>因為我們要做的是發布版本，不是每個 commit 都要觸發，因此觸發條件就設成&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -487,8 +487,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>意思是只有像是 &lt;code>v0.1.13&lt;/code> 這樣的標籤會觸發，也就是你建立新版本時。&lt;/p>
-&lt;h3 id="編譯">編譯&lt;/h3>
-&lt;p>在嘗試各種套件之後，我覺得 &lt;a class="link" href="https://github.com/marketplace/actions/goreleaser-action" target="_blank" rel="noopener"
+&lt;h3 id="編譯">&lt;a href="#%e7%b7%a8%e8%ad%af" class="header-anchor">&lt;/a>編譯
+&lt;/h3>&lt;p>在嘗試各種套件之後，我覺得 &lt;a class="link" href="https://github.com/marketplace/actions/goreleaser-action" target="_blank" rel="noopener"
 >goreleaser-action&lt;/a> 是我用起來最舒服的，不用太多設定，就直接都編譯好了（詳細設定可以去 &lt;a class="link" href="https://goreleaser.com" target="_blank" rel="noopener"
 >goreleaser 的網站看&lt;/a> )&lt;br>
 在 GitHub Action 中設定就下面幾行，第一個步驟是安裝 go，再來就是編譯了。&lt;/p>
@@ -521,8 +521,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>注意，裡面有個 &lt;code>secret.GITHUB_TOKEN&lt;/code>，這個東西你就照寫，不要抄錯，GitHub Action 會自動在 runtime 填入，所以你也不用特別去設定。&lt;/p>
-&lt;h3 id="上傳編譯好的執行檔">上傳編譯好的執行檔&lt;/h3>
-&lt;p>goreleaser 的文件裡面有推薦一個上傳的套件，但是可能是我笨，那個都不成功。我用的是另一套 &lt;a class="link" href="https://github.com/marketplace/actions/upload-to-github-release" target="_blank" rel="noopener"
+&lt;h3 id="上傳編譯好的執行檔">&lt;a href="#%e4%b8%8a%e5%82%b3%e7%b7%a8%e8%ad%af%e5%a5%bd%e7%9a%84%e5%9f%b7%e8%a1%8c%e6%aa%94" class="header-anchor">&lt;/a>上傳編譯好的執行檔
+&lt;/h3>&lt;p>goreleaser 的文件裡面有推薦一個上傳的套件，但是可能是我笨，那個都不成功。我用的是另一套 &lt;a class="link" href="https://github.com/marketplace/actions/upload-to-github-release" target="_blank" rel="noopener"
 >upload-to-github-release&lt;/a>，這個可以一次上傳多個檔案，設定一樣很簡單。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -553,8 +553,8 @@
 &lt;/div>&lt;p>你會看到在上傳之前還有一個步驟，這個是用來取得 tag name 用的，他用來指定檔案要上傳到哪裡&lt;br>
 在 &lt;code>with.file&lt;/code> 這欄，你可以指定要上傳的檔案，這個要設成什麼就要看你 goreleaser 編譯出來的檔案放在哪，叫什麼（這個都是可以設定的）&lt;br>
 &lt;code>draft&lt;/code> 設成 &lt;code>true&lt;/code> 有個好處，就是 Action 跑玩後不會立刻建立新 Release，而是你在去手動確認，而且包括 Release name、Change log 都設定好了，你只需要看有沒有什麼說明要加，就可以直接按發布了，非常方便。當然你如果沒有什麼想說的，就可以直接設定 &lt;code>draft: true&lt;/code>，如此一來就真的是「全自動了」&lt;/p>
-&lt;h2 id="完整-action-設定檔">完整 action 設定檔&lt;/h2>
-&lt;p>以上是細部解說，下面就是完整設定檔，如果有更新的話請到 &lt;a class="link" href="https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml" target="_blank" rel="noopener"
+&lt;h2 id="完整-action-設定檔">&lt;a href="#%e5%ae%8c%e6%95%b4-action-%e8%a8%ad%e5%ae%9a%e6%aa%94" class="header-anchor">&lt;/a>完整 action 設定檔
+&lt;/h2>&lt;p>以上是細部解說，下面就是完整設定檔，如果有更新的話請到 &lt;a class="link" href="https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml" target="_blank" rel="noopener"
 >https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml&lt;/a> 看最新版。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -640,9 +640,9 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">tag_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ steps.tagName.outputs.tag }}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Audo Depoly by Github Action</title><link>https://blog.simbafs.cc/p/hexo/audo-depoly-by-github-action/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/audo-depoly-by-github-action/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/audo-depoly-by-github-action.png" alt="Featured image of post Audo Depoly by Github Action" />&lt;h1 id="github-action-自動部署-hexo">GitHub Action 自動部署 Hexo&lt;/h1>
-&lt;h2 id="自動部屬部落格">自動部屬部落格&lt;/h2>
-&lt;p>參考網址：&lt;a class="link" href="https://op30132.github.io/2020/02/05/github-action/" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>Audo Depoly by Github Action</title><link>https://blog.simbafs.cc/p/audo-depoly-by-github-action/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/audo-depoly-by-github-action/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/audo-depoly-by-github-action.png" alt="Featured image of post Audo Depoly by Github Action" />&lt;h1 id="github-action-自動部署-hexo">&lt;a href="#github-action-%e8%87%aa%e5%8b%95%e9%83%a8%e7%bd%b2-hexo" class="header-anchor">&lt;/a>GitHub Action 自動部署 Hexo
+&lt;/h1>&lt;h2 id="自動部屬部落格">&lt;a href="#%e8%87%aa%e5%8b%95%e9%83%a8%e5%b1%ac%e9%83%a8%e8%90%bd%e6%a0%bc" class="header-anchor">&lt;/a>自動部屬部落格
+&lt;/h2>&lt;p>參考網址：&lt;a class="link" href="https://op30132.github.io/2020/02/05/github-action/" target="_blank" rel="noopener"
 >https://op30132.github.io/2020/02/05/github-action/&lt;/a>
 生成公私鑰時不用在部落格根目錄，記的不要加入 git，要刪掉&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">

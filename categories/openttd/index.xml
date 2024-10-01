@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Openttd on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/openttd/</link><description>Recent content in Openttd on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/openttd/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenTTD</title><link>https://blog.simbafs.cc/p/game/index/</link><pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/openttd/index.png" alt="Featured image of post OpenTTD" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Openttd on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/openttd/</link><description>Recent content in Openttd on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/openttd/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenTTD</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/openttd/index.png" alt="Featured image of post OpenTTD" />&lt;blockquote>
 &lt;p>&lt;strong>提醒我放圖片&lt;/strong>&lt;/p>
 &lt;/blockquote>
-&lt;h1 id="openttd">OpenTTD&lt;/h1>
-&lt;p>OpenTTD 是一款二十年前出的遊戲，可以看做是 City Skyline 的阿祖，前有在 &lt;a class="link" href="https://store.steampowered.com/app/1536610/OpenTTD/" target="_blank" rel="noopener"
+&lt;h1 id="openttd">&lt;a href="#openttd" class="header-anchor">&lt;/a>OpenTTD
+&lt;/h1>&lt;p>OpenTTD 是一款二十年前出的遊戲，可以看做是 City Skyline 的阿祖，前有在 &lt;a class="link" href="https://store.steampowered.com/app/1536610/OpenTTD/" target="_blank" rel="noopener"
 >steam&lt;/a> 上架。遊戲目標是從 1950 年經營一間運輸公司，一百年後到 2050 年根據九個項目評分，有支援多人一起玩，可以合作經營一間公司，也可以各自開公司對抗。經營的項目包括車輛、火車、飛機、單軌、路面電車和船運。&lt;/p>
-&lt;h2 id="市內公車策略">市內公車策略&lt;/h2>
-&lt;p>規劃市內公車時有幾個要考量的點&lt;/p>
+&lt;h2 id="市內公車策略">&lt;a href="#%e5%b8%82%e5%85%a7%e5%85%ac%e8%bb%8a%e7%ad%96%e7%95%a5" class="header-anchor">&lt;/a>市內公車策略
+&lt;/h2>&lt;p>規劃市內公車時有幾個要考量的點&lt;/p>
 &lt;ol>
 &lt;li>路線規劃盡量減少彎路&lt;/li>
 &lt;li>盡量經過人多的地區（覆蓋率）&lt;/li>

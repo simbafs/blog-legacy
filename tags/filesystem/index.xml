@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Filesystem on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/filesystem/</link><description>Recent content in Filesystem on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 04 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/filesystem/index.xml" rel="self" type="application/rss+xml"/><item><title>File System</title><link>https://blog.simbafs.cc/p/js/nextjs/fs/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/nextjs/fs/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/nextjs/fs.png" alt="Featured image of post File System" />&lt;h1 id="file-system">File System&lt;/h1>
-&lt;h2 id="getstaticprops">getStaticProps&lt;/h2>
-&lt;p>不知道為什麼，&lt;code>getStaticProps&lt;/code> 裡面的 &lt;code>fs&lt;/code> 時有時無。&lt;a class="link" href="https://github.com/vercel/next.js/discussions/12124" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Filesystem on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/filesystem/</link><description>Recent content in Filesystem on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 04 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/filesystem/index.xml" rel="self" type="application/rss+xml"/><item><title>File System</title><link>https://blog.simbafs.cc/p/fs/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/fs/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/nextjs/fs.png" alt="Featured image of post File System" />&lt;h1 id="file-system">&lt;a href="#file-system" class="header-anchor">&lt;/a>File System
+&lt;/h1>&lt;h2 id="getstaticprops">&lt;a href="#getstaticprops" class="header-anchor">&lt;/a>getStaticProps
+&lt;/h2>&lt;p>不知道為什麼，&lt;code>getStaticProps&lt;/code> 裡面的 &lt;code>fs&lt;/code> 時有時無。&lt;a class="link" href="https://github.com/vercel/next.js/discussions/12124" target="_blank" rel="noopener"
 >這裡&lt;/a> 似乎有關於這個問題的回答，但無效&lt;/p>
-&lt;h2 id="正常一">正常一&lt;/h2>
-&lt;p>這個版本，就可以正常運作，證明 &lt;code>getStaticProps&lt;/code> 裡可以用 &lt;code>fs&lt;/code>&lt;/p>
+&lt;h2 id="正常一">&lt;a href="#%e6%ad%a3%e5%b8%b8%e4%b8%80" class="header-anchor">&lt;/a>正常一
+&lt;/h2>&lt;p>這個版本，就可以正常運作，證明 &lt;code>getStaticProps&lt;/code> 裡可以用 &lt;code>fs&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -32,8 +32,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="正常二">正常二&lt;/h2>
-&lt;p>在這個版本，將 &lt;code>fs&lt;/code> 相關程式碼移到 &lt;code>util/fsTest.js&lt;/code>，也就是測試如果是引用另一個模組中 &lt;code>fs&lt;/code> 相關的函數。經過證明，也是可以的&lt;/p>
+&lt;/div>&lt;h2 id="正常二">&lt;a href="#%e6%ad%a3%e5%b8%b8%e4%ba%8c" class="header-anchor">&lt;/a>正常二
+&lt;/h2>&lt;p>在這個版本，將 &lt;code>fs&lt;/code> 相關程式碼移到 &lt;code>util/fsTest.js&lt;/code>，也就是測試如果是引用另一個模組中 &lt;code>fs&lt;/code> 相關的函數。經過證明，也是可以的&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -74,8 +74,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="有問題的">有問題的&lt;/h2>
-&lt;p>這個版本，&lt;code>util/tree.js&lt;/code> 的程式碼是經過測試，是沒問題的。但是卻會回報錯誤，找不到 &lt;code>fs&lt;/code>&lt;/p>
+&lt;/div>&lt;h2 id="有問題的">&lt;a href="#%e6%9c%89%e5%95%8f%e9%a1%8c%e7%9a%84" class="header-anchor">&lt;/a>有問題的
+&lt;/h2>&lt;p>這個版本，&lt;code>util/tree.js&lt;/code> 的程式碼是經過測試，是沒問題的。但是卻會回報錯誤，找不到 &lt;code>fs&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1

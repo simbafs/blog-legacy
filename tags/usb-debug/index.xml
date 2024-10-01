@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Usb Debug on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/usb-debug/</link><description>Recent content in Usb Debug on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 14 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/usb-debug/index.xml" rel="self" type="application/rss+xml"/><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/cast-phone-screen-to-computer.png" alt="Featured image of post Cast Phone Screen to Computer" />&lt;h1 id="cast-phone-screen-to-computer">Cast Phone Screen to Computer&lt;/h1>
-&lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
-&lt;h2 id="scrcpy">SCRCPY&lt;/h2>
-&lt;p>這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。&lt;/p>
-&lt;h2 id="installation">Installation&lt;/h2>
-&lt;p>安裝流程意外的簡單，只需要用 &lt;code>apt&lt;/code> 就可以安裝了，或是你可以自己 build，稍微看了一下 &lt;a class="link" href="https://github.com/Genymobile/scrcpy/blob/master/BUILD.md" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Usb Debug on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/usb-debug/</link><description>Recent content in Usb Debug on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 14 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/usb-debug/index.xml" rel="self" type="application/rss+xml"/><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/cast-phone-screen-to-computer/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/cast-phone-screen-to-computer.png" alt="Featured image of post Cast Phone Screen to Computer" />&lt;h1 id="cast-phone-screen-to-computer">&lt;a href="#cast-phone-screen-to-computer" class="header-anchor">&lt;/a>Cast Phone Screen to Computer
+&lt;/h1>&lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
+&lt;h2 id="scrcpy">&lt;a href="#scrcpy" class="header-anchor">&lt;/a>SCRCPY
+&lt;/h2>&lt;p>這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。&lt;/p>
+&lt;h2 id="installation">&lt;a href="#installation" class="header-anchor">&lt;/a>Installation
+&lt;/h2>&lt;p>安裝流程意外的簡單，只需要用 &lt;code>apt&lt;/code> 就可以安裝了，或是你可以自己 build，稍微看了一下 &lt;a class="link" href="https://github.com/Genymobile/scrcpy/blob/master/BUILD.md" target="_blank" rel="noopener"
 >說明&lt;/a> ，看起來不困難，但是既然 &lt;code>apt&lt;/code> 就可以安裝了我們就省一點時間&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -13,24 +13,24 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ sudo apt install scrcpy
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="usb-debug">USB debug&lt;/h2>
-&lt;p>首先無論是有線無線都要先打開手機的 &lt;code>USB debug&lt;/code> 選項，在開發人員選項裡面，詳細步驟請看 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options#enable" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="usb-debug">&lt;a href="#usb-debug" class="header-anchor">&lt;/a>USB debug
+&lt;/h2>&lt;p>首先無論是有線無線都要先打開手機的 &lt;code>USB debug&lt;/code> 選項，在開發人員選項裡面，詳細步驟請看 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options#enable" target="_blank" rel="noopener"
 >官方文件&lt;/a>。&lt;/p>
-&lt;h2 id="usb">USB&lt;/h2>
-&lt;p>如果不介意有一條線插著~~（順便充電）~~的話，投影畫面非常簡單，只有兩個步驟：&lt;/p>
+&lt;h2 id="usb">&lt;a href="#usb" class="header-anchor">&lt;/a>USB
+&lt;/h2>&lt;p>如果不介意有一條線插著~~（順便充電）~~的話，投影畫面非常簡單，只有兩個步驟：&lt;/p>
 &lt;ol>
 &lt;li>插上 USB 並且無論跳出什麼都按「同意」「OK」&lt;/li>
 &lt;li>打開終端機，執行 &lt;code>scrcpy&lt;/code>
 然後就會有一個視窗跳出來，你現在就可以在電腦上滑手機了！&lt;/li>
 &lt;/ol>
-&lt;h2 id="wireless">Wireless&lt;/h2>
-&lt;p>無線的話比較麻煩，首先是必須要可以連線，看是在同一個區域網路或是 VPN、ssh tunnel 都可以。再來是因為連線設定頗麻煩，所以我把相關的步驟寫成一個 &lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
+&lt;h2 id="wireless">&lt;a href="#wireless" class="header-anchor">&lt;/a>Wireless
+&lt;/h2>&lt;p>無線的話比較麻煩，首先是必須要可以連線，看是在同一個區域網路或是 VPN、ssh tunnel 都可以。再來是因為連線設定頗麻煩，所以我把相關的步驟寫成一個 &lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
 >script&lt;/a>，下載後給予執行權限就可以執行了（當然要安裝 scrcpy ）。有線的方式一樣很簡單，不用加任何選項就可以連接了。&lt;br>
 如果要啟用無線，只需要加上 &lt;code>-w&lt;/code> 選項（用預設的 ip &lt;code>192.168.43.1&lt;/code>)&lt;br>
 如果 ip 不是預設的話，可以加上 &lt;code>-i IP&lt;/code> 來指定其他的 ip&lt;br>
 加上 &lt;code>-f&lt;/code> 可以開啟全螢幕&lt;/p>
-&lt;h2 id="參連連結">參連連結&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener"
+&lt;h2 id="參連連結">&lt;a href="#%e5%8f%83%e9%80%a3%e9%80%a3%e7%b5%90" class="header-anchor">&lt;/a>參連連結
+&lt;/h2>&lt;p>&lt;a class="link" href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener"
 >https://github.com/Genymobile/scrcpy&lt;/a>
 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options" target="_blank" rel="noopener"
 >https://developer.android.com/studio/debug/dev-options&lt;/a>

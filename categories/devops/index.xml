@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Devops on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/devops/</link><description>Recent content in Devops on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 07 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/devops/index.xml" rel="self" type="application/rss+xml"/><item><title>Homemade CI/CD Workflow</title><link>https://blog.simbafs.cc/p/devops/homemade-cicd-workflow/</link><pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/devops/homemade-cicd-workflow/</guid><description>&lt;img src="https://blog.simbafs.cc/og/devops/homemade-CICD-workflow.png" alt="Featured image of post Homemade CI/CD Workflow" />&lt;h1 id="homemade-cicd-workflow">Homemade CI/CD Workflow&lt;/h1>
-&lt;p>先說為什麼要自幹，&lt;del>我爽&lt;/del>，因為其他的都太複雜，我想要乾淨清爽 &amp;lt;&amp;ndash; 官腔說法&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Devops on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/devops/</link><description>Recent content in Devops on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 07 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/devops/index.xml" rel="self" type="application/rss+xml"/><item><title>Homemade CI/CD Workflow</title><link>https://blog.simbafs.cc/p/homemade-cicd-workflow/</link><pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/homemade-cicd-workflow/</guid><description>&lt;img src="https://blog.simbafs.cc/og/devops/homemade-CICD-workflow.png" alt="Featured image of post Homemade CI/CD Workflow" />&lt;h1 id="homemade-cicd-workflow">&lt;a href="#homemade-cicd-workflow" class="header-anchor">&lt;/a>Homemade CI/CD Workflow
+&lt;/h1>&lt;p>先說為什麼要自幹，&lt;del>我爽&lt;/del>，因為其他的都太複雜，我想要乾淨清爽 &amp;lt;&amp;ndash; 官腔說法&lt;br>
 自幹 CI/CD 有幾個步驟要克服&lt;/p>
 &lt;ol>
 &lt;li>build image&lt;/li>
@@ -9,8 +9,8 @@
 >這個套件&lt;/a>，但是我不太喜歡這樣，因為我覺得他沒有「持續交付」的感覺。我想到了 webhook，所以我要找一個可以開 webhook 伺服器的 docker image。
 技術都選好了，就來慢慢&lt;del>填坑&lt;/del>完成囉！&lt;/li>
 &lt;/ol>
-&lt;h2 id="build-image">Build Image&lt;/h2>
-&lt;p>先假設我們的 Dockerfile 已經寫好了，可以參考 &lt;a class="link" href="https://blog.simbafs.cc/p/linux/docker/dockerfile-collection/#nextjs-with-pnpm" >這裡&lt;/a>，那麼 build 這個動作就是這樣定義，另外既然都在 GitHub 上 build image 了，就順便用 &lt;a class="link" href="https://ghcr.io" target="_blank" rel="noopener"
+&lt;h2 id="build-image">&lt;a href="#build-image" class="header-anchor">&lt;/a>Build Image
+&lt;/h2>&lt;p>先假設我們的 Dockerfile 已經寫好了，可以參考 &lt;a class="link" href="https://blog.simbafs.cc/p/linux/docker/dockerfile-collection/#nextjs-with-pnpm" >這裡&lt;/a>，那麼 build 這個動作就是這樣定義，另外既然都在 GitHub 上 build image 了，就順便用 &lt;a class="link" href="https://ghcr.io" target="_blank" rel="noopener"
 >ghcr&lt;/a> 吧。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -25,8 +25,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>裡面有個奇怪的東西 &lt;code>${{ steps.vars.outputs.tag }}&lt;/code>，這是代表 GitHub Action 某個步驟的產出變數 &lt;code>tag&lt;/code>，這是為了幫 build 出來的 image 加上 tag，所以開支線任務:「找出 tag」&lt;/p>
-&lt;h3 id="支線任務找出-tag">支線任務：「找出 tag」&lt;/h3>
-&lt;p>tag 不會憑空生出來，所以我們需要一個來源，我選擇 git tag。那麼根據谷歌大神的開示，用 &lt;code>${GITHUB_REF#refs/*/}&lt;/code> 可以找出這次觸發 Action 的 tag（或是 reference），那麼我們就在 &lt;code>build image&lt;/code> 前面新增一個步驟，之後就都可以用 &lt;code>${{ steps.vars.outputs.tag }}&lt;/code> 取得 tag&lt;/p>
+&lt;h3 id="支線任務找出-tag">&lt;a href="#%e6%94%af%e7%b7%9a%e4%bb%bb%e5%8b%99%e6%89%be%e5%87%ba-tag" class="header-anchor">&lt;/a>支線任務：「找出 tag」
+&lt;/h3>&lt;p>tag 不會憑空生出來，所以我們需要一個來源，我選擇 git tag。那麼根據谷歌大神的開示，用 &lt;code>${GITHUB_REF#refs/*/}&lt;/code> 可以找出這次觸發 Action 的 tag（或是 reference），那麼我們就在 &lt;code>build image&lt;/code> 前面新增一個步驟，之後就都可以用 &lt;code>${{ steps.vars.outputs.tag }}&lt;/code> 取得 tag&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -39,9 +39,9 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">echo &amp;#34;tag=${GITHUB_REF#refs/*/}&amp;#34; &amp;gt;&amp;gt; $GITHUB_OUTPUT&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="push-image">Push Image&lt;/h2>
-&lt;h3 id="登入-ghcr">登入 GHCR&lt;/h3>
-&lt;p>我們已經決定要推上 GHCR 了，首先一定要先登入才能推送的。&lt;/p>
+&lt;/div>&lt;h2 id="push-image">&lt;a href="#push-image" class="header-anchor">&lt;/a>Push Image
+&lt;/h2>&lt;h3 id="登入-ghcr">&lt;a href="#%e7%99%bb%e5%85%a5-ghcr" class="header-anchor">&lt;/a>登入 GHCR
+&lt;/h3>&lt;p>我們已經決定要推上 GHCR 了，首先一定要先登入才能推送的。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -61,8 +61,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>注意這裡 &lt;code>${{ github.actor }}&lt;/code> 和 &lt;code>${{ secrets.GITHUB_TOKEN }}&lt;/code> 是不需要設定的，他會自己代入該代的值，不過要去設定裡面設定調整，讓 Action 可以寫入 package，位置在 &lt;code>settings &amp;gt; actions &amp;gt; general &amp;gt; Workflow permissions &amp;gt; read and write permissions&lt;/code>&lt;/p>
-&lt;h3 id="push-image-1">Push Image&lt;/h3>
-&lt;p>push 就很簡單，一條指令，不過我不確定怎麼把兩個 tag 都推上去，就分成兩條，如果第一條不寫只推 &lt;code>:latest&lt;/code> 的話，新的 iamge 推上去舊的就會失去 tag 變成 untagged iamge，比較醜&lt;/p>
+&lt;h3 id="push-image-1">&lt;a href="#push-image-1" class="header-anchor">&lt;/a>Push Image
+&lt;/h3>&lt;p>push 就很簡單，一條指令，不過我不確定怎麼把兩個 tag 都推上去，就分成兩條，如果第一條不寫只推 &lt;code>:latest&lt;/code> 的話，新的 iamge 推上去舊的就會失去 tag 變成 untagged iamge，比較醜&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -80,14 +80,14 @@
 &lt;/div>&lt;blockquote>
 &lt;p>GitHub Action 還沒完喔！&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="webhook">Webhook&lt;/h2>
-&lt;p>webhook 說穿了就是設定收到 http request 後要做什麼，&lt;del>用 bash 硬幹也不是不行&lt;/del>，我找了一個用 go 寫的程式 &lt;a class="link" href="https://github.com/adnanh/webhook" target="_blank" rel="noopener"
+&lt;h2 id="webhook">&lt;a href="#webhook" class="header-anchor">&lt;/a>Webhook
+&lt;/h2>&lt;p>webhook 說穿了就是設定收到 http request 後要做什麼，&lt;del>用 bash 硬幹也不是不行&lt;/del>，我找了一個用 go 寫的程式 &lt;a class="link" href="https://github.com/adnanh/webhook" target="_blank" rel="noopener"
 >webhook&lt;/a>，定義一個 JSON 檔，除了最基本的觸發外，還可以 &lt;a class="link" href="https://github.com/adnanh/webhook/blob/master/docs/Hook-Rules.md" target="_blank" rel="noopener"
 >設定條件&lt;/a> ，基本的值要相符、regex， 還有 HMAC 驗證，進階一點含有 and or not 等邏輯可以用。官方推薦了三個 docker image，&lt;a class="link" href="https://github.com/almir/docker-webhook" target="_blank" rel="noopener"
 >第一個&lt;/a> 最多人用，但是他沒有 shell 可以 debug，所以我選擇了 &lt;a class="link" href="https://github.com/Roxedus/docker-webhook" target="_blank" rel="noopener"
 >第二個&lt;/a>。&lt;/p>
-&lt;h3 id="docker-composeyml">docker-compose.yml&lt;/h3>
-&lt;p>首先是 docker-compose.yml&lt;/p>
+&lt;h3 id="docker-composeyml">&lt;a href="#docker-composeyml" class="header-anchor">&lt;/a>docker-compose.yml
+&lt;/h3>&lt;p>首先是 docker-compose.yml&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -133,8 +133,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這裡 volume 掛了一堆東西，第一個是設定檔，第二個是方便放 script 和 log，第三個是為了到要更新的 docker 專案目錄執行 &lt;code>docker-compose&lt;/code>，後面三個都是為了可以執行 host 上的 docker 指令。&lt;/p>
-&lt;h3 id="hooksjson">hooks.json&lt;/h3>
-&lt;p>接著是 &lt;code>hooks.json&lt;/code>&lt;/p>
+&lt;h3 id="hooksjson">&lt;a href="#hooksjson" class="header-anchor">&lt;/a>hooks.json
+&lt;/h3>&lt;p>接著是 &lt;code>hooks.json&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -185,8 +185,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ curl -XPOST --header &lt;span class="s1">&amp;#39;Content-Type: application/json&amp;#39;&lt;/span> -d&lt;span class="s1">&amp;#39;{&amp;#34;key&amp;#34;: &amp;#34;random key&amp;#34;}&amp;#39;&lt;/span> http://localhost:9000/hooks/coscup-attendance
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="updatesh">update.sh&lt;/h3>
-&lt;p>接著就是當 webhook 執行時要執行的 update.sh，只有三個步驟，down、pull、up&lt;/p>
+&lt;/div>&lt;h3 id="updatesh">&lt;a href="#updatesh" class="header-anchor">&lt;/a>update.sh
+&lt;/h3>&lt;p>接著就是當 webhook 執行時要執行的 update.sh，只有三個步驟，down、pull、up&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -203,8 +203,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/usr/local/bin/docker-compose up -d
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="github-action-觸發-webhook">GitHub Action 觸發 webhook&lt;/h2>
-&lt;p>最後一步，設定讓 Action build 完 image 後就發 request 觸發 webhook&lt;/p>
+&lt;/div>&lt;h2 id="github-action-觸發-webhook">&lt;a href="#github-action-%e8%a7%b8%e7%99%bc-webhook" class="header-anchor">&lt;/a>GitHub Action 觸發 webhook
+&lt;/h2>&lt;p>最後一步，設定讓 Action build 完 image 後就發 request 觸發 webhook&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -218,8 +218,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這裡把 &lt;code>&amp;quot;random key&lt;/code> 拉出來放到 secrets 裡面是因為我不希望隨便一個人都能重啟 docker container，雖然不會怎樣但是服務會被中斷，所以才設計這個密碼，至於為什麼不用 hmac 驗證呢？如果是 &lt;code>hooks.json&lt;/code> 洩漏，那麼有沒有驗證都沒差了，如果是封包內容被抓到，也是沒差了，因為我的 payload 每次都一樣，如果 &lt;strong>webhook&lt;/strong> 能驗證時間之類的才會有用，所以單純驗 value 就可以了，而且我都是走 https，要洩漏也沒那麼容易。&lt;/p>
-&lt;h2 id="完整-github-action">完整 GitHub Action&lt;/h2>
-&lt;p>說了這麼多 GitHub Action 都還是零碎的片段，下面就是完整的設定檔，我把 build, push 和 webhook 分成兩個 jobs 是因為我光是測試 webhook 就好幾次，每次重跑 build 真的好久（抹汗。另外希望以後有機會能把 &lt;code>build-and-push&lt;/code> 拆分的更細。然後開頭我有設定只有當 git tag 符合 &lt;code>v*.*.*&lt;/code> 才會觸發這個 Action，主要是希望 &lt;code>${{ steps.vars.outputs.tag }}&lt;/code> 抓到的都是可以用的版本邊號，不會是沒有上標籤的 main，而且可以控制什麼時候要發新版本。&lt;/p>
+&lt;h2 id="完整-github-action">&lt;a href="#%e5%ae%8c%e6%95%b4-github-action" class="header-anchor">&lt;/a>完整 GitHub Action
+&lt;/h2>&lt;p>說了這麼多 GitHub Action 都還是零碎的片段，下面就是完整的設定檔，我把 build, push 和 webhook 分成兩個 jobs 是因為我光是測試 webhook 就好幾次，每次重跑 build 真的好久（抹汗。另外希望以後有機會能把 &lt;code>build-and-push&lt;/code> 拆分的更細。然後開頭我有設定只有當 git tag 符合 &lt;code>v*.*.*&lt;/code> 才會觸發這個 Action，主要是希望 &lt;code>${{ steps.vars.outputs.tag }}&lt;/code> 抓到的都是可以用的版本邊號，不會是沒有上標籤的 main，而且可以控制什麼時候要發新版本。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1

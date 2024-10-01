@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Frontend on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/frontend/</link><description>Recent content in Frontend on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 05 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/frontend/index.xml" rel="self" type="application/rss+xml"/><item><title>React 解決中文輸入法</title><link>https://blog.simbafs.cc/p/frontend/react-composition-event/</link><pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/react-composition-event/</guid><description>&lt;img src="https://blog.simbafs.cc/og/frontend/react-composition.png" alt="Featured image of post React 解決中文輸入法" />&lt;p>今天在開發&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Frontend on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/frontend/</link><description>Recent content in Frontend on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 05 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/frontend/index.xml" rel="self" type="application/rss+xml"/><item><title>React 解決中文輸入法</title><link>https://blog.simbafs.cc/p/react-composition-event/</link><pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/react-composition-event/</guid><description>&lt;img src="https://blog.simbafs.cc/og/frontend/react-composition.png" alt="Featured image of post React 解決中文輸入法" />&lt;p>今天在開發&lt;a class="link" href="https://github.com/simbafs/JingJing" target="_blank" rel="noopener"
 >晶晶體產生器&lt;/a>的時候，發現中文輸入總是有問題，這時候我想起以前看過 Hackmd 官方的&lt;a class="link" href="https://hackmd.io/@hackmd/CompositionEvent" target="_blank" rel="noopener"
 >一篇 blog&lt;/a>，提到中文輸入法如果有問題，可能和組字事件有關。於是就開始研究。首先我將以下設定加入 &lt;code>textarea&lt;/code> 裡觀察組字事件的行為&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -145,9 +145,9 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">/&amp;gt;;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Reactjs Update State on Props Change</title><link>https://blog.simbafs.cc/p/js/reactjs/react-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/react-update-state-on-props-change/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/React-update-state-on-props-change.png" alt="Featured image of post Reactjs Update State on Props Change" />&lt;h1 id="react-update-state-on-props-change">React Update State on Props Change&lt;/h1>
-&lt;h2 id="問題">問題&lt;/h2>
-&lt;p>今天在研究 React
+&lt;/div></description></item><item><title>Reactjs Update State on Props Change</title><link>https://blog.simbafs.cc/p/react-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/react-update-state-on-props-change/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/React-update-state-on-props-change.png" alt="Featured image of post Reactjs Update State on Props Change" />&lt;h1 id="react-update-state-on-props-change">&lt;a href="#react-update-state-on-props-change" class="header-anchor">&lt;/a>React Update State on Props Change
+&lt;/h1>&lt;h2 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h2>&lt;p>今天在研究 React
 遇到一個問題
 當我從外面更新 props 的時候 component 內的 state 不會更新&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -171,8 +171,8 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>如同上面程式，第二行的 &lt;code>useState&lt;/code> 不會隨著 props 更新而更新&lt;/p>
-&lt;h2 id="解法">解法&lt;/h2>
-&lt;p>後來找到解法，加上一個 &lt;code>useEffect&lt;/code> 監聽 &lt;code>props.text&lt;/code> 然後更新 state 就好了&lt;/p>
+&lt;h2 id="解法">&lt;a href="#%e8%a7%a3%e6%b3%95" class="header-anchor">&lt;/a>解法
+&lt;/h2>&lt;p>後來找到解法，加上一個 &lt;code>useEffect&lt;/code> 監聽 &lt;code>props.text&lt;/code> 然後更新 state 就好了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -198,20 +198,20 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>如此一來 &lt;code>state&lt;/code> 就會和 &lt;code>props&lt;/code> 同步了&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props" target="_blank" rel="noopener"
+&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props&lt;/a>
 &lt;a class="link" href="https://zh-hant.reactjs.org/docs/hooks-effect.html" target="_blank" rel="noopener"
->https://zh-hant.reactjs.org/docs/hooks-effect.html&lt;/a>&lt;/p></description></item><item><title>Webpack Reactjs</title><link>https://blog.simbafs.cc/p/js/reactjs/webpack-react/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/webpack-react/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/webpack-react.png" alt="Featured image of post Webpack Reactjs" />&lt;h1 id="webpack-reactjs">Webpack Reactjs&lt;/h1>
-&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>最近開始想學 react
+>https://zh-hant.reactjs.org/docs/hooks-effect.html&lt;/a>&lt;/p></description></item><item><title>Webpack Reactjs</title><link>https://blog.simbafs.cc/p/webpack-react/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/webpack-react/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/webpack-react.png" alt="Featured image of post Webpack Reactjs" />&lt;h1 id="webpack-reactjs">&lt;a href="#webpack-reactjs" class="header-anchor">&lt;/a>Webpack Reactjs
+&lt;/h1>&lt;h2 id="前言">&lt;a href="#%e5%89%8d%e8%a8%80" class="header-anchor">&lt;/a>前言
+&lt;/h2>&lt;p>最近開始想學 react
 在這之前當然要先把開發環境搞好
 其中 react 最重要的就是 webpack 和 babel 了
 babel 負責編譯
 webpack 負責串街所有工作&lt;/p>
-&lt;h2 id="安裝套件">安裝套件&lt;/h2>
-&lt;h2 id="建立一個專案並初始化">建立一個專案並初始化&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="安裝套件">&lt;a href="#%e5%ae%89%e8%a3%9d%e5%a5%97%e4%bb%b6" class="header-anchor">&lt;/a>安裝套件
+&lt;/h2>&lt;h2 id="建立一個專案並初始化">&lt;a href="#%e5%bb%ba%e7%ab%8b%e4%b8%80%e5%80%8b%e5%b0%88%e6%a1%88%e4%b8%a6%e5%88%9d%e5%a7%8b%e5%8c%96" class="header-anchor">&lt;/a>建立一個專案並初始化
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -225,8 +225,8 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git init -y
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="安裝開發用套件">安裝開發用套件&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="安裝開發用套件">&lt;a href="#%e5%ae%89%e8%a3%9d%e9%96%8b%e7%99%bc%e7%94%a8%e5%a5%97%e4%bb%b6" class="header-anchor">&lt;/a>安裝開發用套件
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -250,8 +250,8 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">webpack&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="packagejson">package.json&lt;/h2>
-&lt;p>加入以下的 script&lt;/p>
+&lt;/div>&lt;h2 id="packagejson">&lt;a href="#packagejson" class="header-anchor">&lt;/a>package.json
+&lt;/h2>&lt;p>加入以下的 script&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -268,8 +268,8 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="webpackconfigjs">webpack.config.js&lt;/h2>
-&lt;p>建立 webpack.config.js
+&lt;/div>&lt;h2 id="webpackconfigjs">&lt;a href="#webpackconfigjs" class="header-anchor">&lt;/a>webpack.config.js
+&lt;/h2>&lt;p>建立 webpack.config.js
 這是最小的版本了
 沒有任何的擴充&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -304,8 +304,8 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="srcdist">src/dist&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="srcdist">&lt;a href="#srcdist" class="header-anchor">&lt;/a>src/dist
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -323,23 +323,23 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">https://github.com/simbafs/react-template
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Firefox Event Listener Breakpoint</title><link>https://blog.simbafs.cc/p/frontend/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/frontend/firefox-event-listener-breakpoint/</guid><description>&lt;img src="https://blog.simbafs.cc/og/frontend/firefox-event-listener-breakpoint.png" alt="Featured image of post Firefox Event Listener Breakpoint" />&lt;h1 id="firefox-event-listener-breakpoint">Firefox Event Listener Breakpoint&lt;/h1>
-&lt;h2 id="問題">問題&lt;/h2>
-&lt;p>最近在用 jquery 但是不知道為什麼每次 debugger 都會跳出一個通知
+&lt;/div></description></item><item><title>Firefox Event Listener Breakpoint</title><link>https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/</guid><description>&lt;img src="https://blog.simbafs.cc/og/frontend/firefox-event-listener-breakpoint.png" alt="Featured image of post Firefox Event Listener Breakpoint" />&lt;h1 id="firefox-event-listener-breakpoint">&lt;a href="#firefox-event-listener-breakpoint" class="header-anchor">&lt;/a>Firefox Event Listener Breakpoint
+&lt;/h1>&lt;h2 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h2>&lt;p>最近在用 jquery 但是不知道為什麼每次 debugger 都會跳出一個通知
 &lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/1.png"
 loading="lazy"
 alt="1.png"
 >
 很煩&lt;/p>
-&lt;h2 id="解決">解決&lt;/h2>
-&lt;p>後來尋線發現原來是 firefox 好心的 debugger 在 DOM 發生改變的時候通知我
-在 &lt;!-- raw HTML omitted --> 裡面 Debugger 頁籤左下有個拉頁叫「Event Listener Breakpoints」
+&lt;h2 id="解決">&lt;a href="#%e8%a7%a3%e6%b1%ba" class="header-anchor">&lt;/a>解決
+&lt;/h2>&lt;p>後來尋線發現原來是 firefox 好心的 debugger 在 DOM 發生改變的時候通知我
+在 &lt;F12> 裡面 Debugger 頁籤左下有個拉頁叫「Event Listener Breakpoints」
 把裡面的東西都點掉就好了
 就是那個 DOM Mutation
 &lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/2.png"
 loading="lazy"
 alt="2.png"
 >&lt;/p>
-&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>我原本還以為是 jquery 的問題
+&lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
+&lt;/h2>&lt;p>我原本還以為是 jquery 的問題
 原來是好心的 firefox 啊&lt;/p></description></item></channel></rss>

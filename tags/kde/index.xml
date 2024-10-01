@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kde on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/kde/</link><description>Recent content in Kde on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 23 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/kde/index.xml" rel="self" type="application/rss+xml"/><item><title>KDE Touchpad Gesture</title><link>https://blog.simbafs.cc/posts/linux/kde-touchpad-gesture/</link><pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/posts/linux/kde-touchpad-gesture/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/kde-touchpad-gesture.png" alt="Featured image of post KDE Touchpad Gesture" />&lt;h1 id="kde-touchpad-gesture">KDE Touchpad Gesture&lt;/h1>
-&lt;p>目前我的筆電作業系統是 KDE neon，他一直有個地方讓我覺得很不方便，就是沒有觸控版手勢操作，這個 &lt;a class="link" href="https://github.com/NayamAmarshe/ToucheggKDE" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kde on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/kde/</link><description>Recent content in Kde on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 23 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/kde/index.xml" rel="self" type="application/rss+xml"/><item><title>KDE Touchpad Gesture</title><link>https://blog.simbafs.cc/p/kde-touchpad-gesture/</link><pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/kde-touchpad-gesture/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/kde-touchpad-gesture.png" alt="Featured image of post KDE Touchpad Gesture" />&lt;h1 id="kde-touchpad-gesture">&lt;a href="#kde-touchpad-gesture" class="header-anchor">&lt;/a>KDE Touchpad Gesture
+&lt;/h1>&lt;p>目前我的筆電作業系統是 KDE neon，他一直有個地方讓我覺得很不方便，就是沒有觸控版手勢操作，這個 &lt;a class="link" href="https://github.com/NayamAmarshe/ToucheggKDE" target="_blank" rel="noopener"
 >repo&lt;/a> 就是透過 touchegg 補齊了這方面的缺陷，他安裝超級簡單只有兩個步驟&lt;/p>
-&lt;h2 id="1-安裝-touchegg">1. 安裝 touchegg&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="1-安裝-touchegg">&lt;a href="#1-%e5%ae%89%e8%a3%9d-touchegg" class="header-anchor">&lt;/a>1. 安裝 touchegg
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -10,8 +10,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ apt install touchegg
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="2-把設定檔放進去">2. 把設定檔放進去&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="2-把設定檔放進去">&lt;a href="#2-%e6%8a%8a%e8%a8%ad%e5%ae%9a%e6%aa%94%e6%94%be%e9%80%b2%e5%8e%bb" class="header-anchor">&lt;/a>2. 把設定檔放進去
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -23,11 +23,11 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ wget https://raw.githubusercontent.com/NayamAmarshe/ToucheggKDE/main/touchegg.conf
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="3-重開機">3. 重開機&lt;/h2>
-&lt;p>我猜重新登入圖形界面應該就有效了，不果反正重開機也沒多慢，就重開機，開機完就可以用手勢切換工作區囉。&lt;/p></description></item><item><title>kdeconnect</title><link>https://blog.simbafs.cc/p/linux/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/kdeconnect/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/kdeconnect.png" alt="Featured image of post kdeconnect" />&lt;h1 id="kdeconnect">kdeconnect&lt;/h1>
-&lt;p>kdeconnect 顧名思義是 kde 出的一款 connect 軟體，功能非常多而且方便。電腦和手機都安裝好軟體後，只要在同一個網域就可以配對連接&lt;/p>
-&lt;h2 id="功能介紹">功能介紹&lt;/h2>
-&lt;ol>
+&lt;/div>&lt;h2 id="3-重開機">&lt;a href="#3-%e9%87%8d%e9%96%8b%e6%a9%9f" class="header-anchor">&lt;/a>3. 重開機
+&lt;/h2>&lt;p>我猜重新登入圖形界面應該就有效了，不果反正重開機也沒多慢，就重開機，開機完就可以用手勢切換工作區囉。&lt;/p></description></item><item><title>kdeconnect</title><link>https://blog.simbafs.cc/p/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/kdeconnect/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/kdeconnect.png" alt="Featured image of post kdeconnect" />&lt;h1 id="kdeconnect">&lt;a href="#kdeconnect" class="header-anchor">&lt;/a>kdeconnect
+&lt;/h1>&lt;p>kdeconnect 顧名思義是 kde 出的一款 connect 軟體，功能非常多而且方便。電腦和手機都安裝好軟體後，只要在同一個網域就可以配對連接&lt;/p>
+&lt;h2 id="功能介紹">&lt;a href="#%e5%8a%9f%e8%83%bd%e4%bb%8b%e7%b4%b9" class="header-anchor">&lt;/a>功能介紹
+&lt;/h2>&lt;ol>
 &lt;li>基本訊息 - 在電腦和手機上可以互相看到電池、網路等基本訊息&lt;/li>
 &lt;li>通知 - 可以設定電腦顯示手機通知或手機顯示電腦通知，或是兩者都開啟，我通常只開前者&lt;/li>
 &lt;li>媒體控制 - 無論是 VLC、YouTube、Nefflix 或任何網頁，都可以控制進度、音量、暫停，而且雙方都可以控制。這個是我最愛的功能之一&lt;/li>
@@ -37,22 +37,22 @@
 &lt;li>輸入 - 不論是滑鼠、鍵盤，兩邊都可以互相當對方的輸入裝置，這個功能非常好用
 還有像是讓手機大叫（找手機用）、簡報控制、傳簡訊、手機有電話的時候自動暫停音樂等等奇奇怪怪的功能&lt;/li>
 &lt;/ol>
-&lt;h2 id="推薦命令">推薦命令&lt;/h2>
-&lt;table>
+&lt;h2 id="推薦命令">&lt;a href="#%e6%8e%a8%e8%96%a6%e5%91%bd%e4%bb%a4" class="header-anchor">&lt;/a>推薦命令
+&lt;/h2>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">Description&lt;/th>
-&lt;th style="text-align:left">Command&lt;/th>
+&lt;th style="text-align: center">Description&lt;/th>
+&lt;th style="text-align: left">Command&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">鎖定螢幕並暫停 VLC 播放&lt;/td>
-&lt;td style="text-align:left">&lt;code>loginctl lock-session; dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause&lt;/code>&lt;/td>
+&lt;td style="text-align: center">鎖定螢幕並暫停 VLC 播放&lt;/td>
+&lt;td style="text-align: left">&lt;code>loginctl lock-session; dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">解除鎖定螢幕（免密碼）&lt;/td>
-&lt;td style="text-align:left">&lt;code>loginctl unlock-session&lt;/code>&lt;/td>
+&lt;td style="text-align: center">解除鎖定螢幕（免密碼）&lt;/td>
+&lt;td style="text-align: left">&lt;code>loginctl unlock-session&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item></channel></rss>

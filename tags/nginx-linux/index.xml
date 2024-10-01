@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nginx Linux on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/nginx-linux/</link><description>Recent content in Nginx Linux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/nginx-linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Nginx UI</title><link>https://blog.simbafs.cc/p/linux/server/nginx-ui/</link><pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/nginx-ui/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/server/nginx-ui.png" alt="Featured image of post Nginx UI" />&lt;h1 id="nginx-ui">Nginx UI&lt;/h1>
-&lt;p>前幾天發現一個專案 nginx ui
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nginx Linux on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/nginx-linux/</link><description>Recent content in Nginx Linux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/nginx-linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Nginx UI</title><link>https://blog.simbafs.cc/p/nginx-ui/</link><pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/nginx-ui/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/server/nginx-ui.png" alt="Featured image of post Nginx UI" />&lt;h1 id="nginx-ui">&lt;a href="#nginx-ui" class="header-anchor">&lt;/a>Nginx UI
+&lt;/h1>&lt;p>前幾天發現一個專案 nginx ui
 他是一個可以讓你在網頁上更改 nginx config 的專案&lt;/p>
-&lt;h2 id="安裝">安裝&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -10,8 +10,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">docker pull schenkd/nginx-ui
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="啟動">啟動&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="啟動">&lt;a href="#%e5%95%9f%e5%8b%95" class="header-anchor">&lt;/a>啟動
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>

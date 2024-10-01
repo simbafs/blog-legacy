@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ninja on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/ninja/</link><description>Recent content in Ninja on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/ninja/index.xml" rel="self" type="application/rss+xml"/><item><title>Build Aseprite</title><link>https://blog.simbafs.cc/p/linux/build-aseprite/</link><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/build-aseprite/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/build-aseprite.png" alt="Featured image of post Build Aseprite" />&lt;h1 id="build-aseprite">Build Aseprite&lt;/h1>
-&lt;p>Aseprite 是一個跨平台的像素畫編輯器，反正看起來很棒，但是官網和 itch.io 買 19.99 美金，steam 賣三百多元，為了省這個錢決定自己編譯，原始碼在 &lt;a class="link" href="https://github.com/aseprite/aseprite" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ninja on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/ninja/</link><description>Recent content in Ninja on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/ninja/index.xml" rel="self" type="application/rss+xml"/><item><title>Build Aseprite</title><link>https://blog.simbafs.cc/p/build-aseprite/</link><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/build-aseprite/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/build-aseprite.png" alt="Featured image of post Build Aseprite" />&lt;h1 id="build-aseprite">&lt;a href="#build-aseprite" class="header-anchor">&lt;/a>Build Aseprite
+&lt;/h1>&lt;p>Aseprite 是一個跨平台的像素畫編輯器，反正看起來很棒，但是官網和 itch.io 買 19.99 美金，steam 賣三百多元，為了省這個錢決定自己編譯，原始碼在 &lt;a class="link" href="https://github.com/aseprite/aseprite" target="_blank" rel="noopener"
 >https://github.com/aseprite/aseprite&lt;/a>，而且官方有一個很詳細的&lt;a class="link" href="https://github.com/aseprite/aseprite/blob/main/INSTALL.md" target="_blank" rel="noopener"
 >編譯說明&lt;/a>&lt;/p>
-&lt;h2 id="clone">clone&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="clone">&lt;a href="#clone" class="header-anchor">&lt;/a>clone
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -11,8 +11,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ git clone https://github.com/aseprite/aseprite --recursive --depth 1
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="dependencies">&lt;a href="#dependencies" class="header-anchor">&lt;/a>Dependencies
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -20,11 +20,11 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ sudo apt-get install -y g++ clang libc++-dev libc++abi-dev cmake ninja-build libx11-dev libxcursor-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="skia">skia&lt;/h3>
-&lt;p>去 &lt;a class="link" href="https://github.com/aseprite/skia/releases/latest" target="_blank" rel="noopener"
+&lt;/div>&lt;h3 id="skia">&lt;a href="#skia" class="header-anchor">&lt;/a>skia
+&lt;/h3>&lt;p>去 &lt;a class="link" href="https://github.com/aseprite/skia/releases/latest" target="_blank" rel="noopener"
 >https://github.com/aseprite/skia/releases/latest&lt;/a> 下載編譯好的 skia，解壓縮放到 &lt;code>~/deps/skia&lt;/code> 下面&lt;/p>
-&lt;h2 id="cmake">cmake&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="cmake">&lt;a href="#cmake" class="header-anchor">&lt;/a>cmake
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -70,8 +70,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">ninja&lt;/span> &lt;span class="n">aseprite&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="execute-path">Execute Path&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="execute-path">&lt;a href="#execute-path" class="header-anchor">&lt;/a>Execute Path
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -81,8 +81,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo ln -s /usr/local/share/aseprite/aseprite /usr/local/bin/aseprite
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="desktop-file">Desktop File&lt;/h3>
-&lt;p>&lt;code>~/.local/share/applications/aseprite.desktop&lt;/code>&lt;/p>
+&lt;/div>&lt;h3 id="desktop-file">&lt;a href="#desktop-file" class="header-anchor">&lt;/a>Desktop File
+&lt;/h3>&lt;p>&lt;code>~/.local/share/applications/aseprite.desktop&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1

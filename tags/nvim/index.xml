@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nvim on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/nvim/</link><description>Recent content in Nvim on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 18 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/nvim/index.xml" rel="self" type="application/rss+xml"/><item><title>Firenvim</title><link>https://blog.simbafs.cc/p/linux/vim/firenvim/</link><pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/firenvim/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/firenvim.png" alt="Featured image of post Firenvim" />&lt;h1 id="firenvim">Firenvim&lt;/h1>
-&lt;p>&lt;a class="link" href="https://github.com/glacambre/firenvim" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nvim on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/nvim/</link><description>Recent content in Nvim on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 18 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/nvim/index.xml" rel="self" type="application/rss+xml"/><item><title>Firenvim</title><link>https://blog.simbafs.cc/p/firenvim/</link><pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/firenvim/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/firenvim.png" alt="Featured image of post Firenvim" />&lt;h1 id="firenvim">&lt;a href="#firenvim" class="header-anchor">&lt;/a>Firenvim
+&lt;/h1>&lt;p>&lt;a class="link" href="https://github.com/glacambre/firenvim" target="_blank" rel="noopener"
 >firenvim&lt;/a> 是一個可以把 nvim 嵌入瀏覽器的插件，像是這樣&lt;br>
 &lt;img src="https://blog.simbafs.cc/images/firenvim_in_leetcode.png"
 loading="lazy"
@@ -9,8 +9,8 @@ alt="firenvim in leetcode"
 &lt;p>我的 nvim 現在是用 &lt;a class="link" href="https://github.com/AstroNvim/AstroNvim" target="_blank" rel="noopener"
 >astronvim&lt;/a> 設定檔，所以以下內容都是放在 &lt;code>~/.config/nvim/lua/user/init.lua&lt;/code> 裡面&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="預設關閉-firenvim">預設關閉 firenvim&lt;/h2>
-&lt;p>如果不關的話他會在所有你想打字的地方跳出來，像是 google 搜尋、messenger 輸入框，等等你不希望他出來的地方&lt;/p>
+&lt;h2 id="預設關閉-firenvim">&lt;a href="#%e9%a0%90%e8%a8%ad%e9%97%9c%e9%96%89-firenvim" class="header-anchor">&lt;/a>預設關閉 firenvim
+&lt;/h2>&lt;p>如果不關的話他會在所有你想打字的地方跳出來，像是 google 搜尋、messenger 輸入框，等等你不希望他出來的地方&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -45,8 +45,8 @@ alt="firenvim in leetcode"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="在特定網站開啟">在特定網站開啟&lt;/h2>
-&lt;p>預設關閉後我們還是可以用 &lt;code>&amp;lt;C-e&amp;gt;&lt;/code> 開啟，不過某些網站還是自動開會方便一點，所以再加上&lt;/p>
+&lt;/div>&lt;h2 id="在特定網站開啟">&lt;a href="#%e5%9c%a8%e7%89%b9%e5%ae%9a%e7%b6%b2%e7%ab%99%e9%96%8b%e5%95%9f" class="header-anchor">&lt;/a>在特定網站開啟
+&lt;/h2>&lt;p>預設關閉後我們還是可以用 &lt;code>&amp;lt;C-e&amp;gt;&lt;/code> 開啟，不過某些網站還是自動開會方便一點，所以再加上&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -89,8 +89,8 @@ alt="firenvim in leetcode"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="filetype">filetype&lt;/h2>
-&lt;p>因為 firenvim 開啟時的 filetype 預設是 &lt;code>txt&lt;/code>，不會有語法提示、LSP 自動捕全等等功能，所以我們加上一點設定讓他會自動給 filetype&lt;/p>
+&lt;/div>&lt;h2 id="filetype">&lt;a href="#filetype" class="header-anchor">&lt;/a>filetype
+&lt;/h2>&lt;p>因為 firenvim 開啟時的 filetype 預設是 &lt;code>txt&lt;/code>，不會有語法提示、LSP 自動捕全等等功能，所以我們加上一點設定讓他會自動給 filetype&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -153,8 +153,8 @@ alt="firenvim in leetcode"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="字體">字體&lt;/h2>
-&lt;p>因為我的 terminal 和 nvim 有用到 &lt;a class="link" href="https://www.nerdfonts.com/" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="字體">&lt;a href="#%e5%ad%97%e9%ab%94" class="header-anchor">&lt;/a>字體
+&lt;/h2>&lt;p>因為我的 terminal 和 nvim 有用到 &lt;a class="link" href="https://www.nerdfonts.com/" target="_blank" rel="noopener"
 >nerd 字體&lt;/a>，可以顯示一些奇奇怪怪的符號，但是瀏覽器沒有，所以要指定字體給 firenvim 使用，我用的 nerd 字體是 &lt;code>BitstromWera Nerd Font Mono&lt;/code>，你可以換成你喜歡的&lt;/p>
 &lt;blockquote>
 &lt;p>ref: &lt;a class="link" href="https://github.com/glacambre/firenvim/issues/1275" target="_blank" rel="noopener"

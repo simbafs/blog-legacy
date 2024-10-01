@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Md2pdf on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/md2pdf/</link><description>Recent content in Md2pdf on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/md2pdf/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/other/index/</link><pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/md2pdf/index.png" alt="Featured image of post Markdown to PDF" />&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
-&lt;h2 id="安裝環境">安裝環境&lt;/h2>
-&lt;p>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Md2pdf on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/md2pdf/</link><description>Recent content in Md2pdf on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 21 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/md2pdf/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/md2pdf/index.png" alt="Featured image of post Markdown to PDF" />&lt;h1 id="markdown-to-pdf">&lt;a href="#markdown-to-pdf" class="header-anchor">&lt;/a>Markdown to PDF
+&lt;/h1>&lt;h2 id="安裝環境">&lt;a href="#%e5%ae%89%e8%a3%9d%e7%92%b0%e5%a2%83" class="header-anchor">&lt;/a>安裝環境
+&lt;/h2>&lt;p>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >pandoc&lt;/a> 你想得到的文件之間轉擋 &lt;a class="link" href="https://pandoc.org/diagram.svgz?v=20230203095535" target="_blank" rel="noopener"
 >官方精美的圖&lt;/a>&lt;/p>
 &lt;p>如果說你沒有中文的需求，現在就可以用 &lt;code>pandoc index.md -o out.pdf&lt;/code> 產生 PDF 檔了&lt;/p>
-&lt;h2 id="中文">中文&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="中文">&lt;a href="#%e4%b8%ad%e6%96%87" class="header-anchor">&lt;/a>中文
+&lt;/h2>&lt;blockquote>
 &lt;p>&lt;strong>Warning&lt;/strong>
 &lt;del>我後來不知道搞砸了什麼，反正目前中文是壞的，找到一個用網頁排版再用瀏覽器內建列印功能輸出成 PDF 的網頁：https://github.com/realdennis/md2pdf&lt;/del>
 已解決&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="安裝字型">安裝字型&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h3 id="安裝字型">&lt;a href="#%e5%ae%89%e8%a3%9d%e5%ad%97%e5%9e%8b" class="header-anchor">&lt;/a>安裝字型
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -19,9 +19,9 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $ sudo apt-get install texlive-fonts-recommended texlive-fonts-extra texlive-lang-chinese
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="字型設定">字型設定&lt;/h3>
-&lt;h4 id="檔案內">檔案內&lt;/h4>
-&lt;p>在 md 開頭設定一個包含中文的字型&lt;/p>
+&lt;/div>&lt;h3 id="字型設定">&lt;a href="#%e5%ad%97%e5%9e%8b%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>字型設定
+&lt;/h3>&lt;h4 id="檔案內">&lt;a href="#%e6%aa%94%e6%a1%88%e5%85%a7" class="header-anchor">&lt;/a>檔案內
+&lt;/h4>&lt;p>在 md 開頭設定一個包含中文的字型&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -34,8 +34,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="參數">參數&lt;/h4>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h4 id="參數">&lt;a href="#%e5%8f%83%e6%95%b8" class="header-anchor">&lt;/a>參數
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -46,15 +46,15 @@
 &lt;/div>&lt;blockquote>
 &lt;p>2023/02/24 新增：要加上 &lt;code>--pdf-engine xelatex&lt;/code> 才能正確輸出中文，原因是下面用的範本，他只有在使用 xelatex 和 lualatex 時才會把 &lt;code>CJKmainfont&lt;/code> 傳遞下去&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="範本">範本&lt;/h2>
-&lt;p>pandoc 有預設的 LaTeX 範本，但是不怎麼好看，可以用網路上開源的範本，或是花時間自己刻出最適合自己的&lt;/p>
-&lt;h3 id="eisvogel">Eisvogel&lt;/h3>
-&lt;p>&lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template" target="_blank" rel="noopener"
+&lt;h2 id="範本">&lt;a href="#%e7%af%84%e6%9c%ac" class="header-anchor">&lt;/a>範本
+&lt;/h2>&lt;p>pandoc 有預設的 LaTeX 範本，但是不怎麼好看，可以用網路上開源的範本，或是花時間自己刻出最適合自己的&lt;/p>
+&lt;h3 id="eisvogel">&lt;a href="#eisvogel" class="header-anchor">&lt;/a>Eisvogel
+&lt;/h3>&lt;p>&lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template" target="_blank" rel="noopener"
 >GitHub 頁面&lt;/a>
 去 &lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template/releases/latest" target="_blank" rel="noopener"
 >Release&lt;/a> 下載，解壓縮到 &lt;code>~/.local/share/pandoc/templates&lt;/code>。在編譯時加上 &lt;code>--template eisvogel&lt;/code> 就可以套用模板了。&lt;/p>
-&lt;h2 id="範例">範例&lt;/h2>
-&lt;p>以下是一段測試的 markdown 產生出來的 pdf，你可以用 &lt;a class="link" href="./out.pdf" >這個連結&lt;/a> 下載來看&lt;/p>
+&lt;h2 id="範例">&lt;a href="#%e7%af%84%e4%be%8b" class="header-anchor">&lt;/a>範例
+&lt;/h2>&lt;p>以下是一段測試的 markdown 產生出來的 pdf，你可以用 &lt;a class="link" href="./out.pdf" >這個連結&lt;/a> 下載來看&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -190,9 +190,9 @@
 &lt;/figure>
 &lt;/p>
 &lt;p>可以看到大部分的語法都可以轉換，甚至是程式碼區塊都有語法提示（syntax highlight）&lt;/p>
-&lt;h2 id="其他">其他&lt;/h2>
-&lt;h3 id="列出安裝的中文字型">列出安裝的中文字型&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="其他">&lt;a href="#%e5%85%b6%e4%bb%96" class="header-anchor">&lt;/a>其他
+&lt;/h2>&lt;h3 id="列出安裝的中文字型">&lt;a href="#%e5%88%97%e5%87%ba%e5%ae%89%e8%a3%9d%e7%9a%84%e4%b8%ad%e6%96%87%e5%ad%97%e5%9e%8b" class="header-anchor">&lt;/a>列出安裝的中文字型
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -200,8 +200,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $ fc-list :lang=zh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考連結">參考連結&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="參考連結">&lt;a href="#%e5%8f%83%e8%80%83%e9%80%a3%e7%b5%90" class="header-anchor">&lt;/a>參考連結
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://sam.webspace.tw/2020/01/13/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%87%20Markdown%20%E8%BD%89%E7%82%BA%20PDF%20%E6%96%87%E4%BB%B6/" target="_blank" rel="noopener"
 >https://sam.webspace.tw/2020/01/13/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%87%20Markdown%20%E8%BD%89%E7%82%BA%20PDF%20%E6%96%87%E4%BB%B6/&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/jgm/pandoc/wiki/Pandoc-with-Chinese" target="_blank" rel="noopener"

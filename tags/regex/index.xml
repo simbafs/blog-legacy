@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RegEx on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/regex/</link><description>Recent content in RegEx on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 16 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/regex/index.xml" rel="self" type="application/rss+xml"/><item><title>Server Tool</title><link>https://blog.simbafs.cc/p/linux/server/server-tool/</link><pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/server-tool/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/server/server-tool.png" alt="Featured image of post Server Tool" />&lt;h1 id="server-tool">Server Tool&lt;/h1>
-&lt;h2 id="用-bash-寫-log-分析工具">用 bash 寫 log 分析工具&lt;/h2>
-&lt;p>因為我們的 server 不知道是為什麼一直受到 DDoS 攻擊&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RegEx on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/regex/</link><description>Recent content in RegEx on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 16 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/regex/index.xml" rel="self" type="application/rss+xml"/><item><title>Server Tool</title><link>https://blog.simbafs.cc/p/server-tool/</link><pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/server-tool/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/server/server-tool.png" alt="Featured image of post Server Tool" />&lt;h1 id="server-tool">&lt;a href="#server-tool" class="header-anchor">&lt;/a>Server Tool
+&lt;/h1>&lt;h2 id="用-bash-寫-log-分析工具">&lt;a href="#%e7%94%a8-bash-%e5%af%ab-log-%e5%88%86%e6%9e%90%e5%b7%a5%e5%85%b7" class="header-anchor">&lt;/a>用 bash 寫 log 分析工具
+&lt;/h2>&lt;p>因為我們的 server 不知道是為什麼一直受到 DDoS 攻擊&lt;br>
 我想知道是什麼時段容易受到攻擊和每次多久、來自那個 ip&lt;br>
 於是我花了一點時間寫了幾個簡單的 script&lt;/p>
 &lt;hr>
-&lt;h3 id="先來講我遇到的坑好了">先來講我遇到的坑好了&lt;/h3>
-&lt;h4 id="sh">sh&lt;/h4>
-&lt;p>過程中遇到一個最大的坑是在 ubuntu 預設的 sh 不是 bash
+&lt;h3 id="先來講我遇到的坑好了">&lt;a href="#%e5%85%88%e4%be%86%e8%ac%9b%e6%88%91%e9%81%87%e5%88%b0%e7%9a%84%e5%9d%91%e5%a5%bd%e4%ba%86" class="header-anchor">&lt;/a>先來講我遇到的坑好了
+&lt;/h3>&lt;h4 id="sh">&lt;a href="#sh" class="header-anchor">&lt;/a>sh
+&lt;/h4>&lt;p>過程中遇到一個最大的坑是在 ubuntu 預設的 sh 不是 bash
 是 dash
 據說比較情輕薄&lt;br>
 我在試 bash 中數字的運算比較時踩到這個坑&lt;/p>
@@ -39,8 +39,8 @@
 dash 沒有支援這個語法
 然後抓了快 20 分鐘的 bug
 還是乖乖寫 &lt;code>#!/bin/bash&lt;/code> 吧&lt;/p>
-&lt;h4 id="floating-point-number">floating point number&lt;/h4>
-&lt;p>我的 script 中有用浮點數的除法
+&lt;h4 id="floating-point-number">&lt;a href="#floating-point-number" class="header-anchor">&lt;/a>floating point number
+&lt;/h4>&lt;p>我的 script 中有用浮點數的除法
 但是 bash 只支援整數
 所以除出來都是 0
 這個坑沒有很大
@@ -56,28 +56,28 @@ dash 沒有支援這個語法
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">33.33333333333333333333
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="associate-array">Associate array&lt;/h4>
-&lt;p>在有一個地方本來要用關聯式陣列來存一些資料
+&lt;/div>&lt;h4 id="associate-array">&lt;a href="#associate-array" class="header-anchor">&lt;/a>Associate array
+&lt;/h4>&lt;p>在有一個地方本來要用關聯式陣列來存一些資料
 在定義關聯是陣列要把 &lt;code>-a&lt;/code> 改成 &lt;code>-A&lt;/code>
 這邊遇到什麼問題有點忘記了
 想到再補起來
 反正最後沒有用關聯式陣列&lt;/p>
 &lt;hr>
-&lt;h3 id="其他">其他&lt;/h3>
-&lt;h4 id="程式碼">程式碼&lt;/h4>
-&lt;p>&lt;a class="link" href="https://github.com/simba-fs/server-tool" target="_blank" rel="noopener"
+&lt;h3 id="其他">&lt;a href="#%e5%85%b6%e4%bb%96" class="header-anchor">&lt;/a>其他
+&lt;/h3>&lt;h4 id="程式碼">&lt;a href="#%e7%a8%8b%e5%bc%8f%e7%a2%bc" class="header-anchor">&lt;/a>程式碼
+&lt;/h4>&lt;p>&lt;a class="link" href="https://github.com/simba-fs/server-tool" target="_blank" rel="noopener"
 >https://github.com/simba-fs/server-tool&lt;/a>
 介紹：&lt;/p>
-&lt;h4 id="barsh">bar.sh&lt;/h4>
-&lt;p>Draw a bar from data&lt;/p>
-&lt;h4 id="countsh">count.sh&lt;/h4>
-&lt;p>Count how many times does each line appear in file&lt;/p>
-&lt;h4 id="ipsh">ip.sh&lt;/h4>
-&lt;p>Count how many times does each ip send a request&lt;/p>
-&lt;h4 id="timesh">time.sh&lt;/h4>
-&lt;p>Count how many request in each secend/minute/hour/day&lt;/p>
-&lt;h4 id="好站連結">好站連結&lt;/h4>
-&lt;p>&lt;a class="link" href="https://www.regextester.com/" target="_blank" rel="noopener"
+&lt;h4 id="barsh">&lt;a href="#barsh" class="header-anchor">&lt;/a>bar.sh
+&lt;/h4>&lt;p>Draw a bar from data&lt;/p>
+&lt;h4 id="countsh">&lt;a href="#countsh" class="header-anchor">&lt;/a>count.sh
+&lt;/h4>&lt;p>Count how many times does each line appear in file&lt;/p>
+&lt;h4 id="ipsh">&lt;a href="#ipsh" class="header-anchor">&lt;/a>ip.sh
+&lt;/h4>&lt;p>Count how many times does each ip send a request&lt;/p>
+&lt;h4 id="timesh">&lt;a href="#timesh" class="header-anchor">&lt;/a>time.sh
+&lt;/h4>&lt;p>Count how many request in each secend/minute/hour/day&lt;/p>
+&lt;h4 id="好站連結">&lt;a href="#%e5%a5%bd%e7%ab%99%e9%80%a3%e7%b5%90" class="header-anchor">&lt;/a>好站連結
+&lt;/h4>&lt;p>&lt;a class="link" href="https://www.regextester.com/" target="_blank" rel="noopener"
 >https://www.regextester.com/&lt;/a>
 這個網站可以測試 RegEx
 蠻不錯的&lt;/p></description></item></channel></rss>

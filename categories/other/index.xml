@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Other on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/other/</link><description>Recent content in Other on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/other/index.xml" rel="self" type="application/rss+xml"/><item><title>Mermaid Binary Tree</title><link>https://blog.simbafs.cc/p/other/mermaid-binary-tree/</link><pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/mermaid-binary-tree/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/mermaid-binary-tree.png" alt="Featured image of post Mermaid Binary Tree" />&lt;h1 id="mermaid-binary-tree">Mermaid Binary Tree&lt;/h1>
-&lt;p>今天寫筆記遇到一個需求，我想要用 mermaid 畫出下面這顆二元樹，其中 &lt;code>B&lt;/code> 沒有左節點，我希望能夠明確的標示出 &lt;code>D&lt;/code> 是 &lt;code>B&lt;/code> 的右節點&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Other on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/other/</link><description>Recent content in Other on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/other/index.xml" rel="self" type="application/rss+xml"/><item><title>Mermaid Binary Tree</title><link>https://blog.simbafs.cc/p/mermaid-binary-tree/</link><pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/mermaid-binary-tree/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/mermaid-binary-tree.png" alt="Featured image of post Mermaid Binary Tree" />&lt;h1 id="mermaid-binary-tree">&lt;a href="#mermaid-binary-tree" class="header-anchor">&lt;/a>Mermaid Binary Tree
+&lt;/h1>&lt;p>今天寫筆記遇到一個需求，我想要用 mermaid 畫出下面這顆二元樹，其中 &lt;code>B&lt;/code> 沒有左節點，我希望能夠明確的標示出 &lt;code>D&lt;/code> 是 &lt;code>B&lt;/code> 的右節點&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -18,8 +18,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">classDef hidden display: none;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>
-&lt;h2 id="mermaid">mermaid&lt;/h2>
-&lt;p>如果無腦用一般 &lt;a class="link" href="https://mermaid.js.org" target="_blank" rel="noopener"
+&lt;h2 id="mermaid">&lt;a href="#mermaid" class="header-anchor">&lt;/a>mermaid
+&lt;/h2>&lt;p>如果無腦用一般 &lt;a class="link" href="https://mermaid.js.org" target="_blank" rel="noopener"
 >mermaid&lt;/a> 的寫法會像這樣&lt;/p>
 &lt;div style="display: grid; grid-template-columns: 1fr 1fr;;">
 &lt;div class="highlight">&lt;div class="chroma">
@@ -48,8 +48,8 @@
 &lt;/div>
 &lt;/div>
 &lt;p>&lt;code>D&lt;/code> 就直直的放在 &lt;code>B&lt;/code> 的下面，網路上找了一圈都沒看到可以把 &lt;code>D&lt;/code> 往右靠的方法。最後，我想出來的方法是在 &lt;code>D&lt;/code> 的左邊畫一個隱形的節點，用一條隱形的邊連起來，這樣 mermaid 就會自然的把 &lt;code>D&lt;/code> 往右邊擺了。&lt;/p>
-&lt;h3 id="隱形的邊">隱形的邊&lt;/h3>
-&lt;p>首先，根據 &lt;a class="link" href="https://mermaid.js.org/syntax/flowchart.html#an-invisible-link" target="_blank" rel="noopener"
+&lt;h3 id="隱形的邊">&lt;a href="#%e9%9a%b1%e5%bd%a2%e7%9a%84%e9%82%8a" class="header-anchor">&lt;/a>隱形的邊
+&lt;/h3>&lt;p>首先，根據 &lt;a class="link" href="https://mermaid.js.org/syntax/flowchart.html#an-invisible-link" target="_blank" rel="noopener"
 >官方文件&lt;/a> 我們可以用 &lt;code>~~~&lt;/code> 畫一條隱形的邊&lt;/p>
 &lt;div style="display: grid; grid-template-columns: 1fr 1fr;;">
 &lt;div class="highlight">&lt;div class="chroma">
@@ -81,8 +81,8 @@
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;h3 id="隱形的節點">隱形的節點&lt;/h3>
-&lt;p>再來，要把 &lt;code>E&lt;/code> 隱藏，&lt;a class="link" href="https://stackoverflow.com/questions/50268757/draw-arrow-from-node-to-nothing" target="_blank" rel="noopener"
+&lt;h3 id="隱形的節點">&lt;a href="#%e9%9a%b1%e5%bd%a2%e7%9a%84%e7%af%80%e9%bb%9e" class="header-anchor">&lt;/a>隱形的節點
+&lt;/h3>&lt;p>再來，要把 &lt;code>E&lt;/code> 隱藏，&lt;a class="link" href="https://stackoverflow.com/questions/50268757/draw-arrow-from-node-to-nothing" target="_blank" rel="noopener"
 >這篇問答&lt;/a> 提供了很多方法，不過我最喜歡的是定義一個 class 的方式&lt;/p>
 &lt;div style="display: grid; grid-template-columns: 1fr 1fr;;">
 &lt;div class="highlight">&lt;div class="chroma">
@@ -123,8 +123,8 @@
 &lt;/div>
 &lt;/div>
 &lt;p>這樣我們就得到一張有明確左右節點的二元樹了！&lt;/p>
-&lt;h2 id="goat">GoAT&lt;/h2>
-&lt;p>寫這篇的時候發現 hugo 原生支援 &lt;a class="link" href="https://github.com/bep/goat" target="_blank" rel="noopener"
+&lt;h2 id="goat">&lt;a href="#goat" class="header-anchor">&lt;/a>GoAT
+&lt;/h2>&lt;p>寫這篇的時候發現 hugo 原生支援 &lt;a class="link" href="https://github.com/bep/goat" target="_blank" rel="noopener"
 >GoAT&lt;/a>，於是就拿來畫畫看，&lt;/p>
 &lt;div class="goat svg-container ">
 &lt;svg
@@ -198,20 +198,20 @@ viewBox="0 0 96 217"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>光是對齊那謝角角跟線就花了十分鐘，有夠麻煩。這東西畫出來的圖確實好看，而且就算是純文字也很輕易看得懂（不像 mermaid 還有隱藏線跟隱藏節點要忽略），但是畫起來太累了，如果沒有工具，我絕對不會畫第二遍。我是有找到 &lt;a class="link" href="https://textik.com" target="_blank" rel="noopener"
->https://textik.com&lt;/a> 勉強可以用，不過也不適合拿來畫 binary tree，而且他的格式沒有跟 GoAT 完全兼容，需要再自己修改一些眉眉角角，所以還是放棄 GoAT 了。&lt;/p></description></item><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/other/index/</link><pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/md2pdf/index.png" alt="Featured image of post Markdown to PDF" />&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
-&lt;h2 id="安裝環境">安裝環境&lt;/h2>
-&lt;p>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
+>https://textik.com&lt;/a> 勉強可以用，不過也不適合拿來畫 binary tree，而且他的格式沒有跟 GoAT 完全兼容，需要再自己修改一些眉眉角角，所以還是放棄 GoAT 了。&lt;/p></description></item><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/md2pdf/index.png" alt="Featured image of post Markdown to PDF" />&lt;h1 id="markdown-to-pdf">&lt;a href="#markdown-to-pdf" class="header-anchor">&lt;/a>Markdown to PDF
+&lt;/h1>&lt;h2 id="安裝環境">&lt;a href="#%e5%ae%89%e8%a3%9d%e7%92%b0%e5%a2%83" class="header-anchor">&lt;/a>安裝環境
+&lt;/h2>&lt;p>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >pandoc&lt;/a> 你想得到的文件之間轉擋 &lt;a class="link" href="https://pandoc.org/diagram.svgz?v=20230203095535" target="_blank" rel="noopener"
 >官方精美的圖&lt;/a>&lt;/p>
 &lt;p>如果說你沒有中文的需求，現在就可以用 &lt;code>pandoc index.md -o out.pdf&lt;/code> 產生 PDF 檔了&lt;/p>
-&lt;h2 id="中文">中文&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="中文">&lt;a href="#%e4%b8%ad%e6%96%87" class="header-anchor">&lt;/a>中文
+&lt;/h2>&lt;blockquote>
 &lt;p>&lt;strong>Warning&lt;/strong>
 &lt;del>我後來不知道搞砸了什麼，反正目前中文是壞的，找到一個用網頁排版再用瀏覽器內建列印功能輸出成 PDF 的網頁：https://github.com/realdennis/md2pdf&lt;/del>
 已解決&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="安裝字型">安裝字型&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h3 id="安裝字型">&lt;a href="#%e5%ae%89%e8%a3%9d%e5%ad%97%e5%9e%8b" class="header-anchor">&lt;/a>安裝字型
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -219,9 +219,9 @@ viewBox="0 0 96 217"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $ sudo apt-get install texlive-fonts-recommended texlive-fonts-extra texlive-lang-chinese
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="字型設定">字型設定&lt;/h3>
-&lt;h4 id="檔案內">檔案內&lt;/h4>
-&lt;p>在 md 開頭設定一個包含中文的字型&lt;/p>
+&lt;/div>&lt;h3 id="字型設定">&lt;a href="#%e5%ad%97%e5%9e%8b%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>字型設定
+&lt;/h3>&lt;h4 id="檔案內">&lt;a href="#%e6%aa%94%e6%a1%88%e5%85%a7" class="header-anchor">&lt;/a>檔案內
+&lt;/h4>&lt;p>在 md 開頭設定一個包含中文的字型&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -234,8 +234,8 @@ viewBox="0 0 96 217"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="參數">參數&lt;/h4>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h4 id="參數">&lt;a href="#%e5%8f%83%e6%95%b8" class="header-anchor">&lt;/a>參數
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -246,15 +246,15 @@ viewBox="0 0 96 217"
 &lt;/div>&lt;blockquote>
 &lt;p>2023/02/24 新增：要加上 &lt;code>--pdf-engine xelatex&lt;/code> 才能正確輸出中文，原因是下面用的範本，他只有在使用 xelatex 和 lualatex 時才會把 &lt;code>CJKmainfont&lt;/code> 傳遞下去&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="範本">範本&lt;/h2>
-&lt;p>pandoc 有預設的 LaTeX 範本，但是不怎麼好看，可以用網路上開源的範本，或是花時間自己刻出最適合自己的&lt;/p>
-&lt;h3 id="eisvogel">Eisvogel&lt;/h3>
-&lt;p>&lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template" target="_blank" rel="noopener"
+&lt;h2 id="範本">&lt;a href="#%e7%af%84%e6%9c%ac" class="header-anchor">&lt;/a>範本
+&lt;/h2>&lt;p>pandoc 有預設的 LaTeX 範本，但是不怎麼好看，可以用網路上開源的範本，或是花時間自己刻出最適合自己的&lt;/p>
+&lt;h3 id="eisvogel">&lt;a href="#eisvogel" class="header-anchor">&lt;/a>Eisvogel
+&lt;/h3>&lt;p>&lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template" target="_blank" rel="noopener"
 >GitHub 頁面&lt;/a>
 去 &lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template/releases/latest" target="_blank" rel="noopener"
 >Release&lt;/a> 下載，解壓縮到 &lt;code>~/.local/share/pandoc/templates&lt;/code>。在編譯時加上 &lt;code>--template eisvogel&lt;/code> 就可以套用模板了。&lt;/p>
-&lt;h2 id="範例">範例&lt;/h2>
-&lt;p>以下是一段測試的 markdown 產生出來的 pdf，你可以用 &lt;a class="link" href="./out.pdf" >這個連結&lt;/a> 下載來看&lt;/p>
+&lt;h2 id="範例">&lt;a href="#%e7%af%84%e4%be%8b" class="header-anchor">&lt;/a>範例
+&lt;/h2>&lt;p>以下是一段測試的 markdown 產生出來的 pdf，你可以用 &lt;a class="link" href="./out.pdf" >這個連結&lt;/a> 下載來看&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -390,9 +390,9 @@ viewBox="0 0 96 217"
 &lt;/figure>
 &lt;/p>
 &lt;p>可以看到大部分的語法都可以轉換，甚至是程式碼區塊都有語法提示（syntax highlight）&lt;/p>
-&lt;h2 id="其他">其他&lt;/h2>
-&lt;h3 id="列出安裝的中文字型">列出安裝的中文字型&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="其他">&lt;a href="#%e5%85%b6%e4%bb%96" class="header-anchor">&lt;/a>其他
+&lt;/h2>&lt;h3 id="列出安裝的中文字型">&lt;a href="#%e5%88%97%e5%87%ba%e5%ae%89%e8%a3%9d%e7%9a%84%e4%b8%ad%e6%96%87%e5%ad%97%e5%9e%8b" class="header-anchor">&lt;/a>列出安裝的中文字型
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -400,8 +400,8 @@ viewBox="0 0 96 217"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $ fc-list :lang=zh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考連結">參考連結&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="參考連結">&lt;a href="#%e5%8f%83%e8%80%83%e9%80%a3%e7%b5%90" class="header-anchor">&lt;/a>參考連結
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://sam.webspace.tw/2020/01/13/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%87%20Markdown%20%E8%BD%89%E7%82%BA%20PDF%20%E6%96%87%E4%BB%B6/" target="_blank" rel="noopener"
 >https://sam.webspace.tw/2020/01/13/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%87%20Markdown%20%E8%BD%89%E7%82%BA%20PDF%20%E6%96%87%E4%BB%B6/&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/jgm/pandoc/wiki/Pandoc-with-Chinese" target="_blank" rel="noopener"
@@ -414,9 +414,9 @@ viewBox="0 0 96 217"
 >https://tex.stackexchange.com/questions/179778/xelatex-under-ubuntu&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >https://pandoc.org/&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>靈魂世界模型</title><link>https://blog.simbafs.cc/p/other/soul-model/</link><pubDate>Tue, 14 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/soul-model/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/soul-model.png" alt="Featured image of post 靈魂世界模型" />&lt;h1 id="靈魂世界模型">靈魂世界模型&lt;/h1>
-&lt;h2 id="未整理">未整理&lt;/h2>
-&lt;p>靈魂有重力效應（不是質量），一坨非常大量的靈魂聚集形成世界（恆星），每個生命（行星）以長橢圓軌道在空間中繞行，當離開世界一定距離就會死亡（離開世界），但因為重力影響仍在，再次繞行進一定距離後就會出生（進入世界），這個距離和 M 世界靈魂質量、m 個體靈魂質量有關
+&lt;/ul></description></item><item><title>靈魂世界模型</title><link>https://blog.simbafs.cc/p/soul-model/</link><pubDate>Tue, 14 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/soul-model/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/soul-model.png" alt="Featured image of post 靈魂世界模型" />&lt;h1 id="靈魂世界模型">&lt;a href="#%e9%9d%88%e9%ad%82%e4%b8%96%e7%95%8c%e6%a8%a1%e5%9e%8b" class="header-anchor">&lt;/a>靈魂世界模型
+&lt;/h1>&lt;h2 id="未整理">&lt;a href="#%e6%9c%aa%e6%95%b4%e7%90%86" class="header-anchor">&lt;/a>未整理
+&lt;/h2>&lt;p>靈魂有重力效應（不是質量），一坨非常大量的靈魂聚集形成世界（恆星），每個生命（行星）以長橢圓軌道在空間中繞行，當離開世界一定距離就會死亡（離開世界），但因為重力影響仍在，再次繞行進一定距離後就會出生（進入世界），這個距離和 M 世界靈魂質量、m 個體靈魂質量有關
 和世界距離越近靈魂相對強度越強（剛出生、接近死亡很弱，壯年比較強）
 當然會有多個恆星，靈魂從 A 恆星繞到 B 恆星就是穿越世界
 靈魂碰撞會導致記憶錯亂（非彈碰）或是靈魂交換（彈碰），但其實是記憶交換而已，靈魂本質不變
@@ -431,14 +431,14 @@ viewBox="0 0 96 217"
 行星淨空軌道？或是其實是小行星帶
 燃燒靈魂機制（是否讓能量不夠的個體能自體燃燒？）
 魔法在哪？&lt;/p>
-&lt;h2 id="缺點">缺點&lt;/h2>
-&lt;ul>
+&lt;h2 id="缺點">&lt;a href="#%e7%bc%ba%e9%bb%9e" class="header-anchor">&lt;/a>缺點
+&lt;/h2>&lt;ul>
 &lt;li>未考慮相對論&lt;/li>
 &lt;li>靈魂是否有最小單位（量子化）&lt;/li>
 &lt;li>真神與類神區別，需要再回去讀奧數神座&lt;/li>
 &lt;/ul>
-&lt;h2 id="設定">設定&lt;/h2>
-&lt;ul>
+&lt;h2 id="設定">&lt;a href="#%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>設定
+&lt;/h2>&lt;ul>
 &lt;li>存在靈魂維度&lt;/li>
 &lt;li>「靈魂本質」是存在靈魂維度內，投影到感知維度形成靈魂（生物能感知到的世界，overworld），賦予生物靈魂&lt;/li>
 &lt;li>靈魂本質不滅&lt;/li>
@@ -449,108 +449,109 @@ viewBox="0 0 96 217"
 &lt;li>靈魂和靈魂之間會互相影響，但因為個體靈魂都太弱、距離太遠，所以交互作用很弱。&lt;/li>
 &lt;li>「世界核心」是由大量的靈魂聚集（類似恆星），因此形成世界意識，因為靈魂強度夠強，因此可以投影在非生物（世界環境上）。&lt;/li>
 &lt;/ul>
-&lt;h2 id="現象由設定推論">現象（由設定推論）&lt;/h2>
-&lt;h2 id="上帝世界意識已死">上帝（世界意識）已死&lt;/h2>
-&lt;p>因為組成世界意識的靈魂太多太雜，還沒有融合，因此如果沒有多數共識，世界意識無法對感知維度產生影響。但如果有一個質量非常高的靈魂加入世界意識，達成多數共識的概率就高的多，世界意識就比較容易做出影響。&lt;br>
+&lt;h2 id="現象由設定推論">&lt;a href="#%e7%8f%be%e8%b1%a1%e7%94%b1%e8%a8%ad%e5%ae%9a%e6%8e%a8%e8%ab%96" class="header-anchor">&lt;/a>現象（由設定推論）
+&lt;/h2>&lt;h2 id="上帝世界意識已死">&lt;a href="#%e4%b8%8a%e5%b8%9d%e4%b8%96%e7%95%8c%e6%84%8f%e8%ad%98%e5%b7%b2%e6%ad%bb" class="header-anchor">&lt;/a>上帝（世界意識）已死
+&lt;/h2>&lt;p>因為組成世界意識的靈魂太多太雜，還沒有融合，因此如果沒有多數共識，世界意識無法對感知維度產生影響。但如果有一個質量非常高的靈魂加入世界意識，達成多數共識的概率就高的多，世界意識就比較容易做出影響。&lt;br>
 我們所處的世界因為尚未產生大質量的靈魂，因此世界意識的構成都是強度差不多的靈魂，異質性太高，產生上帝以死的效果。&lt;br>
 另外如果因為某些作用（外部影響、經過超級長的時間）使得世界意識融合為一，世界意識很可能醒來&lt;/p>
-&lt;h2 id="世界範圍">世界範圍&lt;/h2>
-&lt;p>世界的概念類似橫星系，以世界核心為中心，有其影響範圍，影響範圍外很可能有其他世界（注意，這裡的世界都是在靈魂維度，世界在靈魂維度影響範圍有限，但是投影到感知維度時無限，類似四維投影的概念），因此所謂的世界核心只是靈魂強度的區域集大值&lt;/p>
-&lt;h2 id="出生死亡">出生、死亡&lt;/h2>
-&lt;p>因為靈魂強度和距離世界核心距離平方成反比，當個體靈魂由遠而進接近到一定距離（世界球層）內時，就會投影在世界上（出生），慢慢的因為距離縮短，靈魂強度增強，到達（壯年）。接著漸漸遠離，靈魂強度減弱，無法再投影而逐漸衰亡。&lt;/p>
-&lt;h2 id="類神真神">類神、真神&lt;/h2>
-&lt;p>類神、真神不死，是因為它們軌道離心律夠小，小到不會超過世界球層，因此就算再弱也不會無法投影。&lt;/p>
-&lt;h2 id="靈魂碰撞">靈魂碰撞&lt;/h2>
-&lt;p>靈魂繞行世界核心時，難免碰撞，碰撞時記憶會有部份跑錯。若是接近彈性碰撞，也就是記憶幾乎全部交換，就會產生靈魂互換的效果，但其實靈魂本質沒有交換，交換的是記憶。&lt;/p>
-&lt;h2 id="穿越世界魂穿">穿越世界（魂穿）&lt;/h2>
-&lt;p>魂穿名符其實，靈魂繞行時離開原本的世界核心去到令一個，如何保留記憶機制不明，也許是蟲洞吧。&lt;/p>
-&lt;h2 id="增強靈魂質量">增強靈魂質量&lt;/h2>
-&lt;p>除了能夠投影的靈魂，還有許多如粉塵般的靈魂在世界中，如果碰撞融合（質量差異越大月容易融合），就會增加靈魂質量&lt;/p>
-&lt;h2 id="減少靈魂質量">減少靈魂質量&lt;/h2>
-&lt;p>世界核心的中心因為壓力極高而燃燒靈魂（反正就是像恆星那樣），產生高能粒子流，會吹走部份的靈魂質量（就像太陽風那樣）&lt;br>
+&lt;h2 id="世界範圍">&lt;a href="#%e4%b8%96%e7%95%8c%e7%af%84%e5%9c%8d" class="header-anchor">&lt;/a>世界範圍
+&lt;/h2>&lt;p>世界的概念類似橫星系，以世界核心為中心，有其影響範圍，影響範圍外很可能有其他世界（注意，這裡的世界都是在靈魂維度，世界在靈魂維度影響範圍有限，但是投影到感知維度時無限，類似四維投影的概念），因此所謂的世界核心只是靈魂強度的區域集大值&lt;/p>
+&lt;h2 id="出生死亡">&lt;a href="#%e5%87%ba%e7%94%9f%e6%ad%bb%e4%ba%a1" class="header-anchor">&lt;/a>出生、死亡
+&lt;/h2>&lt;p>因為靈魂強度和距離世界核心距離平方成反比，當個體靈魂由遠而進接近到一定距離（世界球層）內時，就會投影在世界上（出生），慢慢的因為距離縮短，靈魂強度增強，到達（壯年）。接著漸漸遠離，靈魂強度減弱，無法再投影而逐漸衰亡。&lt;/p>
+&lt;h2 id="類神真神">&lt;a href="#%e9%a1%9e%e7%a5%9e%e7%9c%9f%e7%a5%9e" class="header-anchor">&lt;/a>類神、真神
+&lt;/h2>&lt;p>類神、真神不死，是因為它們軌道離心律夠小，小到不會超過世界球層，因此就算再弱也不會無法投影。&lt;/p>
+&lt;h2 id="靈魂碰撞">&lt;a href="#%e9%9d%88%e9%ad%82%e7%a2%b0%e6%92%9e" class="header-anchor">&lt;/a>靈魂碰撞
+&lt;/h2>&lt;p>靈魂繞行世界核心時，難免碰撞，碰撞時記憶會有部份跑錯。若是接近彈性碰撞，也就是記憶幾乎全部交換，就會產生靈魂互換的效果，但其實靈魂本質沒有交換，交換的是記憶。&lt;/p>
+&lt;h2 id="穿越世界魂穿">&lt;a href="#%e7%a9%bf%e8%b6%8a%e4%b8%96%e7%95%8c%e9%ad%82%e7%a9%bf" class="header-anchor">&lt;/a>穿越世界（魂穿）
+&lt;/h2>&lt;p>魂穿名符其實，靈魂繞行時離開原本的世界核心去到令一個，如何保留記憶機制不明，也許是蟲洞吧。&lt;/p>
+&lt;h2 id="增強靈魂質量">&lt;a href="#%e5%a2%9e%e5%bc%b7%e9%9d%88%e9%ad%82%e8%b3%aa%e9%87%8f" class="header-anchor">&lt;/a>增強靈魂質量
+&lt;/h2>&lt;p>除了能夠投影的靈魂，還有許多如粉塵般的靈魂在世界中，如果碰撞融合（質量差異越大月容易融合），就會增加靈魂質量&lt;/p>
+&lt;h2 id="減少靈魂質量">&lt;a href="#%e6%b8%9b%e5%b0%91%e9%9d%88%e9%ad%82%e8%b3%aa%e9%87%8f" class="header-anchor">&lt;/a>減少靈魂質量
+&lt;/h2>&lt;p>世界核心的中心因為壓力極高而燃燒靈魂（反正就是像恆星那樣），產生高能粒子流，會吹走部份的靈魂質量（就像太陽風那樣）&lt;br>
 一加一減下，如果收支平衡、又沒有方法，靈魂質量不太會變動）&lt;/p>
-&lt;h2 id="世界穩定性">世界穩定性&lt;/h2>
-&lt;p>如果收支平衡的靈魂太少，世界就會很冷清。如果太多，會導致有幾個靈魂越長越大，如果配合正確方式調整軌道，就能成就類神。類神太多就會進入神話時代。&lt;/p>
-&lt;h2 id="調整軌道">調整軌道&lt;/h2>
-&lt;p>透過向特定方向噴射靈魂，可以改變動量，改變軌道。&lt;/p>
-&lt;h2 id="heading">&lt;/h2>
-&lt;h2 id="heading-1">&lt;/h2></description></item><item><title>不同「邊數」的平面</title><link>https://blog.simbafs.cc/p/other/plantofnumbers/</link><pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/plantofnumbers/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/plantOfNumbers/index.png" alt="Featured image of post 不同「邊數」的平面" />&lt;h1 id="同邊數的平面">同「邊數」的平面&lt;/h1>
-&lt;h2 id="圖">圖&lt;/h2>
-&lt;p>先上圖，每個都是推到邊長為 4&lt;/p>
-&lt;h2 id="3">3&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/3.jpg"
+&lt;h2 id="世界穩定性">&lt;a href="#%e4%b8%96%e7%95%8c%e7%a9%a9%e5%ae%9a%e6%80%a7" class="header-anchor">&lt;/a>世界穩定性
+&lt;/h2>&lt;p>如果收支平衡的靈魂太少，世界就會很冷清。如果太多，會導致有幾個靈魂越長越大，如果配合正確方式調整軌道，就能成就類神。類神太多就會進入神話時代。&lt;/p>
+&lt;h2 id="調整軌道">&lt;a href="#%e8%aa%bf%e6%95%b4%e8%bb%8c%e9%81%93" class="header-anchor">&lt;/a>調整軌道
+&lt;/h2>&lt;p>透過向特定方向噴射靈魂，可以改變動量，改變軌道。&lt;/p>
+&lt;h2 id="heading">&lt;a href="#heading" class="header-anchor">&lt;/a>
+&lt;/h2>&lt;h2 id="heading-1">&lt;a href="#heading-1" class="header-anchor">&lt;/a>
+&lt;/h2></description></item><item><title>不同「邊數」的平面</title><link>https://blog.simbafs.cc/p/plantofnumbers/</link><pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/plantofnumbers/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/plantOfNumbers/index.png" alt="Featured image of post 不同「邊數」的平面" />&lt;h1 id="同邊數的平面">&lt;a href="#%e5%90%8c%e9%82%8a%e6%95%b8%e7%9a%84%e5%b9%b3%e9%9d%a2" class="header-anchor">&lt;/a>同「邊數」的平面
+&lt;/h1>&lt;h2 id="圖">&lt;a href="#%e5%9c%96" class="header-anchor">&lt;/a>圖
+&lt;/h2>&lt;p>先上圖，每個都是推到邊長為 4&lt;/p>
+&lt;h2 id="3">&lt;a href="#3" class="header-anchor">&lt;/a>3
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/3.jpg"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="4">4&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/4.jpg"
+&lt;h2 id="4">&lt;a href="#4" class="header-anchor">&lt;/a>4
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/4.jpg"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="5">5&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/5.jpg"
+&lt;h2 id="5">&lt;a href="#5" class="header-anchor">&lt;/a>5
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/5.jpg"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="6">6&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/6.jpg"
+&lt;h2 id="6">&lt;a href="#6" class="header-anchor">&lt;/a>6
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/6.jpg"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="7">7&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/7.jpg"
+&lt;h2 id="7">&lt;a href="#7" class="header-anchor">&lt;/a>7
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/7.jpg"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="8">8&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/8.jpg"
+&lt;h2 id="8">&lt;a href="#8" class="header-anchor">&lt;/a>8
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/8.jpg"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="9">9&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/9.jpg"
+&lt;h2 id="9">&lt;a href="#9" class="header-anchor">&lt;/a>9
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/9.jpg"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="10">10&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/10.jpg"
+&lt;h2 id="10">&lt;a href="#10" class="header-anchor">&lt;/a>10
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/10.jpg"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="11">11&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/11.jpg"
+&lt;h2 id="11">&lt;a href="#11" class="header-anchor">&lt;/a>11
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/11.jpg"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="12">12&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/12.jpg"
+&lt;h2 id="12">&lt;a href="#12" class="header-anchor">&lt;/a>12
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/12.jpg"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="13">13&lt;/h2>
-&lt;p>&lt;img src="https://blog.simbafs.cc/13.jpg"
+&lt;h2 id="13">&lt;a href="#13" class="header-anchor">&lt;/a>13
+&lt;/h2>&lt;p>&lt;img src="https://blog.simbafs.cc/13.jpg"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="共通性質">共通性質&lt;/h2>
-&lt;h2 id="堆積">堆積&lt;/h2>
-&lt;p>相鄰三個球球都是最密堆積&lt;/p>
-&lt;h2 id="球球數">球球數&lt;/h2>
-&lt;!-- raw HTML omitted -->
+&lt;h2 id="共通性質">&lt;a href="#%e5%85%b1%e9%80%9a%e6%80%a7%e8%b3%aa" class="header-anchor">&lt;/a>共通性質
+&lt;/h2>&lt;h2 id="堆積">&lt;a href="#%e5%a0%86%e7%a9%8d" class="header-anchor">&lt;/a>堆積
+&lt;/h2>&lt;p>相鄰三個球球都是最密堆積&lt;/p>
+&lt;h2 id="球球數">&lt;a href="#%e7%90%83%e7%90%83%e6%95%b8" class="header-anchor">&lt;/a>球球數
+&lt;/h2>&lt;!--MathJsx-->
 &lt;p>&lt;code>球球數=邊數*Σn&lt;/code>&lt;/p>
-&lt;h2 id="特殊性質">特殊性質&lt;/h2>
-&lt;h2 id="平面">平面&lt;/h2>
-&lt;p>只有 &lt;code>n=3,6&lt;/code> 會形成完全平面&lt;/p>
-&lt;h2 id="凹陷">凹陷&lt;/h2>
-&lt;p>當 &lt;code>n=4,5&lt;/code>，會形成下凹的漏斗狀&lt;/p>
-&lt;h2 id="多層">多層&lt;/h2>
-&lt;p>只有 &lt;code>n=3,5,6&lt;/code> 可以多層堆疊，其中 &lt;code>n=4,6&lt;/code> 因為都是平面，可以形成一樣的堆積形式。&lt;code>n=5&lt;/code> 會以類似立方最密堆積的方式形成立體形狀&lt;/p>
-&lt;h2 id="鞍形">鞍形&lt;/h2>
-&lt;p>從 &lt;code>n=7&lt;/code> 開始，堆積時會自然地形成鞍形，且角度越來越小&lt;/p>
-&lt;h2 id="堆積技巧">堆積技巧&lt;/h2>
-&lt;p>首先取出「邊長」顆球球繞成環形，然後自然的繞成第二圈，整理角角形成最密堆積，然後在邊長大於 3 的邊上丟一顆球球，從最遠、最長的邊開始，邊長為三的邊會最穩定，盡量每次丟球球都要整理乾淨。堆積的時候要注意中心球球數是否跑掉。另外 11 顆前都還算好堆，12 開始會黏起來，但最後是可以穩定的分開的，13 就是完成也無法穩定分開，超過 13 還沒嘗試過。&lt;/p></description></item><item><title>震動 vs 振動</title><link>https://blog.simbafs.cc/p/other/vibrate/</link><pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/vibrate/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/vibrate.png" alt="Featured image of post 震動 vs 振動" />&lt;h1 id="震動-vs-振動">震動 vs 振動&lt;/h1>
-&lt;p>都是往復運動，但有不同，簡單來說，振動比震動有規律。
+&lt;h2 id="特殊性質">&lt;a href="#%e7%89%b9%e6%ae%8a%e6%80%a7%e8%b3%aa" class="header-anchor">&lt;/a>特殊性質
+&lt;/h2>&lt;h2 id="平面">&lt;a href="#%e5%b9%b3%e9%9d%a2" class="header-anchor">&lt;/a>平面
+&lt;/h2>&lt;p>只有 &lt;code>n=3,6&lt;/code> 會形成完全平面&lt;/p>
+&lt;h2 id="凹陷">&lt;a href="#%e5%87%b9%e9%99%b7" class="header-anchor">&lt;/a>凹陷
+&lt;/h2>&lt;p>當 &lt;code>n=4,5&lt;/code>，會形成下凹的漏斗狀&lt;/p>
+&lt;h2 id="多層">&lt;a href="#%e5%a4%9a%e5%b1%a4" class="header-anchor">&lt;/a>多層
+&lt;/h2>&lt;p>只有 &lt;code>n=3,5,6&lt;/code> 可以多層堆疊，其中 &lt;code>n=4,6&lt;/code> 因為都是平面，可以形成一樣的堆積形式。&lt;code>n=5&lt;/code> 會以類似立方最密堆積的方式形成立體形狀&lt;/p>
+&lt;h2 id="鞍形">&lt;a href="#%e9%9e%8d%e5%bd%a2" class="header-anchor">&lt;/a>鞍形
+&lt;/h2>&lt;p>從 &lt;code>n=7&lt;/code> 開始，堆積時會自然地形成鞍形，且角度越來越小&lt;/p>
+&lt;h2 id="堆積技巧">&lt;a href="#%e5%a0%86%e7%a9%8d%e6%8a%80%e5%b7%a7" class="header-anchor">&lt;/a>堆積技巧
+&lt;/h2>&lt;p>首先取出「邊長」顆球球繞成環形，然後自然的繞成第二圈，整理角角形成最密堆積，然後在邊長大於 3 的邊上丟一顆球球，從最遠、最長的邊開始，邊長為三的邊會最穩定，盡量每次丟球球都要整理乾淨。堆積的時候要注意中心球球數是否跑掉。另外 11 顆前都還算好堆，12 開始會黏起來，但最後是可以穩定的分開的，13 就是完成也無法穩定分開，超過 13 還沒嘗試過。&lt;/p></description></item><item><title>震動 vs 振動</title><link>https://blog.simbafs.cc/p/vibrate/</link><pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/vibrate/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/vibrate.png" alt="Featured image of post 震動 vs 振動" />&lt;h1 id="震動-vs-振動">&lt;a href="#%e9%9c%87%e5%8b%95-vs-%e6%8c%af%e5%8b%95" class="header-anchor">&lt;/a>震動 vs 振動
+&lt;/h1>&lt;p>都是往復運動，但有不同，簡單來說，振動比震動有規律。
 像是單擺是振動，地震是震動，因為單擺的運動是規律的，而地震波比較不規律&lt;/p>
 &lt;p>&lt;a class="link" href="https://pedia.cloud.edu.tw/Entry/Detail/?title=%E6%8C%AF%E5%8B%95" target="_blank" rel="noopener"
 >https://pedia.cloud.edu.tw/Entry/Detail/?title=%E6%8C%AF%E5%8B%95&lt;/a>
 &lt;a class="link" href="https://pedia.cloud.edu.tw/Entry/Detail?title=%E9%9C%87%E5%8B%95" target="_blank" rel="noopener"
 >https://pedia.cloud.edu.tw/Entry/Detail?title=%E9%9C%87%E5%8B%95&lt;/a>&lt;/p>
 &lt;p>至於為什麼我會去查這個呢？因為我發現物理實驗預報寫「簡諧震動」，但是我覺得「震」筆畫太多了，我想寫「振」於是就跑去查教育部字典&lt;/p>
-&lt;p>得證：懶惰使人進步&lt;/p></description></item><item><title>LaTeX Starter</title><link>https://blog.simbafs.cc/p/other/latex-starter/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/latex-starter/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/latex-starter.png" alt="Featured image of post LaTeX Starter" />&lt;h1 id="latex-stater">LaTeX Stater&lt;/h1>
-&lt;p>LaTeX 是一老牌的排版系統，基本的概念是內容與呈現分離，在撰寫內容時不用管排版（所以你就不會擔心移動圖片一咪咪整份文件就跑版了）。除了排版，LaTeX 還很擅長輸出各種莫名其妙的東西，像是超複雜的數學式、象棋棋譜、化學結構&amp;hellip;&amp;hellip;&lt;/p>
+&lt;p>得證：懶惰使人進步&lt;/p></description></item><item><title>LaTeX Starter</title><link>https://blog.simbafs.cc/p/latex-starter/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/latex-starter/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/latex-starter.png" alt="Featured image of post LaTeX Starter" />&lt;h1 id="latex-stater">&lt;a href="#latex-stater" class="header-anchor">&lt;/a>LaTeX Stater
+&lt;/h1>&lt;p>LaTeX 是一老牌的排版系統，基本的概念是內容與呈現分離，在撰寫內容時不用管排版（所以你就不會擔心移動圖片一咪咪整份文件就跑版了）。除了排版，LaTeX 還很擅長輸出各種莫名其妙的東西，像是超複雜的數學式、象棋棋譜、化學結構&amp;hellip;&amp;hellip;&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/latex-starter/latex-example.png"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/latex-starter/latex-example.png"
 loading="lazy"
 alt="莫名其妙排版範例"
 >&lt;/th>
@@ -558,15 +559,15 @@ alt="莫名其妙排版範例"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">credit:&lt;a class="link" href="https://zh.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener"
+&lt;td style="text-align: center">credit:&lt;a class="link" href="https://zh.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener"
 >https://zh.wikipedia.org/wiki/LaTeX&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>在使用 LaTeX 一段時間之後，對它的印象就是加強版的 Markdown（或是說 Markdown 是簡化版的 LaTeX），而且他還有巨集，可以擴展原版沒有提供的功能（就是上面那些奇奇怪怪的東西）。&lt;/p>
-&lt;h2 id="幾個重點">幾個重點&lt;/h2>
-&lt;h2 id="中文">中文&lt;/h2>
-&lt;p>使用 LaTeX 對大部分人最重要的就是「怎麼打中文」，總不可能打全英文報告吧！要用中文，渲染引擎要用 XLaTeX，然後加上以下設定&lt;br>
+&lt;h2 id="幾個重點">&lt;a href="#%e5%b9%be%e5%80%8b%e9%87%8d%e9%bb%9e" class="header-anchor">&lt;/a>幾個重點
+&lt;/h2>&lt;h2 id="中文">&lt;a href="#%e4%b8%ad%e6%96%87" class="header-anchor">&lt;/a>中文
+&lt;/h2>&lt;p>使用 LaTeX 對大部分人最重要的就是「怎麼打中文」，總不可能打全英文報告吧！要用中文，渲染引擎要用 XLaTeX，然後加上以下設定&lt;br>
 （&lt;code>.ttf&lt;/code> 可以指向你自己喜歡的中文字型檔）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -592,25 +593,25 @@ alt="莫名其妙排版範例"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\XeTeXlinebreaklocale&lt;/span> &amp;#34;zh&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="換行">換行&lt;/h2>
-&lt;p>LaTeX 在換行這個設計和 Markdown 一樣，因為內容與呈現分離，所以你的換行不是真的換行。Markdown 用 &lt;code> &lt;/code>（兩個空白），在 LaTeX 是 &lt;code>\\&lt;/code>（兩個反斜線）&lt;/p>
-&lt;h2 id="巨集與-package">巨集與 Package&lt;/h2>
-&lt;p>LaTeX 一個核心概念是巨集，就是函數啦，巨集的開頭是 &lt;code>\&lt;/code>（反斜線），巨集可以自己定義，也可以用 &lt;code>\usepackage{}&lt;/code> 載入別人寫好的&lt;/p>
-&lt;h2 id="overleaf">overleaf&lt;/h2>
-&lt;p>overleaf 是一個線上編輯 LaTeX 的網站，預裝了幾乎所有寫報告用得到的 packages，而且可以上傳自己的字型、圖片，而且右邊可以顯示產生的 PDF（非即時，按 CTRL-Enter 編譯）。這個網站整體使用體驗還算不錯，該有的功能都有了。&lt;/p>
-&lt;h2 id="表格">表格&lt;/h2>
-&lt;h3 id="切版">切版&lt;/h3>
-&lt;p>畫 LaTeX 表格最簡單的方式是用 Google Sheet + &lt;a class="link" href="https://workspace.google.com/marketplace/app/latexkit/716178627426?hl=zh_tw" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="換行">&lt;a href="#%e6%8f%9b%e8%a1%8c" class="header-anchor">&lt;/a>換行
+&lt;/h2>&lt;p>LaTeX 在換行這個設計和 Markdown 一樣，因為內容與呈現分離，所以你的換行不是真的換行。Markdown 用 &lt;code> &lt;/code>（兩個空白），在 LaTeX 是 &lt;code>\\&lt;/code>（兩個反斜線）&lt;/p>
+&lt;h2 id="巨集與-package">&lt;a href="#%e5%b7%a8%e9%9b%86%e8%88%87-package" class="header-anchor">&lt;/a>巨集與 Package
+&lt;/h2>&lt;p>LaTeX 一個核心概念是巨集，就是函數啦，巨集的開頭是 &lt;code>\&lt;/code>（反斜線），巨集可以自己定義，也可以用 &lt;code>\usepackage{}&lt;/code> 載入別人寫好的&lt;/p>
+&lt;h2 id="overleaf">&lt;a href="#overleaf" class="header-anchor">&lt;/a>overleaf
+&lt;/h2>&lt;p>overleaf 是一個線上編輯 LaTeX 的網站，預裝了幾乎所有寫報告用得到的 packages，而且可以上傳自己的字型、圖片，而且右邊可以顯示產生的 PDF（非即時，按 CTRL-Enter 編譯）。這個網站整體使用體驗還算不錯，該有的功能都有了。&lt;/p>
+&lt;h2 id="表格">&lt;a href="#%e8%a1%a8%e6%a0%bc" class="header-anchor">&lt;/a>表格
+&lt;/h2>&lt;h3 id="切版">&lt;a href="#%e5%88%87%e7%89%88" class="header-anchor">&lt;/a>切版
+&lt;/h3>&lt;p>畫 LaTeX 表格最簡單的方式是用 Google Sheet + &lt;a class="link" href="https://workspace.google.com/marketplace/app/latexkit/716178627426?hl=zh_tw" target="_blank" rel="noopener"
 >latexkit&lt;/a>，這個外掛可以幫你把跨行、跨欄表格通通弄好，你只需要再調整格線和格式就行了（latexkit 只負責切版）&lt;/p>
-&lt;h3 id="格線">格線&lt;/h3>
-&lt;h4 id="直線">直線&lt;/h4>
-&lt;p>如果直線你需要兩條，在 &lt;code>\begin{tabular}{|L|L|}&lt;/code> 這裡多加幾條 &lt;code>|&lt;/code> 就可以了。直線如果遇到跨列的格子會自動跳過，所以你不需要處理&lt;/p>
-&lt;h4 id="橫線">橫線&lt;/h4>
-&lt;p>只需要用 &lt;code>\hline&lt;/code> 就可以畫一條橫線。&lt;br>
+&lt;h3 id="格線">&lt;a href="#%e6%a0%bc%e7%b7%9a" class="header-anchor">&lt;/a>格線
+&lt;/h3>&lt;h4 id="直線">&lt;a href="#%e7%9b%b4%e7%b7%9a" class="header-anchor">&lt;/a>直線
+&lt;/h4>&lt;p>如果直線你需要兩條，在 &lt;code>\begin{tabular}{|L|L|}&lt;/code> 這裡多加幾條 &lt;code>|&lt;/code> 就可以了。直線如果遇到跨列的格子會自動跳過，所以你不需要處理&lt;/p>
+&lt;h4 id="橫線">&lt;a href="#%e6%a9%ab%e7%b7%9a" class="header-anchor">&lt;/a>橫線
+&lt;/h4>&lt;p>只需要用 &lt;code>\hline&lt;/code> 就可以畫一條橫線。&lt;br>
 但是因為橫線遇到跨行的格子不會自動跳過，所以需要特殊處理。可以用 &lt;code>hhline&lt;/code> 這個 package，用法很簡單，&lt;code>\hhline{|~|-|=|}&lt;/code>。&lt;br>
 &lt;code>~&lt;/code> 是不劃線，&lt;code>-&lt;/code> 是畫一條線，&lt;code>=&lt;/code>是畫兩條線，而這裡的 &lt;code>|&lt;/code> 是在畫兩條線時要畫線中間的直線（你畫兩條線時試試看就知道了）&lt;/p>
-&lt;h2 id="數學表格">數學表格&lt;/h2>
-&lt;p>做報告的時候一定會遇到表格裡有數學符號，如果你懶得前後都加 &lt;code>$&lt;/code> 的話，可以用以下的方式&lt;/p>
+&lt;h2 id="數學表格">&lt;a href="#%e6%95%b8%e5%ad%b8%e8%a1%a8%e6%a0%bc" class="header-anchor">&lt;/a>數學表格
+&lt;/h2>&lt;p>做報告的時候一定會遇到表格裡有數學符號，如果你懶得前後都加 &lt;code>$&lt;/code> 的話，可以用以下的方式&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -627,17 +628,17 @@ alt="莫名其妙排版範例"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>tabular&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="其他">其他&lt;/h2>
-&lt;p>其他零碎的使用方法建議參考 &lt;a class="link" href="https://www.overleaf.com/read/hpscgpsbxnjf" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="其他">&lt;a href="#%e5%85%b6%e4%bb%96" class="header-anchor">&lt;/a>其他
+&lt;/h2>&lt;p>其他零碎的使用方法建議參考 &lt;a class="link" href="https://www.overleaf.com/read/hpscgpsbxnjf" target="_blank" rel="noopener"
 >Saintan 的 LaTeX 小教室&lt;/a>，裡面寫的非常詳細&lt;/p>
-&lt;h2 id="符號表">符號表&lt;/h2>
-&lt;p>在 LaTeX 打數學式的時候，一定會遇到一些莫名其妙的符號，可以參考下面兩個網站，可以依序找，第二個因為東西太多了所以會比較難找一點&lt;/p>
+&lt;h2 id="符號表">&lt;a href="#%e7%ac%a6%e8%99%9f%e8%a1%a8" class="header-anchor">&lt;/a>符號表
+&lt;/h2>&lt;p>在 LaTeX 打數學式的時候，一定會遇到一些莫名其妙的符號，可以參考下面兩個網站，可以依序找，第二個因為東西太多了所以會比較難找一點&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols" target="_blank" rel="noopener"
 >https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols&lt;/a>&lt;br>
 &lt;a class="link" href="https://www.caam.rice.edu/~heinken/latex/symbols.pdf" target="_blank" rel="noopener"
 >https://www.caam.rice.edu/~heinken/latex/symbols.pdf&lt;/a>&lt;/p>
-&lt;h2 id="我的-latex-範本">我的 LaTeX 範本&lt;/h2>
-&lt;p>這是我寫物理實驗結報的範本&lt;/p>
+&lt;h2 id="我的-latex-範本">&lt;a href="#%e6%88%91%e7%9a%84-latex-%e7%af%84%e6%9c%ac" class="header-anchor">&lt;/a>我的 LaTeX 範本
+&lt;/h2>&lt;p>這是我寫物理實驗結報的範本&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -738,18 +739,18 @@ alt="莫名其妙排版範例"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>document&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>臺灣地址 API</title><link>https://blog.simbafs.cc/p/other/taiwan-town-location/</link><pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/taiwan-town-location/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/taiwan-town-location.png" alt="Featured image of post 臺灣地址 API" />&lt;h1 id="臺灣地址-api">臺灣地址 API&lt;/h1>
-&lt;p>這是一個給經緯度吐地址的 api，甚至路段都會出來，搭配 &lt;a class="link" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation_API" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>臺灣地址 API</title><link>https://blog.simbafs.cc/p/taiwan-town-location/</link><pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/taiwan-town-location/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/taiwan-town-location.png" alt="Featured image of post 臺灣地址 API" />&lt;h1 id="臺灣地址-api">&lt;a href="#%e8%87%ba%e7%81%a3%e5%9c%b0%e5%9d%80-api" class="header-anchor">&lt;/a>臺灣地址 API
+&lt;/h1>&lt;p>這是一個給經緯度吐地址的 api，甚至路段都會出來，搭配 &lt;a class="link" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation_API" target="_blank" rel="noopener"
 >web geolocation api&lt;/a> 蠻不錯的，精確度不錯。可以不知道有沒有 rate limited 的問題，目前看起來連 token 都不用。&lt;/p>
-&lt;h2 id="網址">網址&lt;/h2>
-&lt;p>&lt;a class="link" href="https://api.nlsc.gov.tw/other/TownVillagePointQuery/" target="_blank" rel="noopener"
+&lt;h2 id="網址">&lt;a href="#%e7%b6%b2%e5%9d%80" class="header-anchor">&lt;/a>網址
+&lt;/h2>&lt;p>&lt;a class="link" href="https://api.nlsc.gov.tw/other/TownVillagePointQuery/" target="_blank" rel="noopener"
 >https://api.nlsc.gov.tw/other/TownVillagePointQuery/&lt;/a>&lt;/p>
-&lt;h2 id="用法">用法&lt;/h2>
-&lt;p>&lt;a class="link" href="https://api.nlsc.gov.tw/other/TownVillagePointQuery/" target="_blank" rel="noopener"
+&lt;h2 id="用法">&lt;a href="#%e7%94%a8%e6%b3%95" class="header-anchor">&lt;/a>用法
+&lt;/h2>&lt;p>&lt;a class="link" href="https://api.nlsc.gov.tw/other/TownVillagePointQuery/" target="_blank" rel="noopener"
 >https://api.nlsc.gov.tw/other/TownVillagePointQuery/&lt;/a>經度/緯度&lt;/p>
-&lt;h2 id="舉例">舉例：&lt;/h2>
-&lt;h2 id="request">request&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="舉例">&lt;a href="#%e8%88%89%e4%be%8b" class="header-anchor">&lt;/a>舉例：
+&lt;/h2>&lt;h2 id="request">&lt;a href="#request" class="header-anchor">&lt;/a>request
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -757,8 +758,8 @@ alt="莫名其妙排版範例"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">GET https://api.nlsc.gov.tw/other/TownVillagePointQuery/121.46278679999999/25.0169826
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="response">response&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="response">&lt;a href="#response" class="header-anchor">&lt;/a>response
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -788,25 +789,25 @@ alt="莫名其妙排版範例"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/townVillageItem&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>&lt;a class="link" href="https://data.gov.tw/dataset/101898" target="_blank" rel="noopener"
->https://data.gov.tw/dataset/101898&lt;/a>&lt;/p></description></item><item><title>大學二階面試、筆試</title><link>https://blog.simbafs.cc/p/other/college-qualification-interview-and-written-test/</link><pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/college-qualification-interview-and-written-test/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/college-qualification-interview-and-written-test.png" alt="Featured image of post 大學二階面試、筆試" />&lt;h1 id="大學二階面試筆試">大學二階面試、筆試&lt;/h1>
-&lt;h2 id="師大科技系面試">師大科技系面試&lt;/h2>
-&lt;blockquote>
+&lt;/div>&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;p>&lt;a class="link" href="https://data.gov.tw/dataset/101898" target="_blank" rel="noopener"
+>https://data.gov.tw/dataset/101898&lt;/a>&lt;/p></description></item><item><title>大學二階面試、筆試</title><link>https://blog.simbafs.cc/p/college-qualification-interview-and-written-test/</link><pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/college-qualification-interview-and-written-test/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/college-qualification-interview-and-written-test.png" alt="Featured image of post 大學二階面試、筆試" />&lt;h1 id="大學二階面試筆試">&lt;a href="#%e5%a4%a7%e5%ad%b8%e4%ba%8c%e9%9a%8e%e9%9d%a2%e8%a9%a6%e7%ad%86%e8%a9%a6" class="header-anchor">&lt;/a>大學二階面試、筆試
+&lt;/h1>&lt;h2 id="師大科技系面試">&lt;a href="#%e5%b8%ab%e5%a4%a7%e7%a7%91%e6%8a%80%e7%b3%bb%e9%9d%a2%e8%a9%a6" class="header-anchor">&lt;/a>師大科技系面試
+&lt;/h2>&lt;blockquote>
 &lt;p>兩關各十分鐘&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="第一關">第一關：&lt;/h2>
-&lt;ol>
+&lt;h2 id="第一關">&lt;a href="#%e7%ac%ac%e4%b8%80%e9%97%9c" class="header-anchor">&lt;/a>第一關：
+&lt;/h2>&lt;ol>
 &lt;li>自我介紹&lt;/li>
 &lt;li>一分鐘補充說明（有利備審、競賽）解決問題的經驗&lt;/li>
 &lt;li>自由談話時間&lt;/li>
 &lt;/ol>
-&lt;h2 id="第二關">第二關：&lt;/h2>
-&lt;ol>
+&lt;h2 id="第二關">&lt;a href="#%e7%ac%ac%e4%ba%8c%e9%97%9c" class="header-anchor">&lt;/a>第二關：
+&lt;/h2>&lt;ol>
 &lt;li>自我介紹一分鐘&lt;/li>
 &lt;li>科技系分幾組？差別在哪？你會選哪組？&lt;/li>
 &lt;li>我看你的自傳有寫「專案開發」，有例子嗎？&lt;/li>
 &lt;li>如果團隊合作時有人擺爛，你會怎麼做？（20 秒）&lt;/li>
 &lt;/ol>
-&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>這個系是團體面試，三個教授對三個考生，輪流回答問題，因為我是那組第一個，所以幾乎都是我先回答，教授沒有問什麼很難得問題，另外系主任看起來人很好。&lt;/p></description></item></channel></rss>
+&lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
+&lt;/h2>&lt;p>這個系是團體面試，三個教授對三個考生，輪流回答問題，因為我是那組第一個，所以幾乎都是我先回答，教授沒有問什麼很難得問題，另外系主任看起來人很好。&lt;/p></description></item></channel></rss>

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TwoInputCompare on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/twoinputcompare/</link><description>Recent content in TwoInputCompare on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/twoinputcompare/index.xml" rel="self" type="application/rss+xml"/><item><title>兩輸入生產單位的比較</title><link>https://blog.simbafs.cc/p/game/mindustry/two-input-compare/</link><pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/game/mindustry/two-input-compare/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/mindustry/twoInputCompare/index.png" alt="Featured image of post 兩輸入生產單位的比較" />&lt;h1 id="目的">目的&lt;/h1>
-&lt;ol>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TwoInputCompare on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/twoinputcompare/</link><description>Recent content in TwoInputCompare on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/twoinputcompare/index.xml" rel="self" type="application/rss+xml"/><item><title>兩輸入生產單位的比較</title><link>https://blog.simbafs.cc/p/two-input-compare/</link><pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/two-input-compare/</guid><description>&lt;img src="https://blog.simbafs.cc/og/game/mindustry/twoInputCompare/index.png" alt="Featured image of post 兩輸入生產單位的比較" />&lt;h1 id="目的">&lt;a href="#%e7%9b%ae%e7%9a%84" class="header-anchor">&lt;/a>目的
+&lt;/h1>&lt;ol>
 &lt;li>驗證不同設計的生產效率差異&lt;/li>
 &lt;li>用科學的方式檢驗下面這些毫無根據、隨意編造的偏見
 &lt;img src="https://blog.simbafs.cc/motivative-1.png"
@@ -19,8 +19,8 @@ loading="lazy"
 alt="motivative 4"
 >&lt;/li>
 &lt;/ol>
-&lt;h2 id="實驗方法">實驗方法&lt;/h2>
-&lt;p>相同的物品源、相同的生產建築數量、相同的輸出軌數和時間，以不同的輸入方法配置，計算每秒生產量。&lt;/p>
+&lt;h2 id="實驗方法">&lt;a href="#%e5%af%a6%e9%a9%97%e6%96%b9%e6%b3%95" class="header-anchor">&lt;/a>實驗方法
+&lt;/h2>&lt;p>相同的物品源、相同的生產建築數量、相同的輸出軌數和時間，以不同的輸入方法配置，計算每秒生產量。&lt;/p>
 &lt;ul>
 &lt;li>相同物品源：就一樣數量的物品源，本次實驗用兩組實驗，所以是四個沙、兩個煤&lt;/li>
 &lt;li>相同生產建築：八個煉矽廠&lt;/li>
@@ -30,50 +30,50 @@ alt="motivative 4"
 &lt;blockquote>
 &lt;p>因為輸送帶用的是最低階，可能會補給不足或是消化不夠快，但是因為兩個都是相同的限制（輸出軌數），要卡一定是兩個一起卡，頂多被卡成平手。這個時候如果還輸，那就不知道是誰的問題了喔！&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="原始數據和計算結果">原始數據和計算結果&lt;/h2>
-&lt;table>
+&lt;h2 id="原始數據和計算結果">&lt;a href="#%e5%8e%9f%e5%a7%8b%e6%95%b8%e6%93%9a%e5%92%8c%e8%a8%88%e7%ae%97%e7%b5%90%e6%9e%9c" class="header-anchor">&lt;/a>原始數據和計算結果
+&lt;/h2>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">秒數&lt;/th>
-&lt;th style="text-align:left">A&lt;/th>
-&lt;th style="text-align:left">B&lt;/th>
+&lt;th style="text-align: center">秒數&lt;/th>
+&lt;th style="text-align: left">A&lt;/th>
+&lt;th style="text-align: left">B&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">10&lt;/td>
-&lt;td style="text-align:left">10.8&lt;/td>
-&lt;td style="text-align:left">11.0&lt;/td>
+&lt;td style="text-align: center">10&lt;/td>
+&lt;td style="text-align: left">10.8&lt;/td>
+&lt;td style="text-align: left">11.0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">20&lt;/td>
-&lt;td style="text-align:left">9.6&lt;/td>
-&lt;td style="text-align:left">10.9&lt;/td>
+&lt;td style="text-align: center">20&lt;/td>
+&lt;td style="text-align: left">9.6&lt;/td>
+&lt;td style="text-align: left">10.9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">30&lt;/td>
-&lt;td style="text-align:left">9.2&lt;/td>
-&lt;td style="text-align:left">9.7&lt;/td>
+&lt;td style="text-align: center">30&lt;/td>
+&lt;td style="text-align: left">9.2&lt;/td>
+&lt;td style="text-align: left">9.7&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">40&lt;/td>
-&lt;td style="text-align:left">9.1&lt;/td>
-&lt;td style="text-align:left">9.6&lt;/td>
+&lt;td style="text-align: center">40&lt;/td>
+&lt;td style="text-align: left">9.1&lt;/td>
+&lt;td style="text-align: left">9.6&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">50&lt;/td>
-&lt;td style="text-align:left">9.0&lt;/td>
-&lt;td style="text-align:left">9.5&lt;/td>
+&lt;td style="text-align: center">50&lt;/td>
+&lt;td style="text-align: left">9.0&lt;/td>
+&lt;td style="text-align: left">9.5&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">60&lt;/td>
-&lt;td style="text-align:left">8.9&lt;/td>
-&lt;td style="text-align:left">9.2&lt;/td>
+&lt;td style="text-align: center">60&lt;/td>
+&lt;td style="text-align: left">8.9&lt;/td>
+&lt;td style="text-align: left">9.2&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">平均&lt;/td>
-&lt;td style="text-align:left">9.4&lt;/td>
-&lt;td style="text-align:left">10.0&lt;/td>
+&lt;td style="text-align: center">平均&lt;/td>
+&lt;td style="text-align: left">9.4&lt;/td>
+&lt;td style="text-align: left">10.0&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -89,16 +89,24 @@ alt="result"
 loading="lazy"
 alt="chart"
 >&lt;/p>
-&lt;h2 id="結果與討論">結果與討論&lt;/h2>
-&lt;p>在時間拉長後，因為被卡住的東西被平均掉，因此兩個都生產效率都下降，這個很正常&lt;br>
+&lt;h2 id="結果與討論">&lt;a href="#%e7%b5%90%e6%9e%9c%e8%88%87%e8%a8%8e%e8%ab%96" class="header-anchor">&lt;/a>結果與討論
+&lt;/h2>&lt;p>在時間拉長後，因為被卡住的東西被平均掉，因此兩個都生產效率都下降，這個很正常&lt;br>
 根據結果，即便都被限制，生產效率都還是 B 配置比較高，無論時間拉多長。&lt;br>
 根據我個人的猜測，B 因為輸入和輸出沒有混雜在一起，因此不會造成堵塞（仔細觀察 A，最後在反向分類器那邊常常會堵住，這就是輸入輸出混雜的後果），導致即使輸入比例不對，效率依舊比較高。&lt;br>
 A 的穩定性高了那麼一點點，不重要&lt;/p>
-&lt;h2 id="結果比較">結果比較&lt;/h2>
-&lt;p>根據可擴張性而言，B 的設計是可以橫向無限擴張，不像 A，縱向擴張受到輸送帶效率影響、橫向擴張受到輸入比須滿管影響（不滿管比例就不對，這個設計也就跟垃圾一樣毫無意義，因此必須滿管）。另外，一套 B 可以有比 A 更彈性的輸入和輸出輸送帶數量，因此可以適應更多的狀況。&lt;br>
+&lt;h2 id="結果比較">&lt;a href="#%e7%b5%90%e6%9e%9c%e6%af%94%e8%bc%83" class="header-anchor">&lt;/a>結果比較
+&lt;/h2>&lt;p>根據可擴張性而言，B 的設計是可以橫向無限擴張，不像 A，縱向擴張受到輸送帶效率影響、橫向擴張受到輸入比須滿管影響（不滿管比例就不對，這個設計也就跟垃圾一樣毫無意義，因此必須滿管）。另外，一套 B 可以有比 A 更彈性的輸入和輸出輸送帶數量，因此可以適應更多的狀況。&lt;br>
 B 唯一的缺點是佔體積大了一點點，但我個人認為，沒有任何事物是完美的，因此用一點點小缺點換取最多的優點，這個是比追求無謂的小體積來的更重要。&lt;br>
 更重要的是，B 的設計更為簡單，建造成本低、可以無限擴張&lt;/p>
-&lt;h2 id="後續實驗">後續實驗&lt;/h2>
-&lt;p>根據 &lt;code>Magicaltank&lt;/code> 和 &lt;code>a0000778&lt;/code> 的建議，換成溢流器的確會增加效率，但即使沒換，但還是比 A 設計效率高。&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted --></description></item></channel></rss>
+&lt;h2 id="後續實驗">&lt;a href="#%e5%be%8c%e7%ba%8c%e5%af%a6%e9%a9%97" class="header-anchor">&lt;/a>後續實驗
+&lt;/h2>&lt;p>根據 &lt;code>Magicaltank&lt;/code> 和 &lt;code>a0000778&lt;/code> 的建議，換成溢流器的確會增加效率，但即使沒換，但還是比 A 設計效率高。&lt;/p>
+&lt;!--
+## 結論
+`哥白尼#3565` 可憐問錯人
+`a0000778#4614` 不錯的建議，受教了
+`(Magicaltank)魔缸#2487` 不錯的建議，受教了
+`(Silicon God)D號香蕉#5904` 追求精簡設計，很有想法
+`acopika#3895` 看不清現實，連個簡單的實驗都沒做，喜新厭舊
+`popolol456#7199` 不求甚解，看起來會動、比例對就不研究了，還算 ok
+`(我叫美鳳 姑且就叫我美麗吧)酥炸牡蠣#4962` 燥鬱症+不會看空氣，給它台階還不會下，硬要吵
+--></description></item></channel></rss>

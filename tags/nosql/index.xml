@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nosql on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/nosql/</link><description>Recent content in Nosql on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 10 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/nosql/index.xml" rel="self" type="application/rss+xml"/><item><title>Mongoose Model</title><link>https://blog.simbafs.cc/p/js/mongoose-model/</link><pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/mongoose-model/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/Mongoose-Model.png" alt="Featured image of post Mongoose Model" />&lt;h1 id="mongoose-model">Mongoose Model&lt;/h1>
-&lt;h2 id="環境設定">環境設定&lt;/h2>
-&lt;p>這是這次實驗用的 code&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nosql on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/nosql/</link><description>Recent content in Nosql on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 10 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/nosql/index.xml" rel="self" type="application/rss+xml"/><item><title>Mongoose Model</title><link>https://blog.simbafs.cc/p/mongoose-model/</link><pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/mongoose-model/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/Mongoose-Model.png" alt="Featured image of post Mongoose Model" />&lt;h1 id="mongoose-model">&lt;a href="#mongoose-model" class="header-anchor">&lt;/a>Mongoose Model
+&lt;/h1>&lt;h2 id="環境設定">&lt;a href="#%e7%92%b0%e5%a2%83%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>環境設定
+&lt;/h2>&lt;p>這是這次實驗用的 code&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -66,7 +66,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#39;27017:27017&amp;#39;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="取得原-schema">取得原 schema&lt;/h2>
-&lt;p>在一般操作的時候都是用 &lt;code>UserModel&lt;/code> 在操作資料庫，當要取得 schema 的時候當然也是從他裡面找最方便，當然也可以把 schema 特別弄出來，但是有點麻煩，以這次的例子說明，原本的 &lt;code>UserSchema&lt;/code> 會存在 &lt;code>UserModel.schema.obj&lt;/code> 裡。&lt;/p>
-&lt;h2 id="真實資料庫結構">真實資料庫結構&lt;/h2>
-&lt;p>在建立 model 後 mongoose 會自動新增一些欄位，例如說 &lt;code>_id&lt;/code> 之類的，要取得包含這些欄位的真實 model 結構的話可以在 &lt;code>UserModel.schema.tree&lt;/code> 找到&lt;/p></description></item></channel></rss>
+&lt;/div>&lt;h2 id="取得原-schema">&lt;a href="#%e5%8f%96%e5%be%97%e5%8e%9f-schema" class="header-anchor">&lt;/a>取得原 schema
+&lt;/h2>&lt;p>在一般操作的時候都是用 &lt;code>UserModel&lt;/code> 在操作資料庫，當要取得 schema 的時候當然也是從他裡面找最方便，當然也可以把 schema 特別弄出來，但是有點麻煩，以這次的例子說明，原本的 &lt;code>UserSchema&lt;/code> 會存在 &lt;code>UserModel.schema.obj&lt;/code> 裡。&lt;/p>
+&lt;h2 id="真實資料庫結構">&lt;a href="#%e7%9c%9f%e5%af%a6%e8%b3%87%e6%96%99%e5%ba%ab%e7%b5%90%e6%a7%8b" class="header-anchor">&lt;/a>真實資料庫結構
+&lt;/h2>&lt;p>在建立 model 後 mongoose 會自動新增一些欄位，例如說 &lt;code>_id&lt;/code> 之類的，要取得包含這些欄位的真實 model 結構的話可以在 &lt;code>UserModel.schema.tree&lt;/code> 找到&lt;/p></description></item></channel></rss>

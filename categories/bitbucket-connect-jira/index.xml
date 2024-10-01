@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bitbucket-Connect-Jira on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/bitbucket-connect-jira/</link><description>Recent content in Bitbucket-Connect-Jira on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 20 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/bitbucket-connect-jira/index.xml" rel="self" type="application/rss+xml"/><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/atlassian/bitbucket-connect-jira/index.png" alt="Featured image of post Bitbucket Connect Jira" />&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
-&lt;h2 id="bitbucket-連接-jira">Bitbucket 連接 Jira&lt;/h2>
-&lt;p>先到 Bitbucket 的 repo 的 Jira issue 頁面
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bitbucket-Connect-Jira on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/bitbucket-connect-jira/</link><description>Recent content in Bitbucket-Connect-Jira on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 20 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/bitbucket-connect-jira/index.xml" rel="self" type="application/rss+xml"/><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/atlassian/bitbucket-connect-jira/index.png" alt="Featured image of post Bitbucket Connect Jira" />&lt;h1 id="bitbucket-connect-jira">&lt;a href="#bitbucket-connect-jira" class="header-anchor">&lt;/a>Bitbucket Connect Jira
+&lt;/h1>&lt;h2 id="bitbucket-連接-jira">&lt;a href="#bitbucket-%e9%80%a3%e6%8e%a5-jira" class="header-anchor">&lt;/a>Bitbucket 連接 Jira
+&lt;/h2>&lt;p>先到 Bitbucket 的 repo 的 Jira issue 頁面
 &lt;img src="https://blog.simbafs.cc/1.png"
 loading="lazy"
 alt="1"
@@ -20,8 +20,8 @@ alt="3"
 loading="lazy"
 alt="4"
 >&lt;/p>
-&lt;h2 id="jira-issue-連結-bitbucket-branch">Jira issue 連結 Bitbucket branch&lt;/h2>
-&lt;p>Bitbucket 的 repo 的 Jira issue 頁面，點擊要處理的 Jira issue 最右側的三個點點
+&lt;h2 id="jira-issue-連結-bitbucket-branch">&lt;a href="#jira-issue-%e9%80%a3%e7%b5%90-bitbucket-branch" class="header-anchor">&lt;/a>Jira issue 連結 Bitbucket branch
+&lt;/h2>&lt;p>Bitbucket 的 repo 的 Jira issue 頁面，點擊要處理的 Jira issue 最右側的三個點點
 &lt;img src="https://blog.simbafs.cc/4.png"
 loading="lazy"
 alt="4"
@@ -36,8 +36,8 @@ alt="5"
 loading="lazy"
 alt="6"
 >&lt;/p>
-&lt;h2 id="將遠端-git-brench-拉到本地">將遠端 Git brench 拉到本地&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="將遠端-git-brench-拉到本地">&lt;a href="#%e5%b0%87%e9%81%a0%e7%ab%af-git-brench-%e6%8b%89%e5%88%b0%e6%9c%ac%e5%9c%b0" class="header-anchor">&lt;/a>將遠端 Git brench 拉到本地
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -47,8 +47,8 @@ alt="6"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git switch &amp;lt;branch name&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="合併分支">合併分支&lt;/h2>
-&lt;p>目標：將 A 分支合併到 main 分支&lt;/p>
+&lt;/div>&lt;h2 id="合併分支">&lt;a href="#%e5%90%88%e4%bd%b5%e5%88%86%e6%94%af" class="header-anchor">&lt;/a>合併分支
+&lt;/h2>&lt;p>目標：將 A 分支合併到 main 分支&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blessed-Contrib on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/blessed-contrib/</link><description>Recent content in Blessed-Contrib on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/blessed-contrib/index.xml" rel="self" type="application/rss+xml"/><item><title>Blessed Contrib Tree</title><link>https://blog.simbafs.cc/p/js/blessed/blessed-contrib-tree/</link><pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/blessed/blessed-contrib-tree/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/blessed/blessed-contrib-tree.png" alt="Featured image of post Blessed Contrib Tree" />&lt;h1 id="blessed-contrib-tree">blessed Contrib Tree&lt;/h1>
-&lt;h2 id="tree">Tree&lt;/h2>
-&lt;p>想說先想一個專案來練練手
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blessed-Contrib on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/blessed-contrib/</link><description>Recent content in Blessed-Contrib on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/blessed-contrib/index.xml" rel="self" type="application/rss+xml"/><item><title>Blessed Contrib Tree</title><link>https://blog.simbafs.cc/p/blessed-contrib-tree/</link><pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/blessed-contrib-tree/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/blessed/blessed-contrib-tree.png" alt="Featured image of post Blessed Contrib Tree" />&lt;h1 id="blessed-contrib-tree">&lt;a href="#blessed-contrib-tree" class="header-anchor">&lt;/a>blessed Contrib Tree
+&lt;/h1>&lt;h2 id="tree">&lt;a href="#tree" class="header-anchor">&lt;/a>Tree
+&lt;/h2>&lt;p>想說先想一個專案來練練手
 熟悉一下 blessed
 突然看到 blessed-contrib 裡有個元件叫 &lt;code>tree&lt;/code>
 想說可以做成 JSON viewer
@@ -8,8 +8,8 @@
 &lt;p>其中最重要的部份就是搞定樹狀結構
 因為他有特定的格式和選項
 下面是官方的範例&lt;/p>
-&lt;h2 id="範例">範例&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="範例">&lt;a href="#%e7%af%84%e4%be%8b" class="header-anchor">&lt;/a>範例
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2

@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Android on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/android/</link><description>Recent content in Android on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>Anbox</title><link>https://blog.simbafs.cc/p/linux/anbox/</link><pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/anbox/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/anbox.png" alt="Featured image of post Anbox" />&lt;h1 id="anbox">Anbox&lt;/h1>
-&lt;p>&lt;a class="link" href="https://anbox.io/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Android on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/android/</link><description>Recent content in Android on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>Anbox</title><link>https://blog.simbafs.cc/p/anbox/</link><pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/anbox/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/anbox.png" alt="Featured image of post Anbox" />&lt;h1 id="anbox">&lt;a href="#anbox" class="header-anchor">&lt;/a>Anbox
+&lt;/h1>&lt;p>&lt;a class="link" href="https://anbox.io/" target="_blank" rel="noopener"
 >anbox&lt;/a> 是 Android in a box，是一種基於容器化技術的 Android 模擬器，所以執行速度會比較快、比較省資源，而且因為每個 App 都在各自的容器裡面，所以比較安全
 （應該沒理解錯吧？）。&lt;br>
 安裝 anbox 需要先安裝兩個 kernal modules，然後安裝 anbox 後，為了之後方便，所以要裝 Google Play，不裝也是可以，但之後安裝其他 App 比較麻煩&lt;/p>
-&lt;h2 id="系統">系統&lt;/h2>
-&lt;p>我用的系統是 Ubuntu 21.04，如果你的系統不一樣，可能會有某些步驟不太一樣。&lt;br>
+&lt;h2 id="系統">&lt;a href="#%e7%b3%bb%e7%b5%b1" class="header-anchor">&lt;/a>系統
+&lt;/h2>&lt;p>我用的系統是 Ubuntu 21.04，如果你的系統不一樣，可能會有某些步驟不太一樣。&lt;br>
 這次安裝因為涉及 Linux Kernel 所以隨時重開機有很大機會幫助改善遇到的問題&lt;/p>
-&lt;h2 id="安裝-linux-kernal-modules">安裝 Linux Kernal Modules&lt;/h2>
-&lt;p>如果你的 Linux kernale &amp;gt; 5.0，那理論上已經包在 Kernel 裡面了，所以不用安裝&lt;/p>
+&lt;h2 id="安裝-linux-kernal-modules">&lt;a href="#%e5%ae%89%e8%a3%9d-linux-kernal-modules" class="header-anchor">&lt;/a>安裝 Linux Kernal Modules
+&lt;/h2>&lt;p>如果你的 Linux kernale &amp;gt; 5.0，那理論上已經包在 Kernel 裡面了，所以不用安裝&lt;/p>
 &lt;blockquote>
 &lt;p>Starting with Ubuntu 19.04 binder and ashmem are now build with the standard Ubuntu kernel (&amp;gt;= 5.0) and you don’t have to install the modules from the PPA anymore.&lt;/p>
 &lt;/blockquote>
@@ -58,8 +58,8 @@
 &lt;p>&lt;a class="link" href="https://docs.anbox.io/userguide/install_kernel_modules.html" target="_blank" rel="noopener"
 >https://docs.anbox.io/userguide/install_kernel_modules.html&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="安裝-anbox">安裝 anbox&lt;/h2>
-&lt;p>如果你的電腦上有 snap，就用 snap 裝；如果沒有，就先去裝 snap。&lt;/p>
+&lt;h2 id="安裝-anbox">&lt;a href="#%e5%ae%89%e8%a3%9d-anbox" class="header-anchor">&lt;/a>安裝 anbox
+&lt;/h2>&lt;p>如果你的電腦上有 snap，就用 snap 裝；如果沒有，就先去裝 snap。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -81,8 +81,8 @@
 &lt;p>&lt;a class="link" href="https://docs.anbox.io/userguide/install.html" target="_blank" rel="noopener"
 >https://docs.anbox.io/userguide/install.html&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="apt">apt&lt;/h2>
-&lt;p>如果你是 Ubuntu/Debian 長期使用者，你可能會想用 apt 裝 anbox，也不是不行，但是等等裝 Google Play 的時候會出一點點問題（OverlayFS 路徑有問題），最佳解決辦法就是用 snap，不要用 apt&lt;/p>
+&lt;h2 id="apt">&lt;a href="#apt" class="header-anchor">&lt;/a>apt
+&lt;/h2>&lt;p>如果你是 Ubuntu/Debian 長期使用者，你可能會想用 apt 裝 anbox，也不是不行，但是等等裝 Google Play 的時候會出一點點問題（OverlayFS 路徑有問題），最佳解決辦法就是用 snap，不要用 apt&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -91,8 +91,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt remove anbox
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="安裝-google-play">安裝 Google Play&lt;/h2>
-&lt;p>因為 anbox 沒有內建 apk 安裝器，所以沒辦法很方便的安裝 APP，最方便的方法是安裝 Google Play。&lt;/p>
+&lt;/div>&lt;h2 id="安裝-google-play">&lt;a href="#%e5%ae%89%e8%a3%9d-google-play" class="header-anchor">&lt;/a>安裝 Google Play
+&lt;/h2>&lt;p>因為 anbox 沒有內建 apk 安裝器，所以沒辦法很方便的安裝 APP，最方便的方法是安裝 Google Play。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -113,11 +113,11 @@
 &lt;p>&lt;a class="link" href="https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox" target="_blank" rel="noopener"
 >https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="問遺">問遺&lt;/h2>
-&lt;p>目前裝好 APP 但是我打不開&lt;/p></description></item><item><title>kdeconnect</title><link>https://blog.simbafs.cc/p/linux/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/kdeconnect/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/kdeconnect.png" alt="Featured image of post kdeconnect" />&lt;h1 id="kdeconnect">kdeconnect&lt;/h1>
-&lt;p>kdeconnect 顧名思義是 kde 出的一款 connect 軟體，功能非常多而且方便。電腦和手機都安裝好軟體後，只要在同一個網域就可以配對連接&lt;/p>
-&lt;h2 id="功能介紹">功能介紹&lt;/h2>
-&lt;ol>
+&lt;h2 id="問遺">&lt;a href="#%e5%95%8f%e9%81%ba" class="header-anchor">&lt;/a>問遺
+&lt;/h2>&lt;p>目前裝好 APP 但是我打不開&lt;/p></description></item><item><title>kdeconnect</title><link>https://blog.simbafs.cc/p/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/kdeconnect/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/kdeconnect.png" alt="Featured image of post kdeconnect" />&lt;h1 id="kdeconnect">&lt;a href="#kdeconnect" class="header-anchor">&lt;/a>kdeconnect
+&lt;/h1>&lt;p>kdeconnect 顧名思義是 kde 出的一款 connect 軟體，功能非常多而且方便。電腦和手機都安裝好軟體後，只要在同一個網域就可以配對連接&lt;/p>
+&lt;h2 id="功能介紹">&lt;a href="#%e5%8a%9f%e8%83%bd%e4%bb%8b%e7%b4%b9" class="header-anchor">&lt;/a>功能介紹
+&lt;/h2>&lt;ol>
 &lt;li>基本訊息 - 在電腦和手機上可以互相看到電池、網路等基本訊息&lt;/li>
 &lt;li>通知 - 可以設定電腦顯示手機通知或手機顯示電腦通知，或是兩者都開啟，我通常只開前者&lt;/li>
 &lt;li>媒體控制 - 無論是 VLC、YouTube、Nefflix 或任何網頁，都可以控制進度、音量、暫停，而且雙方都可以控制。這個是我最愛的功能之一&lt;/li>
@@ -127,30 +127,30 @@
 &lt;li>輸入 - 不論是滑鼠、鍵盤，兩邊都可以互相當對方的輸入裝置，這個功能非常好用
 還有像是讓手機大叫（找手機用）、簡報控制、傳簡訊、手機有電話的時候自動暫停音樂等等奇奇怪怪的功能&lt;/li>
 &lt;/ol>
-&lt;h2 id="推薦命令">推薦命令&lt;/h2>
-&lt;table>
+&lt;h2 id="推薦命令">&lt;a href="#%e6%8e%a8%e8%96%a6%e5%91%bd%e4%bb%a4" class="header-anchor">&lt;/a>推薦命令
+&lt;/h2>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">Description&lt;/th>
-&lt;th style="text-align:left">Command&lt;/th>
+&lt;th style="text-align: center">Description&lt;/th>
+&lt;th style="text-align: left">Command&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">鎖定螢幕並暫停 VLC 播放&lt;/td>
-&lt;td style="text-align:left">&lt;code>loginctl lock-session; dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause&lt;/code>&lt;/td>
+&lt;td style="text-align: center">鎖定螢幕並暫停 VLC 播放&lt;/td>
+&lt;td style="text-align: left">&lt;code>loginctl lock-session; dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">解除鎖定螢幕（免密碼）&lt;/td>
-&lt;td style="text-align:left">&lt;code>loginctl unlock-session&lt;/code>&lt;/td>
+&lt;td style="text-align: center">解除鎖定螢幕（免密碼）&lt;/td>
+&lt;td style="text-align: left">&lt;code>loginctl unlock-session&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/cast-phone-screen-to-computer.png" alt="Featured image of post Cast Phone Screen to Computer" />&lt;h1 id="cast-phone-screen-to-computer">Cast Phone Screen to Computer&lt;/h1>
-&lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
-&lt;h2 id="scrcpy">SCRCPY&lt;/h2>
-&lt;p>這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。&lt;/p>
-&lt;h2 id="installation">Installation&lt;/h2>
-&lt;p>安裝流程意外的簡單，只需要用 &lt;code>apt&lt;/code> 就可以安裝了，或是你可以自己 build，稍微看了一下 &lt;a class="link" href="https://github.com/Genymobile/scrcpy/blob/master/BUILD.md" target="_blank" rel="noopener"
+&lt;/table></description></item><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/cast-phone-screen-to-computer/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/cast-phone-screen-to-computer.png" alt="Featured image of post Cast Phone Screen to Computer" />&lt;h1 id="cast-phone-screen-to-computer">&lt;a href="#cast-phone-screen-to-computer" class="header-anchor">&lt;/a>Cast Phone Screen to Computer
+&lt;/h1>&lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
+&lt;h2 id="scrcpy">&lt;a href="#scrcpy" class="header-anchor">&lt;/a>SCRCPY
+&lt;/h2>&lt;p>這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。&lt;/p>
+&lt;h2 id="installation">&lt;a href="#installation" class="header-anchor">&lt;/a>Installation
+&lt;/h2>&lt;p>安裝流程意外的簡單，只需要用 &lt;code>apt&lt;/code> 就可以安裝了，或是你可以自己 build，稍微看了一下 &lt;a class="link" href="https://github.com/Genymobile/scrcpy/blob/master/BUILD.md" target="_blank" rel="noopener"
 >說明&lt;/a> ，看起來不困難，但是既然 &lt;code>apt&lt;/code> 就可以安裝了我們就省一點時間&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -160,24 +160,24 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ sudo apt install scrcpy
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="usb-debug">USB debug&lt;/h2>
-&lt;p>首先無論是有線無線都要先打開手機的 &lt;code>USB debug&lt;/code> 選項，在開發人員選項裡面，詳細步驟請看 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options#enable" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="usb-debug">&lt;a href="#usb-debug" class="header-anchor">&lt;/a>USB debug
+&lt;/h2>&lt;p>首先無論是有線無線都要先打開手機的 &lt;code>USB debug&lt;/code> 選項，在開發人員選項裡面，詳細步驟請看 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options#enable" target="_blank" rel="noopener"
 >官方文件&lt;/a>。&lt;/p>
-&lt;h2 id="usb">USB&lt;/h2>
-&lt;p>如果不介意有一條線插著~~（順便充電）~~的話，投影畫面非常簡單，只有兩個步驟：&lt;/p>
+&lt;h2 id="usb">&lt;a href="#usb" class="header-anchor">&lt;/a>USB
+&lt;/h2>&lt;p>如果不介意有一條線插著~~（順便充電）~~的話，投影畫面非常簡單，只有兩個步驟：&lt;/p>
 &lt;ol>
 &lt;li>插上 USB 並且無論跳出什麼都按「同意」「OK」&lt;/li>
 &lt;li>打開終端機，執行 &lt;code>scrcpy&lt;/code>
 然後就會有一個視窗跳出來，你現在就可以在電腦上滑手機了！&lt;/li>
 &lt;/ol>
-&lt;h2 id="wireless">Wireless&lt;/h2>
-&lt;p>無線的話比較麻煩，首先是必須要可以連線，看是在同一個區域網路或是 VPN、ssh tunnel 都可以。再來是因為連線設定頗麻煩，所以我把相關的步驟寫成一個 &lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
+&lt;h2 id="wireless">&lt;a href="#wireless" class="header-anchor">&lt;/a>Wireless
+&lt;/h2>&lt;p>無線的話比較麻煩，首先是必須要可以連線，看是在同一個區域網路或是 VPN、ssh tunnel 都可以。再來是因為連線設定頗麻煩，所以我把相關的步驟寫成一個 &lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
 >script&lt;/a>，下載後給予執行權限就可以執行了（當然要安裝 scrcpy ）。有線的方式一樣很簡單，不用加任何選項就可以連接了。&lt;br>
 如果要啟用無線，只需要加上 &lt;code>-w&lt;/code> 選項（用預設的 ip &lt;code>192.168.43.1&lt;/code>)&lt;br>
 如果 ip 不是預設的話，可以加上 &lt;code>-i IP&lt;/code> 來指定其他的 ip&lt;br>
 加上 &lt;code>-f&lt;/code> 可以開啟全螢幕&lt;/p>
-&lt;h2 id="參連連結">參連連結&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener"
+&lt;h2 id="參連連結">&lt;a href="#%e5%8f%83%e9%80%a3%e9%80%a3%e7%b5%90" class="header-anchor">&lt;/a>參連連結
+&lt;/h2>&lt;p>&lt;a class="link" href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener"
 >https://github.com/Genymobile/scrcpy&lt;/a>
 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options" target="_blank" rel="noopener"
 >https://developer.android.com/studio/debug/dev-options&lt;/a>

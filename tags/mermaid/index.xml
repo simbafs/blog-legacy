@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mermaid on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/mermaid/</link><description>Recent content in Mermaid on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/mermaid/index.xml" rel="self" type="application/rss+xml"/><item><title>Mermaid Binary Tree</title><link>https://blog.simbafs.cc/p/other/mermaid-binary-tree/</link><pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/mermaid-binary-tree/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/mermaid-binary-tree.png" alt="Featured image of post Mermaid Binary Tree" />&lt;h1 id="mermaid-binary-tree">Mermaid Binary Tree&lt;/h1>
-&lt;p>今天寫筆記遇到一個需求，我想要用 mermaid 畫出下面這顆二元樹，其中 &lt;code>B&lt;/code> 沒有左節點，我希望能夠明確的標示出 &lt;code>D&lt;/code> 是 &lt;code>B&lt;/code> 的右節點&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mermaid on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/mermaid/</link><description>Recent content in Mermaid on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/mermaid/index.xml" rel="self" type="application/rss+xml"/><item><title>Mermaid Binary Tree</title><link>https://blog.simbafs.cc/p/mermaid-binary-tree/</link><pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/mermaid-binary-tree/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/mermaid-binary-tree.png" alt="Featured image of post Mermaid Binary Tree" />&lt;h1 id="mermaid-binary-tree">&lt;a href="#mermaid-binary-tree" class="header-anchor">&lt;/a>Mermaid Binary Tree
+&lt;/h1>&lt;p>今天寫筆記遇到一個需求，我想要用 mermaid 畫出下面這顆二元樹，其中 &lt;code>B&lt;/code> 沒有左節點，我希望能夠明確的標示出 &lt;code>D&lt;/code> 是 &lt;code>B&lt;/code> 的右節點&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -18,8 +18,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">classDef hidden display: none;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>
-&lt;h2 id="mermaid">mermaid&lt;/h2>
-&lt;p>如果無腦用一般 &lt;a class="link" href="https://mermaid.js.org" target="_blank" rel="noopener"
+&lt;h2 id="mermaid">&lt;a href="#mermaid" class="header-anchor">&lt;/a>mermaid
+&lt;/h2>&lt;p>如果無腦用一般 &lt;a class="link" href="https://mermaid.js.org" target="_blank" rel="noopener"
 >mermaid&lt;/a> 的寫法會像這樣&lt;/p>
 &lt;div style="display: grid; grid-template-columns: 1fr 1fr;;">
 &lt;div class="highlight">&lt;div class="chroma">
@@ -48,8 +48,8 @@
 &lt;/div>
 &lt;/div>
 &lt;p>&lt;code>D&lt;/code> 就直直的放在 &lt;code>B&lt;/code> 的下面，網路上找了一圈都沒看到可以把 &lt;code>D&lt;/code> 往右靠的方法。最後，我想出來的方法是在 &lt;code>D&lt;/code> 的左邊畫一個隱形的節點，用一條隱形的邊連起來，這樣 mermaid 就會自然的把 &lt;code>D&lt;/code> 往右邊擺了。&lt;/p>
-&lt;h3 id="隱形的邊">隱形的邊&lt;/h3>
-&lt;p>首先，根據 &lt;a class="link" href="https://mermaid.js.org/syntax/flowchart.html#an-invisible-link" target="_blank" rel="noopener"
+&lt;h3 id="隱形的邊">&lt;a href="#%e9%9a%b1%e5%bd%a2%e7%9a%84%e9%82%8a" class="header-anchor">&lt;/a>隱形的邊
+&lt;/h3>&lt;p>首先，根據 &lt;a class="link" href="https://mermaid.js.org/syntax/flowchart.html#an-invisible-link" target="_blank" rel="noopener"
 >官方文件&lt;/a> 我們可以用 &lt;code>~~~&lt;/code> 畫一條隱形的邊&lt;/p>
 &lt;div style="display: grid; grid-template-columns: 1fr 1fr;;">
 &lt;div class="highlight">&lt;div class="chroma">
@@ -81,8 +81,8 @@
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;h3 id="隱形的節點">隱形的節點&lt;/h3>
-&lt;p>再來，要把 &lt;code>E&lt;/code> 隱藏，&lt;a class="link" href="https://stackoverflow.com/questions/50268757/draw-arrow-from-node-to-nothing" target="_blank" rel="noopener"
+&lt;h3 id="隱形的節點">&lt;a href="#%e9%9a%b1%e5%bd%a2%e7%9a%84%e7%af%80%e9%bb%9e" class="header-anchor">&lt;/a>隱形的節點
+&lt;/h3>&lt;p>再來，要把 &lt;code>E&lt;/code> 隱藏，&lt;a class="link" href="https://stackoverflow.com/questions/50268757/draw-arrow-from-node-to-nothing" target="_blank" rel="noopener"
 >這篇問答&lt;/a> 提供了很多方法，不過我最喜歡的是定義一個 class 的方式&lt;/p>
 &lt;div style="display: grid; grid-template-columns: 1fr 1fr;;">
 &lt;div class="highlight">&lt;div class="chroma">
@@ -123,8 +123,8 @@
 &lt;/div>
 &lt;/div>
 &lt;p>這樣我們就得到一張有明確左右節點的二元樹了！&lt;/p>
-&lt;h2 id="goat">GoAT&lt;/h2>
-&lt;p>寫這篇的時候發現 hugo 原生支援 &lt;a class="link" href="https://github.com/bep/goat" target="_blank" rel="noopener"
+&lt;h2 id="goat">&lt;a href="#goat" class="header-anchor">&lt;/a>GoAT
+&lt;/h2>&lt;p>寫這篇的時候發現 hugo 原生支援 &lt;a class="link" href="https://github.com/bep/goat" target="_blank" rel="noopener"
 >GoAT&lt;/a>，於是就拿來畫畫看，&lt;/p>
 &lt;div class="goat svg-container ">
 &lt;svg

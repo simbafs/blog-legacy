@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Png on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/png/</link><description>Recent content in Png on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/png/index.xml" rel="self" type="application/rss+xml"/><item><title>編譯時期產生縮圖</title><link>https://blog.simbafs.cc/p/js/og/</link><pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/og/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/og.png" alt="Featured image of post 編譯時期產生縮圖" />&lt;h1 id="og">OG&lt;/h1>
-&lt;p>這裡的目的是要編譯時期靜態產生 OG image，也就是封面圖，為什麼不用 &lt;code>@vercel/og&lt;/code> 在需要的時候在 edge runtime 上產生呢？我就喜歡弄成靜態的&lt;/p>
-&lt;h2 id="selenium">selenium&lt;/h2>
-&lt;p>我想要程式化的產生圖片，根據提供的資訊替換標題、附標題、標籤等資訊，首先想到的就是 react 產出網頁截圖，當然不是人工截圖，是用 selenium 這樣的自動化工具，之前看過保哥一篇文章介紹這樣的操作，但是有個問題是我只是想產一張圖片還開一個瀏覽器是不是太癰腫了，無論是時間上或是記憶體開銷上。&lt;/p>
-&lt;h2 id="satori">Satori&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/vercel/satori/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Png on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/png/</link><description>Recent content in Png on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/png/index.xml" rel="self" type="application/rss+xml"/><item><title>編譯時期產生縮圖</title><link>https://blog.simbafs.cc/p/og/</link><pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/og/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/og.png" alt="Featured image of post 編譯時期產生縮圖" />&lt;h1 id="og">&lt;a href="#og" class="header-anchor">&lt;/a>OG
+&lt;/h1>&lt;p>這裡的目的是要編譯時期靜態產生 OG image，也就是封面圖，為什麼不用 &lt;code>@vercel/og&lt;/code> 在需要的時候在 edge runtime 上產生呢？我就喜歡弄成靜態的&lt;/p>
+&lt;h2 id="selenium">&lt;a href="#selenium" class="header-anchor">&lt;/a>selenium
+&lt;/h2>&lt;p>我想要程式化的產生圖片，根據提供的資訊替換標題、附標題、標籤等資訊，首先想到的就是 react 產出網頁截圖，當然不是人工截圖，是用 selenium 這樣的自動化工具，之前看過保哥一篇文章介紹這樣的操作，但是有個問題是我只是想產一張圖片還開一個瀏覽器是不是太癰腫了，無論是時間上或是記憶體開銷上。&lt;/p>
+&lt;h2 id="satori">&lt;a href="#satori" class="header-anchor">&lt;/a>Satori
+&lt;/h2>&lt;p>&lt;a class="link" href="https://github.com/vercel/satori/" target="_blank" rel="noopener"
 >satori&lt;/a> 是 &lt;code>@vercel/og&lt;/code> 背後使用的函式庫，把 jsx 輸出成 svg，vercel 為什麼選擇 svg 當作輸出目標其實不難想像，畢竟 svg 和 html 其實都是標籤形式，比起直接輸出成 png，svg 看起來有機會多了，於是我開始從 satori 開始。首先是 GitHub 上的範例：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -109,8 +109,8 @@ loading="lazy"
 alt="1.png"
 >&lt;br>
 這是一張透明背景，有黑色字印著散落的程式碼的圖片，我不知道 satori 內部是怎麼想的，反正這樣鐵定不行，那我們還是只能丟 jsx 進去了&lt;/p>
-&lt;h2 id="satori-html">satori-html&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/natemoo-re/satori-html" target="_blank" rel="noopener"
+&lt;h2 id="satori-html">&lt;a href="#satori-html" class="header-anchor">&lt;/a>satori-html
+&lt;/h2>&lt;p>&lt;a class="link" href="https://github.com/natemoo-re/satori-html" target="_blank" rel="noopener"
 >satori-html&lt;/a> 是個函式庫專門用來填補 HTML 到 satori 之間間隔，他會吃 HTML 字串，然後吐一個 &lt;code>react-elements-like object&lt;/code>，可以簡單的理解成 jsx 編譯後的輸出。來試試看：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -203,8 +203,8 @@ alt="1.png"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>看起來可以塞進 satori 試試看了&lt;/p>
-&lt;h2 id="合體">合體！&lt;/h2>
-&lt;p>把上面兩個湊起來長這樣&lt;/p>
+&lt;h2 id="合體">&lt;a href="#%e5%90%88%e9%ab%94" class="header-anchor">&lt;/a>合體！
+&lt;/h2>&lt;p>把上面兩個湊起來長這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -275,8 +275,8 @@ loading="lazy"
 alt="2.svg"
 >&lt;br>
 看起來合理多了，那麼接下來的問題就是輸出成 png 了&lt;/p>
-&lt;h2 id="svg-to-png">svg to png&lt;/h2>
-&lt;p>根據谷歌大神神諭，用 &lt;code>@resvg/resvg-js&lt;/code> 可以把 svg 轉成 png，看範例：&lt;/p>
+&lt;h2 id="svg-to-png">&lt;a href="#svg-to-png" class="header-anchor">&lt;/a>svg to png
+&lt;/h2>&lt;p>根據谷歌大神神諭，用 &lt;code>@resvg/resvg-js&lt;/code> 可以把 svg 轉成 png，看範例：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -432,8 +432,8 @@ loading="lazy"
 alt="3.png"
 >&lt;/p>
 &lt;p>嗯，很棒&lt;/p>
-&lt;h2 id="打包">打包&lt;/h2>
-&lt;p>核心程式碼都有了，接著我們只需要寫好範本、加上一些細節，躂啦！就完成了
+&lt;h2 id="打包">&lt;a href="#%e6%89%93%e5%8c%85" class="header-anchor">&lt;/a>打包
+&lt;/h2>&lt;p>核心程式碼都有了，接著我們只需要寫好範本、加上一些細節，躂啦！就完成了
 &lt;img src="https://blog.simbafs.cc/images/og/drawAnOwl.jpg"
 loading="lazy"
 >

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/docker/</link><description>Recent content in Docker on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Dockerfile Collection</title><link>https://blog.simbafs.cc/p/linux/docker/dockerfile-collection/</link><pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/dockerfile-collection/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/Dockerfile-collection.png" alt="Featured image of post Dockerfile Collection" />&lt;h1 id="dockerfile-collection">Dockerfile Collection&lt;/h1>
-&lt;h2 id="nextjs-with-pnpm">Nextjs with pnpm&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/docker/</link><description>Recent content in Docker on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Dockerfile Collection</title><link>https://blog.simbafs.cc/p/dockerfile-collection/</link><pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/dockerfile-collection/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/Dockerfile-collection.png" alt="Featured image of post Dockerfile Collection" />&lt;h1 id="dockerfile-collection">&lt;a href="#dockerfile-collection" class="header-anchor">&lt;/a>Dockerfile Collection
+&lt;/h1>&lt;h2 id="nextjs-with-pnpm">&lt;a href="#nextjs-with-pnpm" class="header-anchor">&lt;/a>Nextjs with pnpm
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -57,11 +57,11 @@
 &lt;/div>&lt;blockquote>
 &lt;p>modified from &lt;a class="link" href="https://pnpm.io/docker" target="_blank" rel="noopener"
 >https://pnpm.io/docker&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>Wireshark Over SSH in Docker</title><link>https://blog.simbafs.cc/p/linux/docker/wireshark-over-ssh-in-docker/</link><pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/wireshark-over-ssh-in-docker/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/wireshark-over-ssh-in-docker.png" alt="Featured image of post Wireshark Over SSH in Docker" />&lt;h1 id="wireshark-over-ssh-in-docker">Wireshark Over SSH in Docker&lt;/h1>
-&lt;p>分成兩個部份，一個是把封包從 docker container 裡面弄出來，再來是在本地的 &lt;a class="link" href="https://zh.wikipedia.org/zh-tw/Wireshark" target="_blank" rel="noopener"
+&lt;/blockquote></description></item><item><title>Wireshark Over SSH in Docker</title><link>https://blog.simbafs.cc/p/wireshark-over-ssh-in-docker/</link><pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/wireshark-over-ssh-in-docker/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/wireshark-over-ssh-in-docker.png" alt="Featured image of post Wireshark Over SSH in Docker" />&lt;h1 id="wireshark-over-ssh-in-docker">&lt;a href="#wireshark-over-ssh-in-docker" class="header-anchor">&lt;/a>Wireshark Over SSH in Docker
+&lt;/h1>&lt;p>分成兩個部份，一個是把封包從 docker container 裡面弄出來，再來是在本地的 &lt;a class="link" href="https://zh.wikipedia.org/zh-tw/Wireshark" target="_blank" rel="noopener"
 >wireshark&lt;/a> 抓到遠端的封包&lt;/p>
-&lt;h2 id="把封包弄出-docker-container">把封包弄出 docker container&lt;/h2>
-&lt;p>使用 &lt;a class="link" href="https://github.com/nicolaka/netshoot" target="_blank" rel="noopener"
+&lt;h2 id="把封包弄出-docker-container">&lt;a href="#%e6%8a%8a%e5%b0%81%e5%8c%85%e5%bc%84%e5%87%ba-docker-container" class="header-anchor">&lt;/a>把封包弄出 docker container
+&lt;/h2>&lt;p>使用 &lt;a class="link" href="https://github.com/nicolaka/netshoot" target="_blank" rel="noopener"
 >nicolaka/netshoot&lt;/a> 這個 docker image，把他跟目標 container 放在同一個 network 下，例如以下會把封包全部丟進 /data/nginx.pcap 這個檔案裡&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -99,8 +99,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="m">80&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="m">80&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="本地的-wireshark-抓到遠端的封包">本地的 wireshark 抓到遠端的封包&lt;/h2>
-&lt;p>我們有了 /data/nginx.pcap 之後，就可以用 ssh 把檔案印出來，然後吐給 wireshark&lt;/p>
+&lt;/div>&lt;h2 id="本地的-wireshark-抓到遠端的封包">&lt;a href="#%e6%9c%ac%e5%9c%b0%e7%9a%84-wireshark-%e6%8a%93%e5%88%b0%e9%81%a0%e7%ab%af%e7%9a%84%e5%b0%81%e5%8c%85" class="header-anchor">&lt;/a>本地的 wireshark 抓到遠端的封包
+&lt;/h2>&lt;p>我們有了 /data/nginx.pcap 之後，就可以用 ssh 把檔案印出來，然後吐給 wireshark&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -109,17 +109,17 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ssh ssh_host &amp;#34;cat path/to/nginx.pcap&amp;#34; | wireshark -k -i -
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/howto_use_wireshark_over_ssh.html" target="_blank" rel="noopener"
 >https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/howto_use_wireshark_over_ssh.html&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/nicolaka/netshoot" target="_blank" rel="noopener"
 >https://github.com/nicolaka/netshoot&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Cache Layer</title><link>https://blog.simbafs.cc/p/linux/docker/cache-layer/</link><pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/cache-layer/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/cache-layer.png" alt="Featured image of post Cache Layer" />&lt;h1 id="cache-layer">Cache Layer&lt;/h1>
-&lt;p>Dockerfile 中總是有些步驟很耗時間，但是其實每次都在做一樣的事，例如 &lt;code>npm i&lt;/code>、&lt;code>go mod download&lt;/code> 等等，每次其實都下載一樣的檔案。
+&lt;/ul></description></item><item><title>Cache Layer</title><link>https://blog.simbafs.cc/p/cache-layer/</link><pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/cache-layer/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/cache-layer.png" alt="Featured image of post Cache Layer" />&lt;h1 id="cache-layer">&lt;a href="#cache-layer" class="header-anchor">&lt;/a>Cache Layer
+&lt;/h1>&lt;p>Dockerfile 中總是有些步驟很耗時間，但是其實每次都在做一樣的事，例如 &lt;code>npm i&lt;/code>、&lt;code>go mod download&lt;/code> 等等，每次其實都下載一樣的檔案。
 docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache layer，最後的 image 就是這一層一層疊起來的。如果之前的 cache layer 都在且這次檔案變動跟之前一樣，那就會直接跳過命令執行，用快取帶替，直接來看例子&lt;/p>
-&lt;h2 id="沒有利用快取">沒有利用快取&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="沒有利用快取">&lt;a href="#%e6%b2%92%e6%9c%89%e5%88%a9%e7%94%a8%e5%bf%ab%e5%8f%96" class="header-anchor">&lt;/a>沒有利用快取
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -134,8 +134,8 @@ docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache la
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;code>COPY . .&lt;/code> 把所有檔案複製進來，然後 &lt;code>RUN go mod download&lt;/code> 看到，source code 有變動耶！快取不能用，因此重新下載一份相依套件，然後再執行後續動作&lt;/p>
-&lt;h2 id="利用快取">利用快取&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="利用快取">&lt;a href="#%e5%88%a9%e7%94%a8%e5%bf%ab%e5%8f%96" class="header-anchor">&lt;/a>利用快取
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -156,8 +156,8 @@ docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache la
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;code>COPY go.mod go.sum ./&lt;/code> 只會把 &lt;code>go.mod&lt;/code> 和 &lt;code>go.sum&lt;/code> 放進來，如果相依性沒有改變的話等於跟之前 &lt;code>docker build&lt;/code> 時條件一樣，因此當 docker 執行到 &lt;code>RUN go mod download&lt;/code> 時就可以直接找之前的 cache layer，跳過下載過程，然後再繼續後面的動作&lt;/p>
-&lt;h2 id="加速編譯的原則">加速編譯的原則&lt;/h2>
-&lt;p>按照前面利用快取的例子歸納，只要我們把執行越慢、越不常改變的步驟往前移，就可以用之前的 cache layer。而在這裡需要注意的是，&lt;code>COPY&lt;/code> 時只把下一個指令需要的檔案複製進來就好，盡量避免一次複製一整個目錄，這樣有助於減少檔案變動，更好的利用之前的 cache layer。&lt;/p>
+&lt;h2 id="加速編譯的原則">&lt;a href="#%e5%8a%a0%e9%80%9f%e7%b7%a8%e8%ad%af%e7%9a%84%e5%8e%9f%e5%89%87" class="header-anchor">&lt;/a>加速編譯的原則
+&lt;/h2>&lt;p>按照前面利用快取的例子歸納，只要我們把執行越慢、越不常改變的步驟往前移，就可以用之前的 cache layer。而在這裡需要注意的是，&lt;code>COPY&lt;/code> 時只把下一個指令需要的檔案複製進來就好，盡量避免一次複製一整個目錄，這樣有助於減少檔案變動，更好的利用之前的 cache layer。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -182,11 +182,11 @@ docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache la
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> +------------+
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="其他猜想">其他猜想&lt;/h2>
-&lt;p>我沒用過這個東西，所以以下描述只是猜想，可能跟實務上有出入。&lt;br>
-因為 docker 的 cache layer 是儲存在本機上，所以我換一台電腦執行 &lt;code>docker build&lt;/code> 就無法用到之前的 cache layer，所以保持在同一臺電腦編譯是最好的，可能這個就是之前看過的 build server？說不定有這個好處。&lt;/p></description></item><item><title>docker login error</title><link>https://blog.simbafs.cc/p/linux/docker/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-login-error/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/docker-login-error.png" alt="Featured image of post docker login error" />&lt;h1 id="docker-login-error">Docker Login Error&lt;/h1>
-&lt;h2 id="錯誤說明">錯誤說明&lt;/h2>
-&lt;p>昨天我在 terminal 登入 docker 的時候發現不知道為什麼不能登入，我先透過網頁登入確認過密碼沒有問題，也不是打錯字的關係，但還是不能當入。總是會有類似以下的錯誤訊息。&lt;/p>
+&lt;/div>&lt;h2 id="其他猜想">&lt;a href="#%e5%85%b6%e4%bb%96%e7%8c%9c%e6%83%b3" class="header-anchor">&lt;/a>其他猜想
+&lt;/h2>&lt;p>我沒用過這個東西，所以以下描述只是猜想，可能跟實務上有出入。&lt;br>
+因為 docker 的 cache layer 是儲存在本機上，所以我換一台電腦執行 &lt;code>docker build&lt;/code> 就無法用到之前的 cache layer，所以保持在同一臺電腦編譯是最好的，可能這個就是之前看過的 build server？說不定有這個好處。&lt;/p></description></item><item><title>docker login error</title><link>https://blog.simbafs.cc/p/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/docker-login-error/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/docker-login-error.png" alt="Featured image of post docker login error" />&lt;h1 id="docker-login-error">&lt;a href="#docker-login-error" class="header-anchor">&lt;/a>Docker Login Error
+&lt;/h1>&lt;h2 id="錯誤說明">&lt;a href="#%e9%8c%af%e8%aa%a4%e8%aa%aa%e6%98%8e" class="header-anchor">&lt;/a>錯誤說明
+&lt;/h2>&lt;p>昨天我在 terminal 登入 docker 的時候發現不知道為什麼不能登入，我先透過網頁登入確認過密碼沒有問題，也不是打錯字的關係，但還是不能當入。總是會有類似以下的錯誤訊息。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -199,8 +199,8 @@ docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache la
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Password encryption aborted.`
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="解決方法">解決方法&lt;/h2>
-&lt;p>經過搜尋之後，我按照 &lt;a class="link" href="https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="解決方法">&lt;a href="#%e8%a7%a3%e6%b1%ba%e6%96%b9%e6%b3%95" class="header-anchor">&lt;/a>解決方法
+&lt;/h2>&lt;p>經過搜尋之後，我按照 &lt;a class="link" href="https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452" target="_blank" rel="noopener"
 >https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452&lt;/a> 的方法成功登入了，但是在這之前要先安裝 &lt;code>gpg&lt;/code> 和 &lt;code>pass&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -237,17 +237,17 @@ docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache la
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker login
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考連結">參考連結&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="參考連結">&lt;a href="#%e5%8f%83%e8%80%83%e9%80%a3%e7%b5%90" class="header-anchor">&lt;/a>參考連結
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452" target="_blank" rel="noopener"
 >https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/50151833/cannot-login-to-docker-account/52881198#52881198" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/50151833/cannot-login-to-docker-account/52881198#52881198&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://gist.github.com/dataday/3c267be29e32573829c4781c99ea3395" target="_blank" rel="noopener"
 >https://gist.github.com/dataday/3c267be29e32573829c4781c99ea3395&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Connect to Ethernet in Docker Container</title><link>https://blog.simbafs.cc/p/linux/docker/connect-to-ethernet-in-docker-container/</link><pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/connect-to-ethernet-in-docker-container/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/connect-to-ethernet-in-docker-container.png" alt="Featured image of post Connect to Ethernet in Docker Container" />&lt;h1 id="connect-to-ethernet-in-docker-container">Connect to Ethernet in Docker Container&lt;/h1>
-&lt;h2 id="如何在-docker-container-裡連接-ethernet">如何在 docker container 裡連接 ethernet&lt;/h2>
-&lt;p>今天突然有個需求是在一個已經開啟的 container 弄東西，需要網路，但是不知道為什麼一直不上，後來發現是 docker 沒有設定 DNS 的問題，只要在外面輸入兩行指令就可以了&lt;/p>
+&lt;/ul></description></item><item><title>Connect to Ethernet in Docker Container</title><link>https://blog.simbafs.cc/p/connect-to-ethernet-in-docker-container/</link><pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/connect-to-ethernet-in-docker-container/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/connect-to-ethernet-in-docker-container.png" alt="Featured image of post Connect to Ethernet in Docker Container" />&lt;h1 id="connect-to-ethernet-in-docker-container">&lt;a href="#connect-to-ethernet-in-docker-container" class="header-anchor">&lt;/a>Connect to Ethernet in Docker Container
+&lt;/h1>&lt;h2 id="如何在-docker-container-裡連接-ethernet">&lt;a href="#%e5%a6%82%e4%bd%95%e5%9c%a8-docker-container-%e8%a3%a1%e9%80%a3%e6%8e%a5-ethernet" class="header-anchor">&lt;/a>如何在 docker container 裡連接 ethernet
+&lt;/h2>&lt;p>今天突然有個需求是在一個已經開啟的 container 弄東西，需要網路，但是不知道為什麼一直不上，後來發現是 docker 沒有設定 DNS 的問題，只要在外面輸入兩行指令就可以了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -258,18 +258,18 @@ docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache la
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl restart docker
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>然後重新啟動 docker&lt;/p></description></item><item><title>docker commit</title><link>https://blog.simbafs.cc/p/linux/docker/docker-commit/</link><pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-commit/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/docker-commit.png" alt="Featured image of post docker commit" />&lt;h1 id="docker-commit">Docker Commit&lt;/h1>
-&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>上次提到可以用 Dockerfile 建立 docker image，但我們還有令一個方法可以建立 docker image，那就是 &lt;code>docker commit&lt;/code> 指令&lt;/p>
-&lt;h3 id="和-dockerfile-差別">和 Dockerfile 差別&lt;/h3>
-&lt;p>&lt;code>docker commit&lt;/code> 有點像是手動版的 Dockerfile，在用 Dockerfile 建構 docker image 的時候，docker build 的工作就像是自動根據 Dockerfile 操作 &lt;code>docker commit&lt;/code>。
+&lt;/div>&lt;p>然後重新啟動 docker&lt;/p></description></item><item><title>docker commit</title><link>https://blog.simbafs.cc/p/docker-commit/</link><pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/docker-commit/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/docker-commit.png" alt="Featured image of post docker commit" />&lt;h1 id="docker-commit">&lt;a href="#docker-commit" class="header-anchor">&lt;/a>Docker Commit
+&lt;/h1>&lt;h2 id="前言">&lt;a href="#%e5%89%8d%e8%a8%80" class="header-anchor">&lt;/a>前言
+&lt;/h2>&lt;p>上次提到可以用 Dockerfile 建立 docker image，但我們還有令一個方法可以建立 docker image，那就是 &lt;code>docker commit&lt;/code> 指令&lt;/p>
+&lt;h3 id="和-dockerfile-差別">&lt;a href="#%e5%92%8c-dockerfile-%e5%b7%ae%e5%88%a5" class="header-anchor">&lt;/a>和 Dockerfile 差別
+&lt;/h3>&lt;p>&lt;code>docker commit&lt;/code> 有點像是手動版的 Dockerfile，在用 Dockerfile 建構 docker image 的時候，docker build 的工作就像是自動根據 Dockerfile 操作 &lt;code>docker commit&lt;/code>。
 Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程式碼，要將他包成 Docker 就很適合用 Dockerfile 自動化操作，因為程式碼會改變，但是包裝的流程基本上都是一樣的。
 &lt;code>docker commit&lt;/code> 適合用在建構環境，因為會有比較麻煩的操作，如果寫成 Dockerfile 會比較麻煩，當然如果可以的話還是寫成 Dockerfile 會比較好，因為更新的時候會比較方便。
 在建構 image 的時候要用哪個方法就看個人取捨了。&lt;/p>
-&lt;h3 id="docker-commit-指令">&lt;code>docker commit&lt;/code> 指令&lt;/h3>
-&lt;p>&lt;code>docker commit&lt;/code> 可以把運行中的 comtainer 轉成 images，有點類似令存新檔的概念。先來看看參數吧！&lt;/p>
-&lt;h4 id="參數">參數&lt;/h4>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h3 id="docker-commit-指令">&lt;a href="#docker-commit-%e6%8c%87%e4%bb%a4" class="header-anchor">&lt;/a>&lt;code>docker commit&lt;/code> 指令
+&lt;/h3>&lt;p>&lt;code>docker commit&lt;/code> 可以把運行中的 comtainer 轉成 images，有點類似令存新檔的概念。先來看看參數吧！&lt;/p>
+&lt;h4 id="參數">&lt;a href="#%e5%8f%83%e6%95%b8" class="header-anchor">&lt;/a>參數
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -298,31 +298,31 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;/div>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">選項&lt;/th>
-&lt;th style="text-align:left">說明&lt;/th>
+&lt;th style="text-align: left">選項&lt;/th>
+&lt;th style="text-align: left">說明&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">-a&lt;/td>
-&lt;td style="text-align:left">作者的名字&lt;/td>
+&lt;td style="text-align: left">-a&lt;/td>
+&lt;td style="text-align: left">作者的名字&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">-c&lt;/td>
-&lt;td style="text-align:left">我還沒研究出來有什麼用&lt;/td>
+&lt;td style="text-align: left">-c&lt;/td>
+&lt;td style="text-align: left">我還沒研究出來有什麼用&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">-m&lt;/td>
-&lt;td style="text-align:left">訊息&lt;/td>
+&lt;td style="text-align: left">-m&lt;/td>
+&lt;td style="text-align: left">訊息&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">-p&lt;/td>
-&lt;td style="text-align:left">建構時停容器&lt;/td>
+&lt;td style="text-align: left">-p&lt;/td>
+&lt;td style="text-align: left">建構時停容器&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docker 基礎指令</title><link>https://blog.simbafs.cc/p/linux/docker/docker-command/</link><pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-command/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/docker-%E5%9F%BA%E7%A4%8E%E6%8C%87%E4%BB%A4.png" alt="Featured image of post Docker 基礎指令" />&lt;h1 id="docker-指令">Docker 指令&lt;/h1>
-&lt;h2 id="install">Install&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/table></description></item><item><title>Docker 基礎指令</title><link>https://blog.simbafs.cc/p/docker-command/</link><pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/docker-command/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/docker-%E5%9F%BA%E7%A4%8E%E6%8C%87%E4%BB%A4.png" alt="Featured image of post Docker 基礎指令" />&lt;h1 id="docker-指令">&lt;a href="#docker-%e6%8c%87%e4%bb%a4" class="header-anchor">&lt;/a>Docker 指令
+&lt;/h1>&lt;h2 id="install">&lt;a href="#install" class="header-anchor">&lt;/a>Install
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -330,8 +330,8 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt install docker docker.io docker-compose
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="what-is-docker">What is docker&lt;/h2>
-&lt;p>Docker 是一個容器化的技術，基本上使用的時候可以把他當成虛擬機，雖然他們的使用的技術完全不一樣。對新手來說，在 Docker 裡面有四個重要的名詞：dockerfile, docker image, docker container, docker-compose。&lt;/p>
+&lt;/div>&lt;h2 id="what-is-docker">&lt;a href="#what-is-docker" class="header-anchor">&lt;/a>What is docker
+&lt;/h2>&lt;p>Docker 是一個容器化的技術，基本上使用的時候可以把他當成虛擬機，雖然他們的使用的技術完全不一樣。對新手來說，在 Docker 裡面有四個重要的名詞：dockerfile, docker image, docker container, docker-compose。&lt;/p>
 &lt;ol>
 &lt;li>dockerfile&lt;br>
 純文字檔，定義建立 docker image 的步驟，有點像是一個 bash shell。通常命名成 &lt;code>Dockerfile&lt;/code> ，在 build 的時候會預設用這個，也可以用 &lt;code>-f&lt;/code> 來指定其他的檔案。&lt;/li>

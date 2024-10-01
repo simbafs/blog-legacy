@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Onlinejudge on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/onlinejudge/</link><description>Recent content in Onlinejudge on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 09 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/onlinejudge/index.xml" rel="self" type="application/rss+xml"/><item><title>isolate</title><link>https://blog.simbafs.cc/p/linux/isolate/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/isolate/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/isolate.png" alt="Featured image of post isolate" />&lt;h1 id="isolate">isolate&lt;/h1>
-&lt;p>我有一個放了很久的計畫，就是自己寫一個 OJ，因為我覺得現在的那個太難用了。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Onlinejudge on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/onlinejudge/</link><description>Recent content in Onlinejudge on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 09 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/onlinejudge/index.xml" rel="self" type="application/rss+xml"/><item><title>isolate</title><link>https://blog.simbafs.cc/p/isolate/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/isolate/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/isolate.png" alt="Featured image of post isolate" />&lt;h1 id="isolate">&lt;a href="#isolate" class="header-anchor">&lt;/a>isolate
+&lt;/h1>&lt;p>我有一個放了很久的計畫，就是自己寫一個 OJ，因為我覺得現在的那個太難用了。
 我很快的建立 repo 但是卻完全沒有進展，我寫了一個 shell script 幫忙編譯執行程式之後我就在也沒有動過他了
 我沒有繼續動工的原因是我不知道如何隔離使用者提交的程式碼
 我想過 docker 可是據說還是不安全
@@ -9,8 +9,8 @@
 而且這好像是 IOI 自己寫的，應該是蠻安全的（吧？）
 今天成功編譯過後把心得寫下來&lt;/p>
 &lt;hr>
-&lt;h2 id="編譯">編譯&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="編譯">&lt;a href="#%e7%b7%a8%e8%ad%af" class="header-anchor">&lt;/a>編譯
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -28,8 +28,8 @@
 &lt;/div>
 &lt;/div>&lt;p>耶！編譯/安裝完成了&lt;/p>
 &lt;hr>
-&lt;h2 id="建立沙箱執行程式">建立沙箱/執行程式&lt;/h2>
-&lt;p>建立好之後切到 root 去
+&lt;h2 id="建立沙箱執行程式">&lt;a href="#%e5%bb%ba%e7%ab%8b%e6%b2%99%e7%ae%b1%e5%9f%b7%e8%a1%8c%e7%a8%8b%e5%bc%8f" class="header-anchor">&lt;/a>建立沙箱/執行程式
+&lt;/h2>&lt;p>建立好之後切到 root 去
 用&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">

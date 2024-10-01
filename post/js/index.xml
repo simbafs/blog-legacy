@@ -1,6 +1,132 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nodejs on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/js/</link><description>Recent content in nodejs on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/js/index.xml" rel="self" type="application/rss+xml"/><item><title>Ts to Jsdoc</title><link>https://blog.simbafs.cc/p/js/ts-to-jsdoc/</link><pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/ts-to-jsdoc/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/ts-to-jsdoc.png" alt="Featured image of post Ts to Jsdoc" />&lt;h1 id="ts-to-jsdoc">Ts to Jsdoc&lt;/h1>
-&lt;h2 id="generics">Generics&lt;/h2>
-&lt;p>&lt;a class="link" href="https://medium.com/@antonkrinitsyn/jsdoc-generic-types-typescript-db213cf48640" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nodejs on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/js/</link><description>Recent content in nodejs on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 29 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/js/index.xml" rel="self" type="application/rss+xml"/><item><title>Circle Transition in Motion Canvas</title><link>https://blog.simbafs.cc/p/circle-transition-in-motion-canvas/</link><pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/circle-transition-in-motion-canvas/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/circle-transition-in-motion-canvas/index.png" alt="Featured image of post Circle Transition in Motion Canvas" />&lt;h1 id="circle-transition-in-motion-canvas">&lt;a href="#circle-transition-in-motion-canvas" class="header-anchor">&lt;/a>Circle Transition in Motion Canvas
+&lt;/h1>&lt;p>這是一個 &lt;a class="link" href="https://motioncanvas.io/" target="_blank" rel="noopener"
+>Motion Canvas&lt;/a> 的轉場函數，使用後會有一個圈圈從畫面中間出現並放大，圈圈外是前一個場景，圈圈內是新的場景&lt;/p>
+&lt;p>範例：&lt;/p>
+&lt;div class="video-wrapper">
+&lt;video
+controls
+src="project.mp4"
+>
+&lt;p>
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="project.mp4">link to the video&lt;/a> instead.
+&lt;/p>
+&lt;/video>
+&lt;/div>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="nx">circleTransition&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">view&lt;/span>: &lt;span class="kt">View2D&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">duration&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">0.6&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">y&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useScene&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">getSize&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">r&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">sqrt&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mi">4&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">y&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">circle&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&amp;lt;&lt;/span>&lt;span class="nt">Circle&lt;/span> &lt;span class="p">/&amp;gt;)&lt;/span> &lt;span class="kr">as&lt;/span> &lt;span class="nx">Circle&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">view&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">circle&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">yield&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="nx">circle&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">compositeOperation&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;destination-atop&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// keypoint
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nx">size&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">Vector2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">r&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">r&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="c1">// 2r is diameter, set to 3r for better appearance
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nx">scale&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mf">0.000001&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// this must be a value not 0, but small enough to be invisible
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nx">fill&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;black&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// the circle nned a color
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">endTransition&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useTransition&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">ctx&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">ctx&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">yield&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="nx">circle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scale&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">duration&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">endTransition&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">yield&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="nx">circle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scale&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">circle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">remove&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>使用：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="nx">makeScene2D&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">view&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">container&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">createRef&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Rect&lt;/span>&lt;span class="p">&amp;gt;()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">view&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Rect&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">ref&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">container&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">layout&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">scale&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">gap&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;100%&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;100%&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">fill&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#7733ba&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">alignItems&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="s1">&amp;#39;center&amp;#39;&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">justifyContent&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="s1">&amp;#39;center&amp;#39;&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Txt&lt;/span> &lt;span class="na">text&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;Hello World&amp;#34;&lt;/span> &lt;span class="na">fill&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;white&amp;#34;&lt;/span> &lt;span class="na">fontSize&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">60&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">Rect&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&amp;gt;,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">yield&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="nx">circleTransition&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">view&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">yield&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="nx">waitFor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Ts to Jsdoc</title><link>https://blog.simbafs.cc/p/ts-to-jsdoc/</link><pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ts-to-jsdoc/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/ts-to-jsdoc.png" alt="Featured image of post Ts to Jsdoc" />&lt;h1 id="ts-to-jsdoc">&lt;a href="#ts-to-jsdoc" class="header-anchor">&lt;/a>Ts to Jsdoc
+&lt;/h1>&lt;h2 id="generics">&lt;a href="#generics" class="header-anchor">&lt;/a>Generics
+&lt;/h2>&lt;p>&lt;a class="link" href="https://medium.com/@antonkrinitsyn/jsdoc-generic-types-typescript-db213cf48640" target="_blank" rel="noopener"
 >https://medium.com/@antonkrinitsyn/jsdoc-generic-types-typescript-db213cf48640&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -24,8 +150,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="reducer">reducer&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="reducer">&lt;a href="#reducer" class="header-anchor">&lt;/a>reducer
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -48,12 +174,12 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nx">state&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">action&lt;/span>&lt;span class="p">]&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>編譯時期產生縮圖</title><link>https://blog.simbafs.cc/p/js/og/</link><pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/og/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/og.png" alt="Featured image of post 編譯時期產生縮圖" />&lt;h1 id="og">OG&lt;/h1>
-&lt;p>這裡的目的是要編譯時期靜態產生 OG image，也就是封面圖，為什麼不用 &lt;code>@vercel/og&lt;/code> 在需要的時候在 edge runtime 上產生呢？我就喜歡弄成靜態的&lt;/p>
-&lt;h2 id="selenium">selenium&lt;/h2>
-&lt;p>我想要程式化的產生圖片，根據提供的資訊替換標題、附標題、標籤等資訊，首先想到的就是 react 產出網頁截圖，當然不是人工截圖，是用 selenium 這樣的自動化工具，之前看過保哥一篇文章介紹這樣的操作，但是有個問題是我只是想產一張圖片還開一個瀏覽器是不是太癰腫了，無論是時間上或是記憶體開銷上。&lt;/p>
-&lt;h2 id="satori">Satori&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/vercel/satori/" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>編譯時期產生縮圖</title><link>https://blog.simbafs.cc/p/og/</link><pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/og/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/og.png" alt="Featured image of post 編譯時期產生縮圖" />&lt;h1 id="og">&lt;a href="#og" class="header-anchor">&lt;/a>OG
+&lt;/h1>&lt;p>這裡的目的是要編譯時期靜態產生 OG image，也就是封面圖，為什麼不用 &lt;code>@vercel/og&lt;/code> 在需要的時候在 edge runtime 上產生呢？我就喜歡弄成靜態的&lt;/p>
+&lt;h2 id="selenium">&lt;a href="#selenium" class="header-anchor">&lt;/a>selenium
+&lt;/h2>&lt;p>我想要程式化的產生圖片，根據提供的資訊替換標題、附標題、標籤等資訊，首先想到的就是 react 產出網頁截圖，當然不是人工截圖，是用 selenium 這樣的自動化工具，之前看過保哥一篇文章介紹這樣的操作，但是有個問題是我只是想產一張圖片還開一個瀏覽器是不是太癰腫了，無論是時間上或是記憶體開銷上。&lt;/p>
+&lt;h2 id="satori">&lt;a href="#satori" class="header-anchor">&lt;/a>Satori
+&lt;/h2>&lt;p>&lt;a class="link" href="https://github.com/vercel/satori/" target="_blank" rel="noopener"
 >satori&lt;/a> 是 &lt;code>@vercel/og&lt;/code> 背後使用的函式庫，把 jsx 輸出成 svg，vercel 為什麼選擇 svg 當作輸出目標其實不難想像，畢竟 svg 和 html 其實都是標籤形式，比起直接輸出成 png，svg 看起來有機會多了，於是我開始從 satori 開始。首先是 GitHub 上的範例：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -159,8 +285,8 @@ loading="lazy"
 alt="1.png"
 >&lt;br>
 這是一張透明背景，有黑色字印著散落的程式碼的圖片，我不知道 satori 內部是怎麼想的，反正這樣鐵定不行，那我們還是只能丟 jsx 進去了&lt;/p>
-&lt;h2 id="satori-html">satori-html&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/natemoo-re/satori-html" target="_blank" rel="noopener"
+&lt;h2 id="satori-html">&lt;a href="#satori-html" class="header-anchor">&lt;/a>satori-html
+&lt;/h2>&lt;p>&lt;a class="link" href="https://github.com/natemoo-re/satori-html" target="_blank" rel="noopener"
 >satori-html&lt;/a> 是個函式庫專門用來填補 HTML 到 satori 之間間隔，他會吃 HTML 字串，然後吐一個 &lt;code>react-elements-like object&lt;/code>，可以簡單的理解成 jsx 編譯後的輸出。來試試看：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -253,8 +379,8 @@ alt="1.png"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>看起來可以塞進 satori 試試看了&lt;/p>
-&lt;h2 id="合體">合體！&lt;/h2>
-&lt;p>把上面兩個湊起來長這樣&lt;/p>
+&lt;h2 id="合體">&lt;a href="#%e5%90%88%e9%ab%94" class="header-anchor">&lt;/a>合體！
+&lt;/h2>&lt;p>把上面兩個湊起來長這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -325,8 +451,8 @@ loading="lazy"
 alt="2.svg"
 >&lt;br>
 看起來合理多了，那麼接下來的問題就是輸出成 png 了&lt;/p>
-&lt;h2 id="svg-to-png">svg to png&lt;/h2>
-&lt;p>根據谷歌大神神諭，用 &lt;code>@resvg/resvg-js&lt;/code> 可以把 svg 轉成 png，看範例：&lt;/p>
+&lt;h2 id="svg-to-png">&lt;a href="#svg-to-png" class="header-anchor">&lt;/a>svg to png
+&lt;/h2>&lt;p>根據谷歌大神神諭，用 &lt;code>@resvg/resvg-js&lt;/code> 可以把 svg 轉成 png，看範例：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -482,40 +608,40 @@ loading="lazy"
 alt="3.png"
 >&lt;/p>
 &lt;p>嗯，很棒&lt;/p>
-&lt;h2 id="打包">打包&lt;/h2>
-&lt;p>核心程式碼都有了，接著我們只需要寫好範本、加上一些細節，躂啦！就完成了
+&lt;h2 id="打包">&lt;a href="#%e6%89%93%e5%8c%85" class="header-anchor">&lt;/a>打包
+&lt;/h2>&lt;p>核心程式碼都有了，接著我們只需要寫好範本、加上一些細節，躂啦！就完成了
 &lt;img src="https://blog.simbafs.cc/images/og/drawAnOwl.jpg"
 loading="lazy"
 >
 附上完成後的連結 &lt;a class="link" href="https://github.com/simbafs/og" target="_blank" rel="noopener"
->https://github.com/simbafs/og&lt;/a>&lt;/p></description></item><item><title>PocketBase</title><link>https://blog.simbafs.cc/p/js/pocketbase/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/pocketbase/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/pocketbase.png" alt="Featured image of post PocketBase" />&lt;h1 id="pocketbase">PocketBase&lt;/h1>
-&lt;p>&lt;a class="link" href="https://pocketbase.io/" target="_blank" rel="noopener"
+>https://github.com/simbafs/og&lt;/a>&lt;/p></description></item><item><title>PocketBase</title><link>https://blog.simbafs.cc/p/pocketbase/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/pocketbase/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/pocketbase.png" alt="Featured image of post PocketBase" />&lt;h1 id="pocketbase">&lt;a href="#pocketbase" class="header-anchor">&lt;/a>PocketBase
+&lt;/h1>&lt;p>&lt;a class="link" href="https://pocketbase.io/" target="_blank" rel="noopener"
 >PocketBase&lt;/a> 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的，因此可以編譯成一個單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結構、關聯、使用者驗證和權限控管等功能了&lt;/p>
 &lt;p>&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo.png"
 loading="lazy"
 alt="demo"
 >&lt;/p>
 &lt;p>接下來是我用 pocketbase 寫一個貼文佈告欄系統的過程&lt;/p>
-&lt;h2 id="安裝">安裝&lt;/h2>
-&lt;p>安裝很簡單，去 &lt;a class="link" href="https://pocketbase.io/docs/" target="_blank" rel="noopener"
+&lt;h2 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
+&lt;/h2>&lt;p>安裝很簡單，去 &lt;a class="link" href="https://pocketbase.io/docs/" target="_blank" rel="noopener"
 >https://pocketbase.io/docs/&lt;/a> 找到你的作業系統對應的檔案，下載下來後放到 &lt;code>$PATH&lt;/code> 裡面，在你的專案目錄就執行就可以了&lt;/p>
-&lt;h3 id="專案結構">專案結構&lt;/h3>
-&lt;p>執行 &lt;code>pocketbase serve&lt;/code> 後會啟動 pocketbase 伺服器，並自動初始化兩個資料夾 &lt;code>pb_data&lt;/code> 和 &lt;code>pb_migrations&lt;/code>，前者是存放你的資料庫設定、資料、log 的地方，後者是每次更動資料庫（新增刪改表格、欄位等等）時的操作，方便你在不同環境下同步資料庫設定而不損壞資料，還有一個資料夾是 &lt;code>pb_public&lt;/code>，你可以把前端程式放在這裡他會幫你放在 &lt;code>/&lt;/code> 路徑下&lt;/p>
-&lt;h2 id="設定-collection">設定 Collection&lt;/h2>
-&lt;p>啟動伺服器後開啟管理頁面 &lt;a class="link" href="http://localhost:8090/_" target="_blank" rel="noopener"
+&lt;h3 id="專案結構">&lt;a href="#%e5%b0%88%e6%a1%88%e7%b5%90%e6%a7%8b" class="header-anchor">&lt;/a>專案結構
+&lt;/h3>&lt;p>執行 &lt;code>pocketbase serve&lt;/code> 後會啟動 pocketbase 伺服器，並自動初始化兩個資料夾 &lt;code>pb_data&lt;/code> 和 &lt;code>pb_migrations&lt;/code>，前者是存放你的資料庫設定、資料、log 的地方，後者是每次更動資料庫（新增刪改表格、欄位等等）時的操作，方便你在不同環境下同步資料庫設定而不損壞資料，還有一個資料夾是 &lt;code>pb_public&lt;/code>，你可以把前端程式放在這裡他會幫你放在 &lt;code>/&lt;/code> 路徑下&lt;/p>
+&lt;h2 id="設定-collection">&lt;a href="#%e8%a8%ad%e5%ae%9a-collection" class="header-anchor">&lt;/a>設定 Collection
+&lt;/h2>&lt;p>啟動伺服器後開啟管理頁面 &lt;a class="link" href="http://localhost:8090/_" target="_blank" rel="noopener"
 >http://localhost:8090/_&lt;/a>，他會叫你設定第一個管理員帳號密碼，進入後會發現已經預設一個 users Collection（以下沿用 sqlite 稱呼，稱之為表格），那麼我們就保留他吧。&lt;/p>
-&lt;h3 id="表格種類">表格種類&lt;/h3>
-&lt;p>pocketbase 中表格有三種，第一種是一般的 base 基礎表格，就是拿來存資料的，第二種是 auth 驗證表格，對登入驗證有專門的設定，第三種是 view 表格，這個我還沒用過，更多範例可以看官方的 &lt;a class="link" href="https://pocketbase.io/docs/collections/#view-collection" target="_blank" rel="noopener"
+&lt;h3 id="表格種類">&lt;a href="#%e8%a1%a8%e6%a0%bc%e7%a8%ae%e9%a1%9e" class="header-anchor">&lt;/a>表格種類
+&lt;/h3>&lt;p>pocketbase 中表格有三種，第一種是一般的 base 基礎表格，就是拿來存資料的，第二種是 auth 驗證表格，對登入驗證有專門的設定，第三種是 view 表格，這個我還沒用過，更多範例可以看官方的 &lt;a class="link" href="https://pocketbase.io/docs/collections/#view-collection" target="_blank" rel="noopener"
 >文件&lt;/a>&lt;/p>
-&lt;h3 id="users">users&lt;/h3>
-&lt;p>這裡 users 應該不用多做調整，先新增一個使用者吧，這裡的使用者是沒有管理員權限的，要設定管理員要到 &lt;a class="link" href="http://127.0.0.1:8090/_/#/settings/admins" target="_blank" rel="noopener"
+&lt;h3 id="users">&lt;a href="#users" class="header-anchor">&lt;/a>users
+&lt;/h3>&lt;p>這裡 users 應該不用多做調整，先新增一個使用者吧，這裡的使用者是沒有管理員權限的，要設定管理員要到 &lt;a class="link" href="http://127.0.0.1:8090/_/#/settings/admins" target="_blank" rel="noopener"
 >http://127.0.0.1:8090/_/#/settings/admins&lt;/a>
 &lt;img src="https://blog.simbafs.cc/images/pocketbase/newUser.png"
 loading="lazy"
 alt="new user"
 >&lt;/p>
-&lt;h3 id="posts">posts&lt;/h3>
-&lt;p>接著建立新的 base collection，有 &lt;code>auther&lt;/code>、&lt;code>content&lt;/code> 兩個欄位，其中 &lt;code>author&lt;/code> 是關聯到 &lt;code>users&lt;/code> 表格，表示這邊文章是哪個使用者寫的，並且都設為非空。
+&lt;h3 id="posts">&lt;a href="#posts" class="header-anchor">&lt;/a>posts
+&lt;/h3>&lt;p>接著建立新的 base collection，有 &lt;code>auther&lt;/code>、&lt;code>content&lt;/code> 兩個欄位，其中 &lt;code>author&lt;/code> 是關聯到 &lt;code>users&lt;/code> 表格，表示這邊文章是哪個使用者寫的，並且都設為非空。
 &lt;img src="https://blog.simbafs.cc/images/pocketbase/newCollection_fields.png"
 loading="lazy"
 alt="new collection field"
@@ -526,11 +652,11 @@ loading="lazy"
 alt="new collection rule"
 >&lt;/p>
 &lt;p>那麼我們的後端大致完成，可以去寫前端了&lt;/p>
-&lt;h2 id="前端-js-sdk">前端 JS SDK&lt;/h2>
-&lt;p>pocketbase 官方有提供一個 &lt;a class="link" href="https://github.com/pocketbase/js-sdk" target="_blank" rel="noopener"
+&lt;h2 id="前端-js-sdk">&lt;a href="#%e5%89%8d%e7%ab%af-js-sdk" class="header-anchor">&lt;/a>前端 JS SDK
+&lt;/h2>&lt;p>pocketbase 官方有提供一個 &lt;a class="link" href="https://github.com/pocketbase/js-sdk" target="_blank" rel="noopener"
 >JS SDK&lt;/a> 可以使用，裝好後我們開一個 nextjs 專案，開啟 &lt;code>src/&lt;/code> 目錄、&lt;code>typescript&lt;/code> 跟 tailwindcss。把預設的雜七雜八的東西刪掉後，我們從一個乾淨的 &lt;code>src/pages/index.tsx&lt;/code> 開始。&lt;/p>
-&lt;h3 id="登入">登入&lt;/h3>
-&lt;p>我們需要兩個框框一個按鈕來登入使用者帳號，&lt;code>input()&lt;/code> 是 tailwindcss vairant，反正就是設定按鈕樣式而已&lt;/p>
+&lt;h3 id="登入">&lt;a href="#%e7%99%bb%e5%85%a5" class="header-anchor">&lt;/a>登入
+&lt;/h3>&lt;p>我們需要兩個框框一個按鈕來登入使用者帳號，&lt;code>input()&lt;/code> 是 tailwindcss vairant，反正就是設定按鈕樣式而已&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -604,12 +730,12 @@ alt="new collection rule"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>pocketbase 會自動維護 &lt;code>authStore&lt;/code>，預設是存在 localStorage 裡面，因此我們只有第一次要登入，第二次他其實會自動把 token 什麼的從 localStorage 抓出來，省了我們不少力氣&lt;/p>
-&lt;h3 id="typescript">typescript&lt;/h3>
-&lt;p>在開始抓資料前，我們來處理一下 typescript 的部份，如果這裡設定好，後面開發會輕鬆很多，有個工具叫做 &lt;a class="link" href="https://github.com/patmood/pocketbase-typegen" target="_blank" rel="noopener"
+&lt;h3 id="typescript">&lt;a href="#typescript" class="header-anchor">&lt;/a>typescript
+&lt;/h3>&lt;p>在開始抓資料前，我們來處理一下 typescript 的部份，如果這裡設定好，後面開發會輕鬆很多，有個工具叫做 &lt;a class="link" href="https://github.com/patmood/pocketbase-typegen" target="_blank" rel="noopener"
 >pocketbase-typegen&lt;/a> 可以自動根據 pocketbase 設定產生型別定義檔案，用指令 &lt;code>npx pocketbase-typegen --db ../pb_data/data.db --out src/pocketbase-type.ts&lt;/code> 就會產生好我們要的檔案了。&lt;br>
 裡面有幾種型別，第一類是 &lt;code>xxxRecord&lt;/code>，這類是根據資料庫設定直接產出來的，再來是 &lt;code>xxxResponse&lt;/code>，這個是 js-sdk 會吐給我們的，我們要用的也是這個&lt;/p>
-&lt;h3 id="列出-post">列出 post&lt;/h3>
-&lt;p>我們寫一個 hook 來處理抓資料的工作&lt;/p>
+&lt;h3 id="列出-post">&lt;a href="#%e5%88%97%e5%87%ba-post" class="header-anchor">&lt;/a>列出 post
+&lt;/h3>&lt;p>我們寫一個 hook 來處理抓資料的工作&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -640,8 +766,8 @@ alt="new collection rule"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="subscribe">Subscribe&lt;/h4>
-&lt;p>這個 hook 會在一開始就抓取全部的 posts，但是後續更新怎麼辦？pocketbase 提供 Subscribe，他會透過 websocket 或是 SSE 的方式把資料庫的更新即時通知前端，我們就修改一下上面的程式碼&lt;/p>
+&lt;/div>&lt;h4 id="subscribe">&lt;a href="#subscribe" class="header-anchor">&lt;/a>Subscribe
+&lt;/h4>&lt;p>這個 hook 會在一開始就抓取全部的 posts，但是後續更新怎麼辦？pocketbase 提供 Subscribe，他會透過 websocket 或是 SSE 的方式把資料庫的更新即時通知前端，我們就修改一下上面的程式碼&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -717,8 +843,8 @@ alt="new collection rule"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這裡還有一個地方要注意，因為 nextjs 預設開啟嚴格模式，會導致 useEffect 在開發時會被執行兩次，也就是說你會 subscribe 兩次，而且似乎沒辦法關掉，唯一的方式是去 &lt;code>next.config.js&lt;/code> 把 &lt;code>reactStrictMode&lt;/code> 設成 &lt;code>false&lt;/code>&lt;/p>
-&lt;h4 id="顯示-posts">顯示 posts&lt;/h4>
-&lt;p>那麼，現在我們就有一個一開始會抓取所有 posts、會即時更新的 hook 啦，把他加進畫面裡吧&lt;/p>
+&lt;h4 id="顯示-posts">&lt;a href="#%e9%a1%af%e7%a4%ba-posts" class="header-anchor">&lt;/a>顯示 posts
+&lt;/h4>&lt;p>那麼，現在我們就有一個一開始會抓取所有 posts、會即時更新的 hook 啦，把他加進畫面裡吧&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -814,8 +940,8 @@ alt="new collection rule"
 loading="lazy"
 alt="demo 2"
 >&lt;/p>
-&lt;h3 id="發文">發文&lt;/h3>
-&lt;p>發文就是去戳 post 的 create API，這部份也很簡單，加入一個 &lt;code>&amp;lt;textarea&amp;gt;&lt;/code>，按下後把內容送出去就好，這部份長這樣&lt;/p>
+&lt;h3 id="發文">&lt;a href="#%e7%99%bc%e6%96%87" class="header-anchor">&lt;/a>發文
+&lt;/h3>&lt;p>發文就是去戳 post 的 create API，這部份也很簡單，加入一個 &lt;code>&amp;lt;textarea&amp;gt;&lt;/code>，按下後把內容送出去就好，這部份長這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -872,8 +998,8 @@ alt="demo 2"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="登入後隱藏">登入後隱藏&lt;/h3>
-&lt;p>現在畫面上會有登入的兩個輸入框和一個按鈕，然後還有發文的框框和按鈕，問題是這兩個部份一個是未登入的時候才需要顯示，一個是已登入才能顯示，所以我們需要一個判斷有沒有登入的方法，最簡單就是判斷 &lt;code>pb.authStore.token !== ''&lt;/code>，但這會遇到一個問題，就是 nextjs 會做 hydration，伺服器看起來沒有登入（一定不會有 token），所以顯示登入框框，但是在瀏覽器一開始 pocketbase 就會很好心幫我們載入 &lt;code>authStore&lt;/code>，所以顯示發文框框，這樣會跳 hydration error，所以需要動點手腳&lt;/p>
+&lt;/div>&lt;h3 id="登入後隱藏">&lt;a href="#%e7%99%bb%e5%85%a5%e5%be%8c%e9%9a%b1%e8%97%8f" class="header-anchor">&lt;/a>登入後隱藏
+&lt;/h3>&lt;p>現在畫面上會有登入的兩個輸入框和一個按鈕，然後還有發文的框框和按鈕，問題是這兩個部份一個是未登入的時候才需要顯示，一個是已登入才能顯示，所以我們需要一個判斷有沒有登入的方法，最簡單就是判斷 &lt;code>pb.authStore.token !== ''&lt;/code>，但這會遇到一個問題，就是 nextjs 會做 hydration，伺服器看起來沒有登入（一定不會有 token），所以顯示登入框框，但是在瀏覽器一開始 pocketbase 就會很好心幫我們載入 &lt;code>authStore&lt;/code>，所以顯示發文框框，這樣會跳 hydration error，所以需要動點手腳&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -960,8 +1086,8 @@ alt="demo 2"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="加上作者">加上作者&lt;/h3>
-&lt;p>基本上已經完成了，但是我還想加上顯示這篇文章的作者是誰，會用到 js-sdk 的 &lt;code>expand&lt;/code> 功能，修改 &lt;code>usePosts&lt;/code> 函數，這裡因為 subscribe 好像沒有 &lt;code>expand&lt;/code> 選項可以加，所以再額外發一個 api call 去抓有 &lt;code>expand&lt;/code> 的資料&lt;/p>
+&lt;/div>&lt;h3 id="加上作者">&lt;a href="#%e5%8a%a0%e4%b8%8a%e4%bd%9c%e8%80%85" class="header-anchor">&lt;/a>加上作者
+&lt;/h3>&lt;p>基本上已經完成了，但是我還想加上顯示這篇文章的作者是誰，會用到 js-sdk 的 &lt;code>expand&lt;/code> 功能，修改 &lt;code>usePosts&lt;/code> 函數，這裡因為 subscribe 好像沒有 &lt;code>expand&lt;/code> 選項可以加，所以再額外發一個 api call 去抓有 &lt;code>expand&lt;/code> 的資料&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1083,10 +1209,10 @@ alt="demo 2"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="權限">權限&lt;/h3>
-&lt;p>目前看起來很棒，但是你會發現用其他帳號登入的話就會 &lt;code>expand&lt;/code> 就會失敗，是因為預設的 users collection &lt;code>list&lt;/code> 和 &lt;code>view&lt;/code> 都是只有自己才能看，所以我們需要把他刪掉變成空字串，這樣才可以讓其他人也抓到 &lt;code>expand&lt;/code>&lt;/p>
-&lt;h2 id="最後成果">最後成果&lt;/h2>
-&lt;p>程式碼可以在 &lt;a class="link" href="https://github.com/simbafs/pocketbase-experinment/tree/d720bc52b00485ceebb1f6ced4429a30000bee8c" target="_blank" rel="noopener"
+&lt;/div>&lt;h3 id="權限">&lt;a href="#%e6%ac%8a%e9%99%90" class="header-anchor">&lt;/a>權限
+&lt;/h3>&lt;p>目前看起來很棒，但是你會發現用其他帳號登入的話就會 &lt;code>expand&lt;/code> 就會失敗，是因為預設的 users collection &lt;code>list&lt;/code> 和 &lt;code>view&lt;/code> 都是只有自己才能看，所以我們需要把他刪掉變成空字串，這樣才可以讓其他人也抓到 &lt;code>expand&lt;/code>&lt;/p>
+&lt;h2 id="最後成果">&lt;a href="#%e6%9c%80%e5%be%8c%e6%88%90%e6%9e%9c" class="header-anchor">&lt;/a>最後成果
+&lt;/h2>&lt;p>程式碼可以在 &lt;a class="link" href="https://github.com/simbafs/pocketbase-experinment/tree/d720bc52b00485ceebb1f6ced4429a30000bee8c" target="_blank" rel="noopener"
 >這裡&lt;/a> 找到&lt;/p>
 &lt;p>&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo3.png"
 loading="lazy"
@@ -1095,9 +1221,9 @@ alt="demo 3"
 &lt;img src="https://blog.simbafs.cc/images/pocketbase/demo4.png"
 loading="lazy"
 alt="demo 4"
->&lt;/p></description></item><item><title>TypeScript Snippet</title><link>https://blog.simbafs.cc/p/js/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/typescript-snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/typescript-snippet.png" alt="Featured image of post TypeScript Snippet" />&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
-&lt;h2 id="keyof">keyof&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+>&lt;/p></description></item><item><title>TypeScript Snippet</title><link>https://blog.simbafs.cc/p/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/typescript-snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/typescript-snippet.png" alt="Featured image of post TypeScript Snippet" />&lt;h1 id="typescript-snippet">&lt;a href="#typescript-snippet" class="header-anchor">&lt;/a>TypeScript Snippet
+&lt;/h1>&lt;h2 id="keyof">&lt;a href="#keyof" class="header-anchor">&lt;/a>keyof
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -1123,8 +1249,8 @@ alt="demo 4"
 &lt;/div>
 &lt;/div>&lt;p>&lt;a class="link" href="https://www.typescriptlang.org/docs/handbook/2/keyof-types.html" target="_blank" rel="noopener"
 >docs: keyof&lt;/a>&lt;/p>
-&lt;h2 id="static-method-of-class">static method of class&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="static-method-of-class">&lt;a href="#static-method-of-class" class="header-anchor">&lt;/a>static method of class
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -1152,8 +1278,8 @@ alt="demo 4"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="valueof">valueof&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="valueof">&lt;a href="#valueof" class="header-anchor">&lt;/a>valueof
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -1173,12 +1299,12 @@ alt="demo 4"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// type Key = &amp;#39;KEY_A&amp;#39; | &amp;#39;KEY_B&amp;#39;
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Strapi Quick Start</title><link>https://blog.simbafs.cc/p/js/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/strapi-quick-start/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/strapi-quick-start.png" alt="Featured image of post Strapi Quick Start" />&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
-&lt;h2 id="strapi">strapi&lt;/h2>
-&lt;h2 id="什麼是-headless-cms">什麼是 headless CMS&lt;/h2>
-&lt;p>headless CMS 顧名思義是「無頭的 內容管理系統」，意思是沒有前端、只有後端，它就是一個 DB 的 web 界面 + api server。headless CMS 專注於處理 api 的部份，前端的部份一律不關心。這對於前後端分離有很大的幫助，基本上 headless CMS 已經解決了後端 80% 的工作，剩下的就是一些客製化的邏輯，像是登入、特殊的計算等等。&lt;/p>
-&lt;h2 id="strapi-的優點">strapi 的優點&lt;/h2>
-&lt;ol>
+&lt;/div></description></item><item><title>Strapi Quick Start</title><link>https://blog.simbafs.cc/p/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/strapi-quick-start/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/strapi-quick-start.png" alt="Featured image of post Strapi Quick Start" />&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
+&lt;h2 id="strapi">&lt;a href="#strapi" class="header-anchor">&lt;/a>strapi
+&lt;/h2>&lt;h2 id="什麼是-headless-cms">&lt;a href="#%e4%bb%80%e9%ba%bc%e6%98%af-headless-cms" class="header-anchor">&lt;/a>什麼是 headless CMS
+&lt;/h2>&lt;p>headless CMS 顧名思義是「無頭的 內容管理系統」，意思是沒有前端、只有後端，它就是一個 DB 的 web 界面 + api server。headless CMS 專注於處理 api 的部份，前端的部份一律不關心。這對於前後端分離有很大的幫助，基本上 headless CMS 已經解決了後端 80% 的工作，剩下的就是一些客製化的邏輯，像是登入、特殊的計算等等。&lt;/p>
+&lt;h2 id="strapi-的優點">&lt;a href="#strapi-%e7%9a%84%e5%84%aa%e9%bb%9e" class="header-anchor">&lt;/a>strapi 的優點
+&lt;/h2>&lt;ol>
 &lt;li>他的界面完善&lt;/li>
 &lt;li>支援多種 DB
 &lt;blockquote>
@@ -1192,8 +1318,8 @@ MongoDB &amp;gt;= 3.6&lt;/p>
 &lt;li>存取權限控制&lt;/li>
 &lt;li>外掛&lt;/li>
 &lt;/ol>
-&lt;h2 id="quickstart">quickstart&lt;/h2>
-&lt;p>以下步驟是補充 &lt;a class="link" href="https://strapi.io/documentation/developer-docs/latest/getting-started/quick-start.html" target="_blank" rel="noopener"
+&lt;h2 id="quickstart">&lt;a href="#quickstart" class="header-anchor">&lt;/a>quickstart
+&lt;/h2>&lt;p>以下步驟是補充 &lt;a class="link" href="https://strapi.io/documentation/developer-docs/latest/getting-started/quick-start.html" target="_blank" rel="noopener"
 >官網的 quick start&lt;/a>&lt;/p>
 &lt;ol>
 &lt;li>安裝&lt;br>
@@ -1209,13 +1335,13 @@ MongoDB &amp;gt;= 3.6&lt;/p>
 &lt;li>建立 &lt;code>collection type&lt;/code>&lt;br>
 如果你按照官網的說法，這裡又會讓你很困惑，&lt;code>+ Create new collection type&lt;/code> 按鈕到底它ㄇ的在哪？其實只要在開啟伺服器時用 develop mode 開就可以了，這個重要要的東西它又沒寫了，把你的 server 關掉，下 &lt;code>npm run develop&lt;/code> 然後再去剛剛的頁面，重新整理就可以看到那個調皮的按鈕了。&lt;/li>
 &lt;/ol>
-&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item><item><title>Node VM</title><link>https://blog.simbafs.cc/p/js/node-vm/</link><pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/node-vm/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/node-vm.png" alt="Featured image of post Node VM" />&lt;h1 id="node-vm">Node VM&lt;/h1>
-&lt;h2 id="nodejs-vm-模組">node.js VM 模組&lt;/h2>
-&lt;p>VM 是 node.js 的核心模組，提供安全的環境 (沙箱) 來測試不信任的程式碼。&lt;/p>
-&lt;h2 id="基本概念">基本概念&lt;/h2>
-&lt;p>在 VM 模組裡面，有兩個基本的物件，script 和 context。script 是經過「編譯」程式，context 是給在沙箱裡面的程式碼的全域物件 (global) 。沙箱中的程式只能存取透過 context 指定的物件。&lt;/p>
-&lt;h3 id="建立-script">建立 script&lt;/h3>
-&lt;p>VM 模組提供 &lt;code>Script&lt;/code> 建構子，可以透過他來建立 &lt;code>Script&lt;/code> 物件。&lt;/p>
+&lt;p>再來的內容基本上沒有太多錯誤，希望官方趕快更新文件吧，這個真的害人不淺阿。&lt;/p></description></item><item><title>Node VM</title><link>https://blog.simbafs.cc/p/node-vm/</link><pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/node-vm/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/node-vm.png" alt="Featured image of post Node VM" />&lt;h1 id="node-vm">&lt;a href="#node-vm" class="header-anchor">&lt;/a>Node VM
+&lt;/h1>&lt;h2 id="nodejs-vm-模組">&lt;a href="#nodejs-vm-%e6%a8%a1%e7%b5%84" class="header-anchor">&lt;/a>node.js VM 模組
+&lt;/h2>&lt;p>VM 是 node.js 的核心模組，提供安全的環境 (沙箱) 來測試不信任的程式碼。&lt;/p>
+&lt;h2 id="基本概念">&lt;a href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" class="header-anchor">&lt;/a>基本概念
+&lt;/h2>&lt;p>在 VM 模組裡面，有兩個基本的物件，script 和 context。script 是經過「編譯」程式，context 是給在沙箱裡面的程式碼的全域物件 (global) 。沙箱中的程式只能存取透過 context 指定的物件。&lt;/p>
+&lt;h3 id="建立-script">&lt;a href="#%e5%bb%ba%e7%ab%8b-script" class="header-anchor">&lt;/a>建立 script
+&lt;/h3>&lt;p>VM 模組提供 &lt;code>Script&lt;/code> 建構子，可以透過他來建立 &lt;code>Script&lt;/code> 物件。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1246,8 +1372,8 @@ MongoDB &amp;gt;= 3.6&lt;/p>
 >vm.Script&lt;/a>&lt;br>
 vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦上 (node v14.15.0) 測試是可以用的&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="建立-context">建立 context&lt;/h3>
-&lt;p>vm 模組沒有提供建立 context 的建構子，我們只能透過 &lt;code>vm.createContext&lt;/code> 來建立 context。&lt;br>
+&lt;h3 id="建立-context">&lt;a href="#%e5%bb%ba%e7%ab%8b-context" class="header-anchor">&lt;/a>建立 context
+&lt;/h3>&lt;p>vm 模組沒有提供建立 context 的建構子，我們只能透過 &lt;code>vm.createContext&lt;/code> 來建立 context。&lt;br>
 注意 &lt;code>vm.createContext&lt;/code> 不是 pure function，除了會回傳 context 以外，還會把傳入的物件變成 context，兩者傳入 &lt;code>vm.isContext&lt;/code> 都會回傳 &lt;code>true&lt;/code>。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1281,8 +1407,8 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;a class="link" href="https://nodejs.org/dist/latest-v14.x/docs/api/vm.html#vm_vm_iscontext_object" target="_blank" rel="noopener"
 >vm.isContext&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="執行-script-預先編譯-script">執行 script (預先編譯 Script)&lt;/h2>
-&lt;p>最基本的函式是 &lt;code>script.runInContext&lt;/code>，它會把傳入的 context 當作 vm 的全域執行裡面的程式，&lt;em>script 的最後一個表達式的回傳值會被當作這次執行的回傳值&lt;/em>。&lt;br>
+&lt;h2 id="執行-script-預先編譯-script">&lt;a href="#%e5%9f%b7%e8%a1%8c-script-%e9%a0%90%e5%85%88%e7%b7%a8%e8%ad%af-script" class="header-anchor">&lt;/a>執行 script (預先編譯 Script)
+&lt;/h2>&lt;p>最基本的函式是 &lt;code>script.runInContext&lt;/code>，它會把傳入的 context 當作 vm 的全域執行裡面的程式，&lt;em>script 的最後一個表達式的回傳值會被當作這次執行的回傳值&lt;/em>。&lt;br>
 下面的範例，會把 context 中的 &lt;code>i&lt;/code> 複製一遍後回傳他的值和長度。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1309,36 +1435,36 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">method&lt;/th>
-&lt;th style="text-align:left">context&lt;/th>
+&lt;th style="text-align: left">method&lt;/th>
+&lt;th style="text-align: left">context&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">runInContext&lt;/td>
-&lt;td style="text-align:left">contextified object&lt;/td>
+&lt;td style="text-align: left">runInContext&lt;/td>
+&lt;td style="text-align: left">contextified object&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">runInNewContext&lt;/td>
-&lt;td style="text-align:left">any Object&lt;/td>
+&lt;td style="text-align: left">runInNewContext&lt;/td>
+&lt;td style="text-align: left">any Object&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">runInThisContext&lt;/td>
-&lt;td style="text-align:left">不用傳，this&lt;/td>
+&lt;td style="text-align: left">runInThisContext&lt;/td>
+&lt;td style="text-align: left">不用傳，this&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="執行-script-沒有預先編譯-script">執行 script (沒有預先編譯 Script)&lt;/h2>
-&lt;p>如果你很懶，或是你只是想要一次行的執行這段 code，可以用 &lt;code>vm.runInContext&lt;/code>、&lt;code>vm.runInNewContext&lt;/code> 和 &lt;code>vm.runInThisContext&lt;/code>。用法跟先編譯過再執行一樣，只是其中第一個參數變成還沒編譯過的 code (String)。&lt;/p></description></item><item><title>hCaptcha</title><link>https://blog.simbafs.cc/p/js/hcaptcha/</link><pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/hcaptcha/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/hCaptcha.png" alt="Featured image of post hCaptcha" />&lt;h1 id="hcaptcha">hCaptcha&lt;/h1>
-&lt;h2 id="前情提要">前情提要&lt;/h2>
-&lt;p>我們社團的短網址服務裡面常常出現一些奇怪的網址，我猜可能是有機器人在刷，所以我想加入 captcha 減少這類問題。我選擇的是 &lt;a class="link" href="https://hcaptcha.com/" target="_blank" rel="noopener"
+&lt;h2 id="執行-script-沒有預先編譯-script">&lt;a href="#%e5%9f%b7%e8%a1%8c-script-%e6%b2%92%e6%9c%89%e9%a0%90%e5%85%88%e7%b7%a8%e8%ad%af-script" class="header-anchor">&lt;/a>執行 script (沒有預先編譯 Script)
+&lt;/h2>&lt;p>如果你很懶，或是你只是想要一次行的執行這段 code，可以用 &lt;code>vm.runInContext&lt;/code>、&lt;code>vm.runInNewContext&lt;/code> 和 &lt;code>vm.runInThisContext&lt;/code>。用法跟先編譯過再執行一樣，只是其中第一個參數變成還沒編譯過的 code (String)。&lt;/p></description></item><item><title>hCaptcha</title><link>https://blog.simbafs.cc/p/hcaptcha/</link><pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hcaptcha/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/hCaptcha.png" alt="Featured image of post hCaptcha" />&lt;h1 id="hcaptcha">&lt;a href="#hcaptcha" class="header-anchor">&lt;/a>hCaptcha
+&lt;/h1>&lt;h2 id="前情提要">&lt;a href="#%e5%89%8d%e6%83%85%e6%8f%90%e8%a6%81" class="header-anchor">&lt;/a>前情提要
+&lt;/h2>&lt;p>我們社團的短網址服務裡面常常出現一些奇怪的網址，我猜可能是有機器人在刷，所以我想加入 captcha 減少這類問題。我選擇的是 &lt;a class="link" href="https://hcaptcha.com/" target="_blank" rel="noopener"
 >hCaptcha&lt;/a> 這套，能不依賴 Google 就盡量不要。&lt;/p>
-&lt;h2 id="安裝步驟">安裝步驟&lt;/h2>
-&lt;h2 id="申請帳號">申請帳號&lt;/h2>
-&lt;p>先到 &lt;a class="link" href="https://hcaptcha.com/" target="_blank" rel="noopener"
+&lt;h2 id="安裝步驟">&lt;a href="#%e5%ae%89%e8%a3%9d%e6%ad%a5%e9%a9%9f" class="header-anchor">&lt;/a>安裝步驟
+&lt;/h2>&lt;h2 id="申請帳號">&lt;a href="#%e7%94%b3%e8%ab%8b%e5%b8%b3%e8%99%9f" class="header-anchor">&lt;/a>申請帳號
+&lt;/h2>&lt;p>先到 &lt;a class="link" href="https://hcaptcha.com/" target="_blank" rel="noopener"
 >hCaptcha&lt;/a> 註冊、新增一個網站，複製 sitekey (&lt;code>Sites&lt;/code> &amp;gt; &lt;code>site setting&lt;/code>) 和 secret key (&lt;code>Settings&lt;/code>)，我們等等會用到&lt;/p>
-&lt;h2 id="前端">前端&lt;/h2>
-&lt;ol>
+&lt;h2 id="前端">&lt;a href="#%e5%89%8d%e7%ab%af" class="header-anchor">&lt;/a>前端
+&lt;/h2>&lt;ol>
 &lt;li>首先引入 script ，在 &lt;code>&amp;lt;head&amp;gt;&lt;/code> 加入&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1360,8 +1486,8 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;h-captcha&amp;#34;&lt;/span> &lt;span class="na">data-sitekey&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;your_site_key&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="後端node-express">後端（node express）&lt;/h2>
-&lt;ol>
+&lt;/div>&lt;h2 id="後端node-express">&lt;a href="#%e5%be%8c%e7%ab%afnode-express" class="header-anchor">&lt;/a>後端（node express）
+&lt;/h2>&lt;ol>
 &lt;li>
 &lt;p>SECRET&lt;br>
 首先，你要把剛剛的 &lt;code>SECRET&lt;/code> 給 server 知道，我用的是 dotenv，當然其他的套件也是可以。&lt;br>
@@ -1474,10 +1600,10 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">module&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">exports&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">router&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="結論">結論&lt;/h2>
-&lt;p>看原始碼很重要&lt;/p></description></item><item><title>Mongoose Model</title><link>https://blog.simbafs.cc/p/js/mongoose-model/</link><pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/mongoose-model/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/Mongoose-Model.png" alt="Featured image of post Mongoose Model" />&lt;h1 id="mongoose-model">Mongoose Model&lt;/h1>
-&lt;h2 id="環境設定">環境設定&lt;/h2>
-&lt;p>這是這次實驗用的 code&lt;/p>
+&lt;/div>&lt;h2 id="結論">&lt;a href="#%e7%b5%90%e8%ab%96" class="header-anchor">&lt;/a>結論
+&lt;/h2>&lt;p>看原始碼很重要&lt;/p></description></item><item><title>Mongoose Model</title><link>https://blog.simbafs.cc/p/mongoose-model/</link><pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/mongoose-model/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/Mongoose-Model.png" alt="Featured image of post Mongoose Model" />&lt;h1 id="mongoose-model">&lt;a href="#mongoose-model" class="header-anchor">&lt;/a>Mongoose Model
+&lt;/h1>&lt;h2 id="環境設定">&lt;a href="#%e7%92%b0%e5%a2%83%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>環境設定
+&lt;/h2>&lt;p>這是這次實驗用的 code&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1543,12 +1669,12 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#39;27017:27017&amp;#39;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="取得原-schema">取得原 schema&lt;/h2>
-&lt;p>在一般操作的時候都是用 &lt;code>UserModel&lt;/code> 在操作資料庫，當要取得 schema 的時候當然也是從他裡面找最方便，當然也可以把 schema 特別弄出來，但是有點麻煩，以這次的例子說明，原本的 &lt;code>UserSchema&lt;/code> 會存在 &lt;code>UserModel.schema.obj&lt;/code> 裡。&lt;/p>
-&lt;h2 id="真實資料庫結構">真實資料庫結構&lt;/h2>
-&lt;p>在建立 model 後 mongoose 會自動新增一些欄位，例如說 &lt;code>_id&lt;/code> 之類的，要取得包含這些欄位的真實 model 結構的話可以在 &lt;code>UserModel.schema.tree&lt;/code> 找到&lt;/p></description></item><item><title>Node Require from Project Root</title><link>https://blog.simbafs.cc/p/js/node-require-from-project-root/</link><pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/node-require-from-project-root/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/node-require-from-project-root.png" alt="Featured image of post Node Require from Project Root" />&lt;h1 id="node-require-from-project-root">Node Require from Project Root&lt;/h1>
-&lt;h2 id="問題">問題&lt;/h2>
-&lt;p>在寫一個專案的時候，有時候會有一些小程式重複在不同的檔案裡用到，這時候我們會把他打包成模組放在 &lt;code>lib/&lt;/code>。但是如果資料夾結構有點點複雜的時候， &lt;code>require()&lt;/code> 的路徑就會很複雜：&lt;/p>
+&lt;/div>&lt;h2 id="取得原-schema">&lt;a href="#%e5%8f%96%e5%be%97%e5%8e%9f-schema" class="header-anchor">&lt;/a>取得原 schema
+&lt;/h2>&lt;p>在一般操作的時候都是用 &lt;code>UserModel&lt;/code> 在操作資料庫，當要取得 schema 的時候當然也是從他裡面找最方便，當然也可以把 schema 特別弄出來，但是有點麻煩，以這次的例子說明，原本的 &lt;code>UserSchema&lt;/code> 會存在 &lt;code>UserModel.schema.obj&lt;/code> 裡。&lt;/p>
+&lt;h2 id="真實資料庫結構">&lt;a href="#%e7%9c%9f%e5%af%a6%e8%b3%87%e6%96%99%e5%ba%ab%e7%b5%90%e6%a7%8b" class="header-anchor">&lt;/a>真實資料庫結構
+&lt;/h2>&lt;p>在建立 model 後 mongoose 會自動新增一些欄位，例如說 &lt;code>_id&lt;/code> 之類的，要取得包含這些欄位的真實 model 結構的話可以在 &lt;code>UserModel.schema.tree&lt;/code> 找到&lt;/p></description></item><item><title>Node Require from Project Root</title><link>https://blog.simbafs.cc/p/node-require-from-project-root/</link><pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/node-require-from-project-root/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/node-require-from-project-root.png" alt="Featured image of post Node Require from Project Root" />&lt;h1 id="node-require-from-project-root">&lt;a href="#node-require-from-project-root" class="header-anchor">&lt;/a>Node Require from Project Root
+&lt;/h1>&lt;h2 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h2>&lt;p>在寫一個專案的時候，有時候會有一些小程式重複在不同的檔案裡用到，這時候我們會把他打包成模組放在 &lt;code>lib/&lt;/code>。但是如果資料夾結構有點點複雜的時候， &lt;code>require()&lt;/code> 的路徑就會很複雜：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1580,10 +1706,10 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">random&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;../../lib/random.js&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="爛解法">爛解法&lt;/h2>
-&lt;p>如果我們想要直接用 &lt;code>require('lib/random')&lt;/code> 的話做簡單的方式是上傳 npm，但是這樣稍嫌麻煩，而且別的專案不一定用的到。每一次修改都要上傳 npm 很不方便。&lt;/p>
-&lt;h2 id="好解法">好解法&lt;/h2>
-&lt;p>在 linux 裡面要把執行檔做成指令有兩個方法&lt;/p>
+&lt;/div>&lt;h2 id="爛解法">&lt;a href="#%e7%88%9b%e8%a7%a3%e6%b3%95" class="header-anchor">&lt;/a>爛解法
+&lt;/h2>&lt;p>如果我們想要直接用 &lt;code>require('lib/random')&lt;/code> 的話做簡單的方式是上傳 npm，但是這樣稍嫌麻煩，而且別的專案不一定用的到。每一次修改都要上傳 npm 很不方便。&lt;/p>
+&lt;h2 id="好解法">&lt;a href="#%e5%a5%bd%e8%a7%a3%e6%b3%95" class="header-anchor">&lt;/a>好解法
+&lt;/h2>&lt;p>在 linux 裡面要把執行檔做成指令有兩個方法&lt;/p>
 &lt;ol>
 &lt;li>放到 &lt;code>/usr/bin&lt;/code> 之類的地方&lt;/li>
 &lt;li>把這個路徑直接加到 &lt;code>PATH&lt;/code> 裡面&lt;/li>
@@ -1598,17 +1724,17 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這樣就可以直接用 &lt;code>require('lib/random')&lt;/code> 引入了&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/nodejs/node/issues/4223" target="_blank" rel="noopener"
+&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;p>&lt;a class="link" href="https://github.com/nodejs/node/issues/4223" target="_blank" rel="noopener"
 >https://github.com/nodejs/node/issues/4223&lt;/a>&lt;br>
 &lt;a class="link" href="https://github.com/nodejs/node/issues/1979" target="_blank" rel="noopener"
 >https://github.com/nodejs/node/issues/1979&lt;/a>&lt;br>
 &lt;a class="link" href="https://www.npmjs.com/package/rooty" target="_blank" rel="noopener"
 >https://www.npmjs.com/package/rooty&lt;/a>&lt;br>
 ^^^&lt;br>
-這個是在 github issue 裡面看到的，沒試過，但是應該也可以用吧？只是我覺得沒有 &lt;code>paths&lt;/code> 的解法來的優雅。&lt;/p></description></item><item><title>express 重複 send</title><link>https://blog.simbafs.cc/p/js/express-%E9%87%8D%E8%A4%87-send/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/express-%E9%87%8D%E8%A4%87-send/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/express-%E9%87%8D%E8%A4%87-send.png" alt="Featured image of post express 重複 send" />&lt;h1 id="express-重複-send">express 重複 send&lt;/h1>
-&lt;h2 id="問題">問題&lt;/h2>
-&lt;p>在 express route 裡面，我通常會在 &lt;code>res.send()&lt;/code> 之類的函式前面都會加一個 &lt;code>return&lt;/code> 防止因為程式邏輯漏洞造成重複送出然後噴 error。像是這樣&lt;/p>
+這個是在 github issue 裡面看到的，沒試過，但是應該也可以用吧？只是我覺得沒有 &lt;code>paths&lt;/code> 的解法來的優雅。&lt;/p></description></item><item><title>express 重複 send</title><link>https://blog.simbafs.cc/p/express-%E9%87%8D%E8%A4%87-send/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/express-%E9%87%8D%E8%A4%87-send/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/express-%E9%87%8D%E8%A4%87-send.png" alt="Featured image of post express 重複 send" />&lt;h1 id="express-重複-send">&lt;a href="#express-%e9%87%8d%e8%a4%87-send" class="header-anchor">&lt;/a>express 重複 send
+&lt;/h1>&lt;h2 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h2>&lt;p>在 express route 裡面，我通常會在 &lt;code>res.send()&lt;/code> 之類的函式前面都會加一個 &lt;code>return&lt;/code> 防止因為程式邏輯漏洞造成重複送出然後噴 error。像是這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1679,8 +1805,8 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這樣就不會噴一堆 error 啦！&lt;/p>
-&lt;h2 id="改進版">改進版&lt;/h2>
-&lt;p>用了之後發現這樣有點麻煩，express 應該有內建變數儲存是否已送出才對，如果沒有，我應該也有更好的方法可以直接從 &lt;code>req&lt;/code> 或 &lt;code>res&lt;/code> 的狀態判斷是否已送出。找了一下，真的被我找到了 &lt;a class="link" href="https://expressjs.com/en/4x/api.html#res.headersSent" target="_blank" rel="noopener"
+&lt;h2 id="改進版">&lt;a href="#%e6%94%b9%e9%80%b2%e7%89%88" class="header-anchor">&lt;/a>改進版
+&lt;/h2>&lt;p>用了之後發現這樣有點麻煩，express 應該有內建變數儲存是否已送出才對，如果沒有，我應該也有更好的方法可以直接從 &lt;code>req&lt;/code> 或 &lt;code>res&lt;/code> 的狀態判斷是否已送出。找了一下，真的被我找到了 &lt;a class="link" href="https://expressjs.com/en/4x/api.html#res.headersSent" target="_blank" rel="noopener"
 >res.headersSent&lt;/a> 這個內建變數，他的行為就和上面的 &lt;code>flag&lt;/code> 一模一樣，但是我們不用自己去維護他的狀態。所以上面的範例就可以改寫成這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1700,25 +1826,25 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Passport.js</title><link>https://blog.simbafs.cc/p/js/passport.js/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/passport.js/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/passport.js.png" alt="Featured image of post Passport.js" />&lt;h1 id="passportjs">Passport.js&lt;/h1>
-&lt;p>今天終於把登入做完了
+&lt;/div></description></item><item><title>Passport.js</title><link>https://blog.simbafs.cc/p/passport.js/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/passport.js/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/passport.js.png" alt="Featured image of post Passport.js" />&lt;h1 id="passportjs">&lt;a href="#passportjs" class="header-anchor">&lt;/a>Passport.js
+&lt;/h1>&lt;p>今天終於把登入做完了
 我覺得最重要的是找好的教學文章、去看沒有人看得懂的程式碼&lt;/p>
 &lt;hr>
-&lt;h2 id="passportjs-1">passport.js&lt;/h2>
-&lt;ol>
+&lt;h2 id="passportjs-1">&lt;a href="#passportjs-1" class="header-anchor">&lt;/a>passport.js
+&lt;/h2>&lt;ol>
 &lt;li>建立 strategy&lt;/li>
 &lt;li>弄 session&lt;/li>
 &lt;li>弄 auth 函式
 沒了！&lt;/li>
 &lt;/ol>
 &lt;p>參考的教學文：https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E7%AD%86%E8%A8%98-%E9%80%8F%E9%81%8E-passport-js-%E5%AF%A6%E4%BD%9C%E9%A9%97%E8%AD%89%E6%A9%9F%E5%88%B6-11cf478f421e
-雖然這個也沒有好到哪裡去但至少我看著他做出來了，有些部份是參考作者的餐廳程式&lt;/p></description></item><item><title>sqlite3</title><link>https://blog.simbafs.cc/p/js/sqlite/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/sqlite/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/sqlite.png" alt="Featured image of post sqlite3" />&lt;h1 id="sqlite3">sqlite3&lt;/h1>
-&lt;p>昨天是試著去理解 sqlite3，我發現他的 callback function 真的太煩了
+雖然這個也沒有好到哪裡去但至少我看著他做出來了，有些部份是參考作者的餐廳程式&lt;/p></description></item><item><title>sqlite3</title><link>https://blog.simbafs.cc/p/sqlite/</link><pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/sqlite/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/sqlite.png" alt="Featured image of post sqlite3" />&lt;h1 id="sqlite3">&lt;a href="#sqlite3" class="header-anchor">&lt;/a>sqlite3
+&lt;/h1>&lt;p>昨天是試著去理解 sqlite3，我發現他的 callback function 真的太煩了
 於是我試著去尋找 async 的版本，還真找到了
 這個套件把整個 sqlite 包成 async 了&lt;/p>
 &lt;hr>
-&lt;h2 id="install">install&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="install">&lt;a href="#install" class="header-anchor">&lt;/a>install
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -1727,8 +1853,8 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;hr>
-&lt;h2 id="some-sample-code">some sample code&lt;/h2>
-&lt;p>這裡是以短網址部份為範例&lt;/p>
+&lt;h2 id="some-sample-code">&lt;a href="#some-sample-code" class="header-anchor">&lt;/a>some sample code
+&lt;/h2>&lt;p>這裡是以短網址部份為範例&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1777,13 +1903,13 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})();&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Unix Socket</title><link>https://blog.simbafs.cc/p/js/unix-socket/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/unix-socket/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/unix-socket.png" alt="Featured image of post Unix Socket" />&lt;h1 id="unix-socket">Unix Socket&lt;/h1>
-&lt;p>今天心血來潮在看 unix socket
+&lt;/div></description></item><item><title>Unix Socket</title><link>https://blog.simbafs.cc/p/unix-socket/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/unix-socket/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/unix-socket.png" alt="Featured image of post Unix Socket" />&lt;h1 id="unix-socket">&lt;a href="#unix-socket" class="header-anchor">&lt;/a>Unix Socket
+&lt;/h1>&lt;p>今天心血來潮在看 unix socket
 突然想到 node 可不可以把 服務監聽在一個 socket file
 這樣在設定的時候就不用記哪個服務是幾 port&lt;/p>
-&lt;h2 id="node-部份">node 部份&lt;/h2>
-&lt;h2 id="監聽在-unix-socket">監聽在 unix socket&lt;/h2>
-&lt;p>查完資料後發現其實只要把原本填 port 的地方改成 socket file 的路徑就好了
+&lt;h2 id="node-部份">&lt;a href="#node-%e9%83%a8%e4%bb%bd" class="header-anchor">&lt;/a>node 部份
+&lt;/h2>&lt;h2 id="監聽在-unix-socket">&lt;a href="#%e7%9b%a3%e8%81%bd%e5%9c%a8-unix-socket" class="header-anchor">&lt;/a>監聽在 unix socket
+&lt;/h2>&lt;p>查完資料後發現其實只要把原本填 port 的地方改成 socket file 的路徑就好了
 像這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1807,8 +1933,8 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">app&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">listen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;/tmp/express.sock&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="刪除-socket-file">刪除 socket file&lt;/h2>
-&lt;p>因為每次的 listen 都會新增一個 socket file
+&lt;/div>&lt;h2 id="刪除-socket-file">&lt;a href="#%e5%88%aa%e9%99%a4-socket-file" class="header-anchor">&lt;/a>刪除 socket file
+&lt;/h2>&lt;p>因為每次的 listen 都會新增一個 socket file
 相當於佔用一個 port
 如果不刪除的話就相當於 port 被佔用了
 會噴錯
@@ -1846,8 +1972,8 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="測試">測試&lt;/h2>
-&lt;p>弄完了伺服器
+&lt;/div>&lt;h2 id="測試">&lt;a href="#%e6%b8%ac%e8%a9%a6" class="header-anchor">&lt;/a>測試
+&lt;/h2>&lt;p>弄完了伺服器
 要怎麼測試呢？
 這時候可以用 &lt;code>curl&lt;/code> 來測試&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1860,8 +1986,8 @@ vm.createScript 在 nodejs docs 上我沒有找到，但是我在自己的電腦
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Hello World
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="nginx-reverse-proxy">nginx reverse proxy&lt;/h2>
-&lt;p>現在我們把伺服器開好了
+&lt;/div>&lt;h2 id="nginx-reverse-proxy">&lt;a href="#nginx-reverse-proxy" class="header-anchor">&lt;/a>nginx reverse proxy
+&lt;/h2>&lt;p>現在我們把伺服器開好了
 但是 unix socket 只能在本機瀏覽啊！
 所以我們要透過 nginx 來幫忙做 reverse proxy
 先新增一個 &lt;code>/etc/nginx/sites-available/test.conf&lt;/code>&lt;/p>

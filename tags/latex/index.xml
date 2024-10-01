@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Latex on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/latex/</link><description>Recent content in Latex on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/latex/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/other/index/</link><pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/md2pdf/index.png" alt="Featured image of post Markdown to PDF" />&lt;h1 id="markdown-to-pdf">Markdown to PDF&lt;/h1>
-&lt;h2 id="安裝環境">安裝環境&lt;/h2>
-&lt;p>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Latex on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/latex/</link><description>Recent content in Latex on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 21 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/latex/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown to PDF</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/md2pdf/index.png" alt="Featured image of post Markdown to PDF" />&lt;h1 id="markdown-to-pdf">&lt;a href="#markdown-to-pdf" class="header-anchor">&lt;/a>Markdown to PDF
+&lt;/h1>&lt;h2 id="安裝環境">&lt;a href="#%e5%ae%89%e8%a3%9d%e7%92%b0%e5%a2%83" class="header-anchor">&lt;/a>安裝環境
+&lt;/h2>&lt;p>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >pandoc&lt;/a> 你想得到的文件之間轉擋 &lt;a class="link" href="https://pandoc.org/diagram.svgz?v=20230203095535" target="_blank" rel="noopener"
 >官方精美的圖&lt;/a>&lt;/p>
 &lt;p>如果說你沒有中文的需求，現在就可以用 &lt;code>pandoc index.md -o out.pdf&lt;/code> 產生 PDF 檔了&lt;/p>
-&lt;h2 id="中文">中文&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="中文">&lt;a href="#%e4%b8%ad%e6%96%87" class="header-anchor">&lt;/a>中文
+&lt;/h2>&lt;blockquote>
 &lt;p>&lt;strong>Warning&lt;/strong>
 &lt;del>我後來不知道搞砸了什麼，反正目前中文是壞的，找到一個用網頁排版再用瀏覽器內建列印功能輸出成 PDF 的網頁：https://github.com/realdennis/md2pdf&lt;/del>
 已解決&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="安裝字型">安裝字型&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h3 id="安裝字型">&lt;a href="#%e5%ae%89%e8%a3%9d%e5%ad%97%e5%9e%8b" class="header-anchor">&lt;/a>安裝字型
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -19,9 +19,9 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $ sudo apt-get install texlive-fonts-recommended texlive-fonts-extra texlive-lang-chinese
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="字型設定">字型設定&lt;/h3>
-&lt;h4 id="檔案內">檔案內&lt;/h4>
-&lt;p>在 md 開頭設定一個包含中文的字型&lt;/p>
+&lt;/div>&lt;h3 id="字型設定">&lt;a href="#%e5%ad%97%e5%9e%8b%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>字型設定
+&lt;/h3>&lt;h4 id="檔案內">&lt;a href="#%e6%aa%94%e6%a1%88%e5%85%a7" class="header-anchor">&lt;/a>檔案內
+&lt;/h4>&lt;p>在 md 開頭設定一個包含中文的字型&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -34,8 +34,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="參數">參數&lt;/h4>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h4 id="參數">&lt;a href="#%e5%8f%83%e6%95%b8" class="header-anchor">&lt;/a>參數
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -46,15 +46,15 @@
 &lt;/div>&lt;blockquote>
 &lt;p>2023/02/24 新增：要加上 &lt;code>--pdf-engine xelatex&lt;/code> 才能正確輸出中文，原因是下面用的範本，他只有在使用 xelatex 和 lualatex 時才會把 &lt;code>CJKmainfont&lt;/code> 傳遞下去&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="範本">範本&lt;/h2>
-&lt;p>pandoc 有預設的 LaTeX 範本，但是不怎麼好看，可以用網路上開源的範本，或是花時間自己刻出最適合自己的&lt;/p>
-&lt;h3 id="eisvogel">Eisvogel&lt;/h3>
-&lt;p>&lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template" target="_blank" rel="noopener"
+&lt;h2 id="範本">&lt;a href="#%e7%af%84%e6%9c%ac" class="header-anchor">&lt;/a>範本
+&lt;/h2>&lt;p>pandoc 有預設的 LaTeX 範本，但是不怎麼好看，可以用網路上開源的範本，或是花時間自己刻出最適合自己的&lt;/p>
+&lt;h3 id="eisvogel">&lt;a href="#eisvogel" class="header-anchor">&lt;/a>Eisvogel
+&lt;/h3>&lt;p>&lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template" target="_blank" rel="noopener"
 >GitHub 頁面&lt;/a>
 去 &lt;a class="link" href="https://github.com/Wandmalfarbe/pandoc-latex-template/releases/latest" target="_blank" rel="noopener"
 >Release&lt;/a> 下載，解壓縮到 &lt;code>~/.local/share/pandoc/templates&lt;/code>。在編譯時加上 &lt;code>--template eisvogel&lt;/code> 就可以套用模板了。&lt;/p>
-&lt;h2 id="範例">範例&lt;/h2>
-&lt;p>以下是一段測試的 markdown 產生出來的 pdf，你可以用 &lt;a class="link" href="./out.pdf" >這個連結&lt;/a> 下載來看&lt;/p>
+&lt;h2 id="範例">&lt;a href="#%e7%af%84%e4%be%8b" class="header-anchor">&lt;/a>範例
+&lt;/h2>&lt;p>以下是一段測試的 markdown 產生出來的 pdf，你可以用 &lt;a class="link" href="./out.pdf" >這個連結&lt;/a> 下載來看&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -190,9 +190,9 @@
 &lt;/figure>
 &lt;/p>
 &lt;p>可以看到大部分的語法都可以轉換，甚至是程式碼區塊都有語法提示（syntax highlight）&lt;/p>
-&lt;h2 id="其他">其他&lt;/h2>
-&lt;h3 id="列出安裝的中文字型">列出安裝的中文字型&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="其他">&lt;a href="#%e5%85%b6%e4%bb%96" class="header-anchor">&lt;/a>其他
+&lt;/h2>&lt;h3 id="列出安裝的中文字型">&lt;a href="#%e5%88%97%e5%87%ba%e5%ae%89%e8%a3%9d%e7%9a%84%e4%b8%ad%e6%96%87%e5%ad%97%e5%9e%8b" class="header-anchor">&lt;/a>列出安裝的中文字型
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -200,8 +200,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $ fc-list :lang=zh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考連結">參考連結&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="參考連結">&lt;a href="#%e5%8f%83%e8%80%83%e9%80%a3%e7%b5%90" class="header-anchor">&lt;/a>參考連結
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://sam.webspace.tw/2020/01/13/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%87%20Markdown%20%E8%BD%89%E7%82%BA%20PDF%20%E6%96%87%E4%BB%B6/" target="_blank" rel="noopener"
 >https://sam.webspace.tw/2020/01/13/%E4%BD%BF%E7%94%A8%20Pandoc%20%E5%B0%87%20Markdown%20%E8%BD%89%E7%82%BA%20PDF%20%E6%96%87%E4%BB%B6/&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/jgm/pandoc/wiki/Pandoc-with-Chinese" target="_blank" rel="noopener"
@@ -214,12 +214,12 @@
 >https://tex.stackexchange.com/questions/179778/xelatex-under-ubuntu&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://pandoc.org/" target="_blank" rel="noopener"
 >https://pandoc.org/&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>LaTeX Starter</title><link>https://blog.simbafs.cc/p/other/latex-starter/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/latex-starter/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/latex-starter.png" alt="Featured image of post LaTeX Starter" />&lt;h1 id="latex-stater">LaTeX Stater&lt;/h1>
-&lt;p>LaTeX 是一老牌的排版系統，基本的概念是內容與呈現分離，在撰寫內容時不用管排版（所以你就不會擔心移動圖片一咪咪整份文件就跑版了）。除了排版，LaTeX 還很擅長輸出各種莫名其妙的東西，像是超複雜的數學式、象棋棋譜、化學結構&amp;hellip;&amp;hellip;&lt;/p>
+&lt;/ul></description></item><item><title>LaTeX Starter</title><link>https://blog.simbafs.cc/p/latex-starter/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/latex-starter/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/latex-starter.png" alt="Featured image of post LaTeX Starter" />&lt;h1 id="latex-stater">&lt;a href="#latex-stater" class="header-anchor">&lt;/a>LaTeX Stater
+&lt;/h1>&lt;p>LaTeX 是一老牌的排版系統，基本的概念是內容與呈現分離，在撰寫內容時不用管排版（所以你就不會擔心移動圖片一咪咪整份文件就跑版了）。除了排版，LaTeX 還很擅長輸出各種莫名其妙的東西，像是超複雜的數學式、象棋棋譜、化學結構&amp;hellip;&amp;hellip;&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/latex-starter/latex-example.png"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/latex-starter/latex-example.png"
 loading="lazy"
 alt="莫名其妙排版範例"
 >&lt;/th>
@@ -227,15 +227,15 @@ alt="莫名其妙排版範例"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">credit:&lt;a class="link" href="https://zh.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener"
+&lt;td style="text-align: center">credit:&lt;a class="link" href="https://zh.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener"
 >https://zh.wikipedia.org/wiki/LaTeX&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>在使用 LaTeX 一段時間之後，對它的印象就是加強版的 Markdown（或是說 Markdown 是簡化版的 LaTeX），而且他還有巨集，可以擴展原版沒有提供的功能（就是上面那些奇奇怪怪的東西）。&lt;/p>
-&lt;h2 id="幾個重點">幾個重點&lt;/h2>
-&lt;h2 id="中文">中文&lt;/h2>
-&lt;p>使用 LaTeX 對大部分人最重要的就是「怎麼打中文」，總不可能打全英文報告吧！要用中文，渲染引擎要用 XLaTeX，然後加上以下設定&lt;br>
+&lt;h2 id="幾個重點">&lt;a href="#%e5%b9%be%e5%80%8b%e9%87%8d%e9%bb%9e" class="header-anchor">&lt;/a>幾個重點
+&lt;/h2>&lt;h2 id="中文">&lt;a href="#%e4%b8%ad%e6%96%87" class="header-anchor">&lt;/a>中文
+&lt;/h2>&lt;p>使用 LaTeX 對大部分人最重要的就是「怎麼打中文」，總不可能打全英文報告吧！要用中文，渲染引擎要用 XLaTeX，然後加上以下設定&lt;br>
 （&lt;code>.ttf&lt;/code> 可以指向你自己喜歡的中文字型檔）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -261,25 +261,25 @@ alt="莫名其妙排版範例"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\XeTeXlinebreaklocale&lt;/span> &amp;#34;zh&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="換行">換行&lt;/h2>
-&lt;p>LaTeX 在換行這個設計和 Markdown 一樣，因為內容與呈現分離，所以你的換行不是真的換行。Markdown 用 &lt;code> &lt;/code>（兩個空白），在 LaTeX 是 &lt;code>\\&lt;/code>（兩個反斜線）&lt;/p>
-&lt;h2 id="巨集與-package">巨集與 Package&lt;/h2>
-&lt;p>LaTeX 一個核心概念是巨集，就是函數啦，巨集的開頭是 &lt;code>\&lt;/code>（反斜線），巨集可以自己定義，也可以用 &lt;code>\usepackage{}&lt;/code> 載入別人寫好的&lt;/p>
-&lt;h2 id="overleaf">overleaf&lt;/h2>
-&lt;p>overleaf 是一個線上編輯 LaTeX 的網站，預裝了幾乎所有寫報告用得到的 packages，而且可以上傳自己的字型、圖片，而且右邊可以顯示產生的 PDF（非即時，按 CTRL-Enter 編譯）。這個網站整體使用體驗還算不錯，該有的功能都有了。&lt;/p>
-&lt;h2 id="表格">表格&lt;/h2>
-&lt;h3 id="切版">切版&lt;/h3>
-&lt;p>畫 LaTeX 表格最簡單的方式是用 Google Sheet + &lt;a class="link" href="https://workspace.google.com/marketplace/app/latexkit/716178627426?hl=zh_tw" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="換行">&lt;a href="#%e6%8f%9b%e8%a1%8c" class="header-anchor">&lt;/a>換行
+&lt;/h2>&lt;p>LaTeX 在換行這個設計和 Markdown 一樣，因為內容與呈現分離，所以你的換行不是真的換行。Markdown 用 &lt;code> &lt;/code>（兩個空白），在 LaTeX 是 &lt;code>\\&lt;/code>（兩個反斜線）&lt;/p>
+&lt;h2 id="巨集與-package">&lt;a href="#%e5%b7%a8%e9%9b%86%e8%88%87-package" class="header-anchor">&lt;/a>巨集與 Package
+&lt;/h2>&lt;p>LaTeX 一個核心概念是巨集，就是函數啦，巨集的開頭是 &lt;code>\&lt;/code>（反斜線），巨集可以自己定義，也可以用 &lt;code>\usepackage{}&lt;/code> 載入別人寫好的&lt;/p>
+&lt;h2 id="overleaf">&lt;a href="#overleaf" class="header-anchor">&lt;/a>overleaf
+&lt;/h2>&lt;p>overleaf 是一個線上編輯 LaTeX 的網站，預裝了幾乎所有寫報告用得到的 packages，而且可以上傳自己的字型、圖片，而且右邊可以顯示產生的 PDF（非即時，按 CTRL-Enter 編譯）。這個網站整體使用體驗還算不錯，該有的功能都有了。&lt;/p>
+&lt;h2 id="表格">&lt;a href="#%e8%a1%a8%e6%a0%bc" class="header-anchor">&lt;/a>表格
+&lt;/h2>&lt;h3 id="切版">&lt;a href="#%e5%88%87%e7%89%88" class="header-anchor">&lt;/a>切版
+&lt;/h3>&lt;p>畫 LaTeX 表格最簡單的方式是用 Google Sheet + &lt;a class="link" href="https://workspace.google.com/marketplace/app/latexkit/716178627426?hl=zh_tw" target="_blank" rel="noopener"
 >latexkit&lt;/a>，這個外掛可以幫你把跨行、跨欄表格通通弄好，你只需要再調整格線和格式就行了（latexkit 只負責切版）&lt;/p>
-&lt;h3 id="格線">格線&lt;/h3>
-&lt;h4 id="直線">直線&lt;/h4>
-&lt;p>如果直線你需要兩條，在 &lt;code>\begin{tabular}{|L|L|}&lt;/code> 這裡多加幾條 &lt;code>|&lt;/code> 就可以了。直線如果遇到跨列的格子會自動跳過，所以你不需要處理&lt;/p>
-&lt;h4 id="橫線">橫線&lt;/h4>
-&lt;p>只需要用 &lt;code>\hline&lt;/code> 就可以畫一條橫線。&lt;br>
+&lt;h3 id="格線">&lt;a href="#%e6%a0%bc%e7%b7%9a" class="header-anchor">&lt;/a>格線
+&lt;/h3>&lt;h4 id="直線">&lt;a href="#%e7%9b%b4%e7%b7%9a" class="header-anchor">&lt;/a>直線
+&lt;/h4>&lt;p>如果直線你需要兩條，在 &lt;code>\begin{tabular}{|L|L|}&lt;/code> 這裡多加幾條 &lt;code>|&lt;/code> 就可以了。直線如果遇到跨列的格子會自動跳過，所以你不需要處理&lt;/p>
+&lt;h4 id="橫線">&lt;a href="#%e6%a9%ab%e7%b7%9a" class="header-anchor">&lt;/a>橫線
+&lt;/h4>&lt;p>只需要用 &lt;code>\hline&lt;/code> 就可以畫一條橫線。&lt;br>
 但是因為橫線遇到跨行的格子不會自動跳過，所以需要特殊處理。可以用 &lt;code>hhline&lt;/code> 這個 package，用法很簡單，&lt;code>\hhline{|~|-|=|}&lt;/code>。&lt;br>
 &lt;code>~&lt;/code> 是不劃線，&lt;code>-&lt;/code> 是畫一條線，&lt;code>=&lt;/code>是畫兩條線，而這裡的 &lt;code>|&lt;/code> 是在畫兩條線時要畫線中間的直線（你畫兩條線時試試看就知道了）&lt;/p>
-&lt;h2 id="數學表格">數學表格&lt;/h2>
-&lt;p>做報告的時候一定會遇到表格裡有數學符號，如果你懶得前後都加 &lt;code>$&lt;/code> 的話，可以用以下的方式&lt;/p>
+&lt;h2 id="數學表格">&lt;a href="#%e6%95%b8%e5%ad%b8%e8%a1%a8%e6%a0%bc" class="header-anchor">&lt;/a>數學表格
+&lt;/h2>&lt;p>做報告的時候一定會遇到表格裡有數學符號，如果你懶得前後都加 &lt;code>$&lt;/code> 的話，可以用以下的方式&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -296,17 +296,17 @@ alt="莫名其妙排版範例"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>tabular&lt;span class="nb">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="其他">其他&lt;/h2>
-&lt;p>其他零碎的使用方法建議參考 &lt;a class="link" href="https://www.overleaf.com/read/hpscgpsbxnjf" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="其他">&lt;a href="#%e5%85%b6%e4%bb%96" class="header-anchor">&lt;/a>其他
+&lt;/h2>&lt;p>其他零碎的使用方法建議參考 &lt;a class="link" href="https://www.overleaf.com/read/hpscgpsbxnjf" target="_blank" rel="noopener"
 >Saintan 的 LaTeX 小教室&lt;/a>，裡面寫的非常詳細&lt;/p>
-&lt;h2 id="符號表">符號表&lt;/h2>
-&lt;p>在 LaTeX 打數學式的時候，一定會遇到一些莫名其妙的符號，可以參考下面兩個網站，可以依序找，第二個因為東西太多了所以會比較難找一點&lt;/p>
+&lt;h2 id="符號表">&lt;a href="#%e7%ac%a6%e8%99%9f%e8%a1%a8" class="header-anchor">&lt;/a>符號表
+&lt;/h2>&lt;p>在 LaTeX 打數學式的時候，一定會遇到一些莫名其妙的符號，可以參考下面兩個網站，可以依序找，第二個因為東西太多了所以會比較難找一點&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols" target="_blank" rel="noopener"
 >https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols&lt;/a>&lt;br>
 &lt;a class="link" href="https://www.caam.rice.edu/~heinken/latex/symbols.pdf" target="_blank" rel="noopener"
 >https://www.caam.rice.edu/~heinken/latex/symbols.pdf&lt;/a>&lt;/p>
-&lt;h2 id="我的-latex-範本">我的 LaTeX 範本&lt;/h2>
-&lt;p>這是我寫物理實驗結報的範本&lt;/p>
+&lt;h2 id="我的-latex-範本">&lt;a href="#%e6%88%91%e7%9a%84-latex-%e7%af%84%e6%9c%ac" class="header-anchor">&lt;/a>我的 LaTeX 範本
+&lt;/h2>&lt;p>這是我寫物理實驗結報的範本&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1

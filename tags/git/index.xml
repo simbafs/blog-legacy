@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/git/</link><description>Recent content in Git on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 20 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Snippet</title><link>https://blog.simbafs.cc/p/linux/git/git-snippet/</link><pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/git/git-snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/git/git-snippet.png" alt="Featured image of post Git Snippet" />&lt;h1 id="git-snippet">Git Snippet&lt;/h1>
-&lt;h2 id="move-branch-to-another-commit-not-recommand">move branch to another commit (not recommand)&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/git/</link><description>Recent content in Git on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 20 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Snippet</title><link>https://blog.simbafs.cc/p/git-snippet/</link><pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/git-snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/git/git-snippet.png" alt="Featured image of post Git Snippet" />&lt;h1 id="git-snippet">&lt;a href="#git-snippet" class="header-anchor">&lt;/a>Git Snippet
+&lt;/h1>&lt;h2 id="move-branch-to-another-commit-not-recommand">&lt;a href="#move-branch-to-another-commit-not-recommand" class="header-anchor">&lt;/a>move branch to another commit (not recommand)
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -8,8 +8,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> git branch --force &amp;lt;branch name&amp;gt; &amp;lt;commit id&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="list-changed-filename">list changed filename&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="list-changed-filename">&lt;a href="#list-changed-filename" class="header-anchor">&lt;/a>list changed filename
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -18,13 +18,13 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/1552340/how-to-list-only-the-names-of-files-that-changed-between-two-commits" target="_blank" rel="noopener"
->ref: stackoverflow&lt;/a>&lt;/p></description></item><item><title>Merge Two Repo</title><link>https://blog.simbafs.cc/p/linux/git/merge-two-repo/</link><pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/git/merge-two-repo/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/git/merge-two-repo.png" alt="Featured image of post Merge Two Repo" />&lt;h1 id="merge-two-repo">Merge Two Repo&lt;/h1>
-&lt;p>這學期修了幾個資工系的課，都需要寫程式作業，原本我是一個作業開一個 repo，但是我發現這樣好像會開超級多 repo，於是我決定要想辦法合併他們。&lt;/p>
-&lt;h2 id="找資料">找資料&lt;/h2>
-&lt;p>首先去 Google 搜尋「git merge two repo」，第一條結果是是一個 13 年前的 stack overflow &lt;a class="link" href="https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories" target="_blank" rel="noopener"
+>ref: stackoverflow&lt;/a>&lt;/p></description></item><item><title>Merge Two Repo</title><link>https://blog.simbafs.cc/p/merge-two-repo/</link><pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/merge-two-repo/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/git/merge-two-repo.png" alt="Featured image of post Merge Two Repo" />&lt;h1 id="merge-two-repo">&lt;a href="#merge-two-repo" class="header-anchor">&lt;/a>Merge Two Repo
+&lt;/h1>&lt;p>這學期修了幾個資工系的課，都需要寫程式作業，原本我是一個作業開一個 repo，但是我發現這樣好像會開超級多 repo，於是我決定要想辦法合併他們。&lt;/p>
+&lt;h2 id="找資料">&lt;a href="#%e6%89%be%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>找資料
+&lt;/h2>&lt;p>首先去 Google 搜尋「git merge two repo」，第一條結果是是一個 13 年前的 stack overflow &lt;a class="link" href="https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories&lt;/a>，裡面第一個回答提到的方法是把待合併 repo A 指到目標 repo B 的 branch A，然後就把 branch A 當作一般分支合併，但是要加上 &lt;code>--allow-unrelated-histories&lt;/code> 選項&lt;/p>
-&lt;h2 id="filter-repo">filter-repo&lt;/h2>
-&lt;p>現在有個問題，原本的目錄結構是長這樣&lt;/p>
+&lt;h2 id="filter-repo">&lt;a href="#filter-repo" class="header-anchor">&lt;/a>filter-repo
+&lt;/h2>&lt;p>現在有個問題，原本的目錄結構是長這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -102,16 +102,16 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>當然可以把檔案移好再合併，但是這樣提交紀錄（commit history）上不好看，所以我們需要其他工具&lt;/p>
-&lt;h2 id="git-filter-repo">git filter-repo&lt;/h2>
-&lt;p>[git-filter-repo] 是個可以批次處理提交紀錄的工具，例如我們這次要的，將全部檔案移到子目錄裡面，從第一個 commit 開始。看網路教 git 似乎內建 &lt;code>filter-branch&lt;/code> 命令，但 filter-repo 的效能和功能都比較多。&lt;/p>
-&lt;h3 id="安裝">安裝&lt;/h3>
-&lt;p>&lt;code>apt install git-filter-repo&lt;/code>&lt;/p>
+&lt;h2 id="git-filter-repo">&lt;a href="#git-filter-repo" class="header-anchor">&lt;/a>git filter-repo
+&lt;/h2>&lt;p>[git-filter-repo] 是個可以批次處理提交紀錄的工具，例如我們這次要的，將全部檔案移到子目錄裡面，從第一個 commit 開始。看網路教 git 似乎內建 &lt;code>filter-branch&lt;/code> 命令，但 filter-repo 的效能和功能都比較多。&lt;/p>
+&lt;h3 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
+&lt;/h3>&lt;p>&lt;code>apt install git-filter-repo&lt;/code>&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/newren/git-filter-repo/blob/main/INSTALL.md" target="_blank" rel="noopener"
 >https://github.com/newren/git-filter-repo/blob/main/INSTALL.md&lt;/a>&lt;/p>
-&lt;h3 id="使用">使用&lt;/h3>
-&lt;p>&lt;code>git filter-repo&lt;/code>&lt;/p>
-&lt;h3 id="移動檔案到子目錄">移動檔案到子目錄&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h3 id="使用">&lt;a href="#%e4%bd%bf%e7%94%a8" class="header-anchor">&lt;/a>使用
+&lt;/h3>&lt;p>&lt;code>git filter-repo&lt;/code>&lt;/p>
+&lt;h3 id="移動檔案到子目錄">&lt;a href="#%e7%a7%bb%e5%8b%95%e6%aa%94%e6%a1%88%e5%88%b0%e5%ad%90%e7%9b%ae%e9%8c%84" class="header-anchor">&lt;/a>移動檔案到子目錄
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -141,8 +141,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Completely finished after 0.08 seconds.
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="合併-repo">合併 Repo&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="合併-repo">&lt;a href="#%e5%90%88%e4%bd%b5-repo" class="header-anchor">&lt;/a>合併 Repo
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -245,17 +245,17 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">* cdca739 (origin/main, origin/HEAD) Initial commit
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://gist.github.com/x-yuri/6161d90d1af8ebac6e560bcef548c1c3" target="_blank" rel="noopener"
 >https://gist.github.com/x-yuri/6161d90d1af8ebac6e560bcef548c1c3&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/newren/git-filter-repo" target="_blank" rel="noopener"
 >https://github.com/newren/git-filter-repo&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/atlassian/bitbucket-connect-jira/index.png" alt="Featured image of post Bitbucket Connect Jira" />&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
-&lt;h2 id="bitbucket-連接-jira">Bitbucket 連接 Jira&lt;/h2>
-&lt;p>先到 Bitbucket 的 repo 的 Jira issue 頁面
+&lt;/ul></description></item><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/atlassian/bitbucket-connect-jira/index.png" alt="Featured image of post Bitbucket Connect Jira" />&lt;h1 id="bitbucket-connect-jira">&lt;a href="#bitbucket-connect-jira" class="header-anchor">&lt;/a>Bitbucket Connect Jira
+&lt;/h1>&lt;h2 id="bitbucket-連接-jira">&lt;a href="#bitbucket-%e9%80%a3%e6%8e%a5-jira" class="header-anchor">&lt;/a>Bitbucket 連接 Jira
+&lt;/h2>&lt;p>先到 Bitbucket 的 repo 的 Jira issue 頁面
 &lt;img src="https://blog.simbafs.cc/1.png"
 loading="lazy"
 alt="1"
@@ -275,8 +275,8 @@ alt="3"
 loading="lazy"
 alt="4"
 >&lt;/p>
-&lt;h2 id="jira-issue-連結-bitbucket-branch">Jira issue 連結 Bitbucket branch&lt;/h2>
-&lt;p>Bitbucket 的 repo 的 Jira issue 頁面，點擊要處理的 Jira issue 最右側的三個點點
+&lt;h2 id="jira-issue-連結-bitbucket-branch">&lt;a href="#jira-issue-%e9%80%a3%e7%b5%90-bitbucket-branch" class="header-anchor">&lt;/a>Jira issue 連結 Bitbucket branch
+&lt;/h2>&lt;p>Bitbucket 的 repo 的 Jira issue 頁面，點擊要處理的 Jira issue 最右側的三個點點
 &lt;img src="https://blog.simbafs.cc/4.png"
 loading="lazy"
 alt="4"
@@ -291,8 +291,8 @@ alt="5"
 loading="lazy"
 alt="6"
 >&lt;/p>
-&lt;h2 id="將遠端-git-brench-拉到本地">將遠端 Git brench 拉到本地&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="將遠端-git-brench-拉到本地">&lt;a href="#%e5%b0%87%e9%81%a0%e7%ab%af-git-brench-%e6%8b%89%e5%88%b0%e6%9c%ac%e5%9c%b0" class="header-anchor">&lt;/a>將遠端 Git brench 拉到本地
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -302,8 +302,8 @@ alt="6"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git switch &amp;lt;branch name&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="合併分支">合併分支&lt;/h2>
-&lt;p>目標：將 A 分支合併到 main 分支&lt;/p>
+&lt;/div>&lt;h2 id="合併分支">&lt;a href="#%e5%90%88%e4%bd%b5%e5%88%86%e6%94%af" class="header-anchor">&lt;/a>合併分支
+&lt;/h2>&lt;p>目標：將 A 分支合併到 main 分支&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -314,8 +314,8 @@ alt="6"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git merge A
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>這裡可能會產生衝突（conflict），解決後就可以繼續合併了&lt;/p></description></item><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/server/ssh-on-gitea-with-docker/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/server/ssh-on-gitea-with-docker.png" alt="Featured image of post ssh on gitea with docker" />&lt;h1 id="gitea">Gitea&lt;/h1>
-&lt;p>&lt;a class="link" href="https://gitea.io" target="_blank" rel="noopener"
+&lt;/div>&lt;p>這裡可能會產生衝突（conflict），解決後就可以繼續合併了&lt;/p></description></item><item><title>ssh on gitea with docker</title><link>https://blog.simbafs.cc/p/ssh-on-gitea-with-docker/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-on-gitea-with-docker/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/server/ssh-on-gitea-with-docker.png" alt="Featured image of post ssh on gitea with docker" />&lt;h1 id="gitea">&lt;a href="#gitea" class="header-anchor">&lt;/a>Gitea
+&lt;/h1>&lt;p>&lt;a class="link" href="https://gitea.io" target="_blank" rel="noopener"
 >Gitea&lt;/a> 是一個開源的 git 伺服器，他的界面幾乎和 &lt;a class="link" href="https://github.com" target="_blank" rel="noopener"
 >GitHub&lt;/a> 一模一樣，但是完全開源而且非常輕，甚至一片樹梅派就可以開伺服器了。Gitea 因為是使用 &lt;a class="link" href="https://golang.org/" target="_blank" rel="noopener"
 >Golang&lt;/a> 編寫的，所以提供各種平台的執行檔。我選擇透過 docker 裝 Gitea 伺服器，但是這樣有一個問題，gitea 伺服器開在 container 內，沒辦法使用標準的 22 port，所以 git clone 就必須加上一個醜醜的數字，像是這樣&lt;/p>
@@ -329,10 +329,10 @@ alt="6"
 &lt;/div>
 &lt;/div>&lt;p>這個問題 Gitea 官方已經有提供&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
 >完整的教學&lt;/a>了，但是是英文版，我這篇文章是我讀完消化過後的中文版教學&lt;/p>
-&lt;h2 id="容器-ssh-穿透">容器 ssh 穿透&lt;/h2>
-&lt;p>因為 Gitea 的 ssh 是跑在容器裡，我沒辦法讓他和 host 共用 22 port，所以要透過 host 「轉發」連線。&lt;/p>
-&lt;h2 id="1-建立-git-使用者">1. 建立 git 使用者&lt;/h2>
-&lt;p>先在 host 建立一個名叫 git 的使用者，因為這個帳號會被對應到容器內的 git 使用者，所以要有一樣的 UID, GID&lt;/p>
+&lt;h2 id="容器-ssh-穿透">&lt;a href="#%e5%ae%b9%e5%99%a8-ssh-%e7%a9%bf%e9%80%8f" class="header-anchor">&lt;/a>容器 ssh 穿透
+&lt;/h2>&lt;p>因為 Gitea 的 ssh 是跑在容器裡，我沒辦法讓他和 host 共用 22 port，所以要透過 host 「轉發」連線。&lt;/p>
+&lt;h2 id="1-建立-git-使用者">&lt;a href="#1-%e5%bb%ba%e7%ab%8b-git-%e4%bd%bf%e7%94%a8%e8%80%85" class="header-anchor">&lt;/a>1. 建立 git 使用者
+&lt;/h2>&lt;p>先在 host 建立一個名叫 git 的使用者，因為這個帳號會被對應到容器內的 git 使用者，所以要有一樣的 UID, GID&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -356,8 +356,8 @@ alt="6"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">------GID UID
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="2-docker-compose">2. docker-compose&lt;/h2>
-&lt;p>以下是我的 docker-compose，可以根據不同的需求再修改（像是加入 db）&lt;/p>
+&lt;/div>&lt;h2 id="2-docker-compose">&lt;a href="#2-docker-compose" class="header-anchor">&lt;/a>2. docker-compose
+&lt;/h2>&lt;p>以下是我的 docker-compose，可以根據不同的需求再修改（像是加入 db）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -395,8 +395,8 @@ alt="6"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>UID 和 GID 記得換成你的，我的和你的不一定一樣&lt;/p>
-&lt;h2 id="3-幫-git-帳號產生-ssh-key">3. 幫 git 帳號產生 ssh key&lt;/h2>
-&lt;p>要有 ssh key 才能轉發（host 上的 git 要連線到 container 內）&lt;/p>
+&lt;h2 id="3-幫-git-帳號產生-ssh-key">&lt;a href="#3-%e5%b9%ab-git-%e5%b8%b3%e8%99%9f%e7%94%a2%e7%94%9f-ssh-key" class="header-anchor">&lt;/a>3. 幫 git 帳號產生 ssh key
+&lt;/h2>&lt;p>要有 ssh key 才能轉發（host 上的 git 要連線到 container 內）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -405,8 +405,8 @@ alt="6"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo -u git ssh-keygen -t rsa -b &lt;span class="m">4096&lt;/span> -C &lt;span class="s2">&amp;#34;Gitea Host Key&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="4-ssh-轉發">4. ssh 轉發&lt;/h2>
-&lt;p>這時候如果你開啟服務，為一個使用者新增 ssh key 你會發現在 host 上 &lt;code>~git/.ssh/authorized_keys&lt;/code> 會多出一行，長的像這樣&lt;/p>
+&lt;/div>&lt;h2 id="4-ssh-轉發">&lt;a href="#4-ssh-%e8%bd%89%e7%99%bc" class="header-anchor">&lt;/a>4. ssh 轉發
+&lt;/h2>&lt;p>這時候如果你開啟服務，為一個使用者新增 ssh key 你會發現在 host 上 &lt;code>~git/.ssh/authorized_keys&lt;/code> 會多出一行，長的像這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -429,22 +429,22 @@ alt="6"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>不要忘記給他執行權限 &lt;code>sudo chmod 755 /app/gitea/gitea&lt;/code>&lt;/p>
-&lt;h2 id="大功告成">大功告成！&lt;/h2>
-&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>一開始我沒找到官方的教學，一方面是我想自己試試看，二方面是因為官方文件中英文完全不一樣，看英文版才完整，中文只給兩條指令。&lt;/p>
-&lt;h2 id="參考連結">參考連結&lt;/h2>
-&lt;p>&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
+&lt;h2 id="大功告成">&lt;a href="#%e5%a4%a7%e5%8a%9f%e5%91%8a%e6%88%90" class="header-anchor">&lt;/a>大功告成！
+&lt;/h2>&lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
+&lt;/h2>&lt;p>一開始我沒找到官方的教學，一方面是我想自己試試看，二方面是因為官方文件中英文完全不一樣，看英文版才完整，中文只給兩條指令。&lt;/p>
+&lt;h2 id="參考連結">&lt;a href="#%e5%8f%83%e8%80%83%e9%80%a3%e7%b5%90" class="header-anchor">&lt;/a>參考連結
+&lt;/h2>&lt;p>&lt;a class="link" href="https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough" target="_blank" rel="noopener"
 >https://docs.gitea.io/en-us/install-with-docker/#ssh-container-passthrough&lt;/a>&lt;br>
 &lt;a class="link" href="https://asaba.sakuragawa.moe/2018/06/%E6%93%BA%E8%84%AB%E6%8E%A7%E5%88%B6%EF%BC%8C%E7%94%A8-docker-%E8%87%AA%E5%BB%BA-gitea-gogs-%E7%B7%9A%E4%B8%8A%E4%BB%A3%E7%A2%BC%E5%8D%94%E4%BD%9C%E5%B9%B3%E8%87%BA/" target="_blank" rel="noopener"
->https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>GPG</title><link>https://blog.simbafs.cc/p/linux/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/gpg.png" alt="Featured image of post GPG" />&lt;h1 id="gpg">GPG&lt;/h1>
-&lt;h2 id="sign-git-commit-with-gpg">sign git commit with gpg&lt;/h2>
-&lt;p>我按照他的作法弄完後就是沒辦法 commit
+>https://asaba.sakuragawa.moe/2018/06/擺脫控制，用-docker-自建-gitea-gogs-線上代碼協作平臺/&lt;/a>&lt;/p></description></item><item><title>GPG</title><link>https://blog.simbafs.cc/p/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/gpg/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/gpg.png" alt="Featured image of post GPG" />&lt;h1 id="gpg">&lt;a href="#gpg" class="header-anchor">&lt;/a>GPG
+&lt;/h1>&lt;h2 id="sign-git-commit-with-gpg">&lt;a href="#sign-git-commit-with-gpg" class="header-anchor">&lt;/a>sign git commit with gpg
+&lt;/h2>&lt;p>我按照他的作法弄完後就是沒辦法 commit
 他說 GPG 無法簽章
 後來我發現是我的 name 填錯（應該啦，我猜的）
 總而言之就重新產生 GPG key 就好了
 name 和 git 設定的一樣&lt;/p>
-&lt;h2 id="常見指令">常見指令&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="常見指令">&lt;a href="#%e5%b8%b8%e8%a6%8b%e6%8c%87%e4%bb%a4" class="header-anchor">&lt;/a>常見指令
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -456,8 +456,8 @@ name 和 git 設定的一樣&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">gpg&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">armor&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="k">export&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">secret&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="刪除金鑰">刪除金鑰&lt;/h2>
-&lt;p>在刪除的時候分成兩步驟，刪除私鑰、刪除公鑰。在刪除之前要先知道要刪除的金鑰的 ID&lt;/p>
+&lt;/div>&lt;h2 id="刪除金鑰">&lt;a href="#%e5%88%aa%e9%99%a4%e9%87%91%e9%91%b0" class="header-anchor">&lt;/a>刪除金鑰
+&lt;/h2>&lt;p>在刪除的時候分成兩步驟，刪除私鑰、刪除公鑰。在刪除之前要先知道要刪除的金鑰的 ID&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1

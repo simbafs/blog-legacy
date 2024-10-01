@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Command on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/command/</link><description>Recent content in Command on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/command/index.xml" rel="self" type="application/rss+xml"/><item><title>Bash Snippet</title><link>https://blog.simbafs.cc/p/linux/bash/snippet/</link><pubDate>Sat, 25 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/bash/snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/bash/snippet.png" alt="Featured image of post Bash Snippet" />&lt;h1 id="bash-snippet">Bash Snippet&lt;/h1>
-&lt;h2 id="clear-broken-symlinks">Clear broken symlinks&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Command on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/command/</link><description>Recent content in Command on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 25 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/command/index.xml" rel="self" type="application/rss+xml"/><item><title>Bash Snippet</title><link>https://blog.simbafs.cc/p/snippet/</link><pubDate>Sat, 25 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/bash/snippet.png" alt="Featured image of post Bash Snippet" />&lt;h1 id="bash-snippet">&lt;a href="#bash-snippet" class="header-anchor">&lt;/a>Bash Snippet
+&lt;/h1>&lt;h2 id="clear-broken-symlinks">&lt;a href="#clear-broken-symlinks" class="header-anchor">&lt;/a>Clear broken symlinks
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -12,8 +12,8 @@
 &lt;p>&lt;a class="link" href="https://unix.stackexchange.com/questions/34248/how-can-i-find-broken-symlinks" target="_blank" rel="noopener"
 >stackoverflow&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="random-string">Random String&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="random-string">&lt;a href="#random-string" class="header-anchor">&lt;/a>Random String
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>

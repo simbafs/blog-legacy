@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hexo on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/hexo/</link><description>Recent content in Hexo on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 20 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/hexo/index.xml" rel="self" type="application/rss+xml"/><item><title>文章更新時間錯亂問題</title><link>https://blog.simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C.png" alt="Featured image of post 文章更新時間錯亂問題" />&lt;h1 id="問題">問題&lt;/h1>
-&lt;p>在設定完 GitHub Action 之後，我發現我的文章的更新時間都錯了，會全部變成當天日期。但是本地生成的就沒有這個問題，經過一番盤查和猜測後，我發現問題是因為 git 不會把 modified date 紀錄，因為每台電腦的時區都是不一樣的，紀錄起來沒有意義。但是我們需要這項 meta data，所以我們就要自己想法紀錄&lt;/p>
-&lt;h1 id="解法-v10">解法 v1.0&lt;/h1>
-&lt;p>首先，因為每一篇文章 hexo 都會紀錄建立時間，所以我們可以直接把他抓出來，然後把檔案的更新時間設成這個時間就可以啦！&lt;/p>
-&lt;h2 id="更改檔案的-modified-time">更改檔案的 modified time&lt;/h2>
-&lt;p>這個功能只要用我們最熟悉的 &lt;code>touch&lt;/code> 就可以做到了。一般我們使用 &lt;code>touch&lt;/code> 的時候會把 modified time 改成當下時間，那要改任意時間只要加上 &lt;code>-t&lt;/code> 選項就可以啦&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hexo on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/hexo/</link><description>Recent content in Hexo on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 20 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/hexo/index.xml" rel="self" type="application/rss+xml"/><item><title>文章更新時間錯亂問題</title><link>https://blog.simbafs.cc/p/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C.png" alt="Featured image of post 文章更新時間錯亂問題" />&lt;h1 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h1>&lt;p>在設定完 GitHub Action 之後，我發現我的文章的更新時間都錯了，會全部變成當天日期。但是本地生成的就沒有這個問題，經過一番盤查和猜測後，我發現問題是因為 git 不會把 modified date 紀錄，因為每台電腦的時區都是不一樣的，紀錄起來沒有意義。但是我們需要這項 meta data，所以我們就要自己想法紀錄&lt;/p>
+&lt;h1 id="解法-v10">&lt;a href="#%e8%a7%a3%e6%b3%95-v10" class="header-anchor">&lt;/a>解法 v1.0
+&lt;/h1>&lt;p>首先，因為每一篇文章 hexo 都會紀錄建立時間，所以我們可以直接把他抓出來，然後把檔案的更新時間設成這個時間就可以啦！&lt;/p>
+&lt;h2 id="更改檔案的-modified-time">&lt;a href="#%e6%9b%b4%e6%94%b9%e6%aa%94%e6%a1%88%e7%9a%84-modified-time" class="header-anchor">&lt;/a>更改檔案的 modified time
+&lt;/h2>&lt;p>這個功能只要用我們最熟悉的 &lt;code>touch&lt;/code> 就可以做到了。一般我們使用 &lt;code>touch&lt;/code> 的時候會把 modified time 改成當下時間，那要改任意時間只要加上 &lt;code>-t&lt;/code> 選項就可以啦&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -23,8 +23,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ted timeouch -t&amp;#39;19993231232.33&amp;#39; tmp
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="抓出檔名日期">抓出檔名、日期&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="抓出檔名日期">&lt;a href="#%e6%8a%93%e5%87%ba%e6%aa%94%e5%90%8d%e6%97%a5%e6%9c%9f" class="header-anchor">&lt;/a>抓出檔名、日期
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -63,8 +63,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/mxlinux-change-workspace.md:3:date: 2020-05-08 17:59:22
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="分離時間檔名">分離時間，檔名&lt;/h2>
-&lt;p>觀察他的輸出&lt;br>
+&lt;/div>&lt;h2 id="分離時間檔名">&lt;a href="#%e5%88%86%e9%9b%a2%e6%99%82%e9%96%93%e6%aa%94%e5%90%8d" class="header-anchor">&lt;/a>分離時間，檔名
+&lt;/h2>&lt;p>觀察他的輸出&lt;br>
 檔名的部份是在以冒號分隔的第一欄&lt;br>
 日期/時間是在以空格分隔的第二、三欄
 那我們就可以根據這個把他們分離出來&lt;/p>
@@ -121,8 +121,8 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-08-20 23:33:13
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="處理日期的格式">處理日期的格式&lt;/h2>
-&lt;p>在 &lt;code>更改檔案的 modified time&lt;/code> 提到的日期格式和我們抓出來的不太一樣，所以我們需要做一些處理&lt;/p>
+&lt;/div>&lt;h2 id="處理日期的格式">&lt;a href="#%e8%99%95%e7%90%86%e6%97%a5%e6%9c%9f%e7%9a%84%e6%a0%bc%e5%bc%8f" class="header-anchor">&lt;/a>處理日期的格式
+&lt;/h2>&lt;p>在 &lt;code>更改檔案的 modified time&lt;/code> 提到的日期格式和我們抓出來的不太一樣，所以我們需要做一些處理&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -132,8 +132,8 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這樣就可以成功轉換日期格式了&lt;/p>
-&lt;h2 id="時間檔">時間檔&lt;/h2>
-&lt;p>接下來把 &lt;code>name&lt;/code>、&lt;code>time&lt;/code> 合起來就變成時間擋了，這裡有一點要注意，因為我們恢復的時候是用 for 迴圈，換行和空白都會被當成切斷符號，所以檔名和時間中間的間隔符號我們選用冒號 &lt;code>:&lt;/code>&lt;/p>
+&lt;h2 id="時間檔">&lt;a href="#%e6%99%82%e9%96%93%e6%aa%94" class="header-anchor">&lt;/a>時間檔
+&lt;/h2>&lt;p>接下來把 &lt;code>name&lt;/code>、&lt;code>time&lt;/code> 合起來就變成時間擋了，這裡有一點要注意，因為我們恢復的時候是用 for 迴圈，換行和空白都會被當成切斷符號，所以檔名和時間中間的間隔符號我們選用冒號 &lt;code>:&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -142,8 +142,8 @@ name:&lt;/p>
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">paste -d: name time &amp;gt; source/_posts/time
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="清垃圾">清垃圾&lt;/h2>
-&lt;p>最後記得把剛才產生出來但是用不到的檔案清掉&lt;/p>
+&lt;/div>&lt;h2 id="清垃圾">&lt;a href="#%e6%b8%85%e5%9e%83%e5%9c%be" class="header-anchor">&lt;/a>清垃圾
+&lt;/h2>&lt;p>最後記得把剛才產生出來但是用不到的檔案清掉&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -152,8 +152,8 @@ name:&lt;/p>
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rm t name time
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="完整程式碼">完整程式碼&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="完整程式碼">&lt;a href="#%e5%ae%8c%e6%95%b4%e7%a8%8b%e5%bc%8f%e7%a2%bc" class="header-anchor">&lt;/a>完整程式碼
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -199,10 +199,10 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm t name &lt;span class="nb">time&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="備註">備註&lt;/h2>
-&lt;p>剛剛有說到在這份教學中的 &lt;code>date: &lt;/code> 都多加一個空白，原因是因為 grep 在抓時候不會只抓第一個，為了避免抓到錯的所以我故意讓他不匹配，不然再生成時間檔的時候會出錯，所以你們的文章中如果出現會匹配 &lt;code>date: [0-9]{4}&lt;/code> 的字串，記得要做一下手腳&lt;/p>
-&lt;h1 id="解法-v20">解法 v2.0&lt;/h1>
-&lt;p>上一個作法雖然可行，但是有一個缺點，就是他的更新時間都會是建立時間，不會是 modified time，所以解法二誕生了&lt;br>
+&lt;/div>&lt;h2 id="備註">&lt;a href="#%e5%82%99%e8%a8%bb" class="header-anchor">&lt;/a>備註
+&lt;/h2>&lt;p>剛剛有說到在這份教學中的 &lt;code>date: &lt;/code> 都多加一個空白，原因是因為 grep 在抓時候不會只抓第一個，為了避免抓到錯的所以我故意讓他不匹配，不然再生成時間檔的時候會出錯，所以你們的文章中如果出現會匹配 &lt;code>date: [0-9]{4}&lt;/code> 的字串，記得要做一下手腳&lt;/p>
+&lt;h1 id="解法-v20">&lt;a href="#%e8%a7%a3%e6%b3%95-v20" class="header-anchor">&lt;/a>解法 v2.0
+&lt;/h1>&lt;p>上一個作法雖然可行，但是有一個缺點，就是他的更新時間都會是建立時間，不會是 modified time，所以解法二誕生了&lt;br>
 其實很簡單，改上面的一小行就好了。首先用 &lt;code>stat&lt;/code> 取出檔案的 modified time&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -227,8 +227,8 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>然後在經過適當的轉換變成我們要的格式就完成啦！&lt;/p>
-&lt;h2 id="完整程式碼-1">完整程式碼&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="完整程式碼-1">&lt;a href="#%e5%ae%8c%e6%95%b4%e7%a8%8b%e5%bc%8f%e7%a2%bc-1" class="header-anchor">&lt;/a>完整程式碼
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -300,9 +300,9 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>加入 google search 和 sitemap</title><link>https://blog.simbafs.cc/p/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap.png" alt="Featured image of post 加入 google search 和 sitemap" />&lt;h1 id="前置設定">前置設定&lt;/h1>
-&lt;h2 id="npm-安裝-hexo-generator-sitemap">npm 安裝 &lt;code>hexo-generator-sitemap&lt;/code>&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div></description></item><item><title>加入 google search 和 sitemap</title><link>https://blog.simbafs.cc/p/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap.png" alt="Featured image of post 加入 google search 和 sitemap" />&lt;h1 id="前置設定">&lt;a href="#%e5%89%8d%e7%bd%ae%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>前置設定
+&lt;/h1>&lt;h2 id="npm-安裝-hexo-generator-sitemap">&lt;a href="#npm-%e5%ae%89%e8%a3%9d-hexo-generator-sitemap" class="header-anchor">&lt;/a>npm 安裝 &lt;code>hexo-generator-sitemap&lt;/code>
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -310,8 +310,8 @@ name:&lt;/p>
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm i -S hexo-generator-sitemap
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="設定插件">設定插件&lt;/h2>
-&lt;p>將以下內容加到 &lt;code>_config.yml&lt;/code>&lt;/p>
+&lt;/div>&lt;h2 id="設定插件">&lt;a href="#%e8%a8%ad%e5%ae%9a%e6%8f%92%e4%bb%b6" class="header-anchor">&lt;/a>設定插件
+&lt;/h2>&lt;p>將以下內容加到 &lt;code>_config.yml&lt;/code>&lt;/p>
 &lt;blockquote>
 &lt;p>注意空白&lt;/p>
 &lt;/blockquote>
@@ -327,8 +327,8 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">path&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">sitemap.xml&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="驗證網域">驗證網域&lt;/h1>
-&lt;p>如果你的 hexo 是架在自己的網域可以跳過這步&lt;br>
+&lt;/div>&lt;h1 id="驗證網域">&lt;a href="#%e9%a9%97%e8%ad%89%e7%b6%b2%e5%9f%9f" class="header-anchor">&lt;/a>驗證網域
+&lt;/h1>&lt;p>如果你的 hexo 是架在自己的網域可以跳過這步&lt;br>
 因為我的 hexo 是 託管在 GitHub page，在 Google Search Console 驗證的時候沒辦法用網域，所以要放一個特別的檔案到我們的網站根目錄&lt;/p>
 &lt;ol>
 &lt;li>首先到 &lt;a class="link" href="https://search.google.com/search-console/" target="_blank" rel="noopener"
@@ -371,21 +371,21 @@ alt="download html file and place to source/"
 &lt;/div>&lt;ol start="4">
 &lt;li>按下驗證，完成&lt;/li>
 &lt;/ol>
-&lt;h1 id="sitemap">Sitemap&lt;/h1>
-&lt;p>驗證好了之後進入 Google Search Console，在側邊欄找到 &lt;code>索引&lt;/code> -&amp;gt; &lt;code>Sitemap&lt;/code>
+&lt;h1 id="sitemap">&lt;a href="#sitemap" class="header-anchor">&lt;/a>Sitemap
+&lt;/h1>&lt;p>驗證好了之後進入 Google Search Console，在側邊欄找到 &lt;code>索引&lt;/code> -&amp;gt; &lt;code>Sitemap&lt;/code>
 輸入 &lt;code>sitemap.xml&lt;/code> 按提交
 &lt;img src="https://blog.simbafs.cc/images/google-search-analytics/sitemap.png"
 loading="lazy"
 alt="sitemap"
 >&lt;/p>
-&lt;h1 id="google-analytics">Google analytics&lt;/h1>
-&lt;p>待新增&lt;/p></description></item><item><title>GitHub Action 自動部署 hexo</title><link>https://blog.simbafs.cc/p/hexo/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</link><pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/GitHub-Action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo.png" alt="Featured image of post GitHub Action 自動部署 hexo" />&lt;h1 id="前言">前言&lt;/h1>
-&lt;p>本來部署 hexo 都是手動下指令，但是這樣在手機上因為沒辦法裝 hexo ,所以一直不能在手機上寫文章。剛好想到 GitHub Action 可以滿足我的需求，上網查了一下資料發現蠻多人有和我一樣的需求，這次參考的是 &lt;a class="link" href="https://owlran.github.io/2020/04/26/hexo-blog-github-action/" target="_blank" rel="noopener"
+&lt;h1 id="google-analytics">&lt;a href="#google-analytics" class="header-anchor">&lt;/a>Google analytics
+&lt;/h1>&lt;p>待新增&lt;/p></description></item><item><title>GitHub Action 自動部署 hexo</title><link>https://blog.simbafs.cc/p/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</link><pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/GitHub-Action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo.png" alt="Featured image of post GitHub Action 自動部署 hexo" />&lt;h1 id="前言">&lt;a href="#%e5%89%8d%e8%a8%80" class="header-anchor">&lt;/a>前言
+&lt;/h1>&lt;p>本來部署 hexo 都是手動下指令，但是這樣在手機上因為沒辦法裝 hexo ,所以一直不能在手機上寫文章。剛好想到 GitHub Action 可以滿足我的需求，上網查了一下資料發現蠻多人有和我一樣的需求，這次參考的是 &lt;a class="link" href="https://owlran.github.io/2020/04/26/hexo-blog-github-action/" target="_blank" rel="noopener"
 >owlran 大大的文章&lt;/a>。&lt;/p>
-&lt;h1 id="ssh-key">ssh key&lt;/h1>
-&lt;p>因為要部署到 GitHub repo，最方便的方法當然是 ssh key 啦。&lt;/p>
-&lt;h2 id="ssh-keygen">ssh-keygen&lt;/h2>
-&lt;p>首先隨便找個資料夾產生一組 ssh key&lt;/p>
+&lt;h1 id="ssh-key">&lt;a href="#ssh-key" class="header-anchor">&lt;/a>ssh key
+&lt;/h1>&lt;p>因為要部署到 GitHub repo，最方便的方法當然是 ssh key 啦。&lt;/p>
+&lt;h2 id="ssh-keygen">&lt;a href="#ssh-keygen" class="header-anchor">&lt;/a>ssh-keygen
+&lt;/h2>&lt;p>首先隨便找個資料夾產生一組 ssh key&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -394,17 +394,17 @@ alt="sitemap"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ssh-keygen -f deploy-key
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="github">GitHub&lt;/h2>
-&lt;p>再來要讓 GitHub 知道你的 ssh key（public/secret 都要）&lt;/p>
-&lt;h3 id="public-key">public key&lt;/h3>
-&lt;p>public key 是要放在你的 &lt;code>&amp;lt;username&amp;gt;.github.io&lt;/code> 的 repo 下&lt;/p>
+&lt;/div>&lt;h2 id="github">&lt;a href="#github" class="header-anchor">&lt;/a>GitHub
+&lt;/h2>&lt;p>再來要讓 GitHub 知道你的 ssh key（public/secret 都要）&lt;/p>
+&lt;h3 id="public-key">&lt;a href="#public-key" class="header-anchor">&lt;/a>public key
+&lt;/h3>&lt;p>public key 是要放在你的 &lt;code>&amp;lt;username&amp;gt;.github.io&lt;/code> 的 repo 下&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;!-- raw HTML omitted -->.ggithub.io -&amp;gt; settings -&amp;gt; Deploy keys -&amp;gt; add deploy key&lt;/p>
+&lt;p>&lt;username>.ggithub.io -&amp;gt; settings -&amp;gt; Deploy keys -&amp;gt; add deploy key&lt;/p>
 &lt;/blockquote>
 &lt;p>新增一個 ssh key，名字叫 &lt;code>DEPLOY_KEY_PUB&lt;/code>&lt;br>
 把 &lt;code>depoly-key.pub&lt;/code> 的內容貼上，記得下面的勾勾（Allow write access ）要選起來&lt;/p>
-&lt;h3 id="secret-key">secret key&lt;/h3>
-&lt;p>secret key 要放在你存放部落格檔案的 repo，owlran 大大是放在同一個 &lt;a class="link" href="https://github.com/owlran/owlran.github.io" target="_blank" rel="noopener"
+&lt;h3 id="secret-key">&lt;a href="#secret-key" class="header-anchor">&lt;/a>secret key
+&lt;/h3>&lt;p>secret key 要放在你存放部落格檔案的 repo，owlran 大大是放在同一個 &lt;a class="link" href="https://github.com/owlran/owlran.github.io" target="_blank" rel="noopener"
 >repo&lt;/a> 不同 branch，我是放在兩個不同 repo，其中放部落格檔案的 repo 我設成 private repo（因為我放了一些 gitalk 要用的 clientSecret，這個不能公開）。&lt;br>
 總之到你要放部落格檔案的那個 repo，新增一個 secret，等等要再 GitHub Action 裡面調用。&lt;/p>
 &lt;blockquote>
@@ -412,8 +412,8 @@ alt="sitemap"
 &lt;/blockquote>
 &lt;p>名字是 &lt;code>DEPLOY_KEY&lt;/code>，內容是 &lt;code>deploy-key&lt;/code> 裡面的東西&lt;br>
 接下來就可以進入到 Action 了&lt;/p>
-&lt;h1 id="action">Action&lt;/h1>
-&lt;p>我的 Action 內容基本上是複製 owlran 大大的，但是因為 repo 結構有小小不同所以我了一些修改，如果你要改的話應該是不難才對，GitHub Action 的設定檔我覺得還好懂的。&lt;br>
+&lt;h1 id="action">&lt;a href="#action" class="header-anchor">&lt;/a>Action
+&lt;/h1>&lt;p>我的 Action 內容基本上是複製 owlran 大大的，但是因為 repo 結構有小小不同所以我了一些修改，如果你要改的話應該是不難才對，GitHub Action 的設定檔我覺得還好懂的。&lt;br>
 這個設定是放在你放部落格檔案的那個 repo&lt;/p>
 &lt;blockquote>
 &lt;p>注意：第 27, 28 行的 &lt;code>username&lt;/code> 和 &lt;code>email&lt;/code> 記得改成你的，不然 git commit message 會有問題&lt;/p>
@@ -549,9 +549,9 @@ alt="sitemap"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> hexo deploy&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>hexo-config</title><link>https://blog.simbafs.cc/p/hexo/hexo-config/</link><pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/hexo-config/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/hexo-config.png" alt="Featured image of post hexo-config" />&lt;h1 id="各種設定值嘗試">各種設定值嘗試&lt;/h1>
-&lt;h2 id="highlight">Highlight&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div></description></item><item><title>hexo-config</title><link>https://blog.simbafs.cc/p/hexo-config/</link><pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo-config/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/hexo-config.png" alt="Featured image of post hexo-config" />&lt;h1 id="各種設定值嘗試">&lt;a href="#%e5%90%84%e7%a8%ae%e8%a8%ad%e5%ae%9a%e5%80%bc%e5%98%97%e8%a9%a6" class="header-anchor">&lt;/a>各種設定值嘗試
+&lt;/h1>&lt;h2 id="highlight">&lt;a href="#highlight" class="header-anchor">&lt;/a>Highlight
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -591,9 +591,9 @@ alt="sitemap"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Audo Depoly by Github Action</title><link>https://blog.simbafs.cc/p/hexo/audo-depoly-by-github-action/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/audo-depoly-by-github-action/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/audo-depoly-by-github-action.png" alt="Featured image of post Audo Depoly by Github Action" />&lt;h1 id="github-action-自動部署-hexo">GitHub Action 自動部署 Hexo&lt;/h1>
-&lt;h2 id="自動部屬部落格">自動部屬部落格&lt;/h2>
-&lt;p>參考網址：&lt;a class="link" href="https://op30132.github.io/2020/02/05/github-action/" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>Audo Depoly by Github Action</title><link>https://blog.simbafs.cc/p/audo-depoly-by-github-action/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/audo-depoly-by-github-action/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/audo-depoly-by-github-action.png" alt="Featured image of post Audo Depoly by Github Action" />&lt;h1 id="github-action-自動部署-hexo">&lt;a href="#github-action-%e8%87%aa%e5%8b%95%e9%83%a8%e7%bd%b2-hexo" class="header-anchor">&lt;/a>GitHub Action 自動部署 Hexo
+&lt;/h1>&lt;h2 id="自動部屬部落格">&lt;a href="#%e8%87%aa%e5%8b%95%e9%83%a8%e5%b1%ac%e9%83%a8%e8%90%bd%e6%a0%bc" class="header-anchor">&lt;/a>自動部屬部落格
+&lt;/h2>&lt;p>參考網址：&lt;a class="link" href="https://op30132.github.io/2020/02/05/github-action/" target="_blank" rel="noopener"
 >https://op30132.github.io/2020/02/05/github-action/&lt;/a>
 生成公私鑰時不用在部落格根目錄，記的不要加入 git，要刪掉&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -720,8 +720,8 @@ alt="sitemap"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> hexo d&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>gitalk</title><link>https://blog.simbafs.cc/p/hexo/gitalk/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/gitalk/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/gitalk.png" alt="Featured image of post gitalk" />&lt;h1 id="啟用-gitalk-留言">啟用 gitalk 留言&lt;/h1>
-&lt;ol>
+&lt;/div></description></item><item><title>gitalk</title><link>https://blog.simbafs.cc/p/gitalk/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/gitalk/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/gitalk.png" alt="Featured image of post gitalk" />&lt;h1 id="啟用-gitalk-留言">&lt;a href="#%e5%95%9f%e7%94%a8-gitalk-%e7%95%99%e8%a8%80" class="header-anchor">&lt;/a>啟用 gitalk 留言
+&lt;/h1>&lt;ol>
 &lt;li>到&lt;a class="link" href="https://github.com/settings/applications/new" target="_blank" rel="noopener"
 >這個網址&lt;/a>填資料&lt;/li>
 &lt;li>加入下面的片段到&lt;code>_config.yml&lt;/code>&lt;/li>
@@ -797,15 +797,15 @@ alt="sitemap"
 &lt;/div>
 &lt;/div>&lt;ol start="4">
 &lt;li>完成！注意 gitalk 在本地端是沒有用的喔！記得 &lt;code>hexo g; hexo d&lt;/code>&lt;/li>
-&lt;/ol></description></item><item><title>hexo-cli-extras</title><link>https://blog.simbafs.cc/p/hexo/hexo-cli-extras/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/hexo-cli-extras/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/hexo-cli-extras.png" alt="Featured image of post hexo-cli-extras" />&lt;h1 id="好用的插件">好用的插件&lt;/h1>
-&lt;p>因為 hexo 本身沒有提供編輯器&lt;br>
+&lt;/ol></description></item><item><title>hexo-cli-extras</title><link>https://blog.simbafs.cc/p/hexo-cli-extras/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo-cli-extras/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/hexo-cli-extras.png" alt="Featured image of post hexo-cli-extras" />&lt;h1 id="好用的插件">&lt;a href="#%e5%a5%bd%e7%94%a8%e7%9a%84%e6%8f%92%e4%bb%b6" class="header-anchor">&lt;/a>好用的插件
+&lt;/h1>&lt;p>因為 hexo 本身沒有提供編輯器&lt;br>
 所以每次在編輯文章時都需要打路徑&lt;br>
 這個插件他會去找到你的文章&lt;br>
 然後給你選要編輯那一個&lt;br>
 這只是其中一個功能&lt;br>
 還有&lt;strong>重新命名&lt;/strong>、&lt;strong>刪除&lt;/strong>、&lt;strong>隔離&lt;/strong>和&lt;strong>加入&lt;/strong>&lt;br>
-&lt;strong>隔離&lt;/strong>是將其他文章暫時隔離，&lt;strong>加入&lt;/strong>是將文章加回來&lt;/p></description></item><item><title>hexo-installation</title><link>https://blog.simbafs.cc/p/hexo/hexo-installation/</link><pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/hexo-installation/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/hexo-installation.png" alt="Featured image of post hexo-installation" />&lt;h1 id="把-hexo-部屬到-gh-page">把 hexo 部屬到 gh-page&lt;/h1>
-&lt;p>執行&lt;/p>
+&lt;strong>隔離&lt;/strong>是將其他文章暫時隔離，&lt;strong>加入&lt;/strong>是將文章加回來&lt;/p></description></item><item><title>hexo-installation</title><link>https://blog.simbafs.cc/p/hexo-installation/</link><pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo-installation/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/hexo-installation.png" alt="Featured image of post hexo-installation" />&lt;h1 id="把-hexo-部屬到-gh-page">&lt;a href="#%e6%8a%8a-hexo-%e9%83%a8%e5%b1%ac%e5%88%b0-gh-page" class="header-anchor">&lt;/a>把 hexo 部屬到 gh-page
+&lt;/h1>&lt;p>執行&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -858,8 +858,8 @@ alt="sitemap"
 &lt;/div>
 &lt;/div>&lt;p>不然不會生效&lt;/p>
 &lt;p>完成!&lt;/p>
-&lt;h1 id="將原始碼保存">將原始碼保存&lt;/h1>
-&lt;p>執行&lt;/p>
+&lt;h1 id="將原始碼保存">&lt;a href="#%e5%b0%87%e5%8e%9f%e5%a7%8b%e7%a2%bc%e4%bf%9d%e5%ad%98" class="header-anchor">&lt;/a>將原始碼保存
+&lt;/h1>&lt;p>執行&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1

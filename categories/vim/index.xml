@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vim on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/vim/</link><description>Recent content in Vim on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 18 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>Firenvim</title><link>https://blog.simbafs.cc/p/linux/vim/firenvim/</link><pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/firenvim/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/firenvim.png" alt="Featured image of post Firenvim" />&lt;h1 id="firenvim">Firenvim&lt;/h1>
-&lt;p>&lt;a class="link" href="https://github.com/glacambre/firenvim" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vim on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/vim/</link><description>Recent content in Vim on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 18 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>Firenvim</title><link>https://blog.simbafs.cc/p/firenvim/</link><pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/firenvim/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/firenvim.png" alt="Featured image of post Firenvim" />&lt;h1 id="firenvim">&lt;a href="#firenvim" class="header-anchor">&lt;/a>Firenvim
+&lt;/h1>&lt;p>&lt;a class="link" href="https://github.com/glacambre/firenvim" target="_blank" rel="noopener"
 >firenvim&lt;/a> 是一個可以把 nvim 嵌入瀏覽器的插件，像是這樣&lt;br>
 &lt;img src="https://blog.simbafs.cc/images/firenvim_in_leetcode.png"
 loading="lazy"
@@ -9,8 +9,8 @@ alt="firenvim in leetcode"
 &lt;p>我的 nvim 現在是用 &lt;a class="link" href="https://github.com/AstroNvim/AstroNvim" target="_blank" rel="noopener"
 >astronvim&lt;/a> 設定檔，所以以下內容都是放在 &lt;code>~/.config/nvim/lua/user/init.lua&lt;/code> 裡面&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="預設關閉-firenvim">預設關閉 firenvim&lt;/h2>
-&lt;p>如果不關的話他會在所有你想打字的地方跳出來，像是 google 搜尋、messenger 輸入框，等等你不希望他出來的地方&lt;/p>
+&lt;h2 id="預設關閉-firenvim">&lt;a href="#%e9%a0%90%e8%a8%ad%e9%97%9c%e9%96%89-firenvim" class="header-anchor">&lt;/a>預設關閉 firenvim
+&lt;/h2>&lt;p>如果不關的話他會在所有你想打字的地方跳出來，像是 google 搜尋、messenger 輸入框，等等你不希望他出來的地方&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -45,8 +45,8 @@ alt="firenvim in leetcode"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="在特定網站開啟">在特定網站開啟&lt;/h2>
-&lt;p>預設關閉後我們還是可以用 &lt;code>&amp;lt;C-e&amp;gt;&lt;/code> 開啟，不過某些網站還是自動開會方便一點，所以再加上&lt;/p>
+&lt;/div>&lt;h2 id="在特定網站開啟">&lt;a href="#%e5%9c%a8%e7%89%b9%e5%ae%9a%e7%b6%b2%e7%ab%99%e9%96%8b%e5%95%9f" class="header-anchor">&lt;/a>在特定網站開啟
+&lt;/h2>&lt;p>預設關閉後我們還是可以用 &lt;code>&amp;lt;C-e&amp;gt;&lt;/code> 開啟，不過某些網站還是自動開會方便一點，所以再加上&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -89,8 +89,8 @@ alt="firenvim in leetcode"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="filetype">filetype&lt;/h2>
-&lt;p>因為 firenvim 開啟時的 filetype 預設是 &lt;code>txt&lt;/code>，不會有語法提示、LSP 自動捕全等等功能，所以我們加上一點設定讓他會自動給 filetype&lt;/p>
+&lt;/div>&lt;h2 id="filetype">&lt;a href="#filetype" class="header-anchor">&lt;/a>filetype
+&lt;/h2>&lt;p>因為 firenvim 開啟時的 filetype 預設是 &lt;code>txt&lt;/code>，不會有語法提示、LSP 自動捕全等等功能，所以我們加上一點設定讓他會自動給 filetype&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -153,8 +153,8 @@ alt="firenvim in leetcode"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="字體">字體&lt;/h2>
-&lt;p>因為我的 terminal 和 nvim 有用到 &lt;a class="link" href="https://www.nerdfonts.com/" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="字體">&lt;a href="#%e5%ad%97%e9%ab%94" class="header-anchor">&lt;/a>字體
+&lt;/h2>&lt;p>因為我的 terminal 和 nvim 有用到 &lt;a class="link" href="https://www.nerdfonts.com/" target="_blank" rel="noopener"
 >nerd 字體&lt;/a>，可以顯示一些奇奇怪怪的符號，但是瀏覽器沒有，所以要指定字體給 firenvim 使用，我用的 nerd 字體是 &lt;code>BitstromWera Nerd Font Mono&lt;/code>，你可以換成你喜歡的&lt;/p>
 &lt;blockquote>
 &lt;p>ref: &lt;a class="link" href="https://github.com/glacambre/firenvim/issues/1275" target="_blank" rel="noopener"
@@ -228,11 +228,11 @@ alt="firenvim in leetcode"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Solarized</title><link>https://blog.simbafs.cc/p/linux/vim/solarized/</link><pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/solarized/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/solarized.png" alt="Featured image of post Solarized" />&lt;h1 id="solarized">Solarized&lt;/h1>
-&lt;p>&lt;a class="link" href="https://ethanschoonover.com/solarized/" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>Solarized</title><link>https://blog.simbafs.cc/p/solarized/</link><pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/solarized/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/solarized.png" alt="Featured image of post Solarized" />&lt;h1 id="solarized">&lt;a href="#solarized" class="header-anchor">&lt;/a>Solarized
+&lt;/h1>&lt;p>&lt;a class="link" href="https://ethanschoonover.com/solarized/" target="_blank" rel="noopener"
 >solarized&lt;/a> 是一個文字界面常見的配色方案，不僅是用在 vim，大多數 terminal 和 editor 也都支援&lt;/p>
-&lt;h2 id="install">install&lt;/h2>
-&lt;p>加入 ```vim
+&lt;h2 id="install">&lt;a href="#install" class="header-anchor">&lt;/a>install
+&lt;/h2>&lt;p>加入 ```vim
 Plug &amp;rsquo;ericbn/vim-solarized'&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -320,16 +320,16 @@ Plug &amp;rsquo;ericbn/vim-solarized'&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34; trasparent end
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Modeline</title><link>https://blog.simbafs.cc/p/linux/vim/modeline/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/modeline/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/modeline.png" alt="Featured image of post Modeline" />&lt;h1 id="modeline">Modeline&lt;/h1>
-&lt;p>&lt;code>modeline&lt;/code> 是一個可以將 vim 設定嵌入檔案的方式，這樣就可以讓某些檔案有自己的設定，像是折疊、不要行數、tab 等於多少空白等等。&lt;/p>
-&lt;h2 id="簡單的條件">簡單的條件&lt;/h2>
-&lt;p>簡單的 &lt;code>modeline&lt;/code> 需要滿足幾個條件：&lt;/p>
+&lt;/div></description></item><item><title>Modeline</title><link>https://blog.simbafs.cc/p/modeline/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/modeline/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/modeline.png" alt="Featured image of post Modeline" />&lt;h1 id="modeline">&lt;a href="#modeline" class="header-anchor">&lt;/a>Modeline
+&lt;/h1>&lt;p>&lt;code>modeline&lt;/code> 是一個可以將 vim 設定嵌入檔案的方式，這樣就可以讓某些檔案有自己的設定，像是折疊、不要行數、tab 等於多少空白等等。&lt;/p>
+&lt;h2 id="簡單的條件">&lt;a href="#%e7%b0%a1%e5%96%ae%e7%9a%84%e6%a2%9d%e4%bb%b6" class="header-anchor">&lt;/a>簡單的條件
+&lt;/h2>&lt;p>簡單的 &lt;code>modeline&lt;/code> 需要滿足幾個條件：&lt;/p>
 &lt;ol>
 &lt;li>開頭（不必是行首）至少有一個空白/tab&lt;/li>
 &lt;li>用 &lt;code>vim&lt;/code>、&lt;code>vi&lt;/code> 等字開頭，這裡還可以設定哪個版本才要載入&lt;/li>
 &lt;/ol>
-&lt;h2 id="基本的範例">基本的範例&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="基本的範例">&lt;a href="#%e5%9f%ba%e6%9c%ac%e7%9a%84%e7%af%84%e4%be%8b" class="header-anchor">&lt;/a>基本的範例
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -337,12 +337,12 @@ Plug &amp;rsquo;ericbn/vim-solarized'&lt;/p>
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> vim: wrap
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/3958416/embed-vim-settings-in-file&lt;/a>&lt;br>
-help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item><title>YouComopleteMe Install</title><link>https://blog.simbafs.cc/p/linux/vim/youcomopleteme-install/</link><pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/youcomopleteme-install/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/YouComopleteMe-install.png" alt="Featured image of post YouComopleteMe Install" />&lt;h1 id="ycm-installation">YCM Installation&lt;/h1>
-&lt;h2 id="下載-source-code">下載 source code&lt;/h2>
-&lt;ol>
+help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item><title>YouComopleteMe Install</title><link>https://blog.simbafs.cc/p/youcomopleteme-install/</link><pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/youcomopleteme-install/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/YouComopleteMe-install.png" alt="Featured image of post YouComopleteMe Install" />&lt;h1 id="ycm-installation">&lt;a href="#ycm-installation" class="header-anchor">&lt;/a>YCM Installation
+&lt;/h1>&lt;h2 id="下載-source-code">&lt;a href="#%e4%b8%8b%e8%bc%89-source-code" class="header-anchor">&lt;/a>下載 source code
+&lt;/h2>&lt;ol>
 &lt;li>編輯 ~/.vimrc&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -354,27 +354,27 @@ help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ol start="2">
-&lt;li>接著按下 &lt;!-- raw HTML omitted -->esc&lt;!-- raw HTML omitted --> &lt;!-- raw HTML omitted -->:w | so %&lt;!-- raw HTML omitted --> 載入設定&lt;/li>
-&lt;li>接著 &lt;!-- raw HTML omitted -->:PlugInstall&lt;!-- raw HTML omitted --> 下載 source code&lt;/li>
+&lt;li>接著按下 &lt;kbd>esc&lt;/kbd> &lt;kbd>:w | so %&lt;/kbd> 載入設定&lt;/li>
+&lt;li>接著 &lt;kbd>:PlugInstall&lt;/kbd> 下載 source code&lt;/li>
 &lt;li>存檔離開&lt;/li>
 &lt;/ol>
-&lt;h2 id="編譯">編譯&lt;/h2>
-&lt;ol>
+&lt;h2 id="編譯">&lt;a href="#%e7%b7%a8%e8%ad%af" class="header-anchor">&lt;/a>編譯
+&lt;/h2>&lt;ol>
 &lt;li>執行 &lt;code>sudo apt install python3-dev build-essential&lt;/code>&lt;/li>
 &lt;li>進入 &lt;code>~/.vim/plugged/YouCompleteMe&lt;/code>&lt;/li>
 &lt;li>執行 &lt;code>./install.py --help&lt;/code> 並挑選需要的選項&lt;/li>
 &lt;li>執行 &lt;code>./install.py &amp;lt;你要的選項&amp;gt;&lt;/code>&lt;/li>
-&lt;/ol></description></item><item><title>Vim Auto Comment Plugin</title><link>https://blog.simbafs.cc/p/linux/vim/vim-auto-comment-plugin/</link><pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/vim-auto-comment-plugin/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/vim-auto-comment-plugin.png" alt="Featured image of post Vim Auto Comment Plugin" />&lt;h1 id="vim-auto-comment-plugin">Vim Auto Comment Plugin&lt;/h1>
-&lt;h2 id="套件">套件&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/preservim/nerdcommenter" target="_blank" rel="noopener"
+&lt;/ol></description></item><item><title>Vim Auto Comment Plugin</title><link>https://blog.simbafs.cc/p/vim-auto-comment-plugin/</link><pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/vim-auto-comment-plugin/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/vim-auto-comment-plugin.png" alt="Featured image of post Vim Auto Comment Plugin" />&lt;h1 id="vim-auto-comment-plugin">&lt;a href="#vim-auto-comment-plugin" class="header-anchor">&lt;/a>Vim Auto Comment Plugin
+&lt;/h1>&lt;h2 id="套件">&lt;a href="#%e5%a5%97%e4%bb%b6" class="header-anchor">&lt;/a>套件
+&lt;/h2>&lt;p>&lt;a class="link" href="https://github.com/preservim/nerdcommenter" target="_blank" rel="noopener"
 >nerdcommenter&lt;/a>&lt;/p>
-&lt;h2 id="好用的指令">好用的指令&lt;/h2>
-&lt;p>在每次動作前都要按 &lt;code>&amp;lt;leader&amp;gt;&lt;/code>，預設是 反斜線 &lt;code>\&lt;/code>&lt;/p>
-&lt;h2 id="cspace">&lt;code>c&amp;lt;space&amp;gt;&lt;/code>&lt;/h2>
-&lt;p>簡單來說就是 toggle 你的註解&lt;/p>
-&lt;h2 id="ca">&lt;code>cA&lt;/code>&lt;/h2>
-&lt;p>跳到行尾並在行尾加上註解&lt;/p></description></item><item><title>讓 YCM 接受 jsx</title><link>https://blog.simbafs.cc/p/linux/vim/ycm-jsx/</link><pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/vim/ycm-jsx/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/ycm-jsx.png" alt="Featured image of post 讓 YCM 接受 jsx" />&lt;h1 id="讓-ycm-接受-jsx">讓 YCM 接受 jsx&lt;/h1>
-&lt;p>最近寫 ˋreact 的時候只要遇到 jsx 語法 YCM 就會跳出這個錯誤&lt;/p>
+&lt;h2 id="好用的指令">&lt;a href="#%e5%a5%bd%e7%94%a8%e7%9a%84%e6%8c%87%e4%bb%a4" class="header-anchor">&lt;/a>好用的指令
+&lt;/h2>&lt;p>在每次動作前都要按 &lt;code>&amp;lt;leader&amp;gt;&lt;/code>，預設是 反斜線 &lt;code>\&lt;/code>&lt;/p>
+&lt;h2 id="cspace">&lt;a href="#cspace" class="header-anchor">&lt;/a>&lt;code>c&amp;lt;space&amp;gt;&lt;/code>
+&lt;/h2>&lt;p>簡單來說就是 toggle 你的註解&lt;/p>
+&lt;h2 id="ca">&lt;a href="#ca" class="header-anchor">&lt;/a>&lt;code>cA&lt;/code>
+&lt;/h2>&lt;p>跳到行尾並在行尾加上註解&lt;/p></description></item><item><title>讓 YCM 接受 jsx</title><link>https://blog.simbafs.cc/p/ycm-jsx/</link><pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ycm-jsx/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/ycm-jsx.png" alt="Featured image of post 讓 YCM 接受 jsx" />&lt;h1 id="讓-ycm-接受-jsx">&lt;a href="#%e8%ae%93-ycm-%e6%8e%a5%e5%8f%97-jsx" class="header-anchor">&lt;/a>讓 YCM 接受 jsx
+&lt;/h1>&lt;p>最近寫 ˋreact 的時候只要遇到 jsx 語法 YCM 就會跳出這個錯誤&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1

@@ -1,0 +1,193 @@
+<!doctype html><html lang=zh-tw dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="Merge Two Repo 這學期修了幾個資工系的課，都需要寫程式作業，原本我是一個作業開一個 repo，但是我發現這樣好像會開超級多 repo，於是我決定要想辦法合併他們。\n找資料 首先去 Google 搜尋「git merge two repo」，第一條結果是是一個 13 年前的 stack overflow https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories，裡面第一個回答提到的方法是把待合併 repo A 指到目標 repo B 的 branch A，然後就把 branch A 當作一般分支合併，但是要加上 --allow-unrelated-histories 選項\nfilter-repo 現在有個問題，原本的目錄結構是長這樣\n1 2 3 4 5 6 7 8 9 10 11 12 13 . ├── HW1 │ ├── .git │ ├── go.mod │ └── main.go ├── HW2 │ ├── .git │ ├── go.mod │ └── main.go └── HW3 ├── .git ├── go.mod └── main.go 如果直接合併會變成這樣\n"><title>Merge Two Repo</title>
+<link rel=canonical href=https://blog.simbafs.cc/p/merge-two-repo/><link rel=stylesheet href=/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css><meta property='og:title' content="Merge Two Repo"><meta property='og:description' content="Merge Two Repo 這學期修了幾個資工系的課，都需要寫程式作業，原本我是一個作業開一個 repo，但是我發現這樣好像會開超級多 repo，於是我決定要想辦法合併他們。\n找資料 首先去 Google 搜尋「git merge two repo」，第一條結果是是一個 13 年前的 stack overflow https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories，裡面第一個回答提到的方法是把待合併 repo A 指到目標 repo B 的 branch A，然後就把 branch A 當作一般分支合併，但是要加上 --allow-unrelated-histories 選項\nfilter-repo 現在有個問題，原本的目錄結構是長這樣\n1 2 3 4 5 6 7 8 9 10 11 12 13 . ├── HW1 │ ├── .git │ ├── go.mod │ └── main.go ├── HW2 │ ├── .git │ ├── go.mod │ └── main.go └── HW3 ├── .git ├── go.mod └── main.go 如果直接合併會變成這樣\n"><meta property='og:url' content='https://blog.simbafs.cc/p/merge-two-repo/'><meta property='og:site_name' content='Simba 的喵窩'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='git'><meta property='article:tag' content='merge'><meta property='article:published_time' content='2022-10-18T00:00:00+00:00'><meta property='article:modified_time' content='2022-10-18T00:00:00+00:00'><meta property='og:image' content='https://blog.simbafs.cc/og/linux/git/merge-two-repo.png'><meta name=twitter:site content="@simbafs"><meta name=twitter:creator content="@simbafs"><meta name=twitter:title content="Merge Two Repo"><meta name=twitter:description content="Merge Two Repo 這學期修了幾個資工系的課，都需要寫程式作業，原本我是一個作業開一個 repo，但是我發現這樣好像會開超級多 repo，於是我決定要想辦法合併他們。\n找資料 首先去 Google 搜尋「git merge two repo」，第一條結果是是一個 13 年前的 stack overflow https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories，裡面第一個回答提到的方法是把待合併 repo A 指到目標 repo B 的 branch A，然後就把 branch A 當作一般分支合併，但是要加上 --allow-unrelated-histories 選項\nfilter-repo 現在有個問題，原本的目錄結構是長這樣\n1 2 3 4 5 6 7 8 9 10 11 12 13 . ├── HW1 │ ├── .git │ ├── go.mod │ └── main.go ├── HW2 │ ├── .git │ ├── go.mod │ └── main.go └── HW3 ├── .git ├── go.mod └── main.go 如果直接合併會變成這樣\n"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://blog.simbafs.cc/og/linux/git/merge-two-repo.png'><link rel="shortcut icon" href=/favicon.png><script async src="https://www.googletagmanager.com/gtag/js?id=G-DTMEFY7DTF"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-DTMEFY7DTF")</script><link rel=alternate type=application/rss+xml title="Simba 的喵窩" href=https://blog.simbafs.cc/index.xml></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切換選單>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu7418080469569761488.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>💤</span></figure><div class=site-meta><h1 class=site-name><a href=/>Simba 的喵窩</a></h1><h2 class=site-description>成大物理系大四</h2></div></header><ol class=menu-social><li><a href=https://github.com/simbafs target=_blank title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=/index.xml target=_blank title=RSS rel=me><svg class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0116 16"/><path d="M4 11a9 9 0 019 9"/></svg></a></li><li><a href=https://twitter.com/simbafs target=_blank title=Twitter rel=me><svg class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span></a></li><li><a href=/about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span></a></li><li><a href=/works/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>Works</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>夜晚模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目錄</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#找資料>找資料</a></li><li><a href=#filter-repo>filter-repo</a></li><li><a href=#git-filter-repo>git filter-repo</a><ol><li><a href=#安裝>安裝</a></li><li><a href=#使用>使用</a></li><li><a href=#移動檔案到子目錄>移動檔案到子目錄</a></li></ol></li><li><a href=#合併-repo>合併 Repo</a></li><li><a href=#參考資料>參考資料</a></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/merge-two-repo/><img src=/og/linux/git/merge-two-repo.png loading=lazy alt="Featured image of post Merge Two Repo"></a></div><div class=article-details><header class=article-category><a href=/categories/linux/>Linux
+</a><a href=/categories/git/>Git</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/merge-two-repo/>Merge Two Repo</a></h2></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>2022/10/18</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>閱讀時間: 3 分鐘</time></div></footer></div></header><section class=article-content><h1 id=merge-two-repo><a href=#merge-two-repo class=header-anchor></a>Merge Two Repo</h1><p>這學期修了幾個資工系的課，都需要寫程式作業，原本我是一個作業開一個 repo，但是我發現這樣好像會開超級多 repo，於是我決定要想辦法合併他們。</p><h2 id=找資料><a href=#%e6%89%be%e8%b3%87%e6%96%99 class=header-anchor></a>找資料</h2><p>首先去 Google 搜尋「git merge two repo」，第一條結果是是一個 13 年前的 stack overflow <a class=link href=https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories target=_blank rel=noopener>https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories</a>，裡面第一個回答提到的方法是把待合併 repo A 指到目標 repo B 的 branch A，然後就把 branch A 當作一般分支合併，但是要加上 <code>--allow-unrelated-histories</code> 選項</p><h2 id=filter-repo><a href=#filter-repo class=header-anchor></a>filter-repo</h2><p>現在有個問題，原本的目錄結構是長這樣</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>.
+</span></span><span class=line><span class=cl>├── HW1
+</span></span><span class=line><span class=cl>│   ├── .git
+</span></span><span class=line><span class=cl>│   ├── go.mod
+</span></span><span class=line><span class=cl>│   └── main.go
+</span></span><span class=line><span class=cl>├── HW2
+</span></span><span class=line><span class=cl>│   ├── .git
+</span></span><span class=line><span class=cl>│   ├── go.mod
+</span></span><span class=line><span class=cl>│   └── main.go
+</span></span><span class=line><span class=cl>└── HW3
+</span></span><span class=line><span class=cl>    ├── .git
+</span></span><span class=line><span class=cl>    ├── go.mod
+</span></span><span class=line><span class=cl>    └── main.go
+</span></span></code></pre></td></tr></table></div></div><p>如果直接合併會變成這樣</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>.
+</span></span><span class=line><span class=cl>├── .git
+</span></span><span class=line><span class=cl>├── go.mod
+</span></span><span class=line><span class=cl>└── main.go
+</span></span></code></pre></td></tr></table></div></div><p>因為檔名一樣，就被合併了，但是我想要的是這樣</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>.
+</span></span><span class=line><span class=cl>├── .git
+</span></span><span class=line><span class=cl>├── HW1
+</span></span><span class=line><span class=cl>│   ├── go.mod
+</span></span><span class=line><span class=cl>│   └── main.go
+</span></span><span class=line><span class=cl>├── HW2
+</span></span><span class=line><span class=cl>│   ├── go.mod
+</span></span><span class=line><span class=cl>│   └── main.go
+</span></span><span class=line><span class=cl>└── HW3
+</span></span><span class=line><span class=cl>    ├── go.mod
+</span></span><span class=line><span class=cl>    └── main.go
+</span></span></code></pre></td></tr></table></div></div><p>當然可以把檔案移好再合併，但是這樣提交紀錄（commit history）上不好看，所以我們需要其他工具</p><h2 id=git-filter-repo><a href=#git-filter-repo class=header-anchor></a>git filter-repo</h2><p>[git-filter-repo] 是個可以批次處理提交紀錄的工具，例如我們這次要的，將全部檔案移到子目錄裡面，從第一個 commit 開始。看網路教 git 似乎內建 <code>filter-branch</code> 命令，但 filter-repo 的效能和功能都比較多。</p><h3 id=安裝><a href=#%e5%ae%89%e8%a3%9d class=header-anchor></a>安裝</h3><p><code>apt install git-filter-repo</code></p><p><a class=link href=https://github.com/newren/git-filter-repo/blob/main/INSTALL.md target=_blank rel=noopener>https://github.com/newren/git-filter-repo/blob/main/INSTALL.md</a></p><h3 id=使用><a href=#%e4%bd%bf%e7%94%a8 class=header-anchor></a>使用</h3><p><code>git filter-repo</code></p><h3 id=移動檔案到子目錄><a href=#%e7%a7%bb%e5%8b%95%e6%aa%94%e6%a1%88%e5%88%b0%e5%ad%90%e7%9b%ae%e9%8c%84 class=header-anchor></a>移動檔案到子目錄</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ git filter-repo --to-subdirectory-filter hw1 --force
+</span></span><span class=line><span class=cl>Parsed 11 commits
+</span></span><span class=line><span class=cl>New history written in 0.03 seconds; now repacking/cleaning...
+</span></span><span class=line><span class=cl>Repacking your repo and cleaning out old unneeded objects
+</span></span><span class=line><span class=cl>HEAD is now at 57fd6a0 update example
+</span></span><span class=line><span class=cl>Enumerating objects: 52, done.
+</span></span><span class=line><span class=cl>Counting objects: 100% (52/52), done.
+</span></span><span class=line><span class=cl>Delta compression using up to 8 threads
+</span></span><span class=line><span class=cl>Compressing objects: 100% (21/21), done.
+</span></span><span class=line><span class=cl>Writing objects: 100% (52/52), done.
+</span></span><span class=line><span class=cl>Total 52 (delta 17), reused 30 (delta 17), pack-reused 0
+</span></span><span class=line><span class=cl>Completely finished after 0.08 seconds.
+</span></span></code></pre></td></tr></table></div></div><h2 id=合併-repo><a href=#%e5%90%88%e4%bd%b5-repo class=header-anchor></a>合併 Repo</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>$ cd A
+</span></span><span class=line><span class=cl>$ git remote add -f a ../a
+</span></span><span class=line><span class=cl>$ git merge --allow-unrelated-histories a/main
+</span></span><span class=line><span class=cl>$ git remote remove a
+</span></span></code></pre></td></tr></table></div></div><p>合併完的提交紀錄長這樣（還沒移除 remote ）</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>*   097b986 (HEAD -&gt; main) Merge remote-tracking branch &#39;hw4/multithread&#39;
+</span></span><span class=line><span class=cl>|\
+</span></span><span class=line><span class=cl>| * 2d0bc2d (hw4/multithread) finish
+</span></span><span class=line><span class=cl>| * 462ec18 try to use goroutine
+</span></span><span class=line><span class=cl>| *   89915f1 Merge branch &#39;main&#39; into multithread
+</span></span><span class=line><span class=cl>| |\
+</span></span><span class=line><span class=cl>| * | b4e5879 README.md
+</span></span><span class=line><span class=cl>| * | 96b5d3a try to use goroutine to speed up, but failed
+</span></span><span class=line><span class=cl>* | |   ebb41bb Merge remote-tracking branch &#39;hw4/main&#39;
+</span></span><span class=line><span class=cl>|\ \ \
+</span></span><span class=line><span class=cl>| | |/
+</span></span><span class=line><span class=cl>| |/|
+</span></span><span class=line><span class=cl>| * | faabcb5 (hw4/main) finish
+</span></span><span class=line><span class=cl>| * | f715b3c index++
+</span></span><span class=line><span class=cl>| * | 1c16b06 README.md
+</span></span><span class=line><span class=cl>| |/
+</span></span><span class=line><span class=cl>| * a0594d2 finish first version
+</span></span><span class=line><span class=cl>| * 475fa62 finish dec/enc functions
+</span></span><span class=line><span class=cl>| * 69cfeb3 Initial commit
+</span></span><span class=line><span class=cl>*   9f10a17 Merge remote-tracking branch &#39;hw2/main&#39;
+</span></span><span class=line><span class=cl>|\
+</span></span><span class=line><span class=cl>| * f6d6ffe (hw2/main) out.pdf
+</span></span><span class=line><span class=cl>| * a07ee96 README.md
+</span></span><span class=line><span class=cl>| * c22c4aa finish version 1
+</span></span><span class=line><span class=cl>| * acebb48 basic concept
+</span></span><span class=line><span class=cl>| * 9b3c351 init
+</span></span><span class=line><span class=cl>| * d949263 Initial commit
+</span></span><span class=line><span class=cl>*   1e6a89d Merge remote-tracking branch &#39;hw1/main&#39;
+</span></span><span class=line><span class=cl>|\
+</span></span><span class=line><span class=cl>| * 57fd6a0 (hw1/main) update example
+</span></span><span class=line><span class=cl>| * 016ed74 add tex
+</span></span><span class=line><span class=cl>| * 0c5cf72 finish out.pdf
+</span></span><span class=line><span class=cl>| * 24a2474 fix a little bug
+</span></span><span class=line><span class=cl>| * 9b9bdce README.md
+</span></span><span class=line><span class=cl>| * 1aa184e remove unused code and add comments
+</span></span><span class=line><span class=cl>| * 47ca969 finish first version
+</span></span><span class=line><span class=cl>| * 9f30ca4 README.md
+</span></span><span class=line><span class=cl>| * 683c59b WIP, not tested
+</span></span><span class=line><span class=cl>| * 48bcefd README.md
+</span></span><span class=line><span class=cl>| * b7603e8 Initial commit
+</span></span><span class=line><span class=cl>* cdca739 (origin/main, origin/HEAD) Initial commit
+</span></span></code></pre></td></tr></table></div></div><h2 id=參考資料><a href=#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99 class=header-anchor></a>參考資料</h2><ul><li><a class=link href=https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories target=_blank rel=noopener>https://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories</a></li><li><a class=link href=https://gist.github.com/x-yuri/6161d90d1af8ebac6e560bcef548c1c3 target=_blank rel=noopener>https://gist.github.com/x-yuri/6161d90d1af8ebac6e560bcef548c1c3</a></li><li><a class=link href=https://github.com/newren/git-filter-repo target=_blank rel=noopener>https://github.com/newren/git-filter-repo</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/git/>Git</a>
+<a href=/tags/merge/>Merge</a></section><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span></section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css integrity=sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js integrity=sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],ignoredClasses:["gist"]})})</script></article><aside class=related-content--wrapper><h2 class=section-title>相關文章</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/p/git-snippet/><div class=article-image><img src=/og/linux/git/git-snippet.png loading=lazy data-key=git-snippet data-hash=/og/linux/git/git-snippet.png></div><div class=article-details><h2 class=article-title>Git Snippet</h2></div></a></article><article class=has-image><a href=/p/ssh-on-gitea-with-docker/><div class=article-image><img src=/og/linux/server/ssh-on-gitea-with-docker.png loading=lazy data-key=ssh-on-gitea-with-docker data-hash=/og/linux/server/ssh-on-gitea-with-docker.png></div><div class=article-details><h2 class=article-title>ssh on gitea with docker</h2></div></a></article><article class=has-image><a href=/p/gpg/><div class=article-image><img src=/og/linux/gpg.png loading=lazy data-key=gpg data-hash=/og/linux/gpg.png></div><div class=article-details><h2 class=article-title>GPG</h2></div></a></article><article class=has-image><a href=/p/kde-touchpad-gesture/><div class=article-image><img src=/og/linux/kde-touchpad-gesture.png loading=lazy data-key=kde-touchpad-gesture data-hash=/og/linux/kde-touchpad-gesture.png></div><div class=article-details><h2 class=article-title>KDE Touchpad Gesture</h2></div></a></article><article class=has-image><a href=/p/crop-and-resize-pdf/><div class=article-image><img src=/og/linux/crop-and-resize-pdf.png loading=lazy data-key=crop-and-resize-pdf data-hash=/og/linux/crop-and-resize-pdf.png></div><div class=article-details><h2 class=article-title>Crop and Resize PDF</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+2020 -
+2024 Simba 的喵窩</section><section class=powerby>好想養貓阿~~<br>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 建立<br>主題 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.27.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 設計</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

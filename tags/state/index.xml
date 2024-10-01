@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>State on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/state/</link><description>Recent content in State on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 12 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/state/index.xml" rel="self" type="application/rss+xml"/><item><title>Reactjs Update State on Props Change</title><link>https://blog.simbafs.cc/p/js/reactjs/react-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/react-update-state-on-props-change/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/React-update-state-on-props-change.png" alt="Featured image of post Reactjs Update State on Props Change" />&lt;h1 id="react-update-state-on-props-change">React Update State on Props Change&lt;/h1>
-&lt;h2 id="問題">問題&lt;/h2>
-&lt;p>今天在研究 React
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>State on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/state/</link><description>Recent content in State on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 12 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/state/index.xml" rel="self" type="application/rss+xml"/><item><title>Reactjs Update State on Props Change</title><link>https://blog.simbafs.cc/p/react-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/react-update-state-on-props-change/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/React-update-state-on-props-change.png" alt="Featured image of post Reactjs Update State on Props Change" />&lt;h1 id="react-update-state-on-props-change">&lt;a href="#react-update-state-on-props-change" class="header-anchor">&lt;/a>React Update State on Props Change
+&lt;/h1>&lt;h2 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h2>&lt;p>今天在研究 React
 遇到一個問題
 當我從外面更新 props 的時候 component 內的 state 不會更新&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -24,8 +24,8 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>如同上面程式，第二行的 &lt;code>useState&lt;/code> 不會隨著 props 更新而更新&lt;/p>
-&lt;h2 id="解法">解法&lt;/h2>
-&lt;p>後來找到解法，加上一個 &lt;code>useEffect&lt;/code> 監聽 &lt;code>props.text&lt;/code> 然後更新 state 就好了&lt;/p>
+&lt;h2 id="解法">&lt;a href="#%e8%a7%a3%e6%b3%95" class="header-anchor">&lt;/a>解法
+&lt;/h2>&lt;p>後來找到解法，加上一個 &lt;code>useEffect&lt;/code> 監聽 &lt;code>props.text&lt;/code> 然後更新 state 就好了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -51,8 +51,8 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>如此一來 &lt;code>state&lt;/code> 就會和 &lt;code>props&lt;/code> 同步了&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props" target="_blank" rel="noopener"
+&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props&lt;/a>
 &lt;a class="link" href="https://zh-hant.reactjs.org/docs/hooks-effect.html" target="_blank" rel="noopener"
 >https://zh-hant.reactjs.org/docs/hooks-effect.html&lt;/a>&lt;/p></description></item></channel></rss>

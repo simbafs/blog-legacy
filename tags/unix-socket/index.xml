@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Unix Socket on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/unix-socket/</link><description>Recent content in Unix Socket on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 23 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/unix-socket/index.xml" rel="self" type="application/rss+xml"/><item><title>Unix Socket</title><link>https://blog.simbafs.cc/p/js/unix-socket/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/unix-socket/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/unix-socket.png" alt="Featured image of post Unix Socket" />&lt;h1 id="unix-socket">Unix Socket&lt;/h1>
-&lt;p>今天心血來潮在看 unix socket
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Unix Socket on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/unix-socket/</link><description>Recent content in Unix Socket on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 23 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/unix-socket/index.xml" rel="self" type="application/rss+xml"/><item><title>Unix Socket</title><link>https://blog.simbafs.cc/p/unix-socket/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/unix-socket/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/unix-socket.png" alt="Featured image of post Unix Socket" />&lt;h1 id="unix-socket">&lt;a href="#unix-socket" class="header-anchor">&lt;/a>Unix Socket
+&lt;/h1>&lt;p>今天心血來潮在看 unix socket
 突然想到 node 可不可以把 服務監聽在一個 socket file
 這樣在設定的時候就不用記哪個服務是幾 port&lt;/p>
-&lt;h2 id="node-部份">node 部份&lt;/h2>
-&lt;h2 id="監聽在-unix-socket">監聽在 unix socket&lt;/h2>
-&lt;p>查完資料後發現其實只要把原本填 port 的地方改成 socket file 的路徑就好了
+&lt;h2 id="node-部份">&lt;a href="#node-%e9%83%a8%e4%bb%bd" class="header-anchor">&lt;/a>node 部份
+&lt;/h2>&lt;h2 id="監聽在-unix-socket">&lt;a href="#%e7%9b%a3%e8%81%bd%e5%9c%a8-unix-socket" class="header-anchor">&lt;/a>監聽在 unix socket
+&lt;/h2>&lt;p>查完資料後發現其實只要把原本填 port 的地方改成 socket file 的路徑就好了
 像這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -28,8 +28,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">app&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">listen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;/tmp/express.sock&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="刪除-socket-file">刪除 socket file&lt;/h2>
-&lt;p>因為每次的 listen 都會新增一個 socket file
+&lt;/div>&lt;h2 id="刪除-socket-file">&lt;a href="#%e5%88%aa%e9%99%a4-socket-file" class="header-anchor">&lt;/a>刪除 socket file
+&lt;/h2>&lt;p>因為每次的 listen 都會新增一個 socket file
 相當於佔用一個 port
 如果不刪除的話就相當於 port 被佔用了
 會噴錯
@@ -67,8 +67,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="測試">測試&lt;/h2>
-&lt;p>弄完了伺服器
+&lt;/div>&lt;h2 id="測試">&lt;a href="#%e6%b8%ac%e8%a9%a6" class="header-anchor">&lt;/a>測試
+&lt;/h2>&lt;p>弄完了伺服器
 要怎麼測試呢？
 這時候可以用 &lt;code>curl&lt;/code> 來測試&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -81,8 +81,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Hello World
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="nginx-reverse-proxy">nginx reverse proxy&lt;/h2>
-&lt;p>現在我們把伺服器開好了
+&lt;/div>&lt;h2 id="nginx-reverse-proxy">&lt;a href="#nginx-reverse-proxy" class="header-anchor">&lt;/a>nginx reverse proxy
+&lt;/h2>&lt;p>現在我們把伺服器開好了
 但是 unix socket 只能在本機瀏覽啊！
 所以我們要透過 nginx 來幫忙做 reverse proxy
 先新增一個 &lt;code>/etc/nginx/sites-available/test.conf&lt;/code>&lt;/p>

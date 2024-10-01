@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cryptography on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/cryptography/</link><description>Recent content in Cryptography on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 06 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/cryptography/index.xml" rel="self" type="application/rss+xml"/><item><title>GPG with SSH</title><link>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg-with-ssh/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/gpg-with-ssh.png" alt="Featured image of post GPG with SSH" />&lt;h1 id="gpg-with-ssh">GPG with SSH&lt;/h1>
-&lt;p>接續前一篇 &lt;a class="link" href="https://blog.simbafs.cc/posts/linux/gpg/" >gpg 的文章&lt;/a>&lt;/p>
-&lt;h2 id="指紋-fingerprint">指紋 Fingerprint&lt;/h2>
-&lt;p>根據 &lt;a class="link" href="https://help.gnome.org/users/seahorse/stable/misc-key-fingerprint.html.en" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cryptography on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/cryptography/</link><description>Recent content in Cryptography on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 06 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/cryptography/index.xml" rel="self" type="application/rss+xml"/><item><title>GPG with SSH</title><link>https://blog.simbafs.cc/p/gpg-with-ssh/</link><pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/gpg-with-ssh/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/gpg-with-ssh.png" alt="Featured image of post GPG with SSH" />&lt;h1 id="gpg-with-ssh">&lt;a href="#gpg-with-ssh" class="header-anchor">&lt;/a>GPG with SSH
+&lt;/h1>&lt;p>接續前一篇 &lt;a class="link" href="https://blog.simbafs.cc/posts/linux/gpg/" >gpg 的文章&lt;/a>&lt;/p>
+&lt;h2 id="指紋-fingerprint">&lt;a href="#%e6%8c%87%e7%b4%8b-fingerprint" class="header-anchor">&lt;/a>指紋 Fingerprint
+&lt;/h2>&lt;p>根據 &lt;a class="link" href="https://help.gnome.org/users/seahorse/stable/misc-key-fingerprint.html.en" target="_blank" rel="noopener"
 >GNOME help&lt;/a> 的說明，不同金鑰的指紋必然不同，因此如果要驗證、查詢的話，與其用其他參數，不如用指紋，例如我的 GPG key 指紋是 &lt;code>6236 A070 8FCD 894C 7AD1 A5FC DB13 A5C2 042E AEA4&lt;/code>，看到這串就代表是我。&lt;/p>
-&lt;h2 id="grip">Grip&lt;/h2>
-&lt;p>根據 &lt;a class="link" href="https://lists.gnupg.org/pipermail/gcrypt-devel/2013-June/002205.html" target="_blank" rel="noopener"
+&lt;h2 id="grip">&lt;a href="#grip" class="header-anchor">&lt;/a>Grip
+&lt;/h2>&lt;p>根據 &lt;a class="link" href="https://lists.gnupg.org/pipermail/gcrypt-devel/2013-June/002205.html" target="_blank" rel="noopener"
 >gnupg 的這封郵件&lt;/a>，grip 似乎是金鑰參數的 SHA-1 hash，看不太懂哪些參數會被納入計算。&lt;/p>
-&lt;h2 id="ssh-authorize-with-gpg">ssh authorize with gpg&lt;/h2>
-&lt;p>以下步驟來自下面三個參考網址&lt;/p>
+&lt;h2 id="ssh-authorize-with-gpg">&lt;a href="#ssh-authorize-with-gpg" class="header-anchor">&lt;/a>ssh authorize with gpg
+&lt;/h2>&lt;p>以下步驟來自下面三個參考網址&lt;/p>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://blog.theerrorlog.com/using-gpg-zh.html" target="_blank" rel="noopener"
 >https://blog.theerrorlog.com/using-gpg-zh.html&lt;/a> (這裡有一些關於 gpg 的設定操做，不一定要像他說的那樣主密鑰分離，只是給一個操作說明)&lt;/li>
@@ -58,9 +58,9 @@
 &lt;li>根據第三個參考網址 &lt;a class="link" href="https://gist.github.com/mcattarinussi/834fc4b641ff4572018d0c665e5a94d3#setup-the-gpg-agent-for-ssh-authentication" target="_blank" rel="noopener"
 >setup-the-gpg-agent-for-ssh-authentication&lt;/a> 章節設定 gpg-agent&lt;/li>
 &lt;/ol>
-&lt;p>這時後重新開啟終端機就可以用 gpg 取代原本的 ssh key 了，確認移除 ssh key 真的還可以登入後就可以把舊的 ssh key 收起來了。&lt;/p></description></item><item><title>Openssl DES</title><link>https://blog.simbafs.cc/p/linux/openssl-des/</link><pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/openssl-des/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/openssl-DES.png" alt="Featured image of post Openssl DES" />&lt;h1 id="openssl-des">openssl DES&lt;/h1>
-&lt;h2 id="加密">加密&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;p>這時後重新開啟終端機就可以用 gpg 取代原本的 ssh key 了，確認移除 ssh key 真的還可以登入後就可以把舊的 ssh key 收起來了。&lt;/p></description></item><item><title>Openssl DES</title><link>https://blog.simbafs.cc/p/openssl-des/</link><pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/openssl-des/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/openssl-DES.png" alt="Featured image of post Openssl DES" />&lt;h1 id="openssl-des">&lt;a href="#openssl-des" class="header-anchor">&lt;/a>openssl DES
+&lt;/h1>&lt;h2 id="加密">&lt;a href="#%e5%8a%a0%e5%af%86" class="header-anchor">&lt;/a>加密
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -82,8 +82,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-provider legacy: 因為 DES 太古老，不安全，因此要加上這個選項才能用
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="解密">解密&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="解密">&lt;a href="#%e8%a7%a3%e5%af%86" class="header-anchor">&lt;/a>解密
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -107,10 +107,10 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-provider legacy: 因為 DES 太古老，不安全，因此要加上這個選項才能用
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="注意事項">注意事項&lt;/h2>
-&lt;p>openssl 的選項都是一個 &lt;code>-&lt;/code>，不像一般的 GNU 命令分長選項和短選項。另外 &lt;code>-d&lt;/code> 和 &lt;code>-a&lt;/code> 不能合併成 &lt;code>-da&lt;/code> 或是 &lt;code>-ad&lt;/code>&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="注意事項">&lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a0%85" class="header-anchor">&lt;/a>注意事項
+&lt;/h2>&lt;p>openssl 的選項都是一個 &lt;code>-&lt;/code>，不像一般的 GNU 命令分長選項和短選項。另外 &lt;code>-d&lt;/code> 和 &lt;code>-a&lt;/code> 不能合併成 &lt;code>-da&lt;/code> 或是 &lt;code>-ad&lt;/code>&lt;/p>
+&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://wiki.openssl.org/index.php/Enc" target="_blank" rel="noopener"
 >https://wiki.openssl.org/index.php/Enc&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/openssl/openssl/issues/12906" target="_blank" rel="noopener"

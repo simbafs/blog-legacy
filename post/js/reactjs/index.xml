@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>react on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/js/reactjs/</link><description>Recent content in react on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/js/reactjs/index.xml" rel="self" type="application/rss+xml"/><item><title>Reset State When State Chagne</title><link>https://blog.simbafs.cc/p/js/reactjs/reset-state-when-state-chagne/</link><pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/reset-state-when-state-chagne/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/reset-state-when-state-chagne.png" alt="Featured image of post Reset State When State Chagne" />&lt;h1 id="reset-state-when-state-chagne">Reset State When State Chagne&lt;/h1>
-&lt;p>我現在正在做一個 Popup 元件（component），內容是一個表單，以下是幾個需求&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>react on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/js/reactjs/</link><description>Recent content in react on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/js/reactjs/index.xml" rel="self" type="application/rss+xml"/><item><title>Reset State When State Chagne</title><link>https://blog.simbafs.cc/p/reset-state-when-state-chagne/</link><pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/reset-state-when-state-chagne/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/reset-state-when-state-chagne.png" alt="Featured image of post Reset State When State Chagne" />&lt;h1 id="reset-state-when-state-chagne">&lt;a href="#reset-state-when-state-chagne" class="header-anchor">&lt;/a>Reset State When State Chagne
+&lt;/h1>&lt;p>我現在正在做一個 Popup 元件（component），內容是一個表單，以下是幾個需求&lt;/p>
 &lt;ol>
 &lt;li>點擊外面、叉叉和 Cancel 要關掉&lt;/li>
 &lt;li>點擊 Save 要做一些事後關掉&lt;/li>
 &lt;li>無論怎麼關掉的，都要清除表單狀態（reset）&lt;/li>
 &lt;li>這個頁面會有不同 Popup，裡面的表單不一樣&lt;/li>
 &lt;/ol>
-&lt;h2 id="popup-元件設計">Popup 元件設計&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="popup-元件設計">&lt;a href="#popup-%e5%85%83%e4%bb%b6%e8%a8%ad%e8%a8%88" class="header-anchor">&lt;/a>Popup 元件設計
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -105,16 +105,16 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>我知所以把 &lt;code>MyForm&lt;/code> 抽出來做成另一個元件，是因為我覺得我的 &lt;code>Page&lt;/code> 函數太長了，想分開&lt;/p>
-&lt;h2 id="問題">問題&lt;/h2>
-&lt;p>這樣看起來很棒，設計得很有彈性，也達成了大部分需求，但是需求 3 卻沒有達成，問題就在我是用 &lt;code>display: none&lt;/code> 隱藏 &lt;code>Popup&lt;/code> 的，因此下次再打開 &lt;code>Popup&lt;/code> 時對於 React 來說這個元件沒變化，不會重設一個新的 &lt;code>Popup&lt;/code>。&lt;/p>
-&lt;h2 id="我如何解決的">我如何解決的&lt;/h2>
-&lt;p>我曾經想過，手動在 &lt;code>MyForm&lt;/code> 兩個按鈕的事件加上 &lt;code>updateDate(defaultValue)&lt;/code>，但是這樣的話，點擊表單外面半透明的區域關掉表單不會清除表單內容，如果把表單和 Popup 合在一起又破壞了當初彈性的設計。不合起來的話也是做得到，但是會變得很複雜不好維護。&lt;/p>
+&lt;h2 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h2>&lt;p>這樣看起來很棒，設計得很有彈性，也達成了大部分需求，但是需求 3 卻沒有達成，問題就在我是用 &lt;code>display: none&lt;/code> 隱藏 &lt;code>Popup&lt;/code> 的，因此下次再打開 &lt;code>Popup&lt;/code> 時對於 React 來說這個元件沒變化，不會重設一個新的 &lt;code>Popup&lt;/code>。&lt;/p>
+&lt;h2 id="我如何解決的">&lt;a href="#%e6%88%91%e5%a6%82%e4%bd%95%e8%a7%a3%e6%b1%ba%e7%9a%84" class="header-anchor">&lt;/a>我如何解決的
+&lt;/h2>&lt;p>我曾經想過，手動在 &lt;code>MyForm&lt;/code> 兩個按鈕的事件加上 &lt;code>updateDate(defaultValue)&lt;/code>，但是這樣的話，點擊表單外面半透明的區域關掉表單不會清除表單內容，如果把表單和 Popup 合在一起又破壞了當初彈性的設計。不合起來的話也是做得到，但是會變得很複雜不好維護。&lt;/p>
 &lt;p>最後，我只在 Popup 上新增了一個 &lt;code>key&lt;/code> 屬性，就解決了這個問題。&lt;/p>
-&lt;h3 id="元件的生命週期">元件的生命週期&lt;/h3>
-&lt;p>要解釋這個問題就要先解釋元件的生命週期和 React 如何處理 state。一個元件的 state 在整個元件的生命週期中，React 會保證這個 state 是同一個 value，直到元件不再出現在 virtual DOM 上。&lt;br>
+&lt;h3 id="元件的生命週期">&lt;a href="#%e5%85%83%e4%bb%b6%e7%9a%84%e7%94%9f%e5%91%bd%e9%80%b1%e6%9c%9f" class="header-anchor">&lt;/a>元件的生命週期
+&lt;/h3>&lt;p>要解釋這個問題就要先解釋元件的生命週期和 React 如何處理 state。一個元件的 state 在整個元件的生命週期中，React 會保證這個 state 是同一個 value，直到元件不再出現在 virtual DOM 上。&lt;br>
 React 會把每個「frame」在 virtual DOM 中相同位置的同類型元件視為相同（例如 Popup 和 Popup、button 和 button），並且把上一個 frame 的 state 塞給這個元件，當 React 發現原本這裡有個元件，但是現在卻找不到了，那麼 React 就會視這個元件「消亡」，隨之清除原本應該給這個元件的 state。&lt;/p>
-&lt;h3 id="key">key&lt;/h3>
-&lt;p>除了檢查位置以外，React 還會檢查這個元件的 &lt;code>key&lt;/code> 屬性，即使位置一樣，&lt;code>key&lt;/code> 不一樣 React 依舊會把他視為是一個新的元件，並給他全新的 state。&lt;br>
+&lt;h3 id="key">&lt;a href="#key" class="header-anchor">&lt;/a>key
+&lt;/h3>&lt;p>除了檢查位置以外，React 還會檢查這個元件的 &lt;code>key&lt;/code> 屬性，即使位置一樣，&lt;code>key&lt;/code> 不一樣 React 依舊會把他視為是一個新的元件，並給他全新的 state。&lt;br>
 這個特性最常出現在用一個陣列去批次產生 JSX 的時候&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -133,8 +133,8 @@ React 會把每個「frame」在 virtual DOM 中相同位置的同類型元件�
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這樣當插入、刪除 &lt;code>userIds&lt;/code> 其中某個元素時，即便位置不一樣 React 還是可以透過 &lt;code>key&lt;/code> 去追蹤元件，並給他正確的 state&lt;/p>
-&lt;h3 id="利用-key-去清除-state">利用 key 去清除 state&lt;/h3>
-&lt;p>那麼，我們需要的就是在 &lt;code>open&lt;/code> 有變化時，塞給 &lt;code>Popup&lt;/code> 一個和上次不同的 key，就可以讓 React 知道這是一個新的元件，要給他新的 state&lt;/p>
+&lt;h3 id="利用-key-去清除-state">&lt;a href="#%e5%88%a9%e7%94%a8-key-%e5%8e%bb%e6%b8%85%e9%99%a4-state" class="header-anchor">&lt;/a>利用 key 去清除 state
+&lt;/h3>&lt;p>那麼，我們需要的就是在 &lt;code>open&lt;/code> 有變化時，塞給 &lt;code>Popup&lt;/code> 一個和上次不同的 key，就可以讓 React 知道這是一個新的元件，要給他新的 state&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -155,9 +155,9 @@ React 會把每個「frame」在 virtual DOM 中相同位置的同類型元件�
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>這裡用 &lt;code>Number()&lt;/code> 包起來只是因為 typescript 會抱怨 boolean 不能當作 key。如此一來只改一行，就可以達成「關掉 Popup 時清空表單」，不管是怎麼關掉的。&lt;/p></description></item><item><title>Reactjs Update State on Props Change</title><link>https://blog.simbafs.cc/p/js/reactjs/react-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/react-update-state-on-props-change/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/React-update-state-on-props-change.png" alt="Featured image of post Reactjs Update State on Props Change" />&lt;h1 id="react-update-state-on-props-change">React Update State on Props Change&lt;/h1>
-&lt;h2 id="問題">問題&lt;/h2>
-&lt;p>今天在研究 React
+&lt;/div>&lt;p>這裡用 &lt;code>Number()&lt;/code> 包起來只是因為 typescript 會抱怨 boolean 不能當作 key。如此一來只改一行，就可以達成「關掉 Popup 時清空表單」，不管是怎麼關掉的。&lt;/p></description></item><item><title>Reactjs Update State on Props Change</title><link>https://blog.simbafs.cc/p/react-update-state-on-props-change/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/react-update-state-on-props-change/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/React-update-state-on-props-change.png" alt="Featured image of post Reactjs Update State on Props Change" />&lt;h1 id="react-update-state-on-props-change">&lt;a href="#react-update-state-on-props-change" class="header-anchor">&lt;/a>React Update State on Props Change
+&lt;/h1>&lt;h2 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h2>&lt;p>今天在研究 React
 遇到一個問題
 當我從外面更新 props 的時候 component 內的 state 不會更新&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -181,8 +181,8 @@ React 會把每個「frame」在 virtual DOM 中相同位置的同類型元件�
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>如同上面程式，第二行的 &lt;code>useState&lt;/code> 不會隨著 props 更新而更新&lt;/p>
-&lt;h2 id="解法">解法&lt;/h2>
-&lt;p>後來找到解法，加上一個 &lt;code>useEffect&lt;/code> 監聽 &lt;code>props.text&lt;/code> 然後更新 state 就好了&lt;/p>
+&lt;h2 id="解法">&lt;a href="#%e8%a7%a3%e6%b3%95" class="header-anchor">&lt;/a>解法
+&lt;/h2>&lt;p>後來找到解法，加上一個 &lt;code>useEffect&lt;/code> 監聽 &lt;code>props.text&lt;/code> 然後更新 state 就好了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -208,20 +208,20 @@ React 會把每個「frame」在 virtual DOM 中相同位置的同類型元件�
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>如此一來 &lt;code>state&lt;/code> 就會和 &lt;code>props&lt;/code> 同步了&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props" target="_blank" rel="noopener"
+&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/54865764/react-usestate-does-not-reload-state-from-props&lt;/a>
 &lt;a class="link" href="https://zh-hant.reactjs.org/docs/hooks-effect.html" target="_blank" rel="noopener"
->https://zh-hant.reactjs.org/docs/hooks-effect.html&lt;/a>&lt;/p></description></item><item><title>Webpack Reactjs</title><link>https://blog.simbafs.cc/p/js/reactjs/webpack-react/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/reactjs/webpack-react/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/webpack-react.png" alt="Featured image of post Webpack Reactjs" />&lt;h1 id="webpack-reactjs">Webpack Reactjs&lt;/h1>
-&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>最近開始想學 react
+>https://zh-hant.reactjs.org/docs/hooks-effect.html&lt;/a>&lt;/p></description></item><item><title>Webpack Reactjs</title><link>https://blog.simbafs.cc/p/webpack-react/</link><pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/webpack-react/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/reactjs/webpack-react.png" alt="Featured image of post Webpack Reactjs" />&lt;h1 id="webpack-reactjs">&lt;a href="#webpack-reactjs" class="header-anchor">&lt;/a>Webpack Reactjs
+&lt;/h1>&lt;h2 id="前言">&lt;a href="#%e5%89%8d%e8%a8%80" class="header-anchor">&lt;/a>前言
+&lt;/h2>&lt;p>最近開始想學 react
 在這之前當然要先把開發環境搞好
 其中 react 最重要的就是 webpack 和 babel 了
 babel 負責編譯
 webpack 負責串街所有工作&lt;/p>
-&lt;h2 id="安裝套件">安裝套件&lt;/h2>
-&lt;h2 id="建立一個專案並初始化">建立一個專案並初始化&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="安裝套件">&lt;a href="#%e5%ae%89%e8%a3%9d%e5%a5%97%e4%bb%b6" class="header-anchor">&lt;/a>安裝套件
+&lt;/h2>&lt;h2 id="建立一個專案並初始化">&lt;a href="#%e5%bb%ba%e7%ab%8b%e4%b8%80%e5%80%8b%e5%b0%88%e6%a1%88%e4%b8%a6%e5%88%9d%e5%a7%8b%e5%8c%96" class="header-anchor">&lt;/a>建立一個專案並初始化
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -235,8 +235,8 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git init -y
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="安裝開發用套件">安裝開發用套件&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="安裝開發用套件">&lt;a href="#%e5%ae%89%e8%a3%9d%e9%96%8b%e7%99%bc%e7%94%a8%e5%a5%97%e4%bb%b6" class="header-anchor">&lt;/a>安裝開發用套件
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -260,8 +260,8 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">webpack&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="packagejson">package.json&lt;/h2>
-&lt;p>加入以下的 script&lt;/p>
+&lt;/div>&lt;h2 id="packagejson">&lt;a href="#packagejson" class="header-anchor">&lt;/a>package.json
+&lt;/h2>&lt;p>加入以下的 script&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -278,8 +278,8 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="webpackconfigjs">webpack.config.js&lt;/h2>
-&lt;p>建立 webpack.config.js
+&lt;/div>&lt;h2 id="webpackconfigjs">&lt;a href="#webpackconfigjs" class="header-anchor">&lt;/a>webpack.config.js
+&lt;/h2>&lt;p>建立 webpack.config.js
 這是最小的版本了
 沒有任何的擴充&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -314,8 +314,8 @@ webpack 負責串街所有工作&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="srcdist">src/dist&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="srcdist">&lt;a href="#srcdist" class="header-anchor">&lt;/a>src/dist
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2

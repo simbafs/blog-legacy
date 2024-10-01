@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/linux/</link><description>Recent content in Linux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 23 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>KDE Touchpad Gesture</title><link>https://blog.simbafs.cc/posts/linux/kde-touchpad-gesture/</link><pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/posts/linux/kde-touchpad-gesture/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/kde-touchpad-gesture.png" alt="Featured image of post KDE Touchpad Gesture" />&lt;h1 id="kde-touchpad-gesture">KDE Touchpad Gesture&lt;/h1>
-&lt;p>目前我的筆電作業系統是 KDE neon，他一直有個地方讓我覺得很不方便，就是沒有觸控版手勢操作，這個 &lt;a class="link" href="https://github.com/NayamAmarshe/ToucheggKDE" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/linux/</link><description>Recent content in Linux on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 23 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>KDE Touchpad Gesture</title><link>https://blog.simbafs.cc/p/kde-touchpad-gesture/</link><pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/kde-touchpad-gesture/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/kde-touchpad-gesture.png" alt="Featured image of post KDE Touchpad Gesture" />&lt;h1 id="kde-touchpad-gesture">&lt;a href="#kde-touchpad-gesture" class="header-anchor">&lt;/a>KDE Touchpad Gesture
+&lt;/h1>&lt;p>目前我的筆電作業系統是 KDE neon，他一直有個地方讓我覺得很不方便，就是沒有觸控版手勢操作，這個 &lt;a class="link" href="https://github.com/NayamAmarshe/ToucheggKDE" target="_blank" rel="noopener"
 >repo&lt;/a> 就是透過 touchegg 補齊了這方面的缺陷，他安裝超級簡單只有兩個步驟&lt;/p>
-&lt;h2 id="1-安裝-touchegg">1. 安裝 touchegg&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="1-安裝-touchegg">&lt;a href="#1-%e5%ae%89%e8%a3%9d-touchegg" class="header-anchor">&lt;/a>1. 安裝 touchegg
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -10,8 +10,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ apt install touchegg
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="2-把設定檔放進去">2. 把設定檔放進去&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="2-把設定檔放進去">&lt;a href="#2-%e6%8a%8a%e8%a8%ad%e5%ae%9a%e6%aa%94%e6%94%be%e9%80%b2%e5%8e%bb" class="header-anchor">&lt;/a>2. 把設定檔放進去
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -23,17 +23,17 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ wget https://raw.githubusercontent.com/NayamAmarshe/ToucheggKDE/main/touchegg.conf
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="3-重開機">3. 重開機&lt;/h2>
-&lt;p>我猜重新登入圖形界面應該就有效了，不果反正重開機也沒多慢，就重開機，開機完就可以用手勢切換工作區囉。&lt;/p></description></item><item><title>Anbox</title><link>https://blog.simbafs.cc/p/linux/anbox/</link><pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/anbox/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/anbox.png" alt="Featured image of post Anbox" />&lt;h1 id="anbox">Anbox&lt;/h1>
-&lt;p>&lt;a class="link" href="https://anbox.io/" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="3-重開機">&lt;a href="#3-%e9%87%8d%e9%96%8b%e6%a9%9f" class="header-anchor">&lt;/a>3. 重開機
+&lt;/h2>&lt;p>我猜重新登入圖形界面應該就有效了，不果反正重開機也沒多慢，就重開機，開機完就可以用手勢切換工作區囉。&lt;/p></description></item><item><title>Anbox</title><link>https://blog.simbafs.cc/p/anbox/</link><pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/anbox/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/anbox.png" alt="Featured image of post Anbox" />&lt;h1 id="anbox">&lt;a href="#anbox" class="header-anchor">&lt;/a>Anbox
+&lt;/h1>&lt;p>&lt;a class="link" href="https://anbox.io/" target="_blank" rel="noopener"
 >anbox&lt;/a> 是 Android in a box，是一種基於容器化技術的 Android 模擬器，所以執行速度會比較快、比較省資源，而且因為每個 App 都在各自的容器裡面，所以比較安全
 （應該沒理解錯吧？）。&lt;br>
 安裝 anbox 需要先安裝兩個 kernal modules，然後安裝 anbox 後，為了之後方便，所以要裝 Google Play，不裝也是可以，但之後安裝其他 App 比較麻煩&lt;/p>
-&lt;h2 id="系統">系統&lt;/h2>
-&lt;p>我用的系統是 Ubuntu 21.04，如果你的系統不一樣，可能會有某些步驟不太一樣。&lt;br>
+&lt;h2 id="系統">&lt;a href="#%e7%b3%bb%e7%b5%b1" class="header-anchor">&lt;/a>系統
+&lt;/h2>&lt;p>我用的系統是 Ubuntu 21.04，如果你的系統不一樣，可能會有某些步驟不太一樣。&lt;br>
 這次安裝因為涉及 Linux Kernel 所以隨時重開機有很大機會幫助改善遇到的問題&lt;/p>
-&lt;h2 id="安裝-linux-kernal-modules">安裝 Linux Kernal Modules&lt;/h2>
-&lt;p>如果你的 Linux kernale &amp;gt; 5.0，那理論上已經包在 Kernel 裡面了，所以不用安裝&lt;/p>
+&lt;h2 id="安裝-linux-kernal-modules">&lt;a href="#%e5%ae%89%e8%a3%9d-linux-kernal-modules" class="header-anchor">&lt;/a>安裝 Linux Kernal Modules
+&lt;/h2>&lt;p>如果你的 Linux kernale &amp;gt; 5.0，那理論上已經包在 Kernel 裡面了，所以不用安裝&lt;/p>
 &lt;blockquote>
 &lt;p>Starting with Ubuntu 19.04 binder and ashmem are now build with the standard Ubuntu kernel (&amp;gt;= 5.0) and you don’t have to install the modules from the PPA anymore.&lt;/p>
 &lt;/blockquote>
@@ -84,8 +84,8 @@
 &lt;p>&lt;a class="link" href="https://docs.anbox.io/userguide/install_kernel_modules.html" target="_blank" rel="noopener"
 >https://docs.anbox.io/userguide/install_kernel_modules.html&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="安裝-anbox">安裝 anbox&lt;/h2>
-&lt;p>如果你的電腦上有 snap，就用 snap 裝；如果沒有，就先去裝 snap。&lt;/p>
+&lt;h2 id="安裝-anbox">&lt;a href="#%e5%ae%89%e8%a3%9d-anbox" class="header-anchor">&lt;/a>安裝 anbox
+&lt;/h2>&lt;p>如果你的電腦上有 snap，就用 snap 裝；如果沒有，就先去裝 snap。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -107,8 +107,8 @@
 &lt;p>&lt;a class="link" href="https://docs.anbox.io/userguide/install.html" target="_blank" rel="noopener"
 >https://docs.anbox.io/userguide/install.html&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="apt">apt&lt;/h2>
-&lt;p>如果你是 Ubuntu/Debian 長期使用者，你可能會想用 apt 裝 anbox，也不是不行，但是等等裝 Google Play 的時候會出一點點問題（OverlayFS 路徑有問題），最佳解決辦法就是用 snap，不要用 apt&lt;/p>
+&lt;h2 id="apt">&lt;a href="#apt" class="header-anchor">&lt;/a>apt
+&lt;/h2>&lt;p>如果你是 Ubuntu/Debian 長期使用者，你可能會想用 apt 裝 anbox，也不是不行，但是等等裝 Google Play 的時候會出一點點問題（OverlayFS 路徑有問題），最佳解決辦法就是用 snap，不要用 apt&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -117,8 +117,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt remove anbox
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="安裝-google-play">安裝 Google Play&lt;/h2>
-&lt;p>因為 anbox 沒有內建 apk 安裝器，所以沒辦法很方便的安裝 APP，最方便的方法是安裝 Google Play。&lt;/p>
+&lt;/div>&lt;h2 id="安裝-google-play">&lt;a href="#%e5%ae%89%e8%a3%9d-google-play" class="header-anchor">&lt;/a>安裝 Google Play
+&lt;/h2>&lt;p>因為 anbox 沒有內建 apk 安裝器，所以沒辦法很方便的安裝 APP，最方便的方法是安裝 Google Play。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -139,11 +139,11 @@
 &lt;p>&lt;a class="link" href="https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox" target="_blank" rel="noopener"
 >https://www.clusterednetworks.com/blog/post/install-google-play-store-anbox&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="問遺">問遺&lt;/h2>
-&lt;p>目前裝好 APP 但是我打不開&lt;/p></description></item><item><title>kdeconnect</title><link>https://blog.simbafs.cc/p/linux/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/kdeconnect/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/kdeconnect.png" alt="Featured image of post kdeconnect" />&lt;h1 id="kdeconnect">kdeconnect&lt;/h1>
-&lt;p>kdeconnect 顧名思義是 kde 出的一款 connect 軟體，功能非常多而且方便。電腦和手機都安裝好軟體後，只要在同一個網域就可以配對連接&lt;/p>
-&lt;h2 id="功能介紹">功能介紹&lt;/h2>
-&lt;ol>
+&lt;h2 id="問遺">&lt;a href="#%e5%95%8f%e9%81%ba" class="header-anchor">&lt;/a>問遺
+&lt;/h2>&lt;p>目前裝好 APP 但是我打不開&lt;/p></description></item><item><title>kdeconnect</title><link>https://blog.simbafs.cc/p/kdeconnect/</link><pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/kdeconnect/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/kdeconnect.png" alt="Featured image of post kdeconnect" />&lt;h1 id="kdeconnect">&lt;a href="#kdeconnect" class="header-anchor">&lt;/a>kdeconnect
+&lt;/h1>&lt;p>kdeconnect 顧名思義是 kde 出的一款 connect 軟體，功能非常多而且方便。電腦和手機都安裝好軟體後，只要在同一個網域就可以配對連接&lt;/p>
+&lt;h2 id="功能介紹">&lt;a href="#%e5%8a%9f%e8%83%bd%e4%bb%8b%e7%b4%b9" class="header-anchor">&lt;/a>功能介紹
+&lt;/h2>&lt;ol>
 &lt;li>基本訊息 - 在電腦和手機上可以互相看到電池、網路等基本訊息&lt;/li>
 &lt;li>通知 - 可以設定電腦顯示手機通知或手機顯示電腦通知，或是兩者都開啟，我通常只開前者&lt;/li>
 &lt;li>媒體控制 - 無論是 VLC、YouTube、Nefflix 或任何網頁，都可以控制進度、音量、暫停，而且雙方都可以控制。這個是我最愛的功能之一&lt;/li>
@@ -153,30 +153,30 @@
 &lt;li>輸入 - 不論是滑鼠、鍵盤，兩邊都可以互相當對方的輸入裝置，這個功能非常好用
 還有像是讓手機大叫（找手機用）、簡報控制、傳簡訊、手機有電話的時候自動暫停音樂等等奇奇怪怪的功能&lt;/li>
 &lt;/ol>
-&lt;h2 id="推薦命令">推薦命令&lt;/h2>
-&lt;table>
+&lt;h2 id="推薦命令">&lt;a href="#%e6%8e%a8%e8%96%a6%e5%91%bd%e4%bb%a4" class="header-anchor">&lt;/a>推薦命令
+&lt;/h2>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">Description&lt;/th>
-&lt;th style="text-align:left">Command&lt;/th>
+&lt;th style="text-align: center">Description&lt;/th>
+&lt;th style="text-align: left">Command&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">鎖定螢幕並暫停 VLC 播放&lt;/td>
-&lt;td style="text-align:left">&lt;code>loginctl lock-session; dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause&lt;/code>&lt;/td>
+&lt;td style="text-align: center">鎖定螢幕並暫停 VLC 播放&lt;/td>
+&lt;td style="text-align: left">&lt;code>loginctl lock-session; dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">解除鎖定螢幕（免密碼）&lt;/td>
-&lt;td style="text-align:left">&lt;code>loginctl unlock-session&lt;/code>&lt;/td>
+&lt;td style="text-align: center">解除鎖定螢幕（免密碼）&lt;/td>
+&lt;td style="text-align: left">&lt;code>loginctl unlock-session&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/cast-phone-screen-to-computer/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/cast-phone-screen-to-computer.png" alt="Featured image of post Cast Phone Screen to Computer" />&lt;h1 id="cast-phone-screen-to-computer">Cast Phone Screen to Computer&lt;/h1>
-&lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
-&lt;h2 id="scrcpy">SCRCPY&lt;/h2>
-&lt;p>這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。&lt;/p>
-&lt;h2 id="installation">Installation&lt;/h2>
-&lt;p>安裝流程意外的簡單，只需要用 &lt;code>apt&lt;/code> 就可以安裝了，或是你可以自己 build，稍微看了一下 &lt;a class="link" href="https://github.com/Genymobile/scrcpy/blob/master/BUILD.md" target="_blank" rel="noopener"
+&lt;/table></description></item><item><title>Cast Phone Screen to Computer</title><link>https://blog.simbafs.cc/p/cast-phone-screen-to-computer/</link><pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/cast-phone-screen-to-computer/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/cast-phone-screen-to-computer.png" alt="Featured image of post Cast Phone Screen to Computer" />&lt;h1 id="cast-phone-screen-to-computer">&lt;a href="#cast-phone-screen-to-computer" class="header-anchor">&lt;/a>Cast Phone Screen to Computer
+&lt;/h1>&lt;p>有沒有一種經驗是某的應用程式手機板操作勉強算順暢，但是一電腦上就炸開，反應慢到靠北、界面又很難用（沒錯 messenger 我正在看著你）。這個時候相信你會和我一樣想把手機畫面投影到電腦上的一個視窗裡面，最好可以互動、可以打字。有人第一個想法是在手機開 VNC 伺服器，但是這個方法有點麻煩，這篇文章介紹的是目前我覺得最佳解決方案。&lt;/p>
+&lt;h2 id="scrcpy">&lt;a href="#scrcpy" class="header-anchor">&lt;/a>SCRCPY
+&lt;/h2>&lt;p>這個軟體支援有線（ USB debug ）、無線（ WIFI ）的連接，還支援螢幕錄影和傳檔案。最重要的是，開在電腦上的視窗可以調整大小，不需要侷限在一個小小的視窗內，你最大可以放大到全螢幕！在某種意義上你獲得了一台和電腦一樣大的手機。&lt;/p>
+&lt;h2 id="installation">&lt;a href="#installation" class="header-anchor">&lt;/a>Installation
+&lt;/h2>&lt;p>安裝流程意外的簡單，只需要用 &lt;code>apt&lt;/code> 就可以安裝了，或是你可以自己 build，稍微看了一下 &lt;a class="link" href="https://github.com/Genymobile/scrcpy/blob/master/BUILD.md" target="_blank" rel="noopener"
 >說明&lt;/a> ，看起來不困難，但是既然 &lt;code>apt&lt;/code> 就可以安裝了我們就省一點時間&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -186,31 +186,31 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ sudo apt install scrcpy
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="usb-debug">USB debug&lt;/h2>
-&lt;p>首先無論是有線無線都要先打開手機的 &lt;code>USB debug&lt;/code> 選項，在開發人員選項裡面，詳細步驟請看 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options#enable" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="usb-debug">&lt;a href="#usb-debug" class="header-anchor">&lt;/a>USB debug
+&lt;/h2>&lt;p>首先無論是有線無線都要先打開手機的 &lt;code>USB debug&lt;/code> 選項，在開發人員選項裡面，詳細步驟請看 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options#enable" target="_blank" rel="noopener"
 >官方文件&lt;/a>。&lt;/p>
-&lt;h2 id="usb">USB&lt;/h2>
-&lt;p>如果不介意有一條線插著~~（順便充電）~~的話，投影畫面非常簡單，只有兩個步驟：&lt;/p>
+&lt;h2 id="usb">&lt;a href="#usb" class="header-anchor">&lt;/a>USB
+&lt;/h2>&lt;p>如果不介意有一條線插著~~（順便充電）~~的話，投影畫面非常簡單，只有兩個步驟：&lt;/p>
 &lt;ol>
 &lt;li>插上 USB 並且無論跳出什麼都按「同意」「OK」&lt;/li>
 &lt;li>打開終端機，執行 &lt;code>scrcpy&lt;/code>
 然後就會有一個視窗跳出來，你現在就可以在電腦上滑手機了！&lt;/li>
 &lt;/ol>
-&lt;h2 id="wireless">Wireless&lt;/h2>
-&lt;p>無線的話比較麻煩，首先是必須要可以連線，看是在同一個區域網路或是 VPN、ssh tunnel 都可以。再來是因為連線設定頗麻煩，所以我把相關的步驟寫成一個 &lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
+&lt;h2 id="wireless">&lt;a href="#wireless" class="header-anchor">&lt;/a>Wireless
+&lt;/h2>&lt;p>無線的話比較麻煩，首先是必須要可以連線，看是在同一個區域網路或是 VPN、ssh tunnel 都可以。再來是因為連線設定頗麻煩，所以我把相關的步驟寫成一個 &lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
 >script&lt;/a>，下載後給予執行權限就可以執行了（當然要安裝 scrcpy ）。有線的方式一樣很簡單，不用加任何選項就可以連接了。&lt;br>
 如果要啟用無線，只需要加上 &lt;code>-w&lt;/code> 選項（用預設的 ip &lt;code>192.168.43.1&lt;/code>)&lt;br>
 如果 ip 不是預設的話，可以加上 &lt;code>-i IP&lt;/code> 來指定其他的 ip&lt;br>
 加上 &lt;code>-f&lt;/code> 可以開啟全螢幕&lt;/p>
-&lt;h2 id="參連連結">參連連結&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener"
+&lt;h2 id="參連連結">&lt;a href="#%e5%8f%83%e9%80%a3%e9%80%a3%e7%b5%90" class="header-anchor">&lt;/a>參連連結
+&lt;/h2>&lt;p>&lt;a class="link" href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener"
 >https://github.com/Genymobile/scrcpy&lt;/a>
 &lt;a class="link" href="https://developer.android.com/studio/debug/dev-options" target="_blank" rel="noopener"
 >https://developer.android.com/studio/debug/dev-options&lt;/a>
 &lt;a class="link" href="https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20" target="_blank" rel="noopener"
->https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20&lt;/a>&lt;/p></description></item><item><title>docker login error</title><link>https://blog.simbafs.cc/p/linux/docker/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-login-error/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/docker-login-error.png" alt="Featured image of post docker login error" />&lt;h1 id="docker-login-error">Docker Login Error&lt;/h1>
-&lt;h2 id="錯誤說明">錯誤說明&lt;/h2>
-&lt;p>昨天我在 terminal 登入 docker 的時候發現不知道為什麼不能登入，我先透過網頁登入確認過密碼沒有問題，也不是打錯字的關係，但還是不能當入。總是會有類似以下的錯誤訊息。&lt;/p>
+>https://gist.github.com/simbafs/9132289f63368ad325d6a2ef62be7a20&lt;/a>&lt;/p></description></item><item><title>docker login error</title><link>https://blog.simbafs.cc/p/docker-login-error/</link><pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/docker-login-error/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/docker-login-error.png" alt="Featured image of post docker login error" />&lt;h1 id="docker-login-error">&lt;a href="#docker-login-error" class="header-anchor">&lt;/a>Docker Login Error
+&lt;/h1>&lt;h2 id="錯誤說明">&lt;a href="#%e9%8c%af%e8%aa%a4%e8%aa%aa%e6%98%8e" class="header-anchor">&lt;/a>錯誤說明
+&lt;/h2>&lt;p>昨天我在 terminal 登入 docker 的時候發現不知道為什麼不能登入，我先透過網頁登入確認過密碼沒有問題，也不是打錯字的關係，但還是不能當入。總是會有類似以下的錯誤訊息。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -223,8 +223,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Password encryption aborted.`
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="解決方法">解決方法&lt;/h2>
-&lt;p>經過搜尋之後，我按照 &lt;a class="link" href="https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="解決方法">&lt;a href="#%e8%a7%a3%e6%b1%ba%e6%96%b9%e6%b3%95" class="header-anchor">&lt;/a>解決方法
+&lt;/h2>&lt;p>經過搜尋之後，我按照 &lt;a class="link" href="https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452" target="_blank" rel="noopener"
 >https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452&lt;/a> 的方法成功登入了，但是在這之前要先安裝 &lt;code>gpg&lt;/code> 和 &lt;code>pass&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -261,17 +261,17 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker login
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考連結">參考連結&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="參考連結">&lt;a href="#%e5%8f%83%e8%80%83%e9%80%a3%e7%b5%90" class="header-anchor">&lt;/a>參考連結
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452" target="_blank" rel="noopener"
 >https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388634452&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://stackoverflow.com/questions/50151833/cannot-login-to-docker-account/52881198#52881198" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/50151833/cannot-login-to-docker-account/52881198#52881198&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://gist.github.com/dataday/3c267be29e32573829c4781c99ea3395" target="_blank" rel="noopener"
 >https://gist.github.com/dataday/3c267be29e32573829c4781c99ea3395&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Connect to Ethernet in Docker Container</title><link>https://blog.simbafs.cc/p/linux/docker/connect-to-ethernet-in-docker-container/</link><pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/connect-to-ethernet-in-docker-container/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/connect-to-ethernet-in-docker-container.png" alt="Featured image of post Connect to Ethernet in Docker Container" />&lt;h1 id="connect-to-ethernet-in-docker-container">Connect to Ethernet in Docker Container&lt;/h1>
-&lt;h2 id="如何在-docker-container-裡連接-ethernet">如何在 docker container 裡連接 ethernet&lt;/h2>
-&lt;p>今天突然有個需求是在一個已經開啟的 container 弄東西，需要網路，但是不知道為什麼一直不上，後來發現是 docker 沒有設定 DNS 的問題，只要在外面輸入兩行指令就可以了&lt;/p>
+&lt;/ul></description></item><item><title>Connect to Ethernet in Docker Container</title><link>https://blog.simbafs.cc/p/connect-to-ethernet-in-docker-container/</link><pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/connect-to-ethernet-in-docker-container/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/connect-to-ethernet-in-docker-container.png" alt="Featured image of post Connect to Ethernet in Docker Container" />&lt;h1 id="connect-to-ethernet-in-docker-container">&lt;a href="#connect-to-ethernet-in-docker-container" class="header-anchor">&lt;/a>Connect to Ethernet in Docker Container
+&lt;/h1>&lt;h2 id="如何在-docker-container-裡連接-ethernet">&lt;a href="#%e5%a6%82%e4%bd%95%e5%9c%a8-docker-container-%e8%a3%a1%e9%80%a3%e6%8e%a5-ethernet" class="header-anchor">&lt;/a>如何在 docker container 裡連接 ethernet
+&lt;/h2>&lt;p>今天突然有個需求是在一個已經開啟的 container 弄東西，需要網路，但是不知道為什麼一直不上，後來發現是 docker 沒有設定 DNS 的問題，只要在外面輸入兩行指令就可以了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -282,18 +282,18 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl restart docker
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>然後重新啟動 docker&lt;/p></description></item><item><title>docker commit</title><link>https://blog.simbafs.cc/p/linux/docker/docker-commit/</link><pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-commit/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/docker-commit.png" alt="Featured image of post docker commit" />&lt;h1 id="docker-commit">Docker Commit&lt;/h1>
-&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>上次提到可以用 Dockerfile 建立 docker image，但我們還有令一個方法可以建立 docker image，那就是 &lt;code>docker commit&lt;/code> 指令&lt;/p>
-&lt;h3 id="和-dockerfile-差別">和 Dockerfile 差別&lt;/h3>
-&lt;p>&lt;code>docker commit&lt;/code> 有點像是手動版的 Dockerfile，在用 Dockerfile 建構 docker image 的時候，docker build 的工作就像是自動根據 Dockerfile 操作 &lt;code>docker commit&lt;/code>。
+&lt;/div>&lt;p>然後重新啟動 docker&lt;/p></description></item><item><title>docker commit</title><link>https://blog.simbafs.cc/p/docker-commit/</link><pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/docker-commit/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/docker-commit.png" alt="Featured image of post docker commit" />&lt;h1 id="docker-commit">&lt;a href="#docker-commit" class="header-anchor">&lt;/a>Docker Commit
+&lt;/h1>&lt;h2 id="前言">&lt;a href="#%e5%89%8d%e8%a8%80" class="header-anchor">&lt;/a>前言
+&lt;/h2>&lt;p>上次提到可以用 Dockerfile 建立 docker image，但我們還有令一個方法可以建立 docker image，那就是 &lt;code>docker commit&lt;/code> 指令&lt;/p>
+&lt;h3 id="和-dockerfile-差別">&lt;a href="#%e5%92%8c-dockerfile-%e5%b7%ae%e5%88%a5" class="header-anchor">&lt;/a>和 Dockerfile 差別
+&lt;/h3>&lt;p>&lt;code>docker commit&lt;/code> 有點像是手動版的 Dockerfile，在用 Dockerfile 建構 docker image 的時候，docker build 的工作就像是自動根據 Dockerfile 操作 &lt;code>docker commit&lt;/code>。
 Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程式碼，要將他包成 Docker 就很適合用 Dockerfile 自動化操作，因為程式碼會改變，但是包裝的流程基本上都是一樣的。
 &lt;code>docker commit&lt;/code> 適合用在建構環境，因為會有比較麻煩的操作，如果寫成 Dockerfile 會比較麻煩，當然如果可以的話還是寫成 Dockerfile 會比較好，因為更新的時候會比較方便。
 在建構 image 的時候要用哪個方法就看個人取捨了。&lt;/p>
-&lt;h3 id="docker-commit-指令">&lt;code>docker commit&lt;/code> 指令&lt;/h3>
-&lt;p>&lt;code>docker commit&lt;/code> 可以把運行中的 comtainer 轉成 images，有點類似令存新檔的概念。先來看看參數吧！&lt;/p>
-&lt;h4 id="參數">參數&lt;/h4>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h3 id="docker-commit-指令">&lt;a href="#docker-commit-%e6%8c%87%e4%bb%a4" class="header-anchor">&lt;/a>&lt;code>docker commit&lt;/code> 指令
+&lt;/h3>&lt;p>&lt;code>docker commit&lt;/code> 可以把運行中的 comtainer 轉成 images，有點類似令存新檔的概念。先來看看參數吧！&lt;/p>
+&lt;h4 id="參數">&lt;a href="#%e5%8f%83%e6%95%b8" class="header-anchor">&lt;/a>參數
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -322,31 +322,31 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;/div>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">選項&lt;/th>
-&lt;th style="text-align:left">說明&lt;/th>
+&lt;th style="text-align: left">選項&lt;/th>
+&lt;th style="text-align: left">說明&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">-a&lt;/td>
-&lt;td style="text-align:left">作者的名字&lt;/td>
+&lt;td style="text-align: left">-a&lt;/td>
+&lt;td style="text-align: left">作者的名字&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">-c&lt;/td>
-&lt;td style="text-align:left">我還沒研究出來有什麼用&lt;/td>
+&lt;td style="text-align: left">-c&lt;/td>
+&lt;td style="text-align: left">我還沒研究出來有什麼用&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">-m&lt;/td>
-&lt;td style="text-align:left">訊息&lt;/td>
+&lt;td style="text-align: left">-m&lt;/td>
+&lt;td style="text-align: left">訊息&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">-p&lt;/td>
-&lt;td style="text-align:left">建構時停容器&lt;/td>
+&lt;td style="text-align: left">-p&lt;/td>
+&lt;td style="text-align: left">建構時停容器&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docker 基礎指令</title><link>https://blog.simbafs.cc/p/linux/docker/docker-command/</link><pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/docker/docker-command/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/docker-%E5%9F%BA%E7%A4%8E%E6%8C%87%E4%BB%A4.png" alt="Featured image of post Docker 基礎指令" />&lt;h1 id="docker-指令">Docker 指令&lt;/h1>
-&lt;h2 id="install">Install&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/table></description></item><item><title>Docker 基礎指令</title><link>https://blog.simbafs.cc/p/docker-command/</link><pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/docker-command/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/docker/docker-%E5%9F%BA%E7%A4%8E%E6%8C%87%E4%BB%A4.png" alt="Featured image of post Docker 基礎指令" />&lt;h1 id="docker-指令">&lt;a href="#docker-%e6%8c%87%e4%bb%a4" class="header-anchor">&lt;/a>Docker 指令
+&lt;/h1>&lt;h2 id="install">&lt;a href="#install" class="header-anchor">&lt;/a>Install
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -354,8 +354,8 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt install docker docker.io docker-compose
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="what-is-docker">What is docker&lt;/h2>
-&lt;p>Docker 是一個容器化的技術，基本上使用的時候可以把他當成虛擬機，雖然他們的使用的技術完全不一樣。對新手來說，在 Docker 裡面有四個重要的名詞：dockerfile, docker image, docker container, docker-compose。&lt;/p>
+&lt;/div>&lt;h2 id="what-is-docker">&lt;a href="#what-is-docker" class="header-anchor">&lt;/a>What is docker
+&lt;/h2>&lt;p>Docker 是一個容器化的技術，基本上使用的時候可以把他當成虛擬機，雖然他們的使用的技術完全不一樣。對新手來說，在 Docker 裡面有四個重要的名詞：dockerfile, docker image, docker container, docker-compose。&lt;/p>
 &lt;ol>
 &lt;li>dockerfile&lt;br>
 純文字檔，定義建立 docker image 的步驟，有點像是一個 bash shell。通常命名成 &lt;code>Dockerfile&lt;/code> ，在 build 的時候會預設用這個，也可以用 &lt;code>-f&lt;/code> 來指定其他的檔案。&lt;/li>
@@ -365,12 +365,12 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 每個 docker image 可以產生很多個 container，也就是執行中的程式。在這裡你已經可以用 docker 來建立各種服務了。這裡也可以想像成虛擬機，用 &lt;code>docker exec -it container_name bash&lt;/code> 可以進到 container 裡面(如果裡面有 bash 的話)&lt;/li>
 &lt;li>docker-compose&lt;br>
 一個服務不是一個 container 就可以架起來的，通常需要好幾個 container。這時候如果透過指令啟動也許會有忘記啟動和設定複雜的問題，所以有了這個工具。他透過 yml 設定來啟動服務。值得注意的是在同一個 &lt;code>docker-compose.yml&lt;/code> 啟動的 container 會在同一個網路內而和外面隔開，所以如果是 containers 之間的通訊不用把 port 暴露出來，只有開給外面的要 expose。&lt;/li>
-&lt;/ol></description></item><item><title>文章更新時間錯亂問題</title><link>https://blog.simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C.png" alt="Featured image of post 文章更新時間錯亂問題" />&lt;h1 id="問題">問題&lt;/h1>
-&lt;p>在設定完 GitHub Action 之後，我發現我的文章的更新時間都錯了，會全部變成當天日期。但是本地生成的就沒有這個問題，經過一番盤查和猜測後，我發現問題是因為 git 不會把 modified date 紀錄，因為每台電腦的時區都是不一樣的，紀錄起來沒有意義。但是我們需要這項 meta data，所以我們就要自己想法紀錄&lt;/p>
-&lt;h1 id="解法-v10">解法 v1.0&lt;/h1>
-&lt;p>首先，因為每一篇文章 hexo 都會紀錄建立時間，所以我們可以直接把他抓出來，然後把檔案的更新時間設成這個時間就可以啦！&lt;/p>
-&lt;h2 id="更改檔案的-modified-time">更改檔案的 modified time&lt;/h2>
-&lt;p>這個功能只要用我們最熟悉的 &lt;code>touch&lt;/code> 就可以做到了。一般我們使用 &lt;code>touch&lt;/code> 的時候會把 modified time 改成當下時間，那要改任意時間只要加上 &lt;code>-t&lt;/code> 選項就可以啦&lt;/p>
+&lt;/ol></description></item><item><title>文章更新時間錯亂問題</title><link>https://blog.simbafs.cc/p/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</link><pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%99%82%E9%96%93%E9%8C%AF%E4%BA%82%E5%95%8F%E9%A1%8C.png" alt="Featured image of post 文章更新時間錯亂問題" />&lt;h1 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h1>&lt;p>在設定完 GitHub Action 之後，我發現我的文章的更新時間都錯了，會全部變成當天日期。但是本地生成的就沒有這個問題，經過一番盤查和猜測後，我發現問題是因為 git 不會把 modified date 紀錄，因為每台電腦的時區都是不一樣的，紀錄起來沒有意義。但是我們需要這項 meta data，所以我們就要自己想法紀錄&lt;/p>
+&lt;h1 id="解法-v10">&lt;a href="#%e8%a7%a3%e6%b3%95-v10" class="header-anchor">&lt;/a>解法 v1.0
+&lt;/h1>&lt;p>首先，因為每一篇文章 hexo 都會紀錄建立時間，所以我們可以直接把他抓出來，然後把檔案的更新時間設成這個時間就可以啦！&lt;/p>
+&lt;h2 id="更改檔案的-modified-time">&lt;a href="#%e6%9b%b4%e6%94%b9%e6%aa%94%e6%a1%88%e7%9a%84-modified-time" class="header-anchor">&lt;/a>更改檔案的 modified time
+&lt;/h2>&lt;p>這個功能只要用我們最熟悉的 &lt;code>touch&lt;/code> 就可以做到了。一般我們使用 &lt;code>touch&lt;/code> 的時候會把 modified time 改成當下時間，那要改任意時間只要加上 &lt;code>-t&lt;/code> 選項就可以啦&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -390,8 +390,8 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ted timeouch -t&amp;#39;19993231232.33&amp;#39; tmp
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="抓出檔名日期">抓出檔名、日期&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="抓出檔名日期">&lt;a href="#%e6%8a%93%e5%87%ba%e6%aa%94%e5%90%8d%e6%97%a5%e6%9c%9f" class="header-anchor">&lt;/a>抓出檔名、日期
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -430,8 +430,8 @@ Dockerfile 比較適合用在自動化交付和部屬，例如說你有一份程
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source/_posts/mxlinux-change-workspace.md:3:date: 2020-05-08 17:59:22
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="分離時間檔名">分離時間，檔名&lt;/h2>
-&lt;p>觀察他的輸出&lt;br>
+&lt;/div>&lt;h2 id="分離時間檔名">&lt;a href="#%e5%88%86%e9%9b%a2%e6%99%82%e9%96%93%e6%aa%94%e5%90%8d" class="header-anchor">&lt;/a>分離時間，檔名
+&lt;/h2>&lt;p>觀察他的輸出&lt;br>
 檔名的部份是在以冒號分隔的第一欄&lt;br>
 日期/時間是在以空格分隔的第二、三欄
 那我們就可以根據這個把他們分離出來&lt;/p>
@@ -488,8 +488,8 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2020-08-20 23:33:13
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="處理日期的格式">處理日期的格式&lt;/h2>
-&lt;p>在 &lt;code>更改檔案的 modified time&lt;/code> 提到的日期格式和我們抓出來的不太一樣，所以我們需要做一些處理&lt;/p>
+&lt;/div>&lt;h2 id="處理日期的格式">&lt;a href="#%e8%99%95%e7%90%86%e6%97%a5%e6%9c%9f%e7%9a%84%e6%a0%bc%e5%bc%8f" class="header-anchor">&lt;/a>處理日期的格式
+&lt;/h2>&lt;p>在 &lt;code>更改檔案的 modified time&lt;/code> 提到的日期格式和我們抓出來的不太一樣，所以我們需要做一些處理&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -499,8 +499,8 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這樣就可以成功轉換日期格式了&lt;/p>
-&lt;h2 id="時間檔">時間檔&lt;/h2>
-&lt;p>接下來把 &lt;code>name&lt;/code>、&lt;code>time&lt;/code> 合起來就變成時間擋了，這裡有一點要注意，因為我們恢復的時候是用 for 迴圈，換行和空白都會被當成切斷符號，所以檔名和時間中間的間隔符號我們選用冒號 &lt;code>:&lt;/code>&lt;/p>
+&lt;h2 id="時間檔">&lt;a href="#%e6%99%82%e9%96%93%e6%aa%94" class="header-anchor">&lt;/a>時間檔
+&lt;/h2>&lt;p>接下來把 &lt;code>name&lt;/code>、&lt;code>time&lt;/code> 合起來就變成時間擋了，這裡有一點要注意，因為我們恢復的時候是用 for 迴圈，換行和空白都會被當成切斷符號，所以檔名和時間中間的間隔符號我們選用冒號 &lt;code>:&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -509,8 +509,8 @@ name:&lt;/p>
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">paste -d: name time &amp;gt; source/_posts/time
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="清垃圾">清垃圾&lt;/h2>
-&lt;p>最後記得把剛才產生出來但是用不到的檔案清掉&lt;/p>
+&lt;/div>&lt;h2 id="清垃圾">&lt;a href="#%e6%b8%85%e5%9e%83%e5%9c%be" class="header-anchor">&lt;/a>清垃圾
+&lt;/h2>&lt;p>最後記得把剛才產生出來但是用不到的檔案清掉&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -519,8 +519,8 @@ name:&lt;/p>
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rm t name time
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="完整程式碼">完整程式碼&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="完整程式碼">&lt;a href="#%e5%ae%8c%e6%95%b4%e7%a8%8b%e5%bc%8f%e7%a2%bc" class="header-anchor">&lt;/a>完整程式碼
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -566,10 +566,10 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm t name &lt;span class="nb">time&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="備註">備註&lt;/h2>
-&lt;p>剛剛有說到在這份教學中的 &lt;code>date: &lt;/code> 都多加一個空白，原因是因為 grep 在抓時候不會只抓第一個，為了避免抓到錯的所以我故意讓他不匹配，不然再生成時間檔的時候會出錯，所以你們的文章中如果出現會匹配 &lt;code>date: [0-9]{4}&lt;/code> 的字串，記得要做一下手腳&lt;/p>
-&lt;h1 id="解法-v20">解法 v2.0&lt;/h1>
-&lt;p>上一個作法雖然可行，但是有一個缺點，就是他的更新時間都會是建立時間，不會是 modified time，所以解法二誕生了&lt;br>
+&lt;/div>&lt;h2 id="備註">&lt;a href="#%e5%82%99%e8%a8%bb" class="header-anchor">&lt;/a>備註
+&lt;/h2>&lt;p>剛剛有說到在這份教學中的 &lt;code>date: &lt;/code> 都多加一個空白，原因是因為 grep 在抓時候不會只抓第一個，為了避免抓到錯的所以我故意讓他不匹配，不然再生成時間檔的時候會出錯，所以你們的文章中如果出現會匹配 &lt;code>date: [0-9]{4}&lt;/code> 的字串，記得要做一下手腳&lt;/p>
+&lt;h1 id="解法-v20">&lt;a href="#%e8%a7%a3%e6%b3%95-v20" class="header-anchor">&lt;/a>解法 v2.0
+&lt;/h1>&lt;p>上一個作法雖然可行，但是有一個缺點，就是他的更新時間都會是建立時間，不會是 modified time，所以解法二誕生了&lt;br>
 其實很簡單，改上面的一小行就好了。首先用 &lt;code>stat&lt;/code> 取出檔案的 modified time&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -594,8 +594,8 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>然後在經過適當的轉換變成我們要的格式就完成啦！&lt;/p>
-&lt;h2 id="完整程式碼-1">完整程式碼&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="完整程式碼-1">&lt;a href="#%e5%ae%8c%e6%95%b4%e7%a8%8b%e5%bc%8f%e7%a2%bc-1" class="header-anchor">&lt;/a>完整程式碼
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -667,15 +667,15 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>GPG</title><link>https://blog.simbafs.cc/p/linux/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/gpg/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/gpg.png" alt="Featured image of post GPG" />&lt;h1 id="gpg">GPG&lt;/h1>
-&lt;h2 id="sign-git-commit-with-gpg">sign git commit with gpg&lt;/h2>
-&lt;p>我按照他的作法弄完後就是沒辦法 commit
+&lt;/div></description></item><item><title>GPG</title><link>https://blog.simbafs.cc/p/gpg/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/gpg/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/gpg.png" alt="Featured image of post GPG" />&lt;h1 id="gpg">&lt;a href="#gpg" class="header-anchor">&lt;/a>GPG
+&lt;/h1>&lt;h2 id="sign-git-commit-with-gpg">&lt;a href="#sign-git-commit-with-gpg" class="header-anchor">&lt;/a>sign git commit with gpg
+&lt;/h2>&lt;p>我按照他的作法弄完後就是沒辦法 commit
 他說 GPG 無法簽章
 後來我發現是我的 name 填錯（應該啦，我猜的）
 總而言之就重新產生 GPG key 就好了
 name 和 git 設定的一樣&lt;/p>
-&lt;h2 id="常見指令">常見指令&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="常見指令">&lt;a href="#%e5%b8%b8%e8%a6%8b%e6%8c%87%e4%bb%a4" class="header-anchor">&lt;/a>常見指令
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -687,8 +687,8 @@ name 和 git 設定的一樣&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">$&lt;/span> &lt;span class="n">gpg&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">armor&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="k">export&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">secret&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="刪除金鑰">刪除金鑰&lt;/h2>
-&lt;p>在刪除的時候分成兩步驟，刪除私鑰、刪除公鑰。在刪除之前要先知道要刪除的金鑰的 ID&lt;/p>
+&lt;/div>&lt;h2 id="刪除金鑰">&lt;a href="#%e5%88%aa%e9%99%a4%e9%87%91%e9%91%b0" class="header-anchor">&lt;/a>刪除金鑰
+&lt;/h2>&lt;p>在刪除的時候分成兩步驟，刪除私鑰、刪除公鑰。在刪除之前要先知道要刪除的金鑰的 ID&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -717,8 +717,8 @@ name 和 git 設定的一樣&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gpg --delete-key &amp;lt;ID&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>isolate</title><link>https://blog.simbafs.cc/p/linux/isolate/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/isolate/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/isolate.png" alt="Featured image of post isolate" />&lt;h1 id="isolate">isolate&lt;/h1>
-&lt;p>我有一個放了很久的計畫，就是自己寫一個 OJ，因為我覺得現在的那個太難用了。
+&lt;/div></description></item><item><title>isolate</title><link>https://blog.simbafs.cc/p/isolate/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/isolate/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/isolate.png" alt="Featured image of post isolate" />&lt;h1 id="isolate">&lt;a href="#isolate" class="header-anchor">&lt;/a>isolate
+&lt;/h1>&lt;p>我有一個放了很久的計畫，就是自己寫一個 OJ，因為我覺得現在的那個太難用了。
 我很快的建立 repo 但是卻完全沒有進展，我寫了一個 shell script 幫忙編譯執行程式之後我就在也沒有動過他了
 我沒有繼續動工的原因是我不知道如何隔離使用者提交的程式碼
 我想過 docker 可是據說還是不安全
@@ -728,8 +728,8 @@ name 和 git 設定的一樣&lt;/p>
 而且這好像是 IOI 自己寫的，應該是蠻安全的（吧？）
 今天成功編譯過後把心得寫下來&lt;/p>
 &lt;hr>
-&lt;h2 id="編譯">編譯&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="編譯">&lt;a href="#%e7%b7%a8%e8%ad%af" class="header-anchor">&lt;/a>編譯
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -747,8 +747,8 @@ name 和 git 設定的一樣&lt;/p>
 &lt;/div>
 &lt;/div>&lt;p>耶！編譯/安裝完成了&lt;/p>
 &lt;hr>
-&lt;h2 id="建立沙箱執行程式">建立沙箱/執行程式&lt;/h2>
-&lt;p>建立好之後切到 root 去
+&lt;h2 id="建立沙箱執行程式">&lt;a href="#%e5%bb%ba%e7%ab%8b%e6%b2%99%e7%ae%b1%e5%9f%b7%e8%a1%8c%e7%a8%8b%e5%bc%8f" class="header-anchor">&lt;/a>建立沙箱/執行程式
+&lt;/h2>&lt;p>建立好之後切到 root 去
 用&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -788,15 +788,15 @@ hello.sh&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>他最後會輸出執行時間和執行成功的訊息
-其他的內容等等再補&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://blog.simbafs.cc/p/linux/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/ssh-tunnel/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/ssh-tunnel.png" alt="Featured image of post SSH Tunnel" />&lt;h1 id="ssh-tunnel">SSH Tunnel&lt;/h1>
-&lt;p>昨天架好了 reverse ssh 讓我可以連回學校 server
+其他的內容等等再補&lt;/p></description></item><item><title>SSH Tunnel</title><link>https://blog.simbafs.cc/p/ssh-tunnel/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-tunnel/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/ssh-tunnel.png" alt="Featured image of post SSH Tunnel" />&lt;h1 id="ssh-tunnel">&lt;a href="#ssh-tunnel" class="header-anchor">&lt;/a>SSH Tunnel
+&lt;/h1>&lt;p>昨天架好了 reverse ssh 讓我可以連回學校 server
 今天來研究 ssh tunnel&lt;/p>
-&lt;h2 id="簡介">簡介&lt;/h2>
-&lt;p>ssh tunnel 分正反向
+&lt;h2 id="簡介">&lt;a href="#%e7%b0%a1%e4%bb%8b" class="header-anchor">&lt;/a>簡介
+&lt;/h2>&lt;p>ssh tunnel 分正反向
 其實他們的差別只有在方向不一樣
 連語法參數都一樣&lt;/p>
-&lt;h2 id="正向-tunnel">正向 tunnel&lt;/h2>
-&lt;p>正向的 tunnel 參數是 -L
+&lt;h2 id="正向-tunnel">&lt;a href="#%e6%ad%a3%e5%90%91-tunnel" class="header-anchor">&lt;/a>正向 tunnel
+&lt;/h2>&lt;p>正向的 tunnel 參數是 -L
 語法：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -812,8 +812,8 @@ hello.sh&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -L local_socket:remote_socket
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="反向-tunnel">反向 tunnel&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="反向-tunnel">&lt;a href="#%e5%8f%8d%e5%90%91-tunnel" class="header-anchor">&lt;/a>反向 tunnel
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -829,8 +829,8 @@ hello.sh&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh -R [bind_address:]port
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>看起來好像很難
+&lt;/div>&lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
+&lt;/h2>&lt;p>看起來好像很難
 但是其實用下面這個就夠了
 正向：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -853,13 +853,13 @@ hello.sh&lt;/p>
 &lt;/div>&lt;p>總而言之就是前面的和選項一樣
 如果是 -L 那前面就是 local port
 如果是 -R 那前面就是 remote port&lt;/p>
-&lt;h2 id="參考連結">參考連結&lt;/h2>
-&lt;p>&lt;a class="link" href="https://johnliu55.tw/ssh-tunnel.html" target="_blank" rel="noopener"
->https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://blog.simbafs.cc/p/linux/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/reverse-ssh/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/reverse-ssh.png" alt="Featured image of post Reverse SSH" />&lt;h1 id="reverse-ssh">Reverse SSH&lt;/h1>
-&lt;p>一直以來連線回社辦的電腦都要走 webtty 再開 tmate
+&lt;h2 id="參考連結">&lt;a href="#%e5%8f%83%e8%80%83%e9%80%a3%e7%b5%90" class="header-anchor">&lt;/a>參考連結
+&lt;/h2>&lt;p>&lt;a class="link" href="https://johnliu55.tw/ssh-tunnel.html" target="_blank" rel="noopener"
+>https://johnliu55.tw/ssh-tunnel.html&lt;/a>&lt;/p></description></item><item><title>Reverse SSH</title><link>https://blog.simbafs.cc/p/reverse-ssh/</link><pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/reverse-ssh/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/reverse-ssh.png" alt="Featured image of post Reverse SSH" />&lt;h1 id="reverse-ssh">&lt;a href="#reverse-ssh" class="header-anchor">&lt;/a>Reverse SSH
+&lt;/h1>&lt;p>一直以來連線回社辦的電腦都要走 webtty 再開 tmate
 但是今天發現了一個新的方法可以透過反向的 ssh 連回社辦&lt;/p>
-&lt;h2 id="reverse-ssh-1">reverse ssh&lt;/h2>
-&lt;p>在社辦電腦&lt;/p>
+&lt;h2 id="reverse-ssh-1">&lt;a href="#reverse-ssh-1" class="header-anchor">&lt;/a>reverse ssh
+&lt;/h2>&lt;p>在社辦電腦&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -879,8 +879,8 @@ hello.sh&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>就可以連線回社辦伺服器了&lt;/p>
-&lt;h2 id="autossh">autossh&lt;/h2>
-&lt;p>但是這樣做 ssh 連線有可能會超時然後斷掉
+&lt;h2 id="autossh">&lt;a href="#autossh" class="header-anchor">&lt;/a>autossh
+&lt;/h2>&lt;p>但是這樣做 ssh 連線有可能會超時然後斷掉
 這時候可以透過 autossh 來幫我們自動建立連線
 在社辦電腦&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -904,8 +904,8 @@ hello.sh&lt;/p>
 &lt;/div>
 &lt;/div>&lt;p>來連回社辦啦！
 最後可以把這堆在 vps 上再做一次就可以在 internet 連回社辦伺服器了&lt;/p>
-&lt;h3 id="centos">CentOS&lt;/h3>
-&lt;blockquote>
+&lt;h3 id="centos">&lt;a href="#centos" class="header-anchor">&lt;/a>CentOS
+&lt;/h3>&lt;blockquote>
 &lt;p>update: 2024/03/19
 最近接管實驗室的伺服器，系統是 CentOS，似乎是 CentOS 上 autossh 版本問題，需要用以下指令才能正確啟動 autossh&lt;/p>
 &lt;/blockquote>
@@ -931,8 +931,8 @@ hello.sh&lt;/p>
 &lt;p>參考網址 &lt;a class="link" href="https://stackoverflow.com/a/46710513/10858268" target="_blank" rel="noopener"
 >https://stackoverflow.com/a/46710513/10858268&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="參考網址">參考網址&lt;/h2>
-&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/15983795/how-do-i-establish-a-bidirectional-ssh-tunnel" target="_blank" rel="noopener"
+&lt;h2 id="參考網址">&lt;a href="#%e5%8f%83%e8%80%83%e7%b6%b2%e5%9d%80" class="header-anchor">&lt;/a>參考網址
+&lt;/h2>&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/15983795/how-do-i-establish-a-bidirectional-ssh-tunnel" target="_blank" rel="noopener"
 >https://stackoverflow.com/questions/15983795/how-do-i-establish-a-bidirectional-ssh-tunnel&lt;/a>&lt;br>
 &lt;a class="link" href="https://ez3c.tw/2043" target="_blank" rel="noopener"
 >https://ez3c.tw/2043&lt;/a>&lt;br>

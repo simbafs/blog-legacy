@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ipfs on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/ipfs/</link><description>Recent content in Ipfs on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 22 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/ipfs/index.xml" rel="self" type="application/rss+xml"/><item><title>IPFS</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ipfs/index.png" alt="Featured image of post IPFS" />&lt;h1 id="ipfs">IPFS&lt;/h1>
-&lt;p>ipfs（&lt;strong>I&lt;/strong>nter&lt;strong>P&lt;/strong>lanetary &lt;strong>F&lt;/strong>ile &lt;strong>S&lt;/strong>ystem）是一個去中心化的檔案儲存方案，為什麼說是方案，因為他包括了通訊協議、軟體、檔案系統、名稱系統、閘道器。這個概念其實不新鮮但是 ipfs 整合過去去中心化方案的優點，而且他整合很很棒，可以開箱即用（out of box）。在 &lt;a class="link" href="https://github.com/ipfs/kubo/#what-is-ipfs" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ipfs on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/ipfs/</link><description>Recent content in Ipfs on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 22 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/ipfs/index.xml" rel="self" type="application/rss+xml"/><item><title>IPFS</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ipfs/index.png" alt="Featured image of post IPFS" />&lt;h1 id="ipfs">&lt;a href="#ipfs" class="header-anchor">&lt;/a>IPFS
+&lt;/h1>&lt;p>ipfs（&lt;strong>I&lt;/strong>nter&lt;strong>P&lt;/strong>lanetary &lt;strong>F&lt;/strong>ile &lt;strong>S&lt;/strong>ystem）是一個去中心化的檔案儲存方案，為什麼說是方案，因為他包括了通訊協議、軟體、檔案系統、名稱系統、閘道器。這個概念其實不新鮮但是 ipfs 整合過去去中心化方案的優點，而且他整合很很棒，可以開箱即用（out of box）。在 &lt;a class="link" href="https://github.com/ipfs/kubo/#what-is-ipfs" target="_blank" rel="noopener"
 >ipfs 的 GitHub README.md 中&lt;/a> 中的介紹：「It is like a single BitTorrent swarm, exchanging git objects」。他傳檔案的方式就像 BT 一樣是透過 p2p，定位檔案的方式像 Git，將檔案內容雜湊。&lt;/p>
 &lt;hr>
-&lt;h2 id="安裝">安裝&lt;/h2>
-&lt;p>截稿當下，ipfs 還沒有被 Ubuntu 收錄，所以你沒辦法用 &lt;code>apt install&lt;/code> 安裝。ipfs 的執行擋是用 Go 寫的，因此可以輕易跨平台執行，去 &lt;a class="link" href="https://github.com/ipfs/kubo/releases/latest" target="_blank" rel="noopener"
+&lt;h2 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
+&lt;/h2>&lt;p>截稿當下，ipfs 還沒有被 Ubuntu 收錄，所以你沒辦法用 &lt;code>apt install&lt;/code> 安裝。ipfs 的執行擋是用 Go 寫的，因此可以輕易跨平台執行，去 &lt;a class="link" href="https://github.com/ipfs/kubo/releases/latest" target="_blank" rel="noopener"
 >ipfs 在 GitHub 的 Release 頁面&lt;/a> 下載對應的版本，然後解壓縮，你可以把 &lt;code>ipfs&lt;/code> 這個檔案自己搬到你的 &lt;code>$PATH&lt;/code> 下，或是用 &lt;code>$ ./install.sh&lt;/code> 讓他的安裝腳本幫你選擇目錄&lt;/p>
-&lt;h2 id="android">Android&lt;/h2>
-&lt;p>在 Google play 可以找到一堆號稱是 ipfs 的 App，但功能都不齊全，如果你想在在 Android 手機上執行 ipfs，最好的方式是用 &lt;a class="link" href="https://termux.dev/en/" target="_blank" rel="noopener"
+&lt;h2 id="android">&lt;a href="#android" class="header-anchor">&lt;/a>Android
+&lt;/h2>&lt;p>在 Google play 可以找到一堆號稱是 ipfs 的 App，但功能都不齊全，如果你想在在 Android 手機上執行 ipfs，最好的方式是用 &lt;a class="link" href="https://termux.dev/en/" target="_blank" rel="noopener"
 >termux&lt;/a> 這套終端機模擬器，現在 Google Play 上已經沒有更新，要最新版的要去 &lt;a class="link" href="https://github.com/termux/termux-app#f-droid" target="_blank" rel="noopener"
 >F-Droid&lt;/a> 或是 &lt;a class="link" href="https://github.com/termux/termux-app/releases/latest" target="_blank" rel="noopener"
 >GitHub Release&lt;/a> 下載。安裝後一樣按照上面的步驟，檔案選 &lt;code>linux-arm64&lt;/code> 那個就可以了。經過測試所有功能都和電腦一樣，包括 webui。&lt;/p>
-&lt;h2 id="基本功能">基本功能&lt;/h2>
-&lt;h2 id="ipfs-上傳檔案">ipfs 上傳檔案&lt;/h2>
-&lt;p>在節點 A 上執行 &lt;code>$ ipfs add &amp;lt;file&amp;gt;&lt;/code>、&lt;code>$ cat &amp;lt;file&amp;gt; | ipfs add&lt;/code>，這個命令會回傳一串 hash，稱為 &lt;code>CID&lt;/code>，通常是 &lt;code>Qm&lt;/code> 開頭，所以也被稱為 Qm hash&lt;/p>
-&lt;h2 id="下載檔案">下載檔案&lt;/h2>
-&lt;p>如果另一個節點有任何方式可以連線到節點 A（不論是直接的 peer 或是透過全球、區域的網路連接）都可以用 &lt;code>$ ipfs cat &amp;lt;CID&amp;gt;&lt;/code> 將內容印到 stdout。如果要直接存起來，也可以用 &lt;code>$ ipfs get [-o file] &amp;lt;CID&amp;gt;&lt;/code>，如果不指定 &lt;code>-o&lt;/code> 檔名會是 CID&lt;/p>
-&lt;h2 id="查看自己的-id">查看自己的 id&lt;/h2>
-&lt;p>&lt;code>$ ipfs id | jq .ID&lt;/code>&lt;/p>
-&lt;h2 id="查看-peers">查看 peers&lt;/h2>
-&lt;p>這個指令會列出所有直接連線節點的 id，如果找不到不代表拿不到檔案，透過間接的方式還是拿得到，只是第一次要找比較久
+&lt;h2 id="基本功能">&lt;a href="#%e5%9f%ba%e6%9c%ac%e5%8a%9f%e8%83%bd" class="header-anchor">&lt;/a>基本功能
+&lt;/h2>&lt;h2 id="ipfs-上傳檔案">&lt;a href="#ipfs-%e4%b8%8a%e5%82%b3%e6%aa%94%e6%a1%88" class="header-anchor">&lt;/a>ipfs 上傳檔案
+&lt;/h2>&lt;p>在節點 A 上執行 &lt;code>$ ipfs add &amp;lt;file&amp;gt;&lt;/code>、&lt;code>$ cat &amp;lt;file&amp;gt; | ipfs add&lt;/code>，這個命令會回傳一串 hash，稱為 &lt;code>CID&lt;/code>，通常是 &lt;code>Qm&lt;/code> 開頭，所以也被稱為 Qm hash&lt;/p>
+&lt;h2 id="下載檔案">&lt;a href="#%e4%b8%8b%e8%bc%89%e6%aa%94%e6%a1%88" class="header-anchor">&lt;/a>下載檔案
+&lt;/h2>&lt;p>如果另一個節點有任何方式可以連線到節點 A（不論是直接的 peer 或是透過全球、區域的網路連接）都可以用 &lt;code>$ ipfs cat &amp;lt;CID&amp;gt;&lt;/code> 將內容印到 stdout。如果要直接存起來，也可以用 &lt;code>$ ipfs get [-o file] &amp;lt;CID&amp;gt;&lt;/code>，如果不指定 &lt;code>-o&lt;/code> 檔名會是 CID&lt;/p>
+&lt;h2 id="查看自己的-id">&lt;a href="#%e6%9f%a5%e7%9c%8b%e8%87%aa%e5%b7%b1%e7%9a%84-id" class="header-anchor">&lt;/a>查看自己的 id
+&lt;/h2>&lt;p>&lt;code>$ ipfs id | jq .ID&lt;/code>&lt;/p>
+&lt;h2 id="查看-peers">&lt;a href="#%e6%9f%a5%e7%9c%8b-peers" class="header-anchor">&lt;/a>查看 peers
+&lt;/h2>&lt;p>這個指令會列出所有直接連線節點的 id，如果找不到不代表拿不到檔案，透過間接的方式還是拿得到，只是第一次要找比較久
 &lt;code>$ ipfs swarm peers&lt;/code>&lt;/p>
-&lt;h2 id="wrap">wrap&lt;/h2>
-&lt;p>如果一次有多個檔案要分享，例如一個網站，可以用 &lt;code>-w&lt;/code> &lt;strong>保留目錄結構&lt;/strong>，例如以下目錄&lt;/p>
+&lt;h2 id="wrap">&lt;a href="#wrap" class="header-anchor">&lt;/a>wrap
+&lt;/h2>&lt;p>如果一次有多個檔案要分享，例如一個網站，可以用 &lt;code>-w&lt;/code> &lt;strong>保留目錄結構&lt;/strong>，例如以下目錄&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -64,11 +64,11 @@
 &lt;p>&lt;strong>Warning&lt;/strong>&lt;br>
 因為目錄也是根據內容雜湊，所以你不能修改目錄內的檔案而不變動目錄的 CID，就和檔案一樣&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="可變位址">可變位址&lt;/h2>
-&lt;h2 id="ipns">IPNS&lt;/h2>
-&lt;p>ipfs 有個介紹到這裡，有個小問題，一個檔案只要一更改，位址（CID）就會改變，這對於網路存取很不友善，誰知道那一大串 hash 要去哪裡找？因此 ipfs 提供了一個方案：IPNS&lt;/p>
-&lt;h3 id="publish">publish&lt;/h3>
-&lt;p>首先，我們先準備一個 CID &lt;code>QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&lt;/code>，他的內容就一個字「hi」。一樣 add 之後，就要來使用 ipns 了&lt;/p>
+&lt;h2 id="可變位址">&lt;a href="#%e5%8f%af%e8%ae%8a%e4%bd%8d%e5%9d%80" class="header-anchor">&lt;/a>可變位址
+&lt;/h2>&lt;h2 id="ipns">&lt;a href="#ipns" class="header-anchor">&lt;/a>IPNS
+&lt;/h2>&lt;p>ipfs 有個介紹到這裡，有個小問題，一個檔案只要一更改，位址（CID）就會改變，這對於網路存取很不友善，誰知道那一大串 hash 要去哪裡找？因此 ipfs 提供了一個方案：IPNS&lt;/p>
+&lt;h3 id="publish">&lt;a href="#publish" class="header-anchor">&lt;/a>publish
+&lt;/h3>&lt;p>首先，我們先準備一個 CID &lt;code>QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&lt;/code>，他的內容就一個字「hi」。一樣 add 之後，就要來使用 ipns 了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -91,8 +91,8 @@
 &lt;p>&lt;strong>Notice&lt;/strong>&lt;br>
 &lt;code>/ipfs/CID&lt;/code> 或是 &lt;code>/ipns/&amp;lt;key&amp;gt;&lt;/code> 都可以想成 path，放在 &lt;code>$ ipfs cat&lt;/code>、&lt;code>$ ipfs ls&lt;/code> 後面當參數。或是可以透過公開的閘道器，例如 &lt;a class="link" href="ipfs.io" >ipfs.io&lt;/a> 存取。&lt;code>https://ipfs.io/ipfs/&amp;lt;CID&amp;gt;&lt;/code>、&lt;code>https://ipfs.io/ipns/&amp;lt;key&amp;gt;&lt;/code>&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="republish">republish&lt;/h3>
-&lt;p>我們還沒示範到 ipns 的重要功能：可變位址。現在準備另一個 CID &lt;code>QmermPSVVcmcutmQ1woTAtUcByUvoS2F3ZcKdkdbuAdEi5&lt;/code>，內容是「hihi」&lt;/p>
+&lt;h3 id="republish">&lt;a href="#republish" class="header-anchor">&lt;/a>republish
+&lt;/h3>&lt;p>我們還沒示範到 ipns 的重要功能：可變位址。現在準備另一個 CID &lt;code>QmermPSVVcmcutmQ1woTAtUcByUvoS2F3ZcKdkdbuAdEi5&lt;/code>，內容是「hihi」&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -108,8 +108,8 @@
 &lt;p>&lt;strong>Notice&lt;/strong>&lt;br>
 你不用擔心有其他人會擅自幫你更新 key 的指向，因為那個 key 其實是一對非對稱金鑰的公鑰，私鑰存在你的電腦，只有有私鑰的人才能更新。&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="dnslink">DNSLink&lt;/h2>
-&lt;p>如果你覺得用非對稱金鑰產生的 key 很醜，還是記不住，你可以透過傳統的 DNS 來當作 key（意味著這部份其實是中心化的，要付錢）&lt;br>
+&lt;h2 id="dnslink">&lt;a href="#dnslink" class="header-anchor">&lt;/a>DNSLink
+&lt;/h2>&lt;p>如果你覺得用非對稱金鑰產生的 key 很醜，還是記不住，你可以透過傳統的 DNS 來當作 key（意味著這部份其實是中心化的，要付錢）&lt;br>
 DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指向 CID &lt;code>QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&lt;/code>，那就在 &lt;code>_dnslink.ipfs.simbafs.cc&lt;/code> 新增一條 TXT DNS 紀錄 &lt;code>dnslink=/ipfs/QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&lt;/code>，這時候你就可以用 &lt;code>/ipns/ipfs.simbafs.cc&lt;/code> 來代替 &lt;code>/ipfs/QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&lt;/code> 了&lt;br>
 這時候你可以查 DNS 紀錄，如果正常就代表設定完成了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -122,18 +122,18 @@ DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指�
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;dnslink=dnslink=/ipfs/QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="ipns-in-dnslink">ipns in DNSLink&lt;/h3>
-&lt;p>如果你查看 ipfs.io 的 DNSLink 紀錄，你會發現他的內容是 &lt;code>dnslink=/ipns/website.ipfs.io&lt;/code>，也就是說 &lt;code>/ipns/ipfs.io&lt;/code> 和 &lt;code>/ipns/website.ipfs.io&lt;/code> 是一樣的，從瀏覽器看起來也的確如此。再查 website 的 DNSLink 紀錄 &lt;code>dnslink=/ipfs/QmQoprt2cVNJKrDUTg2QYHmaqw7T1E36sSg9bPiWgoLY48&lt;/code>，看來 ipfs.io 真正指向的 CID 其實是 &lt;code>Qm....Y48&lt;/code>&lt;br>
+&lt;/div>&lt;h3 id="ipns-in-dnslink">&lt;a href="#ipns-in-dnslink" class="header-anchor">&lt;/a>ipns in DNSLink
+&lt;/h3>&lt;p>如果你查看 ipfs.io 的 DNSLink 紀錄，你會發現他的內容是 &lt;code>dnslink=/ipns/website.ipfs.io&lt;/code>，也就是說 &lt;code>/ipns/ipfs.io&lt;/code> 和 &lt;code>/ipns/website.ipfs.io&lt;/code> 是一樣的，從瀏覽器看起來也的確如此。再查 website 的 DNSLink 紀錄 &lt;code>dnslink=/ipfs/QmQoprt2cVNJKrDUTg2QYHmaqw7T1E36sSg9bPiWgoLY48&lt;/code>，看來 ipfs.io 真正指向的 CID 其實是 &lt;code>Qm....Y48&lt;/code>&lt;br>
 這個案例告訴我們，DNSLink 不一定只能放 CID，放 ipns 的 key 也是可以的，例如指向 &lt;code>/ipns/k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm&lt;/code> 的話，只要更新 &lt;code>k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm&lt;/code> 的指向內容就可以更新網站，不需要動 DNS 紀錄&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>Notice&lt;/strong>&lt;br>
 我測試有成功，至少更新 ipns 比更新 DNS 快，而且只需要在 CLI 操作&lt;/p>
 &lt;/blockquote>
 &lt;hr>
-&lt;h2 id="瀏覽器">瀏覽器&lt;/h2>
-&lt;p>目前為止，所有的操作都在 CLI 中透過 &lt;code>ipfs&lt;/code> 命令進行，但我們的目標應該是透過瀏覽器可以看到掛在 ipfs 上的網頁吧！這個部份只能說都還不甚理想，要嘛是回歸中心化的解決方案，不然就是網址會長很醜。&lt;/p>
-&lt;h2 id="gateway-閘道器">Gateway 閘道器&lt;/h2>
-&lt;p>之所以需要閘道器，就是因為瀏覽器還無法直接讀取 ipfs 的內容，所以需要閘道器幫忙做轉發，他的功能是把 location-based 的 http 轉換成 content-addressing 的 ipfs，再將資訊返回瀏覽器，例如將 ipfs.io 透過 ipns 解析成 &lt;code>/ipfs/QmQoprt2cVNJKrDUTg2QYHmaqw7T1E36sSg9bPiWgoLY48&lt;/code>，取得內容後再將資料丟回給瀏覽器&lt;/p>
+&lt;h2 id="瀏覽器">&lt;a href="#%e7%80%8f%e8%a6%bd%e5%99%a8" class="header-anchor">&lt;/a>瀏覽器
+&lt;/h2>&lt;p>目前為止，所有的操作都在 CLI 中透過 &lt;code>ipfs&lt;/code> 命令進行，但我們的目標應該是透過瀏覽器可以看到掛在 ipfs 上的網頁吧！這個部份只能說都還不甚理想，要嘛是回歸中心化的解決方案，不然就是網址會長很醜。&lt;/p>
+&lt;h2 id="gateway-閘道器">&lt;a href="#gateway-%e9%96%98%e9%81%93%e5%99%a8" class="header-anchor">&lt;/a>Gateway 閘道器
+&lt;/h2>&lt;p>之所以需要閘道器，就是因為瀏覽器還無法直接讀取 ipfs 的內容，所以需要閘道器幫忙做轉發，他的功能是把 location-based 的 http 轉換成 content-addressing 的 ipfs，再將資訊返回瀏覽器，例如將 ipfs.io 透過 ipns 解析成 &lt;code>/ipfs/QmQoprt2cVNJKrDUTg2QYHmaqw7T1E36sSg9bPiWgoLY48&lt;/code>，取得內容後再將資料丟回給瀏覽器&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -174,31 +174,31 @@ DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指�
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └───────────┘
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="使用閘道器">使用閘道器&lt;/h2>
-&lt;p>先整理一下我們現在有的東西&lt;/p>
+&lt;/div>&lt;h2 id="使用閘道器">&lt;a href="#%e4%bd%bf%e7%94%a8%e9%96%98%e9%81%93%e5%99%a8" class="header-anchor">&lt;/a>使用閘道器
+&lt;/h2>&lt;p>先整理一下我們現在有的東西&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">key&lt;/th>
-&lt;th style="text-align:left">value&lt;/th>
+&lt;th style="text-align: center">key&lt;/th>
+&lt;th style="text-align: left">value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">CID&lt;/td>
-&lt;td style="text-align:left">&lt;code>/ipfs/QmermPSVVcmcutmQ1woTAtUcByUvoS2F3ZcKdkdbuAdEi5&lt;/code>&lt;/td>
+&lt;td style="text-align: center">CID&lt;/td>
+&lt;td style="text-align: left">&lt;code>/ipfs/QmermPSVVcmcutmQ1woTAtUcByUvoS2F3ZcKdkdbuAdEi5&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">ipns key&lt;/td>
-&lt;td style="text-align:left">&lt;code>/ipns/k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm&lt;/code>&lt;/td>
+&lt;td style="text-align: center">ipns key&lt;/td>
+&lt;td style="text-align: left">&lt;code>/ipns/k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">DNSLink&lt;/td>
-&lt;td style="text-align:left">&lt;code>ipfs.simbafs.cc&lt;/code>&lt;/td>
+&lt;td style="text-align: center">DNSLink&lt;/td>
+&lt;td style="text-align: left">&lt;code>ipfs.simbafs.cc&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">閘道器&lt;/td>
-&lt;td style="text-align:left">ipfs.io&lt;/td>
+&lt;td style="text-align: center">閘道器&lt;/td>
+&lt;td style="text-align: left">ipfs.io&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -213,8 +213,8 @@ DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指�
 &lt;li>ipfs.io/ipns/k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm&lt;/li>
 &lt;li>ipfs.io/ipns/ipfs.simbafs.cc&lt;/li>
 &lt;/ul>
-&lt;h2 id="本機閘道器">本機閘道器&lt;/h2>
-&lt;p>已經有公共閘道器了，為什麼還需要本機閘道器呢？因為公共閘道器，說到底還是一個中心化的設施，如果我們希望整個過程都是去中心化，那就要用本機的閘道器。而且如果你的檔案是放在本機，那用本機閘道器會最快找到，因為距離最近嘛，而且用本機閘道器還有加速網頁載入的效果，類似 cache。&lt;br>
+&lt;h2 id="本機閘道器">&lt;a href="#%e6%9c%ac%e6%a9%9f%e9%96%98%e9%81%93%e5%99%a8" class="header-anchor">&lt;/a>本機閘道器
+&lt;/h2>&lt;p>已經有公共閘道器了，為什麼還需要本機閘道器呢？因為公共閘道器，說到底還是一個中心化的設施，如果我們希望整個過程都是去中心化，那就要用本機的閘道器。而且如果你的檔案是放在本機，那用本機閘道器會最快找到，因為距離最近嘛，而且用本機閘道器還有加速網頁載入的效果，類似 cache。&lt;br>
 使用本機閘道器很簡單，開啟 ipfs daemon 時就已經預設開一個本機閘道器了，位址在 localhost:8080，接著來看看怎樣可以連上我們的檔案&lt;/p>
 &lt;p>首先是和公共閘道器一樣的功能&lt;/p>
 &lt;ul>
@@ -228,8 +228,8 @@ DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指�
 &lt;li>k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm.ipns.localhost:8080&lt;/li>
 &lt;/ul>
 &lt;blockquote>
-&lt;h3 id="cid-in-subdomain">CID in subdomain&lt;/h3>
-&lt;p>插播一下，看到這裡，你會發現 DNSLink、ipns key 都可以放在閘道器的 subdomain，那為什麼 CID 不行呢？其實不是不行，但是需要小修改一下，因為我們的 CID 是區分大小寫的（case-sensitive），但是 domain name 是不區分大小寫的（case-insensitive，也就是說 google.com = Google.com = GoOglE.cOm），所以我們需要換一個 case-insensitive 的雜湊。&lt;br>
+&lt;h3 id="cid-in-subdomain">&lt;a href="#cid-in-subdomain" class="header-anchor">&lt;/a>CID in subdomain
+&lt;/h3>&lt;p>插播一下，看到這裡，你會發現 DNSLink、ipns key 都可以放在閘道器的 subdomain，那為什麼 CID 不行呢？其實不是不行，但是需要小修改一下，因為我們的 CID 是區分大小寫的（case-sensitive），但是 domain name 是不區分大小寫的（case-insensitive，也就是說 google.com = Google.com = GoOglE.cOm），所以我們需要換一個 case-insensitive 的雜湊。&lt;br>
 &lt;code>--cid-version 1&lt;/code> 這個選項會預設的 CIDv0 改成 CIDv1，CIDv1 會產生 case-insensitive 的雜湊。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -243,14 +243,14 @@ DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指�
 &lt;/div>
 &lt;/div>&lt;/blockquote>
 &lt;p>回到閘道器，慎選閘道器大概是比你的檔案怎麼丟上 ipfs 還重要的事，不只是因為閘道器的選擇會影響載入速度，更是因為閘道器代理了你的網頁，所以他可以修改、或是監控網頁的活動，再加上瀏覽器同源政策的影響，如果閘道器上有人要做壞事，那網站的資安可能就會受到威脅。但這方面我沒有研究，我知道可以避免的方式是不要用閘道器預設的網址，可以用 CNAME 改成自己的 domain，再來是選擇信任的閘道器，像是 ipfs.io、cf-ipfs.com 等等。當然如果是用自己的閘道器或是本機閘道器就更好了（但可能就要犧牲效能或是網址會變醜）。&lt;/p>
-&lt;h2 id="架一個看起來很像正常但其實是放在-ipfs-的網頁">架一個看起來很像正常但其實是放在 ipfs 的網頁&lt;/h2>
-&lt;p>研究中&amp;hellip;https 搞不定&lt;br>
+&lt;h2 id="架一個看起來很像正常但其實是放在-ipfs-的網頁">&lt;a href="#%e6%9e%b6%e4%b8%80%e5%80%8b%e7%9c%8b%e8%b5%b7%e4%be%86%e5%be%88%e5%83%8f%e6%ad%a3%e5%b8%b8%e4%bd%86%e5%85%b6%e5%af%a6%e6%98%af%e6%94%be%e5%9c%a8-ipfs-%e7%9a%84%e7%b6%b2%e9%a0%81" class="header-anchor">&lt;/a>架一個看起來很像正常但其實是放在 ipfs 的網頁
+&lt;/h2>&lt;p>研究中&amp;hellip;https 搞不定&lt;br>
 gateway timeout&amp;hellip;&lt;/p>
 &lt;hr>
-&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>ipfs 是真的有潛力改變網路生態的，但是他還有兩大問題要解決，一是如何獎勵/強迫做種（借用 BT 的名詞 XD），也就是節點中心化問題，二是閘道器中心化問題，兩個都解決了或許 ipfs 就可以真正的實現&lt;/p>
-&lt;h2 id="如何獎勵強迫做種節點中心化問題">如何獎勵/強迫做種（節點中心化問題）&lt;/h2>
-&lt;p>這個問題和 BT 一樣，假設今天我一個無名小卒想要在 ipfs 發布一個檔案，很顯然我自己開一個節點最簡單方便，但是如果我的檔案瀏覽人數不多，就會變成只有我自己和少數的節點存資料，那存取速度會慢到靠北。要解決這個問題，就會產生出像是 cloudflare 這種 CDN 幫忙「快取」（以 ipfs 的術語來說應該就是「做種」）的服務，甚至是要付費的。最後就變成要發布檔案就要找這些 CDN 付費，不然他們的伺服器就不會存你的檔案，每次都要滿世界找到你的節點，才能要到資料。&lt;br>
+&lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
+&lt;/h2>&lt;p>ipfs 是真的有潛力改變網路生態的，但是他還有兩大問題要解決，一是如何獎勵/強迫做種（借用 BT 的名詞 XD），也就是節點中心化問題，二是閘道器中心化問題，兩個都解決了或許 ipfs 就可以真正的實現&lt;/p>
+&lt;h2 id="如何獎勵強迫做種節點中心化問題">&lt;a href="#%e5%a6%82%e4%bd%95%e7%8d%8e%e5%8b%b5%e5%bc%b7%e8%bf%ab%e5%81%9a%e7%a8%ae%e7%af%80%e9%bb%9e%e4%b8%ad%e5%bf%83%e5%8c%96%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>如何獎勵/強迫做種（節點中心化問題）
+&lt;/h2>&lt;p>這個問題和 BT 一樣，假設今天我一個無名小卒想要在 ipfs 發布一個檔案，很顯然我自己開一個節點最簡單方便，但是如果我的檔案瀏覽人數不多，就會變成只有我自己和少數的節點存資料，那存取速度會慢到靠北。要解決這個問題，就會產生出像是 cloudflare 這種 CDN 幫忙「快取」（以 ipfs 的術語來說應該就是「做種」）的服務，甚至是要付費的。最後就變成要發布檔案就要找這些 CDN 付費，不然他們的伺服器就不會存你的檔案，每次都要滿世界找到你的節點，才能要到資料。&lt;br>
 當然，因為 ipfs 的天生設計關係，這個問題比傳統的 http 來說容易解決，畢竟總是會有其他小節點幫忙做種，但這還是一個值得關心的問題。&lt;br>
 開發 ipfs 的 protocal lab 曾經提出一個方案來把做種的成本轉移，那就是發行 &lt;a class="link" href="https://en.wikipedia.org/wiki/Filecoin" target="_blank" rel="noopener"
 >FileCoin&lt;/a>，但是以目前的市場來看，任何加密貨幣都會被拿去炒作，然後高機率爆掉，看下圖的 FileCoin 走勢就知道他被炒過一遍了&lt;/p>
@@ -262,8 +262,8 @@ alt="filecoin"
 >source: https://crypto.com/price/zh-TW/filecoin&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;p>這樣的機制能不能讓更多人願意做種？很難說&lt;/p>
-&lt;h2 id="閘道器中心化問題">閘道器中心化問題&lt;/h2>
-&lt;p>如果節點中心化無法解決，至少我覺得閘道器中心化是容易解決的，只要瀏覽器內嵌 ipfs 就好了，或是像當年 Adobe Flash 一樣要裝外掛（也就是類似現在的本地閘道器作法），而且當這東西變成標配之後做種的問題也順帶解決&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>&lt;a class="link" href="https://docs.ipfs.tech" target="_blank" rel="noopener"
+&lt;h2 id="閘道器中心化問題">&lt;a href="#%e9%96%98%e9%81%93%e5%99%a8%e4%b8%ad%e5%bf%83%e5%8c%96%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>閘道器中心化問題
+&lt;/h2>&lt;p>如果節點中心化無法解決，至少我覺得閘道器中心化是容易解決的，只要瀏覽器內嵌 ipfs 就好了，或是像當年 Adobe Flash 一樣要裝外掛（也就是類似現在的本地閘道器作法），而且當這東西變成標配之後做種的問題也順帶解決&lt;/p>
+&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;p>&lt;a class="link" href="https://docs.ipfs.tech" target="_blank" rel="noopener"
 >ipfs docs&lt;/a>&lt;/p></description></item></channel></rss>

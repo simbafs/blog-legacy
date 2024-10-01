@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ithelp on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/ithelp/</link><description>Recent content in Ithelp on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/ithelp/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 21：儲存器與剪貼簿</title><link>https://blog.simbafs.cc/p/ithelp/day21/</link><pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day21/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day21.png" alt="Featured image of post Day 21：儲存器與剪貼簿" />&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ithelp on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/ithelp/</link><description>Recent content in Ithelp on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 21 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/ithelp/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 21：儲存器與剪貼簿</title><link>https://blog.simbafs.cc/p/day21/</link><pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day21/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day21.png" alt="Featured image of post Day 21：儲存器與剪貼簿" />&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day21/stackoverflow-meme.png"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day21/stackoverflow-meme.png"
 loading="lazy"
 alt="stackoverflow meme"
 >&lt;/th>
@@ -9,136 +9,136 @@ alt="stackoverflow meme"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">from: &lt;a class="link" href="https://stackoverflow.blog/2021/04/19/how-often-do-people-actually-copy-and-paste-from-stack-overflow-now-we-know/" target="_blank" rel="noopener"
+&lt;td style="text-align: center">from: &lt;a class="link" href="https://stackoverflow.blog/2021/04/19/how-often-do-people-actually-copy-and-paste-from-stack-overflow-now-we-know/" target="_blank" rel="noopener"
 >https://stackoverflow.blog/2021/04/19/how-often-do-people-actually-copy-and-paste-from-stack-overflow-now-we-know/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>這個是一個 梗圖，大意是你寫程式一定會用到 CTRL-C 和 CTRL-V。我們今天就來看看 vim 的剪貼簿吧！&lt;br>
 在用剪貼簿時，複製的來源可能會有很多種，以我們的環境為例，可能會用系統剪貼簿、tmux 和 vim 本身的剪貼簿&lt;/p>
-&lt;h1 id="系統剪貼簿">系統剪貼簿&lt;/h1>
-&lt;p>基本上對 vim 來說系統剪貼簿和 tmux 在複製貼上是差不多的，在輸入模式貼上就可以了&lt;br>
+&lt;h1 id="系統剪貼簿">&lt;a href="#%e7%b3%bb%e7%b5%b1%e5%89%aa%e8%b2%bc%e7%b0%bf" class="header-anchor">&lt;/a>系統剪貼簿
+&lt;/h1>&lt;p>基本上對 vim 來說系統剪貼簿和 tmux 在複製貼上是差不多的，在輸入模式貼上就可以了&lt;br>
 但是要注意多行的程式碼貼上時 vim 會把縮排搞亂，所以你要嘛用 &lt;code>&amp;lt;leader&amp;gt;f&lt;/code> 重新整理程式碼，或是用命令 &lt;code>:r!cat&lt;/code>，貼上後再按 &lt;code>C-d&lt;/code> 貼到程式裡面。&lt;br>
 &lt;code>:r!cat&lt;/code> 這個命令在 &lt;a class="link" href="../day13" >Day 13&lt;/a> 時有把他寫成快捷鍵 &lt;code>&amp;lt;F3&amp;gt;&lt;/code> 了，所以你也可以直接按 &lt;code>&amp;lt;F3&amp;gt; &lt;/code> 會有一樣的效果&lt;/p>
 &lt;p>另外，下面會講到用 vim 命令存取系統剪貼簿&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">❓ &lt;code>:r!cat&lt;/code> 是什麼意思？&lt;/th>
+&lt;th style="text-align: left">❓ &lt;code>:r!cat&lt;/code> 是什麼意思？&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">&lt;code>r&lt;/code> 這個命令是「載入某個檔案並貼到游標行下面」，用法是 &lt;code>:r {file}&lt;/code>。但是我們這裡不用檔名，&lt;code>!cat&lt;/code> 在這裡的意思是「shell 命令 &lt;code>cat&lt;/code> 的 stdout 這個檔案」，而執行 &lt;code>cat&lt;/code> 時需要 stdin，也就是你剛剛貼上程式碼的地方（在 status bar 下面）。這個方法可以繞過自動縮排，就不會出現程式碼貼上被 vim 弄亂的情形了。&lt;/td>
+&lt;td style="text-align: left">&lt;code>r&lt;/code> 這個命令是「載入某個檔案並貼到游標行下面」，用法是 &lt;code>:r {file}&lt;/code>。但是我們這裡不用檔名，&lt;code>!cat&lt;/code> 在這裡的意思是「shell 命令 &lt;code>cat&lt;/code> 的 stdout 這個檔案」，而執行 &lt;code>cat&lt;/code> 時需要 stdin，也就是你剛剛貼上程式碼的地方（在 status bar 下面）。這個方法可以繞過自動縮排，就不會出現程式碼貼上被 vim 弄亂的情形了。&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="從-vim-複製">從 vim 複製&lt;/h2>
-&lt;p>複製到系統剪貼簿很簡單，在選取時記的按住 &lt;code>&amp;lt;SHIFT&amp;gt;&lt;/code> 就行了，但是因為我們有開啟 vim 滑鼠模式，所以 tmux 剪貼簿就不能複製了（滑鼠被 vim 搶走）（關於 tmux 剪貼簿請看 &lt;a class="link" href="../day09#%e8%a4%87%e8%a3%bd" >Day 09#複製&lt;/a>。&lt;/p>
-&lt;h1 id="vim-基礎剪貼簿">vim 基礎剪貼簿&lt;/h1>
-&lt;p>在 vim 裡面，你可用基礎的 &lt;code>yy&lt;/code>、&lt;code>dd&lt;/code>、&lt;code>x&lt;/code> 等指令將文字放進剪貼簿，或是更進階的 &lt;code>d4w&lt;/code>、&lt;code>y5l&lt;/code> 等等。&lt;br>
+&lt;h2 id="從-vim-複製">&lt;a href="#%e5%be%9e-vim-%e8%a4%87%e8%a3%bd" class="header-anchor">&lt;/a>從 vim 複製
+&lt;/h2>&lt;p>複製到系統剪貼簿很簡單，在選取時記的按住 &lt;code>&amp;lt;SHIFT&amp;gt;&lt;/code> 就行了，但是因為我們有開啟 vim 滑鼠模式，所以 tmux 剪貼簿就不能複製了（滑鼠被 vim 搶走）（關於 tmux 剪貼簿請看 &lt;a class="link" href="../day09#%e8%a4%87%e8%a3%bd" >Day 09#複製&lt;/a>。&lt;/p>
+&lt;h1 id="vim-基礎剪貼簿">&lt;a href="#vim-%e5%9f%ba%e7%a4%8e%e5%89%aa%e8%b2%bc%e7%b0%bf" class="header-anchor">&lt;/a>vim 基礎剪貼簿
+&lt;/h1>&lt;p>在 vim 裡面，你可用基礎的 &lt;code>yy&lt;/code>、&lt;code>dd&lt;/code>、&lt;code>x&lt;/code> 等指令將文字放進剪貼簿，或是更進階的 &lt;code>d4w&lt;/code>、&lt;code>y5l&lt;/code> 等等。&lt;br>
 貼上的話比較單純，就只有 &lt;code>p&lt;/code> 一個（還有 &lt;code>P&lt;/code> ）&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">❓ &lt;code>p&lt;/code> 和 &lt;code>P&lt;/code> 的差別&lt;/th>
+&lt;th style="text-align: left">❓ &lt;code>p&lt;/code> 和 &lt;code>P&lt;/code> 的差別&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">小寫 &lt;code>p&lt;/code> 會把內容貼到游標後，大寫 &lt;code>P&lt;/code> 會把內容貼到游標前&lt;/td>
+&lt;td style="text-align: left">小寫 &lt;code>p&lt;/code> 會把內容貼到游標後，大寫 &lt;code>P&lt;/code> 會把內容貼到游標前&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="vim-進階剪貼簿">vim 進階剪貼簿&lt;/h1>
-&lt;p>在 vim 裡面有個東西叫做 register，中文大概是「儲存器」之類的，我們這邊就這樣叫他。&lt;br>
+&lt;h1 id="vim-進階剪貼簿">&lt;a href="#vim-%e9%80%b2%e9%9a%8e%e5%89%aa%e8%b2%bc%e7%b0%bf" class="header-anchor">&lt;/a>vim 進階剪貼簿
+&lt;/h1>&lt;p>在 vim 裡面有個東西叫做 register，中文大概是「儲存器」之類的，我們這邊就這樣叫他。&lt;br>
 這個東西就是「有命名的」剪貼簿（包含剛剛用的「未命名的」剪貼簿）&lt;br>
 這個東西可以分成兩類，一是可寫的，另一類是有特殊意義的儲存器&lt;/p>
-&lt;h2 id="列出儲存器">列出儲存器&lt;/h2>
-&lt;p>在開始介紹儲存器之前，我們先來看看如何查看儲存器，這樣你在學使用他時就可以一邊操作一邊對照。&lt;br>
+&lt;h2 id="列出儲存器">&lt;a href="#%e5%88%97%e5%87%ba%e5%84%b2%e5%ad%98%e5%99%a8" class="header-anchor">&lt;/a>列出儲存器
+&lt;/h2>&lt;p>在開始介紹儲存器之前，我們先來看看如何查看儲存器，這樣你在學使用他時就可以一邊操作一邊對照。&lt;br>
 列出儲存器內容的命令是 &lt;code>:registers&lt;/code> 或是縮寫 &lt;code>:reg&lt;/code>，他會列出所有目前儲存器中有的內容&lt;/p>
-&lt;h2 id="寫入可寫的的儲存器">寫入可寫的的儲存器&lt;/h2>
-&lt;p>vim 中可寫的儲存器並不是隨便你命名，只有 0 ~ 9 和 a - z，另外這是不分大小寫，所以 a ~ z 和 A ~ Z 是一樣的。&lt;br>
+&lt;h2 id="寫入可寫的的儲存器">&lt;a href="#%e5%af%ab%e5%85%a5%e5%8f%af%e5%af%ab%e7%9a%84%e7%9a%84%e5%84%b2%e5%ad%98%e5%99%a8" class="header-anchor">&lt;/a>寫入可寫的的儲存器
+&lt;/h2>&lt;p>vim 中可寫的儲存器並不是隨便你命名，只有 0 ~ 9 和 a - z，另外這是不分大小寫，所以 a ~ z 和 A ~ Z 是一樣的。&lt;br>
 要存入儲存器方法很簡單，只要在指令（&lt;code>yy&lt;/code>、&lt;code>d4w&lt;/code> 之類的）之前加上 &lt;code>&amp;quot;x&lt;/code>，這個 &lt;code>x&lt;/code> 代指儲存器代號（[0-9a-z]）&lt;br>
 例如「把整行存入 &lt;code>g&lt;/code> 儲存器」的指令就是 &lt;code>&amp;quot;gyy&lt;/code>（注意沒有冒號，直接在命令模式打）。&lt;/p>
-&lt;h2 id="貼上可寫的的儲存器">貼上可寫的的儲存器&lt;/h2>
-&lt;h3 id="命令模式">命令模式&lt;/h3>
-&lt;p>在命令模式中，和寫入時的用法一樣，在 &lt;code>p&lt;/code> 之前加上 &lt;code>&amp;quot;x&lt;/code>&lt;br>
+&lt;h2 id="貼上可寫的的儲存器">&lt;a href="#%e8%b2%bc%e4%b8%8a%e5%8f%af%e5%af%ab%e7%9a%84%e7%9a%84%e5%84%b2%e5%ad%98%e5%99%a8" class="header-anchor">&lt;/a>貼上可寫的的儲存器
+&lt;/h2>&lt;h3 id="命令模式">&lt;a href="#%e5%91%bd%e4%bb%a4%e6%a8%a1%e5%bc%8f" class="header-anchor">&lt;/a>命令模式
+&lt;/h3>&lt;p>在命令模式中，和寫入時的用法一樣，在 &lt;code>p&lt;/code> 之前加上 &lt;code>&amp;quot;x&lt;/code>&lt;br>
 例如「把儲存器 &lt;code>g&lt;/code> 中的內容貼上」的指令就是 &lt;code>&amp;quot;gp&lt;/code>&lt;/p>
-&lt;h3 id="編輯模式">編輯模式&lt;/h3>
-&lt;p>如果你不想為了貼上一段字切換到命令模式（尤其是打中文時切輸入法很痛苦），你可以用 &lt;code>&amp;lt;C-r&amp;gt;&lt;/code> 加上編號貼上&lt;br>
+&lt;h3 id="編輯模式">&lt;a href="#%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f" class="header-anchor">&lt;/a>編輯模式
+&lt;/h3>&lt;p>如果你不想為了貼上一段字切換到命令模式（尤其是打中文時切輸入法很痛苦），你可以用 &lt;code>&amp;lt;C-r&amp;gt;&lt;/code> 加上編號貼上&lt;br>
 例如「把儲存器 &lt;code>g&lt;/code> 中的內容貼上」的指令就是 &lt;code>&amp;lt;C-r&amp;gt;g&lt;/code>&lt;/p>
-&lt;h2 id="有特殊意義儲存器">有特殊意義儲存器&lt;/h2>
-&lt;p>以下我用表格列出有特殊意義的儲存器，他們也都是一個字元代表&lt;/p>
+&lt;h2 id="有特殊意義儲存器">&lt;a href="#%e6%9c%89%e7%89%b9%e6%ae%8a%e6%84%8f%e7%be%a9%e5%84%b2%e5%ad%98%e5%99%a8" class="header-anchor">&lt;/a>有特殊意義儲存器
+&lt;/h2>&lt;p>以下我用表格列出有特殊意義的儲存器，他們也都是一個字元代表&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">儲存器&lt;/th>
-&lt;th style="text-align:left">描述&lt;/th>
+&lt;th style="text-align: center">儲存器&lt;/th>
+&lt;th style="text-align: left">描述&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">&lt;code>&amp;quot;&lt;/code>&lt;/td>
-&lt;td style="text-align:left">s 命名儲存器（預設的，如果不指定就是存到這裡面）&lt;/td>
+&lt;td style="text-align: center">&lt;code>&amp;quot;&lt;/code>&lt;/td>
+&lt;td style="text-align: left">s 命名儲存器（預設的，如果不指定就是存到這裡面）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;code>-&lt;/code>&lt;/td>
-&lt;td style="text-align:left">「剪下」（ &lt;code>d2w&lt;/code>、&lt;code>x&lt;/code> 之類的）的少於一行的（不包括換行）&lt;/td>
+&lt;td style="text-align: center">&lt;code>-&lt;/code>&lt;/td>
+&lt;td style="text-align: left">「剪下」（ &lt;code>d2w&lt;/code>、&lt;code>x&lt;/code> 之類的）的少於一行的（不包括換行）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;code>:&lt;/code>&lt;/td>
-&lt;td style="text-align:left">上次執行的冒號命令&lt;/td>
+&lt;td style="text-align: center">&lt;code>:&lt;/code>&lt;/td>
+&lt;td style="text-align: left">上次執行的冒號命令&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;code>.&lt;/code>&lt;/td>
-&lt;td style="text-align:left">上次輸入模式輸入的文字（唯讀）&lt;/td>
+&lt;td style="text-align: center">&lt;code>.&lt;/code>&lt;/td>
+&lt;td style="text-align: left">上次輸入模式輸入的文字（唯讀）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;code>%&lt;/code>&lt;/td>
-&lt;td style="text-align:left">目前的檔案名稱（唯讀）&lt;/td>
+&lt;td style="text-align: center">&lt;code>%&lt;/code>&lt;/td>
+&lt;td style="text-align: left">目前的檔案名稱（唯讀）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;code>#&lt;/code>&lt;/td>
-&lt;td style="text-align:left">在這個視窗中上一個編輯的文件的檔案名稱（唯讀）&lt;/td>
+&lt;td style="text-align: center">&lt;code>#&lt;/code>&lt;/td>
+&lt;td style="text-align: left">在這個視窗中上一個編輯的文件的檔案名稱（唯讀）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;code>=&lt;/code>&lt;/td>
-&lt;td style="text-align:left">這個叫做「表達式儲存器」，但是他其實不是一個可寫入的儲存器，下面會專門介紹他&lt;/td>
+&lt;td style="text-align: center">&lt;code>=&lt;/code>&lt;/td>
+&lt;td style="text-align: left">這個叫做「表達式儲存器」，但是他其實不是一個可寫入的儲存器，下面會專門介紹他&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;code>*&lt;/code>&lt;/td>
-&lt;td style="text-align:left">你的「滑鼠」反白的文字（其他視窗或是 vim 裡面都可以）&lt;/td>
+&lt;td style="text-align: center">&lt;code>*&lt;/code>&lt;/td>
+&lt;td style="text-align: left">你的「滑鼠」反白的文字（其他視窗或是 vim 裡面都可以）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;code>+&lt;/code>&lt;/td>
-&lt;td style="text-align:left">你的系統剪貼簿&lt;/td>
+&lt;td style="text-align: center">&lt;code>+&lt;/code>&lt;/td>
+&lt;td style="text-align: left">你的系統剪貼簿&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;code>_&lt;/code>&lt;/td>
-&lt;td style="text-align:left">黑洞儲存器，只進不出，如果你嘗試讀取這個儲存器你什麼都不會得到，這可以用在剪下一段文字但是不影響任何儲存器&lt;/td>
+&lt;td style="text-align: center">&lt;code>_&lt;/code>&lt;/td>
+&lt;td style="text-align: left">黑洞儲存器，只進不出，如果你嘗試讀取這個儲存器你什麼都不會得到，這可以用在剪下一段文字但是不影響任何儲存器&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;code>/&lt;/code>&lt;/td>
-&lt;td style="text-align:left">上次用 &lt;code>/&lt;/code> 搜的字串&lt;/td>
+&lt;td style="text-align: center">&lt;code>/&lt;/code>&lt;/td>
+&lt;td style="text-align: left">上次用 &lt;code>/&lt;/code> 搜的字串&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="表達式儲存器">表達式儲存器&lt;/h3>
-&lt;p>這個儲存器很特別，因為他可以執行命令，或是你可以把他當作計算機！&lt;/p>
-&lt;h4 id="計算機">計算機&lt;/h4>
-&lt;p>當你輸入 &lt;code>&amp;quot;=10+77&amp;lt;enter&amp;gt;p&lt;/code> 時，vim 會在你的游標後面貼上 &lt;code>87&lt;/code>，這個就是等於符號 &lt;code>=&lt;/code> 後面的計算式計算出來的結果&lt;br>
+&lt;h3 id="表達式儲存器">&lt;a href="#%e8%a1%a8%e9%81%94%e5%bc%8f%e5%84%b2%e5%ad%98%e5%99%a8" class="header-anchor">&lt;/a>表達式儲存器
+&lt;/h3>&lt;p>這個儲存器很特別，因為他可以執行命令，或是你可以把他當作計算機！&lt;/p>
+&lt;h4 id="計算機">&lt;a href="#%e8%a8%88%e7%ae%97%e6%a9%9f" class="header-anchor">&lt;/a>計算機
+&lt;/h4>&lt;p>當你輸入 &lt;code>&amp;quot;=10+77&amp;lt;enter&amp;gt;p&lt;/code> 時，vim 會在你的游標後面貼上 &lt;code>87&lt;/code>，這個就是等於符號 &lt;code>=&lt;/code> 後面的計算式計算出來的結果&lt;br>
 你也可以在輸入模式用 &lt;code>&amp;lt;C-r&amp;gt;=10+77&amp;lt;enter&amp;gt;&lt;/code> （這裡不用打 &lt;code>p&lt;/code>）&lt;br>
 我測試過這裡的計算式可以用的和 C/C++ 中差不多，一樣遵守四則運算和括號優先，而且如果整數沒有加上 &lt;code>.0&lt;/code> 去做除法會得到的是 &lt;code>int / int&lt;/code> 的結果，除數被除數只要有一方是 float 就可以了，另外他的精度到小數點後六位。&lt;/p>
-&lt;h4 id="執行命令">執行命令&lt;/h4>
-&lt;p>在等號後面除了接上運算式，你也可以接一個 vim 的「函數」，然後函數的回傳值就會被印到 vim 裡面。&lt;br>
+&lt;h4 id="執行命令">&lt;a href="#%e5%9f%b7%e8%a1%8c%e5%91%bd%e4%bb%a4" class="header-anchor">&lt;/a>執行命令
+&lt;/h4>&lt;p>在等號後面除了接上運算式，你也可以接一個 vim 的「函數」，然後函數的回傳值就會被印到 vim 裡面。&lt;br>
 這些函數有些是 vim 內建，有些是外掛加進來的。其中有個內建函數 &lt;code>system()&lt;/code>，接受一個字串當作參數，回傳這個字串拿去 shell 執行後的輸出。&lt;br>
 例如我想貼上目前目錄所有的檔案名稱，可以這樣做：在命令模式執行 &lt;code>&amp;quot;=sysyem('ls -a')&lt;/code> 或是在輸入模式 &lt;code>&amp;lt;C-r&amp;gt;=sysyem('ls -a')&lt;/code>&lt;br>
 這樣就會把 &lt;code>ls -a&lt;/code> 的結果貼上來了！&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day21/vim-expression-reg.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day21/vim-expression-reg.gif"
 loading="lazy"
 alt="vim expression register"
 >&lt;/th>
@@ -146,77 +146,77 @@ alt="vim expression register"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">分別在命令模式和輸入模式示範&lt;/td>
+&lt;td style="text-align: center">分別在命令模式和輸入模式示範&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>另外這些函數也可以用 &lt;code>:call funcion()&lt;/code> 來執行&lt;/p>
-&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>vim 的 register 真的非常好用，尤其是基礎的那 36 個儲存器，相較於系統剪貼簿又更豐富了！&lt;br>
-關於儲存器還有很多細節是我的文章無法詳細列出來的，你可以用命令 &lt;code>:help :reg&lt;/code> 看看更多儲存器的說明&lt;/p></description></item><item><title>Day 20：切水果囉！vim 切螢幕與分頁</title><link>https://blog.simbafs.cc/p/ithelp/day20/</link><pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day20/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day20.png" alt="Featured image of post Day 20：切水果囉！vim 切螢幕與分頁" />&lt;h1 id="分割螢幕">分割螢幕&lt;/h1>
-&lt;p>記的 tmux 可以切螢幕嗎？vim 也可以喔！&lt;/p>
-&lt;h2 id="命令">命令&lt;/h2>
-&lt;p>我們快速用表格帶過命令&lt;/p>
+&lt;h1 id="結尾">&lt;a href="#%e7%b5%90%e5%b0%be" class="header-anchor">&lt;/a>結尾
+&lt;/h1>&lt;p>vim 的 register 真的非常好用，尤其是基礎的那 36 個儲存器，相較於系統剪貼簿又更豐富了！&lt;br>
+關於儲存器還有很多細節是我的文章無法詳細列出來的，你可以用命令 &lt;code>:help :reg&lt;/code> 看看更多儲存器的說明&lt;/p></description></item><item><title>Day 20：切水果囉！vim 切螢幕與分頁</title><link>https://blog.simbafs.cc/p/day20/</link><pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day20/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day20.png" alt="Featured image of post Day 20：切水果囉！vim 切螢幕與分頁" />&lt;h1 id="分割螢幕">&lt;a href="#%e5%88%86%e5%89%b2%e8%9e%a2%e5%b9%95" class="header-anchor">&lt;/a>分割螢幕
+&lt;/h1>&lt;p>記的 tmux 可以切螢幕嗎？vim 也可以喔！&lt;/p>
+&lt;h2 id="命令">&lt;a href="#%e5%91%bd%e4%bb%a4" class="header-anchor">&lt;/a>命令
+&lt;/h2>&lt;p>我們快速用表格帶過命令&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">快捷鍵&lt;/th>
-&lt;th style="text-align:left">命令&lt;/th>
-&lt;th style="text-align:left">效果&lt;/th>
+&lt;th style="text-align: center">快捷鍵&lt;/th>
+&lt;th style="text-align: left">命令&lt;/th>
+&lt;th style="text-align: left">效果&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">&lt;!-- raw HTML omitted -->s&lt;/td>
-&lt;td style="text-align:left">:sp[lit] {file}&lt;/td>
-&lt;td style="text-align:left">水平分割&lt;/td>
+&lt;td style="text-align: center">&lt;C-w>s&lt;/td>
+&lt;td style="text-align: left">:sp[lit] {file}&lt;/td>
+&lt;td style="text-align: left">水平分割&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;!-- raw HTML omitted -->v&lt;/td>
-&lt;td style="text-align:left">:vs[plit] {file}&lt;/td>
-&lt;td style="text-align:left">垂直分割&lt;/td>
+&lt;td style="text-align: center">&lt;C-w>v&lt;/td>
+&lt;td style="text-align: left">:vs[plit] {file}&lt;/td>
+&lt;td style="text-align: left">垂直分割&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;!-- raw HTML omitted -->+&lt;/td>
-&lt;td style="text-align:left">&lt;/td>
-&lt;td style="text-align:left">把目前視窗放大一點&lt;/td>
+&lt;td style="text-align: center">&lt;c-w>+&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">把目前視窗放大一點&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;!-- raw HTML omitted -->-&lt;/td>
-&lt;td style="text-align:left">&lt;/td>
-&lt;td style="text-align:left">把目前視窗縮小一點&lt;/td>
+&lt;td style="text-align: center">&lt;c-w>-&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">把目前視窗縮小一點&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;!-- raw HTML omitted -->=&lt;/td>
-&lt;td style="text-align:left">&lt;/td>
-&lt;td style="text-align:left">等大&lt;/td>
+&lt;td style="text-align: center">&lt;c-w>=&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">等大&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;!-- raw HTML omitted -->c&lt;/td>
-&lt;td style="text-align:left">:q&lt;/td>
-&lt;td style="text-align:left">關掉目前視窗&lt;/td>
+&lt;td style="text-align: center">&lt;C-w>c&lt;/td>
+&lt;td style="text-align: left">:q&lt;/td>
+&lt;td style="text-align: left">關掉目前視窗&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;!-- raw HTML omitted -->o&lt;/td>
-&lt;td style="text-align:left">&lt;/td>
-&lt;td style="text-align:left">關掉其他視窗&lt;/td>
+&lt;td style="text-align: center">&lt;C-w>o&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">關掉其他視窗&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;!-- raw HTML omitted -->方向鍵/h/j/k/l/tag&lt;/td>
-&lt;td style="text-align:left">&lt;/td>
-&lt;td style="text-align:left">在視窗間移動&lt;/td>
+&lt;td style="text-align: center">&lt;C-w>方向鍵/h/j/k/l/tag&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">在視窗間移動&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>如果你在 &lt;a class="link" href="../day13" >day 13&lt;/a> 有開啟滑鼠模式，那你可以直接用滑鼠拉動邊框調整大小&lt;/p>
-&lt;h2 id="vim-分割視窗的優點">vim 分割視窗的優點&lt;/h2>
-&lt;p>與 tmux 比起來，我更常用 tmux 分割視窗，因為快捷鍵比較直覺好用，但是 vim 有個 tmux 做不到的優點&lt;br>
+&lt;h2 id="vim-分割視窗的優點">&lt;a href="#vim-%e5%88%86%e5%89%b2%e8%a6%96%e7%aa%97%e7%9a%84%e5%84%aa%e9%bb%9e" class="header-anchor">&lt;/a>vim 分割視窗的優點
+&lt;/h2>&lt;p>與 tmux 比起來，我更常用 tmux 分割視窗，因為快捷鍵比較直覺好用，但是 vim 有個 tmux 做不到的優點&lt;br>
 如果你用 tmux 分割視窗並開啟同一個檔案，對於系統來說你其實是開了兩次，兩個的更改互相不相關。&lt;br>
 但是 vim 不一樣，他是「同一份檔案」，也就是說左邊的改動會立刻同步到右邊&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day20/vim-split-sync.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day20/vim-split-sync.gif"
 loading="lazy"
 alt="vim split sync"
 >&lt;/th>
@@ -224,48 +224,48 @@ alt="vim split sync"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">如果開啟一個檔案，左邊的更改會立刻同步到右邊&lt;/td>
+&lt;td style="text-align: center">如果開啟一個檔案，左邊的更改會立刻同步到右邊&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>這個特性有個好處，如果檔案太長，你要主要要編輯了兩個區域沒辦法在同一個螢幕顯示，就可以用 vim 的分割畫面，左邊編輯上面，右邊編輯下面。&lt;/p>
-&lt;h1 id="分頁">分頁&lt;/h1>
-&lt;p>比起切割螢幕，我更常用分頁功能。vim 每個分頁都和 tmux 一樣，可以隨便你亂切，不會互相影響。&lt;/p>
-&lt;h2 id="快捷鍵">快捷鍵&lt;/h2>
-&lt;p>一樣快速看過命令&lt;/p>
+&lt;h1 id="分頁">&lt;a href="#%e5%88%86%e9%a0%81" class="header-anchor">&lt;/a>分頁
+&lt;/h1>&lt;p>比起切割螢幕，我更常用分頁功能。vim 每個分頁都和 tmux 一樣，可以隨便你亂切，不會互相影響。&lt;/p>
+&lt;h2 id="快捷鍵">&lt;a href="#%e5%bf%ab%e6%8d%b7%e9%8d%b5" class="header-anchor">&lt;/a>快捷鍵
+&lt;/h2>&lt;p>一樣快速看過命令&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">快捷鍵&lt;/th>
-&lt;th style="text-align:left">命令&lt;/th>
-&lt;th style="text-align:left">效果&lt;/th>
+&lt;th style="text-align: center">快捷鍵&lt;/th>
+&lt;th style="text-align: left">命令&lt;/th>
+&lt;th style="text-align: left">效果&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:left">:tabe {file}&lt;/td>
-&lt;td style="text-align:left">開啟新分頁並開啟檔案，如果不指定檔名會開啟一個空白檔案&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">:tabe {file}&lt;/td>
+&lt;td style="text-align: left">開啟新分頁並開啟檔案，如果不指定檔名會開啟一個空白檔案&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">gt&lt;/td>
-&lt;td style="text-align:left">&lt;/td>
-&lt;td style="text-align:left">下一個分頁&lt;/td>
+&lt;td style="text-align: center">gt&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">下一個分頁&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">gT&lt;/td>
-&lt;td style="text-align:left">&lt;/td>
-&lt;td style="text-align:left">上一個分頁&lt;/td>
+&lt;td style="text-align: center">gT&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">上一個分頁&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>一樣，如果你開啟了滑鼠模式，你可以用滑鼠點擊切換分頁（最上面）&lt;/p>
-&lt;h2 id="nerdtree">Nerdtree&lt;/h2>
-&lt;p>nerdtree 是我面在 &lt;a class="link" href="../day15#%e7%8f%be%e4%bb%a3%e5%8c%96-ide-%e5%bf%85%e8%a3%9d%e6%a8%a1%e7%b5%84" >day 15 #現代化-ide-必裝模組&lt;/a> 中列出了第三個模組。為什麼提到他呢？因為當你用 nerdtree 瀏覽檔案時，你可以用命令（快捷鍵）&lt;code>t&lt;/code> 在新分頁中開啟檔案&lt;/p>
+&lt;h2 id="nerdtree">&lt;a href="#nerdtree" class="header-anchor">&lt;/a>Nerdtree
+&lt;/h2>&lt;p>nerdtree 是我面在 &lt;a class="link" href="../day15#%e7%8f%be%e4%bb%a3%e5%8c%96-ide-%e5%bf%85%e8%a3%9d%e6%a8%a1%e7%b5%84" >day 15 #現代化-ide-必裝模組&lt;/a> 中列出了第三個模組。為什麼提到他呢？因為當你用 nerdtree 瀏覽檔案時，你可以用命令（快捷鍵）&lt;code>t&lt;/code> 在新分頁中開啟檔案&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day20/vim-tab.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day20/vim-tab.gif"
 loading="lazy"
 alt="vim tab"
 >&lt;/th>
@@ -273,11 +273,11 @@ alt="vim tab"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">用 nerdtree 在新分頁開心檔案，注意看最上面，深灰色底的是現在的 tab&lt;/td>
+&lt;td style="text-align: center">用 nerdtree 在新分頁開心檔案，注意看最上面，深灰色底的是現在的 tab&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Day 19：該是時候升級你的噴射引擎囉！vim-emmet 重複與迭代</title><link>https://blog.simbafs.cc/p/ithelp/day19/</link><pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day19/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day19.png" alt="Featured image of post Day 19：該是時候升級你的噴射引擎囉！vim-emmet 重複與迭代" />&lt;h2 id="重複">重複&lt;/h2>
-&lt;p>如果想讓某個標籤/群組重複，只要用乘號 &lt;code>*&lt;/code> 加上數字就可以讓他重複了&lt;/p>
+&lt;/table></description></item><item><title>Day 19：該是時候升級你的噴射引擎囉！vim-emmet 重複與迭代</title><link>https://blog.simbafs.cc/p/day19/</link><pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day19/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day19.png" alt="Featured image of post Day 19：該是時候升級你的噴射引擎囉！vim-emmet 重複與迭代" />&lt;h2 id="重複">&lt;a href="#%e9%87%8d%e8%a4%87" class="header-anchor">&lt;/a>重複
+&lt;/h2>&lt;p>如果想讓某個標籤/群組重複，只要用乘號 &lt;code>*&lt;/code> 加上數字就可以讓他重複了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -316,8 +316,8 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">br&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="迭代">迭代&lt;/h2>
-&lt;p>在重複的時候，你可能會有某些地方是要要變化的，例如從 id 從 1 開始遞增，你可以使用錢號 &lt;code>$&lt;/code> 代表要遞增的位數&lt;br>
+&lt;/div>&lt;h2 id="迭代">&lt;a href="#%e8%bf%ad%e4%bb%a3" class="header-anchor">&lt;/a>迭代
+&lt;/h2>&lt;p>在重複的時候，你可能會有某些地方是要要變化的，例如從 id 從 1 開始遞增，你可以使用錢號 &lt;code>$&lt;/code> 代表要遞增的位數&lt;br>
 如果你不是要從 1 開始迭代，可以使用小老鼠 &lt;code>@&lt;/code> 指定開始的數字&lt;br>
 如果要反著數，用 &lt;code>@-&lt;/code> 可以倒數到 0，當然也可以指定倒數到多少&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -408,8 +408,8 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h6&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">h6&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="範本包圍">範本包圍&lt;/h2>
-&lt;blockquote>
+&lt;/div>&lt;h2 id="範本包圍">&lt;a href="#%e7%af%84%e6%9c%ac%e5%8c%85%e5%9c%8d" class="header-anchor">&lt;/a>範本包圍
+&lt;/h2>&lt;blockquote>
 &lt;p>我不確定這個叫什麼，反正就這樣啦&lt;/p>
 &lt;/blockquote>
 &lt;p>剛剛講的功能都只有產生空白標籤，不能批次產生內容，現在這個東西可以快速把內容和你的 HTML 標籤結合，產生程式碼！&lt;br>
@@ -475,10 +475,10 @@ alt="vim tab"
 &lt;/div>
 &lt;/div>&lt;p>這裡要注意一點，在 emmet 中諦一個出現星號 &lt;code>*&lt;/code> 的地方代表這下面（包括這層）的標籤要重複&lt;br>
 在剛剛的例子裡，星號打在 &lt;code>h1&lt;/code> 這個標籤上，所以 &lt;code>h1&lt;/code> 之後的標籤（&lt;code>h1&lt;/code>、&lt;code>a&lt;/code>）都會重複 N 次（ N 取決於你匡了幾行），並且要填充的內容會放在最後一層標籤（&lt;code>a&lt;/code>）中&lt;/p>
-&lt;h1 id="結論">結論&lt;/h1>
-&lt;p>這兩天我自己打的內容大概只有 1/10 吧，剩餘的都是 emmet 產生的，emmet 真的太好用了！&lt;br>
+&lt;h1 id="結論">&lt;a href="#%e7%b5%90%e8%ab%96" class="header-anchor">&lt;/a>結論
+&lt;/h1>&lt;p>這兩天我自己打的內容大概只有 1/10 吧，剩餘的都是 emmet 產生的，emmet 真的太好用了！&lt;br>
 有沒有感覺 emmet 比你想像的複雜多了，還有很多語法沒講到，像是 css 的拓展等等，更多用法可以去 emmet 的 &lt;a class="link" href="https://docs.emmet.io/cheat-sheet/" target="_blank" rel="noopener"
->官網 https://docs.emmet.io/cheat-sheet/&lt;/a> 看看喔（很容易看到頭暈，別說我沒警告你）&lt;/p></description></item><item><title>Day 18：幫你的 HTML 開發裝上噴射引擎！vim-emmet</title><link>https://blog.simbafs.cc/p/ithelp/day18/</link><pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day18/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day18.png" alt="Featured image of post Day 18：幫你的 HTML 開發裝上噴射引擎！vim-emmet" />&lt;p>emmet-vim 是 emmet 的 vim 版本（這句好像是廢話&lt;/p>
+>官網 https://docs.emmet.io/cheat-sheet/&lt;/a> 看看喔（很容易看到頭暈，別說我沒警告你）&lt;/p></description></item><item><title>Day 18：幫你的 HTML 開發裝上噴射引擎！vim-emmet</title><link>https://blog.simbafs.cc/p/day18/</link><pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day18/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day18.png" alt="Featured image of post Day 18：幫你的 HTML 開發裝上噴射引擎！vim-emmet" />&lt;p>emmet-vim 是 emmet 的 vim 版本（這句好像是廢話&lt;/p>
 &lt;blockquote>
 &lt;p>注意：emmet-vim 用的是自己寫的而不是用 emmet.io 官方的解析引擎&lt;/p>
 &lt;/blockquote>
@@ -538,8 +538,8 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>是不是很方便，用一行的指令可以變成 22 行的 HTML，而且還會幫你排版好喔，有沒有香！&lt;/p>
-&lt;h1 id="安裝">安裝&lt;/h1>
-&lt;p>在 &lt;code>~/.config/nvim/plugin.vim&lt;/code> 加入一行&lt;/p>
+&lt;h1 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
+&lt;/h1>&lt;p>在 &lt;code>~/.config/nvim/plugin.vim&lt;/code> 加入一行&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -549,12 +549,12 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>然後記得修改後需要打指令 &lt;code>:so % | PlugInstall&lt;/code> 安裝&lt;/p>
-&lt;h2 id="coc-emmet">coc-emmet&lt;/h2>
-&lt;p>coc-emmet 是個可選可不選的 coc 擴充，可以讓你不用按 emmet-vim 的快捷鍵。雖然這個擴充幾乎可以代替 emmet-vim，但是因為他依靠 coc.nvim，所以有時候他會跳不出建議，例如右括號結尾：&lt;code>(p&amp;gt;div.title$)&lt;/code>，你還是只能按 emmet-vim 的快捷鍵&lt;br>
+&lt;h2 id="coc-emmet">&lt;a href="#coc-emmet" class="header-anchor">&lt;/a>coc-emmet
+&lt;/h2>&lt;p>coc-emmet 是個可選可不選的 coc 擴充，可以讓你不用按 emmet-vim 的快捷鍵。雖然這個擴充幾乎可以代替 emmet-vim，但是因為他依靠 coc.nvim，所以有時候他會跳不出建議，例如右括號結尾：&lt;code>(p&amp;gt;div.title$)&lt;/code>，你還是只能按 emmet-vim 的快捷鍵&lt;br>
 這個擴充還有個問題，像是這樣的 emmet 程式碼 &lt;code>(p&amp;gt;div.title$)*6&lt;/code> 用 coc.nvim 展開後用 &lt;code>u&lt;/code> 退回，&lt;code>*6&lt;/code> 就神奇的消失了！（也許是我設定的問題，但不是什麼大問題）&lt;br>
 總而言之這個擴充相當不錯，可以裝一下&lt;/p>
-&lt;h2 id="產生標籤">產生標籤&lt;/h2>
-&lt;p>emmet 最基本功能是幫你寫角括號，像是這樣&lt;br>
+&lt;h2 id="產生標籤">&lt;a href="#%e7%94%a2%e7%94%9f%e6%a8%99%e7%b1%a4" class="header-anchor">&lt;/a>產生標籤
+&lt;/h2>&lt;p>emmet 最基本功能是幫你寫角括號，像是這樣&lt;br>
 &lt;code>-&amp;gt;&lt;/code> 左邊是 emmet 程式碼，右邊是根據左邊產生出來的 HTML&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -568,8 +568,8 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="內容">內容&lt;/h2>
-&lt;p>在標籤後面加上大括號 &lt;code>{}&lt;/code>，大括號內的文字就會被放進標籤裡面&lt;/p>
+&lt;/div>&lt;h2 id="內容">&lt;a href="#%e5%85%a7%e5%ae%b9" class="header-anchor">&lt;/a>內容
+&lt;/h2>&lt;p>在標籤後面加上大括號 &lt;code>{}&lt;/code>，大括號內的文字就會被放進標籤裡面&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -582,8 +582,8 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>hello world&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="屬性">屬性&lt;/h2>
-&lt;p>你可以幫標籤加上屬性，在標籤後面加上 &lt;code>[key=value]&lt;/code> 就可以指定屬性。&lt;br>
+&lt;/div>&lt;h2 id="屬性">&lt;a href="#%e5%b1%ac%e6%80%a7" class="header-anchor">&lt;/a>屬性
+&lt;/h2>&lt;p>你可以幫標籤加上屬性，在標籤後面加上 &lt;code>[key=value]&lt;/code> 就可以指定屬性。&lt;br>
 其中 &lt;code>id&lt;/code> 和 &lt;code>class&lt;/code> 因為太常用了，所以有自己專屬的縮寫，在井字號 &lt;code>#&lt;/code> 後面的是 &lt;code>id&lt;/code>，在點 &lt;code>.&lt;/code> 後面的是 &lt;code>class&lt;/code>&lt;br>
 而 &lt;code>div&lt;/code> 這個標籤因為很常用，所以如果直接用井字號或是點可以不用寫 div（第三個範例）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -610,8 +610,8 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">button.bg-blue.round#login -&amp;gt; &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;login&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;bg-blue round&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="並排">並排&lt;/h2>
-&lt;p>你可以用加號 &lt;code>+&lt;/code> 讓兩個標籤並排&lt;/p>
+&lt;/div>&lt;h2 id="並排">&lt;a href="#%e4%b8%a6%e6%8e%92" class="header-anchor">&lt;/a>並排
+&lt;/h2>&lt;p>你可以用加號 &lt;code>+&lt;/code> 讓兩個標籤並排&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -626,8 +626,8 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="巢狀標籤">巢狀標籤&lt;/h2>
-&lt;p>大於符號 &lt;code>&amp;gt;&lt;/code> 代表右側的標籤在左側標籤的裡面，而且你可以一層套一層&lt;/p>
+&lt;/div>&lt;h2 id="巢狀標籤">&lt;a href="#%e5%b7%a2%e7%8b%80%e6%a8%99%e7%b1%a4" class="header-anchor">&lt;/a>巢狀標籤
+&lt;/h2>&lt;p>大於符號 &lt;code>&amp;gt;&lt;/code> 代表右側的標籤在左側標籤的裡面，而且你可以一層套一層&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -672,8 +672,8 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="群組">群組&lt;/h2>
-&lt;p>在建立巢狀標籤時，你也可以用小括號 &lt;code>()&lt;/code> 來建立群組，打破原本運算子的優先度&lt;/p>
+&lt;/div>&lt;h2 id="群組">&lt;a href="#%e7%be%a4%e7%b5%84" class="header-anchor">&lt;/a>群組
+&lt;/h2>&lt;p>在建立巢狀標籤時，你也可以用小括號 &lt;code>()&lt;/code> 來建立群組，打破原本運算子的優先度&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -692,8 +692,8 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="假內容產生">假內容產生&lt;/h2>
-&lt;p>有一個運算子名稱特別奇怪，他可以幫你產生假內容，還可以加數字指定假內容要有幾個單字&lt;/p>
+&lt;/div>&lt;h2 id="假內容產生">&lt;a href="#%e5%81%87%e5%85%a7%e5%ae%b9%e7%94%a2%e7%94%9f" class="header-anchor">&lt;/a>假內容產生
+&lt;/h2>&lt;p>有一個運算子名稱特別奇怪，他可以幫你產生假內容，還可以加數字指定假內容要有幾個單字&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -710,8 +710,8 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Lorem sunt esse odio?&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>今天的內容差不多就到這裡，但是 emmet 精華的部份還沒出來呢！明天今天的程式碼一行可以產生五六行，加上明天的重複、迭代後四五百行都是小 case（呃，這麼長有點誇張）&lt;/p></description></item><item><title>Day 17：coc.nvim 設定下集</title><link>https://blog.simbafs.cc/p/ithelp/day17/</link><pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day17/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day17.png" alt="Featured image of post Day 17：coc.nvim 設定下集" />&lt;p>今天的東西相當多，在 &lt;a class="link" href="https://github.com/neoclide/coc.nvim#example-vim-configuration" target="_blank" rel="noopener"
+&lt;/div>&lt;h1 id="結尾">&lt;a href="#%e7%b5%90%e5%b0%be" class="header-anchor">&lt;/a>結尾
+&lt;/h1>&lt;p>今天的內容差不多就到這裡，但是 emmet 精華的部份還沒出來呢！明天今天的程式碼一行可以產生五六行，加上明天的重複、迭代後四五百行都是小 case（呃，這麼長有點誇張）&lt;/p></description></item><item><title>Day 17：coc.nvim 設定下集</title><link>https://blog.simbafs.cc/p/day17/</link><pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day17/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day17.png" alt="Featured image of post Day 17：coc.nvim 設定下集" />&lt;p>今天的東西相當多，在 &lt;a class="link" href="https://github.com/neoclide/coc.nvim#example-vim-configuration" target="_blank" rel="noopener"
 >GitHub README Example&lt;/a> 中除了昨天介紹過得今天都收錄了，直接進主題吧！&lt;br>
 喔！另外有些東西我真的不知道是什麼我會用原文寫並用中文括號括起來，歡迎知道的朋友留言告訴我&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -964,13 +964,13 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">nnoremap&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nx">silent&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nx">nowait&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nx">space&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;span class="nx">p&lt;/span> :&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nx">C&lt;/span>&lt;span class="p">-&lt;/span>&lt;span class="nx">u&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;span class="nx">CocListResume&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nx">CR&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>呼～！總算翻譯完了，有幾個我真的看不出來在幹嘛的設定翻譯不太好請各位見諒。&lt;/p></description></item><item><title>Day 16：自動補全！coc.nvim</title><link>https://blog.simbafs.cc/p/ithelp/day16/</link><pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day16/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day16.png" alt="Featured image of post Day 16：自動補全！coc.nvim" />&lt;p>一個好的自動補全工具可以讓你工作效率翻倍，你不用再去查文件了，自動補全不僅可以告訴你這裡有什麼函數可以用，還會告訴你參數的型態、函數功能的說明，可以說是把文件都寫在 vim 裡面了。&lt;br>
+&lt;/div>&lt;h1 id="結尾">&lt;a href="#%e7%b5%90%e5%b0%be" class="header-anchor">&lt;/a>結尾
+&lt;/h1>&lt;p>呼～！總算翻譯完了，有幾個我真的看不出來在幹嘛的設定翻譯不太好請各位見諒。&lt;/p></description></item><item><title>Day 16：自動補全！coc.nvim</title><link>https://blog.simbafs.cc/p/day16/</link><pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day16/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day16.png" alt="Featured image of post Day 16：自動補全！coc.nvim" />&lt;p>一個好的自動補全工具可以讓你工作效率翻倍，你不用再去查文件了，自動補全不僅可以告訴你這裡有什麼函數可以用，還會告訴你參數的型態、函數功能的說明，可以說是把文件都寫在 vim 裡面了。&lt;br>
 以前我用的自動補全是 &lt;a class="link" href="https://github.com/ycm-core/YouCompleteMe" target="_blank" rel="noopener"
 >You Complete Me(YCM)&lt;/a>，現在我選擇使用 &lt;a class="link" href="https://github.com/neoclide/coc.nvim" target="_blank" rel="noopener"
 >coc.nvim&lt;/a> 原因是他提供更多的補全來源、外掛和設定，而且可以用 nodejs 自製外掛，據說所有純 JS 寫的 VS code 外掛都可以裝（這個我沒實驗過，只是傳聞）。關於這兩個自動補全外掛的比較礙於篇幅請自行 Google。&lt;/p>
-&lt;h1 id="安裝">安裝&lt;/h1>
-&lt;p>coc.nvim 和一般的 vim 外掛一樣，都是用 vim-plug 安裝就可以了，在 &lt;code>~/.config/nvim/plugin.vim&lt;/code> 中新增以下設定&lt;/p>
+&lt;h1 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
+&lt;/h1>&lt;p>coc.nvim 和一般的 vim 外掛一樣，都是用 vim-plug 安裝就可以了，在 &lt;code>~/.config/nvim/plugin.vim&lt;/code> 中新增以下設定&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1004,11 +1004,11 @@ alt="vim tab"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>跑完後，重開 vim，coc 就裝好了&lt;/p>
-&lt;h1 id="lsp-語言伺服器協定">lsp 語言伺服器協定&lt;/h1>
-&lt;p>在講 coc 之前必須先講 Language Server Protocol，簡稱 lsp，中文是「語言伺服器協定」。lsp 做的事是提供自動補全和 go to def，能做到這兩個功能的原因是因為 lsp 懂程式碼，他知道你寫的每個字代表什麼。為什麼 lsp 這麼強呢？因為 lsp 什麼都不懂，他把所有事情丟給 language server 處理，所以只要你有裝 language server，那麼 lsp 什麼語言都懂。&lt;br>
+&lt;h1 id="lsp-語言伺服器協定">&lt;a href="#lsp-%e8%aa%9e%e8%a8%80%e4%bc%ba%e6%9c%8d%e5%99%a8%e5%8d%94%e5%ae%9a" class="header-anchor">&lt;/a>lsp 語言伺服器協定
+&lt;/h1>&lt;p>在講 coc 之前必須先講 Language Server Protocol，簡稱 lsp，中文是「語言伺服器協定」。lsp 做的事是提供自動補全和 go to def，能做到這兩個功能的原因是因為 lsp 懂程式碼，他知道你寫的每個字代表什麼。為什麼 lsp 這麼強呢？因為 lsp 什麼都不懂，他把所有事情丟給 language server 處理，所以只要你有裝 language server，那麼 lsp 什麼語言都懂。&lt;br>
 這麼神奇的 lsp 就是大名鼎鼎的 vs code 提出的（難怪是最多人用的編輯器），我們深耕 45 年的 vim 當然要跟上，所以 coc.nvim 出現了，他是一個 vim 的 language client，而重點是非常好用！&lt;/p>
-&lt;h1 id="安裝-coc-擴充">安裝 coc 擴充&lt;/h1>
-&lt;p>剛剛說了 coc 的主要功能是把所有事情丟給別人做，那麼這個「人」設定聽起來就很麻煩，所以 coc 有個好主意，用擴充（ extension ）解決！你只要裝好擴充差不多就設定好 lsp 了&lt;br>
+&lt;h1 id="安裝-coc-擴充">&lt;a href="#%e5%ae%89%e8%a3%9d-coc-%e6%93%b4%e5%85%85" class="header-anchor">&lt;/a>安裝 coc 擴充
+&lt;/h1>&lt;p>剛剛說了 coc 的主要功能是把所有事情丟給別人做，那麼這個「人」設定聽起來就很麻煩，所以 coc 有個好主意，用擴充（ extension ）解決！你只要裝好擴充差不多就設定好 lsp 了&lt;br>
 coc.nvim 的自動補全選字來源除了目前所有的 buffer（開啟的檔案）之外，還有 coc 擴充。&lt;br>
 coc 擴充安裝很簡單，在 vim 裡面下指令 &lt;code>:CocInstall {extension}&lt;/code>，那麼這個擴充的名字該去哪裡找呢？一個是 &lt;a class="link" href="https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions" target="_blank" rel="noopener"
 >coc.nvim 的 GitHub Wiki&lt;/a>，另一個是去 &lt;a class="link" href="https://npmjs.org" target="_blank" rel="noopener"
@@ -1031,8 +1031,8 @@ coc 擴充安裝很簡單，在 vim 裡面下指令 &lt;code>:CocInstall {extens
 &lt;/div>&lt;p>這個變數儲存的是 coc 擴充的名字（就是你安裝時用的那個），coc 啟動如果沒安裝他就會自己去裝了，所以手動安裝好擴充後記得在這裡寫一下，為以後搬電腦做打算&lt;br>
 你也可以用 &lt;code>:CocList extensions&lt;/code> 列出現在安裝的擴充&lt;br>
 至於要裝什麼擴充，這個就要看你要寫什麼程式語言了，自己去上面介紹的兩個地方找你需要的，我這裡就不多介紹&lt;/p>
-&lt;h1 id="基本設定">基本設定&lt;/h1>
-&lt;p>因為 coc 可能是你在寫程式時最常用的外掛，所以為了避免有快捷鍵衝突，coc 預設不會有任何的按鍵綁定，所以你必須自己寫全部的 keymap，在 &lt;a class="link" href="https://github.com/neoclide/coc.nvim#example-vim-configuration" target="_blank" rel="noopener"
+&lt;h1 id="基本設定">&lt;a href="#%e5%9f%ba%e6%9c%ac%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>基本設定
+&lt;/h1>&lt;p>因為 coc 可能是你在寫程式時最常用的外掛，所以為了避免有快捷鍵衝突，coc 預設不會有任何的按鍵綁定，所以你必須自己寫全部的 keymap，在 &lt;a class="link" href="https://github.com/neoclide/coc.nvim#example-vim-configuration" target="_blank" rel="noopener"
 >coc.nvim 的 GitHub README.md&lt;/a> 有範例，接下來的設定都是從這裡面挑出來的。&lt;br>
 以下是我覺得必須的設定，我會把註解翻成中文，有些在範例上標明「可能」、「某些情況」的設定我不會納進來，當你遇到奇怪問題時再去看看範例和 issue&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1123,14 +1123,14 @@ coc 擴充安裝很簡單，在 vim 裡面下指令 &lt;code>:CocInstall {extens
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">endif&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>coc.nvim 的設定真的很多，一眼看上去會覺得很煩，但是認真看完設定好後的 vim 真的會讓你過得非常舒服。&lt;br>
-明天是我今天沒有介紹到的部份，大部份是超難記的快捷鍵。一樣都會有全中文翻譯（但是有些我真的沒用過，只能硬著頭皮翻譯了）&lt;/p></description></item><item><title>Day 15：vim 外掛大雜燴！</title><link>https://blog.simbafs.cc/p/ithelp/day15/</link><pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day15/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day15.png" alt="Featured image of post Day 15：vim 外掛大雜燴！" />&lt;p>看到這裡，你可能還是很疑惑，到底 vim 好用在哪？嘿嘿，那是因為強大的外掛還沒裝啦！網路上會有一些配好一堆外掛的，像是 &lt;a class="link" href="spacevim.org" >spaceVim&lt;/a>，他們的策略和 vs code 很像，先幫你裝好一對外掛，讓你隨開及用。這樣做好處是初學者比較愛，但是常常會裝了一堆用不到的功能，反而讓載入速度、記憶體用量大增。&lt;br>
+&lt;/div>&lt;h1 id="結尾">&lt;a href="#%e7%b5%90%e5%b0%be" class="header-anchor">&lt;/a>結尾
+&lt;/h1>&lt;p>coc.nvim 的設定真的很多，一眼看上去會覺得很煩，但是認真看完設定好後的 vim 真的會讓你過得非常舒服。&lt;br>
+明天是我今天沒有介紹到的部份，大部份是超難記的快捷鍵。一樣都會有全中文翻譯（但是有些我真的沒用過，只能硬著頭皮翻譯了）&lt;/p></description></item><item><title>Day 15：vim 外掛大雜燴！</title><link>https://blog.simbafs.cc/p/day15/</link><pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day15/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day15.png" alt="Featured image of post Day 15：vim 外掛大雜燴！" />&lt;p>看到這裡，你可能還是很疑惑，到底 vim 好用在哪？嘿嘿，那是因為強大的外掛還沒裝啦！網路上會有一些配好一堆外掛的，像是 &lt;a class="link" href="spacevim.org" >spaceVim&lt;/a>，他們的策略和 vs code 很像，先幫你裝好一對外掛，讓你隨開及用。這樣做好處是初學者比較愛，但是常常會裝了一堆用不到的功能，反而讓載入速度、記憶體用量大增。&lt;br>
 所以我們自己挑我們需要的外掛裝起來，效果完全不會輸 vs code 這些笨重的編輯器！&lt;br>
 今天要介紹很多模組，都是我選出來製作一個現代化 IDE 必備的模組，相當的精華，一起來看看吧！
 記得修改後需要打指令 &lt;code>:so % | PlugInstall&lt;/code>&lt;/p>
-&lt;h1 id="現代化-ide-必裝模組">現代化 IDE 必裝模組&lt;/h1>
-&lt;p>以下的內容直接貼到 &lt;code>~/.config/nvim/plugin.vim&lt;/code> 裡面裝模組的地方就可以了，說明附在裡面了&lt;br>
+&lt;h1 id="現代化-ide-必裝模組">&lt;a href="#%e7%8f%be%e4%bb%a3%e5%8c%96-ide-%e5%bf%85%e8%a3%9d%e6%a8%a1%e7%b5%84" class="header-anchor">&lt;/a>現代化 IDE 必裝模組
+&lt;/h1>&lt;p>以下的內容直接貼到 &lt;code>~/.config/nvim/plugin.vim&lt;/code> 裡面裝模組的地方就可以了，說明附在裡面了&lt;br>
 注意：我這裡沒有列出 Coc.nvim，因為我把他拉出來到另外一章了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1277,8 +1277,8 @@ coc 擴充安裝很簡單，在 vim 裡面下指令 &lt;code>:CocInstall {extens
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>如果對某個模組好奇，最快的方式就是去 GitHub 頁面看看，通常作者都會有很詳細的說明。&lt;/p>
-&lt;h1 id="語法外掛">語法外掛&lt;/h1>
-&lt;p>有些時候 vim 對於某些程式語言的支援不是那麼好，常會有語法突顯有問題或是 vim 根本沒有支援這個語言的語法突顯。這時候裝一個語法外掛就可以讓 vim 立刻學會這門新語言（真好，我學了十年英文還是學不好）&lt;br>
+&lt;h1 id="語法外掛">&lt;a href="#%e8%aa%9e%e6%b3%95%e5%a4%96%e6%8e%9b" class="header-anchor">&lt;/a>語法外掛
+&lt;/h1>&lt;p>有些時候 vim 對於某些程式語言的支援不是那麼好，常會有語法突顯有問題或是 vim 根本沒有支援這個語言的語法突顯。這時候裝一個語法外掛就可以讓 vim 立刻學會這門新語言（真好，我學了十年英文還是學不好）&lt;br>
 語法外掛做得事其實就是修正在 &lt;a class="link" href="../day12" >第 12 天&lt;/a> 提過的 highlight group，讓 vim 可以正確的分析你的程式碼&lt;br>
 nvim 0.5 版有個新功能叫做 treesitter，他的功能好像和這個有關，但我沒還用過，我也不清楚&lt;br>
 以下是我用過得語法外掛，除非你也剛好需要不然其實不用安裝，如果你想要的某個語法外掛不在這裡面，你可以 Google 搜尋 &lt;code>vim + 程式語言名稱 + syntax&lt;/code> 通常都會查到&lt;/p>
@@ -1336,9 +1336,9 @@ nvim 0.5 版有個新功能叫做 treesitter，他的功能好像和這個有關
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">Plug&lt;/span> &lt;span class="s1">&amp;#39;cespare/vim-toml&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Day 14：vim-plug</title><link>https://blog.simbafs.cc/p/ithelp/day14/</link><pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day14/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day14.png" alt="Featured image of post Day 14：vim-plug" />&lt;p>前面講過了 zsh、tmux 的 plugin manager，vim 一樣有 plguin manager。跟前面幾個 plguin manager 很像，要安裝新的外掛只需要在某個地方加一行設定就好，這樣作的好處是哪天要再建立新的環境時只需要把設定檔帶走，而且集中式的管理可以一目了然。&lt;/p>
-&lt;h1 id="安裝-vim-plug">安裝 vim-plug&lt;/h1>
-&lt;p>記得昨天的 vimrc 最上面有一個備註解起來的區塊嗎？這就是載入 vim-plug 的地方，裡面就有安裝 vim-plug 的指令了。要注意你用的是 neovim 還是 vim，這兩個路徑不一樣&lt;/p>
+&lt;/div></description></item><item><title>Day 14：vim-plug</title><link>https://blog.simbafs.cc/p/day14/</link><pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day14/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day14.png" alt="Featured image of post Day 14：vim-plug" />&lt;p>前面講過了 zsh、tmux 的 plugin manager，vim 一樣有 plguin manager。跟前面幾個 plguin manager 很像，要安裝新的外掛只需要在某個地方加一行設定就好，這樣作的好處是哪天要再建立新的環境時只需要把設定檔帶走，而且集中式的管理可以一目了然。&lt;/p>
+&lt;h1 id="安裝-vim-plug">&lt;a href="#%e5%ae%89%e8%a3%9d-vim-plug" class="header-anchor">&lt;/a>安裝 vim-plug
+&lt;/h1>&lt;p>記得昨天的 vimrc 最上面有一個備註解起來的區塊嗎？這就是載入 vim-plug 的地方，裡面就有安裝 vim-plug 的指令了。要注意你用的是 neovim 還是 vim，這兩個路徑不一樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1358,10 +1358,10 @@ nvim 0.5 版有個新功能叫做 treesitter，他的功能好像和這個有關
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>挑選你的 vim 版本，執行完就安裝好了！&lt;/p>
-&lt;h1 id="安裝第一個-plugin">安裝第一個 plugin&lt;/h1>
-&lt;p>我們透過一個範例來說明如何安裝外掛，我們要來裝的第一個外掛是 &lt;code>preservim/nerdcommenter&lt;/code>，這個外掛可以快速註解一行/一整段程式碼，這是我覺得比自動補全、語法突顯都還要好用的功能。現在我們來安裝吧！&lt;/p>
-&lt;h2 id="1-編輯-vimrc">1. 編輯 vimrc&lt;/h2>
-&lt;p>打開你的 vimrc，把以下內容加在最下面&lt;/p>
+&lt;h1 id="安裝第一個-plugin">&lt;a href="#%e5%ae%89%e8%a3%9d%e7%ac%ac%e4%b8%80%e5%80%8b-plugin" class="header-anchor">&lt;/a>安裝第一個 plugin
+&lt;/h1>&lt;p>我們透過一個範例來說明如何安裝外掛，我們要來裝的第一個外掛是 &lt;code>preservim/nerdcommenter&lt;/code>，這個外掛可以快速註解一行/一整段程式碼，這是我覺得比自動補全、語法突顯都還要好用的功能。現在我們來安裝吧！&lt;/p>
+&lt;h2 id="1-編輯-vimrc">&lt;a href="#1-%e7%b7%a8%e8%bc%af-vimrc" class="header-anchor">&lt;/a>1. 編輯 vimrc
+&lt;/h2>&lt;p>打開你的 vimrc，把以下內容加在最下面&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1375,8 +1375,8 @@ nvim 0.5 版有個新功能叫做 treesitter，他的功能好像和這個有關
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>以後所有 plugin 的安裝設定就要放在這兩行裡面&lt;/p>
-&lt;h2 id="加上-preservimnerdcommenter">加上 &lt;code>preservim/nerdcommenter&lt;/code>&lt;/h2>
-&lt;p>現在在兩個 &lt;code>call&lt;/code> 中間插入以下這行&lt;/p>
+&lt;h2 id="加上-preservimnerdcommenter">&lt;a href="#%e5%8a%a0%e4%b8%8a-preservimnerdcommenter" class="header-anchor">&lt;/a>加上 &lt;code>preservim/nerdcommenter&lt;/code>
+&lt;/h2>&lt;p>現在在兩個 &lt;code>call&lt;/code> 中間插入以下這行&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1386,8 +1386,8 @@ nvim 0.5 版有個新功能叫做 treesitter，他的功能好像和這個有關
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>然後存檔，這樣就算設定好了&lt;/p>
-&lt;h2 id="安裝套件">安裝套件&lt;/h2>
-&lt;p>現在在 vim 裡面下以下命令&lt;/p>
+&lt;h2 id="安裝套件">&lt;a href="#%e5%ae%89%e8%a3%9d%e5%a5%97%e4%bb%b6" class="header-anchor">&lt;/a>安裝套件
+&lt;/h2>&lt;p>現在在 vim 裡面下以下命令&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1400,17 +1400,17 @@ nvim 0.5 版有個新功能叫做 treesitter，他的功能好像和這個有關
 &lt;/div>
 &lt;/div>&lt;p>第一個是讓 vim 載入新增的外掛列表，或是你重開 vim 也可以。其中 &lt;code>so&lt;/code> 是 &lt;code>source&lt;/code> 的縮寫&lt;br>
 這個命令會讓 vim-plug 檢查有沒有新增的外掛，然後安裝。等左邊的視窗都跑完了就可以按 &lt;code>q&lt;/code> 關掉，這時候重開 vim 就安裝好外掛了！&lt;/p>
-&lt;h1 id="使用-preservimnerdcommenter">使用 &lt;code>preservim/nerdcommenter&lt;/code>&lt;/h1>
-&lt;p>這裡簡單教一下怎麼使用這個方便的外掛
-用 &lt;!-- raw HTML omitted -->\&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->c&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->space&lt;!-- raw HTML omitted --> 可以註解/取消註解游標所在這這行。
-如果用 &lt;!-- raw HTML omitted -->v&lt;!-- raw HTML omitted --> 選取的話，只要有選到的行（不論是否完整框起），&lt;!-- raw HTML omitted -->\&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->c&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->space&lt;!-- raw HTML omitted --> 就可以一次註解/取消註解多行&lt;br>
-再按的時候要注意，如果手滑沒按到反斜線會讓 vim 以為你要執行 &lt;code>c&lt;/code> 指令，&lt;!-- raw HTML omitted -->c&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->space&lt;!-- raw HTML omitted --> 會把一個字刪掉並進入編輯模式，這時候你可以選擇手動把字加回去或是用 &lt;code>u&lt;/code> undo 指令來回復，回復好了之後再重新按一次 &lt;!-- raw HTML omitted -->\&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->c&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->space&lt;!-- raw HTML omitted --> 就可以了。&lt;/p>
+&lt;h1 id="使用-preservimnerdcommenter">&lt;a href="#%e4%bd%bf%e7%94%a8-preservimnerdcommenter" class="header-anchor">&lt;/a>使用 &lt;code>preservim/nerdcommenter&lt;/code>
+&lt;/h1>&lt;p>這裡簡單教一下怎麼使用這個方便的外掛
+用 &lt;kbd>\&lt;/kbd>&lt;kbd>c&lt;/kbd>&lt;kbd>space&lt;/kbd> 可以註解/取消註解游標所在這這行。
+如果用 &lt;kbd>v&lt;/kbd> 選取的話，只要有選到的行（不論是否完整框起），&lt;kbd>\&lt;/kbd>&lt;kbd>c&lt;/kbd>&lt;kbd>space&lt;/kbd> 就可以一次註解/取消註解多行&lt;br>
+再按的時候要注意，如果手滑沒按到反斜線會讓 vim 以為你要執行 &lt;code>c&lt;/code> 指令，&lt;kbd>c&lt;/kbd>&lt;kbd>space&lt;/kbd> 會把一個字刪掉並進入編輯模式，這時候你可以選擇手動把字加回去或是用 &lt;code>u&lt;/code> undo 指令來回復，回復好了之後再重新按一次 &lt;kbd>\&lt;/kbd>&lt;kbd>c&lt;/kbd>&lt;kbd>space&lt;/kbd> 就可以了。&lt;/p>
 &lt;p>在 &lt;code>preservim/nerdcommenter&lt;/code> 的 &lt;a class="link" href="https://github.com/preservim/nerdcommenter#default-mappings" target="_blank" rel="noopener"
 >github 頁面&lt;/a> 有更多的快捷鍵說明，這邊就介紹我最常用也是唯一有在用的，其他如果你覺得不錯再自己記就好了，vim 的快捷鍵/命令貴在精不在多，多了反而容易忘&lt;/p>
-&lt;h1 id="關於外掛的設定">關於外掛的設定&lt;/h1>
-&lt;p>在 &lt;code>preservim/nerdcommenter&lt;/code> 的 README.md 中提到，要加一條設定 &lt;code>filetype plugin on&lt;/code> 才能確保在不同程式語言中正常運作，那這行要加在哪裡比較好呢？以 vim 的觀點來看，vimrc 中任何地方都可以，但是外掛一多你就會發現亂放的話會不好管理。我推薦一個地方——安裝外掛的下面一行開始，這樣不同的外掛的設定就會都分開，萬一哪一天要修改或是移除都很清楚。&lt;/p>
-&lt;h1 id="切分-vimrc">切分 vimrc&lt;/h1>
-&lt;p>外掛裝多了 vimrc 就會變得很長，一堆不重要不常用的外掛設定會全部塞在同一個檔案裡面。我們可以根據功用的不同分開放在不同的檔案，如此一來就會比較好找相關的設定在哪裡&lt;br>
+&lt;h1 id="關於外掛的設定">&lt;a href="#%e9%97%9c%e6%96%bc%e5%a4%96%e6%8e%9b%e7%9a%84%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>關於外掛的設定
+&lt;/h1>&lt;p>在 &lt;code>preservim/nerdcommenter&lt;/code> 的 README.md 中提到，要加一條設定 &lt;code>filetype plugin on&lt;/code> 才能確保在不同程式語言中正常運作，那這行要加在哪裡比較好呢？以 vim 的觀點來看，vimrc 中任何地方都可以，但是外掛一多你就會發現亂放的話會不好管理。我推薦一個地方——安裝外掛的下面一行開始，這樣不同的外掛的設定就會都分開，萬一哪一天要修改或是移除都很清楚。&lt;/p>
+&lt;h1 id="切分-vimrc">&lt;a href="#%e5%88%87%e5%88%86-vimrc" class="header-anchor">&lt;/a>切分 vimrc
+&lt;/h1>&lt;p>外掛裝多了 vimrc 就會變得很長，一堆不重要不常用的外掛設定會全部塞在同一個檔案裡面。我們可以根據功用的不同分開放在不同的檔案，如此一來就會比較好找相關的設定在哪裡&lt;br>
 我們先把&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1450,11 +1450,11 @@ nvim 0.5 版有個新功能叫做 treesitter，他的功能好像和這個有關
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>之後你要外掛相關的設定就不是在 vimrc 了，而是在 plugin.nvim 裡面，記得如果要備份的話要把這個檔案也備份到喔&lt;/p>
-&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>今天的內容穿插了一些 vim 的指令，如果很難理解的話建議你要一個字母一個字母拆開看，為什麼呢？例如 &lt;code>ddo&lt;/code> 這個指令，你以為可能是要「做（do）」什麼事，其實這是 &lt;code>dd&lt;/code> 和 &lt;code>o&lt;/code> 一起寫，意思是「剪下一行」再「新增一行並進入編輯模式」。&lt;/p></description></item><item><title>Day 13：vim 設定檔</title><link>https://blog.simbafs.cc/p/ithelp/day13/</link><pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day13/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day13.png" alt="Featured image of post Day 13：vim 設定檔" />&lt;p>vim 在啟動時，都會去&lt;strong>執行你的設定檔&lt;/strong>，這個檔案&lt;strong>根據你的 vim 軟體不同而改變&lt;/strong>，如果是一般的 vim，那他會去讀 &lt;code>~/.vimrc&lt;/code>，如果是 neovim(nvim)，他會去找 &lt;code>~/.config/nvim/init.vim&lt;/code>。在接下來的文章中都以 &lt;code>vimrc&lt;/code> 代指。&lt;br>
+&lt;h1 id="結尾">&lt;a href="#%e7%b5%90%e5%b0%be" class="header-anchor">&lt;/a>結尾
+&lt;/h1>&lt;p>今天的內容穿插了一些 vim 的指令，如果很難理解的話建議你要一個字母一個字母拆開看，為什麼呢？例如 &lt;code>ddo&lt;/code> 這個指令，你以為可能是要「做（do）」什麼事，其實這是 &lt;code>dd&lt;/code> 和 &lt;code>o&lt;/code> 一起寫，意思是「剪下一行」再「新增一行並進入編輯模式」。&lt;/p></description></item><item><title>Day 13：vim 設定檔</title><link>https://blog.simbafs.cc/p/day13/</link><pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day13/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day13.png" alt="Featured image of post Day 13：vim 設定檔" />&lt;p>vim 在啟動時，都會去&lt;strong>執行你的設定檔&lt;/strong>，這個檔案&lt;strong>根據你的 vim 軟體不同而改變&lt;/strong>，如果是一般的 vim，那他會去讀 &lt;code>~/.vimrc&lt;/code>，如果是 neovim(nvim)，他會去找 &lt;code>~/.config/nvim/init.vim&lt;/code>。在接下來的文章中都以 &lt;code>vimrc&lt;/code> 代指。&lt;br>
 &lt;code>vimrc&lt;/code> 內容是 vimscript，也就是所有的冒號命令&lt;strong>去掉冒號之後的內容&lt;/strong>，例如有個命令是 &lt;code>:set nu&lt;/code>，這個命令可以開啟行號顯示，如果要寫在 &lt;code>vimrc&lt;/code> 裡面，就要寫成 &lt;code>set nu&lt;/code>。&lt;/p>
-&lt;h1 id="vimrc">vimrc&lt;/h1>
-&lt;p>通常我們會在 &lt;code>vimrc&lt;/code> 中設定關於 vim 的&lt;strong>外觀&lt;/strong>、&lt;strong>行為&lt;/strong>、&lt;strong>載入外掛&lt;/strong>等等，接下來是我用多年的 vimrc 的內容，我會一個一個用註解解說他們的用處(雙引號 &lt;code>&amp;quot;&lt;/code> 開頭是 vimscript 的註解)&lt;/p>
+&lt;h1 id="vimrc">&lt;a href="#vimrc" class="header-anchor">&lt;/a>vimrc
+&lt;/h1>&lt;p>通常我們會在 &lt;code>vimrc&lt;/code> 中設定關於 vim 的&lt;strong>外觀&lt;/strong>、&lt;strong>行為&lt;/strong>、&lt;strong>載入外掛&lt;/strong>等等，接下來是我用多年的 vimrc 的內容，我會一個一個用註解解說他們的用處(雙引號 &lt;code>&amp;quot;&lt;/code> 開頭是 vimscript 的註解)&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1629,27 +1629,27 @@ nvim 0.5 版有個新功能叫做 treesitter，他的功能好像和這個有關
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">hi&lt;/span> &lt;span class="nx">Ignore&lt;/span> &lt;span class="nx">ctermbg&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="nx">black&lt;/span> &lt;span class="nx">ctermfg&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="nx">lightblue&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="command">command&lt;/h2>
-&lt;p>我們從最簡單的命令別名講起，這個命令可以縮寫成 &lt;code>com&lt;/code>&lt;br>
+&lt;/div>&lt;h2 id="command">&lt;a href="#command" class="header-anchor">&lt;/a>command
+&lt;/h2>&lt;p>我們從最簡單的命令別名講起，這個命令可以縮寫成 &lt;code>com&lt;/code>&lt;br>
 這個命令可以定義 &lt;strong>「使用者自訂命令」&lt;/strong>&lt;br>
 使用者自訂命令一定要是&lt;strong>大寫&lt;/strong>開頭&lt;/p>
-&lt;h3 id="列出命令">列出命令&lt;/h3>
-&lt;p>&lt;code>:verbose com [cmd]&lt;/code>
+&lt;h3 id="列出命令">&lt;a href="#%e5%88%97%e5%87%ba%e5%91%bd%e4%bb%a4" class="header-anchor">&lt;/a>列出命令
+&lt;/h3>&lt;p>&lt;code>:verbose com [cmd]&lt;/code>
 這個可以列出符合 &lt;code>[cmd]&lt;/code> 的使用者自訂命令，還有&lt;strong>最後定義的位置&lt;/strong>&lt;/p>
-&lt;h3 id="定義新的使用者自訂命令">定義新的使用者自訂命令&lt;/h3>
-&lt;p>&lt;code>:commmand {cmd} {rep}&lt;/code>
+&lt;h3 id="定義新的使用者自訂命令">&lt;a href="#%e5%ae%9a%e7%be%a9%e6%96%b0%e7%9a%84%e4%bd%bf%e7%94%a8%e8%80%85%e8%87%aa%e8%a8%82%e5%91%bd%e4%bb%a4" class="header-anchor">&lt;/a>定義新的使用者自訂命令
+&lt;/h3>&lt;p>&lt;code>:commmand {cmd} {rep}&lt;/code>
 這個會設定 &lt;code>{cmd}&lt;/code> 的別名 &lt;code>{rep}&lt;/code>&lt;/p>
-&lt;h2 id="autocmd">autocmd&lt;/h2>
-&lt;p>autocmd 是在某種類型的檔案載入時自動執行命令用的，可以縮寫成 &lt;code>au&lt;/code>&lt;br>
+&lt;h2 id="autocmd">&lt;a href="#autocmd" class="header-anchor">&lt;/a>autocmd
+&lt;/h2>&lt;p>autocmd 是在某種類型的檔案載入時自動執行命令用的，可以縮寫成 &lt;code>au&lt;/code>&lt;br>
 au 的使用場景通常是某個類型的語法突顯會出問題、想要根據檔案類型套用不同設定，簡單的語法如下&lt;br>
 &lt;code>au [條件] [...命令]&lt;/code>&lt;br>
 條件通常長這樣， &lt;code>FileType javascript&lt;/code>&lt;br>
 命令就是冒號命令除了冒號的部份&lt;/p>
-&lt;h2 id="map">map&lt;/h2>
-&lt;p>map 的功能是定義不是冒號開頭的命令（像是 &lt;code>dd&lt;/code> 這種，在前幾篇文章中稱為快捷鍵），map 又根據作用的模式分為 &lt;code>nmap&lt;/code>、&lt;code>vmap&lt;/code>、&lt;code>imap&lt;/code> 等等非常多種（&lt;code>:help map&lt;/code> 會列出所有 map ）。其中最常用的是 &lt;code>map&lt;/code>、&lt;code>nmap&lt;/code>、&lt;code>imap&lt;/code>，這三個分別代表在「除了編輯模式中作用」、「命令模式（ n ）作用」、「在編輯模式作用（ i ）」。&lt;br>
+&lt;h2 id="map">&lt;a href="#map" class="header-anchor">&lt;/a>map
+&lt;/h2>&lt;p>map 的功能是定義不是冒號開頭的命令（像是 &lt;code>dd&lt;/code> 這種，在前幾篇文章中稱為快捷鍵），map 又根據作用的模式分為 &lt;code>nmap&lt;/code>、&lt;code>vmap&lt;/code>、&lt;code>imap&lt;/code> 等等非常多種（&lt;code>:help map&lt;/code> 會列出所有 map ）。其中最常用的是 &lt;code>map&lt;/code>、&lt;code>nmap&lt;/code>、&lt;code>imap&lt;/code>，這三個分別代表在「除了編輯模式中作用」、「命令模式（ n ）作用」、「在編輯模式作用（ i ）」。&lt;br>
 各種 map &lt;strong>用法都一樣，差別只在作用模式不同&lt;/strong>&lt;/p>
-&lt;h3 id="列出-map">列出 map&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h3 id="列出-map">&lt;a href="#%e5%88%97%e5%87%ba-map" class="header-anchor">&lt;/a>列出 map
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -1661,13 +1661,13 @@ au 的使用場景通常是某個類型的語法突顯會出問題、想要根�
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">:&lt;/span>&lt;span class="nx">imap&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="定義-map">定義 map&lt;/h3>
-&lt;p>&lt;code>map {快捷鍵} {命令}&lt;/code>&lt;br>
-{快捷鍵} 是 vim 的按鍵組合，其中 &lt;code>imap&lt;/code> 用的大多都要加 &lt;!-- raw HTML omitted --> 或是 &lt;!-- raw HTML omitted -->，否則會沒用
+&lt;/div>&lt;h3 id="定義-map">&lt;a href="#%e5%ae%9a%e7%be%a9-map" class="header-anchor">&lt;/a>定義 map
+&lt;/h3>&lt;p>&lt;code>map {快捷鍵} {命令}&lt;/code>&lt;br>
+{快捷鍵} 是 vim 的按鍵組合，其中 &lt;code>imap&lt;/code> 用的大多都要加 &lt;Ctrl> 或是 &lt;leader>，否則會沒用
 {命令} 是 vim 的命令，注意這裡講的是「廣義的命令」，也就是包括冒號和非冒號命令，所以如果是冒號命令你必須加上冒號和 enter 鍵才會執行&lt;br>
 ps: map 給我的感覺有點像「當你按下 {快捷鍵} 時，vim 會自動幫你打 {命令}&lt;/p>
-&lt;h4 id="快捷鍵">快捷鍵&lt;/h4>
-&lt;p>快捷鍵可以是不只一個按鍵，可以像是以下幾個範例&lt;/p>
+&lt;h4 id="快捷鍵">&lt;a href="#%e5%bf%ab%e6%8d%b7%e9%8d%b5" class="header-anchor">&lt;/a>快捷鍵
+&lt;/h4>&lt;p>快捷鍵可以是不只一個按鍵，可以像是以下幾個範例&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1681,10 +1681,10 @@ ps: map 給我的感覺有點像「當你按下 {快捷鍵} 時，vim 會自動�
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>如果一個按鍵可以打出來，像是&lt;code>a&lt;/code>、&lt;code>b&lt;/code>、&lt;code>c&lt;/code>、&lt;code>0&lt;/code>、&lt;code>1&lt;/code>、&lt;code>2&lt;/code>、&lt;code>+&lt;/code>、&lt;code>=&lt;/code>，就不用角括號 &lt;code>&amp;lt;&amp;gt;&lt;/code>&lt;br>
-如果是控制按鍵或是和控制按鍵一起按，就要加上括號，例如 &lt;code>&amp;lt;C-y&amp;gt;&lt;/code>、&lt;code>&amp;lt;leader&amp;gt;&lt;/code>，其中是指 &lt;!-- raw HTML omitted --> 是反斜線
+如果是控制按鍵或是和控制按鍵一起按，就要加上括號，例如 &lt;code>&amp;lt;C-y&amp;gt;&lt;/code>、&lt;code>&amp;lt;leader&amp;gt;&lt;/code>，其中是指 &lt;leader> 是反斜線
 更多這種按鍵的說明可以參考 &lt;code>:help key-notation&lt;/code>&lt;/p>
-&lt;h4 id="命令">命令&lt;/h4>
-&lt;p>這邊的命令因為是廣義的命令，所以如果你想要幫某個快捷鍵加上別名也是可以的&lt;/p>
+&lt;h4 id="命令">&lt;a href="#%e5%91%bd%e4%bb%a4" class="header-anchor">&lt;/a>命令
+&lt;/h4>&lt;p>這邊的命令因為是廣義的命令，所以如果你想要幫某個快捷鍵加上別名也是可以的&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1696,12 +1696,12 @@ ps: map 給我的感覺有點像「當你按下 {快捷鍵} 時，vim 會自動�
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>嗯&amp;hellip;&amp;hellip;這可能只在快捷鍵很常出現但是複雜時比較好用&lt;br>
-扯遠了，回到正題。如果你的命令是冒號命令的話，你必須要加上冒號和 enter，不然你在打完快捷鍵之後還要自己按 enter，所以記的在命令最後面加上 &lt;code>&amp;lt;CR&amp;gt;&lt;/code> ，這個代表的是 enter 鍵，&lt;!-- raw HTML omitted --> 也可以&lt;/p></description></item><item><title>Day 12：vim 配色方案</title><link>https://blog.simbafs.cc/p/ithelp/day12/</link><pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day12/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day12.png" alt="Featured image of post Day 12：vim 配色方案" />&lt;p>俗話說人要衣裝，佛要金裝，我們的 vim 也得要有&lt;strong>漂亮的外觀&lt;/strong>。今天就讓我們來看看如何&lt;del>調教&lt;/del>調整 vim 的外觀吧！&lt;/p>
-&lt;h1 id="highlight-group">Highlight group&lt;/h1>
-&lt;p>highlight group（以下簡稱 hg ）是 vim 中的一個概念，他會對應到 vim 畫面中的&lt;strong>一段區塊&lt;/strong>，可能是&lt;strong>一段文字&lt;/strong>，也可能是底下的 status bar 或是左側的行號。每一個 hg 都可以&lt;strong>設定樣式&lt;/strong>，包括&lt;strong>前景色&lt;/strong>、&lt;strong>背景色&lt;/strong>、&lt;strong>反白&lt;/strong>、&lt;strong>加底線&lt;/strong>等等，你可以用 &lt;code>:so $VIMRUNTIME/syntax/hitest.vim&lt;/code> 命令查看&lt;strong>所有的 hg 名字&lt;/strong>，他們的樣式也會直接顯示出來。&lt;br>
+扯遠了，回到正題。如果你的命令是冒號命令的話，你必須要加上冒號和 enter，不然你在打完快捷鍵之後還要自己按 enter，所以記的在命令最後面加上 &lt;code>&amp;lt;CR&amp;gt;&lt;/code> ，這個代表的是 enter 鍵，&lt;Enter> 也可以&lt;/p></description></item><item><title>Day 12：vim 配色方案</title><link>https://blog.simbafs.cc/p/day12/</link><pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day12/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day12.png" alt="Featured image of post Day 12：vim 配色方案" />&lt;p>俗話說人要衣裝，佛要金裝，我們的 vim 也得要有&lt;strong>漂亮的外觀&lt;/strong>。今天就讓我們來看看如何&lt;del>調教&lt;/del>調整 vim 的外觀吧！&lt;/p>
+&lt;h1 id="highlight-group">&lt;a href="#highlight-group" class="header-anchor">&lt;/a>Highlight group
+&lt;/h1>&lt;p>highlight group（以下簡稱 hg ）是 vim 中的一個概念，他會對應到 vim 畫面中的&lt;strong>一段區塊&lt;/strong>，可能是&lt;strong>一段文字&lt;/strong>，也可能是底下的 status bar 或是左側的行號。每一個 hg 都可以&lt;strong>設定樣式&lt;/strong>，包括&lt;strong>前景色&lt;/strong>、&lt;strong>背景色&lt;/strong>、&lt;strong>反白&lt;/strong>、&lt;strong>加底線&lt;/strong>等等，你可以用 &lt;code>:so $VIMRUNTIME/syntax/hitest.vim&lt;/code> 命令查看&lt;strong>所有的 hg 名字&lt;/strong>，他們的樣式也會直接顯示出來。&lt;br>
 如果想看某個 hg 的&lt;strong>說明&lt;/strong>的話（必須是內建的才有），可以用 &lt;code>:help hl-hgName&lt;/code> 來&lt;strong>查詢說明&lt;/strong>，例如 &lt;code>CursorLine&lt;/code> 就可以用 &lt;code>:help hl-CursorLine&lt;/code> 來看說明&lt;/p>
-&lt;h1 id="highlight">Highlight&lt;/h1>
-&lt;p>用 &lt;code>:highlight&lt;/code> 或是縮寫 &lt;code>:hi&lt;/code> 可以設定特定 hg 的樣式&lt;/p>
+&lt;h1 id="highlight">&lt;a href="#highlight" class="header-anchor">&lt;/a>Highlight
+&lt;/h1>&lt;p>用 &lt;code>:highlight&lt;/code> 或是縮寫 &lt;code>:hi&lt;/code> 可以設定特定 hg 的樣式&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1711,8 +1711,8 @@ ps: map 給我的感覺有點像「當你按下 {快捷鍵} 時，vim 會自動�
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>hgName 就是你用 &lt;code>:so $VIMRUNTIME/syntax/hitest.vim&lt;/code> 查出來的名字，而 arg 常見的有前景色 &lt;code>ctermfg&lt;/code>、背景色 &lt;code>ctermbg&lt;/code> 和 樣式 &lt;code>cterm&lt;/code>&lt;/p>
-&lt;h2 id="color">Color&lt;/h2>
-&lt;p>&lt;code>ctermbg&lt;/code> 和 &lt;code>ctermfg&lt;/code> 後面接的值會&lt;strong>根據你的終端機支援的顏色不同&lt;/strong>而有變化，其中 8 色和 16 色的終端機都可以用 0 ~ 8 / 0 ~ 16 這樣的方式來表示顏色（數字代表的顏色要看終端機設定），vim help 提供了一個對照表可以參考各個數字代表的顏色&lt;/p>
+&lt;h2 id="color">&lt;a href="#color" class="header-anchor">&lt;/a>Color
+&lt;/h2>&lt;p>&lt;code>ctermbg&lt;/code> 和 &lt;code>ctermfg&lt;/code> 後面接的值會&lt;strong>根據你的終端機支援的顏色不同&lt;/strong>而有變化，其中 8 色和 16 色的終端機都可以用 0 ~ 8 / 0 ~ 16 這樣的方式來表示顏色（數字代表的顏色要看終端機設定），vim help 提供了一個對照表可以參考各個數字代表的顏色&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1758,7 +1758,7 @@ ps: map 給我的感覺有點像「當你按下 {快捷鍵} 時，vim 會自動�
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day12/256-color.png"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day12/256-color.png"
 loading="lazy"
 alt="256 color"
 >&lt;/th>
@@ -1766,55 +1766,55 @@ alt="256 color"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">256 色表（填的是前面的數字（0-255）不是 hex 色碼&lt;/td>
+&lt;td style="text-align: center">256 色表（填的是前面的數字（0-255）不是 hex 色碼&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="cterm">cterm&lt;/h2>
-&lt;p>通常文字不會只有顏色，還可以有加粗、底線等等樣式，vim 總共提供了這些&lt;strong>樣式&lt;/strong>&lt;/p>
+&lt;h2 id="cterm">&lt;a href="#cterm" class="header-anchor">&lt;/a>cterm
+&lt;/h2>&lt;p>通常文字不會只有顏色，還可以有加粗、底線等等樣式，vim 總共提供了這些&lt;strong>樣式&lt;/strong>&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">樣式名稱&lt;/th>
-&lt;th style="text-align:left">說明&lt;/th>
+&lt;th style="text-align: left">樣式名稱&lt;/th>
+&lt;th style="text-align: left">說明&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">bold&lt;/td>
-&lt;td style="text-align:left">粗體&lt;/td>
+&lt;td style="text-align: left">bold&lt;/td>
+&lt;td style="text-align: left">粗體&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">underline&lt;/td>
-&lt;td style="text-align:left">底線&lt;/td>
+&lt;td style="text-align: left">underline&lt;/td>
+&lt;td style="text-align: left">底線&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">undercurl&lt;/td>
-&lt;td style="text-align:left">捲捲的底線，如果你的終端機不支援的話會改用底線代替&lt;/td>
+&lt;td style="text-align: left">undercurl&lt;/td>
+&lt;td style="text-align: left">捲捲的底線，如果你的終端機不支援的話會改用底線代替&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">reverse&lt;/td>
-&lt;td style="text-align:left">反白&lt;/td>
+&lt;td style="text-align: left">reverse&lt;/td>
+&lt;td style="text-align: left">反白&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">inverse&lt;/td>
-&lt;td style="text-align:left">反白&lt;/td>
+&lt;td style="text-align: left">inverse&lt;/td>
+&lt;td style="text-align: left">反白&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">italic&lt;/td>
-&lt;td style="text-align:left">斜體（要字型有支援）&lt;/td>
+&lt;td style="text-align: left">italic&lt;/td>
+&lt;td style="text-align: left">斜體（要字型有支援）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">standout&lt;/td>
-&lt;td style="text-align:left">翻譯是「突出」，但是我用起來和 &lt;code>reverse&lt;/code>、&lt;code>inverse&lt;/code> 效果一樣，有人知道差在哪嗎？&lt;/td>
+&lt;td style="text-align: left">standout&lt;/td>
+&lt;td style="text-align: left">翻譯是「突出」，但是我用起來和 &lt;code>reverse&lt;/code>、&lt;code>inverse&lt;/code> 效果一樣，有人知道差在哪嗎？&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">strikethrough&lt;/td>
-&lt;td style="text-align:left">翻譯是「刪除線」但是我試不出來，也許是字體的關係&lt;/td>
+&lt;td style="text-align: left">strikethrough&lt;/td>
+&lt;td style="text-align: left">翻譯是「刪除線」但是我試不出來，也許是字體的關係&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">NONE&lt;/td>
-&lt;td style="text-align:left">清除樣式設定&lt;/td>
+&lt;td style="text-align: left">NONE&lt;/td>
+&lt;td style="text-align: left">清除樣式設定&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1831,7 +1831,7 @@ alt="256 color"
 &lt;/div>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day12/customed-cursorLine.png"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day12/customed-cursorLine.png"
 loading="lazy"
 alt="Customized CursorLine"
 >&lt;/th>
@@ -1839,15 +1839,15 @@ alt="Customized CursorLine"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">自訂的游標行&lt;/td>
+&lt;td style="text-align: center">自訂的游標行&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="colorschema">colorschema&lt;/h1>
-&lt;p>所謂的 colorschema 其實就是一堆的 &lt;code>hi&lt;/code> 指令寫在一個檔案裡面，然後給他一個名字，vim 內建了很多 colorschema，放在 &lt;code>$VIMRUNTIME/colors&lt;/code> 目錄下。你可以用命令 &lt;code>:echo $VIMRUNTIME&lt;/code> 來取得 &lt;code>$VIMRUNTIME&lt;/code> 的值，因為&lt;strong>系統環境變數可能不會有他&lt;/strong>（我的就沒有）。
-除了去網路上下載別人設計好的 colorschema， 你也可以參考 &lt;code>$VIMRUNTIME/colors&lt;/code> 下的檔案形式來製作自己的 colorschema，或是 Google 搜尋 &lt;code>vim colorschemes generator&lt;/code> 就可以在網路上找到很多方便你製作 colorschemes 的工具&lt;/p></description></item><item><title>Day 11：批次修改！！</title><link>https://blog.simbafs.cc/p/ithelp/day11/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day11/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day11.png" alt="Featured image of post Day 11：批次修改！！" />&lt;p>昨天體驗了一些快捷鍵和命令，今天要講的是在 vim 中也很常用的&lt;strong>搜尋與取代&lt;/strong>&lt;/p>
-&lt;h1 id="搜尋與取代">搜尋與取代&lt;/h1>
-&lt;p>vim 的搜尋與取代是由命令 &lt;code>s&lt;/code> 達成的，命令格式長這樣&lt;/p>
+&lt;h1 id="colorschema">&lt;a href="#colorschema" class="header-anchor">&lt;/a>colorschema
+&lt;/h1>&lt;p>所謂的 colorschema 其實就是一堆的 &lt;code>hi&lt;/code> 指令寫在一個檔案裡面，然後給他一個名字，vim 內建了很多 colorschema，放在 &lt;code>$VIMRUNTIME/colors&lt;/code> 目錄下。你可以用命令 &lt;code>:echo $VIMRUNTIME&lt;/code> 來取得 &lt;code>$VIMRUNTIME&lt;/code> 的值，因為&lt;strong>系統環境變數可能不會有他&lt;/strong>（我的就沒有）。
+除了去網路上下載別人設計好的 colorschema， 你也可以參考 &lt;code>$VIMRUNTIME/colors&lt;/code> 下的檔案形式來製作自己的 colorschema，或是 Google 搜尋 &lt;code>vim colorschemes generator&lt;/code> 就可以在網路上找到很多方便你製作 colorschemes 的工具&lt;/p></description></item><item><title>Day 11：批次修改！！</title><link>https://blog.simbafs.cc/p/day11/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day11/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day11.png" alt="Featured image of post Day 11：批次修改！！" />&lt;p>昨天體驗了一些快捷鍵和命令，今天要講的是在 vim 中也很常用的&lt;strong>搜尋與取代&lt;/strong>&lt;/p>
+&lt;h1 id="搜尋與取代">&lt;a href="#%e6%90%9c%e5%b0%8b%e8%88%87%e5%8f%96%e4%bb%a3" class="header-anchor">&lt;/a>搜尋與取代
+&lt;/h1>&lt;p>vim 的搜尋與取代是由命令 &lt;code>s&lt;/code> 達成的，命令格式長這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1860,13 +1860,13 @@ alt="Customized CursorLine"
 >正規表達式&lt;/a>（regular expression，縮寫 regex，在中國常寫成「正則」），regex 除了在 vim 可以用之外，幾乎所有程式語言都可以用，還有 &lt;code>grep&lt;/code>、&lt;code>sed&lt;/code> 等 linux 指令也都是使用 regex，關於 regex 的用法在這裡就不多提了，&lt;a class="link" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank" rel="noopener"
 >MDN&lt;/a> 上有很完整的解釋&lt;br>
 你應該有注意到上面的命令格式裡面除了正規表達式之外還有「範圍修飾字」和「旗標」，這就是接下來這段的重點啦！&lt;/p>
-&lt;h2 id="範圍修飾字">範圍修飾字&lt;/h2>
-&lt;p>這個東西也不只是搜尋與取代可以用，只要你覺得需要&lt;strong>限制某個指令的作用範圍&lt;/strong>都可以用樣的邏輯接下去&lt;br>
+&lt;h2 id="範圍修飾字">&lt;a href="#%e7%af%84%e5%9c%8d%e4%bf%ae%e9%a3%be%e5%ad%97" class="header-anchor">&lt;/a>範圍修飾字
+&lt;/h2>&lt;p>這個東西也不只是搜尋與取代可以用，只要你覺得需要&lt;strong>限制某個指令的作用範圍&lt;/strong>都可以用樣的邏輯接下去&lt;br>
 範圍修飾&lt;strong>可寫可不寫&lt;/strong>，如果不寫的話搜尋與取代就只會&lt;strong>在游標在的那一行起作用&lt;/strong>，加上百分比符號 &lt;code>%&lt;/code> 代表作用範圍是&lt;strong>整份文件&lt;/strong>，也可以&lt;strong>加上行號&lt;/strong>代表只作用在某一行，如果是兩個行號中間以&lt;strong>逗號&lt;/strong>隔開，代表是作用在這兩個行號之間&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day11/vim-replace.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day11/vim-replace.gif"
 loading="lazy"
 alt="vim replace"
 >&lt;/th>
@@ -1874,31 +1874,31 @@ alt="vim replace"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">範圍修飾字範例&lt;/td>
+&lt;td style="text-align: center">範圍修飾字範例&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="範圍選取">範圍選取&lt;/h3>
-&lt;p>剛剛的範例中有出現用行號作範圍選取，其實範圍選取還有一個&lt;strong>更簡單&lt;/strong>的方式 ——「選取模式」。選取模式和編輯模式、命令模式是同等地位的東西，進入選取模式的快捷鍵有下列幾個（一樣要進到命令模式才能進選取模式）&lt;/p>
+&lt;h3 id="範圍選取">&lt;a href="#%e7%af%84%e5%9c%8d%e9%81%b8%e5%8f%96" class="header-anchor">&lt;/a>範圍選取
+&lt;/h3>&lt;p>剛剛的範例中有出現用行號作範圍選取，其實範圍選取還有一個&lt;strong>更簡單&lt;/strong>的方式 ——「選取模式」。選取模式和編輯模式、命令模式是同等地位的東西，進入選取模式的快捷鍵有下列幾個（一樣要進到命令模式才能進選取模式）&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">快捷鍵&lt;/th>
-&lt;th style="text-align:left">說明&lt;/th>
+&lt;th style="text-align: left">快捷鍵&lt;/th>
+&lt;th style="text-align: left">說明&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">v&lt;/td>
-&lt;td style="text-align:left">一般選取，以「字」為單位&lt;/td>
+&lt;td style="text-align: left">v&lt;/td>
+&lt;td style="text-align: left">一般選取，以「字」為單位&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">S-v(大寫 v )&lt;/td>
-&lt;td style="text-align:left">一般選取，以「行」為單位&lt;/td>
+&lt;td style="text-align: left">S-v(大寫 v )&lt;/td>
+&lt;td style="text-align: left">一般選取，以「行」為單位&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">C-v&lt;/td>
-&lt;td style="text-align:left">垂直選取，這個比較不常用，但是需要的時候蠻好用的&lt;/td>
+&lt;td style="text-align: left">C-v&lt;/td>
+&lt;td style="text-align: left">垂直選取，這個比較不常用，但是需要的時候蠻好用的&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1907,7 +1907,7 @@ alt="vim replace"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/img/day11/vim-selsect.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/img/day11/vim-selsect.gif"
 loading="lazy"
 alt="vim select"
 >&lt;/th>
@@ -1915,38 +1915,38 @@ alt="vim select"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">選取結合指令與快捷鍵&lt;/td>
+&lt;td style="text-align: center">選取結合指令與快捷鍵&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="旗標">旗標&lt;/h2>
-&lt;p>旗標這個東西主要是在控制搜尋的行為，例如&lt;strong>全部取代&lt;/strong>、&lt;strong>取代前先問一下&lt;/strong>之類的，多個旗標可以組合，&lt;strong>不管順序&lt;/strong>，下面是幾個可能會用到的旗標&lt;/p>
+&lt;h2 id="旗標">&lt;a href="#%e6%97%97%e6%a8%99" class="header-anchor">&lt;/a>旗標
+&lt;/h2>&lt;p>旗標這個東西主要是在控制搜尋的行為，例如&lt;strong>全部取代&lt;/strong>、&lt;strong>取代前先問一下&lt;/strong>之類的，多個旗標可以組合，&lt;strong>不管順序&lt;/strong>，下面是幾個可能會用到的旗標&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">旗標&lt;/th>
-&lt;th style="text-align:left">說明&lt;/th>
+&lt;th style="text-align: left">旗標&lt;/th>
+&lt;th style="text-align: left">說明&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">g&lt;/td>
-&lt;td style="text-align:left">整行搜尋，如果不加的話只會取代第一個&lt;/td>
+&lt;td style="text-align: left">g&lt;/td>
+&lt;td style="text-align: left">整行搜尋，如果不加的話只會取代第一個&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">c&lt;/td>
-&lt;td style="text-align:left">在取代前先確認&lt;/td>
+&lt;td style="text-align: left">c&lt;/td>
+&lt;td style="text-align: left">在取代前先確認&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">i&lt;/td>
-&lt;td style="text-align:left">忽略大小寫&lt;/td>
+&lt;td style="text-align: left">i&lt;/td>
+&lt;td style="text-align: left">忽略大小寫&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/img/day11/vim-replace-flag.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/img/day11/vim-replace-flag.gif"
 loading="lazy"
 alt="vim replace flag"
 >&lt;/th>
@@ -1954,30 +1954,30 @@ alt="vim replace flag"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">旗標範例&lt;/td>
+&lt;td style="text-align: center">旗標範例&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>這兩天講的大部份是操作性質的東西，&lt;strong>不需要一次全部記起來&lt;/strong>，用的多了自然會記得，現在只需要&lt;strong>先有個印象就可以了&lt;/strong>。其實 vim 很多操作、快捷鍵都很直覺，不妨自己多試試看加了 &lt;!-- raw HTML omitted -->Shift&lt;!-- raw HTML omitted -->、&lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted --> 之後原本的快捷鍵會有什麼變化&lt;br>
-vim 的操作還有很多技巧，如果有興趣不妨去看看 vim 的文件（用命令 &lt;code>:help&lt;/code> ）中相關章節（大概是 usr_03~04 左右）的介紹，你會對 vim 有非常全面的認識。雖然文件是英文寫的，但是並沒有太難的單字，大概國中程度就可以看了&lt;/p></description></item><item><title>Day 10：新手殺，誰來教我離開 vim 阿～～</title><link>https://blog.simbafs.cc/p/ithelp/day10/</link><pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day10/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day10.png" alt="Featured image of post Day 10：新手殺，誰來教我離開 vim 阿～～" />&lt;p>前面 9 天都在介紹操作環境，今天終於要進到&lt;strong>編輯器&lt;/strong>啦！我選用的編輯器是 nvim，但是如果你要用 vim 8 也是可以，因為這兩者之間幾乎&lt;strong>沒什麼差別&lt;/strong>，只是你要注意這兩者的&lt;strong>設定檔位置&lt;/strong>不同，目錄需要你&lt;strong>自己轉換&lt;/strong>。唯一不同的點大概是 nvim 內建支援用 &lt;strong>lua&lt;/strong>（一種程式語言）寫外掛，vim 8 只能用 &lt;strong>vimscript&lt;/strong>。關於兩者之間的愛恨情仇請參考&lt;a class="link" href="https://jdhao.github.io/2020/01/12/vim_nvim_history_development/" target="_blank" rel="noopener"
+&lt;h1 id="結尾">&lt;a href="#%e7%b5%90%e5%b0%be" class="header-anchor">&lt;/a>結尾
+&lt;/h1>&lt;p>這兩天講的大部份是操作性質的東西，&lt;strong>不需要一次全部記起來&lt;/strong>，用的多了自然會記得，現在只需要&lt;strong>先有個印象就可以了&lt;/strong>。其實 vim 很多操作、快捷鍵都很直覺，不妨自己多試試看加了 &lt;kbd>Shift&lt;/kbd>、&lt;kbd>CTRL&lt;/kbd> 之後原本的快捷鍵會有什麼變化&lt;br>
+vim 的操作還有很多技巧，如果有興趣不妨去看看 vim 的文件（用命令 &lt;code>:help&lt;/code> ）中相關章節（大概是 usr_03~04 左右）的介紹，你會對 vim 有非常全面的認識。雖然文件是英文寫的，但是並沒有太難的單字，大概國中程度就可以看了&lt;/p></description></item><item><title>Day 10：新手殺，誰來教我離開 vim 阿～～</title><link>https://blog.simbafs.cc/p/day10/</link><pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day10/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day10.png" alt="Featured image of post Day 10：新手殺，誰來教我離開 vim 阿～～" />&lt;p>前面 9 天都在介紹操作環境，今天終於要進到&lt;strong>編輯器&lt;/strong>啦！我選用的編輯器是 nvim，但是如果你要用 vim 8 也是可以，因為這兩者之間幾乎&lt;strong>沒什麼差別&lt;/strong>，只是你要注意這兩者的&lt;strong>設定檔位置&lt;/strong>不同，目錄需要你&lt;strong>自己轉換&lt;/strong>。唯一不同的點大概是 nvim 內建支援用 &lt;strong>lua&lt;/strong>（一種程式語言）寫外掛，vim 8 只能用 &lt;strong>vimscript&lt;/strong>。關於兩者之間的愛恨情仇請參考&lt;a class="link" href="https://jdhao.github.io/2020/01/12/vim_nvim_history_development/" target="_blank" rel="noopener"
 >這裡，他講的非常詳細&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>接下來的文章可能會出現 vim、nvim 混用，但是他們都是指 neovim，也就是我們用的這個編輯器，不用特別跑去裝兩套軟體&lt;/p>
 &lt;/blockquote>
-&lt;h1 id="安裝-nvim">安裝 nvim&lt;/h1>
-&lt;p>基本上你的電腦的套件管理器裡面應該都有 nvim 了，但是他的名字可能不是 nvim，例如 apt 就是 &lt;code>neovim&lt;/code>，如果你的套件管理器沒有收錄 nvim 或是你不知道該怎麼辦的話，可以看看&lt;a class="link" href="https://github.com/neovim/neovim/wiki/Installing-Neovim" target="_blank" rel="noopener"
+&lt;h1 id="安裝-nvim">&lt;a href="#%e5%ae%89%e8%a3%9d-nvim" class="header-anchor">&lt;/a>安裝 nvim
+&lt;/h1>&lt;p>基本上你的電腦的套件管理器裡面應該都有 nvim 了，但是他的名字可能不是 nvim，例如 apt 就是 &lt;code>neovim&lt;/code>，如果你的套件管理器沒有收錄 nvim 或是你不知道該怎麼辦的話，可以看看&lt;a class="link" href="https://github.com/neovim/neovim/wiki/Installing-Neovim" target="_blank" rel="noopener"
 >這個文章&lt;/a> 幾乎&lt;strong>所有作業系統&lt;/strong>他都有介紹怎麼安裝了，當然他也有教你如何&lt;strong>自己 build&lt;/strong>。&lt;/p>
-&lt;h1 id="操作">操作&lt;/h1>
-&lt;p>vim 的前身—— vi 誕生於&lt;strong>幾乎沒有圖形化界面&lt;/strong>的時候，那時候也沒有滑鼠，所以所有的操作都&lt;strong>必須在鍵盤上達成&lt;/strong>，今天就來認識一些簡單的命令吧！&lt;/p>
-&lt;h2 id="離開-vim">離開 vim&lt;/h2>
-&lt;p>為什麼要在還沒進入 vim 之前就教如何離開呢？ 因為幾乎所有初學者都會有這個疑問，&lt;strong>要怎麼離開 vim 啦！！&lt;/strong> 這邊我提供一個必勝的方法，不論你在 vim 做了什麼操作，&lt;!-- raw HTML omitted -->ESC&lt;!-- raw HTML omitted --> 狂按個 &lt;del>100 次&lt;/del>&lt;strong>三到四次&lt;/strong>，然後輸入 &lt;!-- raw HTML omitted -->:&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->q&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->!&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->ENTER&lt;!-- raw HTML omitted --> 就會離開了。&lt;/p>
-&lt;h2 id="命令模式編輯模式">命令模式？編輯模式？&lt;/h2>
-&lt;p>vim 的「模式」也是讓初學者很困擾的東西之一，下面用一張圖來解釋他們的關係&lt;/p>
+&lt;h1 id="操作">&lt;a href="#%e6%93%8d%e4%bd%9c" class="header-anchor">&lt;/a>操作
+&lt;/h1>&lt;p>vim 的前身—— vi 誕生於&lt;strong>幾乎沒有圖形化界面&lt;/strong>的時候，那時候也沒有滑鼠，所以所有的操作都&lt;strong>必須在鍵盤上達成&lt;/strong>，今天就來認識一些簡單的命令吧！&lt;/p>
+&lt;h2 id="離開-vim">&lt;a href="#%e9%9b%a2%e9%96%8b-vim" class="header-anchor">&lt;/a>離開 vim
+&lt;/h2>&lt;p>為什麼要在還沒進入 vim 之前就教如何離開呢？ 因為幾乎所有初學者都會有這個疑問，&lt;strong>要怎麼離開 vim 啦！！&lt;/strong> 這邊我提供一個必勝的方法，不論你在 vim 做了什麼操作，&lt;kbd>ESC&lt;/kbd> 狂按個 &lt;del>100 次&lt;/del>&lt;strong>三到四次&lt;/strong>，然後輸入 &lt;kbd>:&lt;/kbd>&lt;kbd>q&lt;/kbd>&lt;kbd>!&lt;/kbd>&lt;kbd>ENTER&lt;/kbd> 就會離開了。&lt;/p>
+&lt;h2 id="命令模式編輯模式">&lt;a href="#%e5%91%bd%e4%bb%a4%e6%a8%a1%e5%bc%8f%e7%b7%a8%e8%bc%af%e6%a8%a1%e5%bc%8f" class="header-anchor">&lt;/a>命令模式？編輯模式？
+&lt;/h2>&lt;p>vim 的「模式」也是讓初學者很困擾的東西之一，下面用一張圖來解釋他們的關係&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day10/vim-mode.png"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day10/vim-mode.png"
 loading="lazy"
 alt="vim mode"
 >&lt;/th>
@@ -1985,55 +1985,55 @@ alt="vim mode"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">vim 模式切換 (From: &lt;a class="link" href="https://gitbook.tw/chapters/command-line/vim-introduction.html" target="_blank" rel="noopener"
+&lt;td style="text-align: center">vim 模式切換 (From: &lt;a class="link" href="https://gitbook.tw/chapters/command-line/vim-introduction.html" target="_blank" rel="noopener"
 >高見龍——超簡明 Vim 操作介紹&lt;/a>)&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>通常 Normal Mode 中文是 &lt;strong>「命令模式」&lt;/strong> ，顧名思義這個模式下你可以&lt;strong>打命令&lt;/strong>，Insert Mode 的中文是 &lt;strong>「編輯模式」&lt;/strong> ，在這個模式你可以編輯你的檔案。&lt;/p>
 &lt;blockquote>
-&lt;p>從命令模式切回編輯模式的命令不只 &lt;!-- raw HTML omitted -->i&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->o&lt;!-- raw HTML omitted --> 這三個，還有很多，但這是最常見的三個，其他的會在之後介紹&lt;/p>
+&lt;p>從命令模式切回編輯模式的命令不只 &lt;kbd>i&lt;/kbd>&lt;kbd>a&lt;/kbd>&lt;kbd>o&lt;/kbd> 這三個，還有很多，但這是最常見的三個，其他的會在之後介紹&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="命令">命令&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="命令">&lt;a href="#%e5%91%bd%e4%bb%a4" class="header-anchor">&lt;/a>命令
+&lt;/h2>&lt;blockquote>
 &lt;p>注意：我的用詞可能和你看到其他文章不太一樣，這裡我的「命令」指的是 vim 中冒號開頭的命令，其他的則被我歸類到「快捷鍵」但是其實對 vim 來說他們都是命令（文件中都是 command ）&lt;/p>
 &lt;/blockquote>
-&lt;p>如果你想打某個 vim 命令，例如說「儲存並離開」，你需要先到 &lt;strong>「命令模式」&lt;/strong> ，然後按下 &lt;!-- raw HTML omitted -->:&lt;!-- raw HTML omitted -->，螢幕下面就會有&lt;strong>一行空行&lt;/strong>，你可以&lt;strong>在這裡打命令&lt;/strong>，也可按&lt;!-- raw HTML omitted -->上&lt;!-- raw HTML omitted -->、&lt;!-- raw HTML omitted -->下&lt;!-- raw HTML omitted --> 瀏覽以前打過的命令。常用的命令有儲存、離開、搜尋與取代、開啟檔案等等，這裡我列出幾個和檔案操作有關的命令&lt;/p>
+&lt;p>如果你想打某個 vim 命令，例如說「儲存並離開」，你需要先到 &lt;strong>「命令模式」&lt;/strong> ，然後按下 &lt;kbd>:&lt;/kbd>，螢幕下面就會有&lt;strong>一行空行&lt;/strong>，你可以&lt;strong>在這裡打命令&lt;/strong>，也可按&lt;kbd>上&lt;/kbd>、&lt;kbd>下&lt;/kbd> 瀏覽以前打過的命令。常用的命令有儲存、離開、搜尋與取代、開啟檔案等等，這裡我列出幾個和檔案操作有關的命令&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">命令&lt;/th>
-&lt;th style="text-align:left">說明&lt;/th>
+&lt;th style="text-align: left">命令&lt;/th>
+&lt;th style="text-align: left">說明&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">:w [filename]&lt;/td>
-&lt;td style="text-align:left">儲存&lt;/td>
+&lt;td style="text-align: left">:w [filename]&lt;/td>
+&lt;td style="text-align: left">儲存&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">:q&lt;/td>
-&lt;td style="text-align:left">離開&lt;/td>
+&lt;td style="text-align: left">:q&lt;/td>
+&lt;td style="text-align: left">離開&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">:q!&lt;/td>
-&lt;td style="text-align:left">強制離開不儲存（如果有更動檔案但只用 &lt;code>:q&lt;/code> 的話會跳出錯誤訊息）&lt;/td>
+&lt;td style="text-align: left">:q!&lt;/td>
+&lt;td style="text-align: left">強制離開不儲存（如果有更動檔案但只用 &lt;code>:q&lt;/code> 的話會跳出錯誤訊息）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">:wq&lt;/td>
-&lt;td style="text-align:left">儲存並離開&lt;/td>
+&lt;td style="text-align: left">:wq&lt;/td>
+&lt;td style="text-align: left">儲存並離開&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">:e [filename]&lt;/td>
-&lt;td style="text-align:left">開啟某個檔案&lt;/td>
+&lt;td style="text-align: left">:e [filename]&lt;/td>
+&lt;td style="text-align: left">開啟某個檔案&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">:{number}&lt;/td>
-&lt;td style="text-align:left">跳掉第幾行&lt;/td>
+&lt;td style="text-align: left">:{number}&lt;/td>
+&lt;td style="text-align: left">跳掉第幾行&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">:! {cmd}&lt;/td>
-&lt;td style="text-align:left">執行 shell 命令&lt;/td>
+&lt;td style="text-align: left">:! {cmd}&lt;/td>
+&lt;td style="text-align: left">執行 shell 命令&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2041,111 +2041,111 @@ alt="vim mode"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">命令&lt;/th>
-&lt;th style="text-align:left">說明&lt;/th>
+&lt;th style="text-align: left">命令&lt;/th>
+&lt;th style="text-align: left">說明&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">:w [filename]&lt;/td>
-&lt;td style="text-align:left">強制存檔，有時候會遇到檔案在開啟 vim 途中被其他程式修改或是權限問題，用 &lt;code>:w!&lt;/code> 可以強制覆蓋&lt;/td>
+&lt;td style="text-align: left">:w [filename]&lt;/td>
+&lt;td style="text-align: left">強制存檔，有時候會遇到檔案在開啟 vim 途中被其他程式修改或是權限問題，用 &lt;code>:w!&lt;/code> 可以強制覆蓋&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">:e [filename]&lt;/td>
-&lt;td style="text-align:left">不管現在這個檔案有沒有修改，直接從硬碟載入另一個檔案&lt;/td>
+&lt;td style="text-align: left">:e [filename]&lt;/td>
+&lt;td style="text-align: left">不管現在這個檔案有沒有修改，直接從硬碟載入另一個檔案&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="快捷鍵">快捷鍵&lt;/h2>
-&lt;p>和 tmux 一樣，vim 也可以把&lt;strong>某個按鍵對應到命令&lt;/strong>，這樣就不用常常打一堆指令了。&lt;br>
+&lt;h2 id="快捷鍵">&lt;a href="#%e5%bf%ab%e6%8d%b7%e9%8d%b5" class="header-anchor">&lt;/a>快捷鍵
+&lt;/h2>&lt;p>和 tmux 一樣，vim 也可以把&lt;strong>某個按鍵對應到命令&lt;/strong>，這樣就不用常常打一堆指令了。&lt;br>
 要注意，vim 可以指定快捷鍵生效的模式，所以如果在編輯模式不能用，那可能要切換到指令模式。&lt;br>
 以下的快捷鍵都是在命令模式下用的喔，常用的快捷鍵有&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">快捷鍵&lt;/th>
-&lt;th style="text-align:left">說明&lt;/th>
+&lt;th style="text-align: left">快捷鍵&lt;/th>
+&lt;th style="text-align: left">說明&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">yy&lt;/td>
-&lt;td style="text-align:left">複製一行&lt;/td>
+&lt;td style="text-align: left">yy&lt;/td>
+&lt;td style="text-align: left">複製一行&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">dd&lt;/td>
-&lt;td style="text-align:left">剪下一行&lt;/td>
+&lt;td style="text-align: left">dd&lt;/td>
+&lt;td style="text-align: left">剪下一行&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">x&lt;/td>
-&lt;td style="text-align:left">剪下一個字&lt;/td>
+&lt;td style="text-align: left">x&lt;/td>
+&lt;td style="text-align: left">剪下一個字&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">p&lt;/td>
-&lt;td style="text-align:left">貼上剪貼簿的內容&lt;/td>
+&lt;td style="text-align: left">p&lt;/td>
+&lt;td style="text-align: left">貼上剪貼簿的內容&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">v&lt;/td>
-&lt;td style="text-align:left">選取（之後可以複製、剪下）&lt;/td>
+&lt;td style="text-align: left">v&lt;/td>
+&lt;td style="text-align: left">選取（之後可以複製、剪下）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">.&lt;/td>
-&lt;td style="text-align:left">重複執行剛剛執行過的指令&lt;/td>
+&lt;td style="text-align: left">.&lt;/td>
+&lt;td style="text-align: left">重複執行剛剛執行過的指令&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">u&lt;/td>
-&lt;td style="text-align:left">回復（ undo ）&lt;/td>
+&lt;td style="text-align: left">u&lt;/td>
+&lt;td style="text-align: left">回復（ undo ）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">&lt;code>&amp;lt;C-r&amp;gt;&lt;/code>&lt;/td>
-&lt;td style="text-align:left">重做（ redo，重做 undo 取消的操作，也就是說要先 u 之後才能 r ）&lt;/td>
+&lt;td style="text-align: left">&lt;code>&amp;lt;C-r&amp;gt;&lt;/code>&lt;/td>
+&lt;td style="text-align: left">重做（ redo，重做 undo 取消的操作，也就是說要先 u 之後才能 r ）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">分隔線&lt;/td>
-&lt;td style="text-align:left">接下來的快捷鍵看看就好，你可以用方向鍵解決&lt;/td>
+&lt;td style="text-align: left">分隔線&lt;/td>
+&lt;td style="text-align: left">接下來的快捷鍵看看就好，你可以用方向鍵解決&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">h&lt;/td>
-&lt;td style="text-align:left">左移&lt;/td>
+&lt;td style="text-align: left">h&lt;/td>
+&lt;td style="text-align: left">左移&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">j&lt;/td>
-&lt;td style="text-align:left">下移&lt;/td>
+&lt;td style="text-align: left">j&lt;/td>
+&lt;td style="text-align: left">下移&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">k&lt;/td>
-&lt;td style="text-align:left">上移&lt;/td>
+&lt;td style="text-align: left">k&lt;/td>
+&lt;td style="text-align: left">上移&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">l&lt;/td>
-&lt;td style="text-align:left">右移&lt;/td>
+&lt;td style="text-align: left">l&lt;/td>
+&lt;td style="text-align: left">右移&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">gg&lt;/td>
-&lt;td style="text-align:left">移至檔案開頭&lt;/td>
+&lt;td style="text-align: left">gg&lt;/td>
+&lt;td style="text-align: left">移至檔案開頭&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">G&lt;/td>
-&lt;td style="text-align:left">移至檔案結尾&lt;/td>
+&lt;td style="text-align: left">G&lt;/td>
+&lt;td style="text-align: left">移至檔案結尾&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">^&lt;/td>
-&lt;td style="text-align:left">移至行頭&lt;/td>
+&lt;td style="text-align: left">^&lt;/td>
+&lt;td style="text-align: left">移至行頭&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">$&lt;/td>
-&lt;td style="text-align:left">移至行尾&lt;/td>
+&lt;td style="text-align: left">$&lt;/td>
+&lt;td style="text-align: left">移至行尾&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;blockquote>
-&lt;p>&lt;code>&amp;lt;C-r&amp;gt;&lt;/code> 的意思是 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->+&lt;!-- raw HTML omitted -->r&lt;!-- raw HTML omitted -->，這是 vim 常見的表示法，以後還會看到&lt;/p>
+&lt;p>&lt;code>&amp;lt;C-r&amp;gt;&lt;/code> 的意思是 &lt;kbd>CTRL&lt;/kbd>+&lt;kbd>r&lt;/kbd>，這是 vim 常見的表示法，以後還會看到&lt;/p>
 &lt;/blockquote>
-&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>vim 的命令（快捷鍵）其實是個非常高深的學問，我的文章可能沒辦法講的非常詳細，你可以去找其他教學，或是在 vim 中用指令 &lt;code>:help&lt;/code> 看官方的教學&lt;/p></description></item><item><title>Day 09：今天又想不出標題了！tmux plugin 和 mouse mode</title><link>https://blog.simbafs.cc/p/ithelp/day09/</link><pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day09/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day09.png" alt="Featured image of post Day 09：今天又想不出標題了！tmux plugin 和 mouse mode" />&lt;p>tmux 本身已經是個非常&lt;strong>完善&lt;/strong>的軟體了，因此我只選了一個外掛，&lt;a class="link" href="https://github.com/tmux-plugins/tmux-resurrect" target="_blank" rel="noopener"
+&lt;h1 id="結尾">&lt;a href="#%e7%b5%90%e5%b0%be" class="header-anchor">&lt;/a>結尾
+&lt;/h1>&lt;p>vim 的命令（快捷鍵）其實是個非常高深的學問，我的文章可能沒辦法講的非常詳細，你可以去找其他教學，或是在 vim 中用指令 &lt;code>:help&lt;/code> 看官方的教學&lt;/p></description></item><item><title>Day 09：今天又想不出標題了！tmux plugin 和 mouse mode</title><link>https://blog.simbafs.cc/p/day09/</link><pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day09/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day09.png" alt="Featured image of post Day 09：今天又想不出標題了！tmux plugin 和 mouse mode" />&lt;p>tmux 本身已經是個非常&lt;strong>完善&lt;/strong>的軟體了，因此我只選了一個外掛，&lt;a class="link" href="https://github.com/tmux-plugins/tmux-resurrect" target="_blank" rel="noopener"
 >tmux-resurrect&lt;/a> 這個外掛讓你可以&lt;strong>儲存目前的 tmux 版面配置&lt;/strong>（分頁、螢幕切割、名稱等等），在下次啟動時復原，這個功能在開發專案要切分編輯、編譯、測試版面時很好用，&lt;strong>不需要每次開機都重新切版面&lt;/strong>&lt;/p>
-&lt;h1 id="安裝">安裝&lt;/h1>
-&lt;p>我們之前已經&lt;a class="link" href="" >安裝過 tmp&lt;/a> 了，現在我們只需要在 &lt;code>~/.tmux.conf&lt;/code> 中新增一行&lt;/p>
+&lt;h1 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
+&lt;/h1>&lt;p>我們之前已經&lt;a class="link" href="" >安裝過 tmp&lt;/a> 了，現在我們只需要在 &lt;code>~/.tmux.conf&lt;/code> 中新增一行&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2154,21 +2154,21 @@ alt="vim mode"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-diff" data-lang="diff">&lt;span class="line">&lt;span class="cl">&lt;span class="gi">+ set -g @plugin &amp;#39;tmux-plugins/tmux-resurrect&amp;#39;
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>接下來執行 &lt;code>tmux source ~/.tmux.conf&lt;/code> 載入最新的設定檔，再來用快捷鍵 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->i&lt;!-- raw HTML omitted --> 安裝&lt;/p>
-&lt;h1 id="使用">使用&lt;/h1>
-&lt;p>切好版面後，按 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->s&lt;!-- raw HTML omitted --> （save）&lt;strong>儲存&lt;/strong>目前狀態，除了版面配置，每個 session 的工作路徑也會儲存，vim 開啟的檔案下次開啟有機會會幫你開，但是可能會遇到&lt;strong>暫存檔&lt;/strong>的問題，所以我建議是儲存狀態時把 vim 關掉&lt;br>
-下次要使用時，用 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->r&lt;!-- raw HTML omitted --> （restore）恢復&lt;/p>
-&lt;h1 id="更多外掛">更多外掛&lt;/h1>
-&lt;p>在 &lt;a class="link" href="https://github.com/tmux-plugins/list" target="_blank" rel="noopener"
+&lt;/div>&lt;p>接下來執行 &lt;code>tmux source ~/.tmux.conf&lt;/code> 載入最新的設定檔，再來用快捷鍵 &lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>i&lt;/kbd> 安裝&lt;/p>
+&lt;h1 id="使用">&lt;a href="#%e4%bd%bf%e7%94%a8" class="header-anchor">&lt;/a>使用
+&lt;/h1>&lt;p>切好版面後，按 &lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>s&lt;/kbd> （save）&lt;strong>儲存&lt;/strong>目前狀態，除了版面配置，每個 session 的工作路徑也會儲存，vim 開啟的檔案下次開啟有機會會幫你開，但是可能會遇到&lt;strong>暫存檔&lt;/strong>的問題，所以我建議是儲存狀態時把 vim 關掉&lt;br>
+下次要使用時，用 &lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>r&lt;/kbd> （restore）恢復&lt;/p>
+&lt;h1 id="更多外掛">&lt;a href="#%e6%9b%b4%e5%a4%9a%e5%a4%96%e6%8e%9b" class="header-anchor">&lt;/a>更多外掛
+&lt;/h1>&lt;p>在 &lt;a class="link" href="https://github.com/tmux-plugins/list" target="_blank" rel="noopener"
 >https://github.com/tmux-plugins/list&lt;/a> 有&lt;strong>更多外掛&lt;/strong>，主要內容包括&lt;strong>系統資訊顯示&lt;/strong>、&lt;strong>複製貼上&lt;/strong>、&lt;strong>搜尋&lt;/strong>，我個人覺得沒有重要到須要特別提出來介紹，就不一一介紹&lt;/p>
 &lt;hr>
-&lt;h1 id="更多-tmux">更多 tmux&lt;/h1>
-&lt;p>寫完今天的內容後我發現，內容好像有點少，於是就補充了一些 tmux 的東西&lt;/p>
-&lt;h2 id="列出所有快捷鍵">列出所有快捷鍵&lt;/h2>
-&lt;p>tmux 的快捷非常方便，但是有時候真的想不起來某個功能怎麼按，這時候你可以用 &lt;code>tmux list-kyes&lt;/code> 或是比較短的 &lt;code>tmux lsk&lt;/code> 看看什麼按鍵對應到什麼功能。&lt;br>
+&lt;h1 id="更多-tmux">&lt;a href="#%e6%9b%b4%e5%a4%9a-tmux" class="header-anchor">&lt;/a>更多 tmux
+&lt;/h1>&lt;p>寫完今天的內容後我發現，內容好像有點少，於是就補充了一些 tmux 的東西&lt;/p>
+&lt;h2 id="列出所有快捷鍵">&lt;a href="#%e5%88%97%e5%87%ba%e6%89%80%e6%9c%89%e5%bf%ab%e6%8d%b7%e9%8d%b5" class="header-anchor">&lt;/a>列出所有快捷鍵
+&lt;/h2>&lt;p>tmux 的快捷非常方便，但是有時候真的想不起來某個功能怎麼按，這時候你可以用 &lt;code>tmux list-kyes&lt;/code> 或是比較短的 &lt;code>tmux lsk&lt;/code> 看看什麼按鍵對應到什麼功能。&lt;br>
 有時候進來看看有什麼方便的快捷鍵自己還不知道也挺好玩的&lt;/p>
-&lt;h2 id="滑鼠控制">滑鼠控制&lt;/h2>
-&lt;p>不知道昨天的各種 tmux 移動、調整大小的快捷鍵有沒有嚇到你。tmux 其實還有提供一個更簡單的操作方式，如果你的終端機有&lt;strong>支援滑鼠&lt;/strong>的話（像是我用的 gnome-terminal 就有提供）你可以在 &lt;code>~/.tmux.conf&lt;/code> 中加上一行&lt;/p>
+&lt;h2 id="滑鼠控制">&lt;a href="#%e6%bb%91%e9%bc%a0%e6%8e%a7%e5%88%b6" class="header-anchor">&lt;/a>滑鼠控制
+&lt;/h2>&lt;p>不知道昨天的各種 tmux 移動、調整大小的快捷鍵有沒有嚇到你。tmux 其實還有提供一個更簡單的操作方式，如果你的終端機有&lt;strong>支援滑鼠&lt;/strong>的話（像是我用的 gnome-terminal 就有提供）你可以在 &lt;code>~/.tmux.conf&lt;/code> 中加上一行&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2179,15 +2179,15 @@ alt="vim mode"
 &lt;/div>
 &lt;/div>&lt;p>然後重新開啟 tmux，這時候你就可以用&lt;strong>滑鼠換頁&lt;/strong>、&lt;strong>切換分割畫面&lt;/strong>、&lt;strong>調整大小&lt;/strong>等等操作，在不同的地方按右鍵還會有不同的功能呦！&lt;br>
 但是要注意，如果打開這個功能，在 vim 裡面就不能用滾輪捲動文件，因為滾輪捲動這個事件被 tmux「劫持」了（除非你在 vim 也開啟滑鼠功能）&lt;/p>
-&lt;h2 id="複製">複製&lt;/h2>
-&lt;p>如果你有開啟滑鼠功能的話，你可以快速的操作一個平常不太用的功能——&lt;strong>剪貼簿&lt;/strong>&lt;br>
+&lt;h2 id="複製">&lt;a href="#%e8%a4%87%e8%a3%bd" class="header-anchor">&lt;/a>複製
+&lt;/h2>&lt;p>如果你有開啟滑鼠功能的話，你可以快速的操作一個平常不太用的功能——&lt;strong>剪貼簿&lt;/strong>&lt;br>
 tmux 有自己內部的剪貼簿，不和 vim、作業系統共用&lt;br>
 如果你要從終端機複製文字，只需要&lt;strong>按住左鍵&lt;/strong>、&lt;strong>拖移&lt;/strong>、&lt;strong>放開&lt;/strong>，就會自動複製了&lt;br>
-而貼上的快捷鍵是 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->]&lt;!-- raw HTML omitted -->&lt;/p>
+而貼上的快捷鍵是 &lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>]&lt;/kbd>&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day09/tmux-copy-paste.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day09/tmux-copy-paste.gif"
 loading="lazy"
 alt="tmux copy paste"
 >&lt;/th>
@@ -2195,23 +2195,23 @@ alt="tmux copy paste"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">複製貼上&lt;/td>
+&lt;td style="text-align: center">複製貼上&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>這個剪貼簿和 vim 的剪貼簿（到 vim 的章節會介紹）你可以交替使用，在命令模式（NORMAL）時用 vim 就不用切回編輯模式，在編輯模式（INSERT、REPLACE）時用 tmux 可以用用切到命令模式（這裡看不懂沒關係，我們會在講到 vim 剪貼簿時再講一次）&lt;/p>
-&lt;h2 id="系統剪貼簿">系統剪貼簿&lt;/h2>
-&lt;p>如果你開啟了滑鼠功能，可是你又想要用系統剪貼簿，你只需要在選取文字時壓著 &lt;!-- raw HTML omitted -->SHIFT&lt;!-- raw HTML omitted --> 就可以&lt;strong>暫時抑制&lt;/strong> tmux 的滑鼠功能，把文字複製到系統剪貼簿&lt;/p>
-&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>tmux 是一個&lt;strong>功能簡單&lt;/strong>但是強大的軟體，因此他的外掛明顯比 zsh 少很多（和 vim 相比可以說一個外掛都沒裝 XD），但是有一些延伸自 tmux 的軟體，例如 &lt;a class="link" href="https://tmate.io/" target="_blank" rel="noopener"
+&lt;h2 id="系統剪貼簿">&lt;a href="#%e7%b3%bb%e7%b5%b1%e5%89%aa%e8%b2%bc%e7%b0%bf" class="header-anchor">&lt;/a>系統剪貼簿
+&lt;/h2>&lt;p>如果你開啟了滑鼠功能，可是你又想要用系統剪貼簿，你只需要在選取文字時壓著 &lt;kbd>SHIFT&lt;/kbd> 就可以&lt;strong>暫時抑制&lt;/strong> tmux 的滑鼠功能，把文字複製到系統剪貼簿&lt;/p>
+&lt;h1 id="結尾">&lt;a href="#%e7%b5%90%e5%b0%be" class="header-anchor">&lt;/a>結尾
+&lt;/h1>&lt;p>tmux 是一個&lt;strong>功能簡單&lt;/strong>但是強大的軟體，因此他的外掛明顯比 zsh 少很多（和 vim 相比可以說一個外掛都沒裝 XD），但是有一些延伸自 tmux 的軟體，例如 &lt;a class="link" href="https://tmate.io/" target="_blank" rel="noopener"
 >tmate&lt;/a>，堪稱 terminal 中的 teamviewer，而且是免費的！&lt;br>
-明天開始會進入純‧ CLI 整合式開發環境的核心—— &lt;strong>nvim&lt;/strong>，敬請期待&lt;/p></description></item><item><title>Day 08：八爪章魚之 tmux 快捷鍵</title><link>https://blog.simbafs.cc/p/ithelp/day08/</link><pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day08/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day08.png" alt="Featured image of post Day 08：八爪章魚之 tmux 快捷鍵" />&lt;p>tmux 有許多的&lt;strong>快捷鍵&lt;/strong>來控制螢幕，不論是分割、移動都可以輕鬆完成&lt;/p>
-&lt;h1 id="分割畫面">分割畫面&lt;/h1>
-&lt;p>&lt;strong>垂直分割畫面&lt;/strong>的快捷鍵是 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->%&lt;!-- raw HTML omitted -->，&lt;strong>水平分割&lt;/strong>的快捷鍵是 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->|&lt;!-- raw HTML omitted -->(pipe，shift + enter 上面那個)。按下去畫面就會以中間分開，兩邊都是&lt;strong>獨立的&lt;/strong>，即使一邊在編譯卡住了，另一邊的編輯器還是可以正常操作的&lt;/p>
+明天開始會進入純‧ CLI 整合式開發環境的核心—— &lt;strong>nvim&lt;/strong>，敬請期待&lt;/p></description></item><item><title>Day 08：八爪章魚之 tmux 快捷鍵</title><link>https://blog.simbafs.cc/p/day08/</link><pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day08/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day08.png" alt="Featured image of post Day 08：八爪章魚之 tmux 快捷鍵" />&lt;p>tmux 有許多的&lt;strong>快捷鍵&lt;/strong>來控制螢幕，不論是分割、移動都可以輕鬆完成&lt;/p>
+&lt;h1 id="分割畫面">&lt;a href="#%e5%88%86%e5%89%b2%e7%95%ab%e9%9d%a2" class="header-anchor">&lt;/a>分割畫面
+&lt;/h1>&lt;p>&lt;strong>垂直分割畫面&lt;/strong>的快捷鍵是 &lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>%&lt;/kbd>，&lt;strong>水平分割&lt;/strong>的快捷鍵是 &lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>|&lt;/kbd>(pipe，shift + enter 上面那個)。按下去畫面就會以中間分開，兩邊都是&lt;strong>獨立的&lt;/strong>，即使一邊在編譯卡住了，另一邊的編輯器還是可以正常操作的&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day08/tmux-split.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day08/tmux-split.gif"
 loading="lazy"
 alt="tmux split"
 >&lt;/th>
@@ -2219,18 +2219,18 @@ alt="tmux split"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">分割畫面，一邊編輯，一邊編譯，另一邊執行&lt;/td>
+&lt;td style="text-align: center">分割畫面，一邊編輯，一邊編譯，另一邊執行&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="在分割畫面中移動">在分割畫面中移動&lt;/h1>
-&lt;p>現在你畫面分割好了，要怎麼移動呢？非常直覺，&lt;strong>往上就是上，往右就是右&lt;/strong>。&lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->方向鍵&lt;!-- raw HTML omitted -->&lt;br>
-你也可以用 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->tab&lt;!-- raw HTML omitted --> 按照順序移動，&lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->SHIFT&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->tab&lt;!-- raw HTML omitted --> 反向移動&lt;br>
-記得，按方向鍵時 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted --> 要放開，不然就會變接下來要介紹的快捷鍵&lt;/p>
+&lt;h1 id="在分割畫面中移動">&lt;a href="#%e5%9c%a8%e5%88%86%e5%89%b2%e7%95%ab%e9%9d%a2%e4%b8%ad%e7%a7%bb%e5%8b%95" class="header-anchor">&lt;/a>在分割畫面中移動
+&lt;/h1>&lt;p>現在你畫面分割好了，要怎麼移動呢？非常直覺，&lt;strong>往上就是上，往右就是右&lt;/strong>。&lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>方向鍵&lt;/kbd>&lt;br>
+你也可以用 &lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>tab&lt;/kbd> 按照順序移動，&lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>SHIFT&lt;/kbd>&lt;kbd>tab&lt;/kbd> 反向移動&lt;br>
+記得，按方向鍵時 &lt;kbd>CTRL&lt;/kbd> 要放開，不然就會變接下來要介紹的快捷鍵&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day08/tmux-move.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day08/tmux-move.gif"
 loading="lazy"
 alt="tmux move"
 >&lt;/th>
@@ -2238,16 +2238,16 @@ alt="tmux move"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">在分割畫面中移動&lt;/td>
+&lt;td style="text-align: center">在分割畫面中移動&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="調整分割大小">調整分割大小&lt;/h1>
-&lt;p>有時候我們不一定是要分成一半，例如下面五行，上面滿版。這時候你可以用 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->方向鍵&lt;!-- raw HTML omitted --> 調整大小&lt;/p>
+&lt;h1 id="調整分割大小">&lt;a href="#%e8%aa%bf%e6%95%b4%e5%88%86%e5%89%b2%e5%a4%a7%e5%b0%8f" class="header-anchor">&lt;/a>調整分割大小
+&lt;/h1>&lt;p>有時候我們不一定是要分成一半，例如下面五行，上面滿版。這時候你可以用 &lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>CTRL&lt;/kbd>&lt;kbd>方向鍵&lt;/kbd> 調整大小&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day08/tmux-resize.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day08/tmux-resize.gif"
 loading="lazy"
 alt="tmux resize"
 >&lt;/th>
@@ -2255,19 +2255,19 @@ alt="tmux resize"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">調整大小&lt;/td>
+&lt;td style="text-align: center">調整大小&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="新增分頁">新增分頁&lt;/h1>
-&lt;p>你有沒有發現終端機最下面那行？那個是 tmux 的&lt;strong>分頁&lt;/strong>，用 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->c&lt;!-- raw HTML omitted --> 就可以新增一個分頁，新增順序會&lt;strong>從 0 開始找空的補&lt;/strong>上&lt;br>
+&lt;h1 id="新增分頁">&lt;a href="#%e6%96%b0%e5%a2%9e%e5%88%86%e9%a0%81" class="header-anchor">&lt;/a>新增分頁
+&lt;/h1>&lt;p>你有沒有發現終端機最下面那行？那個是 tmux 的&lt;strong>分頁&lt;/strong>，用 &lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>c&lt;/kbd> 就可以新增一個分頁，新增順序會&lt;strong>從 0 開始找空的補&lt;/strong>上&lt;br>
 範例和分頁移動一起&lt;/p>
-&lt;h1 id="分頁移動">分頁移動&lt;/h1>
-&lt;p>在多個分頁中，你可以用 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> 移動到上一次使用的分頁，或是用 &lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> + &lt;!-- raw HTML omitted -->數字鍵&lt;!-- raw HTML omitted --> 移動到特定 ID 的分頁。&lt;/p>
+&lt;h1 id="分頁移動">&lt;a href="#%e5%88%86%e9%a0%81%e7%a7%bb%e5%8b%95" class="header-anchor">&lt;/a>分頁移動
+&lt;/h1>&lt;p>在多個分頁中，你可以用 &lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> 移動到上一次使用的分頁，或是用 &lt;kbd>CTRL&lt;/kbd>&lt;kbd>a&lt;/kbd> + &lt;kbd>數字鍵&lt;/kbd> 移動到特定 ID 的分頁。&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day08/tmux-win-move.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day08/tmux-win-move.gif"
 loading="lazy"
 alt="tmux win move"
 >&lt;/th>
@@ -2275,18 +2275,18 @@ alt="tmux win move"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">新增分頁、在分頁間移動&lt;/td>
+&lt;td style="text-align: center">新增分頁、在分頁間移動&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="結論">結論&lt;/h1>
-&lt;p>今天的內容比較偏操作，自己多試試就會熟悉了。掌握 tmux 之後你會發現你根本不需要開一堆終端機視窗，&lt;strong>一個&lt;/strong>就夠用了。&lt;/p></description></item><item><title>Day 07：整合 tmux 和 zsh</title><link>https://blog.simbafs.cc/p/ithelp/day07/</link><pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day07/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day07.png" alt="Featured image of post Day 07：整合 tmux 和 zsh" />&lt;p>昨天的結尾提到要整合 tmux 和 zsh 不是在 &lt;code>~/.zshrc&lt;/code> 結尾執行 &lt;code>tmux&lt;/code> 這麼簡單，今天就讓我們看看會遇到什麼問題吧！&lt;/p>
-&lt;h1 id="直接執行-tmux">直接執行 tmux&lt;/h1>
-&lt;p>在正式開始前，先讓我們看看&lt;strong>直接&lt;/strong>在 &lt;code>~/.zshrc&lt;/code> 後面執行 &lt;code>tmux&lt;/code> 會發生什麼錯誤&lt;/p>
+&lt;h1 id="結論">&lt;a href="#%e7%b5%90%e8%ab%96" class="header-anchor">&lt;/a>結論
+&lt;/h1>&lt;p>今天的內容比較偏操作，自己多試試就會熟悉了。掌握 tmux 之後你會發現你根本不需要開一堆終端機視窗，&lt;strong>一個&lt;/strong>就夠用了。&lt;/p></description></item><item><title>Day 07：整合 tmux 和 zsh</title><link>https://blog.simbafs.cc/p/day07/</link><pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day07/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day07.png" alt="Featured image of post Day 07：整合 tmux 和 zsh" />&lt;p>昨天的結尾提到要整合 tmux 和 zsh 不是在 &lt;code>~/.zshrc&lt;/code> 結尾執行 &lt;code>tmux&lt;/code> 這麼簡單，今天就讓我們看看會遇到什麼問題吧！&lt;/p>
+&lt;h1 id="直接執行-tmux">&lt;a href="#%e7%9b%b4%e6%8e%a5%e5%9f%b7%e8%a1%8c-tmux" class="header-anchor">&lt;/a>直接執行 tmux
+&lt;/h1>&lt;p>在正式開始前，先讓我們看看&lt;strong>直接&lt;/strong>在 &lt;code>~/.zshrc&lt;/code> 後面執行 &lt;code>tmux&lt;/code> 會發生什麼錯誤&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day07/tmux-1.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day07/tmux-1.gif"
 loading="lazy"
 alt="tmux 1"
 >&lt;/th>
@@ -2294,7 +2294,7 @@ alt="tmux 1"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">直接執行 &lt;code>tmux&lt;/code>&lt;/td>
+&lt;td style="text-align: center">直接執行 &lt;code>tmux&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2302,7 +2302,7 @@ alt="tmux 1"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day07/tmux-reproduce.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day07/tmux-reproduce.gif"
 loading="lazy"
 alt="tmux reproduce"
 >&lt;/th>
@@ -2310,12 +2310,12 @@ alt="tmux reproduce"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">加上 unset TMUX，嗯，爆炸了！&lt;/td>
+&lt;td style="text-align: center">加上 unset TMUX，嗯，爆炸了！&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="分析問題">分析問題&lt;/h1>
-&lt;p>可以看到，如果直接執行 &lt;code>tmux&lt;/code> 的話總是會跳出一個錯誤 &lt;code>sessions should be nested with care, unset $TMUX to force&lt;/code>，這段訊息告訴我們，不能建立&lt;strong>巢狀&lt;/strong> tmux，除非將 $TMUX 環境變數移除。欸？我們不是只執行一次 tmux 嗎？為什麼會他說我們建立巢狀 tmux？我們來看看登入之後發生了什麼事：&lt;/p>
+&lt;h1 id="分析問題">&lt;a href="#%e5%88%86%e6%9e%90%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>分析問題
+&lt;/h1>&lt;p>可以看到，如果直接執行 &lt;code>tmux&lt;/code> 的話總是會跳出一個錯誤 &lt;code>sessions should be nested with care, unset $TMUX to force&lt;/code>，這段訊息告訴我們，不能建立&lt;strong>巢狀&lt;/strong> tmux，除非將 $TMUX 環境變數移除。欸？我們不是只執行一次 tmux 嗎？為什麼會他說我們建立巢狀 tmux？我們來看看登入之後發生了什麼事：&lt;/p>
 &lt;ol>
 &lt;li>執行 zsh（因為我們的 &lt;strong>default shell&lt;/strong> 是 zsh）&lt;/li>
 &lt;li>zsh 執行 &lt;code>~/.zshrc&lt;/code>，初始化終端機後執行 &lt;code>tmux&lt;/code>&lt;/li>
@@ -2328,17 +2328,17 @@ alt="tmux reproduce"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">❓ &amp;gt; $TMUX 是什麼&lt;/th>
+&lt;th style="text-align: left">❓ &amp;gt; $TMUX 是什麼&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">$TMUX 是一個環境變數，是一個由三個部份串起來、以逗號分開的字串，第一部份是 tmux 的 unix socket 路徑，第二部份是 tmux 的 pid，最後是目前 tmux window 的編號（左下角那個數字）。這個環境變數只有在 tmux 裡面的 session 會設定，所以可以當作 tmux 是否啟動的檢查&lt;/td>
+&lt;td style="text-align: left">$TMUX 是一個環境變數，是一個由三個部份串起來、以逗號分開的字串，第一部份是 tmux 的 unix socket 路徑，第二部份是 tmux 的 pid，最後是目前 tmux window 的編號（左下角那個數字）。這個環境變數只有在 tmux 裡面的 session 會設定，所以可以當作 tmux 是否啟動的檢查&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="初步修改">初步修改&lt;/h1>
-&lt;p>我們在 &lt;code>~/.zshrc&lt;/code> 中執行 &lt;code>tmux&lt;/code> 的那行做一些修改&lt;/p>
+&lt;h1 id="初步修改">&lt;a href="#%e5%88%9d%e6%ad%a5%e4%bf%ae%e6%94%b9" class="header-anchor">&lt;/a>初步修改
+&lt;/h1>&lt;p>我們在 &lt;code>~/.zshrc&lt;/code> 中執行 &lt;code>tmux&lt;/code> 的那行做一些修改&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2358,7 +2358,7 @@ alt="tmux reproduce"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day07/tmux-2.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day07/tmux-2.gif"
 loading="lazy"
 alt="tmux 2"
 >&lt;/th>
@@ -2366,13 +2366,13 @@ alt="tmux 2"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">先檢查 $TMUX 再執行 &lt;code>tmux&lt;/code>&lt;/td>
+&lt;td style="text-align: center">先檢查 $TMUX 再執行 &lt;code>tmux&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>可以看到，巢狀 tmux 的算是問題解決了，但是你會發現離開 tmux 之後還是一個完整的 zsh，但是這時候你已經結束工作了，&lt;strong>不需要再一個 shell&lt;/strong>，你希望關掉 tmux 之後應改關掉終端機視窗的，這又要怎麼辦呢？&lt;/p>
-&lt;h1 id="關掉多餘的-zsh">關掉多餘的 zsh&lt;/h1>
-&lt;blockquote>
+&lt;h1 id="關掉多餘的-zsh">&lt;a href="#%e9%97%9c%e6%8e%89%e5%a4%9a%e9%a4%98%e7%9a%84-zsh" class="header-anchor">&lt;/a>關掉多餘的 zsh
+&lt;/h1>&lt;blockquote>
 &lt;p>題外話，從這裡開始就是個人龜毛，想要把使用體驗調整到最好&lt;/p>
 &lt;/blockquote>
 &lt;p>這裡介紹一個內建指令 &lt;code>exec&lt;/code>，這個指令會把當作的 shell &lt;strong>用後面的執行檔替換掉&lt;/strong>。例如我們現在的 shell 是 zsh，執行 &lt;code>exec ssh bbsu@ptt.cc&lt;/code> 之後，我們的 shell 就會換成 ssh 了。這有什麼好處？簡單來說就是&lt;strong>離開這個指令後就會離開終端機&lt;/strong>，不會再回到原本的 shell。這個效果剛好和我們的需求是一樣的，所以要解決多餘的 zsh，就只需要在 &lt;code>tmux&lt;/code> 前面加上 &lt;code>exec&lt;/code>&lt;/p>
@@ -2393,21 +2393,21 @@ alt="tmux 2"
 &lt;/div>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">❓ &amp;gt; &lt;code>exec cmd&lt;/code> 和 &lt;code>cmd; exit&lt;/code> 有什麼不一樣&lt;/th>
+&lt;th style="text-align: left">❓ &amp;gt; &lt;code>exec cmd&lt;/code> 和 &lt;code>cmd; exit&lt;/code> 有什麼不一樣&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">這兩個寫法都會有一樣的效果 —— 結束 cmd 後離開，但是他們達成的原因不同，詳細敘述在 &lt;a class="link" href="https://stackoverflow.com/questions/8874596/difference-between-exec-and-exit-in-bash" target="_blank" rel="noopener"
+&lt;td style="text-align: left">這兩個寫法都會有一樣的效果 —— 結束 cmd 後離開，但是他們達成的原因不同，詳細敘述在 &lt;a class="link" href="https://stackoverflow.com/questions/8874596/difference-between-exec-and-exit-in-bash" target="_blank" rel="noopener"
 >stackover flow&lt;/a> 有相關討論，有興趣可以看看&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">你有可以用 &lt;code>htop&lt;/code> 之類的工具看看 process 的結構，你就會知道 &lt;code>exec&lt;/code> 和 &lt;code>exit&lt;/code> 差別在哪了&lt;/td>
+&lt;td style="text-align: left">你有可以用 &lt;code>htop&lt;/code> 之類的工具看看 process 的結構，你就會知道 &lt;code>exec&lt;/code> 和 &lt;code>exit&lt;/code> 差別在哪了&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="改進-zshrc">改進 &lt;code>~/.zshrc&lt;/code>&lt;/h1>
-&lt;p>我們回頭看看目前的 shell 啟動流程，你會發現雖然我們不會回到最初的 zsh，但是他卻做了一堆&lt;strong>無意義的&lt;/strong>初始化、外掛載入，我們可以將這段設定&lt;strong>納入 if&lt;/strong> 裡面，需要時才執行，如果只是要啟動 tmux 就不必走一遍設定 plugin 之類的流程，改進後的 &lt;code>~/.zshrc&lt;/code> 大概長這樣&lt;/p>
+&lt;h1 id="改進-zshrc">&lt;a href="#%e6%94%b9%e9%80%b2-zshrc" class="header-anchor">&lt;/a>改進 &lt;code>~/.zshrc&lt;/code>
+&lt;/h1>&lt;p>我們回頭看看目前的 shell 啟動流程，你會發現雖然我們不會回到最初的 zsh，但是他卻做了一堆&lt;strong>無意義的&lt;/strong>初始化、外掛載入，我們可以將這段設定&lt;strong>納入 if&lt;/strong> 裡面，需要時才執行，如果只是要啟動 tmux 就不必走一遍設定 plugin 之類的流程，改進後的 &lt;code>~/.zshrc&lt;/code> 大概長這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2425,8 +2425,8 @@ alt="tmux 2"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>如此一來載入速度和記憶體用量都會有一咪咪的減少&lt;/p>
-&lt;h1 id="選擇性執行-tmux">選擇性執行 tmux&lt;/h1>
-&lt;p>有時候你可能會&lt;strong>不想啟動 tmux&lt;/strong>，例如 ssh 到遠端主機，在遠端主機上啟動 tmux 而不是在本機上啟動（在本機上啟動的話要開很多 ssh 連線，在遠端啟動只要連線一次），這時候就要有&lt;strong>一個機制可以把主機上的 tmux 關掉&lt;/strong>，回到原本的 shell，達成方法有很多，這裡我介紹一個我覺得最優雅的方法，在 &lt;code>~/.zshrc&lt;/code> 中 tmux 啟動判斷上加上以下條件&lt;/p>
+&lt;h1 id="選擇性執行-tmux">&lt;a href="#%e9%81%b8%e6%93%87%e6%80%a7%e5%9f%b7%e8%a1%8c-tmux" class="header-anchor">&lt;/a>選擇性執行 tmux
+&lt;/h1>&lt;p>有時候你可能會&lt;strong>不想啟動 tmux&lt;/strong>，例如 ssh 到遠端主機，在遠端主機上啟動 tmux 而不是在本機上啟動（在本機上啟動的話要開很多 ssh 連線，在遠端啟動只要連線一次），這時候就要有&lt;strong>一個機制可以把主機上的 tmux 關掉&lt;/strong>，回到原本的 shell，達成方法有很多，這裡我介紹一個我覺得最優雅的方法，在 &lt;code>~/.zshrc&lt;/code> 中 tmux 啟動判斷上加上以下條件&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2439,8 +2439,8 @@ alt="tmux 2"
 &lt;/div>
 &lt;/div>&lt;p>這時候 tmux 啟動條件就變成「tmux 還沒啟動」且「&lt;code>~/.notmux&lt;/code> 不存在」，在這裡我們把 &lt;code>~/.notmux&lt;/code> 這個檔案當作一個開關，如果這個檔案存在 tmux 就不會啟動。&lt;/p>
 &lt;p>如果你想啟動一個沒有 tmux 的終端機，先建立 &lt;code>~/.notmux&lt;/code> 檔案 &lt;code>touch ~/.notmux&lt;/code>，然後開啟新的終端機&lt;/p>
-&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>今天的內容比較雜，修改的部份也比較零散，下面是目前 &lt;code>~/.zshrc&lt;/code> 的內容&lt;/p>
+&lt;h1 id="結尾">&lt;a href="#%e7%b5%90%e5%b0%be" class="header-anchor">&lt;/a>結尾
+&lt;/h1>&lt;p>今天的內容比較雜，修改的部份也比較零散，下面是目前 &lt;code>~/.zshrc&lt;/code> 的內容&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2515,11 +2515,11 @@ alt="tmux 2"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Day 06：螢幕切八段！多開神器 tmux</title><link>https://blog.simbafs.cc/p/ithelp/day06/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day06/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day06.png" alt="Featured image of post Day 06：螢幕切八段！多開神器 tmux" />&lt;p>今天起要介紹的是 tmux，這是一個終端機的 &lt;strong>session 管理器&lt;/strong>，什麼是 session 呢？你可以把 session 理解為一個&lt;strong>終端機&lt;/strong>（畫面）和&lt;strong>主機&lt;/strong> （你的電腦）的連線，tmux 做的事就是把一個終端機&lt;strong>切分成多個終端機&lt;/strong>，白話說就是&lt;strong>多開神器&lt;/strong>啦！這樣你就可以左邊編輯程式、右邊看執行結果（如圖）。而且一切操作都在&lt;strong>一個&lt;/strong>終端機視窗裡面，這意味著即使你在&lt;strong>沒有圖形界面&lt;/strong>的純文字模式（像是 single user mode、ssh 連線）也可以享受如同圖形界面的便利！&lt;/p>
+&lt;/div></description></item><item><title>Day 06：螢幕切八段！多開神器 tmux</title><link>https://blog.simbafs.cc/p/day06/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day06/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day06.png" alt="Featured image of post Day 06：螢幕切八段！多開神器 tmux" />&lt;p>今天起要介紹的是 tmux，這是一個終端機的 &lt;strong>session 管理器&lt;/strong>，什麼是 session 呢？你可以把 session 理解為一個&lt;strong>終端機&lt;/strong>（畫面）和&lt;strong>主機&lt;/strong> （你的電腦）的連線，tmux 做的事就是把一個終端機&lt;strong>切分成多個終端機&lt;/strong>，白話說就是&lt;strong>多開神器&lt;/strong>啦！這樣你就可以左邊編輯程式、右邊看執行結果（如圖）。而且一切操作都在&lt;strong>一個&lt;/strong>終端機視窗裡面，這意味著即使你在&lt;strong>沒有圖形界面&lt;/strong>的純文字模式（像是 single user mode、ssh 連線）也可以享受如同圖形界面的便利！&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day06/tmuxDemo.gif"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day06/tmuxDemo.gif"
 loading="lazy"
 alt="tmux demo"
 >&lt;/th>
@@ -2527,13 +2527,13 @@ alt="tmux demo"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">tmux demo&lt;/td>
+&lt;td style="text-align: center">tmux demo&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="安裝">安裝&lt;/h1>
-&lt;h2 id="debianubuntu">debian/ubuntu&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h1 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
+&lt;/h1>&lt;h2 id="debianubuntu">&lt;a href="#debianubuntu" class="header-anchor">&lt;/a>debian/ubuntu
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -2541,8 +2541,8 @@ alt="tmux demo"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ apt install tmux
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="macos">macOS&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="macos">&lt;a href="#macos" class="header-anchor">&lt;/a>macOS
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -2550,11 +2550,11 @@ alt="tmux demo"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ brew install tmux
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="其他-or-自己編譯">其他 or 自己編譯&lt;/h2>
-&lt;p>其他可以參考 &lt;a class="link" href="https://github.com/tmux/tmux/wiki/Installing" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="其他-or-自己編譯">&lt;a href="#%e5%85%b6%e4%bb%96-or-%e8%87%aa%e5%b7%b1%e7%b7%a8%e8%ad%af" class="header-anchor">&lt;/a>其他 or 自己編譯
+&lt;/h2>&lt;p>其他可以參考 &lt;a class="link" href="https://github.com/tmux/tmux/wiki/Installing" target="_blank" rel="noopener"
 >https://github.com/tmux/tmux/wiki/Installing&lt;/a> 的說明&lt;/p>
-&lt;h1 id="config">config&lt;/h1>
-&lt;p>tmux 啟動時會去讀取 &lt;code>~/.tmux.conf&lt;/code> 這個檔案，所以的設定檔都放在這，在這裡，我推薦一個我用很多年的設定檔，&lt;a class="link" href="https://gist.github.com/simbafs/e06a1763c1967ce3f4b5ef643db5e0b3" target="_blank" rel="noopener"
+&lt;h1 id="config">&lt;a href="#config" class="header-anchor">&lt;/a>config
+&lt;/h1>&lt;p>tmux 啟動時會去讀取 &lt;code>~/.tmux.conf&lt;/code> 這個檔案，所以的設定檔都放在這，在這裡，我推薦一個我用很多年的設定檔，&lt;a class="link" href="https://gist.github.com/simbafs/e06a1763c1967ce3f4b5ef643db5e0b3" target="_blank" rel="noopener"
 >點擊這裡下載&lt;/a>，或是執行以下命令&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -2566,12 +2566,12 @@ alt="tmux demo"
 &lt;/div>
 &lt;/div>&lt;p>這個檔案是我從&lt;strong>網路&lt;/strong>上找到的，後來有加一些自己的東西，把檔案下載下來並存到 &lt;code>~/.tmux.conf&lt;/code> 裡面，關於每一行的用途都有用註解標示，主要幾個改變有以下幾點：&lt;/p>
 &lt;ul>
-&lt;li>把前置按鍵（prefix）從 &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->b&lt;!-- raw HTML omitted --> 改成 &lt;!-- raw HTML omitted -->Ctrl&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->a&lt;!-- raw HTML omitted --> (第 16 ~ 19 行，不喜歡的話可以拿掉)，你也可以改成其他按鍵&lt;/li>
+&lt;li>把前置按鍵（prefix）從 &lt;kbd>Ctrl&lt;/kbd>&lt;kbd>b&lt;/kbd> 改成 &lt;kbd>Ctrl&lt;/kbd>&lt;kbd>a&lt;/kbd> (第 16 ~ 19 行，不喜歡的話可以拿掉)，你也可以改成其他按鍵&lt;/li>
 &lt;li>底部 status bar 變成彩色，不再是單調的綠色&lt;/li>
 &lt;li>一些快捷鍵綁定&lt;/li>
 &lt;/ul>
-&lt;h1 id="啟動">啟動&lt;/h1>
-&lt;p>暫時我們不加入開啟終端機自動啟動 tmux，手動啟動方式是在終端機執行命令&lt;/p>
+&lt;h1 id="啟動">&lt;a href="#%e5%95%9f%e5%8b%95" class="header-anchor">&lt;/a>啟動
+&lt;/h1>&lt;p>暫時我們不加入開啟終端機自動啟動 tmux，手動啟動方式是在終端機執行命令&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2602,24 +2602,24 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/div>
 &lt;/div>&lt;p>要安裝外掛只要在 &lt;code>run '~/.tmux/plugins/tpm/tpm'&lt;/code> 之後加上 &lt;code>set -g @plugin &amp;lt;repo&amp;gt;&lt;/code> 就行了，在我給的 config 檔中註解有說明 repo 格式&lt;br>
 這時候啟動 tmux 就不會有錯誤了&lt;/p>
-&lt;h1 id="預告">預告&lt;/h1>
-&lt;p>今天安裝好了 tmux 和外掛管理 tpm，明天會介紹如何在開啟終端機時&lt;strong>自動開啟&lt;/strong> tmux，你以為是直接在 &lt;code>~/.zshrc&lt;/code> 中執行 tmux 嗎？嘿嘿嘿，你可以試試就知道為什麼沒這麼簡單了，明天的文章會好好介紹如何&lt;strong>完美整合 zsh 和 tmux&lt;/strong>&lt;/p></description></item><item><title>Day 05：是說，這個選項可以接什麼東西？autocomplete 與 auto-pair</title><link>https://blog.simbafs.cc/p/ithelp/day05/</link><pubDate>Sun, 05 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day05/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day05.png" alt="Featured image of post Day 05：是說，這個選項可以接什麼東西？autocomplete 與 auto-pair" />&lt;p>今天會介紹兩個&lt;strong>開箱即用&lt;/strong>（ out of box ）的外掛和簡化指令的 alias&lt;/p>
-&lt;h1 id="zsh-autocomplete">zsh-autocomplete&lt;/h1>
-&lt;p>在 CLI 下指令時，有時候會&lt;strong>忘記選項&lt;/strong>叫什麼、檔名中的 &lt;code>k&lt;/code> 到底是大寫還是小寫，這時候 autocomplete 就很好用，他會幫我們選出&lt;strong>接下來可以填的字&lt;/strong>，像是&lt;strong>選項&lt;/strong>、&lt;strong>子命令&lt;/strong>、&lt;strong>檔名&lt;/strong>等等。&lt;/p>
+&lt;h1 id="預告">&lt;a href="#%e9%a0%90%e5%91%8a" class="header-anchor">&lt;/a>預告
+&lt;/h1>&lt;p>今天安裝好了 tmux 和外掛管理 tpm，明天會介紹如何在開啟終端機時&lt;strong>自動開啟&lt;/strong> tmux，你以為是直接在 &lt;code>~/.zshrc&lt;/code> 中執行 tmux 嗎？嘿嘿嘿，你可以試試就知道為什麼沒這麼簡單了，明天的文章會好好介紹如何&lt;strong>完美整合 zsh 和 tmux&lt;/strong>&lt;/p></description></item><item><title>Day 05：是說，這個選項可以接什麼東西？autocomplete 與 auto-pair</title><link>https://blog.simbafs.cc/p/day05/</link><pubDate>Sun, 05 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day05/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day05.png" alt="Featured image of post Day 05：是說，這個選項可以接什麼東西？autocomplete 與 auto-pair" />&lt;p>今天會介紹兩個&lt;strong>開箱即用&lt;/strong>（ out of box ）的外掛和簡化指令的 alias&lt;/p>
+&lt;h1 id="zsh-autocomplete">&lt;a href="#zsh-autocomplete" class="header-anchor">&lt;/a>zsh-autocomplete
+&lt;/h1>&lt;p>在 CLI 下指令時，有時候會&lt;strong>忘記選項&lt;/strong>叫什麼、檔名中的 &lt;code>k&lt;/code> 到底是大寫還是小寫，這時候 autocomplete 就很好用，他會幫我們選出&lt;strong>接下來可以填的字&lt;/strong>，像是&lt;strong>選項&lt;/strong>、&lt;strong>子命令&lt;/strong>、&lt;strong>檔名&lt;/strong>等等。&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">❓ &amp;gt; autocomplete 和 autosuggestion 有什麼不同？會同衝突嗎？&lt;/th>
+&lt;th style="text-align: left">❓ &amp;gt; autocomplete 和 autosuggestion 有什麼不同？會同衝突嗎？&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">前者是從 completion function 中找建議，後者是從以前下過的指令中找建議，兩者不會衝突&lt;/td>
+&lt;td style="text-align: left">前者是從 completion function 中找建議，後者是從以前下過的指令中找建議，兩者不會衝突&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="安裝-autocomplete">安裝 autocomplete&lt;/h2>
-&lt;p>托 &lt;a class="link" href="./day02.md#zplug" >zplug&lt;/a> 的福，我們只需要修改 &lt;code>~/.zshrc&lt;/code> 就可以安裝外掛了。在 &lt;code>~/.zshrc&lt;/code> 中新增以下設定&lt;/p>
+&lt;h2 id="安裝-autocomplete">&lt;a href="#%e5%ae%89%e8%a3%9d-autocomplete" class="header-anchor">&lt;/a>安裝 autocomplete
+&lt;/h2>&lt;p>托 &lt;a class="link" href="./day02.md#zplug" >zplug&lt;/a> 的福，我們只需要修改 &lt;code>~/.zshrc&lt;/code> 就可以安裝外掛了。在 &lt;code>~/.zshrc&lt;/code> 中新增以下設定&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2634,8 +2634,8 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;p>在 &lt;a class="link" href="https://github.com/marlonrichert/zsh-autocomplete" target="_blank" rel="noopener"
 >https://github.com/marlonrichert/zsh-autocomplete&lt;/a> 有快捷鍵教學&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="設定">設定&lt;/h2>
-&lt;blockquote>
+&lt;h2 id="設定">&lt;a href="#%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>設定
+&lt;/h2>&lt;blockquote>
 &lt;p>這段是我在寫完第一版後新增了，所以在 &lt;a class="link" href="https://ithelp.ithome.com.tw/users/20130473/ironman/3975" target="_blank" rel="noopener"
 >純‧ CLI 整合開發環境&lt;/a> 是沒有的&lt;/p>
 &lt;/blockquote>
@@ -2665,8 +2665,8 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這裡新增了「區分大小寫」和「方向鍵選建議」兩個功能&lt;/p>
-&lt;h1 id="zsh-autopair">zsh-autopair&lt;/h1>
-&lt;p>這個簡單但是貼心的功能在這個 IDE 中很常見，我們的當然也不能漏掉他&lt;br>
+&lt;h1 id="zsh-autopair">&lt;a href="#zsh-autopair" class="header-anchor">&lt;/a>zsh-autopair
+&lt;/h1>&lt;p>這個簡單但是貼心的功能在這個 IDE 中很常見，我們的當然也不能漏掉他&lt;br>
 一樣修改 &lt;code>~/.zshrc&lt;/code> 就可以安裝了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -2677,8 +2677,8 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>重新開啟安裝後就可以享受&lt;strong>自動括號了&lt;/strong>！&lt;/p>
-&lt;h1 id="alias">alias&lt;/h1>
-&lt;p>alias 的語法很簡單，&lt;a class="link" href="../day02" >day02&lt;/a> 有提到過，我們再複習一次&lt;/p>
+&lt;h1 id="alias">&lt;a href="#alias" class="header-anchor">&lt;/a>alias
+&lt;/h1>&lt;p>alias 的語法很簡單，&lt;a class="link" href="../day02" >day02&lt;/a> 有提到過，我們再複習一次&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2755,8 +2755,8 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">mkdir&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;mkdir -p&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="mkdir--p">mkdir -p&lt;/h2>
-&lt;p>假設你現在在一個空目錄裡，下以下指令（沒有 alias）&lt;/p>
+&lt;/div>&lt;h2 id="mkdir--p">&lt;a href="#mkdir--p" class="header-anchor">&lt;/a>mkdir -p
+&lt;/h2>&lt;p>假設你現在在一個空目錄裡，下以下指令（沒有 alias）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2766,12 +2766,12 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>你會得到 &lt;code>mkdir: 無法建立 「src/user」 目錄: 沒有此一檔案或目錄&lt;/code>，這是因為 &lt;code>mkdir&lt;/code> &lt;strong>找不到&lt;/strong> &lt;code>user&lt;/code> 的&lt;strong>上層目錄&lt;/strong> &lt;code>src&lt;/code>，這時候加上 &lt;code>-p&lt;/code> 就不一樣了，因為 &lt;code>-p&lt;/code> 會讓 &lt;code>mkdir&lt;/code> 在上層目錄不存在時&lt;strong>自動建立&lt;/strong>，因此 &lt;code>mkdir src/user&lt;/code> 就會成功，不會再跳錯誤&lt;/p>
-&lt;h1 id="預告">預告&lt;/h1>
-&lt;p>到今天關於 zsh 的介紹就結束了，明天開始會來講講終端機管理神器 tmux&lt;/p></description></item><item><title>Day 04：金魚記憶力太短暫，交給外掛記吧！autosuggestions 與 sugstring-search</title><link>https://blog.simbafs.cc/p/ithelp/day04/</link><pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day04/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day04.png" alt="Featured image of post Day 04：金魚記憶力太短暫，交給外掛記吧！autosuggestions 與 sugstring-search" />&lt;p>今天的內容會比平常多，但是非常紮實！&lt;/p>
+&lt;h1 id="預告">&lt;a href="#%e9%a0%90%e5%91%8a" class="header-anchor">&lt;/a>預告
+&lt;/h1>&lt;p>到今天關於 zsh 的介紹就結束了，明天開始會來講講終端機管理神器 tmux&lt;/p></description></item><item><title>Day 04：金魚記憶力太短暫，交給外掛記吧！autosuggestions 與 sugstring-search</title><link>https://blog.simbafs.cc/p/day04/</link><pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day04/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day04.png" alt="Featured image of post Day 04：金魚記憶力太短暫，交給外掛記吧！autosuggestions 與 sugstring-search" />&lt;p>今天的內容會比平常多，但是非常紮實！&lt;/p>
 &lt;p>有時候我們在 CLI 操作時遇到很多&lt;strong>重複&lt;/strong>的指令，像是 &lt;code>git add&lt;/code>、&lt;code>git commit -m 'ba la ba la'&lt;/code> 等等，這些指令可能又長又複雜，一直都是自己打也不是辦法，這時候就該請出 &lt;a class="link" href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="noopener"
 >autosuggestions&lt;/a> 了&lt;/p>
-&lt;h1 id="安裝-autosuggestions">安裝 autosuggestions&lt;/h1>
-&lt;p>老樣子，安裝外掛只須要修改 &lt;code>~/.zshrc&lt;/code> 就可以了&lt;/p>
+&lt;h1 id="安裝-autosuggestions">&lt;a href="#%e5%ae%89%e8%a3%9d-autosuggestions" class="header-anchor">&lt;/a>安裝 autosuggestions
+&lt;/h1>&lt;p>老樣子，安裝外掛只須要修改 &lt;code>~/.zshrc&lt;/code> 就可以了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2785,18 +2785,18 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>因為 &lt;code>autosuggestions&lt;/code> 是外掛，不需要特別寫 tag 了&lt;/p>
-&lt;h2 id="問題好像有奇怪的字跑出來">[問題]好像有奇怪的字跑出來？&lt;/h2>
-&lt;p>寫好之後重開終端機，按下 &lt;!-- raw HTML omitted -->enter&lt;!-- raw HTML omitted --> 你可能會發現跳出了一堆東西，這是因為你開啟了 p10k 的 Instant Prompt Mode，這個雖然會讓你的終端機跑起來比較順（官方說的，我感覺不出來），但是在 zsh 載入完成之前就不能有任何字輸出。&lt;br>
+&lt;h2 id="問題好像有奇怪的字跑出來">&lt;a href="#%e5%95%8f%e9%a1%8c%e5%a5%bd%e5%83%8f%e6%9c%89%e5%a5%87%e6%80%aa%e7%9a%84%e5%ad%97%e8%b7%91%e5%87%ba%e4%be%86" class="header-anchor">&lt;/a>[問題]好像有奇怪的字跑出來？
+&lt;/h2>&lt;p>寫好之後重開終端機，按下 &lt;kbd>enter&lt;/kbd> 你可能會發現跳出了一堆東西，這是因為你開啟了 p10k 的 Instant Prompt Mode，這個雖然會讓你的終端機跑起來比較順（官方說的，我感覺不出來），但是在 zsh 載入完成之前就不能有任何字輸出。&lt;br>
 可是你看看，如果我們新增了一個外掛，zplug 會跳出來問我們是否要安裝，這時後 Instant Prompt Mode 就出來抱怨了。&lt;br>
 這個問題的解決方法直覺上有兩個，一是關掉 Instant Prompt Mode，二是讓 zplug 先不要吵&lt;/p>
-&lt;h3 id="關掉-instant-prompt-mode">關掉 Instant Prompt Mode&lt;/h3>
-&lt;p>關掉 Instant Prompt Mode 很簡單，重新設定一次 p10k 就好了，在設定程式問你是否要開啟 p10k 時選擇 &lt;code>(3) Off&lt;/code>，這樣下次安裝外掛就不會有奇怪的警告訊息跳出來了。&lt;/p>
-&lt;h3 id="讓-zplug-先閉嘴">讓 zplug 先閉嘴&lt;/h3>
-&lt;p>如果你覺得 Instant Prompt Mode 很重要，需要保留，那你可能會想到這個方法&lt;br>
+&lt;h3 id="關掉-instant-prompt-mode">&lt;a href="#%e9%97%9c%e6%8e%89-instant-prompt-mode" class="header-anchor">&lt;/a>關掉 Instant Prompt Mode
+&lt;/h3>&lt;p>關掉 Instant Prompt Mode 很簡單，重新設定一次 p10k 就好了，在設定程式問你是否要開啟 p10k 時選擇 &lt;code>(3) Off&lt;/code>，這樣下次安裝外掛就不會有奇怪的警告訊息跳出來了。&lt;/p>
+&lt;h3 id="讓-zplug-先閉嘴">&lt;a href="#%e8%ae%93-zplug-%e5%85%88%e9%96%89%e5%98%b4" class="header-anchor">&lt;/a>讓 zplug 先閉嘴
+&lt;/h3>&lt;p>如果你覺得 Instant Prompt Mode 很重要，需要保留，那你可能會想到這個方法&lt;br>
 在 &lt;code>~/.zshrc&lt;/code> 中有一行 &lt;code>zplug load&lt;/code>，這行會讓 zplug 在 &lt;code>~/.zshrc&lt;/code> 載入時偵測是否要安裝新外掛，把這行拿掉再重新開啟終端機，以後他就不會自動檢查了&lt;br>
 這時候如果你要安裝新外掛，一樣是修改 &lt;code>~/.zshrc&lt;/code> 之後重開終端機，&lt;strong>手動&lt;/strong>下指令 &lt;code>zplug load&lt;/code>，zplug 就會開始檢查更新。&lt;/p>
-&lt;h3 id="有沒有兼得的方法呢">有沒有兼得的方法呢？&lt;/h3>
-&lt;p>以上兩種方法都是治標不治本，其實 &lt;code>~/.zshrc&lt;/code> 裡面已經有寫解決辦法了，看看 &lt;code>~/.zshrc&lt;/code> 最上面的註解，這是設定 p10k 時如果你有開啟 Instant Prompt Mode 他幫你加的&lt;/p>
+&lt;h3 id="有沒有兼得的方法呢">&lt;a href="#%e6%9c%89%e6%b2%92%e6%9c%89%e5%85%bc%e5%be%97%e7%9a%84%e6%96%b9%e6%b3%95%e5%91%a2" class="header-anchor">&lt;/a>有沒有兼得的方法呢？
+&lt;/h3>&lt;p>以上兩種方法都是治標不治本，其實 &lt;code>~/.zshrc&lt;/code> 裡面已經有寫解決辦法了，看看 &lt;code>~/.zshrc&lt;/code> 最上面的註解，這是設定 p10k 時如果你有開啟 Instant Prompt Mode 他幫你加的&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2863,8 +2863,8 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">[[&lt;/span> &lt;span class="o">!&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">f&lt;/span> &lt;span class="o">~/.&lt;/span>&lt;span class="n">p10k&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zsh&lt;/span> &lt;span class="p">]]&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">source&lt;/span> &lt;span class="o">~/.&lt;/span>&lt;span class="n">p10k&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zsh&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="問題為什麼按-kbd方向鍵上kbd-時會出現和現在指令開頭不同的字">[問題]為什麼按 &lt;!-- raw HTML omitted -->方向鍵上&lt;!-- raw HTML omitted --> 時會出現和現在指令開頭不同的字&lt;/h1>
-&lt;p>假設你現在打過以下指令&lt;/p>
+&lt;/div>&lt;h1 id="問題為什麼按-kbd方向鍵上kbd-時會出現和現在指令開頭不同的字">&lt;a href="#%e5%95%8f%e9%a1%8c%e7%82%ba%e4%bb%80%e9%ba%bc%e6%8c%89-kbd%e6%96%b9%e5%90%91%e9%8d%b5%e4%b8%8akbd-%e6%99%82%e6%9c%83%e5%87%ba%e7%8f%be%e5%92%8c%e7%8f%be%e5%9c%a8%e6%8c%87%e4%bb%a4%e9%96%8b%e9%a0%ad%e4%b8%8d%e5%90%8c%e7%9a%84%e5%ad%97" class="header-anchor">&lt;/a>[問題]為什麼按 &lt;kbd>方向鍵上&lt;/kbd> 時會出現和現在指令開頭不同的字
+&lt;/h1>&lt;p>假設你現在打過以下指令&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2877,7 +2877,7 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ ls /
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>這時候你先打 &lt;code>ls&lt;/code>，想找到之前 &lt;code>ls&lt;/code> 開頭的指令按，按 &lt;!-- raw HTML omitted -->方向鍵上&lt;!-- raw HTML omitted --> 會出現 &lt;code>cat ~/.zshrc&lt;/code> 呢？這是因為現在的 &lt;!-- raw HTML omitted -->方向鍵上&lt;!-- raw HTML omitted --> 是 zsh 本身的「上一個指令」。&lt;br>
+&lt;/div>&lt;p>這時候你先打 &lt;code>ls&lt;/code>，想找到之前 &lt;code>ls&lt;/code> 開頭的指令按，按 &lt;kbd>方向鍵上&lt;/kbd> 會出現 &lt;code>cat ~/.zshrc&lt;/code> 呢？這是因為現在的 &lt;kbd>方向鍵上&lt;/kbd> 是 zsh 本身的「上一個指令」。&lt;br>
 這個問題需要裝另一個外掛來解決：&lt;a class="link" href="https://github.com/zsh-users/zsh-history-substring-search" target="_blank" rel="noopener"
 >zsh-users/zsh-history-substring-search&lt;/a>&lt;br>
 在 &lt;code>~/.zshrc&lt;/code> 新增一行&lt;/p>
@@ -2907,8 +2907,8 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;strong>重開終端機&lt;/strong>後就可以搜尋同樣開頭的指令紀錄了&lt;/p>
-&lt;h1 id="問題為什麼開新的終端機-autosuggestions-讀不到以前下過得指令">[問題]為什麼開新的終端機 autosuggestions 讀不到以前下過得指令？&lt;/h1>
-&lt;p>這是因為我們的 &lt;code>~/.zshrc&lt;/code> 中沒有設定把 history 存下來，所以 autosuggestions 只能拿到&lt;strong>目前這個終端機&lt;/strong>的紀錄，一關掉紀錄就不見了，autosuggestions 自然找不到。&lt;br>
+&lt;h1 id="問題為什麼開新的終端機-autosuggestions-讀不到以前下過得指令">&lt;a href="#%e5%95%8f%e9%a1%8c%e7%82%ba%e4%bb%80%e9%ba%bc%e9%96%8b%e6%96%b0%e7%9a%84%e7%b5%82%e7%ab%af%e6%a9%9f-autosuggestions-%e8%ae%80%e4%b8%8d%e5%88%b0%e4%bb%a5%e5%89%8d%e4%b8%8b%e9%81%8e%e5%be%97%e6%8c%87%e4%bb%a4" class="header-anchor">&lt;/a>[問題]為什麼開新的終端機 autosuggestions 讀不到以前下過得指令？
+&lt;/h1>&lt;p>這是因為我們的 &lt;code>~/.zshrc&lt;/code> 中沒有設定把 history 存下來，所以 autosuggestions 只能拿到&lt;strong>目前這個終端機&lt;/strong>的紀錄，一關掉紀錄就不見了，autosuggestions 自然找不到。&lt;br>
 要解決也很簡單，讓他把 history &lt;strong>寫進檔案&lt;/strong>就好了，在 &lt;code>~/.zshrc&lt;/code> 中任意地方新增這兩行&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -2923,20 +2923,20 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這樣 autosuggestions 就可以讀到以前下過的指指令了&lt;/p>
-&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>今天介紹了好用的 autosuggestions 和 zplug 與 p10k 設定衝突的解決方法。&lt;br>
+&lt;h1 id="結尾">&lt;a href="#%e7%b5%90%e5%b0%be" class="header-anchor">&lt;/a>結尾
+&lt;/h1>&lt;p>今天介紹了好用的 autosuggestions 和 zplug 與 p10k 設定衝突的解決方法。&lt;br>
 不的不說 autosuggestions 真是懶人福音，打過的指令不用再打第二次&lt;br>
-明天再介紹兩個外掛後就 zsh 的部份就差不多完結了，緊接著會進入精彩的 tmux&lt;/p></description></item><item><title>Day 03：轉吧轉吧七彩霓虹燈之 p10k</title><link>https://blog.simbafs.cc/p/ithelp/day03/</link><pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day03/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day03.png" alt="Featured image of post Day 03：轉吧轉吧七彩霓虹燈之 p10k" />&lt;p>昨天裝好外掛管理器了，接下來我們要用 zplug 來裝一些好玩的外掛囉！&lt;/p>
-&lt;h1 id="p10k">p10k&lt;/h1>
-&lt;p>p10k 是 powerlevel10k 的縮寫，這是一套 zsh 的 prompt 主題，是我用過&lt;strong>設定最簡單效果也很好&lt;/strong>的，重點是不論有&lt;strong>沒有裝特殊字型&lt;/strong>，他都可以用！&lt;/p>
-&lt;h2 id="安裝字型可跳過">安裝字型（可跳過）&lt;/h2>
-&lt;p>p10k 官方推薦 &lt;a class="link" href="https://github.com/ryanoasis/nerd-fonts" target="_blank" rel="noopener"
+明天再介紹兩個外掛後就 zsh 的部份就差不多完結了，緊接著會進入精彩的 tmux&lt;/p></description></item><item><title>Day 03：轉吧轉吧七彩霓虹燈之 p10k</title><link>https://blog.simbafs.cc/p/day03/</link><pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day03/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day03.png" alt="Featured image of post Day 03：轉吧轉吧七彩霓虹燈之 p10k" />&lt;p>昨天裝好外掛管理器了，接下來我們要用 zplug 來裝一些好玩的外掛囉！&lt;/p>
+&lt;h1 id="p10k">&lt;a href="#p10k" class="header-anchor">&lt;/a>p10k
+&lt;/h1>&lt;p>p10k 是 powerlevel10k 的縮寫，這是一套 zsh 的 prompt 主題，是我用過&lt;strong>設定最簡單效果也很好&lt;/strong>的，重點是不論有&lt;strong>沒有裝特殊字型&lt;/strong>，他都可以用！&lt;/p>
+&lt;h2 id="安裝字型可跳過">&lt;a href="#%e5%ae%89%e8%a3%9d%e5%ad%97%e5%9e%8b%e5%8f%af%e8%b7%b3%e9%81%8e" class="header-anchor">&lt;/a>安裝字型（可跳過）
+&lt;/h2>&lt;p>p10k 官方推薦 &lt;a class="link" href="https://github.com/ryanoasis/nerd-fonts" target="_blank" rel="noopener"
 >nerd font&lt;/a>，這是一個給開發者的字型集，包括各種&lt;strong>程式語言&lt;/strong>、&lt;strong>網路服務&lt;/strong>的 icon 等等。p10k 官方也有提供修改過&lt;a class="link" href="https://github.com/romkatv/powerlevel10k#manual-font-installation" target="_blank" rel="noopener"
 >專門給 p10k 的字型檔&lt;/a>連結裡有各種終端機模擬器的字型安裝教學（英文）。&lt;br>
 其實如果你只想要部份 icon，只要把 ttf 檔放在 &lt;code>~/.fonts&lt;/code> 下就可以了，不需要改終端機字型，他找不到時會去抓（我自己試是可以的，系統 ubuntu 20.04、terminal: gnome-terminal ）&lt;br>
 如果你想要在 CLI 有各種 icon 的話你才需要安裝上述字型，如果不需要可以跳到下一小節&lt;/p>
-&lt;h2 id="安裝-p10k">安裝 p10k&lt;/h2>
-&lt;p>p10k 說到底只是一個&lt;strong>外掛&lt;/strong>，所以我們可以透過 &lt;strong>zplug&lt;/strong> 安裝，打開 &lt;code>~/.zshrc&lt;/code>，在 &lt;code># plugins&lt;/code> 那行下面加上以下設定&lt;/p>
+&lt;h2 id="安裝-p10k">&lt;a href="#%e5%ae%89%e8%a3%9d-p10k" class="header-anchor">&lt;/a>安裝 p10k
+&lt;/h2>&lt;p>p10k 說到底只是一個&lt;strong>外掛&lt;/strong>，所以我們可以透過 &lt;strong>zplug&lt;/strong> 安裝，打開 &lt;code>~/.zshrc&lt;/code>，在 &lt;code># plugins&lt;/code> 那行下面加上以下設定&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2954,41 +2954,41 @@ tpm 安裝很簡單，只要&lt;strong>一行指令&lt;/strong>就可以了&lt;/
 loading="lazy"
 alt="zplug"
 >&lt;/p>
-&lt;p>修改好 &lt;code>~/.zshrc&lt;/code> 之後，為了新載入設定，最間單的方式是&lt;strong>關掉終端機再打開&lt;/strong>，這時候他應該會問你要不要安裝 p10k，按 &lt;!-- raw HTML omitted -->y&lt;!-- raw HTML omitted -->。接下來 p10k 的設定畫面就會跳出來，我們可以進入下一節了！&lt;/p>
-&lt;h2 id="設定-p10k">設定 p10k&lt;/h2>
-&lt;p>p10k 的設定界面做得很好，按幾個按鍵就結束了，然後你就會得到一個漂亮的 zsh。&lt;br>
+&lt;p>修改好 &lt;code>~/.zshrc&lt;/code> 之後，為了新載入設定，最間單的方式是&lt;strong>關掉終端機再打開&lt;/strong>，這時候他應該會問你要不要安裝 p10k，按 &lt;kbd>y&lt;/kbd>。接下來 p10k 的設定畫面就會跳出來，我們可以進入下一節了！&lt;/p>
+&lt;h2 id="設定-p10k">&lt;a href="#%e8%a8%ad%e5%ae%9a-p10k" class="header-anchor">&lt;/a>設定 p10k
+&lt;/h2>&lt;p>p10k 的設定界面做得很好，按幾個按鍵就結束了，然後你就會得到一個漂亮的 zsh。&lt;br>
 整個設定流程分成三個部份。第一部份是&lt;strong>字型確認&lt;/strong>，他會舉出幾個字給你看，分別是菱形、鎖、debian icon 和 python icon，最後是測試 icon 會不會擠在一起。你就根據他的提示確認你的字型就可以了。&lt;br>
 再來第二部份是&lt;strong>設定 prompt&lt;/strong>，p10k 可以讓你設定幾乎每一個小細節，按照說明把他按完就好了，這裡都憑個人喜好。
 最後是一部份是設定，像是要不要啟用 &lt;code>Instant Prompt Mode&lt;/code>，要不要使用設定。&lt;br>
-在設定過程中的每一步你都可以按 &lt;!-- raw HTML omitted -->r&lt;!-- raw HTML omitted --> 重來、&lt;!-- raw HTML omitted -->q&lt;!-- raw HTML omitted --> 離開。&lt;/p>
+在設定過程中的每一步你都可以按 &lt;kbd>r&lt;/kbd> 重來、&lt;kbd>q&lt;/kbd> 離開。&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">❓ &amp;gt; 為什麼設定完 p10k 之後進到某些目錄（像是 git ）會一直跳出錯誤&lt;/th>
+&lt;th style="text-align: left">❓ &amp;gt; 為什麼設定完 p10k 之後進到某些目錄（像是 git ）會一直跳出錯誤&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">這是因為 zplug 的關係，重開終端機就可以解決了&lt;/td>
+&lt;td style="text-align: left">這是因為 zplug 的關係，重開終端機就可以解決了&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">💡 重新設定&lt;/th>
+&lt;th style="text-align: left">💡 重新設定&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">你可以用 &lt;code>p10k configure&lt;/code> 指令重新設定，流程都一模一樣&lt;/td>
+&lt;td style="text-align: left">你可以用 &lt;code>p10k configure&lt;/code> 指令重新設定，流程都一模一樣&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day03/p10k-configure.gif"
+&lt;th style="text-align: left">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day03/p10k-configure.gif"
 loading="lazy"
 alt="p10k-configrue"
 >&lt;/th>
@@ -2996,28 +2996,28 @@ alt="p10k-configrue"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">設定過程（樣式設定是參考用）&lt;/td>
+&lt;td style="text-align: left">設定過程（樣式設定是參考用）&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">❓ &amp;gt; 在終端機下面那行彩色的是什麼&lt;/th>
+&lt;th style="text-align: left">❓ &amp;gt; 在終端機下面那行彩色的是什麼&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">這是 tmux，大概下星期會介紹&lt;/td>
+&lt;td style="text-align: left">這是 tmux，大概下星期會介紹&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Day 02 ：zsh 與 shell script</title><link>https://blog.simbafs.cc/p/ithelp/day02/</link><pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day02/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day02.png" alt="Featured image of post Day 02 ：zsh 與 shell script" />&lt;blockquote>
+&lt;/table></description></item><item><title>Day 02 ：zsh 與 shell script</title><link>https://blog.simbafs.cc/p/day02/</link><pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day02/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day02.png" alt="Featured image of post Day 02 ：zsh 與 shell script" />&lt;blockquote>
 &lt;p>今天內容不小心寫太長了 &amp;hellip;&amp;hellip;&lt;/p>
 &lt;/blockquote>
 &lt;p>首先，在介紹其他軟體之前，先來看看與 CLI 操作習習相關的「shell」，我選擇的 shell 是 &lt;code>zsh&lt;/code>，&lt;code>zsh&lt;/code> 在 &lt;code>bash&lt;/code> 的基礎上擴充了很多實用的功能，像是支援更好的&lt;strong>自動補全&lt;/strong>，&lt;strong>各式各樣的主題&lt;/strong>等等。&lt;/p>
-&lt;h1 id="zsh">zsh&lt;/h1>
-&lt;h2 id="安裝">安裝&lt;/h2>
-&lt;p>如果你的作業系統是 &lt;strong>debian 系列&lt;/strong>的話，可以直接用 &lt;strong>apt&lt;/strong> 安裝 &lt;code>apt install zsh&lt;/code>。其他的 linux 發行版可以到 &lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH" target="_blank" rel="noopener"
+&lt;h1 id="zsh">&lt;a href="#zsh" class="header-anchor">&lt;/a>zsh
+&lt;/h1>&lt;h2 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
+&lt;/h2>&lt;p>如果你的作業系統是 &lt;strong>debian 系列&lt;/strong>的話，可以直接用 &lt;strong>apt&lt;/strong> 安裝 &lt;code>apt install zsh&lt;/code>。其他的 linux 發行版可以到 &lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH" target="_blank" rel="noopener"
 >這個網頁&lt;/a>找找你的發行版&lt;br>
 如果是 &lt;strong>mac&lt;/strong>，理論上你的 shell 應該&lt;strong>已經是 zsh 了&lt;/strong>（ mac 的 shell 從 2019 開始&lt;strong>預設是 zsh&lt;/strong> ），如果不是的話你可以用 &lt;strong>homebrew&lt;/strong> 安裝 &lt;code>brew install zsh&lt;/code>。&lt;br>
 如果是 windows 的話，建議你開啟 &lt;strong>WSL2&lt;/strong> 或是找一台有 linux/mac 的電腦&lt;/p>
@@ -3034,17 +3034,17 @@ alt="p10k-configrue"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">❓ &amp;gt; 現在用的是什麼 shell？&lt;/th>
+&lt;th style="text-align: left">❓ &amp;gt; 現在用的是什麼 shell？&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">你可以使用 &lt;code>echo $SHELL&lt;/code> 來看你現在使用的 shell 是那一個&lt;/td>
+&lt;td style="text-align: left">你可以使用 &lt;code>echo $SHELL&lt;/code> 來看你現在使用的 shell 是那一個&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="更換-shell">更換 shell&lt;/h2>
-&lt;p>如果你之前的 shell &lt;strong>不是 zsh&lt;/strong> 那就要更換預設 shell，用以下指令可以&lt;strong>更換&lt;/strong>&lt;/p>
+&lt;h2 id="更換-shell">&lt;a href="#%e6%9b%b4%e6%8f%9b-shell" class="header-anchor">&lt;/a>更換 shell
+&lt;/h2>&lt;p>如果你之前的 shell &lt;strong>不是 zsh&lt;/strong> 那就要更換預設 shell，用以下指令可以&lt;strong>更換&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -3057,12 +3057,12 @@ alt="p10k-configrue"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chsh -s $(where zsh)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="初次使用-zsh">初次使用 zsh&lt;/h2>
-&lt;p>更換完 shell，&lt;strong>重新開啟終端機&lt;/strong>，你應該會看到類似下面的畫面，我們選擇預設的 &lt;strong>(0)&lt;/strong> 選項就可以了。如果沒有出現這個畫面的話就是預設的 shell &lt;strong>沒有切換成功&lt;/strong>或是之前你***已經用過** zsh 了。&lt;/p>
+&lt;/div>&lt;h2 id="初次使用-zsh">&lt;a href="#%e5%88%9d%e6%ac%a1%e4%bd%bf%e7%94%a8-zsh" class="header-anchor">&lt;/a>初次使用 zsh
+&lt;/h2>&lt;p>更換完 shell，&lt;strong>重新開啟終端機&lt;/strong>，你應該會看到類似下面的畫面，我們選擇預設的 &lt;strong>(0)&lt;/strong> 選項就可以了。如果沒有出現這個畫面的話就是預設的 shell &lt;strong>沒有切換成功&lt;/strong>或是之前你***已經用過** zsh 了。&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day02/zsh-install.png"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day02/zsh-install.png"
 loading="lazy"
 alt="zsh-install"
 >&lt;/th>
@@ -3070,14 +3070,14 @@ alt="zsh-install"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">zsh 安裝畫面&lt;/td>
+&lt;td style="text-align: center">zsh 安裝畫面&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="zplug">zplug&lt;/h1>
-&lt;p>裝好 zsh 後，你會發現他和 bash 或是你原本的 shell 沒什麼差別，甚至更難用，那是因為我們&lt;strong>還沒設定&lt;/strong>。zplug 是一個 zsh 的&lt;strong>套件管理器&lt;/strong>，所有的設定都寫在 &lt;code>.zshrc&lt;/code> 裡，因此如果以後要換電腦，只需要&lt;strong>搬走 &lt;code>.zshrc&lt;/code> 一個檔案&lt;/strong>，zplug 就會幫你把所有外掛裝起來。&lt;/p>
-&lt;h2 id="安裝-zplug">安裝 zplug&lt;/h2>
-&lt;p>官方建議的安裝方式是使用 installer，執行以下指令&lt;/p>
+&lt;h1 id="zplug">&lt;a href="#zplug" class="header-anchor">&lt;/a>zplug
+&lt;/h1>&lt;p>裝好 zsh 後，你會發現他和 bash 或是你原本的 shell 沒什麼差別，甚至更難用，那是因為我們&lt;strong>還沒設定&lt;/strong>。zplug 是一個 zsh 的&lt;strong>套件管理器&lt;/strong>，所有的設定都寫在 &lt;code>.zshrc&lt;/code> 裡，因此如果以後要換電腦，只需要&lt;strong>搬走 &lt;code>.zshrc&lt;/code> 一個檔案&lt;/strong>，zplug 就會幫你把所有外掛裝起來。&lt;/p>
+&lt;h2 id="安裝-zplug">&lt;a href="#%e5%ae%89%e8%a3%9d-zplug" class="header-anchor">&lt;/a>安裝 zplug
+&lt;/h2>&lt;p>官方建議的安裝方式是使用 installer，執行以下指令&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -3087,8 +3087,8 @@ alt="zsh-install"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>如果出現 &lt;code>Enjoy zplug!&lt;/code> 就是安裝完成了，如果沒有的話可能是&lt;strong>版本不對&lt;/strong>，他會告訴你有什麼沒裝&lt;/p>
-&lt;h2 id="zshrc">zshrc&lt;/h2>
-&lt;p>現在我們要來設定 &lt;code>~/.zshrc&lt;/code> 了，這是 zsh 的設定檔，他其實就是一個 shell script，但是每次&lt;strong>啟動 zsh 他會先被執行&lt;/strong>。&lt;br>
+&lt;h2 id="zshrc">&lt;a href="#zshrc" class="header-anchor">&lt;/a>zshrc
+&lt;/h2>&lt;p>現在我們要來設定 &lt;code>~/.zshrc&lt;/code> 了，這是 zsh 的設定檔，他其實就是一個 shell script，但是每次&lt;strong>啟動 zsh 他會先被執行&lt;/strong>。&lt;br>
 首先隨便用一個編輯器打開 &lt;code>~/.zshrc&lt;/code>，刪掉裡面所有內容（應改只有一行註解），貼上以下內容&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -3123,12 +3123,12 @@ alt="zsh-install"
 &lt;/div>&lt;p>第一行是&lt;strong>啟動&lt;/strong> zplug
 第五行開始是&lt;strong>檢查是否要更新/安裝套件&lt;/strong>&lt;/p>
 &lt;p>&lt;strong>重新開啟終端機&lt;/strong>，這樣環境才會載入&lt;/p>
-&lt;h1 id="基本-shell-sript">基本 shell sript&lt;/h1>
-&lt;p>接下來，我們先來認識一下 shell script，這個東西不僅可以讓你操作更加順暢，也可以幫你實現各種&lt;strong>自動化操作&lt;/strong>。&lt;/p>
-&lt;h2 id="命令">命令&lt;/h2>
-&lt;p>一個普通的 shell 通常是以&lt;strong>一個命令開頭&lt;/strong>，例如 &lt;code>ls&lt;/code>、&lt;code>cd&lt;/code>、&lt;code>mv&lt;/code>，這個命令代表的是&lt;strong>電腦中一個可執行檔&lt;/strong>，你可以用 &lt;code>which &amp;lt;cmd&amp;gt;&lt;/code> 或 &lt;code>where &amp;lt;cmd&amp;gt;&lt;/code> 來看執行檔的路徑。在這個命令後面的東西都是&lt;strong>參數&lt;/strong>，和一般程式不一樣的是，這個參數因為是整個字串交給命令處理，所以通常可以&lt;strong>不管順序&lt;/strong>，，例如 &lt;code>ls -a -l&lt;/code> 和 &lt;code>ls -l -a&lt;/code> 是一樣的（當然會有例外或是處理的不好的情況，但不多），更棒的是大部分成熟的指令都可以讓這種只有一個字元的「短選項」合起來寫，變成這樣 &lt;code>ls -al&lt;/code>。&lt;/p>
-&lt;h2 id="pipe">Pipe&lt;/h2>
-&lt;p>一個複雜的指令不太可能只憑幾個短短的選項運作，例如 &lt;code>grep&lt;/code>（搜尋特定字串用的命令） 除了可以在選項指定檔名，也可以過「特殊的方式」傳一串字給他，這個方法就是我們熟悉的 &lt;strong>stdin&lt;/strong>，也就是 &lt;code>scanf&lt;/code>、&lt;code>cin&lt;/code> 這類函數接受輸入的來源。&lt;br>
+&lt;h1 id="基本-shell-sript">&lt;a href="#%e5%9f%ba%e6%9c%ac-shell-sript" class="header-anchor">&lt;/a>基本 shell sript
+&lt;/h1>&lt;p>接下來，我們先來認識一下 shell script，這個東西不僅可以讓你操作更加順暢，也可以幫你實現各種&lt;strong>自動化操作&lt;/strong>。&lt;/p>
+&lt;h2 id="命令">&lt;a href="#%e5%91%bd%e4%bb%a4" class="header-anchor">&lt;/a>命令
+&lt;/h2>&lt;p>一個普通的 shell 通常是以&lt;strong>一個命令開頭&lt;/strong>，例如 &lt;code>ls&lt;/code>、&lt;code>cd&lt;/code>、&lt;code>mv&lt;/code>，這個命令代表的是&lt;strong>電腦中一個可執行檔&lt;/strong>，你可以用 &lt;code>which &amp;lt;cmd&amp;gt;&lt;/code> 或 &lt;code>where &amp;lt;cmd&amp;gt;&lt;/code> 來看執行檔的路徑。在這個命令後面的東西都是&lt;strong>參數&lt;/strong>，和一般程式不一樣的是，這個參數因為是整個字串交給命令處理，所以通常可以&lt;strong>不管順序&lt;/strong>，，例如 &lt;code>ls -a -l&lt;/code> 和 &lt;code>ls -l -a&lt;/code> 是一樣的（當然會有例外或是處理的不好的情況，但不多），更棒的是大部分成熟的指令都可以讓這種只有一個字元的「短選項」合起來寫，變成這樣 &lt;code>ls -al&lt;/code>。&lt;/p>
+&lt;h2 id="pipe">&lt;a href="#pipe" class="header-anchor">&lt;/a>Pipe
+&lt;/h2>&lt;p>一個複雜的指令不太可能只憑幾個短短的選項運作，例如 &lt;code>grep&lt;/code>（搜尋特定字串用的命令） 除了可以在選項指定檔名，也可以過「特殊的方式」傳一串字給他，這個方法就是我們熟悉的 &lt;strong>stdin&lt;/strong>，也就是 &lt;code>scanf&lt;/code>、&lt;code>cin&lt;/code> 這類函數接受輸入的來源。&lt;br>
 接受 stdin 的方式有兩個，一個是使用者自己打，另一個是接受另一個命令的「輸出」。要接受另一個「輸出」的方式叫做 &lt;strong>pipe&lt;/strong>，顧名思義就是「管線」，他可以把 A 指令的輸出接給 B 指令的輸入。例如以下的命令&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -3139,10 +3139,10 @@ alt="zsh-install"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>先用 &lt;code>ps&lt;/code> 指令列出所有的 process，再交給 &lt;code>grep&lt;/code> 找出含有字串 &lt;code>zsh&lt;/code> 的行。&lt;/p>
-&lt;h2 id="redirect">Redirect&lt;/h2>
-&lt;p>剛剛講了把輸出轉到另一個命令的輸入，那如果是要寫進檔案裡面呢？是不是個命令叫 &lt;code>write&lt;/code>？其實 shell 已經有個東西可以寫檔案了，就是 &lt;strong>redirect&lt;/strong>，直接來看範例&lt;/p>
-&lt;h3 id="寫檔">寫檔&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="redirect">&lt;a href="#redirect" class="header-anchor">&lt;/a>Redirect
+&lt;/h2>&lt;p>剛剛講了把輸出轉到另一個命令的輸入，那如果是要寫進檔案裡面呢？是不是個命令叫 &lt;code>write&lt;/code>？其實 shell 已經有個東西可以寫檔案了，就是 &lt;strong>redirect&lt;/strong>，直接來看範例&lt;/p>
+&lt;h3 id="寫檔">&lt;a href="#%e5%af%ab%e6%aa%94" class="header-anchor">&lt;/a>寫檔
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -3151,8 +3151,8 @@ alt="zsh-install"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>就這麼簡單，用大於符號 &lt;code>&amp;gt;&lt;/code> 就可以把&lt;strong>標準輸出&lt;/strong>（ stdout ）丟到檔案裡面，但是要注意的是這樣寫的話是直接**「覆蓋」&lt;strong>，有就是說如果原本 &lt;code>ls_output.txt&lt;/code> 有內容，會直接被 &lt;code>ls&lt;/code> 指令的輸入覆蓋，如果你想保留，可以用 &lt;code>&amp;gt;&amp;gt;&lt;/code> 來&lt;/strong>「附加」**，這會讓他接在檔案最後面&lt;/p>
-&lt;h3 id="讀檔">讀檔&lt;/h3>
-&lt;p>如果某個指令沒有讀檔案的選項，只接受 stdin，那你也可以用 &lt;strong>redirect&lt;/strong> 將檔案讀進這個命令&lt;/p>
+&lt;h3 id="讀檔">&lt;a href="#%e8%ae%80%e6%aa%94" class="header-anchor">&lt;/a>讀檔
+&lt;/h3>&lt;p>如果某個指令沒有讀檔案的選項，只接受 stdin，那你也可以用 &lt;strong>redirect&lt;/strong> 將檔案讀進這個命令&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -3167,10 +3167,10 @@ alt="zsh-install"
 &lt;blockquote>
 &lt;p>嗯&amp;hellip;我知道這有點蠢，因為你可以直接在 &lt;code>wc&lt;/code> 後面接路徑，這裡只是示範一下&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="環境變數">環境變數&lt;/h2>
-&lt;p>改變命令行為的方式除了選項外，還有&lt;strong>環境變數&lt;/strong>。環境變數就像 C++ 裡的**「全域變數」&lt;strong>，不管是哪個命令（函數）都可以&lt;/strong>讀、寫**。通常環境變數的功能是&lt;strong>設定某個選項&lt;/strong>，好讓每一次執行時&lt;strong>不用加一堆選項&lt;/strong>（當然這個功能要命令有支援才行），或是儲存某個&lt;strong>命令的資訊&lt;/strong>，像是 &lt;code>$SHELL&lt;/code> 紀錄著你現在使用的 shell。&lt;/p>
-&lt;h3 id="讀取">讀取&lt;/h3>
-&lt;p>讀取環境變數很簡單，只需要加上錢號 &lt;code>$&lt;/code> 就可以了，例如 &lt;code>$PATH&lt;/code>（通常環境變數會&lt;strong>全大寫&lt;/strong>，但其實沒有什麼規範）， shell 會在讀到這個的時候用他的值去替代這個字串。例如以下範例&lt;/p>
+&lt;h2 id="環境變數">&lt;a href="#%e7%92%b0%e5%a2%83%e8%ae%8a%e6%95%b8" class="header-anchor">&lt;/a>環境變數
+&lt;/h2>&lt;p>改變命令行為的方式除了選項外，還有&lt;strong>環境變數&lt;/strong>。環境變數就像 C++ 裡的**「全域變數」&lt;strong>，不管是哪個命令（函數）都可以&lt;/strong>讀、寫**。通常環境變數的功能是&lt;strong>設定某個選項&lt;/strong>，好讓每一次執行時&lt;strong>不用加一堆選項&lt;/strong>（當然這個功能要命令有支援才行），或是儲存某個&lt;strong>命令的資訊&lt;/strong>，像是 &lt;code>$SHELL&lt;/code> 紀錄著你現在使用的 shell。&lt;/p>
+&lt;h3 id="讀取">&lt;a href="#%e8%ae%80%e5%8f%96" class="header-anchor">&lt;/a>讀取
+&lt;/h3>&lt;p>讀取環境變數很簡單，只需要加上錢號 &lt;code>$&lt;/code> 就可以了，例如 &lt;code>$PATH&lt;/code>（通常環境變數會&lt;strong>全大寫&lt;/strong>，但其實沒有什麼規範）， shell 會在讀到這個的時候用他的值去替代這個字串。例如以下範例&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -3189,8 +3189,8 @@ alt="zsh-install"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="nv">$HOME&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="寫入">寫入&lt;/h3>
-&lt;p>寫入環境變數只有一個要點——不要加空白，用 &lt;code>=&lt;/code> 指定環境變數時&lt;strong>千萬不要&lt;/strong>在 &lt;code>=&lt;/code> 左右加上空白，看範例&lt;/p>
+&lt;/div>&lt;h3 id="寫入">&lt;a href="#%e5%af%ab%e5%85%a5" class="header-anchor">&lt;/a>寫入
+&lt;/h3>&lt;p>寫入環境變數只有一個要點——不要加空白，用 &lt;code>=&lt;/code> 指定環境變數時&lt;strong>千萬不要&lt;/strong>在 &lt;code>=&lt;/code> 左右加上空白，看範例&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -3207,19 +3207,19 @@ alt="zsh-install"
 &lt;/div>
 &lt;/div>&lt;p>其實 shell script 中的錢號 &lt;code>$&lt;/code> 還有超多用法，可以參考 &lt;a class="link" href="https://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables" target="_blank" rel="noopener"
 >這裡&lt;/a>&lt;/p>
-&lt;h1 id="結尾">結尾&lt;/h1>
-&lt;p>今天介紹了 zsh 和外掛管理器 zplug 還有一點點的 shell script，明天開始會用 zplug 裝各種外掛來豐富我們的純‧ CLI 整合式開發環境&lt;/p></description></item><item><title>Day 01：前言，這批很純，快進來吧！</title><link>https://blog.simbafs.cc/p/ithelp/day01/</link><pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/day01/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day01.png" alt="Featured image of post Day 01：前言，這批很純，快進來吧！" />&lt;h1 id="who-am-i">Who Am I&lt;/h1>
-&lt;p>我今年升大一，在此生最長的假期中寫寫文章打發時間。平常喜歡寫寫程式，研究新技術。是個 CLI 忠實擁護者，電腦通常只開瀏覽器和 terminal，terminal 就是我的開發環境。&lt;br>
+&lt;h1 id="結尾">&lt;a href="#%e7%b5%90%e5%b0%be" class="header-anchor">&lt;/a>結尾
+&lt;/h1>&lt;p>今天介紹了 zsh 和外掛管理器 zplug 還有一點點的 shell script，明天開始會用 zplug 裝各種外掛來豐富我們的純‧ CLI 整合式開發環境&lt;/p></description></item><item><title>Day 01：前言，這批很純，快進來吧！</title><link>https://blog.simbafs.cc/p/day01/</link><pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/day01/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/day01.png" alt="Featured image of post Day 01：前言，這批很純，快進來吧！" />&lt;h1 id="who-am-i">&lt;a href="#who-am-i" class="header-anchor">&lt;/a>Who Am I
+&lt;/h1>&lt;p>我今年升大一，在此生最長的假期中寫寫文章打發時間。平常喜歡寫寫程式，研究新技術。是個 CLI 忠實擁護者，電腦通常只開瀏覽器和 terminal，terminal 就是我的開發環境。&lt;br>
 慣用網名是 &lt;strong>simbafs&lt;/strong>、&lt;strong>simbafs&lt;/strong> 或 &lt;strong>SimbaFs&lt;/strong>。&lt;br>
 略懂 nodejs 和一點網頁技術，這一個月開始研究 Golang&lt;/p>
-&lt;h1 id="關於這個系列">關於這個系列&lt;/h1>
-&lt;h2 id="為什麼寫這個系列">為什麼寫這個系列&lt;/h2>
-&lt;p>現代化 IDE 提供的各種功能給我們很好的開發體驗，尤其是當程式碼數量逐漸增加時，IDE 可以提供像是自動補全、型態提示等等。當 &lt;a class="link" href="https://docs.microsoft.com/zh-tw/visualstudio/extensibility/language-server-protocol?view=vs-2019" target="_blank" rel="noopener"
+&lt;h1 id="關於這個系列">&lt;a href="#%e9%97%9c%e6%96%bc%e9%80%99%e5%80%8b%e7%b3%bb%e5%88%97" class="header-anchor">&lt;/a>關於這個系列
+&lt;/h1>&lt;h2 id="為什麼寫這個系列">&lt;a href="#%e7%82%ba%e4%bb%80%e9%ba%bc%e5%af%ab%e9%80%99%e5%80%8b%e7%b3%bb%e5%88%97" class="header-anchor">&lt;/a>為什麼寫這個系列
+&lt;/h2>&lt;p>現代化 IDE 提供的各種功能給我們很好的開發體驗，尤其是當程式碼數量逐漸增加時，IDE 可以提供像是自動補全、型態提示等等。當 &lt;a class="link" href="https://docs.microsoft.com/zh-tw/visualstudio/extensibility/language-server-protocol?view=vs-2019" target="_blank" rel="noopener"
 >lsp(language server protocol)&lt;/a> 開始流行之後，甚至不太需要查文件就能知道一個未知函數的用法。但是在這一切的方便的背後是犧牲有限的電腦資源換來的。這個時候資源需求少、發展越來越完善的的純文字界面就是解決這個問題的最佳方法了！不僅不會減少該有的&lt;strong>語法突顯&lt;/strong>、&lt;strong>自動補全&lt;/strong>，甚至可以借助 ssh 的力量，在&lt;strong>任何裝置&lt;/strong>上開發（只要支援 ssh 都可以）。但是可惜的是網路上這方面的資源都很零散，於是我想說趁這次參賽將我所學整理起來。這個系列會帶領讀者一步一步建立一個好用、方便的 CLI 開發環境，如果有時間會講一下如何在任何裝置上開發（當然螢幕太小不適合啦）。&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day01/mem-comsumption.png"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/ithelp/pure-CLI-IDE/day01/mem-comsumption.png"
 loading="lazy"
 alt="memory comsumption"
 >&lt;/th>
@@ -3227,16 +3227,16 @@ alt="memory comsumption"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">五種文字編輯器開啟一個約 60 byte 的文字檔所消耗的記憶體（KB)&lt;/td>
+&lt;td style="text-align: center">五種文字編輯器開啟一個約 60 byte 的文字檔所消耗的記憶體（KB)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">From &lt;a class="link" href="https://medium.com/commitlog/why-i-still-use-vim-67afd76b4db6" target="_blank" rel="noopener"
+&lt;td style="text-align: center">From &lt;a class="link" href="https://medium.com/commitlog/why-i-still-use-vim-67afd76b4db6" target="_blank" rel="noopener"
 >https://medium.com/commitlog/why-i-still-use-vim-67afd76b4db6&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="這個系列在講什麼">這個系列在講什麼&lt;/h2>
-&lt;p>以下是預計的寫作進度，中途可能會更改，我也會每天在這裡更新連結&lt;/p>
+&lt;h2 id="這個系列在講什麼">&lt;a href="#%e9%80%99%e5%80%8b%e7%b3%bb%e5%88%97%e5%9c%a8%e8%ac%9b%e4%bb%80%e9%ba%bc" class="header-anchor">&lt;/a>這個系列在講什麼
+&lt;/h2>&lt;p>以下是預計的寫作進度，中途可能會更改，我也會每天在這裡更新連結&lt;/p>
 &lt;ul>
 &lt;li>Day 01: 簡介&lt;/li>
 &lt;li>Day 02 ~ 05: zsh&lt;/li>
@@ -3245,36 +3245,38 @@ alt="memory comsumption"
 &lt;li>Day 22 ~ 26: other tools&lt;/li>
 &lt;li>Day 29 ~ 30: coding everywhere&lt;/li>
 &lt;/ul>
-&lt;h2 id="仙貝先備軟體">&lt;del>仙貝&lt;/del>先備（軟體）&lt;/h2>
-&lt;p>最重要的，一個支援至少 8 色的、你用的順手的終端機模擬器，最好是可以&lt;strong>自行安裝字體&lt;/strong>的。&lt;/p>
-&lt;h2 id="寫作慣例">寫作慣例&lt;/h2>
-&lt;h3 id="問題">問題&lt;/h3>
-&lt;p>如果你看到這個&lt;/p>
+&lt;h2 id="仙貝先備軟體">&lt;a href="#%e4%bb%99%e8%b2%9d%e5%85%88%e5%82%99%e8%bb%9f%e9%ab%94" class="header-anchor">&lt;/a>&lt;del>仙貝&lt;/del>先備（軟體）
+&lt;/h2>&lt;p>最重要的，一個支援至少 8 色的、你用的順手的終端機模擬器，最好是可以&lt;strong>自行安裝字體&lt;/strong>的。&lt;/p>
+&lt;h2 id="寫作慣例">&lt;a href="#%e5%af%ab%e4%bd%9c%e6%85%a3%e4%be%8b" class="header-anchor">&lt;/a>寫作慣例
+&lt;/h2>&lt;h3 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h3>&lt;p>如果你看到這個&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">❓ &amp;gt; 這是一個問題&lt;/th>
+&lt;th style="text-align: left">❓ &amp;gt; 這是一個問題&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">這邊是答案&lt;/td>
+&lt;td style="text-align: left">這邊是答案&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">這是你在閱讀文章時可能會遇到的問題，解答就在問題下面，如果還有其他問題可以&lt;strong>留言&lt;/strong>或是&lt;strong>聯絡我&lt;/strong>都可以&lt;/td>
+&lt;td style="text-align: left">這是你在閱讀文章時可能會遇到的問題，解答就在問題下面，如果還有其他問題可以&lt;strong>留言&lt;/strong>或是&lt;strong>聯絡我&lt;/strong>都可以&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="提示">提示&lt;/h3>
-&lt;table>
+&lt;h3 id="提示">&lt;a href="#%e6%8f%90%e7%a4%ba" class="header-anchor">&lt;/a>提示
+&lt;/h3>&lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">💡 這是一個提示&lt;/th>
+&lt;th style="text-align: left">💡 這是一個提示&lt;/th>
 &lt;/tr>
 &lt;/thead>
+&lt;tbody>
+&lt;/tbody>
 &lt;/table>
-&lt;h3 id="程式碼區塊">程式碼區塊&lt;/h3>
-&lt;p>程式碼區塊會長這樣&lt;/p>
+&lt;h3 id="程式碼區塊">&lt;a href="#%e7%a8%8b%e5%bc%8f%e7%a2%bc%e5%8d%80%e5%a1%8a" class="header-anchor">&lt;/a>程式碼區塊
+&lt;/h3>&lt;p>程式碼區塊會長這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -3305,16 +3307,16 @@ alt="memory comsumption"
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>代表有一個檔案要修改，從 &lt;code>+&lt;/code> 的那行改成 &lt;code>-&lt;/code> 的那行，加減號都不用寫進去，檔名會另外說明&lt;/p>
-&lt;h1 id="同步更新">同步更新&lt;/h1>
-&lt;p>除了 &lt;a class="link" href="https://ithelp.ithome.com.tw/users/20130473/ironman/3975" target="_blank" rel="noopener"
+&lt;h1 id="同步更新">&lt;a href="#%e5%90%8c%e6%ad%a5%e6%9b%b4%e6%96%b0" class="header-anchor">&lt;/a>同步更新
+&lt;/h1>&lt;p>除了 &lt;a class="link" href="https://ithelp.ithome.com.tw/users/20130473/ironman/3975" target="_blank" rel="noopener"
 >IThelp&lt;/a>，我也會將這個系列的文章更新在 &lt;strong>&lt;a class="link" href="https://blog.simbafs.dev/categories/ithelp/pure-CLI-IDE" target="_blank" rel="noopener"
 >我的 blog&lt;/a>&lt;/strong> 上&lt;/p>
-&lt;p>喔對了，這整個系列我都是在我的純 CLI 環境中寫作的喔！&lt;/p></description></item><item><title>Tabel Of Content</title><link>https://blog.simbafs.cc/p/ithelp/toc/</link><pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ithelp/toc/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/toc.png" alt="Featured image of post Tabel Of Content" />&lt;h1 id="純cli-整合式開發環境">純‧CLI 整合式開發環境&lt;/h1>
-&lt;p>在這個圖形界面當道的時代，IDE 吃掉越來越多的記憶體，但是為了精美的界面、友善的開發環境使我們不得不乖乖上供記憶體給這些吃記憶體怪獸。有沒有一個兩全其美的方法呢？當然有，那就是 CLI ！設置完善的開發環境媲美現代化編輯器，而且因為沒有綁定圖形界面，所以想要在手機平板上開發也是可以的。
+&lt;p>喔對了，這整個系列我都是在我的純 CLI 環境中寫作的喔！&lt;/p></description></item><item><title>Tabel Of Content</title><link>https://blog.simbafs.cc/p/toc/</link><pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/toc/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ithelp/toc.png" alt="Featured image of post Tabel Of Content" />&lt;h1 id="純cli-整合式開發環境">&lt;a href="#%e7%b4%94cli-%e6%95%b4%e5%90%88%e5%bc%8f%e9%96%8b%e7%99%bc%e7%92%b0%e5%a2%83" class="header-anchor">&lt;/a>純‧CLI 整合式開發環境
+&lt;/h1>&lt;p>在這個圖形界面當道的時代，IDE 吃掉越來越多的記憶體，但是為了精美的界面、友善的開發環境使我們不得不乖乖上供記憶體給這些吃記憶體怪獸。有沒有一個兩全其美的方法呢？當然有，那就是 CLI ！設置完善的開發環境媲美現代化編輯器，而且因為沒有綁定圖形界面，所以想要在手機平板上開發也是可以的。
 這個系列將從零開始介紹在 CLI 開發需要的工具，一步一步把 CLI 變成實用精美的開發環境&lt;/p>
 &lt;hr>
-&lt;h1 id="寫作進度">寫作進度&lt;/h1>
-&lt;ul>
+&lt;h1 id="寫作進度">&lt;a href="#%e5%af%ab%e4%bd%9c%e9%80%b2%e5%ba%a6" class="header-anchor">&lt;/a>寫作進度
+&lt;/h1>&lt;ul>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a class="link" href="../day01" >Day 01: 簡介&lt;/a>&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> Day 02 ~ 05: zsh
 &lt;ul>

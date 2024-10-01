@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Network on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/network/</link><description>Recent content in Network on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 16 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/network/index.xml" rel="self" type="application/rss+xml"/><item><title>p2p</title><link>https://blog.simbafs.cc/p/golang/p2p/</link><pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/p2p/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/p2p.png" alt="Featured image of post p2p" />&lt;h1 id="p2p">p2p&lt;/h1>
-&lt;p>我不太確定這是 p2p 還是穿隧，但反正功能就是可以讓兩個在不同內網的機器可以直連，不需要透過中央伺服器轉發。先上原理圖，然後再來一步一步看程式碼&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Network on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/network/</link><description>Recent content in Network on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 16 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/network/index.xml" rel="self" type="application/rss+xml"/><item><title>p2p</title><link>https://blog.simbafs.cc/p/p2p/</link><pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/p2p/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/p2p.png" alt="Featured image of post p2p" />&lt;h1 id="p2p">&lt;a href="#p2p" class="header-anchor">&lt;/a>p2p
+&lt;/h1>&lt;p>我不太確定這是 p2p 還是穿隧，但反正功能就是可以讓兩個在不同內網的機器可以直連，不需要透過中央伺服器轉發。先上原理圖，然後再來一步一步看程式碼&lt;/p>
 &lt;p>&lt;img src="https://github.com/simbafs/experiment-p2p/raw/main/explain.png"
 loading="lazy"
 alt="explain.png"
 >&lt;/p>
-&lt;h2 id="server">Server&lt;/h2>
-&lt;p>首先，先來看伺服器端，這邊做的事很簡單，這邊開了一個 UDP listener，然後開一個陣列存兩個 client 的 &lt;code>UDPAddr&lt;/code>&lt;/p>
+&lt;h2 id="server">&lt;a href="#server" class="header-anchor">&lt;/a>Server
+&lt;/h2>&lt;p>首先，先來看伺服器端，這邊做的事很簡單，這邊開了一個 UDP listener，然後開一個陣列存兩個 client 的 &lt;code>UDPAddr&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -68,8 +68,8 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="client">Client&lt;/h2>
-&lt;p>伺服器端首先要和伺服器建立連線，從本地（&lt;code>srcAddr&lt;/code>）連線到伺服器（&lt;code>dstAddr&lt;/code>）&lt;/p>
+&lt;/div>&lt;h2 id="client">&lt;a href="#client" class="header-anchor">&lt;/a>Client
+&lt;/h2>&lt;p>伺服器端首先要和伺服器建立連線，從本地（&lt;code>srcAddr&lt;/code>）連線到伺服器（&lt;code>dstAddr&lt;/code>）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -203,10 +203,10 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="程式碼">程式碼&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/simbafs/experiment-p2p" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="程式碼">&lt;a href="#%e7%a8%8b%e5%bc%8f%e7%a2%bc" class="header-anchor">&lt;/a>程式碼
+&lt;/h2>&lt;p>&lt;a class="link" href="https://github.com/simbafs/experiment-p2p" target="_blank" rel="noopener"
 >完整的程式碼&lt;/a> 在這，如果對你有幫助，順手給的 star&lt;/p>
-&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>如果我沒理解錯，會選用 UDP 做 p2p 是因為 UDP 的連線關掉後 NAT 不會把洞關起來，所以一開始往伺服器發訊息的動作就是在打洞，然後把洞的資訊送到另一邊，接著就可以透過這的洞直連。而 TCP 一斷掉連線洞就會關起來，所以無法做 p2p（這是個人猜測，無根據）。&lt;br>
+&lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
+&lt;/h2>&lt;p>如果我沒理解錯，會選用 UDP 做 p2p 是因為 UDP 的連線關掉後 NAT 不會把洞關起來，所以一開始往伺服器發訊息的動作就是在打洞，然後把洞的資訊送到另一邊，接著就可以透過這的洞直連。而 TCP 一斷掉連線洞就會關起來，所以無法做 p2p（這是個人猜測，無根據）。&lt;br>
 這時候我就很好奇，應該有人做這種公共的 p2p server 吧？搭配 SDK 應該可以很輕鬆的做到任意兩台裝置連線，這樣伺服器的 loading 也不重，需要的資源也很低，感覺可以來開一個。&lt;br>
 接著我應該會去研究是否有辦法用 TCP 做 p2p，或是如何在 UDP 上搭建一個可信賴的通訊。接著遠程目標大概是 IPFS 之類的&lt;/p></description></item></channel></rss>

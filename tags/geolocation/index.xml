@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Geolocation on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/geolocation/</link><description>Recent content in Geolocation on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/geolocation/index.xml" rel="self" type="application/rss+xml"/><item><title>臺灣地址 API</title><link>https://blog.simbafs.cc/p/other/taiwan-town-location/</link><pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/other/taiwan-town-location/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/taiwan-town-location.png" alt="Featured image of post 臺灣地址 API" />&lt;h1 id="臺灣地址-api">臺灣地址 API&lt;/h1>
-&lt;p>這是一個給經緯度吐地址的 api，甚至路段都會出來，搭配 &lt;a class="link" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation_API" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Geolocation on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/geolocation/</link><description>Recent content in Geolocation on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/geolocation/index.xml" rel="self" type="application/rss+xml"/><item><title>臺灣地址 API</title><link>https://blog.simbafs.cc/p/taiwan-town-location/</link><pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/taiwan-town-location/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/taiwan-town-location.png" alt="Featured image of post 臺灣地址 API" />&lt;h1 id="臺灣地址-api">&lt;a href="#%e8%87%ba%e7%81%a3%e5%9c%b0%e5%9d%80-api" class="header-anchor">&lt;/a>臺灣地址 API
+&lt;/h1>&lt;p>這是一個給經緯度吐地址的 api，甚至路段都會出來，搭配 &lt;a class="link" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation_API" target="_blank" rel="noopener"
 >web geolocation api&lt;/a> 蠻不錯的，精確度不錯。可以不知道有沒有 rate limited 的問題，目前看起來連 token 都不用。&lt;/p>
-&lt;h2 id="網址">網址&lt;/h2>
-&lt;p>&lt;a class="link" href="https://api.nlsc.gov.tw/other/TownVillagePointQuery/" target="_blank" rel="noopener"
+&lt;h2 id="網址">&lt;a href="#%e7%b6%b2%e5%9d%80" class="header-anchor">&lt;/a>網址
+&lt;/h2>&lt;p>&lt;a class="link" href="https://api.nlsc.gov.tw/other/TownVillagePointQuery/" target="_blank" rel="noopener"
 >https://api.nlsc.gov.tw/other/TownVillagePointQuery/&lt;/a>&lt;/p>
-&lt;h2 id="用法">用法&lt;/h2>
-&lt;p>&lt;a class="link" href="https://api.nlsc.gov.tw/other/TownVillagePointQuery/" target="_blank" rel="noopener"
+&lt;h2 id="用法">&lt;a href="#%e7%94%a8%e6%b3%95" class="header-anchor">&lt;/a>用法
+&lt;/h2>&lt;p>&lt;a class="link" href="https://api.nlsc.gov.tw/other/TownVillagePointQuery/" target="_blank" rel="noopener"
 >https://api.nlsc.gov.tw/other/TownVillagePointQuery/&lt;/a>經度/緯度&lt;/p>
-&lt;h2 id="舉例">舉例：&lt;/h2>
-&lt;h2 id="request">request&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="舉例">&lt;a href="#%e8%88%89%e4%be%8b" class="header-anchor">&lt;/a>舉例：
+&lt;/h2>&lt;h2 id="request">&lt;a href="#request" class="header-anchor">&lt;/a>request
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -17,8 +17,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">GET https://api.nlsc.gov.tw/other/TownVillagePointQuery/121.46278679999999/25.0169826
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="response">response&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="response">&lt;a href="#response" class="header-anchor">&lt;/a>response
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -48,6 +48,6 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/townVillageItem&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>&lt;a class="link" href="https://data.gov.tw/dataset/101898" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;p>&lt;a class="link" href="https://data.gov.tw/dataset/101898" target="_blank" rel="noopener"
 >https://data.gov.tw/dataset/101898&lt;/a>&lt;/p></description></item></channel></rss>

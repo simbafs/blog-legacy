@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>About on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/about/</link><description>Recent content in About on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/about/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://blog.simbafs.cc/about/</link><pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/about/</guid><description>&lt;img src="https://blog.simbafs.cc/og/about/index.png" alt="Featured image of post About" />&lt;h1 id="-哈囉問世界安好-followershttpsimgshieldsiogithubfollowerssimbafsstyleflat-squarehttpsgithubcomsimbafs">🖐️ 哈囉！問世界安好 &lt;a class="link" href="https://github.com/simbafs" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>About on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/about/</link><description>Recent content in About on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/about/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://blog.simbafs.cc/about/</link><pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/about/</guid><description>&lt;img src="https://blog.simbafs.cc/og/about/index.png" alt="Featured image of post About" />&lt;h1 id="-哈囉問世界安好-followershttpsimgshieldsiogithubfollowerssimbafsstyleflat-squarehttpsgithubcomsimbafs">&lt;a href="#-%e5%93%88%e5%9b%89%e5%95%8f%e4%b8%96%e7%95%8c%e5%ae%89%e5%a5%bd-followershttpsimgshieldsiogithubfollowerssimbafsstyleflat-squarehttpsgithubcomsimbafs" class="header-anchor">&lt;/a>🖐️ 哈囉！問世界安好 &lt;a class="link" href="https://github.com/simbafs" target="_blank" rel="noopener"
 >&lt;img src="https://img.shields.io/github/followers/simbafs?style=flat-square"
 loading="lazy"
 alt="Followers"
->&lt;/a>&lt;/h1>
-&lt;ul>
+>&lt;/a>
+&lt;/h1>&lt;ul>
 &lt;li>本名: 陳宏彰&lt;/li>
 &lt;li>常用網名: simba-fs、SimbaFs&lt;/li>
 &lt;li>原 JS 愛好者 目前 Go 愛好者&lt;/li>
@@ -15,8 +15,8 @@ alt="Followers"
 &lt;li>&lt;a class="link" href="https://ckcsc.net" target="_blank" rel="noopener"
 >成功高中電子計算機研習社&lt;/a> 擔任 &lt;code>退休網管兼教學&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;h1 id="-作品">🛠 作品&lt;/h1>
-&lt;ul>
+&lt;h1 id="-作品">&lt;a href="#-%e4%bd%9c%e5%93%81" class="header-anchor">&lt;/a>🛠 作品
+&lt;/h1>&lt;ul>
 &lt;li>
 &lt;p>&lt;a class="link" href="https://github.com/simbafs/next-blog" target="_blank" rel="noopener"
 >next-blog&lt;/a>&lt;br>
@@ -63,12 +63,12 @@ Telegrary 是一個 Telegram 機器人，讓你可以在 Telegram 上管理日�
 tech stack: golang&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;h1 id="-聯絡方式">📬 聯絡方式&lt;/h1>
-&lt;ul>
+&lt;h1 id="-聯絡方式">&lt;a href="#-%e8%81%af%e7%b5%a1%e6%96%b9%e5%bc%8f" class="header-anchor">&lt;/a>📬 聯絡方式
+&lt;/h1>&lt;ul>
 &lt;li>gpg fingerprint: &lt;a class="link" href="https://github.com/simbafs.gpg" target="_blank" rel="noopener"
 >FB39 7B64 177E 7C69 6E4D 707F 2FAD 6967 8674 CF25&lt;/a>&lt;/li>
 &lt;li>mail: &lt;a class="link" href="mailto:me@simbafs.cc" >me@simbafs.cc&lt;/a>&lt;/li>
-&lt;li>Mastodon: &lt;!-- raw HTML omitted -->@simbafs@masto.simbafs.cc&lt;!-- raw HTML omitted -->&lt;/li>
+&lt;li>Mastodon: &lt;a rel="me" href="https://masto.simbafs.cc/@simbafs">@simbafs@masto.simbafs.cc&lt;/a>&lt;/li>
 &lt;li>Discord id: @simbafs&lt;/li>
 &lt;li>telegram: &lt;a class="link" href="https://t.me/simbafs" target="_blank" rel="noopener"
 >@simbafs&lt;/a>&lt;/li>

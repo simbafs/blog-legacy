@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Code Format on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/code-format/</link><description>Recent content in Code Format on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/code-format/index.xml" rel="self" type="application/rss+xml"/><item><title>Libreoffice Code Format Plugin Installation</title><link>https://blog.simbafs.cc/p/linux/libreoffice-code-format-plugin-install/</link><pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/libreoffice-code-format-plugin-install/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/libreoffice-code-format-plugin-install.png" alt="Featured image of post Libreoffice Code Format Plugin Installation" />&lt;h1 id="安裝">安裝&lt;/h1>
-&lt;ol>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Code Format on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/code-format/</link><description>Recent content in Code Format on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/code-format/index.xml" rel="self" type="application/rss+xml"/><item><title>Libreoffice Code Format Plugin Installation</title><link>https://blog.simbafs.cc/p/libreoffice-code-format-plugin-install/</link><pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/libreoffice-code-format-plugin-install/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/libreoffice-code-format-plugin-install.png" alt="Featured image of post Libreoffice Code Format Plugin Installation" />&lt;h1 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
+&lt;/h1>&lt;ol>
 &lt;li>去 &lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
 >https://extensions.libreoffice.org/en/extensions/show/code-highlighter&lt;/a> 下載最新的外掛&lt;/li>
 &lt;li>把檔名前面的前綴刪掉，
@@ -26,8 +26,8 @@
 &lt;/blockquote>
 &lt;/li>
 &lt;/ol>
-&lt;h1 id="使用">使用&lt;/h1>
-&lt;ol>
+&lt;h1 id="使用">&lt;a href="#%e4%bd%bf%e7%94%a8" class="header-anchor">&lt;/a>使用
+&lt;/h1>&lt;ol>
 &lt;li>插入文字方塊
 &lt;blockquote>
 &lt;p>插入 &amp;gt; 文字方塊&lt;/p>
@@ -41,8 +41,8 @@
 &lt;/blockquote>
 &lt;/li>
 &lt;/ol>
-&lt;h1 id="參考資料">參考資料&lt;/h1>
-&lt;p>&lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
+&lt;h1 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h1>&lt;p>&lt;a class="link" href="https://extensions.libreoffice.org/en/extensions/show/code-highlighter" target="_blank" rel="noopener"
 >Libreoffice extensions&lt;/a>
 &lt;a class="link" href="https://github.com/slgobinath/libreoffice-code-highlighter/issues/29#issuecomment-635216707" target="_blank" rel="noopener"
 >issue&lt;/a>&lt;/p></description></item></channel></rss>

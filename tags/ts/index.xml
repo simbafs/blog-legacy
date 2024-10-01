@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ts on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/ts/</link><description>Recent content in Ts on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/ts/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript Snippet</title><link>https://blog.simbafs.cc/p/js/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/typescript-snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/typescript-snippet.png" alt="Featured image of post TypeScript Snippet" />&lt;h1 id="typescript-snippet">TypeScript Snippet&lt;/h1>
-&lt;h2 id="keyof">keyof&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ts on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/ts/</link><description>Recent content in Ts on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 10 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/ts/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeScript Snippet</title><link>https://blog.simbafs.cc/p/typescript-snippet/</link><pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/typescript-snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/typescript-snippet.png" alt="Featured image of post TypeScript Snippet" />&lt;h1 id="typescript-snippet">&lt;a href="#typescript-snippet" class="header-anchor">&lt;/a>TypeScript Snippet
+&lt;/h1>&lt;h2 id="keyof">&lt;a href="#keyof" class="header-anchor">&lt;/a>keyof
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -26,8 +26,8 @@
 &lt;/div>
 &lt;/div>&lt;p>&lt;a class="link" href="https://www.typescriptlang.org/docs/handbook/2/keyof-types.html" target="_blank" rel="noopener"
 >docs: keyof&lt;/a>&lt;/p>
-&lt;h2 id="static-method-of-class">static method of class&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="static-method-of-class">&lt;a href="#static-method-of-class" class="header-anchor">&lt;/a>static method of class
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -55,8 +55,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="valueof">valueof&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="valueof">&lt;a href="#valueof" class="header-anchor">&lt;/a>valueof
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2

@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Security on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/security/</link><description>Recent content in Security on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 19 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/security/index.xml" rel="self" type="application/rss+xml"/><item><title>Yubikey</title><link>https://blog.simbafs.cc/p/linux/yubikey/</link><pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/linux/yubikey/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/yubikey.png" alt="Featured image of post Yubikey" />&lt;h1 id="yubikey">Yubikey&lt;/h1>
-&lt;p>感謝煥杰賣我一個 1200，撿到寶啦！我買的是 &lt;a class="link" href="https://www.yubico.com/tw/product/yubikey-5c-nfc/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Security on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/security/</link><description>Recent content in Security on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 19 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/security/index.xml" rel="self" type="application/rss+xml"/><item><title>Yubikey</title><link>https://blog.simbafs.cc/p/yubikey/</link><pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/yubikey/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/yubikey.png" alt="Featured image of post Yubikey" />&lt;h1 id="yubikey">&lt;a href="#yubikey" class="header-anchor">&lt;/a>Yubikey
+&lt;/h1>&lt;p>感謝煥杰賣我一個 1200，撿到寶啦！我買的是 &lt;a class="link" href="https://www.yubico.com/tw/product/yubikey-5c-nfc/" target="_blank" rel="noopener"
 >Yubikey 5C NFC&lt;/a>，看起來幾乎所有功能都有&lt;/p>
-&lt;h2 id="login">login&lt;/h2>
-&lt;p>如果開啟這個，登入、解除鎖定等等動作都需要 Yubikey，聽起還很安全，但是因為我的筆電只有一個 type C，所以必須把 USB hub 拔掉，挺麻煩，我就把他關掉了。&lt;br>
+&lt;h2 id="login">&lt;a href="#login" class="header-anchor">&lt;/a>login
+&lt;/h2>&lt;p>如果開啟這個，登入、解除鎖定等等動作都需要 Yubikey，聽起還很安全，但是因為我的筆電只有一個 type C，所以必須把 USB hub 拔掉，挺麻煩，我就把他關掉了。&lt;br>
 在密碼輸入框的地方，先插入 yubikey，輸入密碼、按 enter，然後轉圈圈的時候按 yubikey 上金色按鈕（這個似乎是指紋辨識），就可以登入了。&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;a class="link" href="https://oscfr.com/blog/tech/yubico-yubikey-5c-nfc-setup-on-ubuntu-2104/" target="_blank" rel="noopener"
 >Yubico Yubikey 5C NFC setup on Ubuntu 21.04&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="ssh-gpg">ssh gpg&lt;/h2>
-&lt;p>&lt;del>研究中&amp;hellip;&lt;/del>
+&lt;h2 id="ssh-gpg">&lt;a href="#ssh-gpg" class="header-anchor">&lt;/a>ssh gpg
+&lt;/h2>&lt;p>&lt;del>研究中&amp;hellip;&lt;/del>
 在這裡 &lt;a class="link" href="https://blog.simbafs.cc/posts/linux/gpg-with-ssh" >GPG with SSH&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;a class="link" href="https://medium.com/@SSWilsonKao/%E5%A6%82%E4%BD%95%E5%9C%A8-mac-%E4%B8%8A-%E6%8A%8A-yubikey-%E8%88%87-gpg-ssh-%E6%90%AD%E9%85%8D%E5%9C%A8%E4%B8%80%E8%B5%B7-5f842d20ad6a" target="_blank" rel="noopener"
 >如何在 Mac 上，把 YubiKey 與 GPG、SSH 搭配在一起&lt;/a> &amp;gt; &lt;a class="link" href="https://gist.github.com/artizirk/d09ce3570021b0f65469cb450bee5e29" target="_blank" rel="noopener"
 >OpenPGP SSH access with Yubikey and GnuPG&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="2fa">2FA&lt;/h2>
-&lt;p>按照各個網站的說明設定，下面是我找到可以設定 Yubikey 的網站/APP&lt;/p>
+&lt;h2 id="2fa">&lt;a href="#2fa" class="header-anchor">&lt;/a>2FA
+&lt;/h2>&lt;p>按照各個網站的說明設定，下面是我找到可以設定 Yubikey 的網站/APP&lt;/p>
 &lt;ul>
 &lt;li>Google（我買這個 yubikey 最主要目的）&lt;/li>
 &lt;li>Github&lt;/li>
@@ -27,8 +27,8 @@
 &lt;/ul>
 &lt;p>twitter 在手機登入好像怪怪的，試了 5 分鐘才成功登入了&lt;/p>
 &lt;hr>
-&lt;h2 id="20221207-更">2022/12/07 更&lt;/h2>
-&lt;p>過了一陣子，系統也重裝過，然後 yubikey 就讀不到了，但是平常用網站都可以，只是 CLI 和 Yubikey personalization tool 都讀不到。
+&lt;h2 id="20221207-更">&lt;a href="#20221207-%e6%9b%b4" class="header-anchor">&lt;/a>2022/12/07 更
+&lt;/h2>&lt;p>過了一陣子，系統也重裝過，然後 yubikey 就讀不到了，但是平常用網站都可以，只是 CLI 和 Yubikey personalization tool 都讀不到。
 插上後輸入以下指令都會失敗&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -134,12 +134,12 @@
 &lt;p>接下來我亂七八糟試了一堆東西，發現 &lt;a class="link" href="https://developer.okta.com/blog/2021/07/07/developers-guide-to-gpg" target="_blank" rel="noopener"
 >一篇文章&lt;/a> 把上面的東西幾乎都包括進去了，非常推薦可以去看看。&lt;/p>
 &lt;p>剛剛搞了一陣後，把簽章、加密、驗證和主金鑰（應該有）的密鑰通通丟上 yubikey 了。但是現在有個問題，所有需要 gpg key 的時候，像是簽 git commit 和 ssh 驗證都需要插上 yubikey，好像安全過頭了。我研究看看能不能把某些再拉回本地，如果不行的話就只能把一開始備份的密鑰再導入一次，暴力解決！&lt;/p>
-&lt;h2 id="密碼們">密碼們&lt;/h2>
-&lt;p>yubikey 的設定中有好幾份不同功能的密碼，用法和出現時機都不一樣，這邊是我研究好幾份文件的總整理。首先要先有個關念，yubikey 的設計是公司裡有個人專門管一大堆的 yubikey，所以會有一個密碼是只有管理人知道，使用者不知道。那為了驗證是使用者本人，也會有密碼是只有使用者知道但是其他人不知道。&lt;/p>
-&lt;h2 id="pin">PIN&lt;/h2>
-&lt;p>這個 &amp;ldquo;PIN&amp;rdquo; 是 &lt;strong>&amp;ldquo;Personal Identification Number&amp;rdquo;&lt;/strong> 的縮寫，顧名思義，這個就是只有使用者知道但是其他人不知道的 PIN，你會在動用 gpg、ssh 密鑰時用到他。預設是 123456&lt;/p>
-&lt;h3 id="使用情境">使用情境&lt;/h3>
-&lt;ul>
+&lt;h2 id="密碼們">&lt;a href="#%e5%af%86%e7%a2%bc%e5%80%91" class="header-anchor">&lt;/a>密碼們
+&lt;/h2>&lt;p>yubikey 的設定中有好幾份不同功能的密碼，用法和出現時機都不一樣，這邊是我研究好幾份文件的總整理。首先要先有個關念，yubikey 的設計是公司裡有個人專門管一大堆的 yubikey，所以會有一個密碼是只有管理人知道，使用者不知道。那為了驗證是使用者本人，也會有密碼是只有使用者知道但是其他人不知道。&lt;/p>
+&lt;h2 id="pin">&lt;a href="#pin" class="header-anchor">&lt;/a>PIN
+&lt;/h2>&lt;p>這個 &amp;ldquo;PIN&amp;rdquo; 是 &lt;strong>&amp;ldquo;Personal Identification Number&amp;rdquo;&lt;/strong> 的縮寫，顧名思義，這個就是只有使用者知道但是其他人不知道的 PIN，你會在動用 gpg、ssh 密鑰時用到他。預設是 123456&lt;/p>
+&lt;h3 id="使用情境">&lt;a href="#%e4%bd%bf%e7%94%a8%e6%83%85%e5%a2%83" class="header-anchor">&lt;/a>使用情境
+&lt;/h3>&lt;ul>
 &lt;li>驗證 PIN&lt;/li>
 &lt;li>改變 PIN&lt;/li>
 &lt;li>改變嘗試次數限制（還需要 management key）&lt;/li>
@@ -148,25 +148,25 @@
 &lt;li>key agreement&lt;/li>
 &lt;li>取得資料&lt;/li>
 &lt;/ul>
-&lt;h2 id="puk">PUK&lt;/h2>
-&lt;p>&amp;ldquo;PUK&amp;rdquo; 是 &amp;ldquo;PIN Unblocking Key&amp;rdquo; 的縮寫，他的功能是當你輸入錯誤的 PIN 太多次時，用這個密碼解鎖。如果很不幸的你 PUK 也輸入錯誤太多次，整個 yubikey 會被鎖起來，所有的功能都不能用，根據 &lt;a class="link" href="https://support.yubico.com/hc/en-us/articles/360015654100-YubiKey-PIN-and-PUK-User-Management-on-Windows" target="_blank" rel="noopener"
+&lt;h2 id="puk">&lt;a href="#puk" class="header-anchor">&lt;/a>PUK
+&lt;/h2>&lt;p>&amp;ldquo;PUK&amp;rdquo; 是 &amp;ldquo;PIN Unblocking Key&amp;rdquo; 的縮寫，他的功能是當你輸入錯誤的 PIN 太多次時，用這個密碼解鎖。如果很不幸的你 PUK 也輸入錯誤太多次，整個 yubikey 會被鎖起來，所有的功能都不能用，根據 &lt;a class="link" href="https://support.yubico.com/hc/en-us/articles/360015654100-YubiKey-PIN-and-PUK-User-Management-on-Windows" target="_blank" rel="noopener"
 >官方文件&lt;/a>，你只能回復出廠設定&lt;/p>
 &lt;blockquote>
 &lt;p>By default, the user PIN is blocked when three consecutive incorrect PINs have been entered. The PIN Unblock Code (PUK) is used for unblocking the User PIN. If both the PIN and the PUK are blocked, the YubiKey must be reset, which deletes any loaded certificates and returns the YubiKey to a factory default state.&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="使用情境-1">使用情境&lt;/h3>
-&lt;ul>
+&lt;h3 id="使用情境-1">&lt;a href="#%e4%bd%bf%e7%94%a8%e6%83%85%e5%a2%83-1" class="header-anchor">&lt;/a>使用情境
+&lt;/h3>&lt;ul>
 &lt;li>修改 PUK&lt;/li>
 &lt;li>解鎖 PIN&lt;/li>
 &lt;/ul>
-&lt;h2 id="admin-pin">Admin PIN&lt;/h2>
-&lt;p>很明顯這是管理員專用的密碼，反正在需要比較高權限的操作的時候他會跳出來，密碼輸入框上面會寫 &amp;ldquo;Admin PIN&amp;rdquo;，所以應該是不太會看錯啦。預設是 12345678&lt;br>
+&lt;h2 id="admin-pin">&lt;a href="#admin-pin" class="header-anchor">&lt;/a>Admin PIN
+&lt;/h2>&lt;p>很明顯這是管理員專用的密碼，反正在需要比較高權限的操作的時候他會跳出來，密碼輸入框上面會寫 &amp;ldquo;Admin PIN&amp;rdquo;，所以應該是不太會看錯啦。預設是 12345678&lt;br>
 &lt;code>gpg --edit-card&lt;/code> 在 &lt;code>passwd&lt;/code> 裡修改 Admin PIN 後的訊息會是 &lt;code>PIN changed.&lt;/code>，應該是誤植吧&lt;/p>
-&lt;h2 id="management-key">management key&lt;/h2>
-&lt;p>這是一個比較特別的密碼，他預設是 3DES，你也可以改成 AES，目前來說 3DES 還是「安全的加密標準」，所以針對這個密碼 yubikey 沒有設定嘗試上限（PIN 和 PUK 有），因為就算攻擊者想要破解也很難（&lt;a class="link" href="https://zh.wikipedia.org/wiki/3DES#%E5%AE%89%E5%85%A8%E6%80%A7" target="_blank" rel="noopener"
+&lt;h2 id="management-key">&lt;a href="#management-key" class="header-anchor">&lt;/a>management key
+&lt;/h2>&lt;p>這是一個比較特別的密碼，他預設是 3DES，你也可以改成 AES，目前來說 3DES 還是「安全的加密標準」，所以針對這個密碼 yubikey 沒有設定嘗試上限（PIN 和 PUK 有），因為就算攻擊者想要破解也很難（&lt;a class="link" href="https://zh.wikipedia.org/wiki/3DES#%E5%AE%89%E5%85%A8%E6%80%A7" target="_blank" rel="noopener"
 >3DES 的安全性&lt;/a>）&lt;/p>
-&lt;h3 id="使用情境-2">使用情境&lt;/h3>
-&lt;ul>
+&lt;h3 id="使用情境-2">&lt;a href="#%e4%bd%bf%e7%94%a8%e6%83%85%e5%a2%83-2" class="header-anchor">&lt;/a>使用情境
+&lt;/h3>&lt;ul>
 &lt;li>修改 management key&lt;/li>
 &lt;li>修改資料&lt;/li>
 &lt;li>產生新金鑰對&lt;/li>

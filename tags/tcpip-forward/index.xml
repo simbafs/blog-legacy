@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tcpip-Forward on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/tcpip-forward/</link><description>Recent content in Tcpip-Forward on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 14 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/tcpip-forward/index.xml" rel="self" type="application/rss+xml"/><item><title>SSH TCP/IP Forward</title><link>https://blog.simbafs.cc/p/golang/ssh-tcpip-forward/</link><pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-tcpip-forward/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/ssh-tcpip-forward.png" alt="Featured image of post SSH TCP/IP Forward" />&lt;h1 id="ssh-tcpip-forward">Ssh TCP/IP Forward&lt;/h1>
-&lt;p>這篇文章是講怎麼用 golang 寫一個 ssh server 可以執行 tcp 轉發，這方面的資料在 Google 講的特別少，有可能都被「我的 ssh 壞掉了不會轉發怎麼辦」淹沒了，然後類似的專案又太複雜很難懂。研究兩天的結論是去看 RFC（Request For Comments） 最快，裡面寫得最清楚。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tcpip-Forward on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/tcpip-forward/</link><description>Recent content in Tcpip-Forward on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 14 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/tcpip-forward/index.xml" rel="self" type="application/rss+xml"/><item><title>SSH TCP/IP Forward</title><link>https://blog.simbafs.cc/p/ssh-tcpip-forward/</link><pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-tcpip-forward/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/ssh-tcpip-forward.png" alt="Featured image of post SSH TCP/IP Forward" />&lt;h1 id="ssh-tcpip-forward">&lt;a href="#ssh-tcpip-forward" class="header-anchor">&lt;/a>Ssh TCP/IP Forward
+&lt;/h1>&lt;p>這篇文章是講怎麼用 golang 寫一個 ssh server 可以執行 tcp 轉發，這方面的資料在 Google 講的特別少，有可能都被「我的 ssh 壞掉了不會轉發怎麼辦」淹沒了，然後類似的專案又太複雜很難懂。研究兩天的結論是去看 RFC（Request For Comments） 最快，裡面寫得最清楚。&lt;/p>
 &lt;p>目前這個版本只適用把本地端口開到伺服器上，也就是 &lt;code>ssh -R&lt;/code>，反向的 &lt;code>ssh -L&lt;/code> 的之後再研究補充。&lt;/p>
-&lt;h2 id="開啟伺服器">開啟伺服器&lt;/h2>
-&lt;p>跟 &lt;a class="link" href="../ssh-server" >golang/ssh-server&lt;/a> 一樣，先開啟 tcp 連接埠，並在在上面開 ssh 伺服器&lt;/p>
+&lt;h2 id="開啟伺服器">&lt;a href="#%e9%96%8b%e5%95%9f%e4%bc%ba%e6%9c%8d%e5%99%a8" class="header-anchor">&lt;/a>開啟伺服器
+&lt;/h2>&lt;p>跟 &lt;a class="link" href="../ssh-server" >golang/ssh-server&lt;/a> 一樣，先開啟 tcp 連接埠，並在在上面開 ssh 伺服器&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -181,21 +181,21 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="global-request">Global Request&lt;/h2>
-&lt;p>接下來就跟 &lt;a class="link" href="../ssh-server" >golang/ssh-server&lt;/a> 不一樣了，之前的 &lt;code>ptr-req&lt;/code> 跟 &lt;code>exec&lt;/code>、&lt;code>env&lt;/code> 都被放在 &lt;a class="link" href="https://www.rfc-editor.org/rfc/rfc4254#section-6" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="global-request">&lt;a href="#global-request" class="header-anchor">&lt;/a>Global Request
+&lt;/h2>&lt;p>接下來就跟 &lt;a class="link" href="../ssh-server" >golang/ssh-server&lt;/a> 不一樣了，之前的 &lt;code>ptr-req&lt;/code> 跟 &lt;code>exec&lt;/code>、&lt;code>env&lt;/code> 都被放在 &lt;a class="link" href="https://www.rfc-editor.org/rfc/rfc4254#section-6" target="_blank" rel="noopener"
 >RFC4254 section 6&lt;/a> 下，而 &lt;code>tcpip-forward&lt;/code> 卻是在 &lt;a class="link" href="https://www.rfc-editor.org/rfc/rfc4254#section-7" target="_blank" rel="noopener"
 >RFC4254 section 7&lt;/a>，意思是他們完全不一樣。section 6 下的東西都是 &lt;strong>Interactive Session&lt;/strong>，要 &lt;strong>客戶端&lt;/strong> 先開 channel（&lt;code>SSH_MSG_CHANNEL_OPEN&lt;/code>）再送 channel request（&lt;code>SSH_MSG_CHANNEL_REQUEST&lt;/code>） 決定 channel 類別。section 7 下的 tcpip forwarding 則是先送 Global request（&lt;code>SSH_MSG_GLOBAL_REQUEST&lt;/code>）告訴伺服器要在哪個位址上開啟哪個 port，伺服器說 ok 後再由&lt;strong>伺服器&lt;/strong>開啟 channel（注意這裡 channel 由誰開啟不一樣）&lt;/p>
-&lt;h3 id="channelsession-與-request">channel、session 與 request&lt;/h3>
-&lt;h4 id="channel">Channel&lt;/h4>
-&lt;p>channel 和 request 是在 ssh protocol 中地位相同的兩個東西，一個是能持續讀寫的東西，在 golang 中是一個實作了 &lt;a class="link" href="https://pkg.go.dev/io#ReadWriter" target="_blank" rel="noopener"
+&lt;h3 id="channelsession-與-request">&lt;a href="#channelsession-%e8%88%87-request" class="header-anchor">&lt;/a>channel、session 與 request
+&lt;/h3>&lt;h4 id="channel">&lt;a href="#channel" class="header-anchor">&lt;/a>Channel
+&lt;/h4>&lt;p>channel 和 request 是在 ssh protocol 中地位相同的兩個東西，一個是能持續讀寫的東西，在 golang 中是一個實作了 &lt;a class="link" href="https://pkg.go.dev/io#ReadWriter" target="_blank" rel="noopener"
 >io.ReadWriter&lt;/a>。也就是說可以把他丟進 &lt;code>fmt.Fprintf&lt;/code> 之類的函數的第一個參數&lt;/p>
-&lt;h4 id="session">Session&lt;/h4>
-&lt;p>session channel 和 tcpip-forward channel 都是 channel 的一個類型，定義在 &lt;a class="link" href="https://www.rfc-editor.org/rfc/rfc4254#section-5" target="_blank" rel="noopener"
+&lt;h4 id="session">&lt;a href="#session" class="header-anchor">&lt;/a>Session
+&lt;/h4>&lt;p>session channel 和 tcpip-forward channel 都是 channel 的一個類型，定義在 &lt;a class="link" href="https://www.rfc-editor.org/rfc/rfc4254#section-5" target="_blank" rel="noopener"
 >RFC4254 section 5&lt;/a>，是比 channel 低一階的概念&lt;/p>
-&lt;h4 id="request">Request&lt;/h4>
-&lt;p>request 是單次一來一回的通訊，分成 Global request（&lt;code>SSH_MSG_GLOBAL_REQUEST&lt;/code>） 和 Channel request（&lt;code>SSH_MSG_CHANNEL_REQUEST&lt;/code>），Global request 目前我只看到在開啟 tcpip-forward channel 時會用到，而 Channel request 會在開啟 session channel 後開啟 pty、執行命令、開啟 x11 forwarding、傳遞環境變數等等（我也不知道位什麼 x11 forwarding 和 tcpip forwarding 不一樣）。跟 HTTP 一樣，request 都是用在請求某種資源的時候使用&lt;/p>
-&lt;h3 id="global-request-1">Global request&lt;/h3>
-&lt;p>回到程式，我們需要處理之前沒處理的 global request，而 channel（由客戶端開啟的）就不需要了。&lt;/p>
+&lt;h4 id="request">&lt;a href="#request" class="header-anchor">&lt;/a>Request
+&lt;/h4>&lt;p>request 是單次一來一回的通訊，分成 Global request（&lt;code>SSH_MSG_GLOBAL_REQUEST&lt;/code>） 和 Channel request（&lt;code>SSH_MSG_CHANNEL_REQUEST&lt;/code>），Global request 目前我只看到在開啟 tcpip-forward channel 時會用到，而 Channel request 會在開啟 session channel 後開啟 pty、執行命令、開啟 x11 forwarding、傳遞環境變數等等（我也不知道位什麼 x11 forwarding 和 tcpip forwarding 不一樣）。跟 HTTP 一樣，request 都是用在請求某種資源的時候使用&lt;/p>
+&lt;h3 id="global-request-1">&lt;a href="#global-request-1" class="header-anchor">&lt;/a>Global request
+&lt;/h3>&lt;p>回到程式，我們需要處理之前沒處理的 global request，而 channel（由客戶端開啟的）就不需要了。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -226,8 +226,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="抓出-addr-和-port">抓出 addr 和 port&lt;/h3>
-&lt;p>因為我們要求在伺服器上某個連接埠的封包要透過 ssh 轉到客戶端上某個連接埠，因此要先從 Global request 中抓出 addr 和 port，根據 RFC 的描述，這個 Global request 會長這樣&lt;/p>
+&lt;/div>&lt;h3 id="抓出-addr-和-port">&lt;a href="#%e6%8a%93%e5%87%ba-addr-%e5%92%8c-port" class="header-anchor">&lt;/a>抓出 addr 和 port
+&lt;/h3>&lt;p>因為我們要求在伺服器上某個連接埠的封包要透過 ssh 轉到客戶端上某個連接埠，因此要先從 Global request 中抓出 addr 和 port，根據 RFC 的描述，這個 Global request 會長這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -287,8 +287,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="開啟-tcp-連接埠">開啟 TCP 連接埠&lt;/h3>
-&lt;p>有了 &lt;code>addr&lt;/code> 和 &lt;code>port&lt;/code> 後，就可以開啟 tcp 連接埠，如果沒問題就可以告訴客戶端一切 ok 了&lt;/p>
+&lt;/div>&lt;h3 id="開啟-tcp-連接埠">&lt;a href="#%e9%96%8b%e5%95%9f-tcp-%e9%80%a3%e6%8e%a5%e5%9f%a0" class="header-anchor">&lt;/a>開啟 TCP 連接埠
+&lt;/h3>&lt;p>有了 &lt;code>addr&lt;/code> 和 &lt;code>port&lt;/code> 後，就可以開啟 tcp 連接埠，如果沒問題就可以告訴客戶端一切 ok 了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -333,8 +333,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="轉發-tcp-封包">轉發 TCP 封包&lt;/h3>
-&lt;p>接著當伺服器上新開的 TCP 連接埠後，如果有新的連線進來，就開啟一個 &lt;code>forwarded-tcpip&lt;/code> 的 channel，然後就是把兩邊串起來了&lt;/p>
+&lt;/div>&lt;h3 id="轉發-tcp-封包">&lt;a href="#%e8%bd%89%e7%99%bc-tcp-%e5%b0%81%e5%8c%85" class="header-anchor">&lt;/a>轉發 TCP 封包
+&lt;/h3>&lt;p>接著當伺服器上新開的 TCP 連接埠後，如果有新的連線進來，就開啟一個 &lt;code>forwarded-tcpip&lt;/code> 的 channel，然後就是把兩邊串起來了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -407,8 +407,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="串起兩邊">串起兩邊&lt;/h3>
-&lt;p>當上面一切就緒，下面就是簡單的 proxy，因為資料是雙向的，所以需要兩個 &lt;code>io.Copy&lt;/code> 來串資料，當任意一個結束後（EOF），就要把兩個都關掉，然後結束這個函式。首先是「任意一個結束就&amp;hellip;」這個任務，用 &lt;code>sync.Once&lt;/code> 確保只會被執行一次，然後用一個 unbuffer 來阻止函數結束（因為兩個 &lt;code>io.Copy&lt;/code> 都是在 goroutine 裡，不會阻塞函數）。這裡如果沒有確實把所有東西關閉會導致只能發一次 tcp 連線，然後伺服器就卡住&amp;hellip;（這個東西陰了我好久）&lt;/p>
+&lt;/div>&lt;h3 id="串起兩邊">&lt;a href="#%e4%b8%b2%e8%b5%b7%e5%85%a9%e9%82%8a" class="header-anchor">&lt;/a>串起兩邊
+&lt;/h3>&lt;p>當上面一切就緒，下面就是簡單的 proxy，因為資料是雙向的，所以需要兩個 &lt;code>io.Copy&lt;/code> 來串資料，當任意一個結束後（EOF），就要把兩個都關掉，然後結束這個函式。首先是「任意一個結束就&amp;hellip;」這個任務，用 &lt;code>sync.Once&lt;/code> 確保只會被執行一次，然後用一個 unbuffer 來阻止函數結束（因為兩個 &lt;code>io.Copy&lt;/code> 都是在 goroutine 裡，不會阻塞函數）。這裡如果沒有確實把所有東西關閉會導致只能發一次 tcp 連線，然後伺服器就卡住&amp;hellip;（這個東西陰了我好久）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -485,8 +485,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="完整程式碼">完整程式碼&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="完整程式碼">&lt;a href="#%e5%ae%8c%e6%95%b4%e7%a8%8b%e5%bc%8f%e7%a2%bc" class="header-anchor">&lt;/a>完整程式碼
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -896,5 +896,5 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>ssh protocol 比我想像的還要複雜，像是 tcp forwarding 和 x11 forwarding 為什麼差這麼多？個人猜測可能是跟他們在 OSI 模型中不同層的關係。而一個東西要真的了解他在幹麻還是讀文件最快，如果我只看 Google 上別人的文章、程式碼和 ChatGPT 的唬爛，也許我在 Global request 之前就放棄了，再不然也會被 tcpip-forward channel 和 session chennel 發起人不同卡住做不下去。&lt;/p></description></item></channel></rss>
+&lt;/div>&lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
+&lt;/h2>&lt;p>ssh protocol 比我想像的還要複雜，像是 tcp forwarding 和 x11 forwarding 為什麼差這麼多？個人猜測可能是跟他們在 OSI 模型中不同層的關係。而一個東西要真的了解他在幹麻還是讀文件最快，如果我只看 Google 上別人的文章、程式碼和 ChatGPT 的唬爛，也許我在 Global request 之前就放棄了，再不然也會被 tcpip-forward channel 和 session chennel 發起人不同卡住做不下去。&lt;/p></description></item></channel></rss>

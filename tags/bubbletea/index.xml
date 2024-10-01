@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bubbletea on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/bubbletea/</link><description>Recent content in Bubbletea on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 08 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/bubbletea/index.xml" rel="self" type="application/rss+xml"/><item><title>Bubbletea</title><link>https://blog.simbafs.cc/p/golang/bubbletea/</link><pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/bubbletea/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/bubbletea.png" alt="Featured image of post Bubbletea" />&lt;h1 id="charmbraceletbubbletea">charmbracelet/bubbletea&lt;/h1>
-&lt;p>charmbracelet/bubbletea 是一個類似於 HTML，但是他是用在終端機中建立純文字的使用者界面。&lt;/p>
-&lt;h2 id="model">model&lt;/h2>
-&lt;p>model 是 bubbletea 中最基本的元件，對應到 HTML 中就是 tag，一個 model 需要有以下三個方法&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bubbletea on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/bubbletea/</link><description>Recent content in Bubbletea on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 08 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/bubbletea/index.xml" rel="self" type="application/rss+xml"/><item><title>Bubbletea</title><link>https://blog.simbafs.cc/p/bubbletea/</link><pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/bubbletea/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/bubbletea.png" alt="Featured image of post Bubbletea" />&lt;h1 id="charmbraceletbubbletea">&lt;a href="#charmbraceletbubbletea" class="header-anchor">&lt;/a>charmbracelet/bubbletea
+&lt;/h1>&lt;p>charmbracelet/bubbletea 是一個類似於 HTML，但是他是用在終端機中建立純文字的使用者界面。&lt;/p>
+&lt;h2 id="model">&lt;a href="#model" class="header-anchor">&lt;/a>model
+&lt;/h2>&lt;p>model 是 bubbletea 中最基本的元件，對應到 HTML 中就是 tag，一個 model 需要有以下三個方法&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -17,8 +17,8 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;code>Init&lt;/code> 函式定義只在建立 model 時要執行的 cmd，&lt;code>Update&lt;/code> 定義每個 tick 都會執行的程式，&lt;code>View&lt;/code> 將 model 繪製成字串。&lt;/p>
-&lt;h2 id="cmd">cmd&lt;/h2>
-&lt;p>cmd 需要符合以下定義&lt;/p>
+&lt;h2 id="cmd">&lt;a href="#cmd" class="header-anchor">&lt;/a>cmd
+&lt;/h2>&lt;p>cmd 需要符合以下定義&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -58,10 +58,10 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="狀態">狀態&lt;/h2>
-&lt;p>在 model 定義狀態就在 struct 中直接新增欄位就可以了，要注意的是如果在 &lt;code>Update&lt;/code> 中要存取子 model 的狀態，請把 &lt;code>Update&lt;/code> 傳遞下去並在子 model 的 &lt;code>Update&lt;/code> 中存取狀態&lt;/p>
-&lt;h2 id="子-model-和-initupdate-傳遞">子 model 和 Init/Update 傳遞&lt;/h2>
-&lt;p>定義子 model&lt;/p>
+&lt;/div>&lt;h2 id="狀態">&lt;a href="#%e7%8b%80%e6%85%8b" class="header-anchor">&lt;/a>狀態
+&lt;/h2>&lt;p>在 model 定義狀態就在 struct 中直接新增欄位就可以了，要注意的是如果在 &lt;code>Update&lt;/code> 中要存取子 model 的狀態，請把 &lt;code>Update&lt;/code> 傳遞下去並在子 model 的 &lt;code>Update&lt;/code> 中存取狀態&lt;/p>
+&lt;h2 id="子-model-和-initupdate-傳遞">&lt;a href="#%e5%ad%90-model-%e5%92%8c-initupdate-%e5%82%b3%e9%81%9e" class="header-anchor">&lt;/a>子 model 和 Init/Update 傳遞
+&lt;/h2>&lt;p>定義子 model&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -113,7 +113,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="問題">問題&lt;/h3>
-&lt;p>如果子 model 變多，那對於傳遞的管理就會變得很複雜，要想的方法解決，需要可以一次管理不同類型的 model&lt;/p>
-&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>&lt;code>Update&lt;/code> 中只接收和自己有關的 msg，和自己無關的就傳遞下去，絕對不操作不屬於自己的屬性，不然會出 bug&lt;/p></description></item></channel></rss>
+&lt;/div>&lt;h3 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h3>&lt;p>如果子 model 變多，那對於傳遞的管理就會變得很複雜，要想的方法解決，需要可以一次管理不同類型的 model&lt;/p>
+&lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
+&lt;/h2>&lt;p>&lt;code>Update&lt;/code> 中只接收和自己有關的 msg，和自己無關的就傳遞下去，絕對不操作不屬於自己的屬性，不然會出 bug&lt;/p></description></item></channel></rss>

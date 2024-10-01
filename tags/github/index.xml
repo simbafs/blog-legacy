@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/github/</link><description>Recent content in Github on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 27 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>用 Github Action 編譯並發 Release</title><link>https://blog.simbafs.cc/p/golang/github-action-release/</link><pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/github-action-release/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/githubAction.png" alt="Featured image of post 用 Github Action 編譯並發 Release" />&lt;h1 id="用-github-action-編譯並發-release">用 Github Action 編譯並發 Release&lt;/h1>
-&lt;p>如果自己寫的小工具的 GitHub 頁面右邊 Release 那欄有個什麼東西，一定很酷對吧！如果裡面已經提供了不同作業系統編譯好的程式，一定更酷！&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/github/</link><description>Recent content in Github on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 27 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>用 Github Action 編譯並發 Release</title><link>https://blog.simbafs.cc/p/github-action-release/</link><pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/github-action-release/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/githubAction.png" alt="Featured image of post 用 Github Action 編譯並發 Release" />&lt;h1 id="用-github-action-編譯並發-release">&lt;a href="#%e7%94%a8-github-action-%e7%b7%a8%e8%ad%af%e4%b8%a6%e7%99%bc-release" class="header-anchor">&lt;/a>用 Github Action 編譯並發 Release
+&lt;/h1>&lt;p>如果自己寫的小工具的 GitHub 頁面右邊 Release 那欄有個什麼東西，一定很酷對吧！如果裡面已經提供了不同作業系統編譯好的程式，一定更酷！&lt;br>
 想要建立 Release，你可以在新版本發布時自己手動 crose compile 再手動設定 Release，這個方法可行，但是聽起來全手動就很 low，我們要用一個全自動的方式發 Release！&lt;/p>
-&lt;h2 id="github-actioin">Github Actioin&lt;/h2>
-&lt;p>既然我們程式碼都託管在 GitHub 了，直接用 Gtithub Action 是很合理的吧！&lt;/p>
-&lt;h3 id="觸發條件">觸發條件&lt;/h3>
-&lt;p>因為我們要做的是發布版本，不是每個 commit 都要觸發，因此觸發條件就設成&lt;/p>
+&lt;h2 id="github-actioin">&lt;a href="#github-actioin" class="header-anchor">&lt;/a>Github Actioin
+&lt;/h2>&lt;p>既然我們程式碼都託管在 GitHub 了，直接用 Gtithub Action 是很合理的吧！&lt;/p>
+&lt;h3 id="觸發條件">&lt;a href="#%e8%a7%b8%e7%99%bc%e6%a2%9d%e4%bb%b6" class="header-anchor">&lt;/a>觸發條件
+&lt;/h3>&lt;p>因為我們要做的是發布版本，不是每個 commit 都要觸發，因此觸發條件就設成&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -20,8 +20,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>意思是只有像是 &lt;code>v0.1.13&lt;/code> 這樣的標籤會觸發，也就是你建立新版本時。&lt;/p>
-&lt;h3 id="編譯">編譯&lt;/h3>
-&lt;p>在嘗試各種套件之後，我覺得 &lt;a class="link" href="https://github.com/marketplace/actions/goreleaser-action" target="_blank" rel="noopener"
+&lt;h3 id="編譯">&lt;a href="#%e7%b7%a8%e8%ad%af" class="header-anchor">&lt;/a>編譯
+&lt;/h3>&lt;p>在嘗試各種套件之後，我覺得 &lt;a class="link" href="https://github.com/marketplace/actions/goreleaser-action" target="_blank" rel="noopener"
 >goreleaser-action&lt;/a> 是我用起來最舒服的，不用太多設定，就直接都編譯好了（詳細設定可以去 &lt;a class="link" href="https://goreleaser.com" target="_blank" rel="noopener"
 >goreleaser 的網站看&lt;/a> )&lt;br>
 在 GitHub Action 中設定就下面幾行，第一個步驟是安裝 go，再來就是編譯了。&lt;/p>
@@ -54,8 +54,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>注意，裡面有個 &lt;code>secret.GITHUB_TOKEN&lt;/code>，這個東西你就照寫，不要抄錯，GitHub Action 會自動在 runtime 填入，所以你也不用特別去設定。&lt;/p>
-&lt;h3 id="上傳編譯好的執行檔">上傳編譯好的執行檔&lt;/h3>
-&lt;p>goreleaser 的文件裡面有推薦一個上傳的套件，但是可能是我笨，那個都不成功。我用的是另一套 &lt;a class="link" href="https://github.com/marketplace/actions/upload-to-github-release" target="_blank" rel="noopener"
+&lt;h3 id="上傳編譯好的執行檔">&lt;a href="#%e4%b8%8a%e5%82%b3%e7%b7%a8%e8%ad%af%e5%a5%bd%e7%9a%84%e5%9f%b7%e8%a1%8c%e6%aa%94" class="header-anchor">&lt;/a>上傳編譯好的執行檔
+&lt;/h3>&lt;p>goreleaser 的文件裡面有推薦一個上傳的套件，但是可能是我笨，那個都不成功。我用的是另一套 &lt;a class="link" href="https://github.com/marketplace/actions/upload-to-github-release" target="_blank" rel="noopener"
 >upload-to-github-release&lt;/a>，這個可以一次上傳多個檔案，設定一樣很簡單。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -86,8 +86,8 @@
 &lt;/div>&lt;p>你會看到在上傳之前還有一個步驟，這個是用來取得 tag name 用的，他用來指定檔案要上傳到哪裡&lt;br>
 在 &lt;code>with.file&lt;/code> 這欄，你可以指定要上傳的檔案，這個要設成什麼就要看你 goreleaser 編譯出來的檔案放在哪，叫什麼（這個都是可以設定的）&lt;br>
 &lt;code>draft&lt;/code> 設成 &lt;code>true&lt;/code> 有個好處，就是 Action 跑玩後不會立刻建立新 Release，而是你在去手動確認，而且包括 Release name、Change log 都設定好了，你只需要看有沒有什麼說明要加，就可以直接按發布了，非常方便。當然你如果沒有什麼想說的，就可以直接設定 &lt;code>draft: true&lt;/code>，如此一來就真的是「全自動了」&lt;/p>
-&lt;h2 id="完整-action-設定檔">完整 action 設定檔&lt;/h2>
-&lt;p>以上是細部解說，下面就是完整設定檔，如果有更新的話請到 &lt;a class="link" href="https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml" target="_blank" rel="noopener"
+&lt;h2 id="完整-action-設定檔">&lt;a href="#%e5%ae%8c%e6%95%b4-action-%e8%a8%ad%e5%ae%9a%e6%aa%94" class="header-anchor">&lt;/a>完整 action 設定檔
+&lt;/h2>&lt;p>以上是細部解說，下面就是完整設定檔，如果有更新的話請到 &lt;a class="link" href="https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml" target="_blank" rel="noopener"
 >https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml&lt;/a> 看最新版。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -173,13 +173,13 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">tag_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ steps.tagName.outputs.tag }}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>GitHub Action 自動部署 hexo</title><link>https://blog.simbafs.cc/p/hexo/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</link><pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/GitHub-Action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo.png" alt="Featured image of post GitHub Action 自動部署 hexo" />&lt;h1 id="前言">前言&lt;/h1>
-&lt;p>本來部署 hexo 都是手動下指令，但是這樣在手機上因為沒辦法裝 hexo ,所以一直不能在手機上寫文章。剛好想到 GitHub Action 可以滿足我的需求，上網查了一下資料發現蠻多人有和我一樣的需求，這次參考的是 &lt;a class="link" href="https://owlran.github.io/2020/04/26/hexo-blog-github-action/" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>GitHub Action 自動部署 hexo</title><link>https://blog.simbafs.cc/p/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</link><pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/GitHub-Action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo.png" alt="Featured image of post GitHub Action 自動部署 hexo" />&lt;h1 id="前言">&lt;a href="#%e5%89%8d%e8%a8%80" class="header-anchor">&lt;/a>前言
+&lt;/h1>&lt;p>本來部署 hexo 都是手動下指令，但是這樣在手機上因為沒辦法裝 hexo ,所以一直不能在手機上寫文章。剛好想到 GitHub Action 可以滿足我的需求，上網查了一下資料發現蠻多人有和我一樣的需求，這次參考的是 &lt;a class="link" href="https://owlran.github.io/2020/04/26/hexo-blog-github-action/" target="_blank" rel="noopener"
 >owlran 大大的文章&lt;/a>。&lt;/p>
-&lt;h1 id="ssh-key">ssh key&lt;/h1>
-&lt;p>因為要部署到 GitHub repo，最方便的方法當然是 ssh key 啦。&lt;/p>
-&lt;h2 id="ssh-keygen">ssh-keygen&lt;/h2>
-&lt;p>首先隨便找個資料夾產生一組 ssh key&lt;/p>
+&lt;h1 id="ssh-key">&lt;a href="#ssh-key" class="header-anchor">&lt;/a>ssh key
+&lt;/h1>&lt;p>因為要部署到 GitHub repo，最方便的方法當然是 ssh key 啦。&lt;/p>
+&lt;h2 id="ssh-keygen">&lt;a href="#ssh-keygen" class="header-anchor">&lt;/a>ssh-keygen
+&lt;/h2>&lt;p>首先隨便找個資料夾產生一組 ssh key&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -188,17 +188,17 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ssh-keygen -f deploy-key
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="github">GitHub&lt;/h2>
-&lt;p>再來要讓 GitHub 知道你的 ssh key（public/secret 都要）&lt;/p>
-&lt;h3 id="public-key">public key&lt;/h3>
-&lt;p>public key 是要放在你的 &lt;code>&amp;lt;username&amp;gt;.github.io&lt;/code> 的 repo 下&lt;/p>
+&lt;/div>&lt;h2 id="github">&lt;a href="#github" class="header-anchor">&lt;/a>GitHub
+&lt;/h2>&lt;p>再來要讓 GitHub 知道你的 ssh key（public/secret 都要）&lt;/p>
+&lt;h3 id="public-key">&lt;a href="#public-key" class="header-anchor">&lt;/a>public key
+&lt;/h3>&lt;p>public key 是要放在你的 &lt;code>&amp;lt;username&amp;gt;.github.io&lt;/code> 的 repo 下&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;!-- raw HTML omitted -->.ggithub.io -&amp;gt; settings -&amp;gt; Deploy keys -&amp;gt; add deploy key&lt;/p>
+&lt;p>&lt;username>.ggithub.io -&amp;gt; settings -&amp;gt; Deploy keys -&amp;gt; add deploy key&lt;/p>
 &lt;/blockquote>
 &lt;p>新增一個 ssh key，名字叫 &lt;code>DEPLOY_KEY_PUB&lt;/code>&lt;br>
 把 &lt;code>depoly-key.pub&lt;/code> 的內容貼上，記得下面的勾勾（Allow write access ）要選起來&lt;/p>
-&lt;h3 id="secret-key">secret key&lt;/h3>
-&lt;p>secret key 要放在你存放部落格檔案的 repo，owlran 大大是放在同一個 &lt;a class="link" href="https://github.com/owlran/owlran.github.io" target="_blank" rel="noopener"
+&lt;h3 id="secret-key">&lt;a href="#secret-key" class="header-anchor">&lt;/a>secret key
+&lt;/h3>&lt;p>secret key 要放在你存放部落格檔案的 repo，owlran 大大是放在同一個 &lt;a class="link" href="https://github.com/owlran/owlran.github.io" target="_blank" rel="noopener"
 >repo&lt;/a> 不同 branch，我是放在兩個不同 repo，其中放部落格檔案的 repo 我設成 private repo（因為我放了一些 gitalk 要用的 clientSecret，這個不能公開）。&lt;br>
 總之到你要放部落格檔案的那個 repo，新增一個 secret，等等要再 GitHub Action 裡面調用。&lt;/p>
 &lt;blockquote>
@@ -206,8 +206,8 @@
 &lt;/blockquote>
 &lt;p>名字是 &lt;code>DEPLOY_KEY&lt;/code>，內容是 &lt;code>deploy-key&lt;/code> 裡面的東西&lt;br>
 接下來就可以進入到 Action 了&lt;/p>
-&lt;h1 id="action">Action&lt;/h1>
-&lt;p>我的 Action 內容基本上是複製 owlran 大大的，但是因為 repo 結構有小小不同所以我了一些修改，如果你要改的話應該是不難才對，GitHub Action 的設定檔我覺得還好懂的。&lt;br>
+&lt;h1 id="action">&lt;a href="#action" class="header-anchor">&lt;/a>Action
+&lt;/h1>&lt;p>我的 Action 內容基本上是複製 owlran 大大的，但是因為 repo 結構有小小不同所以我了一些修改，如果你要改的話應該是不難才對，GitHub Action 的設定檔我覺得還好懂的。&lt;br>
 這個設定是放在你放部落格檔案的那個 repo&lt;/p>
 &lt;blockquote>
 &lt;p>注意：第 27, 28 行的 &lt;code>username&lt;/code> 和 &lt;code>email&lt;/code> 記得改成你的，不然 git commit message 會有問題&lt;/p>
@@ -343,8 +343,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> hexo deploy&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>gitalk</title><link>https://blog.simbafs.cc/p/hexo/gitalk/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/hexo/gitalk/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/gitalk.png" alt="Featured image of post gitalk" />&lt;h1 id="啟用-gitalk-留言">啟用 gitalk 留言&lt;/h1>
-&lt;ol>
+&lt;/div></description></item><item><title>gitalk</title><link>https://blog.simbafs.cc/p/gitalk/</link><pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/gitalk/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/gitalk.png" alt="Featured image of post gitalk" />&lt;h1 id="啟用-gitalk-留言">&lt;a href="#%e5%95%9f%e7%94%a8-gitalk-%e7%95%99%e8%a8%80" class="header-anchor">&lt;/a>啟用 gitalk 留言
+&lt;/h1>&lt;ol>
 &lt;li>到&lt;a class="link" href="https://github.com/settings/applications/new" target="_blank" rel="noopener"
 >這個網址&lt;/a>填資料&lt;/li>
 &lt;li>加入下面的片段到&lt;code>_config.yml&lt;/code>&lt;/li>

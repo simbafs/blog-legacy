@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/golang/</link><description>Recent content in Golang on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 14 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>SSH TCP/IP Forward</title><link>https://blog.simbafs.cc/p/golang/ssh-tcpip-forward/</link><pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-tcpip-forward/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/ssh-tcpip-forward.png" alt="Featured image of post SSH TCP/IP Forward" />&lt;h1 id="ssh-tcpip-forward">Ssh TCP/IP Forward&lt;/h1>
-&lt;p>這篇文章是講怎麼用 golang 寫一個 ssh server 可以執行 tcp 轉發，這方面的資料在 Google 講的特別少，有可能都被「我的 ssh 壞掉了不會轉發怎麼辦」淹沒了，然後類似的專案又太複雜很難懂。研究兩天的結論是去看 RFC（Request For Comments） 最快，裡面寫得最清楚。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on Simba 的喵窩</title><link>https://blog.simbafs.cc/categories/golang/</link><description>Recent content in Golang on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 14 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/categories/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>SSH TCP/IP Forward</title><link>https://blog.simbafs.cc/p/ssh-tcpip-forward/</link><pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-tcpip-forward/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/ssh-tcpip-forward.png" alt="Featured image of post SSH TCP/IP Forward" />&lt;h1 id="ssh-tcpip-forward">&lt;a href="#ssh-tcpip-forward" class="header-anchor">&lt;/a>Ssh TCP/IP Forward
+&lt;/h1>&lt;p>這篇文章是講怎麼用 golang 寫一個 ssh server 可以執行 tcp 轉發，這方面的資料在 Google 講的特別少，有可能都被「我的 ssh 壞掉了不會轉發怎麼辦」淹沒了，然後類似的專案又太複雜很難懂。研究兩天的結論是去看 RFC（Request For Comments） 最快，裡面寫得最清楚。&lt;/p>
 &lt;p>目前這個版本只適用把本地端口開到伺服器上，也就是 &lt;code>ssh -R&lt;/code>，反向的 &lt;code>ssh -L&lt;/code> 的之後再研究補充。&lt;/p>
-&lt;h2 id="開啟伺服器">開啟伺服器&lt;/h2>
-&lt;p>跟 &lt;a class="link" href="../ssh-server" >golang/ssh-server&lt;/a> 一樣，先開啟 tcp 連接埠，並在在上面開 ssh 伺服器&lt;/p>
+&lt;h2 id="開啟伺服器">&lt;a href="#%e9%96%8b%e5%95%9f%e4%bc%ba%e6%9c%8d%e5%99%a8" class="header-anchor">&lt;/a>開啟伺服器
+&lt;/h2>&lt;p>跟 &lt;a class="link" href="../ssh-server" >golang/ssh-server&lt;/a> 一樣，先開啟 tcp 連接埠，並在在上面開 ssh 伺服器&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -181,21 +181,21 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="global-request">Global Request&lt;/h2>
-&lt;p>接下來就跟 &lt;a class="link" href="../ssh-server" >golang/ssh-server&lt;/a> 不一樣了，之前的 &lt;code>ptr-req&lt;/code> 跟 &lt;code>exec&lt;/code>、&lt;code>env&lt;/code> 都被放在 &lt;a class="link" href="https://www.rfc-editor.org/rfc/rfc4254#section-6" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="global-request">&lt;a href="#global-request" class="header-anchor">&lt;/a>Global Request
+&lt;/h2>&lt;p>接下來就跟 &lt;a class="link" href="../ssh-server" >golang/ssh-server&lt;/a> 不一樣了，之前的 &lt;code>ptr-req&lt;/code> 跟 &lt;code>exec&lt;/code>、&lt;code>env&lt;/code> 都被放在 &lt;a class="link" href="https://www.rfc-editor.org/rfc/rfc4254#section-6" target="_blank" rel="noopener"
 >RFC4254 section 6&lt;/a> 下，而 &lt;code>tcpip-forward&lt;/code> 卻是在 &lt;a class="link" href="https://www.rfc-editor.org/rfc/rfc4254#section-7" target="_blank" rel="noopener"
 >RFC4254 section 7&lt;/a>，意思是他們完全不一樣。section 6 下的東西都是 &lt;strong>Interactive Session&lt;/strong>，要 &lt;strong>客戶端&lt;/strong> 先開 channel（&lt;code>SSH_MSG_CHANNEL_OPEN&lt;/code>）再送 channel request（&lt;code>SSH_MSG_CHANNEL_REQUEST&lt;/code>） 決定 channel 類別。section 7 下的 tcpip forwarding 則是先送 Global request（&lt;code>SSH_MSG_GLOBAL_REQUEST&lt;/code>）告訴伺服器要在哪個位址上開啟哪個 port，伺服器說 ok 後再由&lt;strong>伺服器&lt;/strong>開啟 channel（注意這裡 channel 由誰開啟不一樣）&lt;/p>
-&lt;h3 id="channelsession-與-request">channel、session 與 request&lt;/h3>
-&lt;h4 id="channel">Channel&lt;/h4>
-&lt;p>channel 和 request 是在 ssh protocol 中地位相同的兩個東西，一個是能持續讀寫的東西，在 golang 中是一個實作了 &lt;a class="link" href="https://pkg.go.dev/io#ReadWriter" target="_blank" rel="noopener"
+&lt;h3 id="channelsession-與-request">&lt;a href="#channelsession-%e8%88%87-request" class="header-anchor">&lt;/a>channel、session 與 request
+&lt;/h3>&lt;h4 id="channel">&lt;a href="#channel" class="header-anchor">&lt;/a>Channel
+&lt;/h4>&lt;p>channel 和 request 是在 ssh protocol 中地位相同的兩個東西，一個是能持續讀寫的東西，在 golang 中是一個實作了 &lt;a class="link" href="https://pkg.go.dev/io#ReadWriter" target="_blank" rel="noopener"
 >io.ReadWriter&lt;/a>。也就是說可以把他丟進 &lt;code>fmt.Fprintf&lt;/code> 之類的函數的第一個參數&lt;/p>
-&lt;h4 id="session">Session&lt;/h4>
-&lt;p>session channel 和 tcpip-forward channel 都是 channel 的一個類型，定義在 &lt;a class="link" href="https://www.rfc-editor.org/rfc/rfc4254#section-5" target="_blank" rel="noopener"
+&lt;h4 id="session">&lt;a href="#session" class="header-anchor">&lt;/a>Session
+&lt;/h4>&lt;p>session channel 和 tcpip-forward channel 都是 channel 的一個類型，定義在 &lt;a class="link" href="https://www.rfc-editor.org/rfc/rfc4254#section-5" target="_blank" rel="noopener"
 >RFC4254 section 5&lt;/a>，是比 channel 低一階的概念&lt;/p>
-&lt;h4 id="request">Request&lt;/h4>
-&lt;p>request 是單次一來一回的通訊，分成 Global request（&lt;code>SSH_MSG_GLOBAL_REQUEST&lt;/code>） 和 Channel request（&lt;code>SSH_MSG_CHANNEL_REQUEST&lt;/code>），Global request 目前我只看到在開啟 tcpip-forward channel 時會用到，而 Channel request 會在開啟 session channel 後開啟 pty、執行命令、開啟 x11 forwarding、傳遞環境變數等等（我也不知道位什麼 x11 forwarding 和 tcpip forwarding 不一樣）。跟 HTTP 一樣，request 都是用在請求某種資源的時候使用&lt;/p>
-&lt;h3 id="global-request-1">Global request&lt;/h3>
-&lt;p>回到程式，我們需要處理之前沒處理的 global request，而 channel（由客戶端開啟的）就不需要了。&lt;/p>
+&lt;h4 id="request">&lt;a href="#request" class="header-anchor">&lt;/a>Request
+&lt;/h4>&lt;p>request 是單次一來一回的通訊，分成 Global request（&lt;code>SSH_MSG_GLOBAL_REQUEST&lt;/code>） 和 Channel request（&lt;code>SSH_MSG_CHANNEL_REQUEST&lt;/code>），Global request 目前我只看到在開啟 tcpip-forward channel 時會用到，而 Channel request 會在開啟 session channel 後開啟 pty、執行命令、開啟 x11 forwarding、傳遞環境變數等等（我也不知道位什麼 x11 forwarding 和 tcpip forwarding 不一樣）。跟 HTTP 一樣，request 都是用在請求某種資源的時候使用&lt;/p>
+&lt;h3 id="global-request-1">&lt;a href="#global-request-1" class="header-anchor">&lt;/a>Global request
+&lt;/h3>&lt;p>回到程式，我們需要處理之前沒處理的 global request，而 channel（由客戶端開啟的）就不需要了。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -226,8 +226,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="抓出-addr-和-port">抓出 addr 和 port&lt;/h3>
-&lt;p>因為我們要求在伺服器上某個連接埠的封包要透過 ssh 轉到客戶端上某個連接埠，因此要先從 Global request 中抓出 addr 和 port，根據 RFC 的描述，這個 Global request 會長這樣&lt;/p>
+&lt;/div>&lt;h3 id="抓出-addr-和-port">&lt;a href="#%e6%8a%93%e5%87%ba-addr-%e5%92%8c-port" class="header-anchor">&lt;/a>抓出 addr 和 port
+&lt;/h3>&lt;p>因為我們要求在伺服器上某個連接埠的封包要透過 ssh 轉到客戶端上某個連接埠，因此要先從 Global request 中抓出 addr 和 port，根據 RFC 的描述，這個 Global request 會長這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -287,8 +287,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="開啟-tcp-連接埠">開啟 TCP 連接埠&lt;/h3>
-&lt;p>有了 &lt;code>addr&lt;/code> 和 &lt;code>port&lt;/code> 後，就可以開啟 tcp 連接埠，如果沒問題就可以告訴客戶端一切 ok 了&lt;/p>
+&lt;/div>&lt;h3 id="開啟-tcp-連接埠">&lt;a href="#%e9%96%8b%e5%95%9f-tcp-%e9%80%a3%e6%8e%a5%e5%9f%a0" class="header-anchor">&lt;/a>開啟 TCP 連接埠
+&lt;/h3>&lt;p>有了 &lt;code>addr&lt;/code> 和 &lt;code>port&lt;/code> 後，就可以開啟 tcp 連接埠，如果沒問題就可以告訴客戶端一切 ok 了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -333,8 +333,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="轉發-tcp-封包">轉發 TCP 封包&lt;/h3>
-&lt;p>接著當伺服器上新開的 TCP 連接埠後，如果有新的連線進來，就開啟一個 &lt;code>forwarded-tcpip&lt;/code> 的 channel，然後就是把兩邊串起來了&lt;/p>
+&lt;/div>&lt;h3 id="轉發-tcp-封包">&lt;a href="#%e8%bd%89%e7%99%bc-tcp-%e5%b0%81%e5%8c%85" class="header-anchor">&lt;/a>轉發 TCP 封包
+&lt;/h3>&lt;p>接著當伺服器上新開的 TCP 連接埠後，如果有新的連線進來，就開啟一個 &lt;code>forwarded-tcpip&lt;/code> 的 channel，然後就是把兩邊串起來了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -407,8 +407,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="串起兩邊">串起兩邊&lt;/h3>
-&lt;p>當上面一切就緒，下面就是簡單的 proxy，因為資料是雙向的，所以需要兩個 &lt;code>io.Copy&lt;/code> 來串資料，當任意一個結束後（EOF），就要把兩個都關掉，然後結束這個函式。首先是「任意一個結束就&amp;hellip;」這個任務，用 &lt;code>sync.Once&lt;/code> 確保只會被執行一次，然後用一個 unbuffer 來阻止函數結束（因為兩個 &lt;code>io.Copy&lt;/code> 都是在 goroutine 裡，不會阻塞函數）。這裡如果沒有確實把所有東西關閉會導致只能發一次 tcp 連線，然後伺服器就卡住&amp;hellip;（這個東西陰了我好久）&lt;/p>
+&lt;/div>&lt;h3 id="串起兩邊">&lt;a href="#%e4%b8%b2%e8%b5%b7%e5%85%a9%e9%82%8a" class="header-anchor">&lt;/a>串起兩邊
+&lt;/h3>&lt;p>當上面一切就緒，下面就是簡單的 proxy，因為資料是雙向的，所以需要兩個 &lt;code>io.Copy&lt;/code> 來串資料，當任意一個結束後（EOF），就要把兩個都關掉，然後結束這個函式。首先是「任意一個結束就&amp;hellip;」這個任務，用 &lt;code>sync.Once&lt;/code> 確保只會被執行一次，然後用一個 unbuffer 來阻止函數結束（因為兩個 &lt;code>io.Copy&lt;/code> 都是在 goroutine 裡，不會阻塞函數）。這裡如果沒有確實把所有東西關閉會導致只能發一次 tcp 連線，然後伺服器就卡住&amp;hellip;（這個東西陰了我好久）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -485,8 +485,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="完整程式碼">完整程式碼&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="完整程式碼">&lt;a href="#%e5%ae%8c%e6%95%b4%e7%a8%8b%e5%bc%8f%e7%a2%bc" class="header-anchor">&lt;/a>完整程式碼
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -896,11 +896,11 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>ssh protocol 比我想像的還要複雜，像是 tcp forwarding 和 x11 forwarding 為什麼差這麼多？個人猜測可能是跟他們在 OSI 模型中不同層的關係。而一個東西要真的了解他在幹麻還是讀文件最快，如果我只看 Google 上別人的文章、程式碼和 ChatGPT 的唬爛，也許我在 Global request 之前就放棄了，再不然也會被 tcpip-forward channel 和 session chennel 發起人不同卡住做不下去。&lt;/p></description></item><item><title>SSH Server</title><link>https://blog.simbafs.cc/p/golang/ssh-server/</link><pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-server/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/ssh-server.png" alt="Featured image of post SSH Server" />&lt;h1 id="ssh-server">SSH Server&lt;/h1>
-&lt;h2 id="開啟伺服器">開啟伺服器&lt;/h2>
-&lt;h3 id="建立設定">建立設定&lt;/h3>
-&lt;p>&lt;code>main&lt;/code> 函數開頭先建立了 &lt;code>ssh.ServerConfig&lt;/code>、把伺服器的金鑰讀進來&lt;/p>
+&lt;/div>&lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
+&lt;/h2>&lt;p>ssh protocol 比我想像的還要複雜，像是 tcp forwarding 和 x11 forwarding 為什麼差這麼多？個人猜測可能是跟他們在 OSI 模型中不同層的關係。而一個東西要真的了解他在幹麻還是讀文件最快，如果我只看 Google 上別人的文章、程式碼和 ChatGPT 的唬爛，也許我在 Global request 之前就放棄了，再不然也會被 tcpip-forward channel 和 session chennel 發起人不同卡住做不下去。&lt;/p></description></item><item><title>SSH Server</title><link>https://blog.simbafs.cc/p/ssh-server/</link><pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-server/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/ssh-server.png" alt="Featured image of post SSH Server" />&lt;h1 id="ssh-server">&lt;a href="#ssh-server" class="header-anchor">&lt;/a>SSH Server
+&lt;/h1>&lt;h2 id="開啟伺服器">&lt;a href="#%e9%96%8b%e5%95%9f%e4%bc%ba%e6%9c%8d%e5%99%a8" class="header-anchor">&lt;/a>開啟伺服器
+&lt;/h2>&lt;h3 id="建立設定">&lt;a href="#%e5%bb%ba%e7%ab%8b%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>建立設定
+&lt;/h3>&lt;p>&lt;code>main&lt;/code> 函數開頭先建立了 &lt;code>ssh.ServerConfig&lt;/code>、把伺服器的金鑰讀進來&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -951,8 +951,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="tcp-端口">TCP 端口&lt;/h3>
-&lt;p>開啟一個 tcp 端口，並等待進來的連線&lt;/p>
+&lt;/div>&lt;h3 id="tcp-端口">&lt;a href="#tcp-%e7%ab%af%e5%8f%a3" class="header-anchor">&lt;/a>TCP 端口
+&lt;/h3>&lt;p>開啟一個 tcp 端口，並等待進來的連線&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1005,8 +1005,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="建立-ssh-連線">建立 SSH 連線&lt;/h3>
-&lt;p>有 tcp 連線進來後，用他建立 ssh 連線，交握在這裡發生。然後把 chans 傳下去給其他函數處理，但為什麼把 sshConn 丟掉不理？不知道&lt;/p>
+&lt;/div>&lt;h3 id="建立-ssh-連線">&lt;a href="#%e5%bb%ba%e7%ab%8b-ssh-%e9%80%a3%e7%b7%9a" class="header-anchor">&lt;/a>建立 SSH 連線
+&lt;/h3>&lt;p>有 tcp 連線進來後，用他建立 ssh 連線，交握在這裡發生。然後把 chans 傳下去給其他函數處理，但為什麼把 sshConn 丟掉不理？不知道&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1074,9 +1074,9 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="ssh-channel">SSH Channel&lt;/h2>
-&lt;h3 id="建立-ssh-channel">建立 SSH Channel&lt;/h3>
-&lt;p>接著是 &lt;code>handleChannels&lt;/code>，主要的處理都在這裡面，函數一開始先用 &lt;code>for&lt;/code> 等待新的 channel(&lt;code>ssh.NewChannel&lt;/code>) 從 &lt;code>chans(&amp;lt;- ssh.NewChannel)&lt;/code> 進來，如果 &lt;code>ChannelType&lt;/code> 不是 &lt;code>&amp;quot;session&amp;quot;&lt;/code> 的話，就丟掉他。
+&lt;/div>&lt;h2 id="ssh-channel">&lt;a href="#ssh-channel" class="header-anchor">&lt;/a>SSH Channel
+&lt;/h2>&lt;h3 id="建立-ssh-channel">&lt;a href="#%e5%bb%ba%e7%ab%8b-ssh-channel" class="header-anchor">&lt;/a>建立 SSH Channel
+&lt;/h3>&lt;p>接著是 &lt;code>handleChannels&lt;/code>，主要的處理都在這裡面，函數一開始先用 &lt;code>for&lt;/code> 等待新的 channel(&lt;code>ssh.NewChannel&lt;/code>) 從 &lt;code>chans(&amp;lt;- ssh.NewChannel)&lt;/code> 進來，如果 &lt;code>ChannelType&lt;/code> 不是 &lt;code>&amp;quot;session&amp;quot;&lt;/code> 的話，就丟掉他。
 按照這裡的設計，看來一次連線可以開不只一個 channel，但我還沒想到過去經驗哪裡用到了這個東西&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1124,8 +1124,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="建立-pty虛擬終端機">建立 PTY（虛擬終端機）&lt;/h3>
-&lt;p>接著建立一個 pty(Pseudo Terminal)，可以想像成打開終端機，忽略這步的話會在 client 收到 &lt;code>PTY allocation request failed on channel 0&lt;/code>，但忽略掉也能動，或是 ssh 加上 &lt;code>-T&lt;/code> 選項。&lt;/p>
+&lt;/div>&lt;h3 id="建立-pty虛擬終端機">&lt;a href="#%e5%bb%ba%e7%ab%8b-pty%e8%99%9b%e6%93%ac%e7%b5%82%e7%ab%af%e6%a9%9f" class="header-anchor">&lt;/a>建立 PTY（虛擬終端機）
+&lt;/h3>&lt;p>接著建立一個 pty(Pseudo Terminal)，可以想像成打開終端機，忽略這步的話會在 client 收到 &lt;code>PTY allocation request failed on channel 0&lt;/code>，但忽略掉也能動，或是 ssh 加上 &lt;code>-T&lt;/code> 選項。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1178,8 +1178,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="處理-ssh-request">處理 SSH Request&lt;/h3>
-&lt;p>現在 ssh 連線（conn）、通道（channel）都開好了，就等請求（request）進來了，用 goroutine 把一個 for 迴圈包起來，在迴圈裡處理進來的請求，並用 &lt;code>switch&lt;/code> 把不同的 type 分開處理&lt;/p>
+&lt;/div>&lt;h3 id="處理-ssh-request">&lt;a href="#%e8%99%95%e7%90%86-ssh-request" class="header-anchor">&lt;/a>處理 SSH Request
+&lt;/h3>&lt;p>現在 ssh 連線（conn）、通道（channel）都開好了，就等請求（request）進來了，用 goroutine 把一個 for 迴圈包起來，在迴圈裡處理進來的請求，並用 &lt;code>switch&lt;/code> 把不同的 type 分開處理&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1260,8 +1260,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="exec">exec&lt;/h4>
-&lt;p>首先是 &lt;code>exec&lt;/code>，&lt;code>exec&lt;/code> 請求是指透過 &lt;code>ssh localhost -p 2222 'ls -al&lt;/code> 這樣發出的 ssh 請求，因為不需要 pty，只要執行命令再把 stdout、stderr 丟回去就好，因此比較簡單&lt;br>
+&lt;/div>&lt;h4 id="exec">&lt;a href="#exec" class="header-anchor">&lt;/a>exec
+&lt;/h4>&lt;p>首先是 &lt;code>exec&lt;/code>，&lt;code>exec&lt;/code> 請求是指透過 &lt;code>ssh localhost -p 2222 'ls -al&lt;/code> 這樣發出的 ssh 請求，因為不需要 pty，只要執行命令再把 stdout、stderr 丟回去就好，因此比較簡單&lt;br>
 首先先從 payload 裡取出命令本人，例如命令是 &lt;code>ls -al&lt;/code> 的話 payload 會長這樣 &lt;code>[0 0 0 6 108 115 32 45 97 108]&lt;/code>，最前面是一個 int 的資料代表後面有多長，以這裡的例子長度就是 6。這裡理論上要把前面三個 0 也都算進來，不過先假設命令不會太長，所以我們就取 &lt;code>req.Paylod[3]&lt;/code> 當作命令長度（這樣的話命令就不能超過 251 位元，為什麼不是 255 位元？因為有四位元表示長度）&lt;br>
 取出命令之後就建立 &lt;code>*exec.Cmd&lt;/code>，因為 &lt;code>channel&lt;/code> 符合 &lt;code>io.Writer&lt;/code> 和 &lt;code>io.Reader&lt;/code> 界面，所以全部都指定成 &lt;code>channel&lt;/code> 就好，然後執行。最後等待 process 執行結束就可以把 channel 關掉了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1320,8 +1320,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="shell">shell&lt;/h4>
-&lt;p>然後是 shell 類型的請求，這個類型就是一般登入 ssh 那種 &lt;code>ssh localhsot -p 2222&lt;/code>&lt;br>
+&lt;/div>&lt;h4 id="shell">&lt;a href="#shell" class="header-anchor">&lt;/a>shell
+&lt;/h4>&lt;p>然後是 shell 類型的請求，這個類型就是一般登入 ssh 那種 &lt;code>ssh localhsot -p 2222&lt;/code>&lt;br>
 一開始建立一個 &lt;code>*exec.Cmd&lt;/code>，但是不是以單一命令執行，是放進 pty 裡面。&lt;code>sync.Once&lt;/code> 是一個可以確保只執行一次的機制，因為 &lt;code>close&lt;/code> 函式可能會在不同 goroutine 被呼叫，第二次呼叫時會因為 &lt;code>channel&lt;/code> 不能被關閉第二次，所以用這個東西來限制。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1391,8 +1391,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="pty-req-window-change">pty-req, window-change&lt;/h4>
-&lt;p>然後就是一些雜七雜八的的請求類型，像是調整視窗大小、client 請求開 pty 等等&lt;/p>
+&lt;/div>&lt;h4 id="pty-req-window-change">&lt;a href="#pty-req-window-change" class="header-anchor">&lt;/a>pty-req, window-change
+&lt;/h4>&lt;p>然後就是一些雜七雜八的的請求類型，像是調整視窗大小、client 請求開 pty 等等&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1478,8 +1478,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="全部的程式碼">全部的程式碼&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="全部的程式碼">&lt;a href="#%e5%85%a8%e9%83%a8%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc" class="header-anchor">&lt;/a>全部的程式碼
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -1981,15 +1981,15 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://github.com/Scalingo/go-ssh-examples/blob/master/server_complex.go" target="_blank" rel="noopener"
 >https://github.com/Scalingo/go-ssh-examples/blob/master/server_complex.go&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://pkg.go.dev/golang.org/x/crypto/ssh" target="_blank" rel="noopener"
 >https://pkg.go.dev/golang.org/x/crypto/ssh&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>SSH Server Util</title><link>https://blog.simbafs.cc/p/golang/ssh-server-uitl/</link><pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/ssh-server-uitl/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/ssh-server-util.png" alt="Featured image of post SSH Server Util" />&lt;h1 id="ssh-server-util">SSH Server Util&lt;/h1>
-&lt;h2 id="publickeycallback">PublicKeyCallback&lt;/h2>
-&lt;p>在 &lt;a class="link" href="../ssh-server" >golang/ssh-server&lt;/a> 中的 ssh 伺服器是沒有驗證使用者身份的，因為在 &lt;code>ssh.ServerConfig&lt;/code> 中設定了 &lt;code>NoClientAuth: true&lt;/code>。用下面的 &lt;code>ssh.SererConfig&lt;/code> 可以設定用只有指定的使用者可以進入，不過這個版本中沒有處理時序攻擊（Timming attack），也就是用比對公鑰的時間不同獲取資訊的攻擊手段。&lt;/p>
+&lt;/ul></description></item><item><title>SSH Server Util</title><link>https://blog.simbafs.cc/p/ssh-server-uitl/</link><pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/ssh-server-uitl/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/ssh-server-util.png" alt="Featured image of post SSH Server Util" />&lt;h1 id="ssh-server-util">&lt;a href="#ssh-server-util" class="header-anchor">&lt;/a>SSH Server Util
+&lt;/h1>&lt;h2 id="publickeycallback">&lt;a href="#publickeycallback" class="header-anchor">&lt;/a>PublicKeyCallback
+&lt;/h2>&lt;p>在 &lt;a class="link" href="../ssh-server" >golang/ssh-server&lt;/a> 中的 ssh 伺服器是沒有驗證使用者身份的，因為在 &lt;code>ssh.ServerConfig&lt;/code> 中設定了 &lt;code>NoClientAuth: true&lt;/code>。用下面的 &lt;code>ssh.SererConfig&lt;/code> 可以設定用只有指定的使用者可以進入，不過這個版本中沒有處理時序攻擊（Timming attack），也就是用比對公鑰的時間不同獲取資訊的攻擊手段。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2070,8 +2070,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="parsepayload">ParsePayload&lt;/h2>
-&lt;p>payload 格式是四個 byte 代表長度，接著是一串資料，如果有第二段就重複以上，例如 &lt;code>[0 0 0 3 65 66 67]&lt;/code> 的 &lt;code>[0 0 0 3]&lt;/code> 代表接下來資料長度是 3，然後是資料 &lt;code>[65 66 67]&lt;/code>，也就是 &lt;code>ABC&lt;/code>&lt;/p>
+&lt;/div>&lt;h2 id="parsepayload">&lt;a href="#parsepayload" class="header-anchor">&lt;/a>ParsePayload
+&lt;/h2>&lt;p>payload 格式是四個 byte 代表長度，接著是一串資料，如果有第二段就重複以上，例如 &lt;code>[0 0 0 3 65 66 67]&lt;/code> 的 &lt;code>[0 0 0 3]&lt;/code> 代表接下來資料長度是 3，然後是資料 &lt;code>[65 66 67]&lt;/code>，也就是 &lt;code>ABC&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2124,14 +2124,14 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;ul>
+&lt;/div>&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://pkg.go.dev/golang.org/x/crypto/ssh" target="_blank" rel="noopener"
 >https://pkg.go.dev/golang.org/x/crypto/ssh&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Bubbletea</title><link>https://blog.simbafs.cc/p/golang/bubbletea/</link><pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/bubbletea/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/bubbletea.png" alt="Featured image of post Bubbletea" />&lt;h1 id="charmbraceletbubbletea">charmbracelet/bubbletea&lt;/h1>
-&lt;p>charmbracelet/bubbletea 是一個類似於 HTML，但是他是用在終端機中建立純文字的使用者界面。&lt;/p>
-&lt;h2 id="model">model&lt;/h2>
-&lt;p>model 是 bubbletea 中最基本的元件，對應到 HTML 中就是 tag，一個 model 需要有以下三個方法&lt;/p>
+&lt;/ul></description></item><item><title>Bubbletea</title><link>https://blog.simbafs.cc/p/bubbletea/</link><pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/bubbletea/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/bubbletea.png" alt="Featured image of post Bubbletea" />&lt;h1 id="charmbraceletbubbletea">&lt;a href="#charmbraceletbubbletea" class="header-anchor">&lt;/a>charmbracelet/bubbletea
+&lt;/h1>&lt;p>charmbracelet/bubbletea 是一個類似於 HTML，但是他是用在終端機中建立純文字的使用者界面。&lt;/p>
+&lt;h2 id="model">&lt;a href="#model" class="header-anchor">&lt;/a>model
+&lt;/h2>&lt;p>model 是 bubbletea 中最基本的元件，對應到 HTML 中就是 tag，一個 model 需要有以下三個方法&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2147,8 +2147,8 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;code>Init&lt;/code> 函式定義只在建立 model 時要執行的 cmd，&lt;code>Update&lt;/code> 定義每個 tick 都會執行的程式，&lt;code>View&lt;/code> 將 model 繪製成字串。&lt;/p>
-&lt;h2 id="cmd">cmd&lt;/h2>
-&lt;p>cmd 需要符合以下定義&lt;/p>
+&lt;h2 id="cmd">&lt;a href="#cmd" class="header-anchor">&lt;/a>cmd
+&lt;/h2>&lt;p>cmd 需要符合以下定義&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2188,10 +2188,10 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="狀態">狀態&lt;/h2>
-&lt;p>在 model 定義狀態就在 struct 中直接新增欄位就可以了，要注意的是如果在 &lt;code>Update&lt;/code> 中要存取子 model 的狀態，請把 &lt;code>Update&lt;/code> 傳遞下去並在子 model 的 &lt;code>Update&lt;/code> 中存取狀態&lt;/p>
-&lt;h2 id="子-model-和-initupdate-傳遞">子 model 和 Init/Update 傳遞&lt;/h2>
-&lt;p>定義子 model&lt;/p>
+&lt;/div>&lt;h2 id="狀態">&lt;a href="#%e7%8b%80%e6%85%8b" class="header-anchor">&lt;/a>狀態
+&lt;/h2>&lt;p>在 model 定義狀態就在 struct 中直接新增欄位就可以了，要注意的是如果在 &lt;code>Update&lt;/code> 中要存取子 model 的狀態，請把 &lt;code>Update&lt;/code> 傳遞下去並在子 model 的 &lt;code>Update&lt;/code> 中存取狀態&lt;/p>
+&lt;h2 id="子-model-和-initupdate-傳遞">&lt;a href="#%e5%ad%90-model-%e5%92%8c-initupdate-%e5%82%b3%e9%81%9e" class="header-anchor">&lt;/a>子 model 和 Init/Update 傳遞
+&lt;/h2>&lt;p>定義子 model&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2243,17 +2243,17 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="問題">問題&lt;/h3>
-&lt;p>如果子 model 變多，那對於傳遞的管理就會變得很複雜，要想的方法解決，需要可以一次管理不同類型的 model&lt;/p>
-&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>&lt;code>Update&lt;/code> 中只接收和自己有關的 msg，和自己無關的就傳遞下去，絕對不操作不屬於自己的屬性，不然會出 bug&lt;/p></description></item><item><title>p2p</title><link>https://blog.simbafs.cc/p/golang/p2p/</link><pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/p2p/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/p2p.png" alt="Featured image of post p2p" />&lt;h1 id="p2p">p2p&lt;/h1>
-&lt;p>我不太確定這是 p2p 還是穿隧，但反正功能就是可以讓兩個在不同內網的機器可以直連，不需要透過中央伺服器轉發。先上原理圖，然後再來一步一步看程式碼&lt;/p>
+&lt;/div>&lt;h3 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
+&lt;/h3>&lt;p>如果子 model 變多，那對於傳遞的管理就會變得很複雜，要想的方法解決，需要可以一次管理不同類型的 model&lt;/p>
+&lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
+&lt;/h2>&lt;p>&lt;code>Update&lt;/code> 中只接收和自己有關的 msg，和自己無關的就傳遞下去，絕對不操作不屬於自己的屬性，不然會出 bug&lt;/p></description></item><item><title>p2p</title><link>https://blog.simbafs.cc/p/p2p/</link><pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/p2p/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/p2p.png" alt="Featured image of post p2p" />&lt;h1 id="p2p">&lt;a href="#p2p" class="header-anchor">&lt;/a>p2p
+&lt;/h1>&lt;p>我不太確定這是 p2p 還是穿隧，但反正功能就是可以讓兩個在不同內網的機器可以直連，不需要透過中央伺服器轉發。先上原理圖，然後再來一步一步看程式碼&lt;/p>
 &lt;p>&lt;img src="https://github.com/simbafs/experiment-p2p/raw/main/explain.png"
 loading="lazy"
 alt="explain.png"
 >&lt;/p>
-&lt;h2 id="server">Server&lt;/h2>
-&lt;p>首先，先來看伺服器端，這邊做的事很簡單，這邊開了一個 UDP listener，然後開一個陣列存兩個 client 的 &lt;code>UDPAddr&lt;/code>&lt;/p>
+&lt;h2 id="server">&lt;a href="#server" class="header-anchor">&lt;/a>Server
+&lt;/h2>&lt;p>首先，先來看伺服器端，這邊做的事很簡單，這邊開了一個 UDP listener，然後開一個陣列存兩個 client 的 &lt;code>UDPAddr&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2316,8 +2316,8 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="client">Client&lt;/h2>
-&lt;p>伺服器端首先要和伺服器建立連線，從本地（&lt;code>srcAddr&lt;/code>）連線到伺服器（&lt;code>dstAddr&lt;/code>）&lt;/p>
+&lt;/div>&lt;h2 id="client">&lt;a href="#client" class="header-anchor">&lt;/a>Client
+&lt;/h2>&lt;p>伺服器端首先要和伺服器建立連線，從本地（&lt;code>srcAddr&lt;/code>）連線到伺服器（&lt;code>dstAddr&lt;/code>）&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2451,19 +2451,19 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="程式碼">程式碼&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/simbafs/experiment-p2p" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="程式碼">&lt;a href="#%e7%a8%8b%e5%bc%8f%e7%a2%bc" class="header-anchor">&lt;/a>程式碼
+&lt;/h2>&lt;p>&lt;a class="link" href="https://github.com/simbafs/experiment-p2p" target="_blank" rel="noopener"
 >完整的程式碼&lt;/a> 在這，如果對你有幫助，順手給的 star&lt;/p>
-&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>如果我沒理解錯，會選用 UDP 做 p2p 是因為 UDP 的連線關掉後 NAT 不會把洞關起來，所以一開始往伺服器發訊息的動作就是在打洞，然後把洞的資訊送到另一邊，接著就可以透過這的洞直連。而 TCP 一斷掉連線洞就會關起來，所以無法做 p2p（這是個人猜測，無根據）。&lt;br>
+&lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
+&lt;/h2>&lt;p>如果我沒理解錯，會選用 UDP 做 p2p 是因為 UDP 的連線關掉後 NAT 不會把洞關起來，所以一開始往伺服器發訊息的動作就是在打洞，然後把洞的資訊送到另一邊，接著就可以透過這的洞直連。而 TCP 一斷掉連線洞就會關起來，所以無法做 p2p（這是個人猜測，無根據）。&lt;br>
 這時候我就很好奇，應該有人做這種公共的 p2p server 吧？搭配 SDK 應該可以很輕鬆的做到任意兩台裝置連線，這樣伺服器的 loading 也不重，需要的資源也很低，感覺可以來開一個。&lt;br>
-接著我應該會去研究是否有辦法用 TCP 做 p2p，或是如何在 UDP 上搭建一個可信賴的通訊。接著遠程目標大概是 IPFS 之類的&lt;/p></description></item><item><title>用 Github Action 編譯並發 Release</title><link>https://blog.simbafs.cc/p/golang/github-action-release/</link><pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/github-action-release/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/githubAction.png" alt="Featured image of post 用 Github Action 編譯並發 Release" />&lt;h1 id="用-github-action-編譯並發-release">用 Github Action 編譯並發 Release&lt;/h1>
-&lt;p>如果自己寫的小工具的 GitHub 頁面右邊 Release 那欄有個什麼東西，一定很酷對吧！如果裡面已經提供了不同作業系統編譯好的程式，一定更酷！&lt;br>
+接著我應該會去研究是否有辦法用 TCP 做 p2p，或是如何在 UDP 上搭建一個可信賴的通訊。接著遠程目標大概是 IPFS 之類的&lt;/p></description></item><item><title>用 Github Action 編譯並發 Release</title><link>https://blog.simbafs.cc/p/github-action-release/</link><pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/github-action-release/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/githubAction.png" alt="Featured image of post 用 Github Action 編譯並發 Release" />&lt;h1 id="用-github-action-編譯並發-release">&lt;a href="#%e7%94%a8-github-action-%e7%b7%a8%e8%ad%af%e4%b8%a6%e7%99%bc-release" class="header-anchor">&lt;/a>用 Github Action 編譯並發 Release
+&lt;/h1>&lt;p>如果自己寫的小工具的 GitHub 頁面右邊 Release 那欄有個什麼東西，一定很酷對吧！如果裡面已經提供了不同作業系統編譯好的程式，一定更酷！&lt;br>
 想要建立 Release，你可以在新版本發布時自己手動 crose compile 再手動設定 Release，這個方法可行，但是聽起來全手動就很 low，我們要用一個全自動的方式發 Release！&lt;/p>
-&lt;h2 id="github-actioin">Github Actioin&lt;/h2>
-&lt;p>既然我們程式碼都託管在 GitHub 了，直接用 Gtithub Action 是很合理的吧！&lt;/p>
-&lt;h3 id="觸發條件">觸發條件&lt;/h3>
-&lt;p>因為我們要做的是發布版本，不是每個 commit 都要觸發，因此觸發條件就設成&lt;/p>
+&lt;h2 id="github-actioin">&lt;a href="#github-actioin" class="header-anchor">&lt;/a>Github Actioin
+&lt;/h2>&lt;p>既然我們程式碼都託管在 GitHub 了，直接用 Gtithub Action 是很合理的吧！&lt;/p>
+&lt;h3 id="觸發條件">&lt;a href="#%e8%a7%b8%e7%99%bc%e6%a2%9d%e4%bb%b6" class="header-anchor">&lt;/a>觸發條件
+&lt;/h3>&lt;p>因為我們要做的是發布版本，不是每個 commit 都要觸發，因此觸發條件就設成&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2479,8 +2479,8 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>意思是只有像是 &lt;code>v0.1.13&lt;/code> 這樣的標籤會觸發，也就是你建立新版本時。&lt;/p>
-&lt;h3 id="編譯">編譯&lt;/h3>
-&lt;p>在嘗試各種套件之後，我覺得 &lt;a class="link" href="https://github.com/marketplace/actions/goreleaser-action" target="_blank" rel="noopener"
+&lt;h3 id="編譯">&lt;a href="#%e7%b7%a8%e8%ad%af" class="header-anchor">&lt;/a>編譯
+&lt;/h3>&lt;p>在嘗試各種套件之後，我覺得 &lt;a class="link" href="https://github.com/marketplace/actions/goreleaser-action" target="_blank" rel="noopener"
 >goreleaser-action&lt;/a> 是我用起來最舒服的，不用太多設定，就直接都編譯好了（詳細設定可以去 &lt;a class="link" href="https://goreleaser.com" target="_blank" rel="noopener"
 >goreleaser 的網站看&lt;/a> )&lt;br>
 在 GitHub Action 中設定就下面幾行，第一個步驟是安裝 go，再來就是編譯了。&lt;/p>
@@ -2513,8 +2513,8 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>注意，裡面有個 &lt;code>secret.GITHUB_TOKEN&lt;/code>，這個東西你就照寫，不要抄錯，GitHub Action 會自動在 runtime 填入，所以你也不用特別去設定。&lt;/p>
-&lt;h3 id="上傳編譯好的執行檔">上傳編譯好的執行檔&lt;/h3>
-&lt;p>goreleaser 的文件裡面有推薦一個上傳的套件，但是可能是我笨，那個都不成功。我用的是另一套 &lt;a class="link" href="https://github.com/marketplace/actions/upload-to-github-release" target="_blank" rel="noopener"
+&lt;h3 id="上傳編譯好的執行檔">&lt;a href="#%e4%b8%8a%e5%82%b3%e7%b7%a8%e8%ad%af%e5%a5%bd%e7%9a%84%e5%9f%b7%e8%a1%8c%e6%aa%94" class="header-anchor">&lt;/a>上傳編譯好的執行檔
+&lt;/h3>&lt;p>goreleaser 的文件裡面有推薦一個上傳的套件，但是可能是我笨，那個都不成功。我用的是另一套 &lt;a class="link" href="https://github.com/marketplace/actions/upload-to-github-release" target="_blank" rel="noopener"
 >upload-to-github-release&lt;/a>，這個可以一次上傳多個檔案，設定一樣很簡單。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -2545,8 +2545,8 @@ alt="explain.png"
 &lt;/div>&lt;p>你會看到在上傳之前還有一個步驟，這個是用來取得 tag name 用的，他用來指定檔案要上傳到哪裡&lt;br>
 在 &lt;code>with.file&lt;/code> 這欄，你可以指定要上傳的檔案，這個要設成什麼就要看你 goreleaser 編譯出來的檔案放在哪，叫什麼（這個都是可以設定的）&lt;br>
 &lt;code>draft&lt;/code> 設成 &lt;code>true&lt;/code> 有個好處，就是 Action 跑玩後不會立刻建立新 Release，而是你在去手動確認，而且包括 Release name、Change log 都設定好了，你只需要看有沒有什麼說明要加，就可以直接按發布了，非常方便。當然你如果沒有什麼想說的，就可以直接設定 &lt;code>draft: true&lt;/code>，如此一來就真的是「全自動了」&lt;/p>
-&lt;h2 id="完整-action-設定檔">完整 action 設定檔&lt;/h2>
-&lt;p>以上是細部解說，下面就是完整設定檔，如果有更新的話請到 &lt;a class="link" href="https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml" target="_blank" rel="noopener"
+&lt;h2 id="完整-action-設定檔">&lt;a href="#%e5%ae%8c%e6%95%b4-action-%e8%a8%ad%e5%ae%9a%e6%aa%94" class="header-anchor">&lt;/a>完整 action 設定檔
+&lt;/h2>&lt;p>以上是細部解說，下面就是完整設定檔，如果有更新的話請到 &lt;a class="link" href="https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml" target="_blank" rel="noopener"
 >https://github.com/simbafs/telegrary/blob/main/.github/workflows/release.yml&lt;/a> 看最新版。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -2632,8 +2632,8 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">tag_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ steps.tagName.outputs.tag }}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Golang Plguin</title><link>https://blog.simbafs.cc/p/golang/plguin/</link><pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/plguin/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/plugin.png" alt="Featured image of post Golang Plguin" />&lt;h1 id="go-動態載入程式">Go 動態載入程式&lt;/h1>
-&lt;p>Go 是一個編譯式的語言，也就是說他不像 JS 那樣可以動態執行程式碼。像是 &lt;a class="link" href="https://github.com/hexojs/hexo" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>Golang Plguin</title><link>https://blog.simbafs.cc/p/plguin/</link><pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/plguin/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/plugin.png" alt="Featured image of post Golang Plguin" />&lt;h1 id="go-動態載入程式">&lt;a href="#go-%e5%8b%95%e6%85%8b%e8%bc%89%e5%85%a5%e7%a8%8b%e5%bc%8f" class="header-anchor">&lt;/a>Go 動態載入程式
+&lt;/h1>&lt;p>Go 是一個編譯式的語言，也就是說他不像 JS 那樣可以動態執行程式碼。像是 &lt;a class="link" href="https://github.com/hexojs/hexo" target="_blank" rel="noopener"
 >Hexo&lt;/a> 和 &lt;a class="link" href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener"
 >Hugo&lt;/a>，前者因為是 JS 寫的，因此支援非常豐富的外掛，但後者因為是 Go 寫的，因此在不使用其他直譯式程式語言的情況下，很難製作外掛。&lt;br>
 另一個 Go 寫的軟體 &lt;a class="link" href="https://github.com/ponzu-cms/ponzu" target="_blank" rel="noopener"
@@ -2641,14 +2641,14 @@ alt="explain.png"
 &lt;blockquote>
 &lt;p>ponzu 這個軟體兩年沒人維護了，很多東西都怪怪的，超級難編譯&lt;/p>
 &lt;/blockquote>
-&lt;h1 id="plugin-in-go">Plugin in Go&lt;/h1>
-&lt;p>在 1.8 版的時候，Go 推出了 &lt;a class="link" href="https://pkg.go.dev/plugin" target="_blank" rel="noopener"
+&lt;h1 id="plugin-in-go">&lt;a href="#plugin-in-go" class="header-anchor">&lt;/a>Plugin in Go
+&lt;/h1>&lt;p>在 1.8 版的時候，Go 推出了 &lt;a class="link" href="https://pkg.go.dev/plugin" target="_blank" rel="noopener"
 >Plguin&lt;/a> 套件，可以將外掛和主程式分開編譯，如果外掛有更動，不需要重新編譯主程式；主程式也可以動態載入外掛。&lt;/p>
-&lt;h1 id="外掛">外掛&lt;/h1>
-&lt;p>如果要將一個 package 編譯成外掛，首先他的 &lt;code>package&lt;/code> 必須是 &lt;code>main&lt;/code>，但是裡面的函式 &lt;code>main&lt;/code>、&lt;code>init&lt;/code> 都不會被執行，只有大寫開頭的變數、型態、函式會被暴露給主程式。&lt;br>
+&lt;h1 id="外掛">&lt;a href="#%e5%a4%96%e6%8e%9b" class="header-anchor">&lt;/a>外掛
+&lt;/h1>&lt;p>如果要將一個 package 編譯成外掛，首先他的 &lt;code>package&lt;/code> 必須是 &lt;code>main&lt;/code>，但是裡面的函式 &lt;code>main&lt;/code>、&lt;code>init&lt;/code> 都不會被執行，只有大寫開頭的變數、型態、函式會被暴露給主程式。&lt;br>
 編譯外掛時，需要加上 &lt;code>-buildmode=plguin&lt;/code>，這樣 &lt;code>go build&lt;/code> 就會將原始碼編譯成 &lt;code>.so&lt;/code>（share object）檔，這樣就可以被主程式呼叫。&lt;/p>
-&lt;h1 id="主程式">主程式&lt;/h1>
-&lt;p>主程式要載入外掛前，需要引用 &lt;code>plugin&lt;/code> 套件&lt;/p>
+&lt;h1 id="主程式">&lt;a href="#%e4%b8%bb%e7%a8%8b%e5%bc%8f" class="header-anchor">&lt;/a>主程式
+&lt;/h1>&lt;p>主程式要載入外掛前，需要引用 &lt;code>plugin&lt;/code> 套件&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2659,13 +2659,13 @@ alt="explain.png"
 &lt;/div>
 &lt;/div>&lt;p>用 &lt;code>func Open(path string) (*Plugin, error)&lt;/code> 可以載入一個編譯過的外掛，如果重複呼叫這個函式，除了第二次外都會回傳第一次載入的結果，也就是說假如你在很多個 gorutine 中載入同一個外掛，go 會保證他是「安全」的。注意看，&lt;code>path&lt;/code> 是個字串，因此你可以動態產生外掛的路徑，不需要寫死。&lt;br>
 載入完了之後，用 &lt;code>func (p *Plugin) Lookup(symName string) (Symbol, error)&lt;/code> 可以取得外掛暴露出來的變數、函式，因為 &lt;code>symName&lt;/code> 是字串，因此這裡也可以動態選擇要的變數。現在你有一個型態是 &lt;code>Symbol&lt;/code> 的變數了，其實這個 &lt;code>Symbol&lt;/code> 就是 &lt;code>interface{}&lt;/code> 所以不管要做什麼事，你都要先用 &lt;code>symbol.(type)&lt;/code> 取得他真實的值和型態。接下來就可以隨意的使用他了。&lt;/p>
-&lt;h1 id="範例">範例&lt;/h1>
-&lt;blockquote>
+&lt;h1 id="範例">&lt;a href="#%e7%af%84%e4%be%8b" class="header-anchor">&lt;/a>範例
+&lt;/h1>&lt;blockquote>
 &lt;p>以下摘自 &lt;a class="link" href="https://github.com/simbafs/go-plugin-test" target="_blank" rel="noopener"
 >https://github.com/simbafs/go-plugin-test&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="maingo">main.go&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="maingo">&lt;a href="#maingo" class="header-anchor">&lt;/a>main.go
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -2759,8 +2759,8 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="pluginslsgo">plugins/ls.go&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="pluginslsgo">&lt;a href="#pluginslsgo" class="header-anchor">&lt;/a>plugins/ls.go
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -2790,8 +2790,8 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>ExecCmd</title><link>https://blog.simbafs.cc/p/golang/exec-cmd/</link><pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/exec-cmd/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/execCmd.png" alt="Featured image of post ExecCmd" />&lt;h1 id="golang-執行外部命令">Golang 執行外部命令&lt;/h1>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div></description></item><item><title>ExecCmd</title><link>https://blog.simbafs.cc/p/exec-cmd/</link><pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/exec-cmd/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/execCmd.png" alt="Featured image of post ExecCmd" />&lt;h1 id="golang-執行外部命令">&lt;a href="#golang-%e5%9f%b7%e8%a1%8c%e5%a4%96%e9%83%a8%e5%91%bd%e4%bb%a4" class="header-anchor">&lt;/a>Golang 執行外部命令
+&lt;/h1>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -2849,12 +2849,12 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Aconf</title><link>https://blog.simbafs.cc/p/golang/aconf/</link><pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/aconf/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/aconf.png" alt="Featured image of post Aconf" />&lt;h1 id="aconf">aconf&lt;/h1>
-&lt;p>aconf 是個可以直接幫你解決所有「設定」問題的套件，設定可以有預設、從命令列參數、環境變數和設定檔，設定檔還有官方支援四種格式，dotEnv、HCL、toml、yaml 和 json。&lt;br>
+&lt;/div></description></item><item><title>Aconf</title><link>https://blog.simbafs.cc/p/aconf/</link><pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/aconf/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/aconf.png" alt="Featured image of post Aconf" />&lt;h1 id="aconf">&lt;a href="#aconf" class="header-anchor">&lt;/a>aconf
+&lt;/h1>&lt;p>aconf 是個可以直接幫你解決所有「設定」問題的套件，設定可以有預設、從命令列參數、環境變數和設定檔，設定檔還有官方支援四種格式，dotEnv、HCL、toml、yaml 和 json。&lt;br>
 而且設定檔還可以有不只一個，他可以把多個設定檔合成，相當方便&lt;/p>
-&lt;h2 id="基本使用">基本使用&lt;/h2>
-&lt;h3 id="定義-struct">定義 struct&lt;/h3>
-&lt;p>首先我們需要一個 struct 來定義我們的設定&lt;/p>
+&lt;h2 id="基本使用">&lt;a href="#%e5%9f%ba%e6%9c%ac%e4%bd%bf%e7%94%a8" class="header-anchor">&lt;/a>基本使用
+&lt;/h2>&lt;h3 id="定義-struct">&lt;a href="#%e5%ae%9a%e7%be%a9-struct" class="header-anchor">&lt;/a>定義 struct
+&lt;/h3>&lt;p>首先我們需要一個 struct 來定義我們的設定&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2871,8 +2871,8 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="載入設定">載入設定&lt;/h3>
-&lt;p>再來，我們可以設定要從哪些來源載入設定值&lt;/p>
+&lt;/div>&lt;h3 id="載入設定">&lt;a href="#%e8%bc%89%e5%85%a5%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>載入設定
+&lt;/h3>&lt;p>再來，我們可以設定要從哪些來源載入設定值&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2914,29 +2914,29 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這樣你就可以用檔案、環境變數和命令列參數設定了。&lt;/p>
-&lt;h4 id="設定名稱">設定名稱&lt;/h4>
-&lt;p>我們在 struct 中定義的設定名稱，在各個來源會有一些變化，下面是例子&lt;/p>
+&lt;h4 id="設定名稱">&lt;a href="#%e8%a8%ad%e5%ae%9a%e5%90%8d%e7%a8%b1" class="header-anchor">&lt;/a>設定名稱
+&lt;/h4>&lt;p>我們在 struct 中定義的設定名稱，在各個來源會有一些變化，下面是例子&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">struct&lt;/th>
-&lt;th style="text-align:left">設定檔&lt;/th>
-&lt;th style="text-align:left">環境變數&lt;/th>
-&lt;th style="text-align:left">命令列參數&lt;/th>
+&lt;th style="text-align: left">struct&lt;/th>
+&lt;th style="text-align: left">設定檔&lt;/th>
+&lt;th style="text-align: left">環境變數&lt;/th>
+&lt;th style="text-align: left">命令列參數&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">Addr&lt;/td>
-&lt;td style="text-align:left">addr&lt;/td>
-&lt;td style="text-align:left">{EnvPrefix}_ADDR&lt;/td>
-&lt;td style="text-align:left">{FlagPrefix}{FlagDelimiter}attr&lt;/td>
+&lt;td style="text-align: left">Addr&lt;/td>
+&lt;td style="text-align: left">addr&lt;/td>
+&lt;td style="text-align: left">{EnvPrefix}_ADDR&lt;/td>
+&lt;td style="text-align: left">{FlagPrefix}{FlagDelimiter}attr&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">SysAdmin&lt;/td>
-&lt;td style="text-align:left">sys_admin&lt;/td>
-&lt;td style="text-align:left">{EnvPrefix}_SYS_ADMIN&lt;/td>
-&lt;td style="text-align:left">{FlagPrefix}{FlagDelimiter}sys_admin&lt;/td>
+&lt;td style="text-align: left">SysAdmin&lt;/td>
+&lt;td style="text-align: left">sys_admin&lt;/td>
+&lt;td style="text-align: left">{EnvPrefix}_SYS_ADMIN&lt;/td>
+&lt;td style="text-align: left">{FlagPrefix}{FlagDelimiter}sys_admin&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2944,36 +2944,36 @@ alt="explain.png"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">config&lt;/th>
-&lt;th style="text-align:left">default&lt;/th>
+&lt;th style="text-align: center">config&lt;/th>
+&lt;th style="text-align: left">default&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">EnvPrefix&lt;/td>
-&lt;td style="text-align:left">&amp;ldquo;&amp;quot;（最好自己設，不然可能重複）&lt;/td>
+&lt;td style="text-align: center">EnvPrefix&lt;/td>
+&lt;td style="text-align: left">&amp;ldquo;&amp;quot;（最好自己設，不然可能重複）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">FlagPrefix&lt;/td>
-&lt;td style="text-align:left">&amp;quot;&amp;rdquo; （如果沒有設，FlagDelimiter 也不會有作用）&lt;/td>
+&lt;td style="text-align: center">FlagPrefix&lt;/td>
+&lt;td style="text-align: left">&amp;quot;&amp;rdquo; （如果沒有設，FlagDelimiter 也不會有作用）&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">FlagDelimiter&lt;/td>
-&lt;td style="text-align:left">.&lt;/td>
+&lt;td style="text-align: center">FlagDelimiter&lt;/td>
+&lt;td style="text-align: left">.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h4 id="從命令列載入設定檔">從命令列載入設定檔&lt;/h4>
-&lt;p>預設你是不行從命令列設定你自己的設定檔路徑，但是你可以開啟這個選項&lt;br>
+&lt;h4 id="從命令列載入設定檔">&lt;a href="#%e5%be%9e%e5%91%bd%e4%bb%a4%e5%88%97%e8%bc%89%e5%85%a5%e8%a8%ad%e5%ae%9a%e6%aa%94" class="header-anchor">&lt;/a>從命令列載入設定檔
+&lt;/h4>&lt;p>預設你是不行從命令列設定你自己的設定檔路徑，但是你可以開啟這個選項&lt;br>
 用 &lt;code>FileFlag&lt;/code> 可以設定「設定檔路徑」的選項&lt;/p>
-&lt;h2 id="參考連結">參考連結&lt;/h2>
-&lt;p>&lt;a class="link" href="https://github.com/cristalhq/aconfig" target="_blank" rel="noopener"
+&lt;h2 id="參考連結">&lt;a href="#%e5%8f%83%e8%80%83%e9%80%a3%e7%b5%90" class="header-anchor">&lt;/a>參考連結
+&lt;/h2>&lt;p>&lt;a class="link" href="https://github.com/cristalhq/aconfig" target="_blank" rel="noopener"
 >https://github.com/cristalhq/aconfig&lt;/a>&lt;br>
 &lt;a class="link" href="https://pkg.go.dev/github.com/cristalhq/aconfig" target="_blank" rel="noopener"
->https://pkg.go.dev/github.com/cristalhq/aconfig&lt;/a>&lt;/p></description></item><item><title>Golang Parse All Files In Directory Into Templates</title><link>https://blog.simbafs.cc/p/golang/golang-parse-all-files-in-directory-into-templates/</link><pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang/golang-parse-all-files-in-directory-into-templates/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/Golang-Parse-All-Files-In-Directory-Into-Templates.png" alt="Featured image of post Golang Parse All Files In Directory Into Templates" />&lt;h1 id="golang-parse-all-files-in-directory-into-templates">Golang Parse All Files In Directory Into Templates&lt;/h1>
-&lt;p>在用 gin 寫伺服器的時候，我發現模板並不會被 &lt;code>go build&lt;/code> 打包進執行檔裡面，所以在執行的時候就找不到檔案，當然這個問題可以用字串的形式直接把模板放進 golang 原始碼裡面，但是這樣程式碼一複雜就會不好用，這時候就可以用 golang 的 embed 函式庫把檔案「嵌入」到原始碼裡面。但是問題又來了，嵌入了之後要怎麼把字串變成模板物件呢？&lt;/p>
-&lt;h2 id="embed">Embed&lt;/h2>
-&lt;blockquote>
+>https://pkg.go.dev/github.com/cristalhq/aconfig&lt;/a>&lt;/p></description></item><item><title>Golang Parse All Files In Directory Into Templates</title><link>https://blog.simbafs.cc/p/golang-parse-all-files-in-directory-into-templates/</link><pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/golang-parse-all-files-in-directory-into-templates/</guid><description>&lt;img src="https://blog.simbafs.cc/og/golang/Golang-Parse-All-Files-In-Directory-Into-Templates.png" alt="Featured image of post Golang Parse All Files In Directory Into Templates" />&lt;h1 id="golang-parse-all-files-in-directory-into-templates">&lt;a href="#golang-parse-all-files-in-directory-into-templates" class="header-anchor">&lt;/a>Golang Parse All Files In Directory Into Templates
+&lt;/h1>&lt;p>在用 gin 寫伺服器的時候，我發現模板並不會被 &lt;code>go build&lt;/code> 打包進執行檔裡面，所以在執行的時候就找不到檔案，當然這個問題可以用字串的形式直接把模板放進 golang 原始碼裡面，但是這樣程式碼一複雜就會不好用，這時候就可以用 golang 的 embed 函式庫把檔案「嵌入」到原始碼裡面。但是問題又來了，嵌入了之後要怎麼把字串變成模板物件呢？&lt;/p>
+&lt;h2 id="embed">&lt;a href="#embed" class="header-anchor">&lt;/a>Embed
+&lt;/h2>&lt;blockquote>
 &lt;p>&lt;code>embed&lt;/code> 套件是 1.16 新出的功能，所以如果想用的話記得要更新 go 到 1.16 以上&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;code>embed&lt;/code> 嵌入檔案的方式是透過特殊格式的註解宣告，直接看官方範例：&lt;/p>
@@ -3026,9 +3026,9 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>可以看到，&lt;code>embed&lt;/code> 可以把檔案讀成三種格式 &lt;code>string&lt;/code>、&lt;code>[]byte&lt;/code>、&lt;code>embed.FS&lt;/code>，前兩者只能讀「一個」檔案，如果你只用這兩個的話引入時要用 &lt;code>_ &amp;quot;embed&amp;quot;&lt;/code>。&lt;code>embed.FS&lt;/code> 除了可以嵌入多個檔案之外，因為實做了 &lt;code>fs.FS&lt;/code> 所以可以使用當作一個檔案系統操作。&lt;/p>
-&lt;h2 id="tmeplate">Tmeplate&lt;/h2>
-&lt;h3 id="no-recursive">No Recursive&lt;/h3>
-&lt;p>最簡單的方法，你可以直接使用&lt;/p>
+&lt;h2 id="tmeplate">&lt;a href="#tmeplate" class="header-anchor">&lt;/a>Tmeplate
+&lt;/h2>&lt;h3 id="no-recursive">&lt;a href="#no-recursive" class="header-anchor">&lt;/a>No Recursive
+&lt;/h3>&lt;p>最簡單的方法，你可以直接使用&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -3042,8 +3042,8 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這個方法有個缺點，像上面這樣有子目錄就要一個一個設定，ParseFS 不會幫你往下尋找&lt;/p>
-&lt;h3 id="recursive">Recursive&lt;/h3>
-&lt;p>善用 &lt;code>embed.FS&lt;/code>，我們可以將資料夾下所有檔案載入成模板&lt;/p>
+&lt;h3 id="recursive">&lt;a href="#recursive" class="header-anchor">&lt;/a>Recursive
+&lt;/h3>&lt;p>善用 &lt;code>embed.FS&lt;/code>，我們可以將資料夾下所有檔案載入成模板&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -3133,15 +3133,15 @@ alt="explain.png"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這種寫法雖然程式寫的比較多，但是在模板多的時候優勢就顯現出來了，完全不用管有幾層資料夾，反正放在 &lt;code>view&lt;/code> 裡面就可以了。&lt;/p>
-&lt;h2 id="關於-template-奇怪的坑">關於 Template 奇怪的坑&lt;/h2>
-&lt;p>如果仔細看你會發現 &lt;code>html/template&lt;/code> 套件有提供一個函數 &lt;code>ParseFS&lt;/code> 函數，可以直接傳 &lt;code>FS&lt;/code> 物件進去（如 #No-Recursive 的用法），但是因為 &lt;code>ParseFS&lt;/code> 在判定 template name 時是用檔名而不是路徑，所以不同資料夾下如果都有檔名一樣的模板，只有最後一個會生效。所以這個只適用沒有子目錄的情形，擴充性不足有點可惜。因此在 #Recursive 中我使用 &lt;code>Assets.ReadFile&lt;/code> 把檔案讀進來，再以字串傳進 Parse 就是為了避免這個 bug&lt;/p>
-&lt;h2 id="關於-golang-117-的坑">關於 Golang 1.17 的坑&lt;/h2>
-&lt;h3 id="空格">空格&lt;/h3>
-&lt;p>升到 Golang 1.17 之後，原本可以用 &lt;code>// go:embed filename&lt;/code> 引入，現在一定要用 &lt;code>//go:embed filename&lt;/code>，斜線和 &lt;code>go&lt;/code> 中間不能有空白。&lt;/p>
-&lt;h3 id="不能用開頭">不能用「.」開頭&lt;/h3>
-&lt;p>我不確定這是不是 1.17 的改變，我忘記以前 1.16.5 有沒有試過這個，&lt;code>filename&lt;/code> 不能是「.」開頭，也就是說不能寫 &lt;code>../filename&lt;/code>，所以要引入的檔案或目錄一定要放在 &lt;code>go run .&lt;/code> 或 &lt;code>go build&lt;/code> 執行的目錄下&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>&lt;a class="link" href="https://pkg.go.dev/embed" target="_blank" rel="noopener"
+&lt;h2 id="關於-template-奇怪的坑">&lt;a href="#%e9%97%9c%e6%96%bc-template-%e5%a5%87%e6%80%aa%e7%9a%84%e5%9d%91" class="header-anchor">&lt;/a>關於 Template 奇怪的坑
+&lt;/h2>&lt;p>如果仔細看你會發現 &lt;code>html/template&lt;/code> 套件有提供一個函數 &lt;code>ParseFS&lt;/code> 函數，可以直接傳 &lt;code>FS&lt;/code> 物件進去（如 #No-Recursive 的用法），但是因為 &lt;code>ParseFS&lt;/code> 在判定 template name 時是用檔名而不是路徑，所以不同資料夾下如果都有檔名一樣的模板，只有最後一個會生效。所以這個只適用沒有子目錄的情形，擴充性不足有點可惜。因此在 #Recursive 中我使用 &lt;code>Assets.ReadFile&lt;/code> 把檔案讀進來，再以字串傳進 Parse 就是為了避免這個 bug&lt;/p>
+&lt;h2 id="關於-golang-117-的坑">&lt;a href="#%e9%97%9c%e6%96%bc-golang-117-%e7%9a%84%e5%9d%91" class="header-anchor">&lt;/a>關於 Golang 1.17 的坑
+&lt;/h2>&lt;h3 id="空格">&lt;a href="#%e7%a9%ba%e6%a0%bc" class="header-anchor">&lt;/a>空格
+&lt;/h3>&lt;p>升到 Golang 1.17 之後，原本可以用 &lt;code>// go:embed filename&lt;/code> 引入，現在一定要用 &lt;code>//go:embed filename&lt;/code>，斜線和 &lt;code>go&lt;/code> 中間不能有空白。&lt;/p>
+&lt;h3 id="不能用開頭">&lt;a href="#%e4%b8%8d%e8%83%bd%e7%94%a8%e9%96%8b%e9%a0%ad" class="header-anchor">&lt;/a>不能用「.」開頭
+&lt;/h3>&lt;p>我不確定這是不是 1.17 的改變，我忘記以前 1.16.5 有沒有試過這個，&lt;code>filename&lt;/code> 不能是「.」開頭，也就是說不能寫 &lt;code>../filename&lt;/code>，所以要引入的檔案或目錄一定要放在 &lt;code>go run .&lt;/code> 或 &lt;code>go build&lt;/code> 執行的目錄下&lt;/p>
+&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;p>&lt;a class="link" href="https://pkg.go.dev/embed" target="_blank" rel="noopener"
 >https://pkg.go.dev/embed&lt;/a>&lt;br>
 &lt;a class="link" href="https://pkg.go.dev/io/fs" target="_blank" rel="noopener"
 >https://pkg.go.dev/io/fs&lt;/a>&lt;br>

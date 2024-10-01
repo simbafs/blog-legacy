@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cms on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/cms/</link><description>Recent content in Cms on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/cms/index.xml" rel="self" type="application/rss+xml"/><item><title>Strapi Quick Start</title><link>https://blog.simbafs.cc/p/js/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/strapi-quick-start/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/strapi-quick-start.png" alt="Featured image of post Strapi Quick Start" />&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
-&lt;h2 id="strapi">strapi&lt;/h2>
-&lt;h2 id="什麼是-headless-cms">什麼是 headless CMS&lt;/h2>
-&lt;p>headless CMS 顧名思義是「無頭的 內容管理系統」，意思是沒有前端、只有後端，它就是一個 DB 的 web 界面 + api server。headless CMS 專注於處理 api 的部份，前端的部份一律不關心。這對於前後端分離有很大的幫助，基本上 headless CMS 已經解決了後端 80% 的工作，剩下的就是一些客製化的邏輯，像是登入、特殊的計算等等。&lt;/p>
-&lt;h2 id="strapi-的優點">strapi 的優點&lt;/h2>
-&lt;ol>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cms on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/cms/</link><description>Recent content in Cms on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/cms/index.xml" rel="self" type="application/rss+xml"/><item><title>Strapi Quick Start</title><link>https://blog.simbafs.cc/p/strapi-quick-start/</link><pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/strapi-quick-start/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/strapi-quick-start.png" alt="Featured image of post Strapi Quick Start" />&lt;p>strapi 是一個 headless CMS (content management system)，透過 web 介面就可以建立一個 api server&lt;/p>
+&lt;h2 id="strapi">&lt;a href="#strapi" class="header-anchor">&lt;/a>strapi
+&lt;/h2>&lt;h2 id="什麼是-headless-cms">&lt;a href="#%e4%bb%80%e9%ba%bc%e6%98%af-headless-cms" class="header-anchor">&lt;/a>什麼是 headless CMS
+&lt;/h2>&lt;p>headless CMS 顧名思義是「無頭的 內容管理系統」，意思是沒有前端、只有後端，它就是一個 DB 的 web 界面 + api server。headless CMS 專注於處理 api 的部份，前端的部份一律不關心。這對於前後端分離有很大的幫助，基本上 headless CMS 已經解決了後端 80% 的工作，剩下的就是一些客製化的邏輯，像是登入、特殊的計算等等。&lt;/p>
+&lt;h2 id="strapi-的優點">&lt;a href="#strapi-%e7%9a%84%e5%84%aa%e9%bb%9e" class="header-anchor">&lt;/a>strapi 的優點
+&lt;/h2>&lt;ol>
 &lt;li>他的界面完善&lt;/li>
 &lt;li>支援多種 DB
 &lt;blockquote>
@@ -17,8 +17,8 @@ MongoDB &amp;gt;= 3.6&lt;/p>
 &lt;li>存取權限控制&lt;/li>
 &lt;li>外掛&lt;/li>
 &lt;/ol>
-&lt;h2 id="quickstart">quickstart&lt;/h2>
-&lt;p>以下步驟是補充 &lt;a class="link" href="https://strapi.io/documentation/developer-docs/latest/getting-started/quick-start.html" target="_blank" rel="noopener"
+&lt;h2 id="quickstart">&lt;a href="#quickstart" class="header-anchor">&lt;/a>quickstart
+&lt;/h2>&lt;p>以下步驟是補充 &lt;a class="link" href="https://strapi.io/documentation/developer-docs/latest/getting-started/quick-start.html" target="_blank" rel="noopener"
 >官網的 quick start&lt;/a>&lt;/p>
 &lt;ol>
 &lt;li>安裝&lt;br>

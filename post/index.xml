@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/</link><description>Recent content in posts on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Preparing Environment</title><link>https://blog.simbafs.cc/p/prepareenv/</link><pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/prepareenv/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ncku/computerOrganization/prepareEnv.png" alt="Featured image of post Preparing Environment" />&lt;h1 id="preparing-environment">Preparing Environment&lt;/h1>
-&lt;h2 id="gnu-toolchain">GNU toolchain&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/</link><description>Recent content in posts on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Preparing Environment</title><link>https://blog.simbafs.cc/p/prepareenv/</link><pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/prepareenv/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ncku/computerOrganization/prepareEnv.png" alt="Featured image of post Preparing Environment" />&lt;h1 id="preparing-environment">&lt;a href="#preparing-environment" class="header-anchor">&lt;/a>Preparing Environment
+&lt;/h1>&lt;h2 id="gnu-toolchain">&lt;a href="#gnu-toolchain" class="header-anchor">&lt;/a>GNU toolchain
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -47,10 +47,10 @@
 &lt;/div>&lt;blockquote>
 &lt;p>這步驟要編很久&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="其他工具">其他工具&lt;/h2>
-&lt;p>其他工具包含 spike、proxy kernel，這兩個編譯方式都一樣&lt;/p>
-&lt;h3 id="spike">spike&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="其他工具">&lt;a href="#%e5%85%b6%e4%bb%96%e5%b7%a5%e5%85%b7" class="header-anchor">&lt;/a>其他工具
+&lt;/h2>&lt;p>其他工具包含 spike、proxy kernel，這兩個編譯方式都一樣&lt;/p>
+&lt;h3 id="spike">&lt;a href="#spike" class="header-anchor">&lt;/a>spike
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -96,9 +96,9 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo make install
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="測試">測試&lt;/h2>
-&lt;h3 id="gnu-toolchain-1">GNU toolchain&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h2 id="測試">&lt;a href="#%e6%b8%ac%e8%a9%a6" class="header-anchor">&lt;/a>測試
+&lt;/h2>&lt;h3 id="gnu-toolchain-1">&lt;a href="#gnu-toolchain-1" class="header-anchor">&lt;/a>GNU toolchain
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
@@ -106,8 +106,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">$ riscv64-unknown-linux-gnu-gcc -v
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="others-tool">others tool&lt;/h3>
-&lt;blockquote>
+&lt;/div>&lt;h3 id="others-tool">&lt;a href="#others-tool" class="header-anchor">&lt;/a>others tool
+&lt;/h3>&lt;blockquote>
 &lt;p>/tmp/hello.c&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -139,18 +139,18 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ spike --isa=RV64GC $RISCV/riscv64-unknown-linux-gnu/bin/pk /tmp/hello
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>上課 Homework 0 講義&lt;/p></description></item><item><title>Google AppScript Calender API</title><link>https://blog.simbafs.cc/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/google-app-script-calender-api/</guid><description>&lt;img src="https://blog.simbafs.cc/og/cloud/googleAppScript.png" alt="Featured image of post Google AppScript Calender API" />&lt;h1 id="google-appscript">Google AppScript&lt;/h1>
-&lt;p>因為我懶的一堂一堂課加入日曆、還要按重複，所以就來研究如何自動化。我的想法是透過一個物件定義課表，然後透過程式來自動化新增。評估了幾個技術後，決定使用 Google App Script 來實做，畢竟他和日曆都是 Google 產品，整合應該是最好的（吧，而且可以弄成類似雲端應用的感覺，輕鬆開放給其他人使用。&lt;/p>
-&lt;h2 id="建立專案">建立專案&lt;/h2>
-&lt;p>在 &lt;a class="link" href="https://script.google.com/home" target="_blank" rel="noopener"
+&lt;/div>&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;p>上課 Homework 0 講義&lt;/p></description></item><item><title>Google AppScript Calender API</title><link>https://blog.simbafs.cc/p/google-app-script-calender-api/</link><pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/google-app-script-calender-api/</guid><description>&lt;img src="https://blog.simbafs.cc/og/cloud/googleAppScript.png" alt="Featured image of post Google AppScript Calender API" />&lt;h1 id="google-appscript">&lt;a href="#google-appscript" class="header-anchor">&lt;/a>Google AppScript
+&lt;/h1>&lt;p>因為我懶的一堂一堂課加入日曆、還要按重複，所以就來研究如何自動化。我的想法是透過一個物件定義課表，然後透過程式來自動化新增。評估了幾個技術後，決定使用 Google App Script 來實做，畢竟他和日曆都是 Google 產品，整合應該是最好的（吧，而且可以弄成類似雲端應用的感覺，輕鬆開放給其他人使用。&lt;/p>
+&lt;h2 id="建立專案">&lt;a href="#%e5%bb%ba%e7%ab%8b%e5%b0%88%e6%a1%88" class="header-anchor">&lt;/a>建立專案
+&lt;/h2>&lt;p>在 &lt;a class="link" href="https://script.google.com/home" target="_blank" rel="noopener"
 >https://script.google.com/home&lt;/a> 建立新專案後，會自動建立 &lt;code>程式碼.gs&lt;/code>，雖然他寫 &lt;code>.gs&lt;/code>，但可以直接當作 javascript 看，看設定頁面，背後應該也是 V8 在執行。&lt;/p>
-&lt;h2 id="連結-google-calendar">連結 Google Calendar&lt;/h2>
-&lt;p>我們的程式要連結日曆，需要權限和 API，點擊左側「服務」右邊的「+」，找到 &lt;code>Google Calendar API&lt;/code>，按新增&lt;/p>
-&lt;h2 id="新增一個活動">新增一個活動&lt;/h2>
-&lt;p>先透過一些範例來看看怎麼和 Google Calendar 互動&lt;/p>
-&lt;h3 id="單次的活動">單次的活動&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="連結-google-calendar">&lt;a href="#%e9%80%a3%e7%b5%90-google-calendar" class="header-anchor">&lt;/a>連結 Google Calendar
+&lt;/h2>&lt;p>我們的程式要連結日曆，需要權限和 API，點擊左側「服務」右邊的「+」，找到 &lt;code>Google Calendar API&lt;/code>，按新增&lt;/p>
+&lt;h2 id="新增一個活動">&lt;a href="#%e6%96%b0%e5%a2%9e%e4%b8%80%e5%80%8b%e6%b4%bb%e5%8b%95" class="header-anchor">&lt;/a>新增一個活動
+&lt;/h2>&lt;p>先透過一些範例來看看怎麼和 Google Calendar 互動&lt;/p>
+&lt;h3 id="單次的活動">&lt;a href="#%e5%96%ae%e6%ac%a1%e7%9a%84%e6%b4%bb%e5%8b%95" class="header-anchor">&lt;/a>單次的活動
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -169,8 +169,8 @@
 >https://developers.google.com/apps-script/reference/calendar/calendar#createeventtitle,-starttime,-endtime&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;p>寫好函數後，把上方的測試函數改成 &lt;code>myFunction&lt;/code>，然後按「執行」，就會單次執行這個函數了&lt;/p>
-&lt;h3 id="重覆的活動">重覆的活動&lt;/h3>
-&lt;p>接下來，來試試重複的活動，基本上只是新增一個 &lt;code>RecurrenceRule&lt;/code> 物件&lt;/p>
+&lt;h3 id="重覆的活動">&lt;a href="#%e9%87%8d%e8%a6%86%e7%9a%84%e6%b4%bb%e5%8b%95" class="header-anchor">&lt;/a>重覆的活動
+&lt;/h3>&lt;p>接下來，來試試重複的活動，基本上只是新增一個 &lt;code>RecurrenceRule&lt;/code> 物件&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -203,8 +203,8 @@
 &lt;a class="link" href="https://developers.google.com/apps-script/reference/calendar/event-recurrence" target="_blank" rel="noopener"
 >https://developers.google.com/apps-script/reference/calendar/event-recurrence&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="http">http&lt;/h2>
-&lt;p>現在我們能和日曆溝通了，理論上在加上一個好用的 API 界面就可以結束了，但是我還想加上一個 web 界面，這樣就可以不用每次都來編輯程式碼。&lt;/p>
+&lt;h2 id="http">&lt;a href="#http" class="header-anchor">&lt;/a>http
+&lt;/h2>&lt;p>現在我們能和日曆溝通了，理論上在加上一個好用的 API 界面就可以結束了，但是我還想加上一個 web 界面，這樣就可以不用每次都來編輯程式碼。&lt;/p>
 &lt;ol>
 &lt;li>新增 &lt;code>doGet(e)&lt;/code> 函數&lt;/li>
 &lt;/ol>
@@ -248,11 +248,11 @@
 >https://developers.google.com/apps-script/guides/web&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;p>然後就可以用這些東西湊一湊弄出一個好用的課表 WebApp 了&lt;/p>
-&lt;h2 id="驗證應用程式">驗證應用程式&lt;/h2>
-&lt;p>現在登入我們的網頁都會跳說這個應用程式不安全，需要提交程式給 Google 驗證後才能移除，不然就會一直出現這個醜醜的畫面，但是我還沒研究出來怎麼弄，也懶得弄。https://medium.com/@joshchang_51558/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%9C%89%E6%95%88%E7%9A%84%E9%80%9A%E9%81%8E-google-oauth-scope-verification-35019d93ce95 這個看起來應該可以參考&lt;/p>
-&lt;h2 id="我的程式碼">我的程式碼&lt;/h2>
-&lt;h3 id="maings">main.gs&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="驗證應用程式">&lt;a href="#%e9%a9%97%e8%ad%89%e6%87%89%e7%94%a8%e7%a8%8b%e5%bc%8f" class="header-anchor">&lt;/a>驗證應用程式
+&lt;/h2>&lt;p>現在登入我們的網頁都會跳說這個應用程式不安全，需要提交程式給 Google 驗證後才能移除，不然就會一直出現這個醜醜的畫面，但是我還沒研究出來怎麼弄，也懶得弄。https://medium.com/@joshchang_51558/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%9C%89%E6%95%88%E7%9A%84%E9%80%9A%E9%81%8E-google-oauth-scope-verification-35019d93ce95 這個看起來應該可以參考&lt;/p>
+&lt;h2 id="我的程式碼">&lt;a href="#%e6%88%91%e7%9a%84%e7%a8%8b%e5%bc%8f%e7%a2%bc" class="header-anchor">&lt;/a>我的程式碼
+&lt;/h2>&lt;h3 id="maings">&lt;a href="#maings" class="header-anchor">&lt;/a>main.gs
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -372,8 +372,8 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="indexhtml">index.html&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;/div>&lt;h3 id="indexhtml">&lt;a href="#indexhtml" class="header-anchor">&lt;/a>index.html
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2
@@ -607,30 +607,30 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>IPFS</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ipfs/index.png" alt="Featured image of post IPFS" />&lt;h1 id="ipfs">IPFS&lt;/h1>
-&lt;p>ipfs（&lt;strong>I&lt;/strong>nter&lt;strong>P&lt;/strong>lanetary &lt;strong>F&lt;/strong>ile &lt;strong>S&lt;/strong>ystem）是一個去中心化的檔案儲存方案，為什麼說是方案，因為他包括了通訊協議、軟體、檔案系統、名稱系統、閘道器。這個概念其實不新鮮但是 ipfs 整合過去去中心化方案的優點，而且他整合很很棒，可以開箱即用（out of box）。在 &lt;a class="link" href="https://github.com/ipfs/kubo/#what-is-ipfs" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>IPFS</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/ipfs/index.png" alt="Featured image of post IPFS" />&lt;h1 id="ipfs">&lt;a href="#ipfs" class="header-anchor">&lt;/a>IPFS
+&lt;/h1>&lt;p>ipfs（&lt;strong>I&lt;/strong>nter&lt;strong>P&lt;/strong>lanetary &lt;strong>F&lt;/strong>ile &lt;strong>S&lt;/strong>ystem）是一個去中心化的檔案儲存方案，為什麼說是方案，因為他包括了通訊協議、軟體、檔案系統、名稱系統、閘道器。這個概念其實不新鮮但是 ipfs 整合過去去中心化方案的優點，而且他整合很很棒，可以開箱即用（out of box）。在 &lt;a class="link" href="https://github.com/ipfs/kubo/#what-is-ipfs" target="_blank" rel="noopener"
 >ipfs 的 GitHub README.md 中&lt;/a> 中的介紹：「It is like a single BitTorrent swarm, exchanging git objects」。他傳檔案的方式就像 BT 一樣是透過 p2p，定位檔案的方式像 Git，將檔案內容雜湊。&lt;/p>
 &lt;hr>
-&lt;h2 id="安裝">安裝&lt;/h2>
-&lt;p>截稿當下，ipfs 還沒有被 Ubuntu 收錄，所以你沒辦法用 &lt;code>apt install&lt;/code> 安裝。ipfs 的執行擋是用 Go 寫的，因此可以輕易跨平台執行，去 &lt;a class="link" href="https://github.com/ipfs/kubo/releases/latest" target="_blank" rel="noopener"
+&lt;h2 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
+&lt;/h2>&lt;p>截稿當下，ipfs 還沒有被 Ubuntu 收錄，所以你沒辦法用 &lt;code>apt install&lt;/code> 安裝。ipfs 的執行擋是用 Go 寫的，因此可以輕易跨平台執行，去 &lt;a class="link" href="https://github.com/ipfs/kubo/releases/latest" target="_blank" rel="noopener"
 >ipfs 在 GitHub 的 Release 頁面&lt;/a> 下載對應的版本，然後解壓縮，你可以把 &lt;code>ipfs&lt;/code> 這個檔案自己搬到你的 &lt;code>$PATH&lt;/code> 下，或是用 &lt;code>$ ./install.sh&lt;/code> 讓他的安裝腳本幫你選擇目錄&lt;/p>
-&lt;h2 id="android">Android&lt;/h2>
-&lt;p>在 Google play 可以找到一堆號稱是 ipfs 的 App，但功能都不齊全，如果你想在在 Android 手機上執行 ipfs，最好的方式是用 &lt;a class="link" href="https://termux.dev/en/" target="_blank" rel="noopener"
+&lt;h2 id="android">&lt;a href="#android" class="header-anchor">&lt;/a>Android
+&lt;/h2>&lt;p>在 Google play 可以找到一堆號稱是 ipfs 的 App，但功能都不齊全，如果你想在在 Android 手機上執行 ipfs，最好的方式是用 &lt;a class="link" href="https://termux.dev/en/" target="_blank" rel="noopener"
 >termux&lt;/a> 這套終端機模擬器，現在 Google Play 上已經沒有更新，要最新版的要去 &lt;a class="link" href="https://github.com/termux/termux-app#f-droid" target="_blank" rel="noopener"
 >F-Droid&lt;/a> 或是 &lt;a class="link" href="https://github.com/termux/termux-app/releases/latest" target="_blank" rel="noopener"
 >GitHub Release&lt;/a> 下載。安裝後一樣按照上面的步驟，檔案選 &lt;code>linux-arm64&lt;/code> 那個就可以了。經過測試所有功能都和電腦一樣，包括 webui。&lt;/p>
-&lt;h2 id="基本功能">基本功能&lt;/h2>
-&lt;h2 id="ipfs-上傳檔案">ipfs 上傳檔案&lt;/h2>
-&lt;p>在節點 A 上執行 &lt;code>$ ipfs add &amp;lt;file&amp;gt;&lt;/code>、&lt;code>$ cat &amp;lt;file&amp;gt; | ipfs add&lt;/code>，這個命令會回傳一串 hash，稱為 &lt;code>CID&lt;/code>，通常是 &lt;code>Qm&lt;/code> 開頭，所以也被稱為 Qm hash&lt;/p>
-&lt;h2 id="下載檔案">下載檔案&lt;/h2>
-&lt;p>如果另一個節點有任何方式可以連線到節點 A（不論是直接的 peer 或是透過全球、區域的網路連接）都可以用 &lt;code>$ ipfs cat &amp;lt;CID&amp;gt;&lt;/code> 將內容印到 stdout。如果要直接存起來，也可以用 &lt;code>$ ipfs get [-o file] &amp;lt;CID&amp;gt;&lt;/code>，如果不指定 &lt;code>-o&lt;/code> 檔名會是 CID&lt;/p>
-&lt;h2 id="查看自己的-id">查看自己的 id&lt;/h2>
-&lt;p>&lt;code>$ ipfs id | jq .ID&lt;/code>&lt;/p>
-&lt;h2 id="查看-peers">查看 peers&lt;/h2>
-&lt;p>這個指令會列出所有直接連線節點的 id，如果找不到不代表拿不到檔案，透過間接的方式還是拿得到，只是第一次要找比較久
+&lt;h2 id="基本功能">&lt;a href="#%e5%9f%ba%e6%9c%ac%e5%8a%9f%e8%83%bd" class="header-anchor">&lt;/a>基本功能
+&lt;/h2>&lt;h2 id="ipfs-上傳檔案">&lt;a href="#ipfs-%e4%b8%8a%e5%82%b3%e6%aa%94%e6%a1%88" class="header-anchor">&lt;/a>ipfs 上傳檔案
+&lt;/h2>&lt;p>在節點 A 上執行 &lt;code>$ ipfs add &amp;lt;file&amp;gt;&lt;/code>、&lt;code>$ cat &amp;lt;file&amp;gt; | ipfs add&lt;/code>，這個命令會回傳一串 hash，稱為 &lt;code>CID&lt;/code>，通常是 &lt;code>Qm&lt;/code> 開頭，所以也被稱為 Qm hash&lt;/p>
+&lt;h2 id="下載檔案">&lt;a href="#%e4%b8%8b%e8%bc%89%e6%aa%94%e6%a1%88" class="header-anchor">&lt;/a>下載檔案
+&lt;/h2>&lt;p>如果另一個節點有任何方式可以連線到節點 A（不論是直接的 peer 或是透過全球、區域的網路連接）都可以用 &lt;code>$ ipfs cat &amp;lt;CID&amp;gt;&lt;/code> 將內容印到 stdout。如果要直接存起來，也可以用 &lt;code>$ ipfs get [-o file] &amp;lt;CID&amp;gt;&lt;/code>，如果不指定 &lt;code>-o&lt;/code> 檔名會是 CID&lt;/p>
+&lt;h2 id="查看自己的-id">&lt;a href="#%e6%9f%a5%e7%9c%8b%e8%87%aa%e5%b7%b1%e7%9a%84-id" class="header-anchor">&lt;/a>查看自己的 id
+&lt;/h2>&lt;p>&lt;code>$ ipfs id | jq .ID&lt;/code>&lt;/p>
+&lt;h2 id="查看-peers">&lt;a href="#%e6%9f%a5%e7%9c%8b-peers" class="header-anchor">&lt;/a>查看 peers
+&lt;/h2>&lt;p>這個指令會列出所有直接連線節點的 id，如果找不到不代表拿不到檔案，透過間接的方式還是拿得到，只是第一次要找比較久
 &lt;code>$ ipfs swarm peers&lt;/code>&lt;/p>
-&lt;h2 id="wrap">wrap&lt;/h2>
-&lt;p>如果一次有多個檔案要分享，例如一個網站，可以用 &lt;code>-w&lt;/code> &lt;strong>保留目錄結構&lt;/strong>，例如以下目錄&lt;/p>
+&lt;h2 id="wrap">&lt;a href="#wrap" class="header-anchor">&lt;/a>wrap
+&lt;/h2>&lt;p>如果一次有多個檔案要分享，例如一個網站，可以用 &lt;code>-w&lt;/code> &lt;strong>保留目錄結構&lt;/strong>，例如以下目錄&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -673,11 +673,11 @@
 &lt;p>&lt;strong>Warning&lt;/strong>&lt;br>
 因為目錄也是根據內容雜湊，所以你不能修改目錄內的檔案而不變動目錄的 CID，就和檔案一樣&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="可變位址">可變位址&lt;/h2>
-&lt;h2 id="ipns">IPNS&lt;/h2>
-&lt;p>ipfs 有個介紹到這裡，有個小問題，一個檔案只要一更改，位址（CID）就會改變，這對於網路存取很不友善，誰知道那一大串 hash 要去哪裡找？因此 ipfs 提供了一個方案：IPNS&lt;/p>
-&lt;h3 id="publish">publish&lt;/h3>
-&lt;p>首先，我們先準備一個 CID &lt;code>QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&lt;/code>，他的內容就一個字「hi」。一樣 add 之後，就要來使用 ipns 了&lt;/p>
+&lt;h2 id="可變位址">&lt;a href="#%e5%8f%af%e8%ae%8a%e4%bd%8d%e5%9d%80" class="header-anchor">&lt;/a>可變位址
+&lt;/h2>&lt;h2 id="ipns">&lt;a href="#ipns" class="header-anchor">&lt;/a>IPNS
+&lt;/h2>&lt;p>ipfs 有個介紹到這裡，有個小問題，一個檔案只要一更改，位址（CID）就會改變，這對於網路存取很不友善，誰知道那一大串 hash 要去哪裡找？因此 ipfs 提供了一個方案：IPNS&lt;/p>
+&lt;h3 id="publish">&lt;a href="#publish" class="header-anchor">&lt;/a>publish
+&lt;/h3>&lt;p>首先，我們先準備一個 CID &lt;code>QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&lt;/code>，他的內容就一個字「hi」。一樣 add 之後，就要來使用 ipns 了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -700,8 +700,8 @@
 &lt;p>&lt;strong>Notice&lt;/strong>&lt;br>
 &lt;code>/ipfs/CID&lt;/code> 或是 &lt;code>/ipns/&amp;lt;key&amp;gt;&lt;/code> 都可以想成 path，放在 &lt;code>$ ipfs cat&lt;/code>、&lt;code>$ ipfs ls&lt;/code> 後面當參數。或是可以透過公開的閘道器，例如 &lt;a class="link" href="ipfs.io" >ipfs.io&lt;/a> 存取。&lt;code>https://ipfs.io/ipfs/&amp;lt;CID&amp;gt;&lt;/code>、&lt;code>https://ipfs.io/ipns/&amp;lt;key&amp;gt;&lt;/code>&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="republish">republish&lt;/h3>
-&lt;p>我們還沒示範到 ipns 的重要功能：可變位址。現在準備另一個 CID &lt;code>QmermPSVVcmcutmQ1woTAtUcByUvoS2F3ZcKdkdbuAdEi5&lt;/code>，內容是「hihi」&lt;/p>
+&lt;h3 id="republish">&lt;a href="#republish" class="header-anchor">&lt;/a>republish
+&lt;/h3>&lt;p>我們還沒示範到 ipns 的重要功能：可變位址。現在準備另一個 CID &lt;code>QmermPSVVcmcutmQ1woTAtUcByUvoS2F3ZcKdkdbuAdEi5&lt;/code>，內容是「hihi」&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -717,8 +717,8 @@
 &lt;p>&lt;strong>Notice&lt;/strong>&lt;br>
 你不用擔心有其他人會擅自幫你更新 key 的指向，因為那個 key 其實是一對非對稱金鑰的公鑰，私鑰存在你的電腦，只有有私鑰的人才能更新。&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="dnslink">DNSLink&lt;/h2>
-&lt;p>如果你覺得用非對稱金鑰產生的 key 很醜，還是記不住，你可以透過傳統的 DNS 來當作 key（意味著這部份其實是中心化的，要付錢）&lt;br>
+&lt;h2 id="dnslink">&lt;a href="#dnslink" class="header-anchor">&lt;/a>DNSLink
+&lt;/h2>&lt;p>如果你覺得用非對稱金鑰產生的 key 很醜，還是記不住，你可以透過傳統的 DNS 來當作 key（意味著這部份其實是中心化的，要付錢）&lt;br>
 DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指向 CID &lt;code>QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&lt;/code>，那就在 &lt;code>_dnslink.ipfs.simbafs.cc&lt;/code> 新增一條 TXT DNS 紀錄 &lt;code>dnslink=/ipfs/QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&lt;/code>，這時候你就可以用 &lt;code>/ipns/ipfs.simbafs.cc&lt;/code> 來代替 &lt;code>/ipfs/QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&lt;/code> 了&lt;br>
 這時候你可以查 DNS 紀錄，如果正常就代表設定完成了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -731,18 +731,18 @@ DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指�
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;dnslink=dnslink=/ipfs/QmZLRFWaz9Kypt2ACNMDzA5uzACDRiCqwdkNSP1UZsu56D&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="ipns-in-dnslink">ipns in DNSLink&lt;/h3>
-&lt;p>如果你查看 ipfs.io 的 DNSLink 紀錄，你會發現他的內容是 &lt;code>dnslink=/ipns/website.ipfs.io&lt;/code>，也就是說 &lt;code>/ipns/ipfs.io&lt;/code> 和 &lt;code>/ipns/website.ipfs.io&lt;/code> 是一樣的，從瀏覽器看起來也的確如此。再查 website 的 DNSLink 紀錄 &lt;code>dnslink=/ipfs/QmQoprt2cVNJKrDUTg2QYHmaqw7T1E36sSg9bPiWgoLY48&lt;/code>，看來 ipfs.io 真正指向的 CID 其實是 &lt;code>Qm....Y48&lt;/code>&lt;br>
+&lt;/div>&lt;h3 id="ipns-in-dnslink">&lt;a href="#ipns-in-dnslink" class="header-anchor">&lt;/a>ipns in DNSLink
+&lt;/h3>&lt;p>如果你查看 ipfs.io 的 DNSLink 紀錄，你會發現他的內容是 &lt;code>dnslink=/ipns/website.ipfs.io&lt;/code>，也就是說 &lt;code>/ipns/ipfs.io&lt;/code> 和 &lt;code>/ipns/website.ipfs.io&lt;/code> 是一樣的，從瀏覽器看起來也的確如此。再查 website 的 DNSLink 紀錄 &lt;code>dnslink=/ipfs/QmQoprt2cVNJKrDUTg2QYHmaqw7T1E36sSg9bPiWgoLY48&lt;/code>，看來 ipfs.io 真正指向的 CID 其實是 &lt;code>Qm....Y48&lt;/code>&lt;br>
 這個案例告訴我們，DNSLink 不一定只能放 CID，放 ipns 的 key 也是可以的，例如指向 &lt;code>/ipns/k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm&lt;/code> 的話，只要更新 &lt;code>k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm&lt;/code> 的指向內容就可以更新網站，不需要動 DNS 紀錄&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>Notice&lt;/strong>&lt;br>
 我測試有成功，至少更新 ipns 比更新 DNS 快，而且只需要在 CLI 操作&lt;/p>
 &lt;/blockquote>
 &lt;hr>
-&lt;h2 id="瀏覽器">瀏覽器&lt;/h2>
-&lt;p>目前為止，所有的操作都在 CLI 中透過 &lt;code>ipfs&lt;/code> 命令進行，但我們的目標應該是透過瀏覽器可以看到掛在 ipfs 上的網頁吧！這個部份只能說都還不甚理想，要嘛是回歸中心化的解決方案，不然就是網址會長很醜。&lt;/p>
-&lt;h2 id="gateway-閘道器">Gateway 閘道器&lt;/h2>
-&lt;p>之所以需要閘道器，就是因為瀏覽器還無法直接讀取 ipfs 的內容，所以需要閘道器幫忙做轉發，他的功能是把 location-based 的 http 轉換成 content-addressing 的 ipfs，再將資訊返回瀏覽器，例如將 ipfs.io 透過 ipns 解析成 &lt;code>/ipfs/QmQoprt2cVNJKrDUTg2QYHmaqw7T1E36sSg9bPiWgoLY48&lt;/code>，取得內容後再將資料丟回給瀏覽器&lt;/p>
+&lt;h2 id="瀏覽器">&lt;a href="#%e7%80%8f%e8%a6%bd%e5%99%a8" class="header-anchor">&lt;/a>瀏覽器
+&lt;/h2>&lt;p>目前為止，所有的操作都在 CLI 中透過 &lt;code>ipfs&lt;/code> 命令進行，但我們的目標應該是透過瀏覽器可以看到掛在 ipfs 上的網頁吧！這個部份只能說都還不甚理想，要嘛是回歸中心化的解決方案，不然就是網址會長很醜。&lt;/p>
+&lt;h2 id="gateway-閘道器">&lt;a href="#gateway-%e9%96%98%e9%81%93%e5%99%a8" class="header-anchor">&lt;/a>Gateway 閘道器
+&lt;/h2>&lt;p>之所以需要閘道器，就是因為瀏覽器還無法直接讀取 ipfs 的內容，所以需要閘道器幫忙做轉發，他的功能是把 location-based 的 http 轉換成 content-addressing 的 ipfs，再將資訊返回瀏覽器，例如將 ipfs.io 透過 ipns 解析成 &lt;code>/ipfs/QmQoprt2cVNJKrDUTg2QYHmaqw7T1E36sSg9bPiWgoLY48&lt;/code>，取得內容後再將資料丟回給瀏覽器&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -783,31 +783,31 @@ DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指�
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └───────────┘
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="使用閘道器">使用閘道器&lt;/h2>
-&lt;p>先整理一下我們現在有的東西&lt;/p>
+&lt;/div>&lt;h2 id="使用閘道器">&lt;a href="#%e4%bd%bf%e7%94%a8%e9%96%98%e9%81%93%e5%99%a8" class="header-anchor">&lt;/a>使用閘道器
+&lt;/h2>&lt;p>先整理一下我們現在有的東西&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">key&lt;/th>
-&lt;th style="text-align:left">value&lt;/th>
+&lt;th style="text-align: center">key&lt;/th>
+&lt;th style="text-align: left">value&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">CID&lt;/td>
-&lt;td style="text-align:left">&lt;code>/ipfs/QmermPSVVcmcutmQ1woTAtUcByUvoS2F3ZcKdkdbuAdEi5&lt;/code>&lt;/td>
+&lt;td style="text-align: center">CID&lt;/td>
+&lt;td style="text-align: left">&lt;code>/ipfs/QmermPSVVcmcutmQ1woTAtUcByUvoS2F3ZcKdkdbuAdEi5&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">ipns key&lt;/td>
-&lt;td style="text-align:left">&lt;code>/ipns/k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm&lt;/code>&lt;/td>
+&lt;td style="text-align: center">ipns key&lt;/td>
+&lt;td style="text-align: left">&lt;code>/ipns/k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">DNSLink&lt;/td>
-&lt;td style="text-align:left">&lt;code>ipfs.simbafs.cc&lt;/code>&lt;/td>
+&lt;td style="text-align: center">DNSLink&lt;/td>
+&lt;td style="text-align: left">&lt;code>ipfs.simbafs.cc&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">閘道器&lt;/td>
-&lt;td style="text-align:left">ipfs.io&lt;/td>
+&lt;td style="text-align: center">閘道器&lt;/td>
+&lt;td style="text-align: left">ipfs.io&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -822,8 +822,8 @@ DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指�
 &lt;li>ipfs.io/ipns/k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm&lt;/li>
 &lt;li>ipfs.io/ipns/ipfs.simbafs.cc&lt;/li>
 &lt;/ul>
-&lt;h2 id="本機閘道器">本機閘道器&lt;/h2>
-&lt;p>已經有公共閘道器了，為什麼還需要本機閘道器呢？因為公共閘道器，說到底還是一個中心化的設施，如果我們希望整個過程都是去中心化，那就要用本機的閘道器。而且如果你的檔案是放在本機，那用本機閘道器會最快找到，因為距離最近嘛，而且用本機閘道器還有加速網頁載入的效果，類似 cache。&lt;br>
+&lt;h2 id="本機閘道器">&lt;a href="#%e6%9c%ac%e6%a9%9f%e9%96%98%e9%81%93%e5%99%a8" class="header-anchor">&lt;/a>本機閘道器
+&lt;/h2>&lt;p>已經有公共閘道器了，為什麼還需要本機閘道器呢？因為公共閘道器，說到底還是一個中心化的設施，如果我們希望整個過程都是去中心化，那就要用本機的閘道器。而且如果你的檔案是放在本機，那用本機閘道器會最快找到，因為距離最近嘛，而且用本機閘道器還有加速網頁載入的效果，類似 cache。&lt;br>
 使用本機閘道器很簡單，開啟 ipfs daemon 時就已經預設開一個本機閘道器了，位址在 localhost:8080，接著來看看怎樣可以連上我們的檔案&lt;/p>
 &lt;p>首先是和公共閘道器一樣的功能&lt;/p>
 &lt;ul>
@@ -837,8 +837,8 @@ DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指�
 &lt;li>k51qzi5uqu5djj5l4icq7jgwc06bzhxjxpwo0ghpyf9h5pah5hr5i4se7sosnm.ipns.localhost:8080&lt;/li>
 &lt;/ul>
 &lt;blockquote>
-&lt;h3 id="cid-in-subdomain">CID in subdomain&lt;/h3>
-&lt;p>插播一下，看到這裡，你會發現 DNSLink、ipns key 都可以放在閘道器的 subdomain，那為什麼 CID 不行呢？其實不是不行，但是需要小修改一下，因為我們的 CID 是區分大小寫的（case-sensitive），但是 domain name 是不區分大小寫的（case-insensitive，也就是說 google.com = Google.com = GoOglE.cOm），所以我們需要換一個 case-insensitive 的雜湊。&lt;br>
+&lt;h3 id="cid-in-subdomain">&lt;a href="#cid-in-subdomain" class="header-anchor">&lt;/a>CID in subdomain
+&lt;/h3>&lt;p>插播一下，看到這裡，你會發現 DNSLink、ipns key 都可以放在閘道器的 subdomain，那為什麼 CID 不行呢？其實不是不行，但是需要小修改一下，因為我們的 CID 是區分大小寫的（case-sensitive），但是 domain name 是不區分大小寫的（case-insensitive，也就是說 google.com = Google.com = GoOglE.cOm），所以我們需要換一個 case-insensitive 的雜湊。&lt;br>
 &lt;code>--cid-version 1&lt;/code> 這個選項會預設的 CIDv0 改成 CIDv1，CIDv1 會產生 case-insensitive 的雜湊。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -852,14 +852,14 @@ DNSLink 的用法很簡單，假設你想要把 ipfs.simbafs.cc 當作 key 指�
 &lt;/div>
 &lt;/div>&lt;/blockquote>
 &lt;p>回到閘道器，慎選閘道器大概是比你的檔案怎麼丟上 ipfs 還重要的事，不只是因為閘道器的選擇會影響載入速度，更是因為閘道器代理了你的網頁，所以他可以修改、或是監控網頁的活動，再加上瀏覽器同源政策的影響，如果閘道器上有人要做壞事，那網站的資安可能就會受到威脅。但這方面我沒有研究，我知道可以避免的方式是不要用閘道器預設的網址，可以用 CNAME 改成自己的 domain，再來是選擇信任的閘道器，像是 ipfs.io、cf-ipfs.com 等等。當然如果是用自己的閘道器或是本機閘道器就更好了（但可能就要犧牲效能或是網址會變醜）。&lt;/p>
-&lt;h2 id="架一個看起來很像正常但其實是放在-ipfs-的網頁">架一個看起來很像正常但其實是放在 ipfs 的網頁&lt;/h2>
-&lt;p>研究中&amp;hellip;https 搞不定&lt;br>
+&lt;h2 id="架一個看起來很像正常但其實是放在-ipfs-的網頁">&lt;a href="#%e6%9e%b6%e4%b8%80%e5%80%8b%e7%9c%8b%e8%b5%b7%e4%be%86%e5%be%88%e5%83%8f%e6%ad%a3%e5%b8%b8%e4%bd%86%e5%85%b6%e5%af%a6%e6%98%af%e6%94%be%e5%9c%a8-ipfs-%e7%9a%84%e7%b6%b2%e9%a0%81" class="header-anchor">&lt;/a>架一個看起來很像正常但其實是放在 ipfs 的網頁
+&lt;/h2>&lt;p>研究中&amp;hellip;https 搞不定&lt;br>
 gateway timeout&amp;hellip;&lt;/p>
 &lt;hr>
-&lt;h2 id="心得">心得&lt;/h2>
-&lt;p>ipfs 是真的有潛力改變網路生態的，但是他還有兩大問題要解決，一是如何獎勵/強迫做種（借用 BT 的名詞 XD），也就是節點中心化問題，二是閘道器中心化問題，兩個都解決了或許 ipfs 就可以真正的實現&lt;/p>
-&lt;h2 id="如何獎勵強迫做種節點中心化問題">如何獎勵/強迫做種（節點中心化問題）&lt;/h2>
-&lt;p>這個問題和 BT 一樣，假設今天我一個無名小卒想要在 ipfs 發布一個檔案，很顯然我自己開一個節點最簡單方便，但是如果我的檔案瀏覽人數不多，就會變成只有我自己和少數的節點存資料，那存取速度會慢到靠北。要解決這個問題，就會產生出像是 cloudflare 這種 CDN 幫忙「快取」（以 ipfs 的術語來說應該就是「做種」）的服務，甚至是要付費的。最後就變成要發布檔案就要找這些 CDN 付費，不然他們的伺服器就不會存你的檔案，每次都要滿世界找到你的節點，才能要到資料。&lt;br>
+&lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
+&lt;/h2>&lt;p>ipfs 是真的有潛力改變網路生態的，但是他還有兩大問題要解決，一是如何獎勵/強迫做種（借用 BT 的名詞 XD），也就是節點中心化問題，二是閘道器中心化問題，兩個都解決了或許 ipfs 就可以真正的實現&lt;/p>
+&lt;h2 id="如何獎勵強迫做種節點中心化問題">&lt;a href="#%e5%a6%82%e4%bd%95%e7%8d%8e%e5%8b%b5%e5%bc%b7%e8%bf%ab%e5%81%9a%e7%a8%ae%e7%af%80%e9%bb%9e%e4%b8%ad%e5%bf%83%e5%8c%96%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>如何獎勵/強迫做種（節點中心化問題）
+&lt;/h2>&lt;p>這個問題和 BT 一樣，假設今天我一個無名小卒想要在 ipfs 發布一個檔案，很顯然我自己開一個節點最簡單方便，但是如果我的檔案瀏覽人數不多，就會變成只有我自己和少數的節點存資料，那存取速度會慢到靠北。要解決這個問題，就會產生出像是 cloudflare 這種 CDN 幫忙「快取」（以 ipfs 的術語來說應該就是「做種」）的服務，甚至是要付費的。最後就變成要發布檔案就要找這些 CDN 付費，不然他們的伺服器就不會存你的檔案，每次都要滿世界找到你的節點，才能要到資料。&lt;br>
 當然，因為 ipfs 的天生設計關係，這個問題比傳統的 http 來說容易解決，畢竟總是會有其他小節點幫忙做種，但這還是一個值得關心的問題。&lt;br>
 開發 ipfs 的 protocal lab 曾經提出一個方案來把做種的成本轉移，那就是發行 &lt;a class="link" href="https://en.wikipedia.org/wiki/Filecoin" target="_blank" rel="noopener"
 >FileCoin&lt;/a>，但是以目前的市場來看，任何加密貨幣都會被拿去炒作，然後高機率爆掉，看下圖的 FileCoin 走勢就知道他被炒過一遍了&lt;/p>
@@ -871,13 +871,13 @@ alt="filecoin"
 >source: https://crypto.com/price/zh-TW/filecoin&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;p>這樣的機制能不能讓更多人願意做種？很難說&lt;/p>
-&lt;h2 id="閘道器中心化問題">閘道器中心化問題&lt;/h2>
-&lt;p>如果節點中心化無法解決，至少我覺得閘道器中心化是容易解決的，只要瀏覽器內嵌 ipfs 就好了，或是像當年 Adobe Flash 一樣要裝外掛（也就是類似現在的本地閘道器作法），而且當這東西變成標配之後做種的問題也順帶解決&lt;/p>
-&lt;h2 id="參考資料">參考資料&lt;/h2>
-&lt;p>&lt;a class="link" href="https://docs.ipfs.tech" target="_blank" rel="noopener"
->ipfs docs&lt;/a>&lt;/p></description></item><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/atlassian/bitbucket-connect-jira/index.png" alt="Featured image of post Bitbucket Connect Jira" />&lt;h1 id="bitbucket-connect-jira">Bitbucket Connect Jira&lt;/h1>
-&lt;h2 id="bitbucket-連接-jira">Bitbucket 連接 Jira&lt;/h2>
-&lt;p>先到 Bitbucket 的 repo 的 Jira issue 頁面
+&lt;h2 id="閘道器中心化問題">&lt;a href="#%e9%96%98%e9%81%93%e5%99%a8%e4%b8%ad%e5%bf%83%e5%8c%96%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>閘道器中心化問題
+&lt;/h2>&lt;p>如果節點中心化無法解決，至少我覺得閘道器中心化是容易解決的，只要瀏覽器內嵌 ipfs 就好了，或是像當年 Adobe Flash 一樣要裝外掛（也就是類似現在的本地閘道器作法），而且當這東西變成標配之後做種的問題也順帶解決&lt;/p>
+&lt;h2 id="參考資料">&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="header-anchor">&lt;/a>參考資料
+&lt;/h2>&lt;p>&lt;a class="link" href="https://docs.ipfs.tech" target="_blank" rel="noopener"
+>ipfs docs&lt;/a>&lt;/p></description></item><item><title>Bitbucket Connect Jira</title><link>https://blog.simbafs.cc/p/index/</link><pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/index/</guid><description>&lt;img src="https://blog.simbafs.cc/og/atlassian/bitbucket-connect-jira/index.png" alt="Featured image of post Bitbucket Connect Jira" />&lt;h1 id="bitbucket-connect-jira">&lt;a href="#bitbucket-connect-jira" class="header-anchor">&lt;/a>Bitbucket Connect Jira
+&lt;/h1>&lt;h2 id="bitbucket-連接-jira">&lt;a href="#bitbucket-%e9%80%a3%e6%8e%a5-jira" class="header-anchor">&lt;/a>Bitbucket 連接 Jira
+&lt;/h2>&lt;p>先到 Bitbucket 的 repo 的 Jira issue 頁面
 &lt;img src="https://blog.simbafs.cc/1.png"
 loading="lazy"
 alt="1"
@@ -897,8 +897,8 @@ alt="3"
 loading="lazy"
 alt="4"
 >&lt;/p>
-&lt;h2 id="jira-issue-連結-bitbucket-branch">Jira issue 連結 Bitbucket branch&lt;/h2>
-&lt;p>Bitbucket 的 repo 的 Jira issue 頁面，點擊要處理的 Jira issue 最右側的三個點點
+&lt;h2 id="jira-issue-連結-bitbucket-branch">&lt;a href="#jira-issue-%e9%80%a3%e7%b5%90-bitbucket-branch" class="header-anchor">&lt;/a>Jira issue 連結 Bitbucket branch
+&lt;/h2>&lt;p>Bitbucket 的 repo 的 Jira issue 頁面，點擊要處理的 Jira issue 最右側的三個點點
 &lt;img src="https://blog.simbafs.cc/4.png"
 loading="lazy"
 alt="4"
@@ -913,8 +913,8 @@ alt="5"
 loading="lazy"
 alt="6"
 >&lt;/p>
-&lt;h2 id="將遠端-git-brench-拉到本地">將遠端 Git brench 拉到本地&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="將遠端-git-brench-拉到本地">&lt;a href="#%e5%b0%87%e9%81%a0%e7%ab%af-git-brench-%e6%8b%89%e5%88%b0%e6%9c%ac%e5%9c%b0" class="header-anchor">&lt;/a>將遠端 Git brench 拉到本地
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -924,8 +924,8 @@ alt="6"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ git switch &amp;lt;branch name&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="合併分支">合併分支&lt;/h2>
-&lt;p>目標：將 A 分支合併到 main 分支&lt;/p>
+&lt;/div>&lt;h2 id="合併分支">&lt;a href="#%e5%90%88%e4%bd%b5%e5%88%86%e6%94%af" class="header-anchor">&lt;/a>合併分支
+&lt;/h2>&lt;p>目標：將 A 分支合併到 main 分支&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1

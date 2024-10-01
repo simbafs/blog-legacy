@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Passport.js on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/passport.js/</link><description>Recent content in Passport.js on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/passport.js/index.xml" rel="self" type="application/rss+xml"/><item><title>Passport.js</title><link>https://blog.simbafs.cc/p/js/passport.js/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/js/passport.js/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/passport.js.png" alt="Featured image of post Passport.js" />&lt;h1 id="passportjs">Passport.js&lt;/h1>
-&lt;p>今天終於把登入做完了
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Passport.js on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/passport.js/</link><description>Recent content in Passport.js on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/passport.js/index.xml" rel="self" type="application/rss+xml"/><item><title>Passport.js</title><link>https://blog.simbafs.cc/p/passport.js/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/passport.js/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/passport.js.png" alt="Featured image of post Passport.js" />&lt;h1 id="passportjs">&lt;a href="#passportjs" class="header-anchor">&lt;/a>Passport.js
+&lt;/h1>&lt;p>今天終於把登入做完了
 我覺得最重要的是找好的教學文章、去看沒有人看得懂的程式碼&lt;/p>
 &lt;hr>
-&lt;h2 id="passportjs-1">passport.js&lt;/h2>
-&lt;ol>
+&lt;h2 id="passportjs-1">&lt;a href="#passportjs-1" class="header-anchor">&lt;/a>passport.js
+&lt;/h2>&lt;ol>
 &lt;li>建立 strategy&lt;/li>
 &lt;li>弄 session&lt;/li>
 &lt;li>弄 auth 函式
