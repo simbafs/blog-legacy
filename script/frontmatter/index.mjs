@@ -67,7 +67,7 @@ async function main() {
 	let files
 	if (onlyChange) {
 		files = await exec('git add . && git diff HEAD --name-only')
-			.then(({ stdout }) => stdout.split('\n').filter(item => item && item.match(/^content.*\.md$/)))
+			.then(({ stdout }) => stdout.split('\n').filter(item => item && item.match(/^content\/post.*\.md$/)))
 			.catch(e => {
 				console.error(e)
 				process.exit(1)
