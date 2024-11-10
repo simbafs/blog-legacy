@@ -1,7 +1,7 @@
 ---
 title: Aconf
 slug: aconf
-date: '2021-09-24'
+date: '2021-09-24T00:00:00.000Z'
 tags:
   - config
   - toml

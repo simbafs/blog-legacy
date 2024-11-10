@@ -1,7 +1,7 @@
 ---
 title: Node Require from Project Root
 slug: node-require-from-project-root
-date: '2020-09-02'
+date: '2020-09-02T00:00:00.000Z'
 tags:
   - nodejs
 categories:

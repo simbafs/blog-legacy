@@ -1,7 +1,7 @@
 ---
 title: kdeconnect
 slug: kdeconnect
-date: '2022-04-07'
+date: '2022-04-07T00:00:00.000Z'
 tags:
   - linux
   - kde

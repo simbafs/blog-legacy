@@ -1,7 +1,7 @@
 ---
 title: Mxlinux Boot with Systemd
 slug: mxlinux-boot-with-systemd
-date: '2020-09-05'
+date: '2020-09-05T00:00:00.000Z'
 tags:
   - mxlinux
   - systemd

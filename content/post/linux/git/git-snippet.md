@@ -1,7 +1,7 @@
 ---
 title: Git Snippet
 slug: git-snippet
-date: '2023-02-20'
+date: '2023-02-20T00:00:00.000Z'
 tags:
   - git
 categories:

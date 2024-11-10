@@ -1,7 +1,7 @@
 ---
 title: Day 13：vim 設定檔
 slug: day13
-date: '2021-09-13'
+date: '2021-09-13T00:00:00.000Z'
 tags:
   - cli
   - terminal

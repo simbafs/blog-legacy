@@ -1,7 +1,7 @@
 ---
 title: Day 11：批次修改！！
 slug: day11
-date: '2021-09-11'
+date: '2021-09-11T00:00:00.000Z'
 tags:
   - cli
   - terminal

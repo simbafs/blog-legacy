@@ -1,7 +1,7 @@
 ---
 title: Wireshark Over SSH in Docker
 slug: wireshark-over-ssh-in-docker
-date: '2023-07-09'
+date: '2023-07-09T00:00:00.000Z'
 tags:
   - wireshark
   - docker

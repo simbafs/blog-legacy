@@ -1,7 +1,7 @@
 ---
 title: File System
 slug: fs
-date: '2022-08-04'
+date: '2022-08-04T00:00:00.000Z'
 tags:
   - fs
   - filesystem

@@ -1,7 +1,7 @@
 ---
 title: Bash Snippet
 slug: snippet
-date: '2023-02-25'
+date: '2023-02-25T00:00:00.000Z'
 tags:
   - bash
   - snippet

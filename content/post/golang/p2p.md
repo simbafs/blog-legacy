@@ -1,7 +1,7 @@
 ---
 title: p2p
 slug: p2p
-date: '2022-08-16'
+date: '2022-08-16T00:00:00.000Z'
 tags:
   - p2p
   - network

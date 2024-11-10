@@ -1,7 +1,7 @@
 ---
 title: Day 18：幫你的 HTML 開發裝上噴射引擎！vim-emmet
 slug: day18
-date: '2021-09-18'
+date: '2021-09-18T00:00:00.000Z'
 tags:
   - cli
   - terminal

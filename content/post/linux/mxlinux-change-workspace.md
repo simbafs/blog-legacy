@@ -1,7 +1,7 @@
 ---
 title: Mxlinux Change Workspace
 slug: mxlinux-change-workspace
-date: '2020-05-08'
+date: '2020-05-08T00:00:00.000Z'
 tags:
   - mxlinux
 categories:

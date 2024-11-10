@@ -1,7 +1,7 @@
 ---
 title: Connect to Ethernet in Docker Container
 slug: connect-to-ethernet-in-docker-container
-date: '2020-11-28'
+date: '2020-11-28T00:00:00.000Z'
 tags:
   - docker
   - linux

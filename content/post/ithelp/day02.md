@@ -1,7 +1,7 @@
 ---
 title: Day 02 ：zsh 與 shell script
 slug: day02
-date: '2021-09-02'
+date: '2021-09-02T00:00:00.000Z'
 tags:
   - cli
   - terminal

@@ -1,7 +1,7 @@
 ---
 title: Day 05：是說，這個選項可以接什麼東西？autocomplete 與 auto-pair
 slug: day05
-date: '2021-09-05'
+date: '2021-09-05T00:00:00.000Z'
 tags:
   - cli
   - terminal

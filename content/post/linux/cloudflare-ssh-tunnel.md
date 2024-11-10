@@ -1,7 +1,7 @@
 ---
 title: Cloudflare SSH Tunnel
 slug: cloudflare-ssh-tunnel
-date: '2023-09-16'
+date: '2023-09-16T00:00:00.000Z'
 tags:
   - ssh
   - zero trust

@@ -1,7 +1,7 @@
 ---
 title: Day 03：轉吧轉吧七彩霓虹燈之 p10k
 slug: day03
-date: '2021-09-03'
+date: '2021-09-03T00:00:00.000Z'
 tags:
   - cli
   - terminal

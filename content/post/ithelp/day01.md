@@ -1,7 +1,7 @@
 ---
 title: Day 01：前言，這批很純，快進來吧！
 slug: day01
-date: '2021-09-01'
+date: '2021-09-01T00:00:00.000Z'
 tags:
   - cli
   - terminal

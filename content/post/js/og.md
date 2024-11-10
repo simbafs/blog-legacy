@@ -1,7 +1,7 @@
 ---
 title: 編譯時期產生縮圖
 slug: og
-date: '2023-08-30'
+date: '2023-08-30T00:00:00.000Z'
 tags:
   - og
   - svg

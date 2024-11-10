@@ -1,7 +1,7 @@
 ---
 title: Day 04：金魚記憶力太短暫，交給外掛記吧！autosuggestions 與 sugstring-search
 slug: day04
-date: '2021-09-04'
+date: '2021-09-04T00:00:00.000Z'
 tags:
   - cli
   - terminal

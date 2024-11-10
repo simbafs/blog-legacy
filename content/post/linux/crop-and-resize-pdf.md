@@ -1,7 +1,7 @@
 ---
 title: Crop and Resize PDF
 slug: crop-and-resize-pdf
-date: '2024-01-09'
+date: '2024-01-09T00:00:00.000Z'
 tags:
   - pdf
   - cmd

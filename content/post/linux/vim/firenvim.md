@@ -1,7 +1,7 @@
 ---
 title: Firenvim
 slug: firenvim
-date: '2023-08-18'
+date: '2023-08-18T00:00:00.000Z'
 tags:
   - nvim
   - vim

@@ -1,7 +1,7 @@
 ---
 title: sqlite3
 slug: sqlite
-date: '2020-03-13'
+date: '2020-03-13T00:00:00.000Z'
 tags:
   - node
   - sqlite

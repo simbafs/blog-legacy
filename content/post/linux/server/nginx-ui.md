@@ -1,7 +1,7 @@
 ---
 title: Nginx UI
 slug: nginx-ui
-date: '2020-06-23'
+date: '2020-06-23T00:00:00.000Z'
 tags:
   - nginx linux
 categories:

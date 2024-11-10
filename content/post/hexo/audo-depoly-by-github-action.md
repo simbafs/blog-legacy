@@ -1,7 +1,7 @@
 ---
 title: Audo Depoly by Github Action
 slug: audo-depoly-by-github-action
-date: '2020-02-11'
+date: '2020-02-11T00:00:00.000Z'
 tags:
   - hexo
   - github action

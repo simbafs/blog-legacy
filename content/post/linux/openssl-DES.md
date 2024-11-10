@@ -1,7 +1,7 @@
 ---
 title: Openssl DES
 slug: openssl-DES
-date: '2022-10-02'
+date: '2022-10-02T00:00:00.000Z'
 tags:
   - cryptography
   - encryption

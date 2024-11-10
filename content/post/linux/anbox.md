@@ -1,7 +1,7 @@
 ---
 title: Anbox
 slug: anbox
-date: '2022-04-18'
+date: '2022-04-18T00:00:00.000Z'
 tags:
   - anbox
   - linux

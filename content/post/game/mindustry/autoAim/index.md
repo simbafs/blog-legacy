@@ -1,7 +1,7 @@
 ---
 title: 砲台自動瞄準
 slug: turretAutoAim
-date: '2022-05-18'
+date: '2022-05-18T00:00:00.000Z'
 tags:
   - mindustry
 categories:

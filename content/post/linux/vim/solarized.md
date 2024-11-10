@@ -1,7 +1,7 @@
 ---
 title: Solarized
 slug: solarized
-date: '2022-06-15'
+date: '2022-06-15T00:00:00.000Z'
 tags:
   - vim
   - colorscheme

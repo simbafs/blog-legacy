@@ -1,7 +1,7 @@
 ---
 title: Firefox Event Listener Breakpoint
 slug: firefox-event-listener-breakpoint
-date: '2020-03-25'
+date: '2020-03-25T00:00:00.000Z'
 tags:
   - js
   - frontend

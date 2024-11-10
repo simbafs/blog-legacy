@@ -1,7 +1,7 @@
 ---
 title: GPG with SSH
 slug: gpg-with-ssh
-date: '2022-12-06'
+date: '2022-12-06T00:00:00.000Z'
 tags:
   - GPG
   - SSH

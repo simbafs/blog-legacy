@@ -1,7 +1,7 @@
 ---
 title: Libreoffice Code Format Plugin Installation
 slug: libreoffice-code-format-plugin-install
-date: '2021-03-13'
+date: '2021-03-13T00:00:00.000Z'
 tags:
   - libreoffice
   - code format

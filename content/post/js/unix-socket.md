@@ -1,7 +1,7 @@
 ---
 title: Unix Socket
 slug: unix-socket
-date: '2020-02-23'
+date: '2020-02-23T00:00:00.000Z'
 tags:
   - unix socket
   - node

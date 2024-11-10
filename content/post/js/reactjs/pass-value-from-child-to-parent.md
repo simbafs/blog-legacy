@@ -1,13 +1,15 @@
 ---
 title: Pass Value From Child to Parent
 slug: pass-value-from-child-to-parent
-date: 2024-10-12T23:10:30+08:00
+date: '2024-10-12T15:10:30.000Z'
 tags:
-    - context
-    - rerender
+  - context
+  - rerender
 categories:
+  - js
+  - reactjs
 draft: true
-image:
+image: /og/js/reactjs/pass-value-from-child-to-parent.png
 ---
 
 # Pass Value From Child to Parent

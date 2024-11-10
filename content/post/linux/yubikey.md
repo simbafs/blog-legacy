@@ -1,7 +1,7 @@
 ---
 title: Yubikey
 slug: yubikey
-date: '2022-04-19'
+date: '2022-04-19T00:00:00.000Z'
 tags:
   - yubikey
   - ssh

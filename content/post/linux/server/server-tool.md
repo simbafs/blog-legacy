@@ -1,7 +1,7 @@
 ---
 title: Server Tool
 slug: server-tool
-date: '2020-02-16'
+date: '2020-02-16T00:00:00.000Z'
 tags:
   - bash
   - RegEx

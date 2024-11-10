@@ -1,7 +1,7 @@
 ---
 title: Python Snippet
 slug: snippet
-date: '2023-02-23'
+date: '2023-02-23T00:00:00.000Z'
 tags:
   - python
   - snippet

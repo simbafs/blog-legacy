@@ -1,7 +1,7 @@
 ---
 title: LaTeX Starter
 slug: LaTeX-starter
-date: '2021-12-22'
+date: '2021-12-22T00:00:00.000Z'
 tags:
   - latex
 categories:

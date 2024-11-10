@@ -1,7 +1,7 @@
 ---
 title: Day 21：儲存器與剪貼簿
 slug: day21
-date: '2021-09-21'
+date: '2021-09-21T00:00:00.000Z'
 tags:
   - cli
   - terminal

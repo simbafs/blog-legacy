@@ -1,7 +1,7 @@
 ---
 title: Merge Two Repo
 slug: merge-two-repo
-date: '2022-10-18'
+date: '2022-10-18T00:00:00.000Z'
 tags:
   - git
   - merge

@@ -1,7 +1,7 @@
 ---
 title: Ibus Font
 slug: ibus-font
-date: '2022-04-16'
+date: '2022-04-16T00:00:00.000Z'
 tags:
   - ibus
   - font

@@ -1,7 +1,7 @@
 ---
 title: Day 16：自動補全！coc.nvim
 slug: day16
-date: '2021-09-16'
+date: '2021-09-16T00:00:00.000Z'
 tags:
   - cli
   - terminal

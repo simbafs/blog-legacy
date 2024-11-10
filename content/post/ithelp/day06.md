@@ -1,7 +1,7 @@
 ---
 title: Day 06：螢幕切八段！多開神器 tmux
 slug: day06
-date: '2021-09-06'
+date: '2021-09-06T00:00:00.000Z'
 tags:
   - cli
   - terminal

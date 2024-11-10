@@ -1,7 +1,7 @@
 ---
 title: hexo-cli-extras
 slug: hexo-cli-extras
-date: '2020-02-11'
+date: '2020-02-11T00:00:00.000Z'
 tags:
   - hexo
 categories:

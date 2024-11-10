@@ -1,7 +1,7 @@
 ---
 title: OpenTTD
 slug: index
-date: '2023-03-11'
+date: '2023-03-11T00:00:00.000Z'
 tags:
   - openttd
   - game

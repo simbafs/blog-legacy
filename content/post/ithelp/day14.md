@@ -1,7 +1,7 @@
 ---
 title: Day 14：vim-plug
 slug: day14
-date: '2021-09-14'
+date: '2021-09-14T00:00:00.000Z'
 tags:
   - cli
   - terminal

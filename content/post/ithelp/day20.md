@@ -1,7 +1,7 @@
 ---
 title: Day 20：切水果囉！vim 切螢幕與分頁
 slug: day20
-date: '2021-09-20'
+date: '2021-09-20T00:00:00.000Z'
 tags:
   - cli
   - terminal

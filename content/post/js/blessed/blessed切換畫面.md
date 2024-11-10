@@ -1,7 +1,7 @@
 ---
 title: Blessed 切換畫面
 slug: blessed切換畫面
-date: '2020-02-20'
+date: '2020-02-20T00:00:00.000Z'
 tags:
   - blessed
   - js

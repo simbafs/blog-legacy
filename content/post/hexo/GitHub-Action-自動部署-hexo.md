@@ -1,7 +1,7 @@
 ---
 title: GitHub Action 自動部署 hexo
 slug: GitHub-Action-自動部署-hexo
-date: '2020-08-16'
+date: '2020-08-16T00:00:00.000Z'
 tags:
   - hexo
   - github

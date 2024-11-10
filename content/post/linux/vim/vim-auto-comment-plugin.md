@@ -1,7 +1,7 @@
 ---
 title: Vim Auto Comment Plugin
 slug: vim-auto-comment-plugin
-date: '2020-08-25'
+date: '2020-08-25T00:00:00.000Z'
 tags:
   - vim
   - auto

@@ -1,7 +1,7 @@
 ---
 title: 不同「邊數」的平面
 slug: plantOfNumbers
-date: '2022-06-11'
+date: '2022-06-11T00:00:00.000Z'
 tags:
   - buckyball
 categories:

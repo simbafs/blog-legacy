@@ -1,18 +1,17 @@
-const path = require('path')
-const fs = require('fs/promises')
-const exec = require('util').promisify(require('child_process').exec)
-const matter = require('gray-matter')
-const yaml = require('js-yaml')
-const { getOg } = require('@simbafs/og')
+import path from 'path'
+import fs from 'fs/promises'
+import { promisify } from 'util'
+import { exec as _exec } from 'child_process'
+const exec = promisify(_exec)
+import matter from 'gray-matter'
+import yaml from 'js-yaml'
+import { getOg } from '@simbafs/og'
 
-/**
- * date string to yyyy-mm-dd
- * @param {string} date
- *
- * @returns {string}
- */
+import { template } from './template.mjs'
+
+/** @param {string} date */
 function formatDate(date) {
-	return new Date(date).toISOString().split('T')[0]
+	return new Date(date).toISOString()
 }
 
 const doRenderOG = process.argv.includes('--og')
@@ -39,12 +38,17 @@ async function formatMatter(matter, filepath, ctime) {
 	const pathArray = filepath.split('/').slice(2)
 
 	if (doRenderOG) {
-		const { png } = await getOg({
-			title: data.title,
-			subtitle: `${data.date} by simbafs`,
-			tags: data.tags,
-			font: '/usr/local/share/fonts/j/jf_openhuninn_2.0.ttf',
-		})
+		const { png } = await getOg(
+			{
+				title: data.title,
+				subtitle: `${data.date} by SimbaFs`,
+				tags: data.tags,
+			},
+			{
+				font: 'jf-openhuninn-2.0',
+				template,
+			},
+		)
 		// console.log(pathArray.slice(0, -1), pathArray.slice(-1)[0].replace('.md', '.png'))
 		await fs.mkdir(path.join('static', 'og', ...pathArray.slice(0, -1)), {
 			recursive: true,

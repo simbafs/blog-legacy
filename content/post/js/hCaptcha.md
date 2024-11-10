@@ -1,7 +1,7 @@
 ---
 title: hCaptcha
 slug: hCaptcha
-date: '2021-01-05'
+date: '2021-01-05T00:00:00.000Z'
 tags:
   - captcha
   - hCaptcha

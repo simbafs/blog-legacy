@@ -1,7 +1,7 @@
 ---
 title: Bitbucket Connect Jira
 slug: index
-date: '2022-07-20'
+date: '2022-07-20T00:00:00.000Z'
 tags:
   - git
 categories:

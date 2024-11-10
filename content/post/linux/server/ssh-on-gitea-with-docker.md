@@ -1,7 +1,7 @@
 ---
 title: ssh on gitea with docker
 slug: ssh-on-gitea-with-docker
-date: '2021-07-13'
+date: '2021-07-13T00:00:00.000Z'
 tags:
   - gitea
   - ssh

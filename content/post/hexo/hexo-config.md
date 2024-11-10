@@ -1,7 +1,7 @@
 ---
 title: hexo-config
 slug: hexo-config
-date: '2020-02-12'
+date: '2020-02-12T00:00:00.000Z'
 tags:
   - hexo
   - cactus

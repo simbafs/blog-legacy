@@ -1,7 +1,7 @@
 ---
 title: Linux 安裝跑跑卡丁車（nexon launcher）
 slug: nexon
-date: '2023-02-16'
+date: '2023-02-16T00:00:00.000Z'
 tags:
   - nexon
   - steam

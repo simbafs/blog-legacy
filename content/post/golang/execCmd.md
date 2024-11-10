@@ -1,7 +1,7 @@
 ---
 title: ExecCmd
 slug: exec-cmd
-date: '2021-10-18'
+date: '2021-10-18T00:00:00.000Z'
 tags:
   - exec
   - process

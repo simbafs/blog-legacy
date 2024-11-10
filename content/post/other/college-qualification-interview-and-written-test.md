@@ -1,7 +1,7 @@
 ---
 title: 大學二階面試、筆試
 slug: college-qualification-interview-and-written-test
-date: '2021-04-18'
+date: '2021-04-18T00:00:00.000Z'
 tags:
   - college
 categories:

@@ -1,7 +1,7 @@
 ---
 title: HTML form button
 slug: HTML-form-button
-date: '2020-06-01'
+date: '2020-06-01T00:00:00.000Z'
 tags:
   - frontent
   - HTML

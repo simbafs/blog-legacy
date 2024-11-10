@@ -1,7 +1,7 @@
 ---
 title: Reactjs Update State on Props Change
 slug: React-update-state-on-props-change
-date: '2020-07-12'
+date: '2020-07-12T00:00:00.000Z'
 tags:
   - reactjs
   - state

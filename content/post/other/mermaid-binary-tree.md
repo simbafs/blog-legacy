@@ -1,7 +1,7 @@
 ---
 title: Mermaid Binary Tree
 slug: mermaid-binary-tree
-date: '2024-01-31'
+date: '2024-01-31T00:00:00.000Z'
 tags:
   - mermaid
   - graph theorey

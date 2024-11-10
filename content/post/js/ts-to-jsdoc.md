@@ -1,7 +1,7 @@
 ---
 title: Ts to Jsdoc
 slug: ts-to-jsdoc
-date: '2023-09-02'
+date: '2023-09-02T00:00:00.000Z'
 tags: []
 categories:
   - js

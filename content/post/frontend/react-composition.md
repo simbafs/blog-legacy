@@ -1,7 +1,7 @@
 ---
 title: React 解決中文輸入法
 slug: react-composition-event
-date: '2022-02-05'
+date: '2022-02-05T00:00:00.000Z'
 tags:
   - react
   - js

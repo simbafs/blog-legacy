@@ -1,7 +1,7 @@
 ---
 title: Golang Plguin
 slug: plguin
-date: '2022-02-21'
+date: '2022-02-21T00:00:00.000Z'
 tags:
   - plugin
   - share object

@@ -1,7 +1,7 @@
 ---
 title: YouComopleteMe Install
 slug: YouComopleteMe-install
-date: '2021-05-17'
+date: '2021-05-17T00:00:00.000Z'
 tags:
   - vim
   - YCM

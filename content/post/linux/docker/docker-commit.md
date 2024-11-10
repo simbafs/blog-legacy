@@ -1,7 +1,7 @@
 ---
 title: docker commit
 slug: docker-commit
-date: '2020-11-27'
+date: '2020-11-27T00:00:00.000Z'
 tags:
   - docker
   - linux

@@ -1,7 +1,7 @@
 ---
 title: bash number loop
 slug: bash-number-loop
-date: '2020-11-15'
+date: '2020-11-15T00:00:00.000Z'
 tags:
   - bash
   - loop

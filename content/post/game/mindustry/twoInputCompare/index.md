@@ -1,7 +1,7 @@
 ---
 title: 兩輸入生產單位的比較
 slug: two-input-compare
-date: '2022-05-22'
+date: '2022-05-22T00:00:00.000Z'
 tags:
   - mindustry
 categories:

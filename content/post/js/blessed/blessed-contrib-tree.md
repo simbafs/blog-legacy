@@ -1,7 +1,7 @@
 ---
 title: Blessed Contrib Tree
 slug: blessed-contrib-tree
-date: '2020-02-18'
+date: '2020-02-18T00:00:00.000Z'
 tags:
   - blessed
   - blessed-contrib

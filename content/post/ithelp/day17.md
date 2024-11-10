@@ -1,7 +1,7 @@
 ---
 title: Day 17：coc.nvim 設定下集
 slug: day17
-date: '2021-09-17'
+date: '2021-09-17T00:00:00.000Z'
 tags:
   - cli
   - terminal

@@ -1,7 +1,7 @@
 ---
 title: Bubbletea
 slug: bubbletea
-date: '2023-01-08'
+date: '2023-01-08T00:00:00.000Z'
 tags:
   - bubbletea
   - cli

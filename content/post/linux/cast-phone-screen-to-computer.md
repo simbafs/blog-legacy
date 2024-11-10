@@ -1,7 +1,7 @@
 ---
 title: Cast Phone Screen to Computer
 slug: cast-phone-screen-to-computer
-date: '2021-06-14'
+date: '2021-06-14T00:00:00.000Z'
 tags:
   - android
   - linux

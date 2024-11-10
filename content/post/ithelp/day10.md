@@ -1,7 +1,7 @@
 ---
 title: Day 10：新手殺，誰來教我離開 vim 阿～～
 slug: day10
-date: '2021-09-10'
+date: '2021-09-10T00:00:00.000Z'
 tags:
   - cli
   - terminal

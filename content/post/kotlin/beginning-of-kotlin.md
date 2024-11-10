@@ -1,7 +1,7 @@
 ---
 title: beginning of kotlin
 slug: beginning-of-kotlin
-date: '2021-05-04'
+date: '2021-05-04T00:00:00.000Z'
 tags:
   - kotlin
 categories:

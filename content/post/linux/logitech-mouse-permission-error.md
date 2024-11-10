@@ -1,7 +1,7 @@
 ---
 title: Logitech Mouse Permission Error
 slug: logitech-mouse-permission-error
-date: '2021-03-15'
+date: '2021-03-15T00:00:00.000Z'
 tags:
   - ubuntu
   - logitech

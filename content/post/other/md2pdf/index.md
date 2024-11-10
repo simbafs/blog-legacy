@@ -1,7 +1,7 @@
 ---
 title: Markdown to PDF
 slug: index
-date: '2023-02-21'
+date: '2023-02-21T00:00:00.000Z'
 tags:
   - markdown
   - pdf

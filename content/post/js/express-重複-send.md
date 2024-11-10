@@ -1,7 +1,7 @@
 ---
 title: express 重複 send
 slug: express-重複-send
-date: '2020-08-19'
+date: '2020-08-19T00:00:00.000Z'
 tags:
   - express
   - js

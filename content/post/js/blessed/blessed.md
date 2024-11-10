@@ -1,7 +1,7 @@
 ---
 title: Blessed
 slug: blessed
-date: '2020-02-17'
+date: '2020-02-17T00:00:00.000Z'
 tags:
   - blessed
   - js

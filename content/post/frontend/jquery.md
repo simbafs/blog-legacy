@@ -1,7 +1,7 @@
 ---
 title: jQuery
 slug: jquery
-date: '2020-03-15'
+date: '2020-03-15T00:00:00.000Z'
 tags:
   - js
   - jquery

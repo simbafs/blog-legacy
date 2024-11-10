@@ -1,7 +1,7 @@
 ---
 title: Day 15：vim 外掛大雜燴！
 slug: day15
-date: '2021-09-15'
+date: '2021-09-15T00:00:00.000Z'
 tags:
   - cli
   - terminal

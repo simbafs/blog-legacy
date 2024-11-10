@@ -1,7 +1,7 @@
 ---
 title: 讓 YCM 接受 jsx
 slug: ycm-jsx
-date: '2020-07-04'
+date: '2020-07-04T00:00:00.000Z'
 tags:
   - vim
   - jsx

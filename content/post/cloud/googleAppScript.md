@@ -1,7 +1,7 @@
 ---
 title: Google AppScript Calender API
 slug: google-app-script-calender-api
-date: '2022-09-14'
+date: '2022-09-14T00:00:00.000Z'
 tags:
   - js
   - google

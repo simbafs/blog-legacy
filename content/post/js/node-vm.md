@@ -1,7 +1,7 @@
 ---
 title: Node VM
 slug: node-vm
-date: '2021-01-13'
+date: '2021-01-13T00:00:00.000Z'
 tags:
   - node
   - nodejs

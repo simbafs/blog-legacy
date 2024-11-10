@@ -24,7 +24,7 @@ frontmatter:
 	node ./script/frontmatter/index.js --only-change
 
 og: 
-	node ./script/frontmatter/index.js --og --only-change
+	node ./script/frontmatter/index.mjs --og --only-change
 
 clean: 
 	rm -r public

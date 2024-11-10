@@ -1,7 +1,7 @@
 ---
 title: Golang Parse All Files In Directory Into Templates
 slug: Golang-Parse-All-Files-In-Directory-Into-Templates
-date: '2021-07-30'
+date: '2021-07-30T00:00:00.000Z'
 tags:
   - golang
   - template

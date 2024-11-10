@@ -1,7 +1,7 @@
 ---
 title: 震動 vs 振動
 slug: vibrate
-date: '2022-03-09'
+date: '2022-03-09T00:00:00.000Z'
 tags: []
 categories:
   - other

@@ -1,7 +1,7 @@
 ---
 title: ddos
 slug: ddos
-date: '2020-02-13'
+date: '2020-02-13T00:00:00.000Z'
 tags:
   - ddos
   - bash

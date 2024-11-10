@@ -1,7 +1,7 @@
 ---
 title: Github Action Collections
 slug: github-action-collections
-date: '2023-08-06'
+date: '2023-08-06T00:00:00.000Z'
 tags: []
 categories:
   - devops

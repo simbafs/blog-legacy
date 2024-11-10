@@ -8,7 +8,7 @@ menu:
 title: Works
 slug: works
 tags: []
-date: '2024-06-19'
+date: '2024-06-19T00:00:00.000Z'
 categories:
   - works
 image: /og/works/index.png

@@ -1,7 +1,7 @@
 ---
 title: Reverse SSH
 slug: reverse-ssh
-date: '2020-02-23'
+date: '2020-02-23T00:00:00.000Z'
 tags:
   - ssh
   - linux

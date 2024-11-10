@@ -1,7 +1,7 @@
 ---
 title: Pointer to Structure Passed to Interface
 slug: pointer-to-structure-passed-to-interface
-date: '2024-09-27'
+date: '2024-09-27T00:00:00.000Z'
 tags:
   - pointer
   - interface

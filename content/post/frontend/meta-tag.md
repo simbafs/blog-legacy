@@ -1,7 +1,7 @@
 ---
 title: Meta Tag
 slug: meta-tag
-date: '2020-03-28'
+date: '2020-03-28T00:00:00.000Z'
 tags:
   - html
   - meta

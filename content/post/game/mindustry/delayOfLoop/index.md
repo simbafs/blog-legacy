@@ -1,7 +1,7 @@
 ---
 title: 迴圈的延遲
 slug: delayOfLoop
-date: '2022-05-18'
+date: '2022-05-18T00:00:00.000Z'
 tags:
   - mindustry
 categories:

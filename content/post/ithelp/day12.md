@@ -1,7 +1,7 @@
 ---
 title: Day 12：vim 配色方案
 slug: day12
-date: '2021-09-12'
+date: '2021-09-12T00:00:00.000Z'
 tags:
   - cli
   - terminal

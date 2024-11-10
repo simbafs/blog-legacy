@@ -1,7 +1,7 @@
 ---
 title: Cache Layer
 slug: cache-layer
-date: '2023-07-07'
+date: '2023-07-07T00:00:00.000Z'
 tags:
   - docker
   - accelerate

@@ -1,7 +1,7 @@
 ---
 title: Day 09：今天又想不出標題了！tmux plugin 和 mouse mode
 slug: day09
-date: '2021-09-09'
+date: '2021-09-09T00:00:00.000Z'
 tags:
   - cli
   - terminal

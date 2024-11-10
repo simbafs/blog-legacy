@@ -1,7 +1,7 @@
 ---
 title: hexo-installation
 slug: hexo-installation
-date: '2020-02-10'
+date: '2020-02-10T00:00:00.000Z'
 tags:
   - hexo
 categories:

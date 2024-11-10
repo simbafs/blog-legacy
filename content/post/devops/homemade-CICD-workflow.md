@@ -1,7 +1,7 @@
 ---
 title: Homemade CI/CD Workflow
 slug: homemade-CICD-workflow
-date: '2023-08-07'
+date: '2023-08-07T00:00:00.000Z'
 tags:
   - CICD
   - devops

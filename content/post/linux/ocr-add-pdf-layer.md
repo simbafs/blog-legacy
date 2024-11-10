@@ -1,7 +1,7 @@
 ---
 title: OCR Add PDF Text Layer
 slug: ocr-add-pdf-layer
-date: '2023-05-19'
+date: '2023-05-19T00:00:00.000Z'
 tags:
   - pdf
   - ocr

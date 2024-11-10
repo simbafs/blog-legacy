@@ -1,7 +1,7 @@
 ---
 title: 加入 google search 和 sitemap
 slug: 加入-google-search-和-sitemap
-date: '2020-08-19'
+date: '2020-08-19T00:00:00.000Z'
 tags:
   - hexo
 categories:

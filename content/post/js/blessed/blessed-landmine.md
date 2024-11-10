@@ -1,7 +1,7 @@
 ---
 title: Blessed Landmine
 slug: blessed-landmine
-date: '2020-02-26'
+date: '2020-02-26T00:00:00.000Z'
 tags:
   - blessed
   - js

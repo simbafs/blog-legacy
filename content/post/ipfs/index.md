@@ -1,7 +1,7 @@
 ---
 title: IPFS
 slug: index
-date: '2022-08-22'
+date: '2022-08-22T00:00:00.000Z'
 tags:
   - web3
   - decentralized

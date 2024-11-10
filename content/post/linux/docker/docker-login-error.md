@@ -1,7 +1,7 @@
 ---
 title: docker login error
 slug: docker-login-error
-date: '2020-12-05'
+date: '2020-12-05T00:00:00.000Z'
 tags:
   - docker
   - linux

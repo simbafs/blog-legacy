@@ -1,7 +1,7 @@
 ---
 title: Mastodon
 slug: mastodon
-date: '2022-11-24'
+date: '2022-11-24T00:00:00.000Z'
 tags:
   - mastodon
   - error

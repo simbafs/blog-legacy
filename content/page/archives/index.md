@@ -1,5 +1,5 @@
 ---
-date: '2022-03-06'
+date: '2022-03-06T00:00:00.000Z'
 layout: archives
 menu:
   main:

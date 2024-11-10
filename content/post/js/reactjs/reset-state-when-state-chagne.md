@@ -1,7 +1,7 @@
 ---
 title: Reset State When State Chagne
 slug: reset-state-when-state-chagne
-date: '2024-02-05'
+date: '2024-02-05T00:00:00.000Z'
 tags:
   - useState
   - key

@@ -1,7 +1,7 @@
 ---
 title: Strapi Quick Start
 slug: strapi-quick-start
-date: '2021-02-28'
+date: '2021-02-28T00:00:00.000Z'
 tags:
   - node
   - nodejs

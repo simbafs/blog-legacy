@@ -12,8 +12,8 @@ importers:
         specifier: ^2.4.1
         version: 2.4.1
       '@simbafs/og':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: ^1.2.1
+        version: 1.2.1
       '@types/js-yaml':
         specifier: ^4.0.5
         version: 4.0.5
@@ -119,9 +119,8 @@ packages:
     engines: {node: '>= 8.0.0'}
     hasBin: true
 
-  '@simbafs/og@1.0.2':
-    resolution: {integrity: sha512-d+LNAETr8AcMX5pKAVLHCctbHe3Xm0UrgbzNkiWm5KX5Rpr9wjuvDgCGhJLv6RWLtn5XxBjILvw1qD4E+XXGyg==}
-    hasBin: true
+  '@simbafs/og@1.2.1':
+    resolution: {integrity: sha512-ZpwUKSjDmVv9MpwwRrwVE3m1TqC7+dzY4vfXDoDeVXqTSiWcRs4g/gJW+gKds3ynCvCMWfKdGo6BcgYHH4Tcgw==}
 
   '@types/js-yaml@4.0.5':
     resolution: {integrity: sha512-FhpRzf927MNQdRZP0J5DLIdTXhjLYzeUTmLAu69mnVksLH9CJY3IuSeEgbKUki7GQZm0WqDkGzyxju2EZGD2wA==}
@@ -144,6 +143,10 @@ packages:
 
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+
+  commander@11.1.0:
+    resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
+    engines: {node: '>=16'}
 
   css-background-parser@0.1.0:
     resolution: {integrity: sha512-2EZLisiZQ+7m4wwur/qiYJRniHX4K5Tc9w93MT3AS0WS1u5kaZ4FKXlOTBhOjc+CgEgPiGY+fX1yWD8UwpEqUA==}
@@ -183,8 +186,16 @@ packages:
   fflate@0.7.4:
     resolution: {integrity: sha512-5u2V/CDW15QM1XbbgS+0DfPxVB+jUKhWEKuuFuHncbk3tEEqzmoXL+2KyOFuKGqOnmdIy0/davWF1CkuwtibCw==}
 
+  font-finder@1.1.0:
+    resolution: {integrity: sha512-wpCL2uIbi6GurJbU7ZlQ3nGd61Ho+dSU6U83/xJT5UPFfN35EeCW/rOtS+5k+IuEZu2SYmHzDIPL9eA5tSYRAw==}
+    engines: {node: '>8.0.0'}
+
   front-matter-markdown@0.4.5:
     resolution: {integrity: sha512-LFyNq/Q57B6zB11Z2JNGwKcza6a+sNlrGaZDsPTL0Hx2X6sFQIIeZ16cMZZ+nQbYyyC07fqyUil9XVBh8sbUjQ==}
+
+  get-system-fonts@2.0.2:
+    resolution: {integrity: sha512-zzlgaYnHMIEgHRrfC7x0Qp0Ylhw/sHpM6MHXeVBTYIsvGf5GpbnClB+Q6rAPdn+0gd2oZZIo6Tj3EaWrt4VhDQ==}
+    engines: {node: '>8.0.0'}
 
   gray-matter@4.0.3:
     resolution: {integrity: sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==}
@@ -228,6 +239,10 @@ packages:
 
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
+
+  promise-stream-reader@1.0.1:
+    resolution: {integrity: sha512-Tnxit5trUjBAqqZCGWwjyxhmgMN4hGrtpW3Oc/tRI4bpm/O2+ej72BB08l6JBnGQgVDGCLvHFGjGgQS6vzhwXg==}
+    engines: {node: '>8.0.0'}
 
   satori-html@0.3.2:
     resolution: {integrity: sha512-wjTh14iqADFKDK80e51/98MplTGfxz2RmIzh0GqShlf4a67+BooLywF17TvJPD6phO0Hxm7Mf1N5LtRYvdkYRA==}
@@ -327,9 +342,11 @@ snapshots:
       fflate: 0.7.4
       string.prototype.codepointat: 0.2.1
 
-  '@simbafs/og@1.0.2':
+  '@simbafs/og@1.2.1':
     dependencies:
       '@resvg/resvg-js': 2.4.1
+      commander: 11.1.0
+      font-finder: 1.1.0
       gray-matter: 4.0.3
       satori: 0.10.3
       satori-html: 0.3.2
@@ -349,6 +366,8 @@ snapshots:
   camelize@1.0.1: {}
 
   color-name@1.1.4: {}
+
+  commander@11.1.0: {}
 
   css-background-parser@0.1.0: {}
 
@@ -378,6 +397,11 @@ snapshots:
 
   fflate@0.7.4: {}
 
+  font-finder@1.1.0:
+    dependencies:
+      get-system-fonts: 2.0.2
+      promise-stream-reader: 1.0.1
+
   front-matter-markdown@0.4.5:
     dependencies:
       diff: 4.0.2
@@ -386,6 +410,8 @@ snapshots:
       inherits-ex: 1.6.0
       kramed: 0.5.6
       util-ex: 0.3.18
+
+  get-system-fonts@2.0.2: {}
 
   gray-matter@4.0.3:
     dependencies:
@@ -426,6 +452,8 @@ snapshots:
       hex-rgb: 4.3.0
 
   postcss-value-parser@4.2.0: {}
+
+  promise-stream-reader@1.0.1: {}
 
   satori-html@0.3.2:
     dependencies:

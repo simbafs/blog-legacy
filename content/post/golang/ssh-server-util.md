@@ -1,7 +1,7 @@
 ---
 title: SSH Server Util
 slug: ssh-server-uitl
-date: '2023-07-12'
+date: '2023-07-12T00:00:00.000Z'
 tags:
   - golang
   - ssh

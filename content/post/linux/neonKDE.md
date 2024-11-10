@@ -1,7 +1,7 @@
 ---
 title: NeonKDE
 slug: neonKDE
-date: '2023-08-29'
+date: '2023-08-29T00:00:00.000Z'
 tags:
   - kde
   - linux

@@ -1,7 +1,7 @@
 ---
 title: Bluetooth 突然卡住都不動
 slug: bluwtooth-error
-date: '2022-03-02'
+date: '2022-03-02T00:00:00.000Z'
 tags: []
 categories:
   - linux

@@ -1,7 +1,7 @@
 ---
 title: SSH Tunnel
 slug: ssh-tunnel
-date: '2020-02-24'
+date: '2020-02-24T00:00:00.000Z'
 tags:
   - ssh
   - linux
