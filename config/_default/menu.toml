@@ -30,3 +30,11 @@ url = "/index.xml"
 
 [social.params]
 icon = "rss"
+
+[[social]]
+identifier = "murmur"
+name = "murmur"
+url = "https://murmur.simbafs.cc"
+
+[social.params]
+icon = "hash"
