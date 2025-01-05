@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/linux/git/</link><description>Recent content in git on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 20 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/linux/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Snippet</title><link>https://blog.simbafs.cc/p/git-snippet/</link><pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/git-snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/git/git-snippet.png" alt="Featured image of post Git Snippet" />&lt;h1 id="git-snippet">&lt;a href="#git-snippet" class="header-anchor">&lt;/a>Git Snippet
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on Simba 的喵窩</title><link>https://blog.simbafs.cc/post/linux/git/</link><description>Recent content in git on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 05 Jan 2025 06:38:56 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/post/linux/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Gitignore</title><link>https://blog.simbafs.cc/p/gitignore/</link><pubDate>Sun, 05 Jan 2025 06:38:56 +0000</pubDate><guid>https://blog.simbafs.cc/p/gitignore/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/git/gitignore.png" alt="Featured image of post Gitignore" />&lt;h1 id="gitignore">&lt;a href="#gitignore" class="header-anchor">&lt;/a>Gitignore
+&lt;/h1>&lt;p>&lt;code>.gitignore&lt;/code> 可以使用 &lt;code>!&lt;/code> 來標示要保留下來的檔案，例如&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ent/*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">!ent/generate.go
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">!ent/schema
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>的意思是 &lt;code>ent/&lt;/code> 資料夾下全部都忽略，除了 &lt;code>ent/generate.go&lt;/code> 和 &lt;code>ent/schema&lt;/code>。&lt;/p></description></item><item><title>Git Snippet</title><link>https://blog.simbafs.cc/p/git-snippet/</link><pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/git-snippet/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/git/git-snippet.png" alt="Featured image of post Git Snippet" />&lt;h1 id="git-snippet">&lt;a href="#git-snippet" class="header-anchor">&lt;/a>Git Snippet
 &lt;/h1>&lt;h2 id="move-branch-to-another-commit-not-recommand">&lt;a href="#move-branch-to-another-commit-not-recommand" class="header-anchor">&lt;/a>move branch to another commit (not recommand)
 &lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">

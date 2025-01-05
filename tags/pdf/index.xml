@@ -246,11 +246,11 @@
 簡單來說如果裡面要印 &lt;code>n&lt;/code> 個反單引號，外面就要用 &lt;code>n+1&lt;/code> 個反單引號括起來&lt;/p>
 &lt;/blockquote>
 &lt;p>然後這是截圖：
-&lt;figure>&lt;img src="./out-1.png">&lt;figcaption>
+&lt;figure>&lt;img src="https://blog.simbafs.cc/p/index/out-1.png">&lt;figcaption>
 &lt;h4>page 1 of out.pdf&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
-&lt;figure>&lt;img src="./out-2.png">&lt;figcaption>
+&lt;figure>&lt;img src="https://blog.simbafs.cc/p/index/out-2.png">&lt;figcaption>
 &lt;h4>page 2 of out.pdf&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>

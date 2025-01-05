@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simba 的喵窩</title><link>https://blog.simbafs.cc/</link><description>Recent content on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 29 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/index.xml" rel="self" type="application/rss+xml"/><item><title>Circle Transition in Motion Canvas</title><link>https://blog.simbafs.cc/p/circle-transition-in-motion-canvas/</link><pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/circle-transition-in-motion-canvas/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/circle-transition-in-motion-canvas/index.png" alt="Featured image of post Circle Transition in Motion Canvas" />&lt;h1 id="circle-transition-in-motion-canvas">&lt;a href="#circle-transition-in-motion-canvas" class="header-anchor">&lt;/a>Circle Transition in Motion Canvas
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simba 的喵窩</title><link>https://blog.simbafs.cc/</link><description>Recent content on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sun, 05 Jan 2025 06:38:56 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/index.xml" rel="self" type="application/rss+xml"/><item><title>Gitignore</title><link>https://blog.simbafs.cc/p/gitignore/</link><pubDate>Sun, 05 Jan 2025 06:38:56 +0000</pubDate><guid>https://blog.simbafs.cc/p/gitignore/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/git/gitignore.png" alt="Featured image of post Gitignore" />&lt;h1 id="gitignore">&lt;a href="#gitignore" class="header-anchor">&lt;/a>Gitignore
+&lt;/h1>&lt;p>&lt;code>.gitignore&lt;/code> 可以使用 &lt;code>!&lt;/code> 來標示要保留下來的檔案，例如&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ent/*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">!ent/generate.go
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">!ent/schema
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>的意思是 &lt;code>ent/&lt;/code> 資料夾下全部都忽略，除了 &lt;code>ent/generate.go&lt;/code> 和 &lt;code>ent/schema&lt;/code>。&lt;/p></description></item><item><title>Circle Transition in Motion Canvas</title><link>https://blog.simbafs.cc/p/circle-transition-in-motion-canvas/</link><pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/circle-transition-in-motion-canvas/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/circle-transition-in-motion-canvas/index.png" alt="Featured image of post Circle Transition in Motion Canvas" />&lt;h1 id="circle-transition-in-motion-canvas">&lt;a href="#circle-transition-in-motion-canvas" class="header-anchor">&lt;/a>Circle Transition in Motion Canvas
 &lt;/h1>&lt;p>這是一個 &lt;a class="link" href="https://motioncanvas.io/" target="_blank" rel="noopener"
 >Motion Canvas&lt;/a> 的轉場函數，使用後會有一個圈圈從畫面中間出現並放大，圈圈外是前一個場景，圈圈內是新的場景&lt;/p>
 &lt;p>範例：&lt;/p>
@@ -5374,11 +5388,11 @@ docker build 在按照 Dockerfile 建構 image 時，每一行都會有 cache la
 簡單來說如果裡面要印 &lt;code>n&lt;/code> 個反單引號，外面就要用 &lt;code>n+1&lt;/code> 個反單引號括起來&lt;/p>
 &lt;/blockquote>
 &lt;p>然後這是截圖：
-&lt;figure>&lt;img src="./out-1.png">&lt;figcaption>
+&lt;figure>&lt;img src="https://blog.simbafs.cc/p/index/out-1.png">&lt;figcaption>
 &lt;h4>page 1 of out.pdf&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
-&lt;figure>&lt;img src="./out-2.png">&lt;figcaption>
+&lt;figure>&lt;img src="https://blog.simbafs.cc/p/index/out-2.png">&lt;figcaption>
 &lt;h4>page 2 of out.pdf&lt;/h4>
 &lt;/figcaption>
 &lt;/figure>
