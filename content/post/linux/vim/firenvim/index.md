@@ -18,7 +18,7 @@ image: /og/linux/vim/firenvim.png
 # Firenvim
 
 [firenvim](https://github.com/glacambre/firenvim) 是一個可以把 nvim 嵌入瀏覽器的插件，像是這樣  
-![firenvim in leetcode](/images/firenvim_in_leetcode.png)
+![firenvim in leetcode](firenvim_in_leetcode.png)
 
 > 我的 nvim 現在是用 [astronvim](https://github.com/AstroNvim/AstroNvim) 設定檔，所以以下內容都是放在 `~/.config/nvim/lua/user/init.lua` 裡面
 
