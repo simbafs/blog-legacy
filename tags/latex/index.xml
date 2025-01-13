@@ -219,9 +219,15 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/latex-starter/latex-example.png"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/p/latex-starter/latex-example.png"
+width="1215"
+height="1821"
+srcset="https://blog.simbafs.cc/p/latex-starter/latex-example_hu12373715028462663033.png 480w, https://blog.simbafs.cc/p/latex-starter/latex-example_hu16299874235799684305.png 1024w"
 loading="lazy"
 alt="莫名其妙排版範例"
+class="gallery-image"
+data-flex-grow="66"
+data-flex-basis="160px"
 >&lt;/th>
 &lt;/tr>
 &lt;/thead>

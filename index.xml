@@ -1351,9 +1351,15 @@ tech stack: golang&lt;/p>
 &lt;/ul></description></item><item><title>Search</title><link>https://blog.simbafs.cc/search/</link><pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/search/</guid><description>&lt;img src="https://blog.simbafs.cc/og/search/index.png" alt="Featured image of post Search" /></description></item><item><title>PocketBase</title><link>https://blog.simbafs.cc/p/pocketbase/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/pocketbase/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/pocketbase.png" alt="Featured image of post PocketBase" />&lt;h1 id="pocketbase">&lt;a href="#pocketbase" class="header-anchor">&lt;/a>PocketBase
 &lt;/h1>&lt;p>&lt;a class="link" href="https://pocketbase.io/" target="_blank" rel="noopener"
 >PocketBase&lt;/a> 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的，因此可以編譯成一個單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結構、關聯、使用者驗證和權限控管等功能了&lt;/p>
-&lt;p>&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo.png"
+&lt;p>&lt;img src="https://blog.simbafs.cc/p/pocketbase/demo.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/demo_hu3971818620504459783.png 480w, https://blog.simbafs.cc/p/pocketbase/demo_hu9791282103817813726.png 1024w"
 loading="lazy"
 alt="demo"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >&lt;/p>
 &lt;p>接下來是我用 pocketbase 寫一個貼文佈告欄系統的過程&lt;/p>
 &lt;h2 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
@@ -1370,20 +1376,38 @@ alt="demo"
 &lt;h3 id="users">&lt;a href="#users" class="header-anchor">&lt;/a>users
 &lt;/h3>&lt;p>這裡 users 應該不用多做調整，先新增一個使用者吧，這裡的使用者是沒有管理員權限的，要設定管理員要到 &lt;a class="link" href="http://127.0.0.1:8090/_/#/settings/admins" target="_blank" rel="noopener"
 >http://127.0.0.1:8090/_/#/settings/admins&lt;/a>
-&lt;img src="https://blog.simbafs.cc/images/pocketbase/newUser.png"
+&lt;img src="https://blog.simbafs.cc/p/pocketbase/newUser.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/newUser_hu7564094880286763894.png 480w, https://blog.simbafs.cc/p/pocketbase/newUser_hu15017837497019923301.png 1024w"
 loading="lazy"
 alt="new user"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >&lt;/p>
 &lt;h3 id="posts">&lt;a href="#posts" class="header-anchor">&lt;/a>posts
 &lt;/h3>&lt;p>接著建立新的 base collection，有 &lt;code>auther&lt;/code>、&lt;code>content&lt;/code> 兩個欄位，其中 &lt;code>author&lt;/code> 是關聯到 &lt;code>users&lt;/code> 表格，表示這邊文章是哪個使用者寫的，並且都設為非空。
-&lt;img src="https://blog.simbafs.cc/images/pocketbase/newCollection_fields.png"
+&lt;img src="https://blog.simbafs.cc/p/pocketbase/newCollection_fields.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/newCollection_fields_hu9947221298253094174.png 480w, https://blog.simbafs.cc/p/pocketbase/newCollection_fields_hu14081605295068432059.png 1024w"
 loading="lazy"
 alt="new collection field"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >
 接著我們設定存取權限，預設全部都是只開放管理員，但這太沒意思了，點 &lt;code>list&lt;/code>、&lt;code>view&lt;/code> 和 &lt;code>create&lt;/code> 的框框一下變成所有人都能存取，再來設定 &lt;code>create&lt;/code> 的條件是 &lt;code>@request.auth.id = author.id&lt;/code>，意思是發出請求的人跟 &lt;code>author&lt;/code> 欄位的人必須是同一個人才行。剩下的有點麻煩我就先不做了
-&lt;img src="https://blog.simbafs.cc/images/pocketbase/newCollection_rules.png"
+&lt;img src="https://blog.simbafs.cc/p/pocketbase/newCollection_rules.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/newCollection_rules_hu6843169805026496865.png 480w, https://blog.simbafs.cc/p/pocketbase/newCollection_rules_hu1886262035399396391.png 1024w"
 loading="lazy"
 alt="new collection rule"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >&lt;/p>
 &lt;p>那麼我們的後端大致完成，可以去寫前端了&lt;/p>
 &lt;h2 id="前端-js-sdk">&lt;a href="#%e5%89%8d%e7%ab%af-js-sdk" class="header-anchor">&lt;/a>前端 JS SDK
@@ -1670,9 +1694,15 @@ alt="new collection rule"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>目前畫面長這樣&lt;br>
-&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo2.png"
+&lt;img src="https://blog.simbafs.cc/p/pocketbase/demo2.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/demo2_hu12042162771634770908.png 480w, https://blog.simbafs.cc/p/pocketbase/demo2_hu6083631051621153354.png 1024w"
 loading="lazy"
 alt="demo 2"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >&lt;/p>
 &lt;h3 id="發文">&lt;a href="#%e7%99%bc%e6%96%87" class="header-anchor">&lt;/a>發文
 &lt;/h3>&lt;p>發文就是去戳 post 的 create API，這部份也很簡單，加入一個 &lt;code>&amp;lt;textarea&amp;gt;&lt;/code>，按下後把內容送出去就好，這部份長這樣&lt;/p>
@@ -1948,13 +1978,25 @@ alt="demo 2"
 &lt;h2 id="最後成果">&lt;a href="#%e6%9c%80%e5%be%8c%e6%88%90%e6%9e%9c" class="header-anchor">&lt;/a>最後成果
 &lt;/h2>&lt;p>程式碼可以在 &lt;a class="link" href="https://github.com/simbafs/pocketbase-experinment/tree/d720bc52b00485ceebb1f6ced4429a30000bee8c" target="_blank" rel="noopener"
 >這裡&lt;/a> 找到&lt;/p>
-&lt;p>&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo3.png"
+&lt;p>&lt;img src="https://blog.simbafs.cc/p/pocketbase/demo3.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/demo3_hu11444501834350510602.png 480w, https://blog.simbafs.cc/p/pocketbase/demo3_hu15750578408251449388.png 1024w"
 loading="lazy"
 alt="demo 3"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >
-&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo4.png"
+&lt;img src="https://blog.simbafs.cc/p/pocketbase/demo4.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/demo4_hu16923354798557043079.png 480w, https://blog.simbafs.cc/p/pocketbase/demo4_hu2384908925951689418.png 1024w"
 loading="lazy"
 alt="demo 4"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >&lt;/p></description></item><item><title>Firenvim</title><link>https://blog.simbafs.cc/p/firenvim/</link><pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/firenvim/</guid><description>&lt;img src="https://blog.simbafs.cc/og/linux/vim/firenvim.png" alt="Featured image of post Firenvim" />&lt;h1 id="firenvim">&lt;a href="#firenvim" class="header-anchor">&lt;/a>Firenvim
 &lt;/h1>&lt;p>&lt;a class="link" href="https://github.com/glacambre/firenvim" target="_blank" rel="noopener"
 >firenvim&lt;/a> 是一個可以把 nvim 嵌入瀏覽器的插件，像是這樣&lt;br>
@@ -8726,9 +8768,15 @@ help page in &lt;code>:help modeline&lt;/code>&lt;/p></description></item><item>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/images/latex-starter/latex-example.png"
+&lt;th style="text-align: center">&lt;img src="https://blog.simbafs.cc/p/latex-starter/latex-example.png"
+width="1215"
+height="1821"
+srcset="https://blog.simbafs.cc/p/latex-starter/latex-example_hu12373715028462663033.png 480w, https://blog.simbafs.cc/p/latex-starter/latex-example_hu16299874235799684305.png 1024w"
 loading="lazy"
 alt="莫名其妙排版範例"
+class="gallery-image"
+data-flex-grow="66"
+data-flex-basis="160px"
 >&lt;/th>
 &lt;/tr>
 &lt;/thead>
@@ -14016,7 +14064,104 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>express 重複 send</title><link>https://blog.simbafs.cc/p/express-%E9%87%8D%E8%A4%87-send/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/express-%E9%87%8D%E8%A4%87-send/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/express-%E9%87%8D%E8%A4%87-send.png" alt="Featured image of post express 重複 send" />&lt;h1 id="express-重複-send">&lt;a href="#express-%e9%87%8d%e8%a4%87-send" class="header-anchor">&lt;/a>express 重複 send
+&lt;/div></description></item><item><title>Add Google Search and Sitemap</title><link>https://blog.simbafs.cc/p/add-google-search-and-sitemap/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/add-google-search-and-sitemap/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap.png" alt="Featured image of post Add Google Search and Sitemap" />&lt;h1 id="前置設定">&lt;a href="#%e5%89%8d%e7%bd%ae%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>前置設定
+&lt;/h1>&lt;h2 id="npm-安裝-hexo-generator-sitemap">&lt;a href="#npm-%e5%ae%89%e8%a3%9d-hexo-generator-sitemap" class="header-anchor">&lt;/a>npm 安裝 &lt;code>hexo-generator-sitemap&lt;/code>
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm i -S hexo-generator-sitemap
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="設定插件">&lt;a href="#%e8%a8%ad%e5%ae%9a%e6%8f%92%e4%bb%b6" class="header-anchor">&lt;/a>設定插件
+&lt;/h2>&lt;p>將以下內容加到 &lt;code>_config.yml&lt;/code>&lt;/p>
+&lt;blockquote>
+&lt;p>注意空白&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># sitemap&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">sitemap&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">path&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">sitemap.xml&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="驗證網域">&lt;a href="#%e9%a9%97%e8%ad%89%e7%b6%b2%e5%9f%9f" class="header-anchor">&lt;/a>驗證網域
+&lt;/h1>&lt;p>如果你的 hexo 是架在自己的網域可以跳過這步&lt;br>
+因為我的 hexo 是 託管在 GitHub page，在 Google Search Console 驗證的時候沒辦法用網域，所以要放一個特別的檔案到我們的網站根目錄&lt;/p>
+&lt;ol>
+&lt;li>首先到 &lt;a class="link" href="https://search.google.com/search-console/" target="_blank" rel="noopener"
+>Google Search Console&lt;/a> 新增一個網域
+選擇右邊，輸入你的網址
+&lt;img src="https://blog.simbafs.cc/p/add-google-search-and-sitemap/addDomain.png"
+width="771"
+height="608"
+srcset="https://blog.simbafs.cc/p/add-google-search-and-sitemap/addDomain_hu9129049794978747900.png 480w, https://blog.simbafs.cc/p/add-google-search-and-sitemap/addDomain_hu13544006633853431207.png 1024w"
+loading="lazy"
+alt="add demain"
+class="gallery-image"
+data-flex-grow="126"
+data-flex-basis="304px"
+>&lt;/li>
+&lt;li>下載提供的 html 並放到 &lt;code>source/&lt;/code> 資料夾
+&lt;img src="https://blog.simbafs.cc/p/add-google-search-and-sitemap/verifyDomain.png"
+width="647"
+height="747"
+srcset="https://blog.simbafs.cc/p/add-google-search-and-sitemap/verifyDomain_hu13240842496909748290.png 480w, https://blog.simbafs.cc/p/add-google-search-and-sitemap/verifyDomain_hu1991600286711268968.png 1024w"
+loading="lazy"
+alt="download html file and place to source/"
+class="gallery-image"
+data-flex-grow="86"
+data-flex-basis="207px"
+>&lt;/li>
+&lt;li>忽略
+接下來會遇到 hexo 在生成的時候把這個 html 也放到模板裡面，所以我們要把他加入忽略清單裡面&lt;br>
+在 &lt;code>_config.yml&lt;/code> 裡面找到 &lt;code>skip_render&lt;/code>&lt;br>
+把直接檔名寫在後面或是用清單都可以
+&lt;blockquote>
+&lt;p>注意空白&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 直接寫&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">skip_render&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;googlebabababababa.html&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="c"># 或是用清單&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">skip_render&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;googlebabababababa.html&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="4">
+&lt;li>按下驗證，完成&lt;/li>
+&lt;/ol>
+&lt;h1 id="sitemap">&lt;a href="#sitemap" class="header-anchor">&lt;/a>Sitemap
+&lt;/h1>&lt;p>驗證好了之後進入 Google Search Console，在側邊欄找到 &lt;code>索引&lt;/code> -&amp;gt; &lt;code>Sitemap&lt;/code>
+輸入 &lt;code>sitemap.xml&lt;/code> 按提交
+&lt;img src="https://blog.simbafs.cc/p/add-google-search-and-sitemap/sitemap.png"
+width="1404"
+height="826"
+srcset="https://blog.simbafs.cc/p/add-google-search-and-sitemap/sitemap_hu15149544295237696179.png 480w, https://blog.simbafs.cc/p/add-google-search-and-sitemap/sitemap_hu7432418520121927831.png 1024w"
+loading="lazy"
+alt="sitemap"
+class="gallery-image"
+data-flex-grow="169"
+data-flex-basis="407px"
+>&lt;/p>
+&lt;h1 id="google-analytics">&lt;a href="#google-analytics" class="header-anchor">&lt;/a>Google analytics
+&lt;/h1>&lt;p>待新增&lt;/p></description></item><item><title>express 重複 send</title><link>https://blog.simbafs.cc/p/express-%E9%87%8D%E8%A4%87-send/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/express-%E9%87%8D%E8%A4%87-send/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/express-%E9%87%8D%E8%A4%87-send.png" alt="Featured image of post express 重複 send" />&lt;h1 id="express-重複-send">&lt;a href="#express-%e9%87%8d%e8%a4%87-send" class="header-anchor">&lt;/a>express 重複 send
 &lt;/h1>&lt;h2 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
 &lt;/h2>&lt;p>在 express route 裡面，我通常會在 &lt;code>res.send()&lt;/code> 之類的函式前面都會加一個 &lt;code>return&lt;/code> 防止因為程式邏輯漏洞造成重複送出然後噴 error。像是這樣&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -14110,86 +14255,7 @@ name:&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>加入 google search 和 sitemap</title><link>https://blog.simbafs.cc/p/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/%E5%8A%A0%E5%85%A5-google-search-%E5%92%8C-sitemap.png" alt="Featured image of post 加入 google search 和 sitemap" />&lt;h1 id="前置設定">&lt;a href="#%e5%89%8d%e7%bd%ae%e8%a8%ad%e5%ae%9a" class="header-anchor">&lt;/a>前置設定
-&lt;/h1>&lt;h2 id="npm-安裝-hexo-generator-sitemap">&lt;a href="#npm-%e5%ae%89%e8%a3%9d-hexo-generator-sitemap" class="header-anchor">&lt;/a>npm 安裝 &lt;code>hexo-generator-sitemap&lt;/code>
-&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm i -S hexo-generator-sitemap
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="設定插件">&lt;a href="#%e8%a8%ad%e5%ae%9a%e6%8f%92%e4%bb%b6" class="header-anchor">&lt;/a>設定插件
-&lt;/h2>&lt;p>將以下內容加到 &lt;code>_config.yml&lt;/code>&lt;/p>
-&lt;blockquote>
-&lt;p>注意空白&lt;/p>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># sitemap&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">sitemap&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">path&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">sitemap.xml&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h1 id="驗證網域">&lt;a href="#%e9%a9%97%e8%ad%89%e7%b6%b2%e5%9f%9f" class="header-anchor">&lt;/a>驗證網域
-&lt;/h1>&lt;p>如果你的 hexo 是架在自己的網域可以跳過這步&lt;br>
-因為我的 hexo 是 託管在 GitHub page，在 Google Search Console 驗證的時候沒辦法用網域，所以要放一個特別的檔案到我們的網站根目錄&lt;/p>
-&lt;ol>
-&lt;li>首先到 &lt;a class="link" href="https://search.google.com/search-console/" target="_blank" rel="noopener"
->Google Search Console&lt;/a> 新增一個網域
-選擇右邊，輸入你的網址
-&lt;img src="https://blog.simbafs.cc/images/google-search-analytics/addDomain.png"
-loading="lazy"
-alt="add demain"
->&lt;/li>
-&lt;li>下載提供的 html 並放到 &lt;code>source/&lt;/code> 資料夾
-&lt;img src="https://blog.simbafs.cc/images/google-search-analytics/verifyDomain.png"
-loading="lazy"
-alt="download html file and place to source/"
->&lt;/li>
-&lt;li>忽略
-接下來會遇到 hexo 在生成的時候把這個 html 也放到模板裡面，所以我們要把他加入忽略清單裡面&lt;br>
-在 &lt;code>_config.yml&lt;/code> 裡面找到 &lt;code>skip_render&lt;/code>&lt;br>
-把直接檔名寫在後面或是用清單都可以
-&lt;blockquote>
-&lt;p>注意空白&lt;/p>
-&lt;/blockquote>
-&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 直接寫&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">skip_render&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;googlebabababababa.html&amp;#39;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="c"># 或是用清單&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">skip_render&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;googlebabababababa.html&amp;#39;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol start="4">
-&lt;li>按下驗證，完成&lt;/li>
-&lt;/ol>
-&lt;h1 id="sitemap">&lt;a href="#sitemap" class="header-anchor">&lt;/a>Sitemap
-&lt;/h1>&lt;p>驗證好了之後進入 Google Search Console，在側邊欄找到 &lt;code>索引&lt;/code> -&amp;gt; &lt;code>Sitemap&lt;/code>
-輸入 &lt;code>sitemap.xml&lt;/code> 按提交
-&lt;img src="https://blog.simbafs.cc/images/google-search-analytics/sitemap.png"
-loading="lazy"
-alt="sitemap"
->&lt;/p>
-&lt;h1 id="google-analytics">&lt;a href="#google-analytics" class="header-anchor">&lt;/a>Google analytics
-&lt;/h1>&lt;p>待新增&lt;/p></description></item><item><title>GitHub Action 自動部署 hexo</title><link>https://blog.simbafs.cc/p/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</link><pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/GitHub-Action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo.png" alt="Featured image of post GitHub Action 自動部署 hexo" />&lt;h1 id="前言">&lt;a href="#%e5%89%8d%e8%a8%80" class="header-anchor">&lt;/a>前言
+&lt;/div></description></item><item><title>GitHub Action 自動部署 hexo</title><link>https://blog.simbafs.cc/p/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</link><pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/github-action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo/</guid><description>&lt;img src="https://blog.simbafs.cc/og/hexo/GitHub-Action-%E8%87%AA%E5%8B%95%E9%83%A8%E7%BD%B2-hexo.png" alt="Featured image of post GitHub Action 自動部署 hexo" />&lt;h1 id="前言">&lt;a href="#%e5%89%8d%e8%a8%80" class="header-anchor">&lt;/a>前言
 &lt;/h1>&lt;p>本來部署 hexo 都是手動下指令，但是這樣在手機上因為沒辦法裝 hexo ,所以一直不能在手機上寫文章。剛好想到 GitHub Action 可以滿足我的需求，上網查了一下資料發現蠻多人有和我一樣的需求，這次參考的是 &lt;a class="link" href="https://owlran.github.io/2020/04/26/hexo-blog-github-action/" target="_blank" rel="noopener"
 >owlran 大大的文章&lt;/a>。&lt;/p>
 &lt;h1 id="ssh-key">&lt;a href="#ssh-key" class="header-anchor">&lt;/a>ssh key
@@ -14672,9 +14738,15 @@ name 和 git 設定的一樣&lt;/p>
 >測試&lt;/a>&lt;/p></description></item><item><title>Firefox Event Listener Breakpoint</title><link>https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/</guid><description>&lt;img src="https://blog.simbafs.cc/og/frontend/firefox-event-listener-breakpoint.png" alt="Featured image of post Firefox Event Listener Breakpoint" />&lt;h1 id="firefox-event-listener-breakpoint">&lt;a href="#firefox-event-listener-breakpoint" class="header-anchor">&lt;/a>Firefox Event Listener Breakpoint
 &lt;/h1>&lt;h2 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
 &lt;/h2>&lt;p>最近在用 jquery 但是不知道為什麼每次 debugger 都會跳出一個通知
-&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/1.png"
+&lt;img src="https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/1.png"
+width="1440"
+height="900"
+srcset="https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/1_hu7550472808857172012.png 480w, https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/1_hu13160196647807604480.png 1024w"
 loading="lazy"
 alt="1.png"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
 >
 很煩&lt;/p>
 &lt;h2 id="解決">&lt;a href="#%e8%a7%a3%e6%b1%ba" class="header-anchor">&lt;/a>解決
@@ -14682,9 +14754,15 @@ alt="1.png"
 在 &lt;F12> 裡面 Debugger 頁籤左下有個拉頁叫「Event Listener Breakpoints」
 把裡面的東西都點掉就好了
 就是那個 DOM Mutation
-&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/2.png"
+&lt;img src="https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/2.png"
+width="267"
+height="248"
+srcset="https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/2_hu16019512416314280325.png 480w, https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/2_hu4288141706724046687.png 1024w"
 loading="lazy"
 alt="2.png"
+class="gallery-image"
+data-flex-grow="107"
+data-flex-basis="258px"
 >&lt;/p>
 &lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
 &lt;/h2>&lt;p>我原本還以為是 jquery 的問題

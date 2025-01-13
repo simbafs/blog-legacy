@@ -236,9 +236,15 @@ alt="firenvim in leetcode"
 另外在設定 &lt;code>~/.local/share/applications/firefox.desktop&lt;/code> 的時候要注意有不只一個 Exec，改完如果沒有生效可以重開機看看。&lt;/p></description></item><item><title>Firefox Event Listener Breakpoint</title><link>https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/</guid><description>&lt;img src="https://blog.simbafs.cc/og/frontend/firefox-event-listener-breakpoint.png" alt="Featured image of post Firefox Event Listener Breakpoint" />&lt;h1 id="firefox-event-listener-breakpoint">&lt;a href="#firefox-event-listener-breakpoint" class="header-anchor">&lt;/a>Firefox Event Listener Breakpoint
 &lt;/h1>&lt;h2 id="問題">&lt;a href="#%e5%95%8f%e9%a1%8c" class="header-anchor">&lt;/a>問題
 &lt;/h2>&lt;p>最近在用 jquery 但是不知道為什麼每次 debugger 都會跳出一個通知
-&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/1.png"
+&lt;img src="https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/1.png"
+width="1440"
+height="900"
+srcset="https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/1_hu7550472808857172012.png 480w, https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/1_hu13160196647807604480.png 1024w"
 loading="lazy"
 alt="1.png"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
 >
 很煩&lt;/p>
 &lt;h2 id="解決">&lt;a href="#%e8%a7%a3%e6%b1%ba" class="header-anchor">&lt;/a>解決
@@ -246,9 +252,15 @@ alt="1.png"
 在 &lt;F12> 裡面 Debugger 頁籤左下有個拉頁叫「Event Listener Breakpoints」
 把裡面的東西都點掉就好了
 就是那個 DOM Mutation
-&lt;img src="https://blog.simbafs.cc/images/firefox-event-listener-breakpoint/2.png"
+&lt;img src="https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/2.png"
+width="267"
+height="248"
+srcset="https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/2_hu16019512416314280325.png 480w, https://blog.simbafs.cc/p/firefox-event-listener-breakpoint/2_hu4288141706724046687.png 1024w"
 loading="lazy"
 alt="2.png"
+class="gallery-image"
+data-flex-grow="107"
+data-flex-basis="258px"
 >&lt;/p>
 &lt;h2 id="心得">&lt;a href="#%e5%bf%83%e5%be%97" class="header-anchor">&lt;/a>心得
 &lt;/h2>&lt;p>我原本還以為是 jquery 的問題

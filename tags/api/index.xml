@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Api on Simba 的喵窩</title><link>https://blog.simbafs.cc/tags/api/</link><description>Recent content in Api on Simba 的喵窩</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.simbafs.cc/tags/api/index.xml" rel="self" type="application/rss+xml"/><item><title>PocketBase</title><link>https://blog.simbafs.cc/p/pocketbase/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/pocketbase/</guid><description>&lt;img src="https://blog.simbafs.cc/og/js/pocketbase.png" alt="Featured image of post PocketBase" />&lt;h1 id="pocketbase">&lt;a href="#pocketbase" class="header-anchor">&lt;/a>PocketBase
 &lt;/h1>&lt;p>&lt;a class="link" href="https://pocketbase.io/" target="_blank" rel="noopener"
 >PocketBase&lt;/a> 是一個方便快速部屬後端資料庫的工具，他用 golang 寫的，因此可以編譯成一個單一執行檔，下載就能使用，內建一個很好看的管理界面，滑鼠點一點就設定好資料庫結構、關聯、使用者驗證和權限控管等功能了&lt;/p>
-&lt;p>&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo.png"
+&lt;p>&lt;img src="https://blog.simbafs.cc/p/pocketbase/demo.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/demo_hu3971818620504459783.png 480w, https://blog.simbafs.cc/p/pocketbase/demo_hu9791282103817813726.png 1024w"
 loading="lazy"
 alt="demo"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >&lt;/p>
 &lt;p>接下來是我用 pocketbase 寫一個貼文佈告欄系統的過程&lt;/p>
 &lt;h2 id="安裝">&lt;a href="#%e5%ae%89%e8%a3%9d" class="header-anchor">&lt;/a>安裝
@@ -20,20 +26,38 @@ alt="demo"
 &lt;h3 id="users">&lt;a href="#users" class="header-anchor">&lt;/a>users
 &lt;/h3>&lt;p>這裡 users 應該不用多做調整，先新增一個使用者吧，這裡的使用者是沒有管理員權限的，要設定管理員要到 &lt;a class="link" href="http://127.0.0.1:8090/_/#/settings/admins" target="_blank" rel="noopener"
 >http://127.0.0.1:8090/_/#/settings/admins&lt;/a>
-&lt;img src="https://blog.simbafs.cc/images/pocketbase/newUser.png"
+&lt;img src="https://blog.simbafs.cc/p/pocketbase/newUser.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/newUser_hu7564094880286763894.png 480w, https://blog.simbafs.cc/p/pocketbase/newUser_hu15017837497019923301.png 1024w"
 loading="lazy"
 alt="new user"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >&lt;/p>
 &lt;h3 id="posts">&lt;a href="#posts" class="header-anchor">&lt;/a>posts
 &lt;/h3>&lt;p>接著建立新的 base collection，有 &lt;code>auther&lt;/code>、&lt;code>content&lt;/code> 兩個欄位，其中 &lt;code>author&lt;/code> 是關聯到 &lt;code>users&lt;/code> 表格，表示這邊文章是哪個使用者寫的，並且都設為非空。
-&lt;img src="https://blog.simbafs.cc/images/pocketbase/newCollection_fields.png"
+&lt;img src="https://blog.simbafs.cc/p/pocketbase/newCollection_fields.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/newCollection_fields_hu9947221298253094174.png 480w, https://blog.simbafs.cc/p/pocketbase/newCollection_fields_hu14081605295068432059.png 1024w"
 loading="lazy"
 alt="new collection field"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >
 接著我們設定存取權限，預設全部都是只開放管理員，但這太沒意思了，點 &lt;code>list&lt;/code>、&lt;code>view&lt;/code> 和 &lt;code>create&lt;/code> 的框框一下變成所有人都能存取，再來設定 &lt;code>create&lt;/code> 的條件是 &lt;code>@request.auth.id = author.id&lt;/code>，意思是發出請求的人跟 &lt;code>author&lt;/code> 欄位的人必須是同一個人才行。剩下的有點麻煩我就先不做了
-&lt;img src="https://blog.simbafs.cc/images/pocketbase/newCollection_rules.png"
+&lt;img src="https://blog.simbafs.cc/p/pocketbase/newCollection_rules.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/newCollection_rules_hu6843169805026496865.png 480w, https://blog.simbafs.cc/p/pocketbase/newCollection_rules_hu1886262035399396391.png 1024w"
 loading="lazy"
 alt="new collection rule"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >&lt;/p>
 &lt;p>那麼我們的後端大致完成，可以去寫前端了&lt;/p>
 &lt;h2 id="前端-js-sdk">&lt;a href="#%e5%89%8d%e7%ab%af-js-sdk" class="header-anchor">&lt;/a>前端 JS SDK
@@ -320,9 +344,15 @@ alt="new collection rule"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>目前畫面長這樣&lt;br>
-&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo2.png"
+&lt;img src="https://blog.simbafs.cc/p/pocketbase/demo2.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/demo2_hu12042162771634770908.png 480w, https://blog.simbafs.cc/p/pocketbase/demo2_hu6083631051621153354.png 1024w"
 loading="lazy"
 alt="demo 2"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >&lt;/p>
 &lt;h3 id="發文">&lt;a href="#%e7%99%bc%e6%96%87" class="header-anchor">&lt;/a>發文
 &lt;/h3>&lt;p>發文就是去戳 post 的 create API，這部份也很簡單，加入一個 &lt;code>&amp;lt;textarea&amp;gt;&lt;/code>，按下後把內容送出去就好，這部份長這樣&lt;/p>
@@ -598,13 +628,25 @@ alt="demo 2"
 &lt;h2 id="最後成果">&lt;a href="#%e6%9c%80%e5%be%8c%e6%88%90%e6%9e%9c" class="header-anchor">&lt;/a>最後成果
 &lt;/h2>&lt;p>程式碼可以在 &lt;a class="link" href="https://github.com/simbafs/pocketbase-experinment/tree/d720bc52b00485ceebb1f6ced4429a30000bee8c" target="_blank" rel="noopener"
 >這裡&lt;/a> 找到&lt;/p>
-&lt;p>&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo3.png"
+&lt;p>&lt;img src="https://blog.simbafs.cc/p/pocketbase/demo3.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/demo3_hu11444501834350510602.png 480w, https://blog.simbafs.cc/p/pocketbase/demo3_hu15750578408251449388.png 1024w"
 loading="lazy"
 alt="demo 3"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >
-&lt;img src="https://blog.simbafs.cc/images/pocketbase/demo4.png"
+&lt;img src="https://blog.simbafs.cc/p/pocketbase/demo4.png"
+width="1920"
+height="916"
+srcset="https://blog.simbafs.cc/p/pocketbase/demo4_hu16923354798557043079.png 480w, https://blog.simbafs.cc/p/pocketbase/demo4_hu2384908925951689418.png 1024w"
 loading="lazy"
 alt="demo 4"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="503px"
 >&lt;/p></description></item><item><title>臺灣地址 API</title><link>https://blog.simbafs.cc/p/taiwan-town-location/</link><pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate><guid>https://blog.simbafs.cc/p/taiwan-town-location/</guid><description>&lt;img src="https://blog.simbafs.cc/og/other/taiwan-town-location.png" alt="Featured image of post 臺灣地址 API" />&lt;h1 id="臺灣地址-api">&lt;a href="#%e8%87%ba%e7%81%a3%e5%9c%b0%e5%9d%80-api" class="header-anchor">&lt;/a>臺灣地址 API
 &lt;/h1>&lt;p>這是一個給經緯度吐地址的 api，甚至路段都會出來，搭配 &lt;a class="link" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Geolocation_API" target="_blank" rel="noopener"
 >web geolocation api&lt;/a> 蠻不錯的，精確度不錯。可以不知道有沒有 rate limited 的問題，目前看起來連 token 都不用。&lt;/p>
