@@ -1,16 +1,18 @@
 ---
 title: Raylib at Linux
 slug: raylib-at-linux
-date: 2025-01-13T00:36:57+08:00
+date: '2025-01-12T16:36:57.000Z'
 tags:
-    - go
-    - c
-    - raylib
-    - x11
-    - wayland
+  - go
+  - c
+  - raylib
+  - x11
+  - wayland
 categories:
+  - golang
+  - raylib-at-linux
 draft: true
-image:
+image: /og/golang/raylib-at-linux/index.png
 ---
 
 # Raylib at Linux
