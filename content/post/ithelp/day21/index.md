@@ -14,7 +14,7 @@ categories:
 image: /og/ithelp/day21.png
 ---
 
-|                     ![stackoverflow meme](/images/ithelp/pure-CLI-IDE/day21/stackoverflow-meme.png)                      |
+|                     ![stackoverflow meme](stackoverflow-meme.png)                      |
 | :----------------------------------------------------------------------------------------------------------------------: |
 | from: https://stackoverflow.blog/2021/04/19/how-often-do-people-actually-copy-and-paste-from-stack-overflow-now-we-know/ |
 
@@ -109,7 +109,7 @@ vim 中可寫的儲存器並不是隨便你命名，只有 0 ~ 9 和 a - z，另
 例如我想貼上目前目錄所有的檔案名稱，可以這樣做：在命令模式執行 `"=sysyem('ls -a')` 或是在輸入模式 `<C-r>=sysyem('ls -a')`  
 這樣就會把 `ls -a` 的結果貼上來了！
 
-| ![vim expression register](/images/ithelp/pure-CLI-IDE/day21/vim-expression-reg.gif) |
+| ![vim expression register](vim-expression-reg.gif) |
 | :----------------------------------------------------------------------------------: |
 |                             分別在命令模式和輸入模式示範                             |
 

@@ -26,7 +26,7 @@ image: /og/ithelp/day01.png
 
 現代化 IDE 提供的各種功能給我們很好的開發體驗，尤其是當程式碼數量逐漸增加時，IDE 可以提供像是自動補全、型態提示等等。當 [lsp(language server protocol)](https://docs.microsoft.com/zh-tw/visualstudio/extensibility/language-server-protocol?view=vs-2019) 開始流行之後，甚至不太需要查文件就能知道一個未知函數的用法。但是在這一切的方便的背後是犧牲有限的電腦資源換來的。這個時候資源需求少、發展越來越完善的的純文字界面就是解決這個問題的最佳方法了！不僅不會減少該有的**語法突顯**、**自動補全**，甚至可以借助 ssh 的力量，在**任何裝置**上開發（只要支援 ssh 都可以）。但是可惜的是網路上這方面的資源都很零散，於是我想說趁這次參賽將我所學整理起來。這個系列會帶領讀者一步一步建立一個好用、方便的 CLI 開發環境，如果有時間會講一下如何在任何裝置上開發（當然螢幕太小不適合啦）。
 
-| ![memory comsumption](/images/ithelp/pure-CLI-IDE/day01/mem-comsumption.png) |
+| ![memory comsumption](mem-comsumption.png) |
 | :--------------------------------------------------------------------------: |
 |         五種文字編輯器開啟一個約 60 byte 的文字檔所消耗的記憶體（KB)         |
 |      From https://medium.com/commitlog/why-i-still-use-vim-67afd76b4db6      |

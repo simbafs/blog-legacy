@@ -41,7 +41,7 @@ image: /og/ithelp/day20.png
 如果你用 tmux 分割視窗並開啟同一個檔案，對於系統來說你其實是開了兩次，兩個的更改互相不相關。  
 但是 vim 不一樣，他是「同一份檔案」，也就是說左邊的改動會立刻同步到右邊
 
-| ![vim split sync](/images/ithelp/pure-CLI-IDE/day20/vim-split-sync.gif) |
+| ![vim split sync](vim-split-sync.gif) |
 | :---------------------------------------------------------------------: |
 |              如果開啟一個檔案，左邊的更改會立刻同步到右邊               |
 
@@ -67,6 +67,6 @@ image: /og/ithelp/day20.png
 
 nerdtree 是我面在 [day 15 #現代化-ide-必裝模組](../day15#現代化-ide-必裝模組) 中列出了第三個模組。為什麼提到他呢？因為當你用 nerdtree 瀏覽檔案時，你可以用命令（快捷鍵）`t` 在新分頁中開啟檔案
 
-|     ![vim tab](/images/ithelp/pure-CLI-IDE/day20/vim-tab.gif)      |
+|     ![vim tab](vim-tab.gif)      |
 | :----------------------------------------------------------------: |
 | 用 nerdtree 在新分頁開心檔案，注意看最上面，深灰色底的是現在的 tab |

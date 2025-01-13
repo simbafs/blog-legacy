@@ -20,13 +20,13 @@ image: /og/ithelp/day07.png
 
 在正式開始前，先讓我們看看**直接**在 `~/.zshrc` 後面執行 `tmux` 會發生什麼錯誤
 
-| ![tmux 1](/images/ithelp/pure-CLI-IDE/day07/tmux-1.gif) |
+| ![tmux 1](tmux-1.gif) |
 | :-----------------------------------------------------: |
 |                     直接執行 `tmux`                     |
 
 嗯，錯誤訊息說要 unset $TMUX 那我們就照作吧！
 
-| ![tmux reproduce](/images/ithelp/pure-CLI-IDE/day07/tmux-reproduce.gif) |
+| ![tmux reproduce](tmux-reproduce.gif) |
 | :---------------------------------------------------------------------: |
 |                      加上 unset TMUX，嗯，爆炸了！                      |
 
@@ -60,7 +60,7 @@ tmux
 > 提示：`-z $TMUX` 和 `$TMUX == ""` 效果是一樣的
 
 接下來我們看看這樣修改效果如何  
-| ![tmux 2](/images/ithelp/pure-CLI-IDE/day07/tmux-2.gif) |
+| ![tmux 2](tmux-2.gif) |
 | :---: |
 | 先檢查 $TMUX 再執行 `tmux` |
 

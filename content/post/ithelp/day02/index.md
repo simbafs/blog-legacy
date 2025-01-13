@@ -52,7 +52,7 @@ chsh -s $(where zsh)
 
 更換完 shell，**重新開啟終端機**，你應該會看到類似下面的畫面，我們選擇預設的 **(0)** 選項就可以了。如果沒有出現這個畫面的話就是預設的 shell **沒有切換成功**或是之前你**\*已經用過** zsh 了。
 
-| ![zsh-install](/images/ithelp/pure-CLI-IDE/day02/zsh-install.png) |
+| ![zsh-install](zsh-install.png) |
 | :---------------------------------------------------------------: |
 |                           zsh 安裝畫面                            |
 

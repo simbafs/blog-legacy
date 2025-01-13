@@ -64,7 +64,7 @@ tmux 有自己內部的剪貼簿，不和 vim、作業系統共用
 如果你要從終端機複製文字，只需要**按住左鍵**、**拖移**、**放開**，就會自動複製了  
 而貼上的快捷鍵是 <kbd>CTRL</kbd><kbd>a</kbd> + <kbd>]</kbd>
 
-| ![tmux copy paste](/images/ithelp/pure-CLI-IDE/day09/tmux-copy-paste.gif) |
+| ![tmux copy paste](tmux-copy-paste.gif) |
 | :-----------------------------------------------------------------------: |
 |                                 複製貼上                                  |
 

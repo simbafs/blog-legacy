@@ -19,7 +19,7 @@ tmux 有許多的**快捷鍵**來控制螢幕，不論是分割、移動都可�
 # 分割畫面
 
 **垂直分割畫面**的快捷鍵是 <kbd>CTRL</kbd><kbd>a</kbd> + <kbd>%</kbd>，**水平分割**的快捷鍵是 <kbd>CTRL</kbd><kbd>a</kbd> + <kbd>|</kbd>(pipe，shift + enter 上面那個)。按下去畫面就會以中間分開，兩邊都是**獨立的**，即使一邊在編譯卡住了，另一邊的編輯器還是可以正常操作的  
-| ![tmux split](/images/ithelp/pure-CLI-IDE/day08/tmux-split.gif) |
+| ![tmux split](tmux-split.gif) |
 | :---: |
 | 分割畫面，一邊編輯，一邊編譯，另一邊執行 |
 
@@ -28,14 +28,14 @@ tmux 有許多的**快捷鍵**來控制螢幕，不論是分割、移動都可�
 現在你畫面分割好了，要怎麼移動呢？非常直覺，**往上就是上，往右就是右**。<kbd>CTRL</kbd><kbd>a</kbd> + <kbd>方向鍵</kbd>  
 你也可以用 <kbd>CTRL</kbd><kbd>a</kbd> + <kbd>tab</kbd> 按照順序移動，<kbd>CTRL</kbd><kbd>a</kbd> + <kbd>SHIFT</kbd><kbd>tab</kbd> 反向移動  
 記得，按方向鍵時 <kbd>CTRL</kbd> 要放開，不然就會變接下來要介紹的快捷鍵
-| ![tmux move](/images/ithelp/pure-CLI-IDE/day08/tmux-move.gif) |
+| ![tmux move](tmux-move.gif) |
 | :---: |
 | 在分割畫面中移動 |
 
 # 調整分割大小
 
 有時候我們不一定是要分成一半，例如下面五行，上面滿版。這時候你可以用 <kbd>CTRL</kbd><kbd>a</kbd> + <kbd>CTRL</kbd><kbd>方向鍵</kbd> 調整大小  
-| ![tmux resize](/images/ithelp/pure-CLI-IDE/day08/tmux-resize.gif) |
+| ![tmux resize](tmux-resize.gif) |
 | :---: |
 | 調整大小 |
 
@@ -48,7 +48,7 @@ tmux 有許多的**快捷鍵**來控制螢幕，不論是分割、移動都可�
 
 在多個分頁中，你可以用 <kbd>CTRL</kbd><kbd>a</kbd> + <kbd>CTRL</kbd><kbd>a</kbd> 移動到上一次使用的分頁，或是用 <kbd>CTRL</kbd><kbd>a</kbd> + <kbd>數字鍵</kbd> 移動到特定 ID 的分頁。
 
-| ![tmux win move](/images/ithelp/pure-CLI-IDE/day08/tmux-win-move.gif) |
+| ![tmux win move](tmux-win-move.gif) |
 | :-------------------------------------------------------------------: |
 |                        新增分頁、在分頁間移動                         |
 

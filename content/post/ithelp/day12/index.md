@@ -59,7 +59,7 @@ NR-16   NR-8    COLOR NAME ~
 
 如果你的終端機支援 256 色（通常現在的終端機都會有），那就更好玩了，因為你可以用這麼多種顏色！
 
-| ![256 color](/images/ithelp/pure-CLI-IDE/day12/256-color.png) |
+| ![256 color](256-color.png) |
 | :-----------------------------------------------------------: |
 |       256 色表（填的是前面的數字（0-255）不是 hex 色碼        |
 
@@ -87,7 +87,7 @@ NR-16   NR-8    COLOR NAME ~
 :hi CursorLine ctermbg=240 ctermfg=195
 ```
 
-| ![Customized CursorLine](/images/ithelp/pure-CLI-IDE/day12/customed-cursorLine.png) |
+| ![Customized CursorLine](customed-cursorLine.png) |
 | :---------------------------------------------------------------------------------: |
 |                                    自訂的游標行                                     |
 
