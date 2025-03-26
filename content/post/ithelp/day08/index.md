@@ -3,14 +3,14 @@ title: Day 08：八爪章魚之 tmux 快捷鍵
 slug: day08
 date: '2021-09-08T00:00:00.000Z'
 tags:
-  - cli
-  - terminal
-  - software development
-  - vim
-  - tmux
-  - zsh
+    - cli
+    - terminal
+    - software development
+    - vim
+    - tmux
+    - zsh
 categories:
-  - ithelp
+    - ithelp
 image: /og/ithelp/day08.png
 ---
 
@@ -49,8 +49,8 @@ tmux 有許多的**快捷鍵**來控制螢幕，不論是分割、移動都可�
 在多個分頁中，你可以用 <kbd>CTRL</kbd><kbd>a</kbd> + <kbd>CTRL</kbd><kbd>a</kbd> 移動到上一次使用的分頁，或是用 <kbd>CTRL</kbd><kbd>a</kbd> + <kbd>數字鍵</kbd> 移動到特定 ID 的分頁。
 
 | ![tmux win move](tmux-win-move.gif) |
-| :-------------------------------------------------------------------: |
-|                        新增分頁、在分頁間移動                         |
+| :---------------------------------: |
+|       新增分頁、在分頁間移動        |
 
 # 結論
 

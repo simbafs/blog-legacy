@@ -3,14 +3,14 @@ title: Day 07：整合 tmux 和 zsh
 slug: day07
 date: '2021-09-07T00:00:00.000Z'
 tags:
-  - cli
-  - terminal
-  - software development
-  - vim
-  - tmux
-  - zsh
+    - cli
+    - terminal
+    - software development
+    - vim
+    - tmux
+    - zsh
 categories:
-  - ithelp
+    - ithelp
 image: /og/ithelp/day07.png
 ---
 
@@ -21,14 +21,14 @@ image: /og/ithelp/day07.png
 在正式開始前，先讓我們看看**直接**在 `~/.zshrc` 後面執行 `tmux` 會發生什麼錯誤
 
 | ![tmux 1](tmux-1.gif) |
-| :-----------------------------------------------------: |
-|                     直接執行 `tmux`                     |
+| :-------------------: |
+|    直接執行 `tmux`    |
 
 嗯，錯誤訊息說要 unset $TMUX 那我們就照作吧！
 
 | ![tmux reproduce](tmux-reproduce.gif) |
-| :---------------------------------------------------------------------: |
-|                      加上 unset TMUX，嗯，爆炸了！                      |
+| :-----------------------------------: |
+|     加上 unset TMUX，嗯，爆炸了！     |
 
 # 分析問題
 
