@@ -19,4 +19,4 @@ home = ['HTML', 'AMP', 'RSS']
 page = ['HTML']
 
 [pagination]
-pagerSize = 5
+pagerSize = 20
