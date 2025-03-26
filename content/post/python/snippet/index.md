@@ -8,7 +8,7 @@ tags:
   - numpy
 categories:
   - python
-image: /og/python/snippet.png
+  - snippet
 ---
 
 # Python Snippet

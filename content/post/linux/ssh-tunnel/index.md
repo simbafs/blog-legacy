@@ -8,7 +8,7 @@ tags:
   - tunnel
 categories:
   - linux
-image: /og/linux/ssh-tunnel.png
+  - ssh-tunnel
 ---
 
 # SSH Tunnel

@@ -7,7 +7,7 @@ tags:
   - error
 categories:
   - linux
-image: /og/linux/mastodon.png
+  - mastodon
 ---
 
 # Mastodon

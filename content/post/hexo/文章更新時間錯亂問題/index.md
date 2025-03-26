@@ -8,7 +8,7 @@ tags:
   - bash
 categories:
   - hexo
-image: /og/hexo/文章更新時間錯亂問題.png
+  - 文章更新時間錯亂問題
 ---
 
 # 問題

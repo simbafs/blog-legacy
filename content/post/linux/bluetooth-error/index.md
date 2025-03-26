@@ -5,7 +5,7 @@ date: '2022-03-02T00:00:00.000Z'
 tags: []
 categories:
   - linux
-image: /og/linux/bluetooth-error.png
+  - bluetooth-error
 ---
 
 # Bluetooth 突然卡住都不動

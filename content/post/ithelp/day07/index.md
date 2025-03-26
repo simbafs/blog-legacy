@@ -3,15 +3,15 @@ title: Day 07：整合 tmux 和 zsh
 slug: day07
 date: '2021-09-07T00:00:00.000Z'
 tags:
-    - cli
-    - terminal
-    - software development
-    - vim
-    - tmux
-    - zsh
+  - cli
+  - terminal
+  - software development
+  - vim
+  - tmux
+  - zsh
 categories:
-    - ithelp
-image: /og/ithelp/day07.png
+  - ithelp
+  - day07
 ---
 
 昨天的結尾提到要整合 tmux 和 zsh 不是在 `~/.zshrc` 結尾執行 `tmux` 這麼簡單，今天就讓我們看看會遇到什麼問題吧！

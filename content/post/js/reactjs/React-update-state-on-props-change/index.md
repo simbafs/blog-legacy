@@ -10,7 +10,7 @@ tags:
 categories:
   - js
   - reactjs
-image: /og/js/reactjs/React-update-state-on-props-change.png
+  - React-update-state-on-props-change
 ---
 
 # React Update State on Props Change

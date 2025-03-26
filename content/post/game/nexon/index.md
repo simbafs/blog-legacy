@@ -9,7 +9,7 @@ tags:
   - proton
 categories:
   - game
-image: /og/game/nexon.png
+  - nexon
 ---
 
 # 如何在 Linux 安裝跑跑卡丁車

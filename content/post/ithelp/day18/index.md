@@ -11,7 +11,7 @@ tags:
   - zsh
 categories:
   - ithelp
-image: /og/ithelp/day18.png
+  - day18
 ---
 
 emmet-vim 是 emmet 的 vim 版本（這句好像是廢話

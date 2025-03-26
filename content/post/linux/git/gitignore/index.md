@@ -8,7 +8,7 @@ tags:
 categories:
   - linux
   - git
-image: /og/linux/git/gitignore.png
+  - gitignore
 ---
 
 # Gitignore

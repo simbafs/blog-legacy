@@ -9,7 +9,7 @@ tags:
 categories:
   - js
   - reactjs
-image: /og/js/reactjs/reset-state-when-state-chagne.png
+  - reset-state-when-state-chagne
 ---
 
 # Reset State When State Chagne

@@ -9,7 +9,7 @@ tags:
   - CI/Cl
 categories:
   - hexo
-image: /og/hexo/GitHub-Action-自動部署-hexo.png
+  - GitHub-Action-自動部署-hexo
 ---
 
 # 前言

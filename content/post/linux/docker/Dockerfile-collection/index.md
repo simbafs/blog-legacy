@@ -9,7 +9,7 @@ tags:
 categories:
   - linux
   - docker
-image: /og/linux/docker/Dockerfile-collection.png
+  - Dockerfile-collection
 ---
 
 # Dockerfile Collection

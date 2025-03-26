@@ -11,7 +11,7 @@ tags:
   - zsh
 categories:
   - ithelp
-image: /og/ithelp/day05.png
+  - day05
 ---
 
 今天會介紹兩個**開箱即用**（ out of box ）的外掛和簡化指令的 alias

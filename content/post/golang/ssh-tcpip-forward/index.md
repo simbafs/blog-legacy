@@ -9,7 +9,7 @@ tags:
   - proxy
 categories:
   - golang
-image: /og/golang/ssh-tcpip-forward.png
+  - ssh-tcpip-forward
 ---
 
 # Ssh TCP/IP Forward

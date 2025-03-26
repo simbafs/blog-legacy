@@ -7,7 +7,7 @@ tags:
 categories:
   - game
   - mindustry
-image: /og/game/mindustry/pathOfEnemy.png
+  - pathOfEnemy
 ---
 
 # 控制敵方路徑

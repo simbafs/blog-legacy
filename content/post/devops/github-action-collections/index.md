@@ -5,8 +5,8 @@ date: '2023-08-06T00:00:00.000Z'
 tags: []
 categories:
   - devops
+  - github-action-collections
 draft: true
-image: /og/devops/github-action-collections.png
 ---
 
 # Github Action Collections

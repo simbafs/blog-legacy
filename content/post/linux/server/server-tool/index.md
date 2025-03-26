@@ -8,7 +8,7 @@ tags:
 categories:
   - linux
   - server
-image: /og/linux/server/server-tool.png
+  - server-tool
 ---
 
 # Server Tool

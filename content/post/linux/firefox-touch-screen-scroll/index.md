@@ -9,7 +9,7 @@ tags:
   - desktop
 categories:
   - linux
-image: /og/linux/firefox-touch-screen-scroll.png
+  - firefox-touch-screen-scroll
 ---
 
 # Firefox Touch Screen Scroll

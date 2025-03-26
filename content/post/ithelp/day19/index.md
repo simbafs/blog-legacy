@@ -11,7 +11,7 @@ tags:
   - zsh
 categories:
   - ithelp
-image: /og/ithelp/day19.png
+  - day19
 ---
 
 ## 重複

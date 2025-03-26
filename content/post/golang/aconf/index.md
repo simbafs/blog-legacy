@@ -11,7 +11,7 @@ tags:
   - flag
 categories:
   - golang
-image: /og/golang/aconf.png
+  - aconf
 ---
 
 # aconf

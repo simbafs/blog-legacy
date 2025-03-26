@@ -10,7 +10,7 @@ tags:
 categories:
   - js
   - reactjs
-image: /og/js/reactjs/webpack-react.png
+  - webpack-react
 ---
 
 # Webpack Reactjs

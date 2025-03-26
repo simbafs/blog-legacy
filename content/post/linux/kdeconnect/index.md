@@ -9,7 +9,7 @@ tags:
   - android
 categories:
   - linux
-image: /og/linux/kdeconnect.png
+  - kdeconnect
 ---
 
 # kdeconnect

@@ -11,7 +11,7 @@ tags:
   - saas
 categories:
   - js
-image: /og/js/pocketbase.png
+  - pocketbase
 ---
 
 # PocketBase

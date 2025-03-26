@@ -9,7 +9,7 @@ tags:
   - api
 categories:
   - other
-image: /og/other/taiwan-town-location.png
+  - taiwan-town-location
 ---
 
 # 臺灣地址 API

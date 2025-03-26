@@ -8,7 +8,7 @@ tags:
   - js
 categories:
   - js
-image: /og/js/typescript-snippet.png
+  - typescript-snippet
 ---
 
 # TypeScript Snippet

@@ -5,7 +5,7 @@ date: '2023-09-02T00:00:00.000Z'
 tags: []
 categories:
   - js
-image: /og/js/ts-to-jsdoc.png
+  - ts-to-jsdoc
 ---
 
 # Ts to Jsdoc

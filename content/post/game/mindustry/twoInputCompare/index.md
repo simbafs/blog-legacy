@@ -8,7 +8,6 @@ categories:
   - game
   - mindustry
   - twoInputCompare
-image: /og/game/mindustry/twoInputCompare/index.png
 ---
 
 # 目的

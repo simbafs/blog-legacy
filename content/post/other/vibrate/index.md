@@ -5,7 +5,7 @@ date: '2022-03-09T00:00:00.000Z'
 tags: []
 categories:
   - other
-image: /og/other/vibrate.png
+  - vibrate
 ---
 
 # 震動 vs 振動

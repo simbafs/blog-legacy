@@ -8,7 +8,7 @@ tags:
   - tree
 categories:
   - other
-image: /og/other/mermaid-binary-tree.png
+  - mermaid-binary-tree
 mermaid: true
 ---
 

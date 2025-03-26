@@ -8,7 +8,7 @@ tags:
   - cli
 categories:
   - linux
-image: /og/linux/crop-and-resize-pdf.png
+  - crop-and-resize-pdf
 ---
 
 # Crop and Resize PDF

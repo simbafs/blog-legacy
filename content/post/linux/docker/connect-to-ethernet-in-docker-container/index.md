@@ -8,7 +8,7 @@ tags:
 categories:
   - linux
   - docker
-image: /og/linux/docker/connect-to-ethernet-in-docker-container.png
+  - connect-to-ethernet-in-docker-container
 ---
 
 # Connect to Ethernet in Docker Container

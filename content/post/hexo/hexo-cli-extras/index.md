@@ -6,7 +6,7 @@ tags:
   - hexo
 categories:
   - hexo
-image: /og/hexo/hexo-cli-extras.png
+  - hexo-cli-extras
 ---
 
 # 好用的插件

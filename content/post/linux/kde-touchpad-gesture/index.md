@@ -10,7 +10,7 @@ tags:
   - laptop
 categories:
   - linux
-image: /og/linux/kde-touchpad-gesture.png
+  - kde-touchpad-gesture
 ---
 
 # KDE Touchpad Gesture

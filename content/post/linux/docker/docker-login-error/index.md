@@ -8,7 +8,7 @@ tags:
 categories:
   - linux
   - docker
-image: /og/linux/docker/docker-login-error.png
+  - docker-login-error
 ---
 
 # Docker Login Error

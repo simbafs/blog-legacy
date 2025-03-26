@@ -8,8 +8,8 @@ tags:
 categories:
   - js
   - reactjs
+  - pass-value-from-child-to-parent
 draft: true
-image: /og/js/reactjs/pass-value-from-child-to-parent.png
 ---
 
 # Pass Value From Child to Parent

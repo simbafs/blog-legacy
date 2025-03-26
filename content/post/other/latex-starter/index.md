@@ -6,7 +6,7 @@ tags:
   - latex
 categories:
   - other
-image: /og/other/latex-starter.png
+  - latex-starter
 ---
 
 # LaTeX Stater

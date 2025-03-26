@@ -8,7 +8,7 @@ tags:
 categories:
   - linux
   - docker
-image: /og/linux/docker/docker-基礎指令.png
+  - docker-基礎指令
 ---
 
 # Docker 指令

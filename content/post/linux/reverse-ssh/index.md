@@ -8,7 +8,7 @@ tags:
   - tunnel
 categories:
   - linux
-image: /og/linux/reverse-ssh.png
+  - reverse-ssh
 ---
 
 # Reverse SSH

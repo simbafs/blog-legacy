@@ -11,5 +11,4 @@ title: Archives
 tags: []
 categories:
   - archives
-image: /og/archives/index.png
 ---

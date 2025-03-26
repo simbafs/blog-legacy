@@ -8,7 +8,7 @@ tags:
   - cloud
 categories:
   - hexo
-image: /og/hexo/audo-depoly-by-github-action.png
+  - audo-depoly-by-github-action
 ---
 
 # GitHub Action 自動部署 Hexo

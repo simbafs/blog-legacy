@@ -11,7 +11,7 @@ tags:
   - zsh
 categories:
   - ithelp
-image: /og/ithelp/day13.png
+  - day13
 ---
 
 vim 在啟動時，都會去**執行你的設定檔**，這個檔案**根據你的 vim 軟體不同而改變**，如果是一般的 vim，那他會去讀 `~/.vimrc`，如果是 neovim(nvim)，他會去找 `~/.config/nvim/init.vim`。在接下來的文章中都以 `vimrc` 代指。  

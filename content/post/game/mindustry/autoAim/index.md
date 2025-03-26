@@ -8,7 +8,6 @@ categories:
   - game
   - mindustry
   - autoAim
-image: /og/game/mindustry/autoAim/index.png
 ---
 
 # 砲台自動瞄準

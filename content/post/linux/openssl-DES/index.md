@@ -8,7 +8,7 @@ tags:
   - decryption
 categories:
   - linux
-image: /og/linux/openssl-DES.png
+  - openssl-DES
 ---
 
 # openssl DES

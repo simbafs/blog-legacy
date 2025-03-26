@@ -8,7 +8,7 @@ tags:
   - png
 categories:
   - js
-image: /og/js/og.png
+  - og
 ---
 
 # OG

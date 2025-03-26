@@ -11,8 +11,8 @@ tags:
   - gpg
 categories:
   - linux
+  - neonKDE
 draft: true
-image: /og/linux/neonKDE.png
 ---
 
 # NeonKDE

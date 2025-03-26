@@ -7,7 +7,6 @@ tags:
 categories:
   - atlassian
   - bitbucket-connect-jira
-image: /og/atlassian/bitbucket-connect-jira/index.png
 ---
 
 # Bitbucket Connect Jira

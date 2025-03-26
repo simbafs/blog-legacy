@@ -9,7 +9,7 @@ tags:
   - emulator
 categories:
   - linux
-image: /og/linux/anbox.png
+  - anbox
 ---
 
 # Anbox

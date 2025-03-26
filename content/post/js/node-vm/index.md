@@ -9,7 +9,7 @@ tags:
   - js
 categories:
   - js
-image: /og/js/node-vm.png
+  - node-vm
 ---
 
 # Node VM

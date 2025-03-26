@@ -9,7 +9,6 @@ tags:
 categories:
   - js
   - circle-transition-in-motion-canvas
-image: /og/js/circle-transition-in-motion-canvas/index.png
 ---
 
 # Circle Transition in Motion Canvas

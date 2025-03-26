@@ -3,15 +3,15 @@ title: Day 08：八爪章魚之 tmux 快捷鍵
 slug: day08
 date: '2021-09-08T00:00:00.000Z'
 tags:
-    - cli
-    - terminal
-    - software development
-    - vim
-    - tmux
-    - zsh
+  - cli
+  - terminal
+  - software development
+  - vim
+  - tmux
+  - zsh
 categories:
-    - ithelp
-image: /og/ithelp/day08.png
+  - ithelp
+  - day08
 ---
 
 tmux 有許多的**快捷鍵**來控制螢幕，不論是分割、移動都可以輕鬆完成

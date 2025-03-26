@@ -9,7 +9,7 @@ tags:
   - ninja
 categories:
   - linux
-image: /og/linux/build-aseprite.png
+  - build-aseprite
 ---
 
 # Build Aseprite

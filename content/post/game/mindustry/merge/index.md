@@ -8,7 +8,6 @@ categories:
   - game
   - mindustry
   - merge
-image: /og/game/mindustry/merge/index.png
 ---
 
 # Merge

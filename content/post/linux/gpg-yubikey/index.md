@@ -8,7 +8,7 @@ tags:
   - yubikey
 categories:
   - linux
-image: /og/linux/gpg-yubikey.png
+  - gpg-yubikey
 ---
 
 # GPG

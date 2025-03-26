@@ -7,7 +7,7 @@ tags:
   - cli
 categories:
   - golang
-image: /og/golang/bubbletea.png
+  - bubbletea
 ---
 
 # charmbracelet/bubbletea

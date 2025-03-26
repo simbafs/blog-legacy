@@ -8,7 +8,7 @@ tags:
 categories:
   - linux
   - docker
-image: /og/linux/docker/docker-commit.png
+  - docker-commit
 ---
 
 # Docker Commit

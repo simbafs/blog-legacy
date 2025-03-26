@@ -7,7 +7,6 @@ tags:
 categories:
   - other
   - plantOfNumbers
-image: /og/other/plantOfNumbers/index.png
 ---
 
 # 同「邊數」的平面

@@ -8,7 +8,6 @@ tags:
 categories:
   - game
   - openttd
-image: /og/game/openttd/index.png
 ---
 
 > **提醒我放圖片**

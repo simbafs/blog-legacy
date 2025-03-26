@@ -11,7 +11,6 @@ date: '2023-08-29T00:00:00.000Z'
 tags: []
 categories:
   - about
-image: /og/about/index.png
 ---
 
 # 🖐️ 哈囉！問世界安好 [![Followers](https://img.shields.io/github/followers/simbafs?style=flat-square)](https://github.com/simbafs)

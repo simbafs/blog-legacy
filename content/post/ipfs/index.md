@@ -7,7 +7,6 @@ tags:
   - decentralized
 categories:
   - ipfs
-image: /og/ipfs/index.png
 ---
 
 # IPFS

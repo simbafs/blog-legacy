@@ -9,7 +9,7 @@ tags:
 categories:
   - linux
   - vim
-image: /og/linux/vim/ycm-jsx.png
+  - ycm-jsx
 ---
 
 # 讓 YCM 接受 jsx

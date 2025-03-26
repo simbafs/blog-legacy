@@ -12,7 +12,6 @@ categories:
   - golang
   - raylib-at-linux
 draft: true
-image: /og/golang/raylib-at-linux/index.png
 ---
 
 # Raylib at Linux

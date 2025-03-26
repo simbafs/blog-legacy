@@ -8,8 +8,8 @@ tags:
   - structure
 categories:
   - golang
+  - pointer-to-structure-passed-to-interface
 draft: true
-image: /og/golang/pointer-to-structure-passed-to-interface.png
 ---
 
 以下程式碼中的 `Admin` 實作了 `User`

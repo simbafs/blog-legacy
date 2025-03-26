@@ -6,7 +6,7 @@ tags:
   - college
 categories:
   - other
-image: /og/other/college-qualification-interview-and-written-test.png
+  - college-qualification-interview-and-written-test
 ---
 
 # 大學二階面試、筆試

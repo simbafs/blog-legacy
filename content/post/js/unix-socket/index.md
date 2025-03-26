@@ -9,7 +9,7 @@ tags:
   - js
 categories:
   - js
-image: /og/js/unix-socket.png
+  - unix-socket
 ---
 
 # Unix Socket

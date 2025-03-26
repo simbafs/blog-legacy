@@ -34,6 +34,7 @@ async function formatMatter(matter, filepath, ctime) {
 		image: matter?.image || undefined,
 		draft: matter?.draft || undefined,
 	}
+	delete data.image
 
 	const pathArray = filepath.split('/').slice(2)
 

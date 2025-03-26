@@ -11,7 +11,7 @@ tags:
 categories:
   - linux
   - docker
-image: /og/linux/docker/wireshark-over-ssh-in-docker.png
+  - wireshark-over-ssh-in-docker
 ---
 
 # Wireshark Over SSH in Docker

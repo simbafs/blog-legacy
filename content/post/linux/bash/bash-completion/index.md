@@ -8,7 +8,7 @@ tags:
 categories:
   - linux
   - bash
-image: /og/linux/bash/bash-completion.png
+  - bash-completion
 ---
 
 # Bash Completion

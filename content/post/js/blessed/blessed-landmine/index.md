@@ -9,7 +9,7 @@ tags:
 categories:
   - js
   - blessed
-image: /og/js/blessed/blessed-landmine.png
+  - blessed-landmine
 ---
 
 # Blessed Landmine

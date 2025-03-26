@@ -9,7 +9,7 @@ tags:
   - RSS
 categories:
   - hexo
-image: /og/hexo/hexo-config.png
+  - hexo-config
 ---
 
 # 各種設定值嘗試

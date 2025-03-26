@@ -8,7 +8,7 @@ tags:
   - seo
 categories:
   - frontend
-image: /og/frontend/meta-tag.png
+  - meta-tag
 ---
 
 # Meta Tag

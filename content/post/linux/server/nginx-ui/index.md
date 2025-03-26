@@ -7,7 +7,7 @@ tags:
 categories:
   - linux
   - server
-image: /og/linux/server/nginx-ui.png
+  - nginx-ui
 ---
 
 # Nginx UI

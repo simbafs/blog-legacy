@@ -7,7 +7,7 @@ tags:
   - font
 categories:
   - linux
-image: /og/linux/ibus-font.png
+  - ibus-font
 ---
 
 # Ibus Font

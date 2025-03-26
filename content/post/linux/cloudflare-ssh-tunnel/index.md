@@ -10,7 +10,7 @@ tags:
   - tunnel
 categories:
   - linux
-image: /og/linux/cloudflare-ssh-tunnel.png
+  - cloudflare-ssh-tunnel
 ---
 
 # Cloudflare SSH Tunnel

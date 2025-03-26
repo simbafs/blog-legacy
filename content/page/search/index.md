@@ -14,5 +14,4 @@ date: '2023-08-29T00:00:00.000Z'
 tags: []
 categories:
   - search
-image: /og/search/index.png
 ---

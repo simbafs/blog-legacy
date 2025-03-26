@@ -10,7 +10,7 @@ tags:
   - nosql
 categories:
   - js
-image: /og/js/Mongoose-Model.png
+  - Mongoose-Model
 ---
 
 # Mongoose Model

@@ -9,7 +9,7 @@ tags:
   - embed
 categories:
   - golang
-image: /og/golang/Golang-Parse-All-Files-In-Directory-Into-Templates.png
+  - Golang-Parse-All-Files-In-Directory-Into-Templates
 ---
 
 # Golang Parse All Files In Directory Into Templates

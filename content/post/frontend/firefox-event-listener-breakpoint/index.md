@@ -8,7 +8,7 @@ tags:
   - firefox
 categories:
   - frontend
-image: /og/frontend/firefox-event-listener-breakpoint.png
+  - firefox-event-listener-breakpoint
 ---
 
 # Firefox Event Listener Breakpoint

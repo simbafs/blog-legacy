@@ -9,7 +9,7 @@ tags:
 categories:
   - linux
   - vim
-image: /og/linux/vim/vim-auto-comment-plugin.png
+  - vim-auto-comment-plugin
 ---
 
 # Vim Auto Comment Plugin

@@ -10,7 +10,7 @@ tags:
 categories:
   - js
   - nextjs
-image: /og/js/nextjs/fs.png
+  - fs
 ---
 
 # File System

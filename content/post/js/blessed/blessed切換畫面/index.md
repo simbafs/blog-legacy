@@ -9,7 +9,7 @@ tags:
 categories:
   - js
   - blessed
-image: /og/js/blessed/blessed切換畫面.png
+  - blessed切換畫面
 ---
 
 # Blessed 切換畫面

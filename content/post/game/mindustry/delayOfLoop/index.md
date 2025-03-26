@@ -8,7 +8,6 @@ categories:
   - game
   - mindustry
   - delayOfLoop
-image: /og/game/mindustry/delayOfLoop/index.png
 ---
 
 # 迴圈的延遲
